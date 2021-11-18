@@ -44,6 +44,7 @@ def train_tree(n=10, logger=None):
             inp = rev_input_mapping[input_tree.predict(vstate)[0]]
             sai = (sel, act, inp)
 
+        print(sai)
         if sai is None:
             hints += 1
             # print('hint')

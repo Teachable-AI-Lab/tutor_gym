@@ -60,6 +60,11 @@ def train_tree(n=10, logger=None):
         tree.fit(Xv, yv)
 
         if sai[0] == "done" and reward == 1.0:
+            if(p % 50 == 0):
+                print("Problem %s of %s" % (p, n))
+                print("# of hints = {}".format(hints))
+            hints = 0
+
             p += 1
 
     return tree

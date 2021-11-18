@@ -11,7 +11,7 @@ import gym
 from gym import spaces
 import numpy as np
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.ERROR)
 log = logging.getLogger(__name__)
 
 

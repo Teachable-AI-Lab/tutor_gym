@@ -395,6 +395,9 @@ class MultiColumnAdditionSymbolic:
 
         return demo
 
+    
+
+
     def get_demo(self):
         """
         Returns a correct next-step SAI
@@ -486,6 +489,23 @@ class MultiColumnAdditionDigitsEnv(gym.Env):
         info = {}
 
         return obs, reward, done, info
+
+    def encode(self, sai):
+        s,a,i = sai
+        v = i['value']
+        out = np.zeros(1,dtype=np.int64)
+        enc_s = self.tutor.get_possible_selections().index(s)
+        if(s == 'done' or s == "check_convert"):
+            v = 0
+        # n = len(self.tutor.get_possible_selections()) 
+        out[0] = 10 * enc_s + int(v) 
+        return out
+
+    def request_demo_encoded(self):
+        action = self.tutor.request_demo() 
+        # print("DEMO ACTION:", action)
+        return self.encode(action)
+
 
     def decode(self, action):
         # print(action)

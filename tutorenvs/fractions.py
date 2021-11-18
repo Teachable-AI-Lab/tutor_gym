@@ -401,7 +401,7 @@ class FractionArithNumberEnv(gym.Env):
         self.n_steps += 1
 
         s, a, i = self.decode(action)
-        # print(s, a, i)
+        # print("STEP", s, a, i)
         # print()
         reward = self.tutor.apply_sai(s, a, i)
         # self.render()
@@ -420,6 +420,25 @@ class FractionArithNumberEnv(gym.Env):
 
         return obs, reward, done, info
 
+    def encode(self, sai):
+        s,a,i = sai
+        
+        out = np.zeros(1,dtype=np.int64)
+        enc_s = self.tutor.get_possible_selections().index(s)
+        if(s == 'done' or s == "check_convert"):
+            v = 0
+        else:
+            v = int(i['value']) - 1
+        # n = len(self.tutor.get_possible_selections()) 
+        out[0] = 450 * enc_s + int(v) 
+        return out
+
+    def request_demo_encoded(self):
+        action = self.tutor.request_demo() 
+        # print("DEMO ACTION:", action)
+        return self.encode(action)
+
+
     def decode(self, action):
         # print(action)
         s = self.tutor.get_possible_selections()[action[0]]
@@ -437,7 +456,7 @@ class FractionArithNumberEnv(gym.Env):
             v = action[1] + 1
 
         i = {'value': str(v)}
-
+        # print(s,a,i)
         return s, a, i
 
     def reset(self):

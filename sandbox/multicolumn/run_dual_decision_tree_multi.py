@@ -1,7 +1,7 @@
 import gym
-from stable_baselines.common import make_vec_env
-from stable_baselines.common.policies import MlpPolicy
-from stable_baselines import PPO2
+# from stable_baselines.common import make_vec_env
+# from stable_baselines.common.policies import MlpPolicy
+# from stable_baselines import PPO2
 import tutorenvs
 from tutorenvs.multicolumn import MultiColumnAdditionDigitsEnv
 from tutorenvs.multicolumn import MultiColumnAdditionSymbolic
@@ -36,7 +36,7 @@ def train_tree(n=10, logger=None):
 
         # make a copy of the state
         state = {a: env.state[a] for a in env.state}
-        env.render()
+        # env.render()
 
         if rev_selection_mapping == {}:
             sai = None
@@ -87,18 +87,19 @@ def train_tree(n=10, logger=None):
         input_tree.fit(Xv, yv_inp)
 
         if sai[0] == "done" and reward == 1.0:
-            print("Problem %s of %s" % (p, n))
-            print("# of hints = {}".format(hints))
+            if(p % 50 == 0):
+                print("Problem %s of %s" % (p, n))
+                print("# of hints = {}".format(hints))
             hints = 0
-            p += 1
 
+            p += 1
     return selection_tree, input_tree
 
 if __name__ == "__main__":
 
-    logger = DataShopLogger('MulticolumnAdditionTutor', extra_kcs=['field'])
+    logger = DataShopLogger('MulticolumnAdditionTutor_split', extra_kcs=['field'])
     for _ in range(1):
-        tree = train_tree(500, logger)
+        tree = train_tree(30000, logger)
     # env = MultiColumnAdditionSymbolic()
 
     # while True:
