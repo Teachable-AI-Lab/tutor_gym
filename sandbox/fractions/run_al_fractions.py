@@ -57,19 +57,20 @@ if __name__ == "__main__":
     feature_set = ['Equals']
 
     for i in range(100):
-        # agent = ModularAgent(
-        #         feature_set=feature_set,
-        #         function_set=function_set,
-        #         planner='numba',
-        #         search_depth=2,
-        #         when_learner='decisiontree',
-        #         where_learner='FastMostSpecific',
-        #         state_variablization='whereswap',
-        #         strip_attrs=["to_left","to_right","above","below","type","id","offsetParent", "dom_class"],
-        #         when_args= {
-        #           "cross_rhs_inference" : "implicit_negatives"
-        #         })
-        agent = WhereWhenHowNoFoa('fraction arith', 'fraction arith',
-                              search_depth=1)
+        agent = ModularAgent(
+                feature_set=feature_set,
+                function_set=function_set,
+                planner='numba',
+                search_depth=2,
+                when_learner='decisiontree',
+                where_learner='FastMostSpecific',
+                state_variablization='whereswap',
+                strip_attrs=["to_left","to_right","above","below","type","id","offsetParent", "dom_class"],
+                # when_args= {
+                #   "cross_rhs_inference" : "implicit_negatives"
+                # }
+        )
+        # agent = WhereWhenHowNoFoa('fraction arith', 'fraction arith',
+        #                       search_depth=1)
 
         run_training(agent, n=500)

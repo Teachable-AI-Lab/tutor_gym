@@ -42,7 +42,7 @@ class MultiColumnAdditionSymbolic:
         self.set_random_problem()
         # self.reset("", "", "", "", "")
 
-    def reset(self, upper, lower):
+    def reset(self, upper, lower, pad_zeros=False):
         """
         Sets the state to a new fraction arithmetic problem as specified by the
         provided arguments.
@@ -70,33 +70,37 @@ class MultiColumnAdditionSymbolic:
         else:
             raise ValueError("Something is wrong, correct answer should have 1-4 digits")
 
-        upper_hundreds = ''
-        upper_tens = ''
-        upper_ones = ''
+        if(pad_zeros):
+            upper_hundreds, upper_tens, upper_ones = upper.zfill(3)
+            lower_hundreds, lower_tens, lower_ones = lower.zfill(3)
+        else:
+            upper_hundreds = ''
+            upper_tens = ''
+            upper_ones = ''
 
-        if len(upper) == 3:
-            upper_hundreds = upper[0]
-            upper_tens = upper[1]
-            upper_ones = upper[2]
-        if len(upper) == 2:
-            upper_tens = upper[0]
-            upper_ones = upper[1]
-        if len(upper) == 1:
-            upper_ones = upper[0]
+            if len(upper) == 3:
+                upper_hundreds = upper[0]
+                upper_tens = upper[1]
+                upper_ones = upper[2]
+            if len(upper) == 2:
+                upper_tens = upper[0]
+                upper_ones = upper[1]
+            if len(upper) == 1:
+                upper_ones = upper[0]
 
-        lower_hundreds = ''
-        lower_tens = ''
-        lower_ones = ''
+            lower_hundreds = ''
+            lower_tens = ''
+            lower_ones = ''
 
-        if len(lower) == 3:
-            lower_hundreds = lower[0]
-            lower_tens = lower[1]
-            lower_ones = lower[2]
-        if len(lower) == 2:
-            lower_tens = lower[0]
-            lower_ones = lower[1]
-        if len(lower) == 1:
-            lower_ones = lower[0]
+            if len(lower) == 3:
+                lower_hundreds = lower[0]
+                lower_tens = lower[1]
+                lower_ones = lower[2]
+            if len(lower) == 2:
+                lower_tens = lower[0]
+                lower_ones = lower[1]
+            if len(lower) == 1:
+                lower_ones = lower[0]
 
         self.num_correct_steps = 0
         self.num_incorrect_steps = 0
@@ -151,6 +155,33 @@ class MultiColumnAdditionSymbolic:
         cv2.imshow('vecenv', np.array(img))
         cv2.waitKey(1)
 
+    coords = {
+       
+       "thousands_carry" :  {"x" :0,   "y" : 0 , "width" : 100, "height" : 100},
+       "hundreds_carry" :   {"x" :110, "y" : 0 , "width" : 100, "height" : 100},
+       "tens_carry" :       {"x" :220, "y" : 0 , "width" : 100, "height" : 100},
+       "hidey1" :           {"x" :330, "y" : 0 , "width" : 100, "height" : 100},
+
+       "hidey2" :           {"x" :0,   "y" : 110 , "width" : 100, "height" : 100},
+       "upper_hundreds" :   {"x" :110, "y" : 110 , "width" : 100, "height" : 100},
+       "upper_tens" :       {"x" :220, "y" : 110 , "width" : 100, "height" : 100},
+       "upper_ones" :       {"x" :330, "y" : 110 , "width" : 100, "height" : 100},
+
+       "operator" :         {"x" :-110,"y" : 220 , "width" : 100, "height" : 100},
+       "hidey3" :           {"x" :0,   "y" : 220 , "width" : 100, "height" : 100},
+       "lower_hundreds" :   {"x" :110, "y" : 220 , "width" : 100, "height" : 100},
+       "lower_tens" :       {"x" :220, "y" : 220 , "width" : 100, "height" : 100},
+       "lower_ones" :       {"x" :330, "y" : 220 , "width" : 100, "height" : 100},
+
+       "line" :             {"x" :0,   "y" : 325 , "width" : 5, "height" : 5},
+
+       "answer_thousands" : {"x" :0,   "y" : 330 , "width" : 100, "height" : 100},
+       "answer_hundreds" :  {"x" :110, "y" : 330 , "width" : 100, "height" : 100},
+       "answer_tens" :      {"x" :220, "y" : 330 , "width" : 100, "height" : 100},
+       "answer_ones" :      {"x" :330, "y" : 330 , "width" : 100, "height" : 100},
+
+       "done" :             {"x" :340, "y" : 430 , "width" : 100, "height" : 100},
+    }
     def get_image(self, add_counts=False, add_dot=None):
         state = {attr: " " if self.state[attr] == '' else
                 self.state[attr] for attr in self.state}
@@ -216,46 +247,70 @@ class MultiColumnAdditionSymbolic:
         """
         Returns the current state as a dict.
         """
-        state_output = {attr:
-                        {'id': attr, 'value': self.state[attr],
-                         'column': 'thousands' if 'thousands' in attr else
-                         'hundreds' if 'hundreds' in attr else 'tens' if 'tens'
-                         in attr else 'ones',
-                         'row': 'answer' if 'answer' in attr else
-                         'lower' if 'lower' in attr else 'upper' if 'upper'
-                         in attr else 'carry',
-                         'type': 'TextField',
-                         'contentEditable': self.state[attr] == "",
-                         'dom_class': 'CTATTable--cell',
-                         'above': '',
-                         'below': '',
-                         'to_left': '',
-                         'to_right': ''
+        text_field_params = {'type': 'TextField', 'dom_class': 'CTATTextInput', 'offsetParent' : 'background-initial'}
+        state_output = {_id:
+                        {'id': _id, 'value': value,
+                         # 'column': 'thousands' if 'thousands' in _id else
+                         # 'hundreds' if 'hundreds' in _id else 'tens' if 'tens'
+                         # in _id else 'ones',
+                         # 'row': 'answer' if 'answer' in _id else
+                         # 'lower' if 'lower' in _id else 'upper' if 'upper'
+                         # in _id else 'carry',
+                         # 'type': 'TextField',
+                         **text_field_params,
+                         'contentEditable': value == "",
+                         # 'dom_class': 'CTATTextInput',
+                         **self.coords[_id]
                          }
-                        for attr in self.state}
+                        for _id, value in self.state.items()}
+        hidey_field_params = {**text_field_params, "contentEditable" : False, "value" : ""}
+        state_output['hidey1'] = {
+            "id" : "hidey1",
+            **hidey_field_params,
+            **self.coords['hidey1']
+        }
+        state_output['hidey2'] = {
+            "id" : "hidey2",
+            **hidey_field_params,
+            **self.coords['hidey2']
+        }
+        state_output['hidey3'] = {
+            "id" : "hidey3",
+            **hidey_field_params,
+            **self.coords['hidey3']
+        }
+        # state_output['line'] = {
+        #     'id': 'line',
+        #     'type': 'Component',
+        #     'dom_class': 'Line',
+        #     **self.coords['line']
+        # }
         state_output['done'] = {
             'id': 'done',
             'type': 'Component',
             'dom_class': 'CTATDoneButton',
-            'above': '',
-            'below': '',
-            'to_left': '',
-            'to_right': ''
+            **self.coords['done']
         }
 
         return state_output
 
-    def set_random_problem(self):
+    def set_random_problem(self,pad_zeros=True):
         upper = str(randint(1,999))
         lower = str(randint(1,999))
+
+        from colorama import Back, Fore
+        print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {upper} + {lower}" )
+
+        # print("<<", upper, "+", lower)
+        # raise ValueError()
         # upper = str(randint(1,99))
         # lower = str(randint(1,99))
         # upper = str(randint(1,9))
         # lower = str(randint(1,9))
-        self.reset(upper=upper, lower=lower)
+        self.reset(upper=upper, lower=lower,pad_zeros=pad_zeros)
         self.logger.set_problem("%s_%s" % (upper, lower))
 
-    def apply_sai(self, selection, action, inputs):
+    def apply_sai(self, selection, action, inputs, apply_incorrects=True):
         """
         Give a SAI, it applies it. This method returns feedback (i.e., -1 or 1).
         """
@@ -280,7 +335,7 @@ class MultiColumnAdditionSymbolic:
             # pprint(self.state)
             self.set_random_problem()
 
-        else:
+        elif(reward > 0 or apply_incorrects):
             self.state[selection] = inputs['value']
 
         return reward
@@ -386,11 +441,11 @@ class MultiColumnAdditionSymbolic:
         return -1.0
 
     # TODO still need to rewrite for multi column arith
-    def request_demo(self):
-        demo = self.get_demo()
-        feedback_text = "selection: %s, action: %s, input: %s" % (demo[0],
-                demo[1], demo[2]['value'])
-        self.logger.log_hint(feedback_text, step_name=demo[0], kcs=[demo[0]])
+    def request_demo(self,return_foci=False):
+        demo = self.get_demo(return_foci=return_foci)
+        sai, foci = demo if(return_foci) else (demo, None)
+        feedback_text = f"selection: {sai[0]}, action: {sai[1]}, input: {sai[2]['value']}"
+        self.logger.log_hint(feedback_text, step_name=sai[0], kcs=[sai[0]])
         self.num_hints += 1
 
         return demo
@@ -398,56 +453,82 @@ class MultiColumnAdditionSymbolic:
     
 
 
-    def get_demo(self):
+    def get_demo(self,return_foci=False):
         """
         Returns a correct next-step SAI
         """
+        while(True):
+            '''dummy loop so we can break out of it'''
+            if (self.state['answer_ones'] == self.correct_ones and
+                    self.state['answer_tens'] == self.correct_tens and
+                    self.state['answer_hundreds'] == self.correct_hundreds and
+                    self.state['answer_thousands'] == self.correct_thousands):
+                foci = []
+                sai = ('done', "ButtonPressed", {'value': -1})
+                break
 
-        if (self.state['answer_ones'] == self.correct_ones and
-                self.state['answer_tens'] == self.correct_tens and
-                self.state['answer_hundreds'] == self.correct_hundreds and
-                self.state['answer_thousands'] == self.correct_thousands):
-            return ('done', "ButtonPressed", {'value': -1})
+            if self.state['answer_ones'] == '':
+                foci = ['upper_ones','lower_ones']
+                sai = ('answer_ones', 'UpdateTextField', {'value': str(self.correct_ones)})
+                break
 
-        if self.state['answer_ones'] == '':
-            return ('answer_ones', 'UpdateField', {'value': str(self.correct_ones)})
+            if (self.state["tens_carry"] == '' and
+                    len(custom_add(self.state['upper_ones'],
+                        self.state['lower_ones'])) == 2):
+                foci = ['upper_ones','lower_ones']
+                sai = ('tens_carry', 'UpdateTextField',
+                        {'value': custom_add(self.state['upper_ones'],
+                                             self.state['lower_ones'])[0]})
+                break
 
-        if (self.state["tens_carry"] == '' and
-                len(custom_add(self.state['upper_ones'],
-                    self.state['lower_ones'])) == 2):
-            return ('tens_carry', 'UpdateField',
-                    {'value': custom_add(self.state['upper_ones'],
-                                         self.state['lower_ones'])[0]})
+            if self.state['answer_tens'] == '':
+                foci = ['upper_tens','lower_tens']
+                if (self.state['tens_carry'] != ""): foci = ['tens_carry'] + foci
+                sai = ('answer_tens', 'UpdateTextField', {'value': str(self.correct_tens)})
+                break
 
-        if self.state['answer_tens'] == '':
-            return ('answer_tens', 'UpdateField', {'value': str(self.correct_tens)})
+            if self.state["hundreds_carry"] == '':
+                if (len(custom_add(custom_add(self.state['upper_tens'],
+                    self.state['lower_tens']), self.state['tens_carry'])) == 2):
 
-        if self.state["hundreds_carry"] == '':
-            if (len(custom_add(custom_add(self.state['upper_tens'],
-                self.state['lower_tens']), self.state['tens_carry'])) == 2):
-                return ('hundreds_carry', 'UpdateField',
-                        {'value':
-                         custom_add(custom_add(self.state['upper_tens'],
-                                               self.state['lower_tens']),
-                                    self.state['tens_carry'])[0]})
+                    foci = ['upper_tens','lower_tens']
+                    if (self.state['tens_carry'] != ""): foci = ['tens_carry'] + foci
+                    sai = ('hundreds_carry', 'UpdateTextField',
+                            {'value':
+                             custom_add(custom_add(self.state['upper_tens'],
+                                                   self.state['lower_tens']),
+                                        self.state['tens_carry'])[0]})
+                    break
 
-        if self.state['answer_hundreds'] == '':
-            return ('answer_hundreds', 'UpdateField', {'value': str(self.correct_hundreds)})
+            if self.state['answer_hundreds'] == '':
+                foci = ['upper_hundreds','lower_hundreds'] 
+                if (self.state['hundreds_carry'] != ""): foci = ['hundreds_carry'] + foci
+                sai = ('answer_hundreds', 'UpdateTextField', {'value': str(self.correct_hundreds)})
+                break
 
-        if self.state["thousands_carry"] == '':
-            if (len(custom_add(custom_add(self.state['upper_hundreds'],
-                                          self.state['lower_hundreds']),
-                               self.state['hundreds_carry'])) == 2):
-                return ('thousands_carry', 'UpdateField',
-                        {'value':
-                         custom_add(custom_add(self.state['upper_hundreds'],
-                                               self.state['lower_hundreds']),
-                                    self.state['hundreds_carry'])[0]})
+            if self.state["thousands_carry"] == '':
+                if (len(custom_add(custom_add(self.state['upper_hundreds'],
+                                              self.state['lower_hundreds']),
+                                   self.state['hundreds_carry'])) == 2):
+                    foci = ['upper_hundreds','lower_hundreds'] 
+                    if (self.state['hundreds_carry'] != ""): foci = ['hundreds_carry'] + foci
+                    sai = ('thousands_carry', 'UpdateTextField',
+                            {'value':
+                             custom_add(custom_add(self.state['upper_hundreds'],
+                                                   self.state['lower_hundreds']),
+                                        self.state['hundreds_carry'])[0]})
+                    break
 
-        if self.state['answer_thousands'] == '':
-            return ('answer_thousands', 'UpdateField', {'value': str(self.correct_thousands)})
+            if self.state['answer_thousands'] == '':
+                foci = ['thousands_carry']
+                sai = ('answer_thousands', 'UpdateTextField', {'value': str(self.correct_thousands)})
+                break
 
-        raise Exception("request demo - logic missing")
+            raise Exception("request demo - logic missing")
+        if(return_foci):
+            return sai, foci
+        else:
+            return sai
 
 
 class MultiColumnAdditionDigitsEnv(gym.Env):
@@ -467,13 +548,13 @@ class MultiColumnAdditionDigitsEnv(gym.Env):
     def get_rl_state(self):
         return self.tutor.state
 
-    def step(self, action):
+    def step(self, action, apply_incorrects=True):
         self.n_steps += 1
 
         s, a, i = self.decode(action)
         # print(s, a, i)
         # print()
-        reward = self.tutor.apply_sai(s, a, i)
+        reward = self.tutor.apply_sai(s, a, i, apply_incorrects=apply_incorrects)
         # self.render()
         # print(reward)
         state = self.tutor.state
@@ -514,7 +595,7 @@ class MultiColumnAdditionDigitsEnv(gym.Env):
         if s == "done":
             a = "ButtonPressed"
         else:
-            a = "UpdateField"
+            a = "UpdateTextField"
         
         if s == "done":
             v = -1
@@ -697,7 +778,7 @@ class MultiColumnAdditionOppEnv(gym.Env):
         if s == "done":
             a = "ButtonPressed"
         else:
-            a = "UpdateField"
+            a = "UpdateTextField"
 
         if s == "done":
             v = -1
@@ -759,7 +840,7 @@ class MultiColumnAdditionPixelEnv(gym.Env):
         if s == "done":
             a = "ButtonPressed"
         else:
-            a = "UpdateField"
+            a = "UpdateTextField"
         
         if s == "done":
             v = -1
@@ -879,7 +960,7 @@ class MultiColumnAdditionPerceptEnv(gym.Env):
             elif self.x >= 16 and self.y >= 11 and self.x <= 20 and self.y <=19:
                 s = "thousands_carry"
 
-            a = 'UpdateField'
+            a = 'UpdateTextField'
             i = {'value': str(action - 2)}
 
         if s != None:
@@ -914,7 +995,7 @@ class MultiColumnAdditionPerceptEnv(gym.Env):
         if s == "done":
             a = "ButtonPressed"
         else:
-            a = "UpdateField"
+            a = "UpdateTextField"
         
         if s == "done":
             v = -1

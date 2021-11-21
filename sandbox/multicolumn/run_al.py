@@ -1,6 +1,7 @@
-# from apprentice.agents.ModularAgent import ModularAgent
+from apprentice.agents.ModularAgent import ModularAgent
+from apprentice.agents.RHS_LHS_Agent import RHS_LHS_Agent
 # from apprentice.agents.pyrete_agent import PyReteAgent
-from apprentice.agents.WhereWhenHowNoFoa import WhereWhenHowNoFoa
+# from apprentice.agents.WhereWhenHowNoFoa import WhereWhenHowNoFoa
 from apprentice.working_memory.representation import Sai
 # from py_rete import Production
 # from py_rete import Fact
@@ -8,22 +9,27 @@ from apprentice.working_memory.representation import Sai
 # from py_rete.conditions import Filter
 
 from tutorenvs.multicolumn import MultiColumnAdditionSymbolic
-
+from colorama import Back, Fore
 
 def run_training(agent, n=10):
 
     env = MultiColumnAdditionSymbolic()
+    ALWAYS_UPDATE_STATE = False
+    SEND_NEXT_STATE = True
 
     p = 0
+    reward = 1
 
     while p < n:
 
-        state = env.get_state()
+        if(reward == 1 or ALWAYS_UPDATE_STATE):
+            state = env.get_state()
+
         response = agent.request(state)
 
         if response == {}:
             print('hint')
-            selection, action, inputs = env.request_demo()
+            (selection, action, inputs), foci = env.request_demo(return_foci=True)
             sai = Sai(selection=selection, action=action, inputs=inputs)
 
         elif isinstance(response, Sai):
@@ -34,19 +40,30 @@ def run_training(agent, n=10):
                       inputs=response['inputs'])
 
         # print('sai', sai.selection, sai.action, sai.inputs)
-        reward = env.apply_sai(sai.selection, sai.action, sai.inputs)
-        print('reward', reward)
+        reward = env.apply_sai(sai.selection, sai.action, sai.inputs, apply_incorrects=False)
+        if(reward == 1):
+            if(response == {}):
+                print(Back.BLUE + Fore.YELLOW + f"HINT: {sai.selection} -> {sai.inputs}")
+            else:
+                print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai.selection} -> {sai.inputs}")
+        else:
+            print(Back.RED + Fore.BLACK + f"INCORRECT: {sai.selection} -> {sai.inputs}")
 
-        next_state = env.get_state()
+
+        if(SEND_NEXT_STATE and (reward == 1 or ALWAYS_UPDATE_STATE)):
+            next_state = env.get_state()
+        else:
+            next_state = None
 
         # env.render()
 
-        agent.train(state, sai, reward, next_state=next_state,
-                    skill_label="multicolumn",
-                    foci_of_attention=[])
+        agent.train(state, sai, int(reward), rhs_id=response.get("rhs_id", None),
+                    mapping=response.get("mapping", None),
+                     next_state=next_state, foci_of_attention=foci)
+                    
 
         if sai.selection == "done" and reward == 1.0:
-            print('Finished problem {} of {}'.format(p, n))
+            print(f'Finished problem {p} of {n}')
             p += 1
 
 
@@ -145,33 +162,52 @@ def run_training(agent, n=10):
 
 if __name__ == "__main__":
 
-    # args = {
-    #     "function_set": [
-    #         "RipFloatValue",
-    #         "Add",
-    #         "Add3",
-    #         "Div10",
-    #         "Mod10",
-    #     ],
-    #     "feature_set": ["Equals"],
-    #     "planner": "numba",
-    #     "search_depth": 2,
-    #     "when_learner": "decision_tree",
-    #     "where_learner": "FastMostSpecific",
-    #     "state_variablization": "whereappend",
-    #     "strip_attrs": [
-    #         "to_left", "to_right", "above", "below", "type", "id",
-    #         "offsetParent", "dom_class"
-    #     ],
-    #     "when_args": {
-    #         "cross_rhs_inference": "none"
-    #     }
-    # }
+    args = {
+        "search_depth" : 3,
+        "where_learner": "version_space",
+        "when_learner": "decisiontree2",
+        "which_learner": "nonlinearproportioncorrect",
+        "explanation_choice" : "least_operations",
+        "planner" : "numba",
+        # // "when_args" : {"cross_rhs_inference" : "implicit_negatives"},
+        "function_set" : ["RipFloatValue","Mod10","Div10","Add","Add3"],
+        "feature_set" : [],
+        "strip_attrs" : ["to_left","to_right","above","below","type","id","offsetParent","dom_class"],
+        "state_variablization" : "metaskill",
+        # "function_set" : ["RipFloatValue","Add","Add3", "Mod10","Div10"],
+        # "feature_set": [],
+        # "planner": "numba",
+        # "planner_args" : {
 
-    # agent = ModularAgent(**args)
+        # },
+        # "explanation_choice" : "least_operations",
+        # "search_depth": 3,
+        # "when_learner": "decisiontree",
+        # "where_learner": "VersionSpace",
+        # "state_variablization": "metaskill",
+        # "strip_attrs" : ["to_left","to_right","above","below","type","id","offsetParent","dom_class"],
+        # "when_args": {
+        #     "cross_rhs_inference": "none"
+        # },
+        # "which_learner": "proportioncorrect",
+        #     "which_args": {
+        #         "remove_utility_type" : "nonlinearproportioncorrect"
+        #     },
+        # # "which_args": {
+        # #     "remove_utility_type": "nonlinearproportioncorrect"
+        # # }
 
-    agent = WhereWhenHowNoFoa('multicolumn', 'multicolumn', search_depth=1)
+    }
+
+    # agent = RHS_LHS_Agent(**args)
+    # run_training(agent, n=1000)
+
+
+    
+
+    # agent = WhereWhenHowNoFoa('multicolumn', 'multicolumn', search_depth=1)
 
     # agent = PyReteAgent([update_field, add_values, mod10_value])
 
-    run_training(agent, n=5000)
+    agent = ModularAgent(**args)
+    run_training(agent, n=100)
