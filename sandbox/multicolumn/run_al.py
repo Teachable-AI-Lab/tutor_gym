@@ -199,11 +199,8 @@ if __name__ == "__main__":
 
     }
 
-    # agent = RHS_LHS_Agent(**args)
-    # run_training(agent, n=1000)
-
-
-    
+    agent = RHS_LHS_Agent(**args)
+    run_training(agent, n=1000)
 
     # agent = WhereWhenHowNoFoa('multicolumn', 'multicolumn', search_depth=1)
 
