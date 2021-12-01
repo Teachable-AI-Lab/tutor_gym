@@ -8,12 +8,12 @@ from apprentice.working_memory.representation import Sai
 # from py_rete import V
 # from py_rete.conditions import Filter
 
-from tutorenvs.multicolumn import MultiColumnAdditionSymbolic
+from tutorenvs.multicolumn_v import MultiColumnAdditionSymbolic
 from colorama import Back, Fore
 
 def run_training(agent, n=10):
 
-    env = MultiColumnAdditionSymbolic()
+    env = MultiColumnAdditionSymbolic(n=8)
     ALWAYS_UPDATE_STATE = False
     SEND_NEXT_STATE = True
 
@@ -21,7 +21,6 @@ def run_training(agent, n=10):
     reward = 1
 
     while p < n:
-
         if(reward == 1 or ALWAYS_UPDATE_STATE):
             state = env.get_state()
 
@@ -63,6 +62,7 @@ def run_training(agent, n=10):
                     
 
         if sai.selection == "done" and reward == 1.0:
+            print("+" * 100)
             print(f'Finished problem {p} of {n}')
             p += 1
 
@@ -161,7 +161,6 @@ def run_training(agent, n=10):
 
 
 if __name__ == "__main__":
-
     args = {
         "search_depth" : 3,
         "where_learner": "version_space",
@@ -199,12 +198,12 @@ if __name__ == "__main__":
 
     }
 
-    agent = RHS_LHS_Agent(**args)
-    run_training(agent, n=1000)
+    # This
+    # agent = RHS_LHS_Agent(**args)
+    # run_training(agent, n=100)
 
     # agent = WhereWhenHowNoFoa('multicolumn', 'multicolumn', search_depth=1)
-
     # agent = PyReteAgent([update_field, add_values, mod10_value])
 
     agent = ModularAgent(**args)
-    run_training(agent, n=100)
+    run_training(agent, n=50)
