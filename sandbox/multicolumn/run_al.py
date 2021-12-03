@@ -9,11 +9,14 @@ from apprentice.working_memory.representation import Sai
 # from py_rete.conditions import Filter
 
 from tutorenvs.multicolumn_v import MultiColumnAdditionSymbolic
+from tutorenvs.utils import DataShopLogger
 from colorama import Back, Fore
 
-def run_training(agent, n=10):
+def run_training(agent, logger_name='MulticolumnAddition',  n=10, n_columns=3):
 
-    env = MultiColumnAdditionSymbolic(n=8)
+    logger = DataShopLogger(logger_name, extra_kcs=['field'])
+
+    env = MultiColumnAdditionSymbolic(logger=logger, n=n_columns)
     ALWAYS_UPDATE_STATE = False
     SEND_NEXT_STATE = True
 
@@ -26,6 +29,7 @@ def run_training(agent, n=10):
 
         response = agent.request(state)
 
+        foci = None
         if response == {}:
             print('hint')
             (selection, action, inputs), foci = env.request_demo(return_foci=True)
@@ -161,7 +165,8 @@ def run_training(agent, n=10):
 
 
 if __name__ == "__main__":
-    args = {
+
+    agent_args = {
         "search_depth" : 3,
         "where_learner": "version_space",
         "when_learner": "decisiontree2",
@@ -197,6 +202,31 @@ if __name__ == "__main__":
         # # }
 
     }
+    import sys, argparse
+    parser = argparse.ArgumentParser(
+        description='Runs AL agents on multi-column addition')
+    parser.add_argument('--n-agents', default=50, type=int, metavar="<n_agents>",
+                        dest="n_agents", help="number of agents")
+    parser.add_argument('--n-problems', default=100, type=int, metavar="<n_problems>",
+                        dest="n_problems", help="number of problems")
+    parser.add_argument('--n-columns', default=3, type=int, metavar="<n_columns>",
+                        dest="n_columns", help="number of columns")
+    parser.add_argument('--agent-type', default='DIPL',metavar="<agent_type>",
+                        dest="agent_type", help="type of agents DIPL or RHS_LHS")
+
+    args = parser.parse_args(sys.argv[1:])
+    # print(args, type(args))
+    if(args.agent_type.upper() == "DIPL"):
+        agent = ModularAgent(**agent_args)
+    elif(args.agent_type.upper() == "RHS_LHS"):
+        agent = RHS_LHS_Agent(**agent_args)
+    else:
+        raise ValueError(f"Unrecognized agent type {args.agent_type!r}.")
+
+
+
+
+
 
     # This
     # agent = RHS_LHS_Agent(**args)
@@ -204,6 +234,6 @@ if __name__ == "__main__":
 
     # agent = WhereWhenHowNoFoa('multicolumn', 'multicolumn', search_depth=1)
     # agent = PyReteAgent([update_field, add_values, mod10_value])
-
-    agent = ModularAgent(**args)
-    run_training(agent, n=50)
+    logger_name = f'mc_addition_{args.agent_type}_{args.n_columns}col_{args.n_problems}probs'
+    for _ in range(args.n_agents):
+        run_training(agent, logger_name=logger_name,  n=int(args.n_problems), n_columns=args.n_columns)
