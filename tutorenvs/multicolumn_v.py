@@ -48,7 +48,7 @@ class MultiColumnAdditionSymbolic:
         self.coords = {
             "operator" : {"x" :-110,"y" : 220 , "width" : 100, "height" : 100},
             "line" :     {"x" :0,   "y" : 325 , "width" : 5, "height" : 5},
-            "done" :     {"x" :340, "y" : 430 , "width" : 100, "height" : 100},
+            "done" :     {"x" :0, "y" : 440 , "width" : 100, "height" : 100},
             "hidey1" :   {"x" :self.n * 110, "y" : 0 , "width" : 100, "height" : 100},
             "hidey2" :   {"x" :0,   "y" : 110 , "width" : 100, "height" : 100},
             "hidey3" :   {"x" :0,   "y" : 220 , "width" : 100, "height" : 100},
