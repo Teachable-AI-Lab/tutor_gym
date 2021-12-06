@@ -4,13 +4,14 @@ import apprentice
 from apprentice.working_memory.representation import Sai
 from apprentice.working_memory.numba_operators import *
 
-from tutorenvs.fractions import FractionArithSymbolic
+from tutorenvs.fractions_v import FractionArithSymbolic
+from colorama import Back, Fore
 
 import time
 
 def run_training(agent, n=10):
 
-    env = FractionArithSymbolic()
+    env = FractionArithSymbolic(n=2)
 
     p = 0
     c = 0
@@ -34,8 +35,15 @@ def run_training(agent, n=10):
         print(sai)
         
         reward = env.apply_sai(sai.selection, sai.action, sai.inputs)
-        print('reward', reward)
+        if(reward == 1):
+            if(response == {}):
+                print(Back.BLUE + Fore.YELLOW + f"HINT: {sai.selection} -> {sai.inputs}")
+            else:
+                print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai.selection} -> {sai.inputs}")
+        else:
+            print(Back.RED + Fore.BLACK + f"INCORRECT: {sai.selection} -> {sai.inputs}")
 
+        print(reward)
         next_state = env.get_state()
         # print([f'{x["id"]}:{x.get("value",None)}' for x in state.values()])
 
@@ -73,4 +81,4 @@ if __name__ == "__main__":
         # agent = WhereWhenHowNoFoa('fraction arith', 'fraction arith',
         #                       search_depth=1)
 
-        run_training(agent, n=500)
+        run_training(agent, n=5)
