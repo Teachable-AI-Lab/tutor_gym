@@ -10,7 +10,7 @@ from tutorenvs.utils import compare
 
 import time
 
-def run_training(agent, n=10):
+def run_training(agent, n=10, use_foci=False):
 
     env = FractionArithSymbolic(n=2)
 
@@ -25,7 +25,11 @@ def run_training(agent, n=10):
 
         if response == {}:
             print('hint')
-            selection, action, inputs = env.request_demo()
+            if use_foci:
+                (selection, action, inputs), foci = env.request_demo(return_foci=True)
+            else:
+                selection, action, inputs = env.request_demo(return_foci=False)
+                foci = []
             sai = Sai(selection=selection, action=action, inputs=inputs)
 
         else:
@@ -53,7 +57,7 @@ def run_training(agent, n=10):
                     mapping=response.get("mapping", None),
                     next_state=next_state,
                     # skill_label="fractions",
-                    foci_of_attention=[])
+                    foci_of_attention=foci)
 
         if sai.selection == "done" and reward == 1.0:
             print('Finished problem {} of {}'.format(p, n))

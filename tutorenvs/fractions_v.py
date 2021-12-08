@@ -53,44 +53,66 @@ class FractionArithSymbolic:
 
         # TODO: Make the order insignificant?
         if self.state['initial_operator'] == "*":
-            sai = ('answer_num', 'UpdateField', 
-                   {'value': str(reduce(operator.mul, init_nums))})
-            fsm.add_next_state(sai)
-
+            foci = [*["initial_denom_{}".format(i) for i in range(self.n)],
+                    'initial_operator']
             sai = ('answer_denom', 'UpdateField', 
                    {'value': str(reduce(operator.mul, init_denoms))})
-            fsm.add_next_state(sai)
-        elif sd:
-            sai = ('answer_num', 'UpdateField', 
-                   {'value': str(sum(init_nums))})
-            fsm.add_next_state(sai)
+            fsm.add_next_state(sai, foci)
 
+            foci = [*["initial_num_{}".format(i) for i in range(self.n)],
+                    *["initial_denom_{}".format(i) for i in range(self.n)],
+                    'initial_operator']
+            sai = ('answer_num', 'UpdateField', 
+                   {'value': str(reduce(operator.mul, init_nums))})
+            fsm.add_next_state(sai, foci)
+        elif sd:
+            foci = [*["initial_denom_{}".format(i) for i in range(self.n)],
+                    'initial_operator']
             sai = ('answer_denom', 'UpdateField', 
                    {'value': str(self.state['initial_denom_0'])})
-            fsm.add_next_state(sai)
-        else:
-            sai = ('check_convert', 'UpdateField', {'value': 'x'})
-            fsm.add_next_state(sai)
+            fsm.add_next_state(sai, foci)
 
+            foci = [*["initial_num_{}".format(i) for i in range(self.n)],
+                    *["initial_denom_{}".format(i) for i in range(self.n)],
+                    'initial_operator']
+            sai = ('answer_num', 'UpdateField', 
+                   {'value': str(sum(init_nums))})
+            fsm.add_next_state(sai, foci)
+        else:
+            foci = [*["initial_denom_{}".format(i) for i in range(self.n)],
+                    'initial_operator']
+            sai = ('check_convert', 'UpdateField', {'value': 'x'})
+            fsm.add_next_state(sai, foci)
+
+            foci = [*["initial_denom_{}".format(i) for i in range(self.n)],
+                    'initial_operator']
             convert_denom = reduce(operator.mul, init_denoms)
             for i in range(self.n):
                 sai = ('convert_denom_{}'.format(i), 'UpdateField', {'value': str(convert_denom)})
-                fsm.add_next_state(sai)
+                fsm.add_next_state(sai, foci)
 
             convert_nums = []
             for i in range(self.n):
+                foci = [*["initial_denom_{}".format(i) for i in range(self.n)],
+                        'initial_operator']
                 convert_num = int((convert_denom * init_nums[i]) / init_denoms[i])
                 sai = ('convert_num_{}'.format(i), 'UpdateField', {'value': str(convert_num)})
-                fsm.add_next_state(sai)
+                fsm.add_next_state(sai, foci)
                 convert_nums.append(convert_num)
 
+            foci = [*["convert_num_{}".format(i) for i in range(self.n)],
+                    'initial_operator']
             sai = ('answer_num', 'UpdateField', {'value': str(sum(convert_nums))})
-            fsm.add_next_state(sai)
-            sai = ('answer_denom', 'UpdateField', {'value': str(convert_denom)})
-            fsm.add_next_state(sai)
+            fsm.add_next_state(sai, foci)
 
+            foci = [*["convert_denom_{}".format(i) for i in range(self.n)],
+                    'initial_operator']
+            sai = ('answer_denom', 'UpdateField', {'value': str(convert_denom)})
+            fsm.add_next_state(sai, foci)
+
+        foci = ['answer_num', 'answer_denom']
         sai = ('done', "ButtonPressed", {'value': -1})
-        fsm.add_next_state(sai)
+        fsm.add_next_state(sai, foci)
 
         fsm.reset()
         return fsm
@@ -299,21 +321,26 @@ class FractionArithSymbolic:
 
         return reward
 
-    def request_demo(self):
+    def request_demo(self, return_foci=False):
         demo = self.get_demo()
-        feedback_text = "selection: %s, action: %s, input: %s" % (demo[0],
-                demo[1], demo[2]['value'])
+        sai, foci = demo if(return_foci) else (demo, None)
+        feedback_text = "selection: %s, action: %s, input: %s" % (sai[0],
+                         sai[1], sai[2]['value'])
         self.logger.log_hint(feedback_text, step_name=self.ptype + '_' +
-                             demo[0], kcs=[self.ptype + '_' + demo[0]])
+                             sai[0], kcs=[self.ptype + '_' + sai[0]])
         self.num_hints += 1
-
         return demo
 
-    def get_demo(self):
+    def get_demo(self, return_foci=False):
         """
         Returns a correct next-step SAI
         """
-        return self.fsm.cur_state.sai
+        sai = self.fsm.cur_state.sai
+        foci = self.fsm.cur_state.foci
+        if(return_foci):
+            return sai, foci
+        else:
+            return sai
 
 
 class FractionArithNumberEnv(gym.Env):
