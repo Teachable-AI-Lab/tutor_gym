@@ -12,7 +12,7 @@ import time
 
 def run_training(agent, n=10, use_foci=False):
 
-    env = FractionArithSymbolic(n=2)
+    env = FractionArithSymbolic(n=3)
 
     p = 0
     c = 0
@@ -69,7 +69,11 @@ def run_training(agent, n=10, use_foci=False):
 
 
 if __name__ == "__main__":
-    function_set = ['RipFloatValue','Add', 'Subtract','Multiply', 'Divide']
+    function_set = ['RipFloatValue',
+                    'Add', 'Add3', 'Add4', 'Add5', 
+                    'Multiply', 'Multiply3', 'Multiply4', 'Multiply5', 
+                    'Subtract',
+                    'Divide']
     feature_set = ['Equals']
 
     for i in range(100):
