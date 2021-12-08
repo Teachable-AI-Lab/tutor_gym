@@ -1,6 +1,7 @@
 from tutorenvs.fractions_v import FractionArithSymbolic
 from tutorenvs.multicolumn_v import MultiColumnAdditionSymbolic
 from colorama import Fore, Back
+from tutorenvs.utils import compare
 
 
 def _assert_step(env, selection, value, fraction=False):
@@ -123,6 +124,19 @@ def test_multi_column_env():
     print("PASS")
 
 
+def test_compare():
+    assert compare([1, 2, 3], [1, 2, 3])
+    assert not compare([1, 2, 3], [1, 3, 3])
+
+    x = {"x": {"a": 1, "b": 2}, "y": "hello" }
+    y = {"x": {"a": 1, "b": 2}, "y": "hello" }
+
+    assert compare(x, y)
+    y["y"] = "world"
+    assert not compare(x, y)
+
+
 if __name__ == "__main__":
     # test_multi_column_env()
-    test_fraction_env()
+    # test_fraction_env()
+    test_compare()

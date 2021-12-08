@@ -37,6 +37,39 @@ def linear_schedule(
     return func
 
 
+def compare(a, b):
+    if type(a) != type(b):
+        print("[ERR] Type is not the same.")
+        return False
+
+    same = True
+    if type(a) == dict:
+        if len(a) != len(b):
+            print("[ERR] Size is not the same.")
+            return False
+
+        for name in a:
+            if name not in b:
+                print("[ERR] {} is not in b".format(name))
+                return False
+            same = same and compare(a[name], b[name])
+        return same
+
+    if type(a) == list:
+        if len(a) != len(b):
+            print("[ERR] Size is not the same.")
+            return False
+
+        for x, y in zip(a, b):
+            same = same and compare(x, y)
+        return same
+
+    if a != b:
+        print("[ERR] {} does not equal {}".format(a, b))
+        return False
+    return True
+
+
 class StubLogger():
     def __init__(self):
         log.info("StubLogger Created")

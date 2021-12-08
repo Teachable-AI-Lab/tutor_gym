@@ -6,6 +6,7 @@ from apprentice.working_memory.numba_operators import *
 
 from tutorenvs.fractions_v import FractionArithSymbolic
 from colorama import Back, Fore
+from tutorenvs.utils import compare
 
 import time
 
@@ -47,8 +48,11 @@ def run_training(agent, n=10):
         next_state = env.get_state()
         # print([f'{x["id"]}:{x.get("value",None)}' for x in state.values()])
 
-        agent.train(state, sai, reward, next_state=next_state,#)
-                    skill_label="fractions",
+        agent.train(state, sai, int(reward),
+                    rhs_id=response.get("rhs_id", None),
+                    mapping=response.get("mapping", None),
+                    next_state=next_state,
+                    # skill_label="fractions",
                     foci_of_attention=[])
 
         if sai.selection == "done" and reward == 1.0:

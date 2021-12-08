@@ -294,8 +294,7 @@ class FractionArithSymbolic:
 
         if selection == "done":
             self.set_random_problem()
-
-        else:
+        elif reward > 0:
             self.state[selection] = inputs['value']
 
         return reward
