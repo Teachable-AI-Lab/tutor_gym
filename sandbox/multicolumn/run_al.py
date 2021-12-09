@@ -216,13 +216,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args(sys.argv[1:])
     # print(args, type(args))
-    if(args.agent_type.upper() == "DIPL"):
-        agent = ModularAgent(**agent_args)
-    elif(args.agent_type.upper() == "RHS_LHS"):
-        agent = RHS_LHS_Agent(**agent_args)
-    else:
-        raise ValueError(f"Unrecognized agent type {args.agent_type!r}.")
-
+    
 
 
 
@@ -236,4 +230,11 @@ if __name__ == "__main__":
     # agent = PyReteAgent([update_field, add_values, mod10_value])
     logger_name = f'mc_addition_{args.agent_type}_{args.n_columns}col_{args.n_problems}probs'
     for _ in range(args.n_agents):
+        if(args.agent_type.upper() == "DIPL"):
+            agent = ModularAgent(**agent_args)
+        elif(args.agent_type.upper() == "RHS_LHS"):
+            agent = RHS_LHS_Agent(**agent_args)
+        else:
+            raise ValueError(f"Unrecognized agent type {args.agent_type!r}.")
+
         run_training(agent, logger_name=logger_name,  n=int(args.n_problems), n_columns=args.n_columns)
