@@ -11,6 +11,7 @@ from sklearn.feature_extraction import FeatureHasher
 from sklearn.feature_extraction import DictVectorizer
 import numpy as np
 from PIL import Image, ImageDraw
+from colorama import Back, Fore
 from tutorenvs.fsm import StateMachine
 
 from tutorenvs.utils import OnlineDictVectorizer
@@ -157,14 +158,12 @@ class MultiColumnAdditionSymbolic:
 
         self.fsm = self.create_state_machine()
 
-
     def get_possible_selections(self):
         selections = ['done']
         for i in range(self.n+1):
             selections.extend(["{}_carry".format(i), "{}_answer".format(i)])
 
         return selections
-
 
     def get_possible_args(self):
         args = []
@@ -182,12 +181,10 @@ class MultiColumnAdditionSymbolic:
         ])
         return args
 
-
     def render(self, add_dot=None):
         img = self.get_image(add_counts=True, add_dot=add_dot)
         cv2.imshow('vecenv', np.array(img))
         cv2.waitKey(1)
-
 
     # TODO
     def get_image(self, add_counts=False, add_dot=None):
@@ -315,7 +312,6 @@ class MultiColumnAdditionSymbolic:
         upper = str(upper)
         lower = str(lower)
 
-        from colorama import Back, Fore
         print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {upper} + {lower}" )
 
         self.reset(upper=upper, lower=lower,pad_zeros=pad_zeros)

@@ -4,13 +4,15 @@ import apprentice
 from apprentice.working_memory.representation import Sai
 from apprentice.working_memory.numba_operators import *
 
-from tutorenvs.fractions import FractionArithSymbolic
+from tutorenvs.fractions_v import FractionArithSymbolic
+from colorama import Back, Fore
+from tutorenvs.utils import compare
 
 import time
 
-def run_training(agent, n=10):
+def run_training(agent, n=10, use_foci=False):
 
-    env = FractionArithSymbolic()
+    env = FractionArithSymbolic(n=3)
 
     p = 0
     c = 0
@@ -23,7 +25,11 @@ def run_training(agent, n=10):
 
         if response == {}:
             print('hint')
-            selection, action, inputs = env.request_demo()
+            if use_foci:
+                (selection, action, inputs), foci = env.request_demo(return_foci=True)
+            else:
+                selection, action, inputs = env.request_demo(return_foci=False)
+                foci = []
             sai = Sai(selection=selection, action=action, inputs=inputs)
 
         else:
@@ -34,14 +40,24 @@ def run_training(agent, n=10):
         print(sai)
         
         reward = env.apply_sai(sai.selection, sai.action, sai.inputs)
-        print('reward', reward)
+        if(reward == 1):
+            if(response == {}):
+                print(Back.BLUE + Fore.YELLOW + f"HINT: {sai.selection} -> {sai.inputs}")
+            else:
+                print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai.selection} -> {sai.inputs}")
+        else:
+            print(Back.RED + Fore.BLACK + f"INCORRECT: {sai.selection} -> {sai.inputs}")
 
+        print(reward)
         next_state = env.get_state()
         # print([f'{x["id"]}:{x.get("value",None)}' for x in state.values()])
 
-        agent.train(state, sai, reward, next_state=next_state,#)
-                    skill_label="fractions",
-                    foci_of_attention=[])
+        agent.train(state, sai, int(reward),
+                    rhs_id=response.get("rhs_id", None),
+                    mapping=response.get("mapping", None),
+                    next_state=next_state,
+                    # skill_label="fractions",
+                    foci_of_attention=foci)
 
         if sai.selection == "done" and reward == 1.0:
             print('Finished problem {} of {}'.format(p, n))
@@ -53,7 +69,11 @@ def run_training(agent, n=10):
 
 
 if __name__ == "__main__":
-    function_set = ['RipFloatValue','Add', 'Subtract','Multiply', 'Divide']
+    function_set = ['RipFloatValue',
+                    'Add', 'Add3', 'Add4', 'Add5', 
+                    'Multiply', 'Multiply3', 'Multiply4', 'Multiply5', 
+                    'Subtract',
+                    'Divide']
     feature_set = ['Equals']
 
     for i in range(100):
@@ -73,4 +93,4 @@ if __name__ == "__main__":
         # agent = WhereWhenHowNoFoa('fraction arith', 'fraction arith',
         #                       search_depth=1)
 
-        run_training(agent, n=500)
+        run_training(agent, n=20, use_foci=False)
