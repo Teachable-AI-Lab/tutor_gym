@@ -93,4 +93,4 @@ if __name__ == "__main__":
         # agent = WhereWhenHowNoFoa('fraction arith', 'fraction arith',
         #                       search_depth=1)
 
-        run_training(agent, n=5)
+        run_training(agent, n=20, use_foci=False)

@@ -93,8 +93,13 @@ class FractionArithSymbolic:
 
             convert_nums = []
             for i in range(self.n):
-                foci = [*["initial_denom_{}".format(i) for i in range(self.n)],
+                foci = [*["initial_denom_{}".format(j) for j in range(self.n)],
+                        "initial_num_{}".format(i),
                         'initial_operator']
+                foci.remove("initial_denom_{}".format(i))
+
+                # foci = ["convert_denom_0"]
+
                 convert_num = int((convert_denom * init_nums[i]) / init_denoms[i])
                 sai = ('convert_num_{}'.format(i), 'UpdateField', {'value': str(convert_num)})
                 fsm.add_next_state(sai, foci)
@@ -322,7 +327,7 @@ class FractionArithSymbolic:
         return reward
 
     def request_demo(self, return_foci=False):
-        demo = self.get_demo()
+        demo = self.get_demo(return_foci)
         sai, foci = demo if(return_foci) else (demo, None)
         feedback_text = "selection: %s, action: %s, input: %s" % (sai[0],
                          sai[1], sai[2]['value'])
