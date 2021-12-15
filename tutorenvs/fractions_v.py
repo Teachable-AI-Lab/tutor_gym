@@ -13,6 +13,7 @@ from sklearn.feature_extraction import FeatureHasher
 from sklearn.feature_extraction import DictVectorizer
 from tutorenvs.utils import OnlineDictVectorizer
 import numpy as np
+from colorama import Back, Fore
 
 from tutorenvs.utils import DataShopLogger
 from tutorenvs.utils import StubLogger
@@ -53,65 +54,63 @@ class FractionArithSymbolic:
 
         # TODO: Make the order insignificant?
         if self.state['initial_operator'] == "*":
-            foci = [*["initial_denom_{}".format(i) for i in range(self.n)],
-                    'initial_operator']
+            # Multiplication
+            foci = ["initial_denom_{}".format(i) for i in range(self.n)]
             sai = ('answer_denom', 'UpdateField', 
                    {'value': str(reduce(operator.mul, init_denoms))})
             fsm.add_next_state(sai, foci)
 
             foci = [*["initial_num_{}".format(i) for i in range(self.n)],
-                    *["initial_denom_{}".format(i) for i in range(self.n)],
-                    'initial_operator']
+                    *["initial_denom_{}".format(i) for i in range(self.n)]]
             sai = ('answer_num', 'UpdateField', 
                    {'value': str(reduce(operator.mul, init_nums))})
             fsm.add_next_state(sai, foci)
         elif sd:
-            foci = [*["initial_denom_{}".format(i) for i in range(self.n)],
-                    'initial_operator']
+            # Addition Same
+            foci = ["initial_denom_{}".format(i) for i in range(self.n)]
             sai = ('answer_denom', 'UpdateField', 
                    {'value': str(self.state['initial_denom_0'])})
             fsm.add_next_state(sai, foci)
 
             foci = [*["initial_num_{}".format(i) for i in range(self.n)],
-                    *["initial_denom_{}".format(i) for i in range(self.n)],
-                    'initial_operator']
+                    *["initial_denom_{}".format(i) for i in range(self.n)]]
             sai = ('answer_num', 'UpdateField', 
                    {'value': str(sum(init_nums))})
             fsm.add_next_state(sai, foci)
         else:
-            foci = [*["initial_denom_{}".format(i) for i in range(self.n)],
-                    'initial_operator']
+            # Addition Different
+            foci = []#["initial_denom_{}".format(i) for i in range(self.n)]
             sai = ('check_convert', 'UpdateField', {'value': 'x'})
             fsm.add_next_state(sai, foci)
 
-            foci = [*["initial_denom_{}".format(i) for i in range(self.n)],
-                    'initial_operator']
+            
             convert_denom = reduce(operator.mul, init_denoms)
             for i in range(self.n):
+                if(i == 0):
+                    foci = ["initial_denom_{}".format(i) for i in range(self.n)]
+                else:
+                    foci = [f"convert_denom_{i-1}"]
                 sai = ('convert_denom_{}'.format(i), 'UpdateField', {'value': str(convert_denom)})
                 fsm.add_next_state(sai, foci)
 
             convert_nums = []
             for i in range(self.n):
-                foci = [*["initial_denom_{}".format(j) for j in range(self.n)],
-                        "initial_num_{}".format(i),
-                        'initial_operator']
-                foci.remove("initial_denom_{}".format(i))
+                # foci = [*["initial_denom_{}".format(j) for j in range(self.n)],
+                #         "initial_num_{}".format(i)]
+                # foci.remove("initial_denom_{}".format(i))
 
-                # foci = ["convert_denom_0"]
+                foci = [f"convert_denom_{i}", f"initial_num_{i}", f"initial_denom_{i}"]
 
                 convert_num = int((convert_denom * init_nums[i]) / init_denoms[i])
                 sai = ('convert_num_{}'.format(i), 'UpdateField', {'value': str(convert_num)})
                 fsm.add_next_state(sai, foci)
                 convert_nums.append(convert_num)
 
-            foci = [*["convert_num_{}".format(i) for i in range(self.n)],
-                    'initial_operator']
+            foci = ["convert_num_{}".format(i) for i in range(self.n)]
             sai = ('answer_num', 'UpdateField', {'value': str(sum(convert_nums))})
             fsm.add_next_state(sai, foci)
 
-            foci = [*["convert_denom_{}".format(i) for i in range(self.n)],
-                    'initial_operator']
+            foci = [f"convert_denom_{self.n-1}"]
             sai = ('answer_denom', 'UpdateField', {'value': str(convert_denom)})
             fsm.add_next_state(sai, foci)
 
@@ -221,14 +220,19 @@ class FractionArithSymbolic:
             x = (self.n * 100) + 100
             y = 300
         elif name == "initial_operator":
-            x = (self.n * 100)
-            y = 50
+            # x = (self.n * 100)
+            # y = 50
+            x = 0
+            y = 700
         elif name == "convert_operator":
-            x = (self.n * 100)
-            y = 150
+            # x = (self.n * 100)
+            # y = 150
+            x = 0
+            y = 600
         elif name == "check_convert":
-            x = (self.n * 100) + 200
-            y = 50
+            # x = (self.n * 100) + 200
+            x = 0
+            y = 500
         elif name == "done":
             x = 0
             y = 300
@@ -273,10 +277,15 @@ class FractionArithSymbolic:
         return state_output
 
     def set_random_problem(self):
-        nums = [str(randint(1, 15)) for _ in range(self.n)]
-        denoms = [str(randint(2, 15)) for _ in range(self.n)]
-        operator = choice(['+', '*'])
+        ok = False
+        while(not ok):
+            nums = [str(randint(1, 15)) for _ in range(self.n)]
+            denoms = [str(randint(2, 15)) for _ in range(self.n)]
+            ok = (not any(np.array(nums)==np.array(denoms))) and (len(set(denoms)) > 1)
+        operator = "+"#choice(['+', '*'])
         self.set_problem(nums, denoms, operator)
+
+        print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {'+'.join([f'({n}/{v})' for n,v in zip(nums,denoms)])}" )
 
     def set_problem(self, nums, denoms, operator):
         self.reset(nums, denoms, operator)
