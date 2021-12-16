@@ -60,20 +60,18 @@ class FractionArithSymbolic:
                    {'value': str(reduce(operator.mul, init_denoms))})
             fsm.add_next_state(sai, foci)
 
-            foci = [*["initial_num_{}".format(i) for i in range(self.n)],
-                    *["initial_denom_{}".format(i) for i in range(self.n)]]
+            foci = ["initial_num_{}".format(i) for i in range(self.n)]
             sai = ('answer_num', 'UpdateField', 
                    {'value': str(reduce(operator.mul, init_nums))})
             fsm.add_next_state(sai, foci)
         elif sd:
             # Addition Same
-            foci = ["initial_denom_{}".format(i) for i in range(self.n)]
+            foci = ["initial_denom_0"]
             sai = ('answer_denom', 'UpdateField', 
                    {'value': str(self.state['initial_denom_0'])})
             fsm.add_next_state(sai, foci)
 
-            foci = [*["initial_num_{}".format(i) for i in range(self.n)],
-                    *["initial_denom_{}".format(i) for i in range(self.n)]]
+            foci = ["initial_num_{}".format(i) for i in range(self.n)]
             sai = ('answer_num', 'UpdateField', 
                    {'value': str(sum(init_nums))})
             fsm.add_next_state(sai, foci)
@@ -83,7 +81,6 @@ class FractionArithSymbolic:
             sai = ('check_convert', 'UpdateField', {'value': 'x'})
             fsm.add_next_state(sai, foci)
 
-            
             convert_denom = reduce(operator.mul, init_denoms)
             for i in range(self.n):
                 if(i == 0):
@@ -277,17 +274,23 @@ class FractionArithSymbolic:
         return state_output
 
     def set_random_problem(self):
-        ok = False
-
         typ = choice(["AD", "AS", "M"])
-        if(typ == "AD"):
+        if typ == "AD":
+            ok = False
             while(not ok):
                 nums = [str(randint(1, 15)) for _ in range(self.n)]
                 denoms = [str(randint(2, 15)) for _ in range(self.n)]
-                ok = (not any(np.array(nums)==np.array(denoms))) and (len(set(denoms)) > 1)
-            operator = "+"#choice(['+', '*'])
-        else:
-            pass
+                ok = (not any(np.array(nums) == np.array(denoms))) and (len(set(denoms)) > 1)
+            operator = "+"
+        elif typ == "AS":
+            denom = str(randint(2, 15))
+            nums = [str(randint(1, 15)) for _ in range(self.n)]
+            denoms = [denom for _ in range(self.n)]
+            operator = "+"
+        else: # M
+            nums = [str(randint(1, 15)) for _ in range(self.n)]
+            denoms = [str(randint(2, 15)) for _ in range(self.n)]
+            operator = "*"
         self.set_problem(nums, denoms, operator)
 
         print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {'+'.join([f'({n}/{v})' for n,v in zip(nums,denoms)])}" )
