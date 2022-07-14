@@ -96,7 +96,7 @@ if __name__ == "__main__":
     args = parser.parse_args(sys.argv[1:])
 
 
-    function_set = ['RipFloatValue',
+    function_set = [#'RipFloatValue',
                     'Add',
                     'Multiply',
                     'Subtract',
@@ -111,22 +111,27 @@ if __name__ == "__main__":
     agent_args = dict(
             feature_set=feature_set,
             function_set=function_set,
-            planner='numba',
+            planner='set_chaining',
             explanation_choice = "least_operations",
-            search_depth=3,
-            when_learner='decisiontree2',
+            search_depth=2,
+            when_learner='sklearndecisiontree',
             # where_learner='FastMostSpecific',
-            where_learner="version_space",
+            where_learner="mostspecific",
             # state_variablization='whereswap',
-            state_variablization = "metaskill",
-            strip_attrs=["to_left","to_right","above","below","type","id","offsetParent", "dom_class"]
+            # state_variablization = "metaskill",
+            # strip_attrs=["to_left","to_right","above","below","type","id","offsetParent", "dom_class"]
                 )
 
     logger_name = f'frac_addition_{args.agent_type}_{args.n_fracs}frac_{args.n_problems}probs'
     for _ in range(args.n_agents):
         if(args.agent_type.upper() == "DIPL"):
+            from apprentice.agents.cre_agents.cre_agent import CREAgent
+            agent = CREAgent(**agent_args)
+        elif(args.agent_type.upper() == "MODULAR"):
+            from apprentice.agents.ModularAgent import ModularAgent
             agent = ModularAgent(**agent_args)
         elif(args.agent_type.upper() == "RHS_LHS"):
+            from apprentice.agents.RHS_LHS_Agent import RHS_LHS_Agent
             agent = RHS_LHS_Agent(**agent_args)
         else:
             raise ValueError(f"Unrecognized agent type {args.agent_type!r}.")

@@ -1,5 +1,5 @@
-from apprentice.agents.ModularAgent import ModularAgent
-from apprentice.agents.RHS_LHS_Agent import RHS_LHS_Agent
+# from apprentice.agents.ModularAgent import ModularAgent
+
 # from apprentice.agents.pyrete_agent import PyReteAgent
 # from apprentice.agents.WhereWhenHowNoFoa import WhereWhenHowNoFoa
 from apprentice.working_memory.representation import Sai
@@ -17,6 +17,13 @@ def run_training(agent, logger_name='MulticolumnAddition',  n=10, n_columns=3):
     logger = DataShopLogger(logger_name, extra_kcs=['field'])
 
     env = MultiColumnAdditionSymbolic(logger=logger, n=n_columns)
+
+
+    problem_set = [["777", "777"], ["666", "666"], ["777","777"]]
+    # problem_set = [["517", "872"], ["925", "461"]]
+
+    env.set_problem(*problem_set[0])
+
     ALWAYS_UPDATE_STATE = False
     SEND_NEXT_STATE = True
 
@@ -59,7 +66,6 @@ def run_training(agent, logger_name='MulticolumnAddition',  n=10, n_columns=3):
             next_state = None
 
         # env.render()
-
         agent.train(state, sai, int(reward), rhs_id=response.get("rhs_id", None),
                     mapping=response.get("mapping", None),
                      next_state=next_state, foci_of_attention=foci)
@@ -67,8 +73,10 @@ def run_training(agent, logger_name='MulticolumnAddition',  n=10, n_columns=3):
 
         if sai.selection == "done" and reward == 1.0:
             print("+" * 100)
-            print(f'Finished problem {p} of {n}')
+            print(f'Finished problem {p+1} of {n}')
             p += 1
+            if(p < len(problem_set)):
+                env.set_problem(*problem_set[p])
 
 
 # @Production(
@@ -165,43 +173,13 @@ def run_training(agent, logger_name='MulticolumnAddition',  n=10, n_columns=3):
 
 
 if __name__ == "__main__":
+    import faulthandler; faulthandler.enable()
 
-    agent_args = {
-        "search_depth" : 3,
-        "where_learner": "version_space",
-        "when_learner": "decisiontree2",
-        "which_learner": "nonlinearproportioncorrect",
-        "explanation_choice" : "least_operations",
-        "planner" : "numba",
-        # // "when_args" : {"cross_rhs_inference" : "implicit_negatives"},
-        "function_set" : ["RipFloatValue","Mod10","Div10","Add","Add3"],
-        "feature_set" : [],
-        "strip_attrs" : ["to_left","to_right","above","below","type","id","offsetParent","dom_class"],
-        "state_variablization" : "metaskill",
-        # "function_set" : ["RipFloatValue","Add","Add3", "Mod10","Div10"],
-        # "feature_set": [],
-        # "planner": "numba",
-        # "planner_args" : {
+    import numpy as np
+    np.set_printoptions(edgeitems=30, linewidth=100000, 
+        formatter=dict(float=lambda x: "%.3g" % x))
 
-        # },
-        # "explanation_choice" : "least_operations",
-        # "search_depth": 3,
-        # "when_learner": "decisiontree",
-        # "where_learner": "VersionSpace",
-        # "state_variablization": "metaskill",
-        # "strip_attrs" : ["to_left","to_right","above","below","type","id","offsetParent","dom_class"],
-        # "when_args": {
-        #     "cross_rhs_inference": "none"
-        # },
-        # "which_learner": "proportioncorrect",
-        #     "which_args": {
-        #         "remove_utility_type" : "nonlinearproportioncorrect"
-        #     },
-        # # "which_args": {
-        # #     "remove_utility_type": "nonlinearproportioncorrect"
-        # # }
-
-    }
+    
     import sys, argparse
     parser = argparse.ArgumentParser(
         description='Runs AL agents on multi-column addition')
@@ -230,9 +208,45 @@ if __name__ == "__main__":
     # agent = PyReteAgent([update_field, add_values, mod10_value])
     logger_name = f'mc_addition_{args.agent_type}_{args.n_columns}col_{args.n_problems}probs'
     for _ in range(args.n_agents):
+
         if(args.agent_type.upper() == "DIPL"):
+            from apprentice.agents.cre_agents.cre_agent import CREAgent
+            agent_args = {
+                "search_depth" : 2,
+                "where_learner": "antiunify",
+                "when_learner": "sklearndecisiontree",
+                "should_find_neighbors" : True,
+                # "which_learner": "nonlinearproportioncorrect",
+                # "explanation_choice" : "least_operations",
+                "planner" : "setchaining",
+                # // "when_args" : {"cross_rhs_inference" : "implicit_negatives"},
+                "function_set" : ["Mod10","Div10","Add","Add3"],
+                "feature_set" : [],
+                # "strip_attrs" : ["to_left","to_right","above","below","type","id","offsetParent","dom_class"],
+                # "state_variablization" : "metaskill",
+                "when_args":{"encode_relative" : False},
+            }
+            agent = CREAgent(**agent_args)
+        elif(args.agent_type.upper() == "MODULAR"):
+            agent_args = {
+                "search_depth" : 3,
+                "where_learner": "version_space",
+                "when_learner": "decisiontree",
+                # "which_learner": "nonlinearproportioncorrect",
+                "explanation_choice" : "least_operations",
+                "planner" : "numba",
+                # // "when_args" : {"cross_rhs_inference" : "implicit_negatives"},
+                "function_set" : ["RipFloatValue","Mod10","Div10","Add","Add3"],
+                "feature_set" : [],
+                "strip_attrs" : ["to_left","to_right","above","below","type","id","offsetParent","dom_class"],
+                # "state_variablization" : "metaskill",
+                "should_find_neighbors": True
+            }
+
+            from apprentice.agents.ModularAgent import ModularAgent
             agent = ModularAgent(**agent_args)
         elif(args.agent_type.upper() == "RHS_LHS"):
+            from apprentice.agents.RHS_LHS_Agent import RHS_LHS_Agent
             agent = RHS_LHS_Agent(**agent_args)
         else:
             raise ValueError(f"Unrecognized agent type {args.agent_type!r}.")

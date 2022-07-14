@@ -278,16 +278,16 @@ class FractionArithSymbolic:
 
     def set_random_problem(self):
         ok = False
-
-        typ = choice(["AD", "AS", "M"])
-        if(typ == "AD"):
-            while(not ok):
-                nums = [str(randint(1, 15)) for _ in range(self.n)]
-                denoms = [str(randint(2, 15)) for _ in range(self.n)]
-                ok = (not any(np.array(nums)==np.array(denoms))) and (len(set(denoms)) > 1)
-            operator = "+"#choice(['+', '*'])
-        else:
-            pass
+        # typ = choice(["AD", "AS", "M"])
+        # typ = choice(["AD", "AS", "M"])
+        # if(typ == "AD"):
+        while(not ok):
+            nums = [str(randint(1, 15)) for _ in range(self.n)]
+            denoms = [str(randint(2, 15)) for _ in range(self.n)]
+            ok = (not any(np.array(nums)==np.array(denoms))) and (len(set(denoms)) > 1)
+        operator = choice(['+', '*'])
+        # else:
+        #     pass
         self.set_problem(nums, denoms, operator)
 
         print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {'+'.join([f'({n}/{v})' for n,v in zip(nums,denoms)])}" )
