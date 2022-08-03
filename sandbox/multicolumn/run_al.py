@@ -11,6 +11,9 @@ from apprentice.working_memory.representation import Sai
 from tutorenvs.multicolumn_v import MultiColumnAdditionSymbolic
 from tutorenvs.utils import DataShopLogger
 from colorama import Back, Fore
+import colorama
+
+colorama.init(autoreset=True)
 
 def run_training(agent, logger_name='MulticolumnAddition',  n=10, n_columns=3):
 
@@ -38,7 +41,6 @@ def run_training(agent, logger_name='MulticolumnAddition',  n=10, n_columns=3):
 
         foci = None
         if response == {}:
-            print('hint')
             (selection, action, inputs), foci = env.request_demo(return_foci=True)
             sai = Sai(selection=selection, action=action, inputs=inputs)
 
@@ -214,7 +216,9 @@ if __name__ == "__main__":
             agent_args = {
                 "search_depth" : 2,
                 "where_learner": "antiunify",
+                # "where_learner": "mostspecific",
                 "when_learner": "sklearndecisiontree",
+                # "when_learner": "decisiontree",
                 "should_find_neighbors" : True,
                 # "which_learner": "nonlinearproportioncorrect",
                 # "explanation_choice" : "least_operations",
@@ -222,16 +226,19 @@ if __name__ == "__main__":
                 # // "when_args" : {"cross_rhs_inference" : "implicit_negatives"},
                 "function_set" : ["Mod10","Div10","Add","Add3"],
                 "feature_set" : [],
+                "extra_features" : ["SkillCandidates","Match"],
                 # "strip_attrs" : ["to_left","to_right","above","below","type","id","offsetParent","dom_class"],
                 # "state_variablization" : "metaskill",
-                "when_args":{"encode_relative" : False},
+                "when_args":{"encode_relative" : True},
             }
             agent = CREAgent(**agent_args)
         elif(args.agent_type.upper() == "MODULAR"):
             agent_args = {
                 "search_depth" : 3,
                 "where_learner": "version_space",
-                "when_learner": "decisiontree",
+                # "where_learner": "mostspecific",
+                "when_learner": "decisiontree2",
+                # "when_args" : {""},
                 # "which_learner": "nonlinearproportioncorrect",
                 "explanation_choice" : "least_operations",
                 "planner" : "numba",
@@ -239,7 +246,8 @@ if __name__ == "__main__":
                 "function_set" : ["RipFloatValue","Mod10","Div10","Add","Add3"],
                 "feature_set" : [],
                 "strip_attrs" : ["to_left","to_right","above","below","type","id","offsetParent","dom_class"],
-                # "state_variablization" : "metaskill",
+                "state_variablization" : "metaskill",
+                # "state_variablization" : "whereappend",
                 "should_find_neighbors": True
             }
 
