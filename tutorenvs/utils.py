@@ -100,8 +100,7 @@ class DataShopLogger():
         # Create log file
         if not os.path.exists("log/"):
             os.mkdir("log/")
-        self.filename = "log/" + domain + "_" + time.strftime(
-            "%Y-%m-%d-%H-%M-%s") + ".txt"
+        self.filename = "log/" + domain + "_" + time.strftime("%Y-%m-%d-%H-%M-%S") + ".txt"
 
         headers = [
             'Anon Student Id', 'Session Id', 'Transaction Id', 'Time',
