@@ -10,14 +10,32 @@ from tutorenvs.utils import DataShopLogger
 from colorama import Back, Fore
 from tutorenvs.utils import compare
 
-
+import colorama
+colorama.init(autoreset=True)
 
 import time
 
-def run_training(agent, logger_name='FractionAddition', n=10, n_fracs=3, use_foci=False):
+def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=3, use_foci=False):
     logger = DataShopLogger(logger_name, extra_kcs=['field'])
 
-    env = FractionArithSymbolic(logger=logger, n=n_fracs)
+
+    if(typ[:3] == "add"):
+        if(logger_name is None): logger_name = "FractionAddition"
+        env = FractionArithSymbolic(logger=logger, problem_types=["AD","AS"], n=n_fracs)
+    elif(typ[:4] == "mult"):
+        if(logger_name is None): logger_name = "FractionMult"
+        env = FractionArithSymbolic(logger=logger, problem_types=["M"], n=n_fracs)
+    elif(typ[:5] == "arith"):
+        if(logger_name is None): logger_name = "FractionArith"
+        env = FractionArithSymbolic(logger=logger, problem_types=["AD","AS","M"], n=n_fracs)
+    else:
+        ptypes = typ.split(",")
+        if(not all([p in ["AD", "AS", "M"] for p in ptypes])):
+            raise ValueError(f"Unrecognized type {typ}")
+
+        if(logger_name is None): logger_name = f"Fraction_{'_'.join(ptypes)}"
+        env = FractionArithSymbolic(logger=logger, problem_types=ptypes, n=n_fracs)
+
     ALWAYS_UPDATE_STATE = False
     SEND_NEXT_STATE = True
 
@@ -92,43 +110,65 @@ if __name__ == "__main__":
                         dest="n_fracs", help="number of fractions")
     parser.add_argument('--agent-type', default='DIPL',metavar="<agent_type>",
                         dest="agent_type", help="type of agents DIPL or RHS_LHS")
+    parser.add_argument('-t', default='arith',metavar="<env_type>",
+                        dest="env_type", help="'arith' (i.e. mult & addition), 'mult' or 'addition'")
+
 
     args = parser.parse_args(sys.argv[1:])
 
 
-    function_set = [#'RipFloatValue',
-                    'Add',
-                    'Multiply',
-                    'Subtract',
-                    'ConvertNumerator',
+    # function_set = ['RipFloatValue','Add','Multiply','Subtract','ConvertNumerator']
                     # 'Divide',
                     # 'DivideRound',
                     #, 'Add3', 'Add4', 'Add5', 
                     #, 'Multiply3', 'Multiply4', 'Multiply5', 
-                    ]
+                    # ]
     feature_set = ['Equals']
 
-    agent_args = dict(
-            feature_set=feature_set,
-            function_set=function_set,
-            planner='set_chaining',
-            explanation_choice = "least_operations",
-            search_depth=2,
-            when_learner='sklearndecisiontree',
-            # where_learner='FastMostSpecific',
-            where_learner="mostspecific",
-            # state_variablization='whereswap',
-            # state_variablization = "metaskill",
-            # strip_attrs=["to_left","to_right","above","below","type","id","offsetParent", "dom_class"]
-                )
-
-    logger_name = f'frac_addition_{args.agent_type}_{args.n_fracs}frac_{args.n_problems}probs'
+    
+    logger_name = f'frac_{args.env_type}_{args.agent_type}_{args.n_fracs}frac_{args.n_problems}probs'
+    
     for _ in range(args.n_agents):
         if(args.agent_type.upper() == "DIPL"):
             from apprentice.agents.cre_agents.cre_agent import CREAgent
+
+            agent_args = dict(
+                function_set=['Add','Multiply','Subtract','ConvertNumerator'],
+                feature_set=['Equals'],
+                planner='set_chaining',
+                explanation_choice = "least_operations",
+                search_depth=2,
+                
+                where_learner="antiunify",
+                # where_learner="mostspecific",
+                
+                when_learner='sklearndecisiontree',
+                extra_features = ["Match"],
+                when_args={"encode_relative" : True},
+                
+                should_find_neighbors=True
+            )
+
             agent = CREAgent(**agent_args)
         elif(args.agent_type.upper() == "MODULAR"):
             from apprentice.agents.ModularAgent import ModularAgent
+
+            agent_args = dict(
+                function_set=['RipFloatValue','Add','Multiply','Subtract','ConvertNumerator'],
+                feature_set=['Equals'],
+                planner='numba',
+                explanation_choice = "least_operations",
+                search_depth=3,
+                when_learner='decisiontree2',
+                # where_learner='FastMostSpecific',
+                # where_learner="mostspecific",
+                where_learner="version_space",
+                # state_variablization='whereswap',
+                state_variablization = "metaskill",
+                strip_attrs=["to_left","to_right","above","below","type","id","offsetParent", "dom_class"],
+                should_find_neighbors=True
+            )
+
             agent = ModularAgent(**agent_args)
         elif(args.agent_type.upper() == "RHS_LHS"):
             from apprentice.agents.RHS_LHS_Agent import RHS_LHS_Agent
@@ -136,7 +176,7 @@ if __name__ == "__main__":
         else:
             raise ValueError(f"Unrecognized agent type {args.agent_type!r}.")
 
-        run_training(agent, logger_name=logger_name,  n=int(args.n_problems), n_fracs=args.n_fracs)
+        run_training(agent, args.env_type, logger_name=logger_name,  n=int(args.n_problems), n_fracs=args.n_fracs)
 
 
     # for i in range(100):

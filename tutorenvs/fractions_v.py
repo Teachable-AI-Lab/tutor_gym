@@ -29,7 +29,7 @@ def same_denoms(denoms):
 
 class FractionArithSymbolic:
 
-    def __init__(self, logger=None, n=2):
+    def __init__(self, logger=None, problem_types=["AD", "AS", "M"], n=2):
         """
         Creates a state and sets a random problem.
         """
@@ -42,6 +42,7 @@ class FractionArithSymbolic:
         if n < 2:
             raise Exception("n cannot be lower than 2.")
         self.n = n
+        self.problem_types = problem_types
         self.logger.set_student()
         self.set_random_problem()
 
@@ -60,20 +61,20 @@ class FractionArithSymbolic:
                    {'value': str(reduce(operator.mul, init_denoms))})
             fsm.add_next_state(sai, foci)
 
-            foci = [*["initial_num_{}".format(i) for i in range(self.n)],
-                    *["initial_denom_{}".format(i) for i in range(self.n)]]
+            foci = [*["initial_num_{}".format(i) for i in range(self.n)],]
+                    # *["initial_denom_{}".format(i) for i in range(self.n)]]
             sai = ('answer_num', 'UpdateField', 
                    {'value': str(reduce(operator.mul, init_nums))})
             fsm.add_next_state(sai, foci)
         elif sd:
             # Addition Same
-            foci = ["initial_denom_{}".format(i) for i in range(self.n)]
+            foci = ["initial_denom_0"]
             sai = ('answer_denom', 'UpdateField', 
                    {'value': str(self.state['initial_denom_0'])})
             fsm.add_next_state(sai, foci)
 
-            foci = [*["initial_num_{}".format(i) for i in range(self.n)],
-                    *["initial_denom_{}".format(i) for i in range(self.n)]]
+            foci = [*["initial_num_{}".format(i) for i in range(self.n)]]
+                    # *["initial_denom_{}".format(i) for i in range(self.n)]]
             sai = ('answer_num', 'UpdateField', 
                    {'value': str(sum(init_nums))})
             fsm.add_next_state(sai, foci)
@@ -114,7 +115,7 @@ class FractionArithSymbolic:
             sai = ('answer_denom', 'UpdateField', {'value': str(convert_denom)})
             fsm.add_next_state(sai, foci)
 
-        foci = ['answer_num', 'answer_denom']
+        foci = []#['answer_num', 'answer_denom']
         sai = ('done', "ButtonPressed", {'value': -1})
         fsm.add_next_state(sai, foci)
 
@@ -206,7 +207,7 @@ class FractionArithSymbolic:
             d.text((95, 20), "+:{}".format(self.num_correct_steps), fill=(0,0,0))
 
         # for eyes :)
-        # if add_dot:
+    # if add_dot:
         #     d.ellipse((add_dot[0]-3, add_dot[1]-3, add_dot[0]+3, add_dot[1]+3),
         #             fill=None, outline='blue')
 
@@ -278,35 +279,40 @@ class FractionArithSymbolic:
 
     def set_random_problem(self):
         ok = False
-        # typ = choice(["AD", "AS", "M"])
-        # typ = choice(["AD", "AS", "M"])
-        # if(typ == "AD"):
-        while(not ok):
-            nums = [str(randint(1, 15)) for _ in range(self.n)]
-            denoms = [str(randint(2, 15)) for _ in range(self.n)]
-            ok = (not any(np.array(nums)==np.array(denoms))) and (len(set(denoms)) > 1)
-        operator = choice(['+', '*'])
-        # else:
-        #     pass
-        self.set_problem(nums, denoms, operator)
+        ptype = choice(self.problem_types)
 
+        if(ptype == "AD" or ptype == "M"):
+            while(not ok):
+                nums = [str(randint(1, 15)) for _ in range(self.n)]
+                denoms = [str(randint(2, 15)) for _ in range(self.n)]
+                ok = (not any(np.array(nums)==np.array(denoms))) and (len(set(denoms)) > 1)
+            operator = choice(['+', '*'])
+        elif(ptype == "AS"):
+            nums = [str(randint(1, 15)) for _ in range(self.n)]
+            denoms = [str(randint(2, 15))] * self.n
+            operator = "+"
+
+        self.set_problem(nums, denoms, operator, ptype)
         print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {'+'.join([f'({n}/{v})' for n,v in zip(nums,denoms)])}" )
 
-    def set_problem(self, nums, denoms, operator):
+    def set_problem(self, nums, denoms, operator, ptype=None):
         self.reset(nums, denoms, operator)
         problem_name = "{}_{}".format(nums[0], denoms[0])
         for n, d in zip(nums[1:], denoms[1:]):
             problem_name += "{}_{}_{}".format(operator, n, d)
 
         self.logger.set_problem(problem_name)
-
-        sd = same_denoms(denoms) == 1
-        if operator == "+" and sd:
-            self.ptype = 'AS'
-        if operator == "+" and not sd == 1:
-            self.ptype = 'AD'
-        else:
-            self.ptype = 'M'
+        
+        self.ptype = ptype
+        if(ptype is None):
+            sd = same_denoms(denoms) == 1
+            if operator == "+" and sd:
+                self.ptype = 'AS'
+            if operator == "+" and not sd == 1:
+                self.ptype = 'AD'
+            else:
+                self.ptype = 'M'
+        print(self.ptype)
 
     def apply_sai(self, selection, action, inputs):
         """

@@ -12,7 +12,6 @@ from tutorenvs.multicolumn_v import MultiColumnAdditionSymbolic
 from tutorenvs.utils import DataShopLogger
 from colorama import Back, Fore
 import colorama
-
 colorama.init(autoreset=True)
 
 def run_training(agent, logger_name='MulticolumnAddition',  n=10, n_columns=3):
