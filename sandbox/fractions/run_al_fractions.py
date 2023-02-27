@@ -3,7 +3,7 @@ from apprentice.agents.RHS_LHS_Agent import RHS_LHS_Agent
 from apprentice.agents.WhereWhenHowNoFoa import WhereWhenHowNoFoa
 import apprentice
 from apprentice.working_memory.representation import Sai
-from apprentice.working_memory.numba_operators import *
+# from apprentice.working_memory.numba_operators import *
 
 from tutorenvs.fractions_v import FractionArithSymbolic
 from tutorenvs.utils import DataShopLogger
@@ -26,6 +26,7 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=3, use_foci
         if(logger_name is None): logger_name = "FractionMult"
         env = FractionArithSymbolic(logger=logger, problem_types=["M"], n=n_fracs)
     elif(typ[:5] == "arith"):
+        print("ARITH")
         if(logger_name is None): logger_name = "FractionArith"
         env = FractionArithSymbolic(logger=logger, problem_types=["AD","AS","M"], n=n_fracs)
     else:
@@ -65,13 +66,7 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=3, use_foci
         print(sai)
         
         reward = env.apply_sai(sai.selection, sai.action, sai.inputs)
-        if(reward == 1):
-            if(response == {}):
-                print(Back.BLUE + Fore.YELLOW + f"HINT: {sai.selection} -> {sai.inputs}")
-            else:
-                print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai.selection} -> {sai.inputs}")
-        else:
-            print(Back.RED + Fore.BLACK + f"INCORRECT: {sai.selection} -> {sai.inputs}")
+        
 
         print("<<", reward, foci)
 
@@ -89,6 +84,14 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=3, use_foci
                     # skill_label="fractions",
                     foci_of_attention=foci)
 
+        if(reward == 1):
+            if(response == {}):
+                print(Back.BLUE + Fore.YELLOW + f"HINT: {sai.selection} -> {sai.inputs}")
+            else:
+                print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai.selection} -> {sai.inputs}")
+        else:
+            print(Back.RED + Fore.BLACK + f"INCORRECT: {sai.selection} -> {sai.inputs}")
+
         if sai.selection == "done" and reward == 1.0:
             print('Finished problem {} of {}'.format(p, n))
             p += 1
@@ -100,6 +103,8 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=3, use_foci
 
 if __name__ == "__main__":
     import sys, argparse
+    import faulthandler; faulthandler.enable()
+    
     parser = argparse.ArgumentParser(
         description='Runs AL agents on multi-column addition')
     parser.add_argument('--n-agents', default=50, type=int, metavar="<n_agents>",
@@ -116,7 +121,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args(sys.argv[1:])
 
-
+    print("n_agents", args.n_agents)
     # function_set = ['RipFloatValue','Add','Multiply','Subtract','ConvertNumerator']
                     # 'Divide',
                     # 'DivideRound',
@@ -139,10 +144,11 @@ if __name__ == "__main__":
                 explanation_choice = "least_operations",
                 search_depth=2,
                 
-                where_learner="antiunify",
-                # where_learner="mostspecific",
+                # where_learner="antiunify",
+                where_learner="mostspecific",
                 
-                when_learner='sklearndecisiontree',
+                # when_learner='sklearndecisiontree',
+                when_learner='decisiontree',
                 extra_features = ["Match"],
                 when_args={"encode_relative" : True},
                 
@@ -161,8 +167,8 @@ if __name__ == "__main__":
                 search_depth=3,
                 when_learner='decisiontree2',
                 # where_learner='FastMostSpecific',
-                # where_learner="mostspecific",
-                where_learner="version_space",
+                where_learner="mostspecific",
+                # where_learner="version_space",
                 # state_variablization='whereswap',
                 state_variablization = "metaskill",
                 strip_attrs=["to_left","to_right","above","below","type","id","offsetParent", "dom_class"],

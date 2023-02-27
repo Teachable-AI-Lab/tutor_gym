@@ -37,6 +37,7 @@ class DQN_w_Demos(DQN):
             learning_starts: int = 0,
             replay_buffer: Optional[ReplayBuffer] = None,
             log_interval: Optional[int] = None,
+            **kwargs
         ) -> RolloutReturn:
             """
             Collect experiences and store them into a ReplayBuffer.
@@ -178,8 +179,8 @@ if __name__ == "__main__":
                     verbose=1,
                     learning_rate=0.0005,
                     batch_size=256,
-                    train_freq=-1,
-                    n_episodes_rollout=1,
+                    # train_freq=-1,
+                    # n_episodes_rollout=1,
                     exploration_fraction=0.1,
                     exploration_initial_eps=0.45,
                     exploration_final_eps=0.0,

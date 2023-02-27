@@ -281,6 +281,8 @@ class FractionArithSymbolic:
         ok = False
         ptype = choice(self.problem_types)
 
+        print("<<", ptype, self.problem_types)
+
         if(ptype == "AD" or ptype == "M"):
             while(not ok):
                 nums = [str(randint(1, 15)) for _ in range(self.n)]
@@ -293,7 +295,7 @@ class FractionArithSymbolic:
             operator = "+"
 
         self.set_problem(nums, denoms, operator, ptype)
-        print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {'+'.join([f'({n}/{v})' for n,v in zip(nums,denoms)])}" )
+        print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {operator.join([f'({n}/{v})' for n,v in zip(nums,denoms)])}" )
 
     def set_problem(self, nums, denoms, operator, ptype=None):
         self.reset(nums, denoms, operator)

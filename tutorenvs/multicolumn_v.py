@@ -253,21 +253,22 @@ class MultiColumnAdditionSymbolic:
         Returns the current state as a dict.
         """
         text_field_params = {'type': 'TextField', 'dom_class': 'CTATTextInput', 'offsetParent' : 'background-initial'}
-        state_output = {_id:
-                        {'id': _id, 'value': value,
-                         # 'column': 'thousands' if 'thousands' in _id else
-                         # 'hundreds' if 'hundreds' in _id else 'tens' if 'tens'
-                         # in _id else 'ones',
-                         # 'row': 'answer' if 'answer' in _id else
-                         # 'lower' if 'lower' in _id else 'upper' if 'upper'
-                         # in _id else 'carry',
-                         # 'type': 'TextField',
-                         **text_field_params,
-                         'contentEditable': value == "",
-                         # 'dom_class': 'CTATTextInput',
-                         **self.coords[_id]
-                         }
-                        for _id, value in self.state.items()}
+        state_output = {}
+        for _id, value in self.state.items():
+            state_output[_id] = {'id': _id, 'value': value,
+             # 'column': 'thousands' if 'thousands' in _id else
+             # 'hundreds' if 'hundreds' in _id else 'tens' if 'tens'
+             # in _id else 'ones',
+             # 'row': 'answer' if 'answer' in _id else
+             # 'lower' if 'lower' in _id else 'upper' if 'upper'
+             # in _id else 'carry',
+             # 'type': 'TextField',
+             **text_field_params,
+             'contentEditable': value == "",
+             # 'dom_class': 'CTATTextInput',
+             **self.coords[_id]
+            }
+
         hidey_field_params = {**text_field_params, "contentEditable" : False, "value" : ""}
         state_output['hidey1'] = {
             "id" : "hidey1",

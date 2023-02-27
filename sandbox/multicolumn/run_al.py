@@ -12,6 +12,7 @@ from tutorenvs.multicolumn_v import MultiColumnAdditionSymbolic
 from tutorenvs.utils import DataShopLogger
 from colorama import Back, Fore
 import colorama
+from pprint import pprint
 colorama.init(autoreset=True)
 
 def run_training(agent, logger_name='MulticolumnAddition',  n=10, n_columns=3):
@@ -36,6 +37,9 @@ def run_training(agent, logger_name='MulticolumnAddition',  n=10, n_columns=3):
         if(reward == 1 or ALWAYS_UPDATE_STATE):
             state = env.get_state()
 
+        # print("STATE ACT")
+        # pprint({sel:(x.get('value',None),x.get('locked',None)) for sel, x in state.items()})
+
         response = agent.request(state)
 
         foci = None
@@ -52,13 +56,7 @@ def run_training(agent, logger_name='MulticolumnAddition',  n=10, n_columns=3):
 
         # print('sai', sai.selection, sai.action, sai.inputs)
         reward = env.apply_sai(sai.selection, sai.action, sai.inputs, apply_incorrects=False)
-        if(reward == 1):
-            if(response == {}):
-                print(Back.BLUE + Fore.YELLOW + f"HINT: {sai.selection} -> {sai.inputs}")
-            else:
-                print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai.selection} -> {sai.inputs}")
-        else:
-            print(Back.RED + Fore.BLACK + f"INCORRECT: {sai.selection} -> {sai.inputs}")
+        
 
 
         if(SEND_NEXT_STATE and (reward == 1 or ALWAYS_UPDATE_STATE)):
@@ -66,10 +64,21 @@ def run_training(agent, logger_name='MulticolumnAddition',  n=10, n_columns=3):
         else:
             next_state = None
 
+        # print("STATE TRAIN")
+        # pprint({sel:(x.get('value',None),x.get('locked',None)) for sel, x in state.items()})
+
         # env.render()
         agent.train(state, sai, int(reward), rhs_id=response.get("rhs_id", None),
                     mapping=response.get("mapping", None),
                      next_state=next_state, foci_of_attention=foci)
+
+        if(reward == 1):
+            if(response == {}):
+                print(Back.BLUE + Fore.YELLOW + f"HINT: {sai.selection} -> {sai.inputs}")
+            else:
+                print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai.selection} -> {sai.inputs}")
+        else:
+            print(Back.RED + Fore.BLACK + f"INCORRECT: {sai.selection} -> {sai.inputs}")
                     
 
         if sai.selection == "done" and reward == 1.0:
@@ -216,8 +225,9 @@ if __name__ == "__main__":
                 "search_depth" : 2,
                 "where_learner": "antiunify",
                 # "where_learner": "mostspecific",
-                "when_learner": "sklearndecisiontree",
-                # "when_learner": "decisiontree",
+                # "when_learner": "sklearndecisiontree",
+                "when_learner": "decisiontree",
+                # "when_learner": "stand",
                 "should_find_neighbors" : True,
                 # "which_learner": "nonlinearproportioncorrect",
                 # "explanation_choice" : "least_operations",
