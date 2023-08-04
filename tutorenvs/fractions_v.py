@@ -281,7 +281,7 @@ class FractionArithSymbolic:
         ok = False
         ptype = choice(self.problem_types)
 
-        print("<<", ptype, self.problem_types)
+        # print("<<", ptype, self.problem_types)
 
         if(ptype == "AD" or ptype == "M"):
             while(not ok):
@@ -314,7 +314,7 @@ class FractionArithSymbolic:
                 self.ptype = 'AD'
             else:
                 self.ptype = 'M'
-        print(self.ptype)
+        # print(self.ptype)
 
     def apply_sai(self, selection, action, inputs):
         """

@@ -26,7 +26,7 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=3, use_foci
         if(logger_name is None): logger_name = "FractionMult"
         env = FractionArithSymbolic(logger=logger, problem_types=["M"], n=n_fracs)
     elif(typ[:5] == "arith"):
-        print("ARITH")
+        # print("ARITH")
         if(logger_name is None): logger_name = "FractionArith"
         env = FractionArithSymbolic(logger=logger, problem_types=["AD","AS","M"], n=n_fracs)
     else:
@@ -52,7 +52,7 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=3, use_foci
 
         foci = None
         if response == {}:
-            print('hint')
+            # print('hint')
             (selection, action, inputs), foci = env.request_demo(return_foci=True)
             sai = Sai(selection=selection, action=action, inputs=inputs)
 
@@ -63,12 +63,12 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=3, use_foci
                       action=response['action'],
                       inputs=response['inputs'])
 
-        print(sai)
+        # print(sai)
         
         reward = env.apply_sai(sai.selection, sai.action, sai.inputs)
         
 
-        print("<<", reward, foci)
+        # print("<<", reward, foci)
 
         if(SEND_NEXT_STATE and (reward == 1 or ALWAYS_UPDATE_STATE)):
             next_state = env.get_state()
@@ -111,7 +111,7 @@ if __name__ == "__main__":
                         dest="n_agents", help="number of agents")
     parser.add_argument('--n-problems', default=100, type=int, metavar="<n_problems>",
                         dest="n_problems", help="number of problems")
-    parser.add_argument('--n-fracs', default=3, type=int, metavar="<n_fracs>",
+    parser.add_argument('--n-fracs', default=2, type=int, metavar="<n_fracs>",
                         dest="n_fracs", help="number of fractions")
     parser.add_argument('--agent-type', default='DIPL',metavar="<agent_type>",
                         dest="agent_type", help="type of agents DIPL or RHS_LHS")
@@ -138,7 +138,7 @@ if __name__ == "__main__":
             from apprentice.agents.cre_agents.cre_agent import CREAgent
 
             agent_args = dict(
-                function_set=['Add','Multiply','Subtract','ConvertNumerator'],
+                function_set=['Add','Multiply','Subtract', 'Divide'],#'ConvertNumerator'],
                 feature_set=['Equals'],
                 planner='set_chaining',
                 explanation_choice = "least_operations",
