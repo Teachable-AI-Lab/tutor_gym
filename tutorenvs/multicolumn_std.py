@@ -295,10 +295,7 @@ class TutorEnvBase:
         self.check_how = check_how
         self.demo_how = demo_how
         self.name = type(self).__name__
-        # if logger is None:
-        #     self.logger = DataShopLogger(name, extra_kcs=['field'])
-        # else:
-        #     self.logger = logger
+        
 
 def load_fsm(file_path):
     ''' Load a finite state machine from a brd or json file.'''
@@ -330,6 +327,7 @@ class StateMachineTutor(TutorEnvBase):
             self.fsm = self.create_fsm(self.start_state)
             self.state = self.start_state
         self.is_done = False
+        self.problem_config = (args, kwargs)
 
     def reset(self):
         self.state = self.start_state.copy()
@@ -472,13 +470,20 @@ class MultiColumnAddition(StateMachineTutor):
             f"out{N+1}" : {"x" :0,   "y" : 330 , "width" : 100, "height" : 100, **field_params},
         })
 
+        inpAs = [f'inpA{i}' for i in range(1,N+1)]
+        inpBs = [f'inpB{i}'  for i in range(1,N+1)]
+        outs = [f'out{i}' for i in range(1,N+2)]
+        carries = [f'carry{i}' for i in range(1,N+1)]
+        self.possible_selections = outs + carries + ['done']
+        self.possible_args = inpAs + inpBs + carries
+
         # Ensure all have an id attribute
         for key, obj in state.items():
             state[key]['id'] = key
 
         ordered_state = {}
-        order = ['inpA3', 'inpA2', 'inpA1', 'inpB3', 'inpB2', 'inpB1', 'out4', 'out3', 'out2', 'out1', 'carry2',
-                 'carry1', 'hidey1', 'hidey2', 'hidey3', 'carry3', 'hint', 'done']
+        order = [*reversed(inpAs), *reversed(inpBs), *reversed(outs), *reversed(carries),
+                    'hidey1', 'hidey2', 'hidey3', 'hint', 'done']
         for key in order:
             ordered_state[key] = state[key]
         state = ordered_state
@@ -510,6 +515,7 @@ class MultiColumnAddition(StateMachineTutor):
         lower = str(randint(min_val,max_val))
 
         self.set_problem(upper, lower, **kwargs)
+
         return (upper, lower)
 
     # --------------------------
@@ -574,6 +580,127 @@ class MultiColumnAddition(StateMachineTutor):
         curr_state = fsm.add_edge(curr_state, act)
 
         return fsm
+
+    def get_possible_selections(self):
+        return self.possible_selections
+
+    def get_possible_args(self):
+        return self.possible_args
+
+class MultiColumnAdditionDigitsGymEnv(gym.Env):
+    metadata = {'render.modes': ['human']}
+
+    def __init__(self, logger=None, **kwargs):
+        self.tutor = MultiColumnAddition(**kwargs)
+        n_selections = len(self.tutor.get_possible_selections())
+        n_features = (11+2)*len(self.tutor.get_state())
+        self.dv = OnlineDictVectorizer(n_features)
+        self.observation_space = spaces.Box(low=0.0,
+                high=1.0, shape=(1, n_features), dtype=np.float32)
+        self.action_space = spaces.MultiDiscrete([n_selections, 10])
+        self.n_steps = 0
+        self.max_steps = 5000
+
+
+        if logger is None:
+            self.logger = DataShopLogger("MultiColumnAdditionDigitsGymEnv", extra_kcs=['field'])
+        else:
+            self.logger = logger
+        self.logger.set_student()
+
+
+
+    def get_rl_state(self):
+        d = {}
+        for _id, obj in self.tutor.get_state().items():
+            d[(_id, 'value')] = obj.get('value', '')
+            d[(_id, 'locked')] = obj.get('locked', True)
+        return d
+
+    def step(self, action, apply_incorrects=False):
+        self.n_steps += 1
+
+        sai = self.decode(action)
+        # print("DECODE", sai)
+        # print()
+        reward = self.tutor.check(sai)
+        if(reward >= 0 or apply_incorrects):
+            self.tutor.apply(sai)
+
+        outcome = "CORRECT" if reward > 0 else "INCORRECT"
+        s, a, i = sai
+        # print("LOG", s, a, i['value'], outcome)
+        self.logger.log_step(s, a, i['value'], outcome, step_name=s, kcs=[s])
+        
+        rl_state = self.get_rl_state()
+
+        obs = self.dv.fit_transform([rl_state])[0]
+
+        done = (sai[0] == 'done' and reward == 1.0)
+
+        # have a max steps for a given problem.
+        # When we hit that we're done regardless.
+        if self.n_steps > self.max_steps:
+            done = True
+
+        info = {}
+
+        return obs, reward, done, info
+
+    def encode(self, sai):
+        s,a,i = sai
+        v = i['value']
+        out = np.zeros(1,dtype=np.int64)
+        enc_s = self.tutor.get_possible_selections().index(s)
+        if(s == 'done' or s == "check_convert"):
+            v = 0
+        # n = len(self.tutor.get_possible_selections()) 
+        out[0] = 10 * enc_s + int(v) 
+        return out
+
+    def request_demo_encoded(self):
+        action = self.tutor.get_demo() 
+
+        # Log demo
+        sai = action.sai
+        feedback_text = f"selection: {sai[0]}, action: {sai[1]}, input: {sai[2]['value']}"
+        self.logger.log_hint(feedback_text, step_name=sai[0], kcs=[sai[0]])
+        
+        return self.encode(action.sai)
+
+
+    def decode(self, action):
+        # print(action)
+        s = self.tutor.get_possible_selections()[action[0]]
+
+        if s == "done":
+            a = "PressButton"
+        else:
+            a = "UpdateTextField"
+        
+        if s == 'done' or s == "check_convert":
+            v = -1
+        else:
+            v = str(action[1])
+        
+        i = {'value': v}
+
+        return s, a, i
+
+    def reset(self):
+        self.n_steps = 0
+        self.tutor.set_random_problem()
+
+        (upper, lower), _ = self.tutor.problem_config
+        self.logger.set_problem("%s_%s" % (upper, lower))
+        
+        rl_state = self.get_rl_state()
+        # print("rl_state", rl_state)
+        obs = self.dv.fit_transform([rl_state])[0]
+        return obs
+
+    def render(self, mode='human', close=False):
+        self.tutor.render()
 
 
 # -------------------------

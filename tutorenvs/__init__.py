@@ -6,6 +6,7 @@ from tutorenvs.multicolumn import MultiColumnAdditionDigitsEnv  # noqa: F401
 from tutorenvs.multicolumn import MultiColumnAdditionPixelEnv  # noqa: F401
 from tutorenvs.multicolumn import MultiColumnAdditionPerceptEnv  # noqa: F401
 from tutorenvs.multicolumn import MultiColumnAdditionOppEnv  # noqa: F401
+from tutorenvs.multicolumn_std import MultiColumnAdditionDigitsGymEnv  # noqa: F401
 
 register(
     id='FractionArith-v0',
@@ -28,6 +29,7 @@ register(
 #     entry_point='tutorenvs:FractionArithPixelEnv',
 # )
 
+# These are Chris's
 register(
     id='MulticolumnArithSymbolic-v0',
     entry_point='tutorenvs:MultiColumnAdditionDigitsEnv',
@@ -47,3 +49,17 @@ register(
     id='MulticolumnArithPercept-v0',
     entry_point='tutorenvs:MultiColumnAdditionPerceptEnv',
 )
+
+# This one is Danny's
+register(
+    id='MulticolumnAdditionSTD_SZ-v0',
+    entry_point='tutorenvs:MultiColumnAdditionDigitsGymEnv',
+    kwargs={'n_digits' : 3, 'carry_zero' : False},
+)
+
+register(
+    id='MulticolumnAdditionSTD_CZ-v0',
+    entry_point='tutorenvs:MultiColumnAdditionDigitsGymEnv',
+    kwargs={'n_digits' : 3, 'carry_zero' : True},
+)
+

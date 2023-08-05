@@ -95,12 +95,12 @@ class StubLogger():
 
 
 class DataShopLogger():
-    def __init__(self, domain="tutorenv", extra_kcs=None):
+    def __init__(self, domain="tutorenv", extra_kcs=None, output_dir="log"):
         log.info("DataShop Logger Created")
         # Create log file
-        if not os.path.exists("log/"):
-            os.mkdir("log/")
-        self.filename = "log/" + domain + "_" + time.strftime("%Y-%m-%d-%H-%M-%S") + ".txt"
+        if not os.path.exists(output_dir):
+            os.mkdir(output_dir)
+        self.filename = f"{output_dir}/{domain}_{time.strftime('%Y-%m-%d-%H-%M-%S')}.txt"
 
         headers = [
             'Anon Student Id', 'Session Id', 'Transaction Id', 'Time',

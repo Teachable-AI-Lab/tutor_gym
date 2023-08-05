@@ -17,7 +17,7 @@ from stable_baselines3.her.her_replay_buffer import HerReplayBuffer
 
 class ForceDemoMixin():
     # Monkey Patches collect_rollouts for off-policy algorithms so that
-    #  if attempt > max_incorrect actions it uses a demo instead.
+    #  if attempt > incorr_bef_demo actions it uses a demo instead.
     def collect_rollouts(
         self,
         env: VecEnv,
@@ -81,7 +81,7 @@ class ForceDemoMixin():
             for idx, n_inc in enumerate(n_incorrects): # << new
                 # If n_incorrects is greater than max then replace
                 #  the sampled action with a demo. 
-                if(n_inc >= self.max_incorrect):
+                if(n_inc >= self.incorr_bef_demo):
                     actions[idx] = buffer_actions[idx] = env.envs[idx].request_demo_encoded()
 
 
