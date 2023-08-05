@@ -3,6 +3,7 @@ import gym
 from stable_baselines3 import DQN
 from stable_baselines3.dqn import MlpPolicy
 
+from tutorenvs.utils import DataShopLogger
 from tutorenvs.utils import MultiDiscreteToDiscreteWrapper
 from tutorenvs.multicolumn import MultiColumnAdditionDigitsEnv
 from tutorenvs.forcedemo import ForceDemoMixin
