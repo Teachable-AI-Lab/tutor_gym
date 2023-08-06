@@ -386,8 +386,8 @@ class FractionArithSymbolic:
 class FractionArithNumberEnv(gym.Env):
     metadata = {'render.modes': ['human']}
 
-    def __init__(self):
-        self.tutor = FractionArithSymbolic()
+    def __init__(self, logger=None):
+        self.tutor = FractionArithSymbolic(logger=logger)
         n_selections = len(self.tutor.get_possible_selections())
         n_features = 900
         self.dv = OnlineDictVectorizer(n_features)

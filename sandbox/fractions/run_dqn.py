@@ -12,8 +12,8 @@ import os
 if __name__ == "__main__":
     for i in range(10):
         os.environ['CUDA_VISIBLE_DEVICES'] = "0,1"
-        env = gym.make('FractionArith-v0')
-        env.logger = DataShopLogger("fr_dqn", output_dir="log_dqn")
+        logger = DataShopLogger("fr_dqn", output_dir="log_dqn")
+        env = gym.make('FractionArith-v0', logger=logger)
         env = MultiDiscreteToDiscreteWrapper(env)
         model = DQN(MlpPolicy, env, 
                     verbose=1,

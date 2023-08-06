@@ -8,31 +8,15 @@ from tutorenvs.utils import DataShopLogger
 from tutorenvs.multicolumn import MultiColumnAdditionDigitsEnv
 from tutorenvs.forcedemo import ForceDemoMixin
 import os
-# from stable_baselines.common.cmd_util import make_vec_env
 
-
-# # 
-class DQN_w_Demos(ForceDemoMixin, DQN):
-    def __init__(self, policy, env, max_incorrect=5, **kwargs):
-        self.max_incorrect = max_incorrect
-        DQN.__init__(self, policy, env,**kwargs)
-        # self.collect_rollouts = ForceDemoMixin.collect_rollouts
-
-# class PPO_w_Demos(ForceDemoMixin, PPO):
-#     def __init__(self, policy, env, max_incorrect=5, **kwargs):
-#         self.max_incorrect = max_incorrect
-#         DQN.__init__(self, policy, env,**kwargs)
 
 if __name__ == "__main__":
     for i in range(10):
         os.environ['CUDA_VISIBLE_DEVICES'] = "0,1"
-        # multiprocess environment
-
-        env = gym.make('MulticolumnAdditionSTD_SZ-v0')
-        env.logger = DataShopLogger("mc_std_sz_dqn", output_dir="log_dqn")
+        logger = DataShopLogger("mc_std_sz_dqn", output_dir="log_dqn")
+        env = gym.make('MulticolumnAdditionSTD_SZ-v0', logger=logger)
         env = MultiDiscreteToDiscreteWrapper(env)
-        # env = make_vec_env('MultiColumnArith-v0', n_envs=1)
-        # env = MultiDiscreteToDiscreteWrapper(MultiColumnAdditionDigitsEnv())
+        # make_vec_env('MultiColumnArith-v0', n_envs=1)
         model = DQN(MlpPolicy, env, 
                     verbose=1,
                     learning_rate=0.0003,

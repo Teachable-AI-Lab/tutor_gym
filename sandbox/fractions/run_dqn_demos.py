@@ -18,8 +18,8 @@ class DQN_w_Demos(ForceDemoMixin, DQN):
 if __name__ == "__main__":
     for i in range(10):
         os.environ['CUDA_VISIBLE_DEVICES'] = "0,1"
-        env = gym.make('FractionArith-v0')
-        env.logger = DataShopLogger("fr_dqn_demo", output_dir="log_dqn_demo")
+        logger = DataShopLogger("fr_dqn_demo", output_dir="log_dqn_demo")
+        env = gym.make('FractionArith-v0', logger=logger)
         env = MultiDiscreteToDiscreteWrapper(env)
         model = DQN_w_Demos(MlpPolicy, env, 
                     incorr_bef_demo=1,
