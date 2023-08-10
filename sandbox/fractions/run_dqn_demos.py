@@ -16,7 +16,7 @@ class DQN_w_Demos(ForceDemoMixin, DQN):
         DQN.__init__(self, policy, env,**kwargs)
 
 if __name__ == "__main__":
-    for i in range(1):
+    for i in range(10):
         os.environ['CUDA_VISIBLE_DEVICES'] = "0,1"
         logger = DataShopLogger("fr_dqn_demo", extra_kcs=['field'], output_dir="log_dqn_demo")
         env = gym.make('FractionArith-v0', logger=logger)
@@ -35,5 +35,5 @@ if __name__ == "__main__":
                     tensorboard_log="./tensorboard_dqn_frac/"
                     )
 
-        model.learn(total_timesteps=300000)
+        model.learn(total_timesteps=500000)
         

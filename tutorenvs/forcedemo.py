@@ -83,6 +83,7 @@ class ForceDemoMixin():
                 #  the sampled action with a demo. 
                 if(n_inc >= self.incorr_bef_demo):
                     actions[idx] = buffer_actions[idx] = env.envs[idx].request_demo_encoded()
+                    n_incorrects[idx] = 0 # reset after recieving hint
 
 
             # Rescale and perform action

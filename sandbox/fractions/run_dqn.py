@@ -28,5 +28,5 @@ if __name__ == "__main__":
                     tensorboard_log="./tensorboard_dqn_frac/"
                     )
 
-        model.learn(total_timesteps=300000)
+        model.learn(total_timesteps=500000)
         

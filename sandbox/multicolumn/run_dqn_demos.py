@@ -37,5 +37,5 @@ if __name__ == "__main__":
                     policy_kwargs={'net_arch': [200, 200]}, # {'qf': [65], 'pi': [65]}]},
                     tensorboard_log="./tensorboard_dqn_demo_multi/"
                     )
-        model.learn(total_timesteps=300000)
+        model.learn(total_timesteps=500000)
         
