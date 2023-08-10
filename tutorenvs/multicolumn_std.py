@@ -594,6 +594,7 @@ class MultiColumnAdditionDigitsGymEnv(gym.Env):
         self.tutor = MultiColumnAddition(**kwargs)
         n_selections = len(self.tutor.get_possible_selections())
         n_features = (11+2)*len(self.tutor.get_state())
+        print("N FEATERS", n_features)
         self.dv = OnlineDictVectorizer(n_features)
         self.observation_space = spaces.Box(low=0.0,
                 high=1.0, shape=(1, n_features), dtype=np.float32)

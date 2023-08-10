@@ -107,7 +107,7 @@ class DataShopLogger():
             'Time Zone', 'Student Response Type', 'Tutor Response Type',
             'Level (Domain)', 'Problem Name', 'Problem Start Time',
             'Step Name', 'Selection', 'Action', 'Input', 'Feedback Text',
-            'Outcome', 'CF (Problem Context)', 'KC (Single-KC)'
+            'Outcome', 'CF (Problem Context)', 'KC (Single-KC)',
         ]
 
         if extra_kcs is not None:

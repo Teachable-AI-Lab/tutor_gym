@@ -16,9 +16,9 @@ class DQN_w_Demos(ForceDemoMixin, DQN):
         DQN.__init__(self, policy, env,**kwargs)
 
 if __name__ == "__main__":
-    for i in range(10):
+    for i in range(1):
         os.environ['CUDA_VISIBLE_DEVICES'] = "0,1"
-        logger = DataShopLogger("fr_dqn_demo", output_dir="log_dqn_demo")
+        logger = DataShopLogger("fr_dqn_demo", extra_kcs=['field'], output_dir="log_dqn_demo")
         env = gym.make('FractionArith-v0', logger=logger)
         env = MultiDiscreteToDiscreteWrapper(env)
         model = DQN_w_Demos(MlpPolicy, env, 
@@ -31,7 +31,7 @@ if __name__ == "__main__":
                     exploration_final_eps=0.0,
                     gamma=0.0,
                     learning_starts=1,
-                    policy_kwargs={'net_arch': [200, 200]}, # {'qf': [65], 'pi': [65]}]},
+                    policy_kwargs={'net_arch': [800, 800, 800]}, # {'qf': [65], 'pi': [65]}]},
                     tensorboard_log="./tensorboard_dqn_frac/"
                     )
 

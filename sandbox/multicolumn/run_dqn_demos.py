@@ -21,7 +21,7 @@ if __name__ == "__main__":
     for i in range(10):
         os.environ['CUDA_VISIBLE_DEVICES'] = "0,1"
 
-        logger = DataShopLogger("mc_std_sz_dqn_demo", output_dir="log_dqn_demo")
+        logger = DataShopLogger("mc_std_sz_dqn_demo", extra_kcs=['field'], output_dir="log_dqn_demo")
         env = gym.make('MulticolumnAdditionSTD_SZ-v0', logger=logger)
         env = MultiDiscreteToDiscreteWrapper(env)
         model = DQN_w_Demos(MlpPolicy, env, 

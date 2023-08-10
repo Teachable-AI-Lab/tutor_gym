@@ -13,7 +13,7 @@ import os
 if __name__ == "__main__":
     for i in range(10):
         os.environ['CUDA_VISIBLE_DEVICES'] = "0,1"
-        logger = DataShopLogger("fr_ppo", output_dir="log_ppo")
+        logger = DataShopLogger("fr_ppo", extra_kcs=['field'], output_dir="log_ppo")
         env = gym.make('FractionArith-v0', logger=logger)
         env = MultiDiscreteToDiscreteWrapper(env)        
         model = PPO(MlpPolicy, env, 
