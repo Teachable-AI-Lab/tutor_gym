@@ -43,6 +43,8 @@ class Trainer:
             if(logger_name is None):
                 logger_name = type(self.env).__name__
             self.logger = DataShopLogger(logger_name, extra_kcs=['field'])
+        else:
+            self.logger = logger
         self.always_update_state = kwargs.get('always_update_state', False)
         self.train_next_state = kwargs.get('train_next_state', False)
         self.total_incorrect = 0
@@ -91,6 +93,10 @@ class Trainer:
             outcome_kind = "HINT"
             self.total_hints += 1
 
+        action_kwargs = action.as_train_kwargs()
+        s,a,i = action_kwargs['sai']
+        self.logger.log_step(s, a, i['value'], outcome_kind, step_name=s, kcs=[s])
+
         self.agent.train(state, reward=reward, 
             **action.as_train_kwargs(), # includes sai, arg_foci, etc.
              is_demo=True)
@@ -102,6 +108,7 @@ class Trainer:
             self.env.apply(action)                
 
     def start(self):
+        self.logger.set_student()
         p = 1
         p_iter = self.problem_iterator
         for prob_args in p_iter:
@@ -109,8 +116,9 @@ class Trainer:
                 prob_args = self.env.set_random_problem()
             else:
                 self.env.set_problem(*prob_args)
+            self.logger.set_problem(self.env.problem_name)
 
-            print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {prob_args}")
+            print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {self.env.problem_name}")
 
             while(not self.env.is_done):
                 state = self.env.get_state()

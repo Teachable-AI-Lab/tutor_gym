@@ -1,7 +1,8 @@
 from apprentice.agents.RHS_LHS_Agent import RHS_LHS_Agent
+from apprentice.agents.cre_agents.how import SetChaining
 import apprentice
 from apprentice.working_memory.representation import Sai
-from apprentice.working_memory.numba_operators import *
+# from apprentice.working_memory.numba_operators import *
 
 from tutorenvs.fractions import FractionArithSymbolic
 
@@ -52,14 +53,14 @@ def run_training(agent, n=10):
 
 
 if __name__ == "__main__":
-    function_set = ['RipFloatValue','Add', 'Subtract','Multiply', 'Divide']
+    function_set = ['Add', 'Subtract','Multiply', 'Divide']
     feature_set = ['Equals']
 
     for i in range(100):
         agent = RHS_LHS_Agent(
                 feature_set=feature_set,
                 function_set=function_set,
-                planner='numba',
+                planner=SetChaining,
                 search_depth=2,
                 when_learner='decisiontree',
                 where_learner='FastMostSpecific',

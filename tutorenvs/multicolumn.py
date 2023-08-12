@@ -307,7 +307,7 @@ class MultiColumnAdditionSymbolic:
         # lower = str(randint(1,99))
         # upper = str(randint(1,9))
         # lower = str(randint(1,9))
-        self.reset(upper=upper, lower=lower,pad_zeros=pad_zeros)
+        self.reset(upper=upper, lower=lower, pad_zeros=pad_zeros)
         self.logger.set_problem("%s_%s" % (upper, lower))
 
     def apply_sai(self, selection, action, inputs, apply_incorrects=True):

@@ -8,115 +8,129 @@
 # from py_rete import V
 # from py_rete.conditions import Filter
 
-from tutorenvs.multicolumn_v import MultiColumnAdditionSymbolic
+# from tutorenvs.multicolumn_v import MultiColumnAdditionSymbolic
+from tutorenvs.multicolumn_std import MultiColumnAddition
 from tutorenvs.utils import DataShopLogger
+from tutorenvs.trainer import Trainer
 from colorama import Back, Fore
 import colorama
 from pprint import pprint
 colorama.init(autoreset=True)
 
-def run_training(agent, logger_name='MulticolumnAddition', n=10, n_columns=3, train_conflict_set=False):
+# def run_training(agent, logger_name='MulticolumnAddition', n=10, n_columns=3, train_conflict_set=False):
 
-    logger = DataShopLogger(logger_name, extra_kcs=['field'])
+#     logger = DataShopLogger(logger_name, extra_kcs=['field'])
 
-    env = MultiColumnAdditionSymbolic(logger=logger, n=n_columns)
+#     env = MultiColumnAdditionSymbolic(logger=logger, n=n_columns)
 
 
-    problem_set = [["777", "777"], ["666", "666"], ["777","777"]]
-    # problem_set = [["517", "872"], ["925", "461"]]
+#     problem_set = [["777", "777"], ["666", "666"], ["777","777"]]
+#     # problem_set = [["517", "872"], ["925", "461"]]
 
-    env.set_problem(*problem_set[0])
+#     env.set_problem(*problem_set[0])
 
-    ALWAYS_UPDATE_STATE = False
-    SEND_NEXT_STATE = True
+#     ALWAYS_UPDATE_STATE = False
+#     SEND_NEXT_STATE = True
 
-    p = 0
-    reward = 1
-    total_incorrect = 0
-    total_correct = 0
-    total_hints = 0
-    assistance_records = []
-    is_start_state = True
+#     p = 0
+#     reward = 1
+#     total_incorrect = 0
+#     total_correct = 0
+#     total_hints = 0
+#     assistance_records = []
+#     is_start_state = True
 
-    while p < n:
-        if(reward == 1 or ALWAYS_UPDATE_STATE):
-            state = env.get_state()
+#     while p < n:
+#         if(reward == 1 or ALWAYS_UPDATE_STATE):
+#             state = env.get_state()
 
-        if(p == 50 and is_start_state):
-            print("--DID THIS--")
-            agent.gen_completeness_profile([state], 'comp_prof.txt')
+#         if(p == 50 and is_start_state):
+#             print("--DID THIS--")
+#             agent.gen_completeness_profile([state], 'comp_prof.txt')
             
 
-        # print("STATE ACT")
-        # pprint({sel:(x.get('value',None),x.get('locked',None)) for sel, x in state.items()})
-        if(train_conflict_set):
-            # TODO: Env isn't ready for this just yet
-            # agent.act_rollout(state)
-            sais = agent.act_all(state)
-            no_action = sais is None or len(sais) == 0
+#         # print("STATE ACT")
+#         # pprint({sel:(x.get('value',None),x.get('locked',None)) for sel, x in state.items()})
+#         if(train_conflict_set):
+#             # TODO: Env isn't ready for this just yet
+#             # agent.act_rollout(state)
+#             sais = agent.act_all(state)
+#             no_action = sais is None or len(sais) == 0
 
-            if(no_action):
-                sai, arg_foci = env.request_demo(return_foci=True)
-                train_set = [{"state":state, "sai": sai, "arg_foci": arg_foci, "reward" : 1}]
-            else:
-                train_set = []
-                for sai in sais:
-                    reward = env.apply_sai(sai[0], sai[1], sai[2], apply_incorrects=False)
-                    train_set.append([{"state":state, "sai": sai, "reward" : reward}])
-                sai = sais[0]
+#             if(no_action):
+#                 sai, arg_foci = env.request_demo(return_foci=True)
+#                 train_set = [{"state":state, "sai": sai, "arg_foci": arg_foci, "reward" : 1}]
+#             else:
+#                 train_set = []
+#                 for sai in sais:
+#                     reward = env.apply_sai(sai[0], sai[1], sai[2], apply_incorrects=False)
+#                     train_set.append([{"state":state, "sai": sai, "reward" : reward}])
+#                 sai = sais[0]
 
 
-            # raise ValueError("DONE")
-        else:
-            sai = agent.act(state)
-            no_action = False if sai else True
+#             # raise ValueError("DONE")
+#         else:
+#             sai = agent.act(state)
+#             no_action = False if sai else True
 
-            arg_foci = None
-            if no_action:
-                sai, arg_foci = env.request_demo(return_foci=True)
-            elif(hasattr(sai, 'as_tuple')):
-                sai = sai.as_tuple()
+#             arg_foci = None
+#             if no_action:
+#                 sai, arg_foci = env.request_demo(return_foci=True)
+#             elif(hasattr(sai, 'as_tuple')):
+#                 sai = sai.as_tuple()
                 
-            reward = env.apply_sai(sai[0], sai[1], sai[2], apply_incorrects=False)
+#             reward = env.apply_sai(sai[0], sai[1], sai[2], apply_incorrects=False)
 
-            # if(SEND_NEXT_STATE and (reward == 1 or ALWAYS_UPDATE_STATE)):
-            #     next_state = env.get_state()
-            # else:
-            #     next_state = None
+#             # if(SEND_NEXT_STATE and (reward == 1 or ALWAYS_UPDATE_STATE)):
+#             #     next_state = env.get_state()
+#             # else:
+#             #     next_state = None
 
-            agent.train(state, sai, int(reward), arg_foci=arg_foci)
+#             agent.train(state, sai, int(reward), arg_foci=arg_foci)
 
-        was_assistance = True
-        if(reward == 1):
-            if(no_action):
-                total_hints += 1
-                print(Back.BLUE + Fore.YELLOW + f"HINT: {sai[0]} -> {sai[2]}")
-            else:
-                total_correct += 1
-                was_assistance = False
-                print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai[0]} -> {sai[2]}")
-        else:
-            total_incorrect += 1
-            print(Back.RED + Fore.BLACK + f"INCORRECT: {sai[0]} -> {sai[2]}")
+#         was_assistance = True
+#         if(reward == 1):
+#             if(no_action):
+#                 total_hints += 1
+#                 print(Back.BLUE + Fore.YELLOW + f"HINT: {sai[0]} -> {sai[2]}")
+#             else:
+#                 total_correct += 1
+#                 was_assistance = False
+#                 print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai[0]} -> {sai[2]}")
+#         else:
+#             total_incorrect += 1
+#             print(Back.RED + Fore.BLACK + f"INCORRECT: {sai[0]} -> {sai[2]}")
                     
-        if(was_assistance):
-            assistance_records.append(f'P{p}_{sai[0]}')
+#         if(was_assistance):
+#             assistance_records.append(f'P{p}_{sai[0]}')
 
-        if sai[0] == "done" and reward == 1.0:
-            print("+" * 100)
-            print(f'Finished problem {p+1} of {n}')
+#         if sai[0] == "done" and reward == 1.0:
+#             print("+" * 100)
+#             print(f'Finished problem {p+1} of {n}')
             
-            p += 1
-            if(p < len(problem_set)):
-                env.set_problem(*problem_set[p])
-            is_start_state = True
-        else:
-            is_start_state = False
+#             p += 1
+#             if(p < len(problem_set)):
+#                 env.set_problem(*problem_set[p])
+#             is_start_state = True
+#         else:
+#             is_start_state = False
 
-    total = (total_hints+total_incorrect+total_correct)
-    print(f'TOTALS  (correct:{total_correct}, incorrect:{total_incorrect}, hint:{total_hints}, assistance:{total_hints+total_incorrect})')
-    print(f'PERCENTS(correct:{100*(total_correct)/total:.2f}%, incorrect:{100*(total_incorrect)/total:.2f}%, hint:{100*(total_hints)/total:.2f}%, assistance:{100*(total_hints+total_incorrect)/total:.2f}%)')
-    print(f'Last 5 assistance', assistance_records[-5:])
+#     total = (total_hints+total_incorrect+total_correct)
+#     print(f'TOTALS  (correct:{total_correct}, incorrect:{total_incorrect}, hint:{total_hints}, assistance:{total_hints+total_incorrect})')
+#     print(f'PERCENTS(correct:{100*(total_correct)/total:.2f}%, incorrect:{100*(total_incorrect)/total:.2f}%, hint:{100*(total_hints)/total:.2f}%, assistance:{100*(total_hints+total_incorrect)/total:.2f}%)')
+#     print(f'Last 5 assistance', assistance_records[-5:])
+
+def run_training(agent, logger_name='MulticolumnAddition', n=10,
+                 n_columns=3, author_train=True, carry_zero=False):
+    
+    logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al')
+    env = MultiColumnAddition(
+            demo_args=True, demo_how=False, n_digits=n_columns,
+            carry_zero=carry_zero)
+
+    trainer = Trainer(agent, env, logger=logger, n_problems=n)
+    trainer.start()
+
 
 if __name__ == "__main__":
     import faulthandler; faulthandler.enable()
@@ -149,19 +163,19 @@ if __name__ == "__main__":
                 "search_depth" : 2,
                 "where_learner": "antiunify",
                 # "where_learner": "mostspecific",
-                # "when_learner": "sklearndecisiontree",
+                "when_learner": "sklearndecisiontree",
                 # "when_learner": "decisiontree",
                                 
                 # For STAND
-                "when_learner": "stand",
-                "which_learner": "when_prediction",
-                "action_chooser" : "max_which_utility",
-                "suggest_uncert_neg" : True,
+                # "when_learner": "stand",
+                # "which_learner": "when_prediction",
+                # "action_chooser" : "max_which_utility",
+                # "suggest_uncert_neg" : True,
 
                 # "explanation_choice" : "least_operations",
                 "planner" : "setchaining",
                 # // "when_args" : {"cross_rhs_inference" : "implicit_negatives"},
-                "function_set" : ["OnesDigit","TensDigit","Add3", "AddPositive"],
+                "function_set" : ["OnesDigit","TensDigit","Add3", "Add2"],
                 "feature_set" : [],
                 # "feature_set" : ['Equals'],
                 "extra_features" : ["SkillCandidates","Match"],
