@@ -145,7 +145,7 @@ if __name__ == "__main__":
         description='Runs AL agents on multi-column addition')
     parser.add_argument('--n-agents', default=50, type=int, metavar="<n_agents>",
                         dest="n_agents", help="number of agents")
-    parser.add_argument('--n-problems', default=100, type=int, metavar="<n_problems>",
+    parser.add_argument('--n-problems', default=500, type=int, metavar="<n_problems>",
                         dest="n_problems", help="number of problems")
     parser.add_argument('--n-columns', default=3, type=int, metavar="<n_columns>",
                         dest="n_columns", help="number of columns")
@@ -161,8 +161,8 @@ if __name__ == "__main__":
             from apprentice.agents.cre_agents.cre_agent import CREAgent
             agent_args = {
                 "search_depth" : 2,
-                "where_learner": "antiunify",
-                # "where_learner": "mostspecific",
+                # "where_learner": "antiunify",
+                "where_learner": "mostspecific",
                 "when_learner": "sklearndecisiontree",
                 # "when_learner": "decisiontree",
                                 
@@ -175,7 +175,7 @@ if __name__ == "__main__":
                 # "explanation_choice" : "least_operations",
                 "planner" : "setchaining",
                 # // "when_args" : {"cross_rhs_inference" : "implicit_negatives"},
-                "function_set" : ["OnesDigit","TensDigit","Add3", "Add2"],
+                "function_set" : ["OnesDigit","TensDigit","Add3", "Add"],
                 "feature_set" : [],
                 # "feature_set" : ['Equals'],
                 "extra_features" : ["SkillCandidates","Match"],

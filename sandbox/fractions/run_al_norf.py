@@ -124,9 +124,9 @@ def resolve_type(typ, logger_name):
 
 def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_args=False):
     logger_name, problem_types = resolve_type(typ, logger_name)
-    logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al')
+    logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al_norf')
     env = FractionArithmetic(problem_types=problem_types, n_fracs=n_fracs,
-                             demo_args=False)
+                             demo_args=False, check_args=False)
     trainer = Trainer(agent, env, logger=logger, n_problems=n)
     trainer.start()
 
@@ -168,6 +168,7 @@ if __name__ == "__main__":
 
             agent_args = {
                 "function_set": ['Add','Multiply'],#'ConvertNumerator'],
+                # "feature_set": [],
                 "feature_set": ['Equals'],
                 "planner":'set_chaining',
                 "explanation_choice" : "least_operations",
@@ -185,8 +186,8 @@ if __name__ == "__main__":
                 "when_learner" : 'sklearndecisiontree',
                 # "when_learner" : 'decisiontree',
                 
-                "extra_features" : ["Match"],
-                "when_args" : {"encode_relative" : True},
+                "extra_features" : ["Match"],#, "SkillCandidates"],
+                "when_args" : {"encode_relative" : False},
                 
                 "should_find_neighbors" : True
             }

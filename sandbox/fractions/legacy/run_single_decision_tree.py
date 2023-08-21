@@ -95,6 +95,7 @@ def train_tree(n=10, logger=None):
 
 if __name__ == "__main__":
 
-    logger = DataShopLogger('FractionsTutor', extra_kcs=['field'])
-    for _ in range(1):
-        tree = train_tree(30000, logger)
+    for j in range(10):
+        logger = DataShopLogger('FractionsTutor', output_dir="log_dt",extra_kcs=['field'])
+        for _ in range(1):
+            tree = train_tree(30000, logger)
