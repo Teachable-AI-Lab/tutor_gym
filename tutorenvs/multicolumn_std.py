@@ -186,7 +186,7 @@ class MultiColumnAddition(StateMachineTutor):
             foci = [f'inpA{i+1}', f'inpB{i+1}']
             if prev_carry:
                 partial_sum += 1
-                foci.append(f'carry{i}')
+                foci = [f'carry{i}',*foci]
 
             if self.carry_zero or partial_sum >= 10:
                 a_sai = (f'out{i+1}', 'UpdateTextField', 
@@ -236,7 +236,7 @@ class MultiColumnAdditionDigitsGymEnv(gym.Env):
         self.tutor = MultiColumnAddition(**kwargs)
         n_selections = len(self.tutor.get_possible_selections())
         n_features = (11+2)*len(self.tutor.get_state())
-        print("N FEATERS", n_features)
+        #print("N FEATERS", n_features)
         self.dv = OnlineDictVectorizer(n_features)
         self.observation_space = spaces.Box(low=0.0,
                 high=1.0, shape=(1, n_features), dtype=np.float32)

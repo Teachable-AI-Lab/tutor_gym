@@ -7,7 +7,7 @@ from apprentice.working_memory.representation import Sai
 
 from tutorenvs.fractions_v import FractionArithSymbolic
 from tutorenvs.fractions_std import FractionArithmetic
-from tutorenvs.trainer import Trainer
+from tutorenvs.trainer import Trainer, AuthorTrainer
 from tutorenvs.utils import DataShopLogger
 from colorama import Back, Fore
 from tutorenvs.utils import compare
@@ -17,90 +17,6 @@ colorama.init(autoreset=True)
 
 import time
 
-# def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=3, demo_args=False):
-#     logger = DataShopLogger(logger_name, extra_kcs=['field'])
-
-
-#     if(typ[:3] == "add"):
-#         if(logger_name is None): logger_name = "FractionAddition"
-#         env = FractionArithSymbolic(logger=logger, problem_types=["AD","AS"], n=n_fracs)
-#     elif(typ[:4] == "mult"):
-#         if(logger_name is None): logger_name = "FractionMult"
-#         env = FractionArithSymbolic(logger=logger, problem_types=["M"], n=n_fracs)
-#     elif(typ[:5] == "arith"):
-#         # print("ARITH")
-#         if(logger_name is None): logger_name = "FractionArith"
-#         env = FractionArithSymbolic(logger=logger, problem_types=["AD","AS","M"], n=n_fracs)
-#     else:
-#         ptypes = typ.split(",")
-#         if(not all([p in ["AD", "AS", "M"] for p in ptypes])):
-#             raise ValueError(f"Unrecognized type {typ}")
-
-#         if(logger_name is None): logger_name = f"Fraction_{'_'.join(ptypes)}"
-#         env = FractionArithSymbolic(logger=logger, problem_types=ptypes, n=n_fracs)
-
-#     ALWAYS_UPDATE_STATE = False
-#     SEND_NEXT_STATE = True
-
-#     p = 0
-#     reward = 1
-#     # c = 0
-#     while p < n:
-#         # c += 1
-#         if(reward == 1 or ALWAYS_UPDATE_STATE):
-#             state = env.get_state()
-
-#         response = agent.request(state)
-
-#         foci = None
-#         if response == {}:
-#             # print('hint')
-#             (selection, action, inputs), foci = env.request_demo(return_foci=True)
-#             sai = Sai(selection=selection, action=action, inputs=inputs)
-
-#         elif isinstance(response, Sai):
-#             sai = response
-#         else:
-#             sai = Sai(selection=response['selection'],
-#                       action=response['action'],
-#                       inputs=response['inputs'])
-
-#         # print(sai)
-        
-#         reward = env.apply_sai(sai.selection, sai.action, sai.inputs)
-        
-
-#         # print("<<", reward, foci)
-
-#         if(SEND_NEXT_STATE and (reward == 1 or ALWAYS_UPDATE_STATE)):
-#             next_state = env.get_state()
-#         else:
-#             next_state = None
-#         # next_state = env.get_state()
-#         # print([f'{x["id"]}:{x.get("value",None)}' for x in state.values()])
-
-#         agent.train(state, sai, int(reward),
-#                     rhs_id=response.get("rhs_id", None),
-#                     mapping=response.get("mapping", None),
-#                     next_state=next_state,
-#                     # skill_label="fractions",
-#                     foci_of_attention=foci)
-
-#         if(reward == 1):
-#             if(response == {}):
-#                 print(Back.BLUE + Fore.YELLOW + f"HINT: {sai.selection} -> {sai.inputs}")
-#             else:
-#                 print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai.selection} -> {sai.inputs}")
-#         else:
-#             print(Back.RED + Fore.BLACK + f"INCORRECT: {sai.selection} -> {sai.inputs}")
-
-#         if sai.selection == "done" and reward == 1.0:
-#             print('Finished problem {} of {}'.format(p, n))
-#             p += 1
-            
-#         # if(c > 20):raise ValueError()
-
-#         # time.sleep(1)
 
 def resolve_type(typ, logger_name):
     if(typ[:3] == "add"):
@@ -124,18 +40,23 @@ def resolve_type(typ, logger_name):
 
 def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_args=False):
     logger_name, problem_types = resolve_type(typ, logger_name)
-    logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al_norf')
-    env = FractionArithmetic(problem_types=problem_types, n_fracs=n_fracs,
-                             demo_args=False, check_args=False)
-    trainer = Trainer(agent, env, logger=logger, n_problems=n)
+    logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al_author')
+
+    env = FractionArithmetic(check_how=False, check_args=True,
+                             demo_args=True, demo_how=True,
+                             problem_types=problem_types, n_fracs=n_fracs)
+
+    trainer = AuthorTrainer(agent, env, logger=logger, n_problems=n)
     trainer.start()
+
+
 
 if __name__ == "__main__":
     import sys, argparse
     import faulthandler; faulthandler.enable()
     
     parser = argparse.ArgumentParser(
-        description='Runs AL agents on multi-column addition')
+        description='Runs AL agents on fractions')
     parser.add_argument('--n-agents', default=50, type=int, metavar="<n_agents>",
                         dest="n_agents", help="number of agents")
     parser.add_argument('--n-problems', default=500, type=int, metavar="<n_problems>",
@@ -167,9 +88,7 @@ if __name__ == "__main__":
             from apprentice.agents.cre_agents.cre_agent import CREAgent
 
             agent_args = {
-                #"function_set": ['AcrossMultiply','CrossMultiply', 'Add', 'Copy'],#'ConvertNumerator'],
-                #"function_set": ['AcrossMultiply','CrossMultiply', 'Add', 'Copy'],#'ConvertNumerator'],
-                # "feature_set": [],
+                # "function_set": ['AcrossMultiply','Multiply', 'Add'],
                 "function_set": ['Multiply', 'Add'],
                 "feature_set": ['Equals'],
                 "planner":'set_chaining',
@@ -189,7 +108,7 @@ if __name__ == "__main__":
                 # "when_learner" : 'decisiontree',
                 
                 "extra_features" : ["Match"],
-                "when_args" : {"encode_relative" : False},
+                "when_args" : {"encode_relative" : True, "one_hot" : True},
                 
                 "should_find_neighbors" : True
             }
@@ -221,7 +140,7 @@ if __name__ == "__main__":
         else:
             raise ValueError(f"Unrecognized agent type {args.agent_type!r}.")
 
-        run_training(agent, args.env_type, logger_name=logger_name,  n=int(args.n_problems), n_fracs=args.n_fracs)
+        run_training(agent, "arith", logger_name=logger_name,  n=int(args.n_problems), n_fracs=args.n_fracs)
 
 
     # for i in range(100):

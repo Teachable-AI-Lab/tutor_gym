@@ -167,7 +167,8 @@ if __name__ == "__main__":
             from apprentice.agents.cre_agents.cre_agent import CREAgent
 
             agent_args = {
-                "function_set": ['Add','Multiply'],#'ConvertNumerator'],
+                # "function_set": ['AcrossMultiply','Multiply', 'Add'],
+                "function_set": ['Multiply', 'Add'],
                 "feature_set": ['Equals'],
                 "planner":'set_chaining',
                 "explanation_choice" : "least_operations",
@@ -177,16 +178,16 @@ if __name__ == "__main__":
                 "where_learner": "mostspecific",
 
                 # For STAND
-                # "when_learner": "stand",
-                # "which_learner": "when_prediction",
-                # "action_chooser" : "max_which_utility",
-                # "suggest_uncert_neg" : True,
+                "when_learner": "stand",
+                "which_learner": "when_prediction",
+                "action_chooser" : "max_which_utility",
+                "suggest_uncert_neg" : True,
 
-                "when_learner" : 'sklearndecisiontree',
+                # "when_learner" : 'sklearndecisiontree',
                 # "when_learner" : 'decisiontree',
                 
                 "extra_features" : ["Match"],
-                "when_args" : {"encode_relative" : True},
+                "when_args" : {"encode_relative" : True, "one_hot" : True},
                 
                 "should_find_neighbors" : True
             }
@@ -197,6 +198,7 @@ if __name__ == "__main__":
 
             agent_args = dict(
                 function_set=['RipFloatValue','Add','Multiply','Subtract','ConvertNumerator'],
+
                 feature_set=['Equals'],
                 planner='numba',
                 explanation_choice = "least_operations",

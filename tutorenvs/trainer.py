@@ -1,9 +1,12 @@
 from tutorenvs.multicolumn_std import Action, ProblemState
 from tutorenvs.utils import DataShopLogger
-from colorama import Back, Fore
+from colorama import Back, Fore, Style
 import colorama
+from colorama import init
 from pprint import pprint
 import json
+
+# init(autoreset=True)
 
 class ProblemIterator:
     def __init__(self, problem_set=None, n_problems=None, **kwargs):
@@ -35,6 +38,7 @@ class ProblemIterator:
 class Trainer:
     def __init__(self, agent, env, logger=None,
                  on_problem_end = None,
+                 act_return_kind = "sai",
                  **kwargs):
         self.agent = agent
         self.env = env
@@ -50,6 +54,7 @@ class Trainer:
         self.total_incorrect = 0
         self.total_correct = 0
         self.total_hints = 0
+        self.act_return_kind = act_return_kind
 
         if('problem_set' not in kwargs and
            'n_problems' not in kwargs and 
@@ -64,18 +69,36 @@ class Trainer:
 
         self.on_problem_end = on_problem_end
 
+
+    def _to_train_kwargs(self, state, action, reward, is_demo=False):
+        if(self.act_return_kind == "skill_app" and not is_demo):
+            return {"state" : state,
+                    "skill_app" : action,
+                    "reward" : reward}
+        else:
+            return {"state" : state,
+                    "reward" : reward,
+                    **action.as_train_kwargs(),
+                    "is_demo" : is_demo}
+
     def print_outcome(self, action, outcome_kind):
-        sai = action.sai
+        if(isinstance(action, Action)):
+            sai = action.sai
+        elif('sai' in action):
+            sai = Action(action['sai']).sai
+        elif('skill_app' in action):
+            sai = Action(action['skill_app'].sai).sai            
+
         if(outcome_kind == "CORRECT"):
-            print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai[0]} -> {sai[2]}")
+            print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai[0]} -> {sai[2]}" + Style.RESET_ALL)
         elif(outcome_kind == "INCORRECT"):            
-            print(Back.RED + Fore.BLACK + f"INCORRECT: {sai[0]} -> {sai[2]}")
+            print(Back.RED + Fore.BLACK + f"INCORRECT: {sai[0]} -> {sai[2]}" + Style.RESET_ALL)
         elif(outcome_kind == "HINT"):
-            print(Back.BLUE + Fore.YELLOW + f"HINT: {sai[0]} -> {sai[2]}")
+            print(Back.BLUE + Fore.YELLOW + f"HINT: {sai[0]} -> {sai[2]}" + Style.RESET_ALL)
 
     def tutor_train_state(self, state):
         ''' Tutor-train (i.e. train one action at a time) on 'state'.'''
-        action = self.agent.act(state)
+        action = self.agent.act(state, return_kind=self.act_return_kind)
         outcome_kind = None
 
         if(action):
@@ -97,10 +120,10 @@ class Trainer:
         s,a,i = action_kwargs['sai']
         self.logger.log_step(s, a, i['value'], outcome_kind, step_name=s, kcs=[s])
 
-        self.agent.train(state, reward=reward, 
-            **action.as_train_kwargs(), # includes sai, arg_foci, etc.
-             is_demo=True)
-
+        self.agent.train(
+            **self._to_train_kwargs(state, action, reward, 
+             is_demo=outcome_kind=="HINT")
+        )
         self.print_outcome(action, outcome_kind)
 
         # Change the state by applying the action
@@ -118,7 +141,7 @@ class Trainer:
                 self.env.set_problem(*prob_args)
             self.logger.set_problem(self.env.problem_name)
 
-            print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {self.env.problem_name}")
+            print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {self.env.problem_name}"  + Style.RESET_ALL)
 
             while(not self.env.is_done):
                 state = self.env.get_state()
@@ -134,6 +157,8 @@ class Trainer:
 
 class AuthorTrainer(Trainer):
     def __init__(self, *args, **kwargs):
+        # Author trainer defaults return kind to 'skill_app'
+        kwargs['act_return_kind'] = kwargs.get('act_return_kind', 'skill_app')
         super(AuthorTrainer, self).__init__(*args, **kwargs)
         self.states_trained = 0
         self.problem_jumps = 0
@@ -141,7 +166,7 @@ class AuthorTrainer(Trainer):
 
     def author_train_state(self, state):
         ''' Author-train (i.e. all proposed actions + available demos at once) on 'state'.'''
-        actions = self.agent.act_all(state, return_kind="skill_app")
+        actions = self.agent.act_all(state, return_kind=self.act_return_kind)
         demos = self.env.get_all_demos(state)
 
         # Annotate each proposed action with reward and add to training set
@@ -158,20 +183,17 @@ class AuthorTrainer(Trainer):
                     covered_demos[j] = action
                     break
 
-            print("CHECK:", reward, action, action.args)
+            # print("CHECK:", reward, action, action.args)
 
-            train_set.append({"state": state,
-                              "reward" : reward,
-                              **action.as_train_kwargs()})
-
+            train_set.append(self._to_train_kwargs(state, action, reward))
+                
         # Add any next demos not covered by the actions into the training set
         for i, action in enumerate(covered_demos):
             if(not action):
-                demo = demos[i]
-                train_set.append({"state": state,
-                                  "reward" : 1,
-                                  "is_demo" : True,
-                                  **demo.as_train_kwargs()})
+                train_set.append(
+                    self._to_train_kwargs(state, demos[i], 
+                        reward=1, is_demo=True)
+                )
 
         # Apply Training Set
         self.agent.train_all(train_set)
@@ -190,7 +212,7 @@ class AuthorTrainer(Trainer):
                 outcome_kind = "HINT"
                 self.total_hints += 1
 
-            self.print_outcome(Action(train_obj['sai']), outcome_kind)
+            self.print_outcome(train_obj, outcome_kind)
 
         # Change the state by applying the first demo 
         #  (or the action that covered it)
@@ -198,7 +220,7 @@ class AuthorTrainer(Trainer):
         if(not demo):
             demo = demos[0]
         self.env.apply(demo)
-        print(Back.WHITE + Fore.BLACK + f"APPLY: {demo.sai[0]} -> {demo.sai[2]}")
+        print(Back.WHITE + Fore.BLACK + f"APPLY: {demo.sai[0]} -> {demo.sai[2]}" + Style.RESET_ALL)
         return demos[1:]
 
     def train_prob_start_to_end(self):
@@ -241,7 +263,8 @@ class AuthorTrainer(Trainer):
             else:
                 self.env.set_problem(*prob_args)
 
-            print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {prob_args}")
+            problem = getattr(self.env, 'problem_name', self.env.problem_config)
+            print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {problem}" + Style.RESET_ALL)
 
             unapplied = self.train_prob_start_to_end()
             self.train_unapplied_demo_states(unapplied)

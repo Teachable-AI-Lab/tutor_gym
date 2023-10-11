@@ -123,14 +123,12 @@ colorama.init(autoreset=True)
 def run_training(agent, logger_name='MulticolumnAddition', n=10,
                  n_columns=3, author_train=True, carry_zero=False):
     
-    logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al')
+    logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al_norf')
     env = MultiColumnAddition(
             demo_args=True, demo_how=False, n_digits=n_columns,
             carry_zero=carry_zero)
 
-    trainer = Trainer(agent, env, 
-        # problem_set=[('777','777')],
-        logger=logger,  n_problems=n)
+    trainer = Trainer(agent, env, logger=logger, n_problems=n)
     trainer.start()
 
 
@@ -163,10 +161,10 @@ if __name__ == "__main__":
             from apprentice.agents.cre_agents.cre_agent import CREAgent
             agent_args = {
                 "search_depth" : 2,
-                # "where_learner": "antiunify",
-                "where_learner": "mostspecific",
-                # "when_learner": "sklearndecisiontree",
-                "when_learner": "decisiontree",
+                "where_learner": "antiunify",
+                # "where_learner": "mostspecific",
+                "when_learner": "sklearndecisiontree",
+                # "when_learner": "decisiontree",
                                 
                 # For STAND
                 # "when_learner": "stand",
@@ -184,7 +182,7 @@ if __name__ == "__main__":
                 "find_neighbors" : True,
                 # "strip_attrs" : ["to_left","to_right","above","below","type","id","offsetParent","dom_class"],
                 # "state_variablization" : "metaskill",
-                "when_args": {"encode_relative" : True, "one_hot": False },
+                "when_args": {"encode_relative" : False},
             }
             agent = CREAgent(**agent_args)
         elif(args.agent_type.upper() == "MODULAR"):
