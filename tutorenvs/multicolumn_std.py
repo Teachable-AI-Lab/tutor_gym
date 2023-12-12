@@ -44,7 +44,7 @@ def to_int_safe(a):
 
 class MultiColumnAddition(StateMachineTutor):
 
-    def __init__(self, n_digits=3, pad_zeros=True, carry_zero=False, **kwargs):
+    def __init__(self, n_digits=3, pad_zeros=False, carry_zero=False, **kwargs):
         super().__init__(**kwargs)                
         self.problem = None
         self.n_digits = n_digits
@@ -56,7 +56,10 @@ class MultiColumnAddition(StateMachineTutor):
     # ------------------
     # : Problem Start State Initialization 
 
-    def _standardize_problem(self, upper, lower, pad_zeros=True, n_digits=None):
+    def _standardize_problem(self, upper, lower, **kwargs):
+        n_digits = kwargs.get('n_digits', self.n_digits)
+        pad_zeros = kwargs.get('pad_zeros', self.pad_zeros)
+
         upper = str(upper)
         lower = str(lower)
 
@@ -133,17 +136,19 @@ class MultiColumnAddition(StateMachineTutor):
 
 
     def set_start_state(self, upper, lower, **kwargs):
-        pad_zeros = kwargs.get('pad_zeros', self.pad_zeros)
-        n_digits = kwargs.get('n_digits', self.n_digits)
+        # pad_zeros = kwargs.get('pad_zeros', self.pad_zeros)
+        # n_digits = kwargs.get('n_digits', self.n_digits)
         ''' Domain implementation: Used by StateMachineTutor.set_problem() 
             to initialize a start state.'''
         upper, lower, N = self.problem = self._standardize_problem(
-                            upper, lower, pad_zeros, n_digits)
+                            upper, lower, **kwargs)
 
         state = self._blank_state(N)
         for i in range(N):
-            state[f'inpA{N-i}']['value'] = upper[i]
-            state[f'inpB{N-i}']['value'] = lower[i]
+            if(i < len(upper)):
+                state[f'inpA{i+1}']['value'] = upper[-i-1]
+            if(i < len(lower)):
+                state[f'inpB{i+1}']['value'] = lower[-i-1]
         self.start_state = ProblemState(state)
         self.problem_name = f"{upper}_{lower}"
         
@@ -180,31 +185,66 @@ class MultiColumnAddition(StateMachineTutor):
 
             upper = state[argA]['value']
             lower = state[argB]['value']
+            # print(':', f'{argA}={upper}', f'{argB}={lower}')
+            if(lower == ""):
+                # If both lower and upper are empty
+                #  then don't fill the next column
+                if(upper == ""):
+                    break
 
-            partial_sum = to_int_safe(upper) + to_int_safe(lower)
+                partial_sum = to_int_safe(upper)
 
-            foci = [f'inpA{i+1}', f'inpB{i+1}']
-            if prev_carry:
-                partial_sum += 1
-                foci = [f'carry{i}',*foci]
+                if(prev_carry):                    
+                    foci = [f'carry{i+1}', f'inpA{i+1}']
+                    partial_sum += 1
 
-            if self.carry_zero or partial_sum >= 10:
-                a_sai = (f'out{i+1}', 'UpdateTextField', 
-                            {'value': str(partial_sum % 10)})
-                a_act = Action(a_sai, args=foci, how_str="placeholder")
+                    a_sai = (f'out{i+1}', 'UpdateTextField',
+                                {'value': str(partial_sum % 10)})
+                    a_act = Action(a_sai, args=foci, how_str="OnesDigit(Add(a,b))")
+                    
+                    if(partial_sum >= 10):
+                        print("THIS ONE", partial_sum, i)
+                        c_sai = (f'carry{i+1}', 'UpdateTextField',
+                                {'value': str(partial_sum // 10)})
+                        c_act = Action(c_sai, args=foci, how_str="TensDigit(Add(a,b))")
 
-                c_sai = (f'carry{i+1}', 'UpdateTextField',
-                            {'value': str(partial_sum // 10)})
-                c_act = Action(c_sai, args=foci, how_str="placeholder")
-
-                curr_state = fsm.add_unordered(curr_state, [a_act, c_act])
-
+                        curr_state = fsm.add_unordered(curr_state, [a_act, c_act])
+                    else:
+                        print("THAT ONE", partial_sum, i)
+                        curr_state = fsm.add_edge(curr_state, a_act)
+                else:
+                    foci = [f'inpA{i+1}']
+                    sai = (f'out{i+1}', 'UpdateTextField',
+                            {'value': str(partial_sum)})
+                    act = Action(sai, args=foci, how_str="Copy(a)")
+                    curr_state = fsm.add_edge(curr_state, act)
+                    print("THE OTHER ONE", partial_sum, i)
+                        
             else:
-                sai = (f'out{i+1}', 'UpdateTextField',
-                        {'value': str(partial_sum)})
-                act = Action(sai, args=foci, how_str="placeholder")
+                partial_sum = to_int_safe(upper) + to_int_safe(lower)
 
-                curr_state = fsm.add_edge(curr_state, act)
+                foci = [f'inpA{i+1}', f'inpB{i+1}']
+                if prev_carry:
+                    partial_sum += 1
+                    foci = [f'carry{i}',*foci]
+
+                if self.carry_zero or partial_sum >= 10:
+                    a_sai = (f'out{i+1}', 'UpdateTextField', 
+                                {'value': str(partial_sum % 10)})
+                    a_act = Action(a_sai, args=foci, how_str=f"OnesDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
+
+                    c_sai = (f'carry{i+1}', 'UpdateTextField',
+                                {'value': str(partial_sum // 10)})
+                    c_act = Action(c_sai, args=foci, how_str=f"TensDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
+
+                    curr_state = fsm.add_unordered(curr_state, [a_act, c_act])
+
+                else:
+                    sai = (f'out{i+1}', 'UpdateTextField',
+                            {'value': str(partial_sum)})
+                    act = Action(sai, args=foci, how_str=f"OnesDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
+
+                    curr_state = fsm.add_edge(curr_state, act)
 
             prev_carry = partial_sum >= 10
             i += 1
@@ -215,7 +255,7 @@ class MultiColumnAddition(StateMachineTutor):
             foci = [f'carry{i}']
             sai = (f'out{i+1}', 'UpdateTextField',
                     {'value': "1" if prev_carry else "0"})
-            act = Action(sai, args=foci, how_str="placeholder")
+            act = Action(sai, args=foci, how_str="Copy(a)")
             curr_state = fsm.add_edge(curr_state, act)
 
         act = Action(('done', "PressButton", {'value': -1}))
@@ -363,8 +403,7 @@ def test_basic():
             assert not mc.is_done
         mc.apply(action)
         print(action, mc.state)
-        if(i == 7):
-            assert mc.is_done
+    assert mc.is_done
     assert mc.state["out1"]['value'] == "6"
     assert mc.state["out2"]['value'] == "5"
     assert mc.state["out3"]['value'] == "2"
@@ -382,12 +421,48 @@ def test_basic():
         # print("CHECK", reward, ))
         mc.apply(action)
         print(action, mc.state)        
-        if(i == 7):
-            assert mc.is_done
+    assert mc.is_done
     assert mc.state["out1"]['value'] == "6"
     assert mc.state["out2"]['value'] == "6"
     assert mc.state["out3"]['value'] == "6"
     assert mc.state["out4"]['value'] == ""
+
+    mc.set_problem("333", "3")
+    for i in range(4):
+        action = mc.get_demo()
+        reward = mc.check(action)
+        nxt = mc.get_all_demos()
+        assert len(nxt) == 1
+        if(i != 3):
+            assert mc.check(('done','PressButton', {"value": -1})) == -1
+            assert not mc.is_done
+
+        mc.apply(action)
+        print(action, mc.state)
+    assert mc.is_done
+    assert mc.state["out1"]['value'] == "6"
+    assert mc.state["out2"]['value'] == "3"
+    assert mc.state["out3"]['value'] == "3"
+    assert mc.state["out4"]['value'] == ""
+
+
+    mc.set_problem("391", "9")
+    for i in range(6):
+        action = mc.get_demo()
+        reward = mc.check(action)
+        nxt = mc.get_all_demos()
+        if(i != 5):
+            assert mc.check(('done','PressButton', {"value": -1})) == -1
+            assert not mc.is_done
+
+        mc.apply(action)
+        print(action, mc.state)
+    assert mc.is_done
+    assert mc.state["out1"]['value'] == "0"
+    assert mc.state["out2"]['value'] == "0"
+    assert mc.state["out3"]['value'] == "4"
+    assert mc.state["out4"]['value'] == ""
+
 
 def test_demo_check():
     mc = MultiColumnAddition(check_args=True, check_how=False, demo_args=True, demo_how=True)

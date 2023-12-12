@@ -129,8 +129,9 @@ def run_training(agent, logger_name='MulticolumnAddition', n=10,
             carry_zero=carry_zero)
 
     trainer = Trainer(agent, env, 
-        # problem_set=[('777','777')],
-        logger=logger,  n_problems=n)
+        problem_set=[('777','777')],
+        # problem_set=[('255','562')],
+        logger=logger,  n_problems=1)
     trainer.start()
 
 
@@ -163,8 +164,9 @@ if __name__ == "__main__":
             from apprentice.agents.cre_agents.cre_agent import CREAgent
             agent_args = {
                 "search_depth" : 2,
-                # "where_learner": "antiunify",
-                "where_learner": "mostspecific",
+                "where_learner": "antiunify",
+                # "where_learner": "mostspecific",
+                # "where_learner": "generalize",
                 # "when_learner": "sklearndecisiontree",
                 "when_learner": "decisiontree",
                                 
@@ -190,7 +192,7 @@ if __name__ == "__main__":
         elif(args.agent_type.upper() == "MODULAR"):
             agent_args = {
                 "search_depth" : 3,
-                "where_learner": "version_space",
+                # "where_learner": "version_space",
                 # "where_learner": "mostspecific",
                 "when_learner": "decisiontree2",
                 # "when_args" : {""},

@@ -218,7 +218,7 @@ class FiniteStateMachine:
     def __init__(self, start_state):
         self.start_state = ProblemState(start_state)
         self.nodes = {}
-        self._ensure_node(start_state)   
+        self._ensure_node(start_state)
 
     def _ensure_node(self, state):
         if(state not in self.nodes):
