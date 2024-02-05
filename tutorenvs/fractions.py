@@ -3,7 +3,7 @@ from random import choice
 from pprint import pprint
 import logging
 
-import cv2  # pytype:disable=import-error
+
 from PIL import Image, ImageDraw
 import gym
 from gym import error, spaces, utils
@@ -85,6 +85,7 @@ class FractionArithSymbolic:
                 ]
 
     def render(self, add_dot=None):
+        import cv2  # pytype:disable=import-error
         img = self.get_image(add_counts=True, add_dot=add_dot)
         cv2.imshow('vecenv', np.array(img))
         cv2.waitKey(1)
