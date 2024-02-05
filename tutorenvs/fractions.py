@@ -4,7 +4,6 @@ from pprint import pprint
 import logging
 
 
-from PIL import Image, ImageDraw
 import gym
 from gym import error, spaces, utils
 from gym.utils import seeding

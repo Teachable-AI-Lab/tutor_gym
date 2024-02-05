@@ -3,7 +3,6 @@ from random import choice
 from pprint import pprint
 import logging
 
-import cv2  # pytype:disable=import-error
 import gym
 from gym import error, spaces, utils
 from gym.utils import seeding

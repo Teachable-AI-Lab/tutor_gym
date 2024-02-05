@@ -4,8 +4,7 @@ from pprint import pprint
 import logging, operator
 from functools import reduce
 
-import cv2  # pytype:disable=import-error
-from PIL import Image, ImageDraw
+
 import gym
 from gym import error, spaces, utils
 from gym.utils import seeding
@@ -170,12 +169,14 @@ class FractionArithSymbolic:
 
     # TODO
     def render(self, add_dot=None):
+        import cv2
         img = self.get_image(add_counts=True, add_dot=add_dot)
         cv2.imshow('vecenv', np.array(img))
         cv2.waitKey(1)
 
     # TODO
     def get_image(self, add_counts=False, add_dot=None):
+        from PIL import Image, ImageDraw
         output = "{:>3}    {:>3}\n---- {} ---- =\n{:>3}    {:>3}\n\nConvert? | {} |\n\n{:>3}    {:>3}    {:>3}\n---- {} ---- = ----\n{:>3}    {:>3}    {:>3}\n".format(self.state['initial_num_left'],
                 self.state['initial_num_right'],
                 self.state['initial_operator'],

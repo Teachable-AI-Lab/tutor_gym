@@ -4,8 +4,6 @@ from pprint import pprint
 import logging, operator
 from functools import reduce
 
-import cv2  # pytype:disable=import-error
-from PIL import Image, ImageDraw
 import gym
 from gym import error, spaces, utils
 from gym.utils import seeding
