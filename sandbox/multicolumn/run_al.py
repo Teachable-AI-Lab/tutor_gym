@@ -129,9 +129,9 @@ def run_training(agent, logger_name='MulticolumnAddition', n=10,
             carry_zero=carry_zero)
 
     trainer = Trainer(agent, env, 
-        problem_set=[('777','777')],
-        # problem_set=[('255','562')],
-        logger=logger,  n_problems=1)
+        # problem_set=[('777','777')],
+        # problem_set=[('782','409')],
+        logger=logger,  n_problems=n)
     trainer.start()
 
 

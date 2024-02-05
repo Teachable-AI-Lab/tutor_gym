@@ -58,32 +58,32 @@ ground_truth_set = training_set + edge_case_set
 # : Creating completeness profiles
 
 
-def make_completeness_profile(env, problems, output_file):
-    with open(output_file, 'w') as profile:
-        for prob_args in problems:
-            env.set_problem(*prob_args)
-            next_states = [env.get_state()]
+# def make_completeness_profile(env, problems, output_file):
+#     with open(output_file, 'w') as profile:
+#         for prob_args in problems:
+#             env.set_problem(*prob_args)
+#             next_states = [env.get_state()]
 
-            covered_states = set()
-            while(len(next_states) > 0):
-                new_states = []
-                for state in next_states:
-                    ps = ProblemState(state)
-                    if(ps in covered_states):
-                        continue
-                    else:
-                        covered_states.add(ps)
+#             covered_states = set()
+#             while(len(next_states) > 0):
+#                 new_states = []
+#                 for state in next_states:
+#                     ps = ProblemState(state)
+#                     if(ps in covered_states):
+#                         continue
+#                     else:
+#                         covered_states.add(ps)
 
-                    env.set_state(state)
-                    demos = env.get_all_demos(state)
-                    sais = [d.sai.get_info() for d in demos]
-                    profile.write(json.dumps({'state' : state, 'sais' : sais})+"\n")
+#                     env.set_state(state)
+#                     demos = env.get_all_demos(state)
+#                     sais = [d.sai.get_info() for d in demos]
+#                     profile.write(json.dumps({'state' : state, 'sais' : sais})+"\n")
 
-                    for d in demos:
-                        ns = env.apply(d)
-                        new_states.append(ns)
-                        env.set_state(state)
-                next_states = new_states
+#                     for d in demos:
+#                         ns = env.apply(d)
+#                         new_states.append(ns)
+#                         env.set_state(state)
+#                 next_states = new_states
 
 
 
@@ -99,7 +99,7 @@ def run_training(agent, logger_name='MulticolumnAddition', n=10,
             demo_args=True, demo_how=True, n_digits=n_columns,
             carry_zero=carry_zero)
 
-    # make_completeness_profile(env, training_set+edge_case_set, 'exp_z_ground_truth.txt')
+    # env.make_completeness_profile(training_set+edge_case_set, 'exp_z_ground_truth.txt')
     trainer = AuthorTrainer(agent, env, logger=logger,
                 problem_set=problem_set)#, n_problems=n)
     c_log = []

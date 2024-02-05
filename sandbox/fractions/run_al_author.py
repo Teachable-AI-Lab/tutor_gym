@@ -38,15 +38,27 @@ def resolve_type(typ, logger_name):
     return logger_name, ptypes
         # env = FractionArithSymbolic(logger=logger, problem_types=ptypes, n=n_fracs)
 
+
+interleaved_problems = [("+", [("1","2"), ("1","3")]),
+                        ("+", [("1","4"), ("2","4")]),
+                        ("x", [("4","3"), ("1","2")]),
+                        ("+", [("3","3"), ("2","4")]),
+                        ("+", [("1","5"), ("2","5")]),
+                        ("x", [("2","4"), ("1","3")])        
+                        ]
+
 def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_args=False):
     logger_name, problem_types = resolve_type(typ, logger_name)
     logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al_author')
 
     env = FractionArithmetic(check_how=False, check_args=True,
                              demo_args=True, demo_how=True,
+                             
                              problem_types=problem_types, n_fracs=n_fracs)
 
-    trainer = AuthorTrainer(agent, env, logger=logger, n_problems=n)
+    trainer = AuthorTrainer(agent, env, logger=logger,
+                problem_set=interleaved_problems, 
+                n_problems=n)
     trainer.start()
 
 
@@ -98,14 +110,18 @@ if __name__ == "__main__":
                 # "where_learner" : "antiunify",
                 "where_learner": "mostspecific",
 
-                # For STAND
-                # "when_learner": "stand",
-                # "which_learner": "when_prediction",
-                # "action_chooser" : "max_which_utility",
-                # "suggest_uncert_neg" : True,
-
-                "when_learner" : 'sklearndecisiontree',
                 # "when_learner" : 'decisiontree',
+
+                # For STAND
+                "when_learner": "stand",
+                "which_learner": "when_prediction",
+                "action_chooser" : "max_which_utility",
+                "suggest_uncert_neg" : True,
+
+                # "when_learner" : 'sklearndecisiontree',
+                
+                "error_on_bottom_out" : False,
+                "one_skill_per_match" : True,
                 
                 "extra_features" : ["Match"],
                 "when_args" : {"encode_relative" : True, "one_hot" : True},
