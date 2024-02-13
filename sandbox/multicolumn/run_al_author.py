@@ -10,7 +10,7 @@ colorama.init(autoreset=True)
 
 
 def log_completeness(agent, profile='ground_truth.txt', log=[]):
-    log.append(agent.eval_completeness(profile))
+    log.append(agent.eval_completeness(profile, print_diff=False))
 
 
 edge_case_set = [
@@ -51,6 +51,14 @@ extra = [
     # ["999", "001"],
 ]
 
+start_probs = [
+    ["534", "698"],
+    ["234", "127"],
+    # ["42", "7"],
+    # ["2", "9"],
+    # ["674", "9"],
+]
+
 
 ground_truth_set = training_set + edge_case_set
 
@@ -85,25 +93,40 @@ ground_truth_set = training_set + edge_case_set
 #                         env.set_state(state)
 #                 next_states = new_states
 
+def make_completeness_profile(env, n=100, name=""):
+    problems = []
+    for i in range(100):
+        env.set_random_problem()
+        problems.append(env.problem)
+    env.make_completeness_profile(problems, name)
 
 
 def run_training(agent, logger_name='MulticolumnAddition', n=10,
-                 n_columns=3, author_train=True, carry_zero=True):
+                 n_columns=3, author_train=True, carry_zero=True, random_n_digits=False):
     
     logger = DataShopLogger(logger_name, extra_kcs=['field'])
     problem_set = training_set + extra + training_set   #[["777", "777"], ["666", "666"], ["777","777"]]
 
     # if(author_train):
 
+    print("CARRY ZERO:", carry_zero)
     env = MultiColumnAddition(check_how=False, check_args=True,
             demo_args=True, demo_how=True, n_digits=n_columns,
-            carry_zero=carry_zero)
+            carry_zero=carry_zero, random_n_digits=random_n_digits)
+
+    # make_completeness_profile(env, 100, "gt-carryZ-3.txt")
+
+
+    
 
     # env.make_completeness_profile(training_set+edge_case_set, 'exp_z_ground_truth.txt')
-    trainer = AuthorTrainer(agent, env, logger=logger,
-                problem_set=problem_set)#, n_problems=n)
+    trainer = AuthorTrainer(agent, env, logger=logger, 
+                problem_set=start_probs,
+                n_problems=100)
+                # problem_set=problem_set)#, n_problems=n)
     c_log = []
-    profile = "exp_z_ground_truth.txt" if carry_zero else "ground_truth.txt"
+    # profile = "exp_z_ground_truth.txt" if carry_zero else "ground_truth.txt"
+    profile = "gt-carryZ-3.txt"
     trainer.on_problem_end = lambda : log_completeness(agent, profile, log=c_log)
 
     # else:
@@ -124,7 +147,7 @@ if __name__ == "__main__":
     import sys, argparse
     parser = argparse.ArgumentParser(
         description='Runs AL agents on multi-column addition')
-    parser.add_argument('--n-agents', default=50, type=int, metavar="<n_agents>",
+    parser.add_argument('--n-agents', default=1, type=int, metavar="<n_agents>",
                         dest="n_agents", help="number of agents")
     parser.add_argument('--n-problems', default=100, type=int, metavar="<n_problems>",
                         dest="n_problems", help="number of problems")
@@ -142,11 +165,11 @@ if __name__ == "__main__":
             from apprentice.agents.cre_agents.cre_agent import CREAgent
             agent_args = {
                 "search_depth" : 2,
-                "where_learner": "antiunify",
+                "where_learner": "generalize",
                 # "where_learner": "mostspecific",
 
                 # "when_learner": "sklearndecisiontree",
-                "when_learner": "decisiontree",
+                # "when_learner": "decisiontree",
                                 
                 # For STAND
                 "when_learner": "stand",
@@ -154,14 +177,14 @@ if __name__ == "__main__":
                 "action_chooser" : "max_which_utility",
                 "suggest_uncert_neg" : True,
 
-                "when_args" : {}
+                "when_args" : {},
 
                 # "explanation_choice" : "least_operations",
                 "planner" : "setchaining",
                 # // "when_args" : {"cross_rhs_inference" : "implicit_negatives"},
                 "function_set" : ["OnesDigit","TensDigit","Add","Add3"],
                 # "feature_set" : [],
-                "feature_set" : ['Equals'],
+                # "feature_set" : ['Equals'],
                 "extra_features" : ["SkillCandidates","Match"],
                 "find_neighbors" : True,
                 # "strip_attrs" : ["to_left","to_right","above","below","type","id","offsetParent","dom_class"],

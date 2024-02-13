@@ -43,12 +43,13 @@ def to_int_safe(a):
 
 class MultiColumnAddition(StateMachineTutor):
 
-    def __init__(self, n_digits=3, pad_zeros=False, carry_zero=False, **kwargs):
+    def __init__(self, n_digits=3, pad_zeros=False, carry_zero=False, random_n_digits=False, **kwargs):
         super().__init__(**kwargs)                
         self.problem = None
         self.n_digits = n_digits
         self.pad_zeros = pad_zeros
         self.carry_zero = carry_zero
+        self.random_n_digits = random_n_digits
         # self.logger.set_student()
         self.set_random_problem()
 
@@ -139,8 +140,9 @@ class MultiColumnAddition(StateMachineTutor):
         # n_digits = kwargs.get('n_digits', self.n_digits)
         ''' Domain implementation: Used by StateMachineTutor.set_problem() 
             to initialize a start state.'''
-        upper, lower, N = self.problem = self._standardize_problem(
+        upper, lower, N =  self._standardize_problem(
                             upper, lower, **kwargs)
+        self.problem = (upper, lower) 
 
         state = self._blank_state(N)
         for i in range(N):
@@ -149,16 +151,21 @@ class MultiColumnAddition(StateMachineTutor):
             if(i < len(lower)):
                 state[f'inpB{i+1}']['value'] = lower[-i-1]
         self.start_state = ProblemState(state)
-        self.problem_name = f"{upper}_{lower}"
+        self.problem_name = f"{upper}+{lower}"
         
 
     def set_random_problem(self, **kwargs):
-        n_digits = kwargs.get('n_digits', self.n_digits)
-        max_val = (10 ** n_digits) - 1 #
-        min_val = (10 ** (n_digits-1))
-        # print("MIN VAL", min_val, max_val)
-        upper = str(randint(min_val,max_val))
-        lower = str(randint(min_val,max_val))
+        random_n_digits = kwargs.get('random_n_digits', self.random_n_digits)
+        if(random_n_digits):
+            n_top = randint(1, self.n_digits)
+            n_bot = randint(1, self.n_digits)
+            if(n_bot > n_top): 
+                n_top, n_bot = n_bot, n_top
+        else:
+            n_top = n_bot = kwargs.get('n_digits', self.n_digits)
+
+        upper = str(randint(10 ** (n_top-1), (10 ** n_top) - 1))
+        lower = str(randint(10 ** (n_bot-1), (10 ** n_bot) - 1))
 
         self.set_problem(upper, lower, **kwargs)
 
@@ -184,47 +191,72 @@ class MultiColumnAddition(StateMachineTutor):
 
             upper = state[argA]['value']
             lower = state[argB]['value']
+            p_carry = ""
+            if(f"carry{i}" in curr_state.objs):
+                p_carry = curr_state[f"carry{i}"]['value']
+                # print("P CARRY", p_carry)
+            
+            # print(i, "$", upper, lower, p_carry)
+            partial_sum = to_int_safe(upper) + to_int_safe(lower) + to_int_safe(prev_carry)
+            if(partial_sum == 0 and lower == "" and upper == ""):
+                prev_carry = 0
+                i += 1
+                break
+            # print(partial_sum)
             # print(':', f'{argA}={upper}', f'{argB}={lower}')
             if(lower == ""):
                 # If both lower and upper are empty
                 #  then don't fill the next column
-                if(upper == ""):
-                    break
+                if(upper == "" and prev_carry):
+                    # Copy down a lone carry item
+                    foci = [f'carry{i}']
+                    sai = (f'out{i+1}', 'UpdateTextField',
+                            {'value': "1" if prev_carry else "0"})
+                    act = Action(sai, args=foci, how_str="Copy(a)")
+                    curr_state = fsm.add_edge(curr_state, act)
 
-                partial_sum = to_int_safe(upper)
+                    # a_sai = (f'out{i+1}', 'UpdateTextField',
+                    #             {'value': str(partial_sum % 10)})
+                    # a_act = Action(a_sai, args=foci, how_str="OnesDigit(Add(a,b))")
 
-                if(prev_carry):                    
-                    foci = [f'carry{i+1}', f'inpA{i+1}']
-                    partial_sum += 1
+                # partial_sum = to_int_safe(upper)
+
+                elif(p_carry):                    
+                    foci = [f'carry{i}', f'inpA{i+1}']
+                    # partial_sum += 1
 
                     a_sai = (f'out{i+1}', 'UpdateTextField',
                                 {'value': str(partial_sum % 10)})
                     a_act = Action(a_sai, args=foci, how_str="OnesDigit(Add(a,b))")
                     
-                    if(partial_sum >= 10):
-                        print("THIS ONE", partial_sum, i)
+                    if(self.carry_zero or partial_sum >= 10):
+                        
                         c_sai = (f'carry{i+1}', 'UpdateTextField',
                                 {'value': str(partial_sum // 10)})
                         c_act = Action(c_sai, args=foci, how_str="TensDigit(Add(a,b))")
 
+                        # print("Case A:", a_act, c_act, i)
                         curr_state = fsm.add_unordered(curr_state, [a_act, c_act])
+                        
                     else:
-                        print("THAT ONE", partial_sum, i)
+                        # print("Case B:", a_act, i)
                         curr_state = fsm.add_edge(curr_state, a_act)
                 else:
-                    foci = [f'inpA{i+1}']
-                    sai = (f'out{i+1}', 'UpdateTextField',
-                            {'value': str(partial_sum)})
-                    act = Action(sai, args=foci, how_str="Copy(a)")
-                    curr_state = fsm.add_edge(curr_state, act)
-                    print("THE OTHER ONE", partial_sum, i)
+                    # Copy down a lone upper item
+                    if(upper != ""):
+                        foci = [f'inpA{i+1}']
+                        sai = (f'out{i+1}', 'UpdateTextField',
+                                {'value': str(partial_sum)})
+                        act = Action(sai, args=foci, how_str="Copy(a)")
+                        curr_state = fsm.add_edge(curr_state, act)
+                        # print("Case C", act, i)
                         
-            else:
-                partial_sum = to_int_safe(upper) + to_int_safe(lower)
+            elif(upper != ""):
+                # partial_sum = to_int_safe(upper) + to_int_safe(lower)
 
                 foci = [f'inpA{i+1}', f'inpB{i+1}']
-                if prev_carry:
-                    partial_sum += 1
+                if p_carry != "":
+                    # partial_sum += 1
                     foci = [f'carry{i}',*foci]
 
                 if self.carry_zero or partial_sum >= 10:
@@ -235,27 +267,30 @@ class MultiColumnAddition(StateMachineTutor):
                     c_sai = (f'carry{i+1}', 'UpdateTextField',
                                 {'value': str(partial_sum // 10)})
                     c_act = Action(c_sai, args=foci, how_str=f"TensDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
-
+                    # print("Case D:", a_act, c_act, i)
                     curr_state = fsm.add_unordered(curr_state, [a_act, c_act])
 
                 else:
                     sai = (f'out{i+1}', 'UpdateTextField',
                             {'value': str(partial_sum)})
                     act = Action(sai, args=foci, how_str=f"OnesDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
-
+                    # print("Case E:", act, i)
                     curr_state = fsm.add_edge(curr_state, act)
+            else:
+                raise ValueError("Shouldn't happen")
 
             prev_carry = partial_sum >= 10
             i += 1
         N = i
 
         # Copy down hanging carry
-        if self.carry_zero or prev_carry:
+        if prev_carry:
             foci = [f'carry{i}']
             sai = (f'out{i+1}', 'UpdateTextField',
                     {'value': "1" if prev_carry else "0"})
             act = Action(sai, args=foci, how_str="Copy(a)")
             curr_state = fsm.add_edge(curr_state, act)
+            # print("Case F:", act, i)
 
         act = Action(('done', "PressButton", {'value': -1}))
         curr_state = fsm.add_edge(curr_state, act)
@@ -486,18 +521,41 @@ def test_demo_check():
 
 
 if __name__ == "__main__":
-    mc = MultiColumnAddition()
-    mc.set_problem("567", "689")
-    for key, obj in mc.state.objs.items():
-        print(key, obj)
+    # mc = MultiColumnAddition()
+    # mc.set_problem("567", "689")
+    # for key, obj in mc.state.objs.items():
+    #     print(key, obj)
 
+    # for key, obj in mc.fsm.nodes.items():
+    #     print(key, [f"{x.sai.selection}->{x.sai.inputs['value']} : {ns}" for x, ns in obj['edges'].items()])
+
+    # test_basic()
+    # test_demo_check()
+
+    
+    mc = MultiColumnAddition(carry_zero=True)
+    
+    mc.set_problem("67", "2")
     for key, obj in mc.fsm.nodes.items():
         print(key, [f"{x.sai.selection}->{x.sai.inputs['value']} : {ns}" for x, ns in obj['edges'].items()])
 
-    test_basic()
-    test_demo_check()
 
-    
+    mc = MultiColumnAddition(carry_zero=True, random_n_digits=True)
+    print("------")
+    for i in range(100):
+        # mc.set_problem("100", "2")
+        mc.set_random_problem()
+        end_node = [x for x in mc.fsm.nodes.values() if len(x['edges']) and list(x['edges'])[0].sai.selection == "done"][0]
+        objs = end_node['state'].objs
+        gv = lambda x: objs[x]['value']
+        s = "".join([gv('out4'), gv('out3'), gv('out2'), gv('out1')])
+        upper, lower = mc.problem
+        _sum = to_int_safe(upper) + to_int_safe(lower)
+        # gc = lambda x: objs[x]['value']
+        print("".join([gv('carry3'), gv('carry2'), gv('carry1')]))
+        print(f"{upper}+{lower}={_sum}={s}")
+        assert str(_sum) == s
+        
 
 
     

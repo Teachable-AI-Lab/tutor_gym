@@ -82,19 +82,35 @@ class Trainer:
                     "is_demo" : is_demo}
 
     def print_outcome(self, action, outcome_kind):
+        extra = ""
+        
         if(isinstance(action, Action)):
             sai = action.sai
+            extra = f"{action.how_part}({','.join(action.args)})"
         elif('sai' in action):
             sai = Action(action['sai']).sai
+            print(action)
+            arg_foci = action.get('arg_foci',['???'])
+            if(arg_foci is None):
+                arg_foci = ['???']
+            extra = f"{action.get('how_part','???')}({','.join(arg_foci)})"
         elif('skill_app' in action):
-            sai = Action(action['skill_app'].sai).sai            
+            skill_app = action['skill_app']
+            sai = Action(skill_app.sai).sai        
+            extra = f'{skill_app.__repr__(add_sai=False)}'
+            # how_part = getattr(getattr(skill_app,'skill'),'how_part', "???")
+            # arg_foci = getattr(skill_app,'arg_foci',['???'])
+            # print("arg_foci", arg_foci)
+            # if(arg_foci is None):
+            #     arg_foci = []
+            # extra = f"{how_part}({','.join(arg_foci)})"
 
         if(outcome_kind == "CORRECT"):
-            print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai[0]} -> {sai[2]}" + Style.RESET_ALL)
+            print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai[0]} -> {sai[2]} {extra}" + Style.RESET_ALL)
         elif(outcome_kind == "INCORRECT"):            
-            print(Back.RED + Fore.BLACK + f"INCORRECT: {sai[0]} -> {sai[2]}" + Style.RESET_ALL)
+            print(Back.RED + Fore.BLACK + f"INCORRECT: {sai[0]} -> {sai[2]} {extra}" + Style.RESET_ALL)
         elif(outcome_kind == "HINT"):
-            print(Back.BLUE + Fore.YELLOW + f"HINT: {sai[0]} -> {sai[2]}" + Style.RESET_ALL)
+            print(Back.BLUE + Fore.YELLOW + f"HINT: {sai[0]} -> {sai[2]} {extra}" + Style.RESET_ALL)
 
     def tutor_train_state(self, state):
         ''' Tutor-train (i.e. train one action at a time) on 'state'.'''
