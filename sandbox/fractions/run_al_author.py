@@ -17,6 +17,8 @@ colorama.init(autoreset=True)
 
 import time
 
+def log_completeness(agent, profile='ground_truth.txt', log=[]):
+    log.append(agent.eval_completeness(profile, print_diff=False))
 
 def resolve_type(typ, logger_name):
     if(typ[:3] == "add"):
@@ -47,19 +49,35 @@ interleaved_problems = [("+", [("1","2"), ("1","3")]),
                         ("x", [("2","4"), ("1","3")])        
                         ]
 
+def make_completeness_profile(env, n=100, name=""):
+    problems = []
+    for i in range(100):
+        env.set_random_problem()
+        problems.append(env.problem)
+    env.make_completeness_profile(problems, name)
+
 def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_args=False):
     logger_name, problem_types = resolve_type(typ, logger_name)
     logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al_author')
 
     env = FractionArithmetic(check_how=False, check_args=True,
                              demo_args=True, demo_how=True,
-                             
                              problem_types=problem_types, n_fracs=n_fracs)
+
+    make_completeness_profile(env, 100, "gt-frac.txt")
 
     trainer = AuthorTrainer(agent, env, logger=logger,
                 problem_set=interleaved_problems, 
                 n_problems=n)
+
+    c_log = []
+    profile = "gt-frac.txt"
+    trainer.on_problem_end = lambda : log_completeness(agent, profile, log=c_log)
+
     trainer.start()
+
+    for i, obj in enumerate(c_log):
+        print(f"corr={obj['correctness']*100:2.2f}%, compl={obj['completeness']*100:.2f}%")
 
 
 

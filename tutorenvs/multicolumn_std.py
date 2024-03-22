@@ -293,7 +293,8 @@ class MultiColumnAddition(StateMachineTutor):
             # print("Case F:", act, i)
 
         act = Action(('done', "PressButton", {'value': -1}))
-        curr_state = fsm.add_edge(curr_state, act)
+        curr_state = fsm.add_edge(curr_state, act, is_done=True)
+        # print("curr_state:", curr_state)
 
         return fsm
 

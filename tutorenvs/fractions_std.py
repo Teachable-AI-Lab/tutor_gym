@@ -79,7 +79,7 @@ class FractionArithmetic(StateMachineTutor):
             # f"equals" : {"x" : N*220-110,   "y" : 110 , "value" : "=", **start_params},
             f"ans_num" : {"x" : N*220,   "y" : 440 ,  **field_params},
             f"ans_den" : {"x" : N*220,   "y" : 550 ,  **field_params},
-            "done" :     {"x" : 0, "y" : N*220+210 , **button_params},
+            "done" :     {"x" : N*220, "y" : N*220+210 , **button_params},
         })
 
         self.init_nums = [f'init_num{i+1}' for i in range(N)]
@@ -112,6 +112,7 @@ class FractionArithmetic(StateMachineTutor):
 
         self.problem_name = ptype+"_" + op.join([f"{num}/{den}" for num, den in fracs])
         self.problem_type = ptype
+        self.problem = (op, fracs) 
 
         # print("CURR STATE:")
         # for key, obj in state.objs.items():

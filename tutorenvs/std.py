@@ -208,7 +208,7 @@ def make_next_state(state, sai):
     selection, action_type, inputs = sai
     if(action_type == "UpdateTextField"):
         next_state[selection]['value'] = inputs['value']
-        next_state[selection]['locked'] = True
+        next_state[selection]['locked'] = True        
     return next_state
 
 # ----------------------------------
@@ -228,11 +228,14 @@ class FiniteStateMachine:
             }
         return self.nodes[state]
 
-    def add_edge(self, state, action):
+    def add_edge(self, state, action, is_done=False):
         action = Action(action) # Standardize
         state = ProblemState(state)
         node = self._ensure_node(state)
-        next_state = make_next_state(state, action.sai)
+        if(is_done):
+            next_state = ProblemState({})
+        else:
+            next_state = make_next_state(state, action.sai)
         node['edges'][action] = next_state
         self._ensure_node(next_state)
         return next_state
@@ -349,7 +352,9 @@ class StateMachineTutor(TutorEnvBase):
         sai = self._action_to_sai(action)
         if(self.sai_makes_done(sai)):
             self.is_done = True
-        self.state = make_next_state(self.state, sai)
+            self.state = ProblemState({})
+        else:
+            self.state = make_next_state(self.state, sai)
         return self.state.objs
 
     def _process_demo(self, action, **kwargs):
@@ -379,12 +384,12 @@ class StateMachineTutor(TutorEnvBase):
         with open(output_file, 'w') as profile:
             for prob_args in problems:
                 self.set_problem(*prob_args)
-                next_states = [self.get_state()]
+                next_states = [(self.get_state(),[])]
 
                 covered_states = set()
                 while(len(next_states) > 0):
                     new_states = []
-                    for state in next_states:
+                    for state, hist in next_states:
                         ps = ProblemState(state)
                         if(ps in covered_states):
                             continue
@@ -395,11 +400,14 @@ class StateMachineTutor(TutorEnvBase):
                         demos = self.get_all_demos(state)
                         sais = [d.sai.get_info() for d in demos]
                         problem = getattr(self, 'problem_name', self.problem_config)
-                        profile.write(json.dumps({"problem" : problem, 'state' : state, 'sais' : sais})+"\n")
+                        profile.write(json.dumps({"problem" : problem, 'state' : state, 'hist' : hist, 'sais' : sais})+"\n")
 
                         for d in demos:
+                            sel,_,inp = d.sai
                             ns = self.apply(d)
-                            new_states.append(ns)
+                            
                             self.set_state(state)
+                            if(not self.is_done):
+                                new_states.append((ns,hist+[(sel,inp['value'])]))
                     next_states = new_states
 

@@ -70,14 +70,16 @@ class Trainer:
         self.on_problem_end = on_problem_end
 
 
-    def _to_train_kwargs(self, state, action, reward, is_demo=False):
+    def _to_train_kwargs(self, state, action, reward, is_demo=False, is_start=None):
         if(self.act_return_kind == "skill_app" and not is_demo):
             return {"state" : state,
                     "skill_app" : action,
+                    "is_start" : is_start,
                     "reward" : reward}
         else:
             return {"state" : state,
                     "reward" : reward,
+                    "is_start" : is_start,
                     **action.as_train_kwargs(),
                     "is_demo" : is_demo}
 
@@ -89,7 +91,7 @@ class Trainer:
             extra = f"{action.how_part}({','.join(action.args)})"
         elif('sai' in action):
             sai = Action(action['sai']).sai
-            print(action)
+            # print(action)
             arg_foci = action.get('arg_foci',['???'])
             if(arg_foci is None):
                 arg_foci = ['???']
@@ -180,9 +182,10 @@ class AuthorTrainer(Trainer):
         self.problem_jumps = 0
 
 
-    def author_train_state(self, state):
+    def author_train_state(self, state, is_start=None):
         ''' Author-train (i.e. all proposed actions + available demos at once) on 'state'.'''
-        actions = self.agent.act_all(state, return_kind=self.act_return_kind)
+        actions = self.agent.act_all(state, is_start=is_start,
+            return_kind=self.act_return_kind)
         demos = self.env.get_all_demos(state)
 
         # Annotate each proposed action with reward and add to training set
@@ -195,20 +198,21 @@ class AuthorTrainer(Trainer):
                 if(demo.is_equal(action, 
                     check_args=self.env.check_args,
                     check_how=self.env.check_how)):
+                
                     reward = 1
                     covered_demos[j] = action
                     break
 
             # print("CHECK:", reward, action, action.args)
 
-            train_set.append(self._to_train_kwargs(state, action, reward))
+            train_set.append(self._to_train_kwargs(state, action, reward, is_start=is_start))
                 
         # Add any next demos not covered by the actions into the training set
         for i, action in enumerate(covered_demos):
             if(not action):
                 train_set.append(
                     self._to_train_kwargs(state, demos[i], 
-                        reward=1, is_demo=True)
+                        reward=1, is_demo=True, is_start=is_start)
                 )
 
         # Apply Training Set
@@ -241,14 +245,17 @@ class AuthorTrainer(Trainer):
 
     def train_prob_start_to_end(self):
         unapplied = []
+
+        is_start = True
         while(not self.env.is_done):
             state = self.env.get_state()
             # print("########")
             # for key, obj in state.items():
             #     print(key, obj)
             # print("########")
-            unused_demos = self.author_train_state(state)
+            unused_demos = self.author_train_state(state, is_start)
             unapplied.append((state, unused_demos))
+            is_start = False
         return unapplied
 
     # def train_rollout_skipped_states(self):

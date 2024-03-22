@@ -10,7 +10,14 @@ colorama.init(autoreset=True)
 
 
 def log_completeness(agent, profile='ground_truth.txt', log=[]):
-    log.append(agent.eval_completeness(profile, print_diff=False))
+    print(agent.process_lrn_mech.grammar)
+    log.append(agent.eval_completeness(profile, 
+        print_diff=True, print_correct="when_diff"
+    ))
+    # for skill in agent.skills.values():
+    #     print(skill)
+    #     print(skill.when_lrn_mech)
+
 
 
 edge_case_set = [
@@ -95,17 +102,17 @@ ground_truth_set = training_set + edge_case_set
 
 def make_completeness_profile(env, n=100, name=""):
     problems = []
-    for i in range(100):
+    for i in range(n):
         env.set_random_problem()
         problems.append(env.problem)
     env.make_completeness_profile(problems, name)
 
 
 def run_training(agent, logger_name='MulticolumnAddition', n=10,
-                 n_columns=3, author_train=True, carry_zero=True, random_n_digits=False):
+                 n_columns=3, author_train=True, carry_zero=False, random_n_digits=False):
     
     logger = DataShopLogger(logger_name, extra_kcs=['field'])
-    problem_set = training_set + extra + training_set   #[["777", "777"], ["666", "666"], ["777","777"]]
+    problem_set = training_set #+ extra + training_set   #[["777", "777"], ["666", "666"], ["777","777"]]
 
     # if(author_train):
 
@@ -114,9 +121,9 @@ def run_training(agent, logger_name='MulticolumnAddition', n=10,
             demo_args=True, demo_how=True, n_digits=n_columns,
             carry_zero=carry_zero, random_n_digits=random_n_digits)
 
-    # make_completeness_profile(env, 100, "gt-carryZ-3.txt")
-
-
+    # Randomly generate new completeness profile from env
+    profile = f"mc-{'cZ-' if carry_zero else ''}-{n_columns}.txt"
+    make_completeness_profile(env, 20, profile)
     
 
     # env.make_completeness_profile(training_set+edge_case_set, 'exp_z_ground_truth.txt')
@@ -126,7 +133,9 @@ def run_training(agent, logger_name='MulticolumnAddition', n=10,
                 # problem_set=problem_set)#, n_problems=n)
     c_log = []
     # profile = "exp_z_ground_truth.txt" if carry_zero else "ground_truth.txt"
-    profile = "gt-carryZ-3.txt"
+
+    # TEST SET LOGGING
+    # profile = "gt-carryZ-3.txt"
     trainer.on_problem_end = lambda : log_completeness(agent, profile, log=c_log)
 
     # else:
@@ -192,6 +201,9 @@ if __name__ == "__main__":
                 "when_args": {
                     "encode_relative" : True
                 },
+
+                "process_learner": "htnlearner",
+                "track_rollout_preseqs" : True,
             }
             agent = CREAgent(**agent_args)
         elif(args.agent_type.upper() == "MODULAR"):
