@@ -11,15 +11,15 @@ colorama.init(autoreset=True)
 
 def log_completeness(agent, profile='ground_truth.txt', log=[]):
     print(agent.process_lrn_mech.grammar)
-    log.append(agent.eval_completeness(profile, 
-        print_diff=True, print_correct="when_diff"
-    ))
-    print("---------------")
-    for skill in agent.skills.values():
-        print()
-        print(skill)
-        print(skill.when_lrn_mech)
-    print("---------------")
+    # log.append(agent.eval_completeness(profile, 
+    #     print_diff=True, print_correct="when_diff"
+    # ))
+    # print("---------------")
+    # for skill in agent.skills.values():
+    #     print()
+    #     print(skill)
+    #     print(skill.when_lrn_mech)
+    # print("---------------")
 
 
 
@@ -161,7 +161,7 @@ if __name__ == "__main__":
         description='Runs AL agents on multi-column addition')
     parser.add_argument('--n-agents', default=1, type=int, metavar="<n_agents>",
                         dest="n_agents", help="number of agents")
-    parser.add_argument('--n-problems', default=100, type=int, metavar="<n_problems>",
+    parser.add_argument('--n-problems', default=20, type=int, metavar="<n_problems>",
                         dest="n_problems", help="number of problems")
     parser.add_argument('--n-columns', default=3, type=int, metavar="<n_columns>",
                         dest="n_columns", help="number of columns")
