@@ -188,6 +188,10 @@ class AuthorTrainer(Trainer):
             return_kind=self.act_return_kind)
         demos = self.env.get_all_demos(state)
 
+        print("ACTIONS")
+        for action in actions:
+            print(action)
+
         # Annotate each proposed action with reward and add to training set
         train_set = []
         covered_demos = [False] * len(demos)
@@ -198,7 +202,7 @@ class AuthorTrainer(Trainer):
                 if(demo.is_equal(action, 
                     check_args=self.env.check_args,
                     check_how=self.env.check_how)):
-                
+
                     reward = 1
                     covered_demos[j] = action
                     break
@@ -244,9 +248,11 @@ class AuthorTrainer(Trainer):
         return demos[1:]
 
     def train_prob_start_to_end(self):
-        unapplied = []
 
         is_start = True
+        unapplied = []
+
+        
         while(not self.env.is_done):
             state = self.env.get_state()
             # print("########")
@@ -266,12 +272,14 @@ class AuthorTrainer(Trainer):
     #     raise ValueError()
 
     def train_unapplied_demo_states(self, unapplied):
-        for state, demos in unapplied:            
+        for state, demos in unapplied:
+            orig_state = state
             for demo in demos:
-                self.env.set_state(state)
+                self.env.set_state(orig_state)
                 self.env.apply(demo)
                 state = self.env.get_state()
                 self.author_train_state(state)
+
 
 
 
@@ -288,6 +296,11 @@ class AuthorTrainer(Trainer):
 
             problem = getattr(self.env, 'problem_name', self.env.problem_config)
             print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {problem}" + Style.RESET_ALL)
+
+            # print("START ROLLOUT")
+            # state = self.env.get_state()
+            # self.agent.act_rollout(state, is_start=True)
+            # print("END ROLLOUT")
 
             unapplied = self.train_prob_start_to_end()
             self.train_unapplied_demo_states(unapplied)

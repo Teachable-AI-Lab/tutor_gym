@@ -41,17 +41,17 @@ edge_case_set = [
 ]
 
 training_set = [
-    ["534", "698"],
-    ["872", "371"],
-    ["839", "445"],
-    ["287", "134"],
-    ["643", "534"],
-    ["248", "137"],
-    ["234", "142"],
-    ["539", "461"],
-    ["433", "576"],
-    ["764", "335"],
-    ["533", "698"],
+    ["534", "698"], #0
+    ["872", "371"], #1
+    ["839", "445"], #2
+    ["287", "134"], #3
+    ["643", "534"], #4
+    ["248", "137"], #5
+    ["234", "142"], #6
+    ["539", "461"], #7
+    ["433", "576"], #8
+    ["764", "335"], #9
+    ["533", "698"], #10
 ]
 
 extra = [
@@ -115,7 +115,7 @@ def run_training(agent, logger_name='MulticolumnAddition', n=10,
                  n_columns=3, author_train=True, carry_zero=False, random_n_digits=False):
     
     logger = DataShopLogger(logger_name, extra_kcs=['field'])
-    problem_set = training_set #+ extra + training_set   #[["777", "777"], ["666", "666"], ["777","777"]]
+    problem_set = training_set + extra + training_set   #[["777", "777"], ["666", "666"], ["777","777"]]
 
     # if(author_train):
 
@@ -189,7 +189,7 @@ if __name__ == "__main__":
                 "action_chooser" : "max_which_utility",
                 "suggest_uncert_neg" : True,
 
-                "when_args" : {"rel_enc_min_sources": 1},
+                # "when_args" : {},
                 # "when_args" : {},
 
                 # "explanation_choice" : "least_operations",
@@ -204,7 +204,9 @@ if __name__ == "__main__":
                 # "strip_attrs" : ["to_left","to_right","above","below","type","id","offsetParent","dom_class"],
                 # "state_variablization" : "metaskill",
                 "when_args": {
-                    "encode_relative" : True
+                    "encode_relative" : True,
+                    # "rel_enc_min_sources": 1,
+                    "check_sanity" : True
                 },
 
                 "process_learner": "htnlearner",

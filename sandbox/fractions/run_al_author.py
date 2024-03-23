@@ -18,7 +18,16 @@ colorama.init(autoreset=True)
 import time
 
 def log_completeness(agent, profile='ground_truth.txt', log=[]):
-    log.append(agent.eval_completeness(profile, print_diff=False))
+    print(agent.process_lrn_mech.grammar)
+    # log.append(agent.eval_completeness(profile, 
+    #     print_diff=True, print_correct="when_diff"
+    # ))
+    # print("---------------")
+    # for skill in agent.skills.values():
+    #     print()
+    #     print(skill)
+    #     print(skill.when_lrn_mech)
+    # print("---------------")
 
 def resolve_type(typ, logger_name):
     if(typ[:3] == "add"):
@@ -64,16 +73,15 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_arg
                              demo_args=True, demo_how=True,
                              problem_types=problem_types, n_fracs=n_fracs)
 
-    make_completeness_profile(env, 100, "gt-frac.txt")
+    profile = "gt-frac.txt"
+    # make_completeness_profile(env, 100, profile)
 
     trainer = AuthorTrainer(agent, env, logger=logger,
                 problem_set=interleaved_problems, 
                 n_problems=n)
 
     c_log = []
-    profile = "gt-frac.txt"
     trainer.on_problem_end = lambda : log_completeness(agent, profile, log=c_log)
-
     trainer.start()
 
     for i, obj in enumerate(c_log):
@@ -87,9 +95,9 @@ if __name__ == "__main__":
     
     parser = argparse.ArgumentParser(
         description='Runs AL agents on fractions')
-    parser.add_argument('--n-agents', default=50, type=int, metavar="<n_agents>",
+    parser.add_argument('--n-agents', default=1, type=int, metavar="<n_agents>",
                         dest="n_agents", help="number of agents")
-    parser.add_argument('--n-problems', default=500, type=int, metavar="<n_problems>",
+    parser.add_argument('--n-problems', default=3, type=int, metavar="<n_problems>",
                         dest="n_problems", help="number of problems")
     parser.add_argument('--n-fracs', default=2, type=int, metavar="<n_fracs>",
                         dest="n_fracs", help="number of fractions")
@@ -142,9 +150,20 @@ if __name__ == "__main__":
                 "one_skill_per_match" : True,
                 
                 "extra_features" : ["Match"],
-                "when_args" : {"encode_relative" : True, "one_hot" : True},
+                # "when_args" : {"encode_relative" : True, },
                 
-                "should_find_neighbors" : True
+                "should_find_neighbors" : True,
+
+                "when_args": {
+                    "encode_relative" : True,
+                    "one_hot" : True,
+                    # "rel_enc_min_sources": 1,
+                    "check_sanity" : True
+                },
+
+                "process_learner": "htnlearner",
+                "track_rollout_preseqs" : True,
+                "action_filter_args" : {"thresholds": [0, -.5, -.999]}
             }
 
             agent = CREAgent(**agent_args)
