@@ -14,9 +14,12 @@ def log_completeness(agent, profile='ground_truth.txt', log=[]):
     log.append(agent.eval_completeness(profile, 
         print_diff=True, print_correct="when_diff"
     ))
-    # for skill in agent.skills.values():
-    #     print(skill)
-    #     print(skill.when_lrn_mech)
+    print("---------------")
+    for skill in agent.skills.values():
+        print()
+        print(skill)
+        print(skill.when_lrn_mech)
+    print("---------------")
 
 
 
@@ -186,7 +189,8 @@ if __name__ == "__main__":
                 "action_chooser" : "max_which_utility",
                 "suggest_uncert_neg" : True,
 
-                "when_args" : {},
+                "when_args" : {"rel_enc_min_sources": 1},
+                # "when_args" : {},
 
                 # "explanation_choice" : "least_operations",
                 "planner" : "setchaining",
@@ -195,6 +199,7 @@ if __name__ == "__main__":
                 # "feature_set" : [],
                 # "feature_set" : ['Equals'],
                 "extra_features" : ["SkillCandidates","Match"],
+                # "extra_features" : ["SkillValue"],#,"Match"],
                 "find_neighbors" : True,
                 # "strip_attrs" : ["to_left","to_right","above","below","type","id","offsetParent","dom_class"],
                 # "state_variablization" : "metaskill",
@@ -204,6 +209,7 @@ if __name__ == "__main__":
 
                 "process_learner": "htnlearner",
                 "track_rollout_preseqs" : True,
+                "action_filter_args" : {"thresholds": [0, -.5, -.999]}
             }
             agent = CREAgent(**agent_args)
         elif(args.agent_type.upper() == "MODULAR"):
