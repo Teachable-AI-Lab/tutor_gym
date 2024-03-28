@@ -11,15 +11,15 @@ colorama.init(autoreset=True)
 
 def log_completeness(agent, profile='ground_truth.txt', log=[]):
     print(agent.process_lrn_mech.grammar)
-    # log.append(agent.eval_completeness(profile, 
-    #     print_diff=True, print_correct="when_diff"
-    # ))
-    # print("---------------")
-    # for skill in agent.skills.values():
-    #     print()
-    #     print(skill)
-    #     print(skill.when_lrn_mech)
-    # print("---------------")
+    log.append(agent.eval_completeness(profile, 
+        print_diff=True, print_correct="when_diff"
+    ))
+    print("---------------")
+    for skill in agent.skills.values():
+        print()
+        print(skill)
+        print(skill.when_lrn_mech)
+    print("---------------")
 
 
 
@@ -40,19 +40,29 @@ edge_case_set = [
     ["999", "101"],
 ]
 
-training_set = [
-    ["534", "698"], #0
-    ["872", "371"], #1
-    ["839", "445"], #2
+old_training_set = [
+    ["534", "698"], #0 
+    # ["872", "371"], #1 
+    ["839", "445"], #2  
     ["287", "134"], #3
     ["643", "534"], #4
     ["248", "137"], #5
     ["234", "142"], #6
     ["539", "461"], #7
-    ["433", "576"], #8
-    ["764", "335"], #9
-    ["533", "698"], #10
+    # ["433", "576"], #8
+    # ["764", "335"], #9
+    # ["533", "698"], #10
 ]
+
+training_set = [
+    ["574", "698"],
+    ["248", "315"],
+    ["394", "452"],
+    ["252", "533"],
+    ["334", "943"],
+    ["189", "543"],
+]
+
 
 extra = [
     # ["777", "777"],
@@ -115,7 +125,7 @@ def run_training(agent, logger_name='MulticolumnAddition', n=10,
                  n_columns=3, author_train=True, carry_zero=False, random_n_digits=False):
     
     logger = DataShopLogger(logger_name, extra_kcs=['field'])
-    problem_set = training_set + extra + training_set   #[["777", "777"], ["666", "666"], ["777","777"]]
+    problem_set = training_set #+ extra + training_set   #[["777", "777"], ["666", "666"], ["777","777"]]
 
     # if(author_train):
 
@@ -131,8 +141,8 @@ def run_training(agent, logger_name='MulticolumnAddition', n=10,
 
     # env.make_completeness_profile(training_set+edge_case_set, 'exp_z_ground_truth.txt')
     trainer = AuthorTrainer(agent, env, logger=logger, 
-                problem_set=start_probs,
-                n_problems=100)
+                problem_set=problem_set,
+                n_problems=20)
                 # problem_set=problem_set)#, n_problems=n)
     c_log = []
     # profile = "exp_z_ground_truth.txt" if carry_zero else "ground_truth.txt"
@@ -161,7 +171,7 @@ if __name__ == "__main__":
         description='Runs AL agents on multi-column addition')
     parser.add_argument('--n-agents', default=1, type=int, metavar="<n_agents>",
                         dest="n_agents", help="number of agents")
-    parser.add_argument('--n-problems', default=20, type=int, metavar="<n_problems>",
+    parser.add_argument('--n-problems', default=5, type=int, metavar="<n_problems>",
                         dest="n_problems", help="number of problems")
     parser.add_argument('--n-columns', default=3, type=int, metavar="<n_columns>",
                         dest="n_columns", help="number of columns")
@@ -177,8 +187,8 @@ if __name__ == "__main__":
             from apprentice.agents.cre_agents.cre_agent import CREAgent
             agent_args = {
                 "search_depth" : 2,
-                "where_learner": "generalize",
-                # "where_learner": "mostspecific",
+                # "where_learner": "generalize",
+                "where_learner": "mostspecific",
 
                 # "when_learner": "sklearndecisiontree",
                 # "when_learner": "decisiontree",
@@ -198,7 +208,7 @@ if __name__ == "__main__":
                 "function_set" : ["OnesDigit","TensDigit","Add","Add3"],
                 # "feature_set" : [],
                 # "feature_set" : ['Equals'],
-                "extra_features" : ["SkillCandidates","Match"],
+                "extra_features" : ["RemoveAll", "SkillCandidates","Match"],
                 # "extra_features" : ["SkillValue"],#,"Match"],
                 "find_neighbors" : True,
                 # "strip_attrs" : ["to_left","to_right","above","below","type","id","offsetParent","dom_class"],
@@ -206,12 +216,14 @@ if __name__ == "__main__":
                 "when_args": {
                     "encode_relative" : True,
                     # "rel_enc_min_sources": 1,
-                    "check_sanity" : True
+                    "check_sanity" : False
                 },
 
                 "process_learner": "htnlearner",
                 "track_rollout_preseqs" : True,
-                "action_filter_args" : {"thresholds": [0, -.5, -.999]}
+                "action_filter_args" : {"thresholds": [.3, 0, -.5, -.75]},
+
+                # "implicit_reward_kinds" : ["unordered_groups"]
             }
             agent = CREAgent(**agent_args)
         elif(args.agent_type.upper() == "MODULAR"):

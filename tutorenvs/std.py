@@ -375,9 +375,9 @@ class StateMachineTutor(TutorEnvBase):
         """ Returns all correct next-step Actions """
         state = self.state if state is None else state 
         correct_actions = self.fsm.get_next_actions(self.state)
-        print("DEMOS:")
-        for a in correct_actions:
-            print('\t', repr(a))
+        # print("DEMOS:")
+        # for a in correct_actions:
+        #     print('\t', repr(a))
         return [self._process_demo(a, **kwargs) for a in correct_actions]
 
     def make_completeness_profile(self, problems, output_file):

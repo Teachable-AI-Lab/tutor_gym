@@ -19,15 +19,15 @@ import time
 
 def log_completeness(agent, profile='ground_truth.txt', log=[]):
     print(agent.process_lrn_mech.grammar)
-    # log.append(agent.eval_completeness(profile, 
-    #     print_diff=True, print_correct="when_diff"
-    # ))
-    # print("---------------")
-    # for skill in agent.skills.values():
-    #     print()
-    #     print(skill)
-    #     print(skill.when_lrn_mech)
-    # print("---------------")
+    log.append(agent.eval_completeness(profile, 
+        print_diff=True, print_correct="when_diff"
+    ))
+    print("---------------")
+    for skill in agent.skills.values():
+        print()
+        print(skill)
+        print(skill.when_lrn_mech)
+    print("---------------")
 
 def resolve_type(typ, logger_name):
     if(typ[:3] == "add"):
@@ -74,7 +74,7 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_arg
                              problem_types=problem_types, n_fracs=n_fracs)
 
     profile = "gt-frac.txt"
-    # make_completeness_profile(env, 100, profile)
+    make_completeness_profile(env, 100, profile)
 
     trainer = AuthorTrainer(agent, env, logger=logger,
                 problem_set=interleaved_problems, 
@@ -97,7 +97,7 @@ if __name__ == "__main__":
         description='Runs AL agents on fractions')
     parser.add_argument('--n-agents', default=1, type=int, metavar="<n_agents>",
                         dest="n_agents", help="number of agents")
-    parser.add_argument('--n-problems', default=3, type=int, metavar="<n_problems>",
+    parser.add_argument('--n-problems', default=20, type=int, metavar="<n_problems>",
                         dest="n_problems", help="number of problems")
     parser.add_argument('--n-fracs', default=2, type=int, metavar="<n_fracs>",
                         dest="n_fracs", help="number of fractions")
@@ -155,15 +155,15 @@ if __name__ == "__main__":
                 "should_find_neighbors" : True,
 
                 "when_args": {
-                    "encode_relative" : True,
-                    "one_hot" : True,
+                    "encode_relative" : False,
+                    # "one_hot" : True,
                     # "rel_enc_min_sources": 1,
-                    "check_sanity" : True
+                    "check_sanity" : False
                 },
 
                 "process_learner": "htnlearner",
                 "track_rollout_preseqs" : True,
-                "action_filter_args" : {"thresholds": [0, -.5, -.999]}
+                "action_filter_args" : {"thresholds": [0.3, 0, -0.5, -0.75]}
             }
 
             agent = CREAgent(**agent_args)

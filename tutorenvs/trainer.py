@@ -88,14 +88,15 @@ class Trainer:
         
         if(isinstance(action, Action)):
             sai = action.sai
-            extra = f"{action.how_part}({','.join(action.args)})"
+            arg_str = ','.join(action.args) if action.args else "???"
+            extra = f"{getattr(action,'how_str', '??')}({arg_str})"
         elif('sai' in action):
             sai = Action(action['sai']).sai
             # print(action)
             arg_foci = action.get('arg_foci',['???'])
             if(arg_foci is None):
                 arg_foci = ['???']
-            extra = f"{action.get('how_part','???')}({','.join(arg_foci)})"
+            extra = f"{getattr(action,'how_str','???')}({','.join(arg_foci)})"
         elif('skill_app' in action):
             skill_app = action['skill_app']
             sai = Action(skill_app.sai).sai        
@@ -114,9 +115,10 @@ class Trainer:
         elif(outcome_kind == "HINT"):
             print(Back.BLUE + Fore.YELLOW + f"HINT: {sai[0]} -> {sai[2]} {extra}" + Style.RESET_ALL)
 
-    def tutor_train_state(self, state):
+    def tutor_train_state(self, state, is_start=False):
         ''' Tutor-train (i.e. train one action at a time) on 'state'.'''
-        action = self.agent.act(state, return_kind=self.act_return_kind)
+        action = self.agent.act(state, return_kind=self.act_return_kind,
+            is_start=is_start)
         outcome_kind = None
 
         if(action):
@@ -140,13 +142,16 @@ class Trainer:
 
         self.agent.train(
             **self._to_train_kwargs(state, action, reward, 
+             is_start=is_start,
              is_demo=outcome_kind=="HINT")
         )
         self.print_outcome(action, outcome_kind)
 
         # Change the state by applying the action
         if(reward > 0 or self.always_update_state):
-            self.env.apply(action)                
+            self.env.apply(action)
+
+        return reward                
 
     def start(self):
         self.logger.set_student()
@@ -161,9 +166,12 @@ class Trainer:
 
             print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {self.env.problem_name}"  + Style.RESET_ALL)
 
+            is_start = True
             while(not self.env.is_done):
                 state = self.env.get_state()
-                self.tutor_train_state(state)
+                rew = self.tutor_train_state(state, is_start=is_start)
+                if(rew > 0):
+                    is_start = False
 
             print("+" * 100)
             print(f"Finished problem {p} of {getattr(p_iter, 'n_problems', '??')}")
@@ -188,9 +196,9 @@ class AuthorTrainer(Trainer):
             return_kind=self.act_return_kind)
         demos = self.env.get_all_demos(state)
 
-        print("ACTIONS")
-        for action in actions:
-            print(action)
+        # print("ACTIONS")
+        # for action in actions:
+        #     print(action)
 
         # Annotate each proposed action with reward and add to training set
         train_set = []
