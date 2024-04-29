@@ -55,12 +55,13 @@ old_training_set = [
 ]
 
 training_set = [
-    ["574", "698"],
+    ["574", "798"],
     ["248", "315"],
-    ["394", "452"],
     ["252", "533"],
+    ["394", "452"],
+    ["872", "371"],
     ["334", "943"],
-    ["189", "543"],
+    ["189", "542"],
 ]
 
 
@@ -223,7 +224,7 @@ if __name__ == "__main__":
                 "track_rollout_preseqs" : True,
                 "action_filter_args" : {"thresholds": [.3, 0, -.5, -.75]},
 
-                # "implicit_reward_kinds" : ["unordered_groups"]
+                "implicit_reward_kinds" : ["unordered_groups"]
             }
             agent = CREAgent(**agent_args)
         elif(args.agent_type.upper() == "MODULAR"):
