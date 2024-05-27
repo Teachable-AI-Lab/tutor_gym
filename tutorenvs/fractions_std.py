@@ -136,6 +136,7 @@ class FractionArithmetic(StateMachineTutor):
             operator = "+"
 
         self.set_problem(operator, list(zip(nums, dens)))
+        return (operator, list(zip(nums, dens)))
         # print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {operator.join([f'({n}/{v})' for n,v in zip(nums,dens)])}" )
 
     def create_fsm(self, state):
