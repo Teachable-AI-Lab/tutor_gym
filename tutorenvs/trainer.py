@@ -251,9 +251,9 @@ class AuthorTrainer(Trainer):
         demo = covered_demos[0]
         if(not demo):
             demo = demos[0]
-        self.env.apply(demo)
+        # self.env.apply(demo)
         print(Back.WHITE + Fore.BLACK + f"APPLY: {demo.sai[0]} -> {demo.sai[2]}" + Style.RESET_ALL)
-        return demos[1:]
+        return demos#[1:]
 
     def train_prob_start_to_end(self):
 
@@ -267,7 +267,7 @@ class AuthorTrainer(Trainer):
             # for key, obj in state.items():
             #     print(key, obj)
             # print("########")
-            unused_demos = self.author_train_state(state, is_start)
+            demos = self.author_train_state(state, is_start)
             unapplied.append((state, unused_demos))
             is_start = False
         return unapplied
@@ -305,13 +305,62 @@ class AuthorTrainer(Trainer):
             problem = getattr(self.env, 'problem_name', self.env.problem_config)
             print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {problem}" + Style.RESET_ALL)
 
-            # print("START ROLLOUT")
-            # state = self.env.get_state()
-            # self.agent.act_rollout(state, is_start=True)
-            # print("END ROLLOUT")
+            
+            # Begin with the start state
+            states = [self.env.get_state()]
+            cov = set([str(states[0])])
+            is_start = True
 
-            unapplied = self.train_prob_start_to_end()
-            self.train_unapplied_demo_states(unapplied)
+            while len(states) > 0:
+                new_states = []
+
+                # Go through all states
+                for state in states:
+                    # Train on state
+                    self.env.set_state(state)
+                    demos = self.author_train_state(state, is_start)
+
+                    # Follow the states after the next correct actions
+                    for demo in demos:
+                        self.env.set_state(state)
+                        self.env.apply(demo)
+                        n_state = self.env.get_state()
+
+                        # Don't bother repeating states
+                        s_str = str(n_state)
+                        if(s_str in cov or self.env.is_done):
+                            continue
+                        else:
+                            cov.add(s_str)
+
+                        new_states.append(n_state)
+                states = new_states
+                is_start = False
+
+            print("L_COV:", len(cov))
+
+                    
+                #     for demo in demos:
+                #         # Prep State after demo
+                #         self.env.set_state(orig_state)
+                #         self.env.apply(demo)
+
+                #         # Don't bother repeating states
+                #         aft_state = self.env.get_state()
+                #         a_str = str(aft_state)
+                #         if(a_str in cov):
+                #             continue
+                #         cov.add(a_str)
+
+                #         # Train from state after demo to end
+                #         # NOTE: there will be some redundancy (should fix?)
+                #         st_unapp = self.train_prob_start_to_end()
+                #         for s,d in st_unapp:
+                #             if(str(s) not in cov):
+                #                 new_unapp.append((s,d))
+
+                #     cov.add(s_str)
+                # unapplied = new_unapp
 
             print("+" * 100)
             print(f"Finished problem {p} of {getattr(p_iter, 'n_problems', '??')}")

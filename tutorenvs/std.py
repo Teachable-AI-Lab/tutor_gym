@@ -320,6 +320,7 @@ class StateMachineTutor(TutorEnvBase):
 
     def set_state(self, objs):
         self.state = ProblemState(objs)
+        self.is_done = False
 
     def check(self, action, **kwargs):
         """ Returns 1 for correct next-step Actions, -1 for incorrect ones."""
