@@ -162,4 +162,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# Ignore any log dir or dir  that starts with "log_"
 **/log/
+**/log_*/
