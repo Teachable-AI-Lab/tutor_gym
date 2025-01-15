@@ -5,12 +5,11 @@ import apprentice
 from apprentice.working_memory.representation import Sai
 # from apprentice.working_memory.numba_operators import *
 
-from tutorenvs.fractions_v import FractionArithSymbolic
-from tutorenvs.fractions_std import FractionArithmetic
-from tutorenvs.trainer import Trainer, AuthorTrainer
-from tutorenvs.utils import DataShopLogger
+from tutorgym.envs.fraction_arithmetic.fractions_std import FractionArithmetic
+from tutorgym.trainer import Trainer, AuthorTrainer
+from tutorgym.utils import DataShopLogger
 from colorama import Back, Fore
-from tutorenvs.utils import compare
+from tutorgym.utils import compare
 
 import colorama
 colorama.init(autoreset=True)
@@ -18,11 +17,12 @@ colorama.init(autoreset=True)
 import time
 
 def log_completeness(agent, profile='ground_truth.txt', log=[]):
-    print(agent.process_lrn_mech.grammar)
+    
     log.append(agent.eval_completeness(profile, 
         print_diff=True, print_correct="when_diff"
     ))
     print("---------------")
+    print(agent.process_lrn_mech.grammar)
     for skill in agent.skills.values():
         print()
         print(skill)
@@ -73,7 +73,7 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_arg
                              demo_args=True, demo_how=True,
                              problem_types=problem_types, n_fracs=n_fracs)
 
-    profile = "gt-frac.txt"
+    profile = ".gt-frac.compl_prof"
     make_completeness_profile(env, 100, profile)
 
     trainer = AuthorTrainer(agent, env, logger=logger,

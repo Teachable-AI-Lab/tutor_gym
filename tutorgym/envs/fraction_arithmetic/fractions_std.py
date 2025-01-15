@@ -9,15 +9,15 @@ from gym import error, spaces, utils
 from gym.utils import seeding
 from sklearn.feature_extraction import FeatureHasher
 from sklearn.feature_extraction import DictVectorizer
-from tutorenvs.utils import OnlineDictVectorizer
+from tutorgym.utils import OnlineDictVectorizer
 import numpy as np
 from colorama import Back, Fore
 
-from tutorenvs.utils import DataShopLogger
-# from tutorenvs.utils import StubLogger
-# from tutorenvs.fsm import StateMachine
+from tutorgym.utils import DataShopLogger
+# from tutorgym.utils import StubLogger
+# from tutorgym.fsm import StateMachine
 
-from tutorenvs.std import ProblemState, Action, FiniteStateMachine, StateMachineTutor
+from tutorgym.std import ProblemState, Action, FiniteStateMachine, StateMachineTutor
 
 
 class FractionArithmetic(StateMachineTutor):

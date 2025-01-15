@@ -1,7 +1,7 @@
-from tutorenvs.fractions_v import FractionArithSymbolic
-from tutorenvs.multicolumn_v import MultiColumnAdditionSymbolic
+from tutorgym.fractions_v import FractionArithSymbolic
+from tutorgym.multicolumn_v import MultiColumnAdditionSymbolic
 from colorama import Fore, Back
-from tutorenvs.utils import compare
+from tutorgym.utils import compare
 
 
 def _assert_step(env, selection, value, fraction=False):

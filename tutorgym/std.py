@@ -4,39 +4,10 @@ from itertools import permutations
 from apprentice.shared import SAI
 import numpy as np
 import json
+from tutorgym.utils import unique_hash
 
 # ----------------------------------
 # : ProblemState
-
-def update_unique_hash(m,obj):
-    if(isinstance(obj,str)):
-        m.update(obj.encode('utf-8'))
-    elif(isinstance(obj,(tuple,list, np.ndarray))):
-        for i,x in enumerate(obj):
-            update_unique_hash(m,i)
-            update_unique_hash(m,x)
-    elif(isinstance(obj,dict)):
-        for k,v in obj.items():
-            update_unique_hash(m,k)
-            update_unique_hash(m,v)
-    elif(isinstance(obj,bytes)):
-        m.update(obj)
-    else:
-        m.update(str(obj).encode('utf-8'))
-
-
-def unique_hash(stuff, hash_func='sha256'):
-    '''Returns a 64-bit encoded hashstring of some 'stuff' '''
-    m = hashlib.new(hash_func)
-    update_unique_hash(m,stuff) 
-
-    # Encode in base64 map the usual altchars '/' and "+' to 'A' and 'B".
-    s = b64encode(m.digest(),altchars=b'AB').decode('utf-8')
-    # Strip the trailing '='.
-    s = s[:-1]
-    return s
-
-
 
 class ProblemState:
     # Global factory for MemSet Objects (w/ defualt context)
@@ -387,7 +358,7 @@ class StateMachineTutor(TutorEnvBase):
                 self.set_problem(*prob_args)
                 next_states = [(self.get_state(),[])]
 
-                covered_states = set()
+                covered_states = {ProblemState({})}
                 while(len(next_states) > 0):
                     new_states = []
                     for state, hist in next_states:
@@ -399,13 +370,14 @@ class StateMachineTutor(TutorEnvBase):
 
                         self.set_state(state)
                         demos = self.get_all_demos(state)
-                        sais = [d.sai.get_info() for d in demos]
+                        sais = [demo.sai.get_info() for demo in demos]
                         problem = getattr(self, 'problem_name', self.problem_config)
                         profile.write(json.dumps({"problem" : problem, 'state' : state, 'hist' : hist, 'sais' : sais})+"\n")
 
-                        for d in demos:
-                            sel,_,inp = d.sai
-                            ns = self.apply(d)
+                        for demo in demos:
+
+                            sel,_,inp = demo.sai
+                            ns = self.apply(demo)
                             
                             self.set_state(state)
                             if(not self.is_done):

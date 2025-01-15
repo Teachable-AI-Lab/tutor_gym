@@ -11,8 +11,46 @@ import gym
 from gym import spaces
 import numpy as np
 
+
 logging.basicConfig(level=logging.ERROR)
 log = logging.getLogger(__name__)
+
+# -------------------------------------------------------------------
+# : State Hashing
+
+def update_unique_hash(m,obj):
+    ''' Recrusive depth-first-traversal to buildup hash '''
+
+    if(isinstance(obj,str)):
+        m.update(obj.encode('utf-8'))
+    elif(isinstance(obj,(tuple,list, np.ndarray))):
+        for i,x in enumerate(obj):
+            update_unique_hash(m,i)
+            update_unique_hash(m,x)
+    elif(isinstance(obj,dict)):
+        for k,v in obj.items():
+            update_unique_hash(m,k)
+            update_unique_hash(m,v)
+    elif(isinstance(obj,bytes)):
+        m.update(obj)
+    else:
+        m.update(str(obj).encode('utf-8'))
+
+
+def unique_hash(stuff, hash_func='sha256'):
+    '''Returns a 64-bit encoded hashstring of heirachies of basic python data'''
+    m = hashlib.new(hash_func)
+    update_unique_hash(m,stuff) 
+
+    # Encode in base64 map the usual altchars '/' and "+' to 'A' and 'B".
+    s = b64encode(m.digest(),altchars=b'AB').decode('utf-8')
+    # Strip the trailing '='.
+    s = s[:-1]
+    return s
+
+
+# -------------------------------------------------------------------
+# : Legacy helper functions (Chris) 
 
 
 def linear_schedule(
@@ -70,6 +108,9 @@ def compare(a, b):
     return True
 
 
+# -------------------------------------------------------------------
+# : Logging
+
 class StubLogger():
     def __init__(self):
         log.info("StubLogger Created")
@@ -95,7 +136,7 @@ class StubLogger():
 
 
 class DataShopLogger():
-    def __init__(self, domain="tutorenv", extra_kcs=None, output_dir="log"):
+    def __init__(self, domain="tutorgym_env", extra_kcs=None, output_dir="log"):
         log.info("DataShop Logger Created")
         # Create log file
         if not os.path.exists(output_dir):

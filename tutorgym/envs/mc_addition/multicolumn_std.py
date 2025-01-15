@@ -14,9 +14,9 @@ import numpy as np
 import hashlib
 from base64 import b64encode
 
-from tutorenvs.utils import OnlineDictVectorizer
-from tutorenvs.utils import DataShopLogger
-from tutorenvs.utils import StubLogger
+from tutorgym.utils import OnlineDictVectorizer
+from tutorgym.utils import DataShopLogger
+from tutorgym.utils import StubLogger
 
 # Note: Transforming the problem state into a MemSet lets us
 #  build a long cryptographic hash from it to simplify state-machine. 
@@ -24,7 +24,7 @@ from tutorenvs.utils import StubLogger
 from itertools import permutations
 from apprentice.shared import SAI
 
-from tutorenvs.std import ProblemState, Action, FiniteStateMachine, StateMachineTutor
+from tutorgym.std import ProblemState, Action, FiniteStateMachine, StateMachineTutor
 
 
 

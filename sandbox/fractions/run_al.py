@@ -5,8 +5,8 @@ import apprentice
 from apprentice.working_memory.representation import Sai
 # from apprentice.working_memory.numba_operators import *
 
-from tutorenvs.fractions_v import FractionArithSymbolic
-from tutorenvs.fractions_std import FractionArithmetic
+# from tutorenvs.fractions_v import FractionArithSymbolic
+from tutorgym.envs.fraction_arithmetic.fractions_std import FractionArithmetic
 from tutorenvs.trainer import Trainer
 from tutorenvs.utils import DataShopLogger
 from colorama import Back, Fore

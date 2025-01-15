@@ -1,12 +1,18 @@
+''' TODO: Need to suss out what is necessary here... much of this should surely be deprecated
+    Also not sure how I feel about this being in an __init__.py file which causes an implicit execution.
+    We should be trying to isolate dependencies where possible---i.e. installing tutorgym shouldn't 
+    involve installing every dependency for every agent that might use tutorgym.
+
+
 from gym.envs.registration import register
-from tutorenvs.fractions import FractionArithNumberEnv  # noqa: F401
-from tutorenvs.fractions import FractionArithDigitsEnv  # noqa: F401
-from tutorenvs.fractions import FractionArithOppEnv  # noqa: F401
-from tutorenvs.multicolumn import MultiColumnAdditionDigitsEnv  # noqa: F401
-from tutorenvs.multicolumn import MultiColumnAdditionPixelEnv  # noqa: F401
-from tutorenvs.multicolumn import MultiColumnAdditionPerceptEnv  # noqa: F401
-from tutorenvs.multicolumn import MultiColumnAdditionOppEnv  # noqa: F401
-from tutorenvs.multicolumn_std import MultiColumnAdditionDigitsGymEnv  # noqa: F401
+from tutorgym.fractions import FractionArithNumberEnv  # noqa: F401
+from tutorgym.fractions import FractionArithDigitsEnv  # noqa: F401
+from tutorgym.fractions import FractionArithOppEnv  # noqa: F401
+from tutorgym.multicolumn import MultiColumnAdditionDigitsEnv  # noqa: F401
+from tutorgym.multicolumn import MultiColumnAdditionPixelEnv  # noqa: F401
+from tutorgym.multicolumn import MultiColumnAdditionPerceptEnv  # noqa: F401
+from tutorgym.multicolumn import MultiColumnAdditionOppEnv  # noqa: F401
+from tutorgym.multicolumn_std import MultiColumnAdditionDigitsGymEnv  # noqa: F401
 
 register(
     id='FractionArith-v0',
@@ -63,3 +69,4 @@ register(
     kwargs={'n_digits' : 3, 'carry_zero' : True},
 )
 
+'''

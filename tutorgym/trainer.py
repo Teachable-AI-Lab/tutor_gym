@@ -1,5 +1,5 @@
-from tutorenvs.multicolumn_std import Action, ProblemState
-from tutorenvs.utils import DataShopLogger
+from tutorgym.std import Action, ProblemState
+from tutorgym.utils import DataShopLogger
 from colorama import Back, Fore, Style
 import colorama
 from colorama import init
