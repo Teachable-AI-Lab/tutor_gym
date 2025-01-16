@@ -1,10 +1,10 @@
-import hashlib
-from base64 import b64encode
+
 from itertools import permutations
 from apprentice.shared import SAI
 import numpy as np
 import json
 from tutorgym.utils import unique_hash
+import inspect
 
 # ----------------------------------
 # : ProblemState
@@ -172,6 +172,15 @@ class Action:
                 # TODO: Need good way of signaling how_str to agent.  
             }
 
+    def get_info(self):
+        return {
+            "selection" : self.sai[0],
+            "action_type" : self.sai[1],
+            "inputs" : self.sai[2],
+            # TODO: Annotations
+        }
+
+
 # TODO: Should reuse the predict_next_state() machinery in cre_agent 
 #  to implement this.
 def make_next_state(state, sai):
@@ -260,27 +269,33 @@ class StateMachineTutor(TutorEnvBase):
         raise NotImplementedError("Subclass must implement create_fsm().")
             
     def set_start_state(self, *args, **kwargs):
-        raise NotImplemented
+        raise NotImplementedError("Subclass must implement set_start_state().")
+
+    def _standardize_config(self, *args, **kwargs):
+        sig = inspect.signature(self.set_start_state)
+
+        problem_config = {}
+        for (arg_name, arg) in zip(sig.parameters, args):
+            problem_config[arg_name] = arg
+
+        return {**problem_config, **kwargs}
 
     def set_problem(self, *args, **kwargs):
-        # Any StateMachineTutor can load a brd
-        if(len(args)== 1 and isinstance(args[0], (str, FiniteStateMachine))):
-            fsm = args[0]
-            if(isinstance(fsm, str)):
-                fsm = load_fsm(fsm)
-            self.fsm = fsm
-            self.state = self.start_state = fsm.start_state
-
-        # Or a subclass can implement set_start_state() and create_fsm() 
-        #  which take custom arguments the particular domain.
-        else:
-            # subclasses defined start state
-            self.set_start_state(*args, **kwargs)
-            # subclasses defined fsm constructor
-            self.fsm = self.create_fsm(self.start_state)
-            self.state = self.start_state
+        # subclasses defined start state
+        self.set_start_state(*args, **kwargs)
+        # subclasses defined fsm constructor
+        self.fsm = self.create_fsm(self.start_state)
+        self.state = self.start_state
         self.is_done = False
-        self.problem_config = (args, kwargs)
+
+        self.problem_config = self._standardize_config(*args, **kwargs)
+        
+
+    def get_problem(self):
+        return getattr(self, 'problem_name', self.problem_config)
+
+    def get_problem_config(self):
+        return self.problem_config
 
     def reset(self):
         self.state = self.start_state.copy()
@@ -352,10 +367,13 @@ class StateMachineTutor(TutorEnvBase):
         #     print('\t', repr(a))
         return [self._process_demo(a, **kwargs) for a in correct_actions]
 
-    def make_completeness_profile(self, problems, output_file):
-        with open(output_file, 'w') as profile:
-            for prob_args in problems:
-                self.set_problem(*prob_args)
+    def make_compl_prof(self, filename, problems):
+        with open(filename, 'w') as profile:
+            for prob_config in problems:
+                if(isinstance(prob_config, tuple)):
+                    prob_config = self._standardize_config(*prob_config)
+
+                self.set_problem(**prob_config)
                 next_states = [(self.get_state(),[])]
 
                 covered_states = {ProblemState({})}
@@ -370,9 +388,9 @@ class StateMachineTutor(TutorEnvBase):
 
                         self.set_state(state)
                         demos = self.get_all_demos(state)
-                        sais = [demo.sai.get_info() for demo in demos]
-                        problem = getattr(self, 'problem_name', self.problem_config)
-                        profile.write(json.dumps({"problem" : problem, 'state' : state, 'hist' : hist, 'sais' : sais})+"\n")
+                        actions = [demo.get_info() for demo in demos]
+                        problem = self.get_problem()
+                        profile.write(json.dumps({"problem" : problem, 'state' : state, 'hist' : hist, 'actions' : actions})+"\n")
 
                         for demo in demos:
 
@@ -384,3 +402,9 @@ class StateMachineTutor(TutorEnvBase):
                                 new_states.append((ns,hist+[(sel,inp['value'])]))
                     next_states = new_states
 
+    def make_rand_compl_prof(self, filename, num_problems=100):
+        problems = []
+        for i in range(num_problems):
+            self.set_random_problem()
+            problems.append(self.get_problem_config())
+        self.make_compl_prof(filename, problems)

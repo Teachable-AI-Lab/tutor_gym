@@ -1,12 +1,10 @@
-from apprentice.agents.ModularAgent import ModularAgent
-from apprentice.agents.RHS_LHS_Agent import RHS_LHS_Agent
-from apprentice.agents.WhereWhenHowNoFoa import WhereWhenHowNoFoa
-import apprentice
-from apprentice.working_memory.representation import Sai
+
+# from apprentice.working_memory.representation import Sai
 # from apprentice.working_memory.numba_operators import *
 
 from tutorgym.envs.fraction_arithmetic.fractions_std import FractionArithmetic
 from tutorgym.trainer import Trainer, AuthorTrainer
+from tutorgym.evaluator import CompletenessEvaluator
 from tutorgym.utils import DataShopLogger
 from colorama import Back, Fore
 from tutorgym.utils import compare
@@ -16,18 +14,19 @@ colorama.init(autoreset=True)
 
 import time
 
-def log_completeness(agent, profile='ground_truth.txt', log=[]):
+# def log_completeness(agent, profile='ground_truth.txt', log=[]):
     
-    log.append(agent.eval_completeness(profile, 
-        print_diff=True, print_correct="when_diff"
-    ))
-    print("---------------")
-    print(agent.process_lrn_mech.grammar)
-    for skill in agent.skills.values():
-        print()
-        print(skill)
-        print(skill.when_lrn_mech)
-    print("---------------")
+#     log.append(agent.eval_completeness(profile, 
+#         print_diff=True, print_correct="when_diff"
+#     ))
+#     print("---------------")
+#     print(agent.process_lrn_mech.grammar)
+
+#     for skill in agent.skills.values():
+#         print()
+#         print(skill)
+#         print(skill.when_lrn_mech)
+#     print("---------------")
 
 def resolve_type(typ, logger_name):
     if(typ[:3] == "add"):
@@ -58,12 +57,12 @@ interleaved_problems = [("+", [("1","2"), ("1","3")]),
                         ("x", [("2","4"), ("1","3")])        
                         ]
 
-def make_completeness_profile(env, n=100, name=""):
-    problems = []
-    for i in range(100):
-        env.set_random_problem()
-        problems.append(env.problem)
-    env.make_completeness_profile(problems, name)
+# def make_completeness_profile(env, n=100, name=""):
+#     problems = []
+#     for i in range(100):
+#         env.set_random_problem()
+#         problems.append(env.problem)
+#     env.make_completeness_profile(problems, name)
 
 def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_args=False):
     logger_name, problem_types = resolve_type(typ, logger_name)
@@ -73,19 +72,24 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_arg
                              demo_args=True, demo_how=True,
                              problem_types=problem_types, n_fracs=n_fracs)
 
-    profile = ".gt-frac.compl_prof"
-    make_completeness_profile(env, 100, profile)
+    # profile = ".frac.compl_prof"
+    # if(not os.path.exists(profile)):
+    #     env.make_rand_compl_prof() #make_completeness_profile(env, 100, profile)
+
+    compl_evaluator = CompletenessEvaluator(eval_freq="problem_end")
 
     trainer = AuthorTrainer(agent, env, logger=logger,
                 problem_set=interleaved_problems, 
+                evaluators=[compl_evaluator],
                 n_problems=n)
-
-    c_log = []
-    trainer.on_problem_end = lambda : log_completeness(agent, profile, log=c_log)
     trainer.start()
 
-    for i, obj in enumerate(c_log):
-        print(f"corr={obj['correctness']*100:2.2f}%, compl={obj['completeness']*100:.2f}%")
+    # c_log = []
+    # trainer.on_problem_end = lambda : log_completeness(agent, profile, log=c_log)
+    
+
+    # for i, obj in enumerate(c_log):
+    #     print(f"corr={obj['correctness']*100:2.2f}%, compl={obj['completeness']*100:.2f}%")
 
 
 

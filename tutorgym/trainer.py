@@ -37,7 +37,10 @@ class ProblemIterator:
 
 class Trainer:
     def __init__(self, agent, env, logger=None,
-                 on_problem_end = None,
+                 evaluators=[],
+                 problem_end_callbacks = [],
+                 step_end_callbacks = [],
+                 train_end_callbacks = [],
                  act_return_kind = "sai",
                  **kwargs):
         self.agent = agent
@@ -67,7 +70,24 @@ class Trainer:
         else:
             self.problem_iterator = ProblemIterator(**kwargs)
 
-        self.on_problem_end = on_problem_end
+        self.step_end_evaluators = []
+        self.problem_end_evaluators = []
+        self.train_end_evaluators = []
+
+        for ev in evaluators:
+            ev.initialize(self, agent, env)
+            if(ev.eval_freq == "step_end"):
+                self.step_end_evaluators.append(ev)
+            elif(ev.eval_freq == "problem_end"):
+                self.problem_end_evaluators.append(ev)
+            elif(ev.eval_freq == "train_end"):
+                self.train_end_evaluators.append(ev)
+            else:
+                raise ValueError(f"Unrecognized eval_freq: {ev.eval_freq}.")
+
+        self.problem_end_callbacks = problem_end_callbacks
+        self.step_end_callbacks = step_end_callbacks
+        self.train_end_callbacks = train_end_callbacks
 
 
     def _to_train_kwargs(self, state, action, reward, is_demo=False, is_start=None):
@@ -189,7 +209,6 @@ class AuthorTrainer(Trainer):
         self.states_trained = 0
         self.problem_jumps = 0
 
-
     def author_train_state(self, state, is_start=None):
         ''' Author-train (i.e. all proposed actions + available demos at once) on 'state'.'''
         actions = self.agent.act_all(state, is_start=is_start,
@@ -289,8 +308,6 @@ class AuthorTrainer(Trainer):
                 self.author_train_state(state)
 
 
-
-
     def start(self):
         p_iter = self.problem_iterator
         p = 1
@@ -319,6 +336,16 @@ class AuthorTrainer(Trainer):
                     # Train on state
                     self.env.set_state(state)
                     demos = self.author_train_state(state, is_start)
+
+                    callback_context = {
+                        "trainer": self, 
+                        "problem_num" : p, "problem" : problem
+                        # TODO: Some kind of state info
+                    }
+                    for ev in self.step_end_evaluators:
+                        ev.do_eval(callback_context)
+                    for callback in self.step_end_callbacks:
+                        callback(callback_context);
 
                     # Follow the states after the next correct actions
                     for demo in demos:
@@ -364,13 +391,22 @@ class AuthorTrainer(Trainer):
 
             print("+" * 100)
             print(f"Finished problem {p} of {getattr(p_iter, 'n_problems', '??')}")
-
-            if(self.on_problem_end is not None): 
-                self.on_problem_end()
-
+                
             problems_so_far.append(prob_args)
+
+            callback_context = {"trainer": self, "problem_num" : p, "problem" : problem}
+            for ev in self.problem_end_evaluators:
+                ev.do_eval(callback_context)
+            for callback in self.problem_end_callbacks:
+                callback(callback_context);
 
             p += 1
         total = (self.total_hints+self.total_incorrect+self.total_correct)
         print(f'TOTALS  (correct:{self.total_correct}, incorrect:{self.total_incorrect}, hint:{self.total_hints}, assistance:{self.total_hints+self.total_incorrect})')
         print(f'PERCENTS(correct:{100*(self.total_correct)/total:.2f}%, incorrect:{100*(self.total_incorrect)/total:.2f}%, hint:{100*(self.total_hints)/total:.2f}%, assistance:{100*(self.total_hints+self.total_incorrect)/total:.2f}%)')
+
+        callback_context = {"trainer": self}
+        for ev in self.train_end_evaluators:
+            ev.do_eval(callback_context)
+        for callback in self.train_end_callbacks:
+            callback(callback_context);

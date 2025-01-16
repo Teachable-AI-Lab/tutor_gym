@@ -10,6 +10,8 @@ import logging
 import gym
 from gym import spaces
 import numpy as np
+import hashlib
+from base64 import b64encode
 
 
 logging.basicConfig(level=logging.ERROR)
