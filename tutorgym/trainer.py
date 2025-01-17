@@ -108,19 +108,19 @@ class Trainer:
         
         if(isinstance(action, Action)):
             sai = action.sai
-            arg_str = ','.join(action.args) if action.args else "???"
-            extra = f"{getattr(action,'how_str', '??')}({arg_str})"
-        elif('sai' in action):
-            sai = Action(action['sai']).sai
-            # print(action)
-            arg_foci = action.get('arg_foci',['???'])
-            if(arg_foci is None):
-                arg_foci = ['???']
-            extra = f"{getattr(action,'how_str','???')}({','.join(arg_foci)})"
-        elif('skill_app' in action):
-            skill_app = action['skill_app']
-            sai = Action(skill_app.sai).sai        
-            extra = f'{skill_app.__repr__(add_sai=False)}'
+            extra = ','.join([f"{k}={v}" for k,v in action.annotations.items()])
+        # elif('sai' in action):
+        #     sai = Action(action['sai']).sai
+        #     # print(action)
+        #     arg_foci = action.get('arg_foci',['???'])
+        #     if(arg_foci is None):
+        #         arg_foci = ['???']
+        #     extra = f"{getattr(action,'how_str','???')}({','.join(arg_foci)})"
+        # elif('skill_app' in action):
+        #     print("ACTION", action)
+        #     skill_app = action['skill_app']
+        #     sai = Action(skill_app.sai).sai        
+        #     extra = f'{skill_app.__repr__(add_sai=False)}'
             # how_part = getattr(getattr(skill_app,'skill'),'how_part', "???")
             # arg_foci = getattr(skill_app,'arg_foci',['???'])
             # print("arg_foci", arg_foci)
@@ -155,6 +155,8 @@ class Trainer:
             reward = 1
             outcome_kind = "HINT"
             self.total_hints += 1
+
+        print("A ACTION:", action)
 
         action_kwargs = action.as_train_kwargs()
         s,a,i = action_kwargs['sai']
@@ -226,21 +228,28 @@ class AuthorTrainer(Trainer):
             # action = Action(action)
             reward = -1
             for j, demo in enumerate(demos):
-                if(demo.is_equal(action, 
-                    check_args=self.env.check_args,
-                    check_how=self.env.check_how)):
+                if(demo.is_equal(Action(action),
+                    check_annotations=self.env.check_annotations
+                    )):
 
                     reward = 1
                     covered_demos[j] = action
                     break
 
-            # print("CHECK:", reward, action, action.args)
-
             train_set.append(self._to_train_kwargs(state, action, reward, is_start=is_start))
+
+            if(reward == 1):
+                self.print_outcome(action, "CORRECT")
+                self.total_correct += 1
+            else:
+                self.print_outcome(action, "INCORRECT")
+                self.total_incorrect += 1
                 
         # Add any next demos not covered by the actions into the training set
         for i, action in enumerate(covered_demos):
             if(not action):
+                self.print_outcome(action, "HINT")
+                self.total_hints += 1
                 train_set.append(
                     self._to_train_kwargs(state, demos[i], 
                         reward=1, is_demo=True, is_start=is_start)
@@ -249,22 +258,7 @@ class AuthorTrainer(Trainer):
         # Apply Training Set
         self.agent.train_all(train_set)
 
-        # Print / Log Outcomes
-        for train_obj in train_set:
-            outcome_kind = None
-            if(not train_obj.get('is_demo',False)):
-                if(train_obj['reward'] > 0):
-                    outcome_kind = "CORRECT"
-                    self.total_correct += 1
-                else:
-                    outcome_kind = "INCORRECT"
-                    self.total_incorrect += 1
-            else:
-                outcome_kind = "HINT"
-                self.total_hints += 1
-
-            self.print_outcome(train_obj, outcome_kind)
-
+        
         # Change the state by applying the first demo 
         #  (or the action that covered it)
         demo = covered_demos[0]

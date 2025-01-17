@@ -22,6 +22,7 @@ class ProfileIterator:
             with open(profile, 'r') as profile_f:
                 for line_ind, line in enumerate(profile_f):
                     state, item, profile_actions = _load_profile_line(line)
+                    profile_actions = [Action(p_act) for p_act in profile_actions]
                     self.profile_list.append((state, item, profile_actions))
         elif(isinstance(profile, list)):
             self.profile_list = profile 
@@ -31,6 +32,7 @@ class ProfileIterator:
 
 def eval_completeness(agent, compl_prof, verbosity=1, partial_credit=False,
                         print_diff=True, print_correct=False, return_diffs=False,
+                        check_annotations=[],
                         **kwargs):
     ''' Evaluates an agent's correctness and completeness against a completeness profile.'''
     import json, os
@@ -44,47 +46,78 @@ def eval_completeness(agent, compl_prof, verbosity=1, partial_credit=False,
     n_correct, total = 0, 0
     n_first_correct, total_states = 0, 0
     diffs = []
-    for state, item, profile_sais in profile_iter:
+    for state, item, profile_actions in profile_iter:
         is_start = len(item['hist'])==0
 
-        agent_sais = agent.act_all(state, return_kind='sai',
+        agent_actions = agent.act_all(state, return_kind='skill_app',
          is_start=is_start, eval_mode=True)
 
-        # Find the difference of the sets 
-        set_agent_sais = set(agent_sais)
-        set_profile_sais = set(profile_sais)
-        missing = set_profile_sais - set_agent_sais
-        extra = set_agent_sais - set_profile_sais
-        correct = set_agent_sais.intersection(set_profile_sais)
+        conv_agent_actions = [Action(a_act) for a_act in agent_actions]
+
+        # Find the difference of the sets
+        cov = [False]*len(profile_actions)
+        correct = []
+        extra = []
+        first_correct = False
+        for j, a_act in enumerate(conv_agent_actions):
+            is_correct = False
+            for i, p_act in enumerate(profile_actions):
+                if(not cov[i] and 
+                   a_act.is_equal(p_act, check_annotations)):
+                    cov[i] = is_correct = True
+                    break
+            if(is_correct):
+                correct.append(a_act.get_info())
+                if(j == 0):
+                    first_correct = True
+            else:
+                extra.append(a_act.get_info())
+        missing = [p_act for i, p_act in enumerate(profile_actions) if cov[i]]
+
+
+        # set_agent_actions = set(agent_actions)
+        # set_profile_actions = set(profile_actions)
+        # missing = set_profile_actions - set_agent_actions
+        # extra = set_agent_actions - set_profile_actions
+        # correct = set_agent_actions.intersection(set_profile_actions)
         n_diff = len(missing) + len(extra)
+
+        # print("AGENT:", conv_agent_actions)
+        # print("PROFILE:", profile_actions)
+        # print("-", missing)
+        # print("+", extra)
+        # print("=", correct)
+        # print()
 
         diffs.append({"problem": item['problem'], 'hist' : item['hist'], "-": list(missing),"+": list(extra), "=" : list(correct)})
 
         if(partial_credit):
-            total += len(set_profile_sais)
-            n_correct += max(0, len(set_profile_sais)-n_diff)
+            total += len(set_profile_actions)
+            n_correct += max(0, len(set_profile_actions)-n_diff)
         else:
             total += 1
             n_correct += n_diff == 0
 
         total_states += 1
-        if(len(agent_sais) > 0 and agent_sais[0] in set_profile_sais):
+        if(first_correct):
             n_first_correct += 1
 
     if(print_diff):
         for diff in diffs:
             n_diffs = len(diff['-']) + len(diff['+'])
             
+            continue
+
             if(n_diffs != 0):
                 print(f"--DIFF: {diff['problem']} {diff['hist']} --")
                 for m in diff['-']:
-                    print("  -", m['selection'], m['inputs']['value'])
+                    print("  -", m.sai[0], m.sai[2]['value'])
                 for m in diff['+']:
-                    print("  +", m['selection'], m['inputs']['value'])
+                    print("  +", m.sai[0], m.sai[2]['value'])
             if(print_correct == True or 
                print_correct=="if_diff" and n_diffs > 0):
                 for m in diff['=']:
-                    print("  =", m['selection'], m['inputs']['value'])    
+                    print("  =", m.sai[0], m.sai[2]['value'])    
 
     completeness = n_correct / total
     correctness = n_first_correct / total_states
@@ -96,6 +129,8 @@ def eval_completeness(agent, compl_prof, verbosity=1, partial_credit=False,
 
     if(return_diffs):
         out['diffs'] = diffs
+
+    print(out)
     return out
 
 
@@ -103,7 +138,8 @@ class CompletenessEvaluator:
     def __init__(self, name="CompletenessEval", eval_freq="problem_end",
             compl_prof=None, verbosity=1,
             print_skills=False, print_htn=False,
-            print_diff=True, print_correct="if_diff"):
+            print_diff=True, print_correct="if_diff",
+            check_annotations=None):
 
         self.name = name
         self.eval_freq = eval_freq
@@ -114,6 +150,7 @@ class CompletenessEvaluator:
         self.print_correct = print_correct
         self.log = []
         self.verbosity = verbosity
+        self.check_annotations = check_annotations
 
     def initialize(self, trainer, agent, env):
         self.trainer = trainer
@@ -139,6 +176,9 @@ class CompletenessEvaluator:
 
         self.profile_iter = ProfileIterator(self.compl_prof)
 
+        if(self.check_annotations is None):
+            self.check_annotations = self.env.check_annotations
+
 
     def do_eval(self, context_data={}):
         '''
@@ -147,7 +187,8 @@ class CompletenessEvaluator:
         '''
         completeness_data = eval_completeness(self.agent, 
             self.profile_iter, verbosity=self.verbosity,
-            print_diff=self.print_diff, print_correct=self.print_correct
+            print_diff=self.print_diff, print_correct=self.print_correct,
+            check_annotations=self.check_annotations
         )
 
         self.log.append({
@@ -155,7 +196,7 @@ class CompletenessEvaluator:
             **context_data, **completeness_data
         })
 
-        if(self.print_skills or print_htn):
+        if(self.print_skills or self.print_htn):
             print("---------------")
             if(self.print_htn):
                 print(self.agent.process_lrn_mech.grammar)

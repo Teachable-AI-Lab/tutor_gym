@@ -64,103 +64,150 @@ class ProblemState:
 # ----------------------------------
 # : Action
 
+
+action_translator_registry = {} 
+def register_action_translator(_type):
+    ''' Register a function for translating a user defined action
+        type into a standard Action. 
+    
+    Example Usage:
+        @register_action_translator(MyCustomActionType)
+        def my_translator(my_obj):
+            sai = (my_obj.selection, my_obj.action_type, my_obj.inputs) 
+            return Action(sai, args=my_obj.args)
+    '''
+    def wrapper(func):
+        action_translator_registry[_type] = func        
+        return func
+
+    return wrapper
+
+
+annotation_equal_registry = {} 
+def register_annotation_equal(anno_name):
+    ''' Register a special __equal__ implementation for a
+        particular annotation kind. 
+
+        Example Usage
+        @register_annotation_equal("args")
+        def unordered_equals(args1, args2):
+            ...
+            return sorted(args1) == sorted(args2)
+    '''
+
+    def wrapper(func):
+        annotation_equal_registry[anno_name] = func
+        return func
+    return wrapper
+
+
+
+def _standardize_action(inp): 
+    if(isinstance(inp, (list,tuple))):
+        selection, action_type, inputs = inp
+        annotations = {}
+    elif(isinstance(inp, dict)):
+        selection = inp['selection']
+        action_type = inp.get('action_type', inp.get('action'))
+        if(action_type is None):
+            raise KeyError("'action_type' | 'action'")
+        inputs = inp['inputs']
+        annotations = {k:v for k,v in inp.items() if k not in ("selection", "action_type", "action", "inputs")}
+
+    elif(hasattr(inp, 'selection')):
+        selection = inp.selection
+        action_type = getattr(inp, 'action_type', None)
+        if(action_type is None):
+            action_type = getattr(inp, 'action', None)
+        inputs = inp.inputs
+
+        annotations = {k:v for k,v in inp.__dict__.items() if k not in ("selection", "action_type", "action", "inputs")}
+    else:
+        raise ValueError(f"Unable to translate {inp} to Action.")
+
+    return (selection, action_type, inputs), annotations
+
+
 class Action:
     ''' An object representing the ideal action taken by an agent.
         Includes Selection-ActionType-Inputs (SAI) and optional annotations 
         like the string of the how-part of the skill that produced the SAI
         and the arguments it used to produce the action.
     '''
-    def __init__(self, sai, args=None, how_str=None):
-
-        # If first input is an Action, then copy it 
+    def __new__(cls, sai, **annotations):        
+        # If get an Action then make a copy
         if(isinstance(sai, Action)):
+            self = super().__new__(cls)
             self.sai = sai.sai
-            self.args = sai.args if args is None else args
-            self.how_str = sai.how_str if how_str is None else how_str
-        # Otherwise fill in a new one
+            self.annotations = {**sai.annotations, **annotations}
+        
         else:
-            # if(hasattr(sai,'sai')):
-            #     self.sai = SAI(sai.sai) # standardize
-                
-            # else:
-            if(isinstance(sai, SAI)):
-                # Always make a copy from as_tuple() to standardize
-                # and avoid side effects from reusing the same object
-                sai = sai.as_tuple()
-            self.sai = SAI(sai)
-            self.args = args
-            self.how_str = how_str
+            # If get a type with an action translator then make from that
+            translator = action_translator_registry.get(type(sai), None)
+            if(translator):
+                # print("TRANSLATE!", sai)
+                self = translator(sai)
+                self.annotations = {**self.annotations, **annotations}
+                # print("AANNO!?", self.annotations)
 
-        if args is not None:        
-            self.args = tuple(args)
+            else:
+                self = super().__new__(cls)
+                self.sai, obj_annos = _standardize_action(sai)
+                self.annotations = {**obj_annos, **annotations}
 
-    def is_equal(self, other, check_args=False, check_how=False):
-        # Whatever 'other' is it must have an sai property 
-        #  or be an convertable to an SAI.
-        self_sai = self.sai
-        other_only_sai = False
-        if(hasattr(other, 'sai')):
-            other_sai = SAI(other.sai)
-        elif(isinstance(other, (SAI, tuple, dict, list))):
-            other_sai = SAI(other)
-            other_only_sai = True
-        else:
-            return False        
 
-        if(self_sai != other_sai):
+        return self
+
+    def is_equal(self, other, check_annotations=[]):        
+        if(self.sai != other.sai):
             return False
 
-        # If Action has args then check that
-        if(check_args and self.args is not None and not other_only_sai):
-            # print("DO CHECK ARGS")
-            other_args = getattr(other,'args', None)
-            if(other_args is None and hasattr(other, "match")):
-                other_args = other.match[1:]
-            if(other_args is None):
+        for anno in check_annotations:
+            self_has = anno in self.annotations
+            other_has = anno in other.annotations
+            # print("has", self_has, other_has)
+            if(self_has != other_has):
                 return False
 
-            sorted_self_args = sorted(self.args)
-            sorted_other_args = sorted([x if isinstance(x,str) else x.id for x in other_args])
-            if(sorted_self_args != sorted_other_args):
-                # print("Args NOT EQ")
-                return False
+            if(not self_has):
+                continue
 
-        # If Action has how_str then check that
-        if(check_how and self.how_str is not None and not other_only_sai):
-            # print("DO CHECK HOW")
-            other_how_str = getattr(other, 'how_str', None)
-            if(other_how_str is None):
-                other_skill = getattr(other, 'skill', None)
-                other_func = getattr(other_skill, 'how_part', None)
-                other_how_str = str(other_func) 
-            if(self.how_str != other_how_str):
-                # print("Func Not Equal")
-                return False
+            self_anno = self.annotations[anno]
+            other_anno = other.annotations[anno]
+
+            eq = annotation_equal_registry.get(anno, None)
+
+            if(eq is not None):
+                if(not eq(self_anno, other_anno)):
+                    return False
+            else:
+                if(self_anno != other_anno):
+                    return False
 
         return True        
 
     def __eq__(self, other):
-        return self.is_equal(self, other)
+        return self.is_equal(other)
 
     def __hash__(self):
-        return hash((self.sai, self.args, self.how_str))
+        return hash((unique_hash(self.sai), unique_hash(self.annotations)))
 
     def __str__(self):
-        return f"{self.sai.selection}->{self.sai.inputs['value']}"
+        return f"{self.sai[0]}->{self.sai[2]['value']}"
 
     def __repr__(self):
-        s = f"{self.sai.action_type}({self.sai.selection}, {self.sai.inputs}"
-        if(self.args is not None):
-            s += f", args={self.args}"
-        if(self.how_str is not None):
-            s += f", how_str={self.how_str!r}"
+        s = f"{self.sai[1]}({self.sai[0]}, {self.sai[2]}"
+
+        for anno_name, anno in self.annotations.items():
+            s += f", {anno_name}={anno}"
         return s + ")"
 
-    def copy(self, omit_args=False, omit_how=False):
+    def copy(self, omit_annotations=[]):
         sai = self.sai
-        args = self.args if not omit_args else None
-        how_str = self.how_str if not omit_how else None
-        return Action(sai, args, how_str)
+        # args = self.args if not omit_args else None
+        # how_str = self.how_str if not omit_how else None
+        new_annos = {k:v for k,v in self.annotations.items() if k not in omit_annotations}
+        return Action(sai, **new_annos)
 
     def __copy__(self):
         return self.copy()
@@ -168,8 +215,7 @@ class Action:
     def as_train_kwargs(self):
         return {
             "sai" : self.sai,
-            "arg_foci" : self.args,
-                # TODO: Need good way of signaling how_str to agent.  
+            **self.annotations,
             }
 
     def get_info(self):
@@ -177,7 +223,7 @@ class Action:
             "selection" : self.sai[0],
             "action_type" : self.sai[1],
             "inputs" : self.sai[2],
-            # TODO: Annotations
+            **self.annotations,
         }
 
 
@@ -249,13 +295,13 @@ class FiniteStateMachine:
 class TutorEnvBase:
     def __init__(self,
                  # If should Check / Demo skill arguments 
-                 check_args=False, demo_args=False,
+                 demo_annotations=[],
+                 check_annotations=[]):
+                 # check_args=False, demo_args=False,
                  # If should Check / Demo the how-part functions 
-                 check_how=False, demo_how=False):
-        self.check_args = check_args
-        self.demo_args = demo_args
-        self.check_how = check_how
-        self.demo_how = demo_how
+                 # check_how=False, demo_how=False):
+        self.demo_annotations = demo_annotations
+        self.check_annotations = check_annotations
         self.name = type(self).__name__
         
 
@@ -345,11 +391,14 @@ class StateMachineTutor(TutorEnvBase):
         return self.state.objs
 
     def _process_demo(self, action, **kwargs):
-        demo_args = kwargs.get('demo_args',self.demo_args)
-        demo_how = kwargs.get('demo_how',self.demo_how)
+        # demo_args = kwargs.get('demo_args',self.demo_args)
+        # demo_how = kwargs.get('demo_how',self.demo_how)
         # print("PROCESS", demo_how, demo_args)
         # if(not demo_args or not demo_how):
-        action = action.copy(omit_args=not demo_args, omit_how=not demo_how)
+        action = Action(action.sai, 
+                **{k:v for k,v in action.annotations.items() if k in self.demo_annotations
+                })
+        # action = action.copy(ommit_annotations=not demo_args, omit_how=not demo_how)
         return action
 
     def get_demo(self, state=None, **kwargs):
@@ -362,9 +411,9 @@ class StateMachineTutor(TutorEnvBase):
         """ Returns all correct next-step Actions """
         state = self.state if state is None else state 
         correct_actions = self.fsm.get_next_actions(self.state)
-        # print("DEMOS:")
-        # for a in correct_actions:
-        #     print('\t', repr(a))
+        print("DEMOS:")
+        for a in correct_actions:
+            print('\t', repr(a))
         return [self._process_demo(a, **kwargs) for a in correct_actions]
 
     def make_compl_prof(self, filename, problems):

@@ -9,6 +9,7 @@ from tutorgym.utils import DataShopLogger
 from colorama import Back, Fore
 from tutorgym.utils import compare
 
+
 import colorama
 colorama.init(autoreset=True)
 
@@ -64,19 +65,53 @@ interleaved_problems = [("+", [("1","2"), ("1","3")]),
 #         problems.append(env.problem)
 #     env.make_completeness_profile(problems, name)
 
+from apprentice.agents.cre_agents.cre_agent import SkillApplication
+from tutorgym.std import register_action_translator, register_annotation_equal, Action
+
+@register_action_translator(SkillApplication)
+def SkillApp_to_Action(skill_app):
+    sai = skill_app.sai.as_tuple()
+
+    # print("TRANSL:", hasattr(skill_app, "match"), hasattr(skill_app, "match"))
+
+    annotations = {}
+    if(hasattr(skill_app, "match")):
+        args = [x if isinstance(x,str) else x.id for x in skill_app.match[1:]]
+        annotations["args"] = args;
+
+    how_str = getattr(skill_app, 'how_str', None)
+    if(how_str is None):
+        skill = getattr(skill_app, 'skill', None)
+        func = getattr(skill, 'how_part', None)
+        how_str = str(func) 
+    annotations['how_str'] = how_str;
+
+    # print(annotations)
+
+    return Action(sai, **annotations)
+
+@register_annotation_equal("args")
+def args_unordered_equals(args1, args2):
+    srt_args1 = tuple(sorted([x if isinstance(x,str) else x.id for x in args1]))
+    srt_args2 = tuple(sorted([x if isinstance(x,str) else x.id for x in args2]))
+    return srt_args1 == srt_args2
+
+
+
+
 def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_args=False):
     logger_name, problem_types = resolve_type(typ, logger_name)
     logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al_author')
 
-    env = FractionArithmetic(check_how=False, check_args=True,
-                             demo_args=True, demo_how=True,
+    env = FractionArithmetic(demo_annotations=["args", "how_str"],
+                             check_annotations=["args"],
                              problem_types=problem_types, n_fracs=n_fracs)
 
     # profile = ".frac.compl_prof"
     # if(not os.path.exists(profile)):
     #     env.make_rand_compl_prof() #make_completeness_profile(env, 100, profile)
 
-    compl_evaluator = CompletenessEvaluator(eval_freq="problem_end")
+    compl_evaluator = CompletenessEvaluator(eval_freq="problem_end", print_htn=True)
 
     trainer = AuthorTrainer(agent, env, logger=logger,
                 problem_set=interleaved_problems, 
