@@ -1,5 +1,5 @@
 from apprentice.agents.cre_agents.cre_agent import SkillApplication
-from tutorgym.std import register_action_translator, register_annotation_equal, Action
+from tutorgym.shared import register_action_translator, register_annotation_equal, Action
 
 @register_action_translator(SkillApplication)
 def SkillApp_to_Action(skill_app):

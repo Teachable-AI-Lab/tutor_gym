@@ -17,7 +17,8 @@ from tutorgym.utils import DataShopLogger
 # from tutorgym.utils import StubLogger
 # from tutorgym.fsm import StateMachine
 
-from tutorgym.std import ProblemState, Action, FiniteStateMachine, StateMachineTutor
+from tutorgym.shared import ProblemState, Action
+from tutorgym.env_classes.fsm_tutor import FiniteStateMachine, StateMachineTutor
 
 
 class FractionArithmetic(StateMachineTutor):

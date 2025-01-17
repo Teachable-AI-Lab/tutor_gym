@@ -22,7 +22,8 @@ from tutorgym.utils import DataShopLogger
 # from tutorgym.utils import StubLogger
 # from tutorgym.fsm import StateMachine
 
-from tutorgym.std import ProblemState, Action, FiniteStateMachine, StateMachineTutor
+from tutorgym.shared import ProblemState, Action
+from tutorgym.env_classes import FiniteStateMachine, StateMachineTutor
 
 class Algebra(StateMachineTutor):
     def __init__(self, n_rows=3, var_denoms=True, one_coeffs=False, **kwargs):

@@ -1,4 +1,4 @@
-from tutorgym.std import Action, ProblemState
+from tutorgym.shared import Action, ProblemState
 from tutorgym.utils import DataShopLogger
 from colorama import Back, Fore, Style
 import colorama

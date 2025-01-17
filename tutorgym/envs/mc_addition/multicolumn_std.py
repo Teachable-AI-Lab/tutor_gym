@@ -22,9 +22,9 @@ from tutorgym.utils import StubLogger
 #  build a long cryptographic hash from it to simplify state-machine. 
 # from cre.transform import MemSetBuilder
 from itertools import permutations
-from apprentice.shared import SAI
 
-from tutorgym.std import ProblemState, Action, FiniteStateMachine, StateMachineTutor
+from tutorgym.shared import ProblemState, Action
+from tutorgym.env_classes.fsm_tutor import FiniteStateMachine, StateMachineTutor
 
 
 

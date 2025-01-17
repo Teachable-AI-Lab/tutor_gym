@@ -1,5 +1,5 @@
 import os
-from tutorgym.std import Action
+from tutorgym.shared import Action
 
 def _load_profile_line(line):
     import json
