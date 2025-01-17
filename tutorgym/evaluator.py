@@ -30,7 +30,7 @@ class ProfileIterator:
     def __iter__(self):
         return iter(self.profile_list)
 
-def eval_completeness(agent, compl_prof, verbosity=1, partial_credit=False,
+def eval_completeness(agent, compl_prof, verbosity=1,
                         print_diff=True, print_correct=False, return_diffs=False,
                         check_annotations=[],
                         **kwargs):
@@ -42,7 +42,8 @@ def eval_completeness(agent, compl_prof, verbosity=1, partial_credit=False,
     profile_iter = compl_prof
     if(not isinstance(compl_prof, ProfileIterator)):
         profile_iter = ProfileIterator(compl_prof)
-        
+
+    cuml_step_score, step_score_total = 0.0, 0.0 
     n_correct, total = 0, 0
     n_first_correct, total_states = 0, 0
     diffs = []
@@ -75,28 +76,6 @@ def eval_completeness(agent, compl_prof, verbosity=1, partial_credit=False,
                                             if k in check_annotations})
             conv_agent_actions.append(a_act)
 
-
-        # Find the difference of the sets
-        # cov = [False]*len(profile_actions)
-        # correct = []
-        # incorrect = []
-        # first_correct = False
-        # for j, a_act in enumerate(conv_agent_actions):
-        #     is_correct = False
-        #     for i, p_act in enumerate(profile_actions):
-        #         if(not cov[i] and 
-        #            a_act.is_equal(p_act, check_annotations)):
-        #             cov[i] = is_correct = True
-        #             break
-        #     if(is_correct):
-        #         correct.append(a_act)
-        #         if(j == 0):
-        #             first_correct = True
-        #     else:
-        #         incorrect.append(a_act)
-        # missing = [p_act for i, p_act in enumerate(profile_actions) if cov[i]]
-
-
         set_agent_actions = set(conv_agent_actions)
         set_profile_actions = set(conv_profile_actions)
         missing = set_profile_actions - set_agent_actions
@@ -111,15 +90,16 @@ def eval_completeness(agent, compl_prof, verbosity=1, partial_credit=False,
         # print("=", correct)
         # print()
 
-        diffs.append({"problem": item['problem'], 'hist' : item['hist'], "-": list(missing), "+": list(incorrect), "=" : list(correct)})
+        step_score = max(0.0, len(set_profile_actions)-n_diff) / len(set_profile_actions)
 
-        if(partial_credit):
-            total += len(set_profile_actions)
-            n_correct += max(0, len(set_profile_actions)-n_diff)
-        else:
-            total += 1
-            n_correct += n_diff == 0
+        diffs.append({"problem": item['problem'], 'hist' : item['hist'],
+                      "-": list(missing), "+": list(incorrect), "=" : list(correct),
+                      "step_score" : step_score
+                      })
 
+        total += 1
+        n_correct += n_diff == 0
+        cuml_step_score += step_score
         total_states += 1
         if(len(conv_agent_actions) > 0 and conv_agent_actions[0] in set_profile_actions):
             n_first_correct += 1
@@ -136,7 +116,6 @@ def eval_completeness(agent, compl_prof, verbosity=1, partial_credit=False,
                     print("  -", m)# .sai[0], m.sai[2]['value'])
                 for m in diff['+']:
                     print("  +", m)#.sai[0], m.sai[2]['value'])
-                print(agent_actions)
             if(print_correct == True or 
                print_correct=="if_diff" and n_diffs > 0):
                 for m in diff['=']:
@@ -144,16 +123,17 @@ def eval_completeness(agent, compl_prof, verbosity=1, partial_credit=False,
 
     completeness = n_correct / total
     correctness = n_first_correct / total_states
+    avg_step_score = cuml_step_score / total_states
 
     if(verbosity > 0):
         print(f"Correctness : {correctness*100:.2f}%",print_diff)
         print(f"Completeness : {completeness*100:.2f}%")
-    out = {"completeness" : completeness, "correctness" : correctness}
+        print(f"Avg Step Score : {avg_step_score*100:.2f}%")
+    out = {"completeness" : completeness, "correctness" : correctness, "avg_step_score" : avg_step_score}
 
     if(return_diffs):
         out['diffs'] = diffs
 
-    print(out)
     return out
 
 
