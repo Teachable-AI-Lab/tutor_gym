@@ -139,11 +139,11 @@ class Trainer:
         ''' Tutor-train (i.e. train one action at a time) on 'state'.'''
         action = self.agent.act(state, return_kind=self.act_return_kind,
             is_start=is_start)
+        conv_action = Action(action)
         outcome_kind = None
 
         if(action):
-            action = Action(action) # Coax into Action Object
-            reward = self.env.check(action)
+            reward = self.env.check(conv_action)
             if(reward > 0):
                 outcome_kind = "CORRECT"
                 self.total_correct += 1
@@ -167,11 +167,11 @@ class Trainer:
              is_start=is_start,
              is_demo=outcome_kind=="HINT")
         )
-        self.print_outcome(action, outcome_kind)
+        self.print_outcome(conv_action, outcome_kind)
 
         # Change the state by applying the action
         if(reward > 0 or self.always_update_state):
-            self.env.apply(action)
+            self.env.apply(conv_action)
 
         return reward                
 
@@ -225,10 +225,10 @@ class AuthorTrainer(Trainer):
         train_set = []
         covered_demos = [False] * len(demos)
         for action in actions:
-            # action = Action(action)
+            conv_action = Action(action)
             reward = -1
             for j, demo in enumerate(demos):
-                if(demo.is_equal(Action(action),
+                if(demo.is_equal(conv_action,
                     check_annotations=self.env.check_annotations
                     )):
 
@@ -239,16 +239,16 @@ class AuthorTrainer(Trainer):
             train_set.append(self._to_train_kwargs(state, action, reward, is_start=is_start))
 
             if(reward == 1):
-                self.print_outcome(action, "CORRECT")
+                self.print_outcome(conv_action, "CORRECT")
                 self.total_correct += 1
             else:
-                self.print_outcome(action, "INCORRECT")
+                self.print_outcome(conv_action, "INCORRECT")
                 self.total_incorrect += 1
                 
         # Add any next demos not covered by the actions into the training set
         for i, action in enumerate(covered_demos):
             if(not action):
-                self.print_outcome(action, "HINT")
+                self.print_outcome(demos[i], "HINT")
                 self.total_hints += 1
                 train_set.append(
                     self._to_train_kwargs(state, demos[i], 

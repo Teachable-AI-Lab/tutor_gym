@@ -49,8 +49,13 @@ def eval_completeness(agent, compl_prof, verbosity=1, partial_credit=False,
     for state, item, profile_actions in profile_iter:
         is_start = len(item['hist'])==0
 
+        prob_uid = None
+        if(hasattr(agent, "standardize_state")):
+            state = agent.standardize_state(state)
+            prob_uid = state.get("__uid__")
+
         agent_actions = agent.act_all(state, return_kind='skill_app',
-         is_start=is_start, eval_mode=True)
+         is_start=is_start, prob_uid=prob_uid, eval_mode=True)
 
         conv_agent_actions = [Action(a_act) for a_act in agent_actions]
 

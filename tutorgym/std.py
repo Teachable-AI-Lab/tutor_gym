@@ -163,17 +163,17 @@ class Action:
             return False
 
         for anno in check_annotations:
-            self_has = anno in self.annotations
-            other_has = anno in other.annotations
-            # print("has", self_has, other_has)
-            if(self_has != other_has):
-                return False
+            # self_has = anno in self.annotations
+            # other_has = anno in other.annotations
+            # # print("has", self_has, other_has)
+            # if(self_has != other_has):
+            #     return False
 
-            if(not self_has):
-                continue
+            # if(not self_has):
+            #     continue
 
-            self_anno = self.annotations[anno]
-            other_anno = other.annotations[anno]
+            self_anno = self.annotations.get(anno, None)
+            other_anno = other.annotations.get(anno, None)
 
             eq = annotation_equal_registry.get(anno, None)
 
