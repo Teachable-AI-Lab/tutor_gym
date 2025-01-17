@@ -75,15 +75,17 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_arg
     logger_name, problem_types = resolve_type(typ, logger_name)
     logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al_author')
 
-    env = FractionArithmetic(demo_annotations=["args", "how_str"],
-                             check_annotations=["args"],
+    env = FractionArithmetic(demo_annotations=["arg_foci", "how_str"],
+                             check_annotations=["arg_foci"],
                              problem_types=problem_types, n_fracs=n_fracs)
 
     # profile = ".frac.compl_prof"
     # if(not os.path.exists(profile)):
     #     env.make_rand_compl_prof() #make_completeness_profile(env, 100, profile)
 
-    compl_evaluator = CompletenessEvaluator(eval_freq="problem_end", print_htn=True)
+    compl_evaluator = CompletenessEvaluator(
+        eval_freq="problem_end", print_htn=True, print_diff=True,
+        check_annotations=[])
 
     trainer = AuthorTrainer(agent, env, logger=logger,
                 problem_set=interleaved_problems, 

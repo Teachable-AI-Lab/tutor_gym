@@ -150,35 +150,35 @@ class FractionArithmetic(StateMachineTutor):
         if(self.problem_type == "M"):            
             num = str(reduce(operator.mul, init_num_vals))
             num_sai = (f'ans_num', 'UpdateTextField', {'value': num })
-            num_act = Action(num_sai, args=self.init_nums, how_str="Multiply(a,b)")
+            num_act = Action(num_sai, arg_foci=self.init_nums, how_str="Multiply(a,b)")
 
             den = str(reduce(operator.mul, init_den_vals))
             den_sai = (f'ans_den', 'UpdateTextField', {'value': den })
-            den_act = Action(den_sai, args=self.init_dens, how_str="Multiply(a,b)")
+            den_act = Action(den_sai, arg_foci=self.init_dens, how_str="Multiply(a,b)")
 
             curr_state = fsm.add_unordered(curr_state, [num_act, den_act])
         elif(self.problem_type == "AS"):
             num = str(reduce(operator.add, init_num_vals))
             num_sai = (f'ans_num', 'UpdateTextField', {'value': num })
-            num_act = Action(num_sai, args=self.init_nums, how_str="Add(a,b)")
+            num_act = Action(num_sai, arg_foci=self.init_nums, how_str="Add(a,b)")
 
             den = str(init_den_vals[0])
             den_sai = (f'ans_den', 'UpdateTextField', {'value': den })
-            den_act = Action(den_sai, args=['init_den1'], how_str="Copy(a)")
+            den_act = Action(den_sai, arg_foci=['init_den1'], how_str="Copy(a)")
 
             curr_state = fsm.add_unordered(curr_state, [num_act, den_act])
         else:
             # Addition Different
             sai = ('check_convert', 'UpdateTextField', {'value': 'x'})
             curr_state = fsm.add_edge(curr_state, 
-                Action(sai, args=[], how_str="'x'"))
+                Action(sai, arg_foci=[], how_str="'x'"))
 
             # Common denominator by multiplying together
             conv_den_val = reduce(operator.mul, init_den_vals)
             den_acts = []
             for i in range(self.n):
                 sai = (f'conv_den{i+1}', 'UpdateTextField', {'value': str(conv_den_val)})
-                den_acts.append(Action(sai, args=self.init_dens, how_str="Multiply(a, b)"))
+                den_acts.append(Action(sai, arg_foci=self.init_dens, how_str="Multiply(a, b)"))
             
             
 
@@ -197,7 +197,7 @@ class FractionArithmetic(StateMachineTutor):
                 else:
                     arg_foci = [f"conv_den{i+1}", f"init_num{i+1}", f"init_den{i+1}"]
 
-                num_acts.append(Action(sai, args=arg_foci, how_str="Multiply(a, b)"))
+                num_acts.append(Action(sai, arg_foci=arg_foci, how_str="Multiply(a, b)"))
             
             if(self.n_fracs != 2):
                 curr_state = fsm.add_unordered(curr_state, den_acts)
@@ -208,11 +208,11 @@ class FractionArithmetic(StateMachineTutor):
             # Add final 
             num = str(reduce(operator.add, conv_num_vals))
             num_sai = (f'ans_num', 'UpdateTextField', {'value': num })
-            num_act = Action(num_sai, args=self.conv_nums, how_str="Add(a,b)")
+            num_act = Action(num_sai, arg_foci=self.conv_nums, how_str="Add(a,b)")
 
             den = str(conv_den_val)
             den_sai = (f'ans_den', 'UpdateTextField', {'value': den })
-            den_act = Action(den_sai, args=[f'conv_den{self.n}'], how_str="Copy(a)")
+            den_act = Action(den_sai, arg_foci=[f'conv_den{self.n}'], how_str="Copy(a)")
 
             curr_state = fsm.add_unordered(curr_state, [num_act, den_act])
 
