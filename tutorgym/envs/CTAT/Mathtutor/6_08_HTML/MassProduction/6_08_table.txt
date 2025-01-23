@@ -1,0 +1,57 @@
+Problem Name	1	2	3	4	5	6	7	8
+%(startStateNodeName)%	state28	state24	state3					
+%(1)%	1. Enter 2.4 to show the place value of each digit (standard form).	1. Enter 0.72 to show the place value of each digit (standard form).	1. Enter 78.16 to show the place value of each digit (standard form).	1. Enter 1.76 to show the place value of each digit (standard form).	1. Enter 69.3 to show the place value of each digit (standard form).	1. Enter 5.09 to show the place value of each digit (standard form).	1. Enter 3.08 to show the place value of each digit (standard form).	1. Enter 20.96 to show the place value of each digit (standard form).
+%(2)%	2. You need to borrow to get 14 tenths. How many ones and hundredths do you	2. Increase the number of hundredths to 12. How many tenths will you need to	"2. You need to borrow one from the tens column, what is another way to show"	"2. You need to borrow from the tenths, so now you have only 6 tenths."	2. You need to borrow to get 13 tenths. 	2. You need to borrow to get 10 tenths. How many ones and hundredths	2. You need to borrow to get 10 tenths. How many ones and hundredths	"2. You need to borrow to get 19 tenths. How many tens, ones, and hundredths"
+%(3)%	need now?	 make 0.72?	78.16?	How many ones and hundredths do you need?	How many tens and ones do you need?	 do you need?	 do you need?	will you have?
+%(4)%	3. What if the number of tenths is 18?	3. What if the number of hundredths is 22?	3. What if you only have 5 tens?	3. What if there are only 5 tenths?	3. What if the number of tenths is 93?	3. What if you needed to borrow from the tenths now and only had 9 tenths?	3. What if you needed to borrow from the tenths now and only had 9 tenths?	3. What if the number of tenths is 29?
+								
+%(r1c1-hint1)%			What number should go in the tens place?		What number should go in the tens place?			What number should go in the tens place?
+%(r1c1-hint2)%			"What is the highest number of tens you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?"		"What is the highest number of tens you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?"			"What is the highest number of tens you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?"
+%(r1c1-hint3)%			Try entering <%=round(floor(%(total)%/1000))%>		Try entering <%=round(floor(%(total)%/1000))%>			Try entering <%=round(floor(%(total)%/1000))%>
+%(r2c1-hint1)%			"If you have already entered <%=fmtDecimal(sum(valueOrZero(r2c1*10)+valueOrZero(r2c2*1)+valueOrZero(r2c3*.1)+valueOrZero(r2c4*.01)),2)%>. How many tens should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?"		"If you have already entered <%=fmtDecimal(sum(valueOrZero(r2c1*10)+valueOrZero(r2c2*1)+valueOrZero(r2c3*.1)+valueOrZero(r2c4*.01)),2)%>. How many tens should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?"			"If you have already entered <%=fmtDecimal(sum(valueOrZero(r2c1*10)+valueOrZero(r2c2*1)+valueOrZero(r2c3*.1)+valueOrZero(r2c4*.01)),2)%>. How many tens should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?"
+%(r2c1-hint2)%			"What is the highest number of tens you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?"		"What is the highest number of tens you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?"			"What is the highest number of tens you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?"
+%(r2c1-hint3)%			Try entering <%=round(floor((%(total)%-sum(valueOrZero(r2c1*1000)+valueOrZero(r2c2*100)+valueOrZero(r2c3*10)+valueOrZero(r2c4*1)))/1000))%>		Try entering <%=round(floor((%(total)%-sum(valueOrZero(r2c1*1000)+valueOrZero(r2c2*100)+valueOrZero(r2c3*10)+valueOrZero(r2c4*1)))/1000))%>			Try entering <%=round(floor((%(total)%-sum(valueOrZero(r2c1*1000)+valueOrZero(r2c2*100)+valueOrZero(r2c3*10)+valueOrZero(r2c4*1)))/1000))%>
+%(r3c1-hint1)%			"If you have already given <%=fmtDecimal(sum(valueOrZero(r3c1*10)+valueOrZero(r3c2*1)+valueOrZero(r3c3*.1)+valueOrZero(r3c4*.01)),2)%>. How many tens should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?"		"If you have already given <%=fmtDecimal(sum(valueOrZero(r3c1*10)+valueOrZero(r3c2*1)+valueOrZero(r3c3*.1)+valueOrZero(r3c4*.01)),2)%>. How many tens should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?"			"If you have already given <%=fmtDecimal(sum(valueOrZero(r3c1*10)+valueOrZero(r3c2*1)+valueOrZero(r3c3*.1)+valueOrZero(r3c4*.01)),2)%>. How many tens should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?"
+%(r3c1-hint2)%			"What is the highest number of tens you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?"		"What is the highest number of tens you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?"			"What is the highest number of tens you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?"
+%(r3c1-hint3)%			Try entering <%=round(floor((%(total)%-sum(valueOrZero(r3c1*1000)+valueOrZero(r3c2*100)+valueOrZero(r3c3*10)+valueOrZero(r3c4*1)))/1000))%>		Try entering <%=round(floor((%(total)%-sum(valueOrZero(r3c1*1000)+valueOrZero(r3c2*100)+valueOrZero(r3c3*10)+valueOrZero(r3c4*1)))/1000))%>			Try entering <%=round(floor((%(total)%-sum(valueOrZero(r3c1*1000)+valueOrZero(r3c2*100)+valueOrZero(r3c3*10)+valueOrZero(r3c4*1)))/1000))%>
+	        	         	       	 	  	     	     	        
+	         	       	  	   	  	     	     	    
+%(given-1)%	r2c3	r2c4	r2c1	r2c3	r2c3	r2c3	r2c3	r2c3
+%(given-2)%	r3c3	r3c4	r3c1	r3c3	r3c3	r3c3	r3c3	r3c3
+%(total)%	240	72	7816	176	6930	509	308	2096
+%(given-val-1)%	14	12	6	6	13	10	10	19
+%(given-val-2)%	18	22	5	5	93	9	9	29
+%(11trav)%	0	0	1	0	1	0	0	1
+%(12trav)%	1	0	1	1	1	1	1	1
+%(13trav)%	1	1	1	1	1	1	1	1
+%(14trav)%	1	1	1	1	1	1	1	1
+%(21trav)%	0	0	0	0	1	0	0	1
+%(22trav)%	1	0	1	1	1	1	1	1
+%(23trav)%	0	1	1	0	0	0	0	0
+%(24trav)%	1	0	1	1	1	1	1	1
+%(31trav)%	0	0	0	0	1	0	0	1
+%(32trav)%	1	0	1	1	1	1	1	1
+%(33trav)%	0	1	1	0	0	0	0	0
+%(34trav)%	1	0	1	1	1	1	1	1
+								
+%(11trav-max)%	1	1	1	1	1	1	1	1
+%(12trav-max)%	1	1	1	1	1	1	1	1
+%(13trav-max)%	1	1	1	1	1	1	1	1
+%(14trav-max)%	1	1	1	1	1	1	1	1
+%(21trav-max)%	1	1	0	1	1	1	1	1
+%(22trav-max)%	1	1	1	1	1	1	1	1
+%(23trav-max)%	0	1	1	0	0	0	0	0
+%(24trav-max)%	1	0	1	1	1	1	1	1
+%(31trav-max)%	1	1	0	1	1	1	1	1
+%(32trav-max)%	1	1	1	1	1	1	1	1
+%(33trav-max)%	0	1	1	0	0	0	0	0
+%(34trav-max)%	1	0	1	1	1	1	1	1
+								
+%(r1c1-faded-value)%	0	0	7					
+%(r1c2-faded-value)%	2	0	8					
+%(r1c3-faded-value)%	4	7						
+%(r1c4-faded-value)%	0	2						
+%(r2c1-faded-value)%	0							
+%(r2c2-faded-value)%	1							
+%(r2c3-faded-value)%								
+%(r2c4-faded-value)%	0							

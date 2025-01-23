@@ -1,0 +1,1727 @@
+<?xml version="1.0" standalone="yes"?>
+
+<stateGraph caseInsensitive="true" firstCheckAllStates="true" highlightRightSelection="true" lockWidget="true" startStateNodeName="%(startStateNodeName)%" suppressStudentFeedback="false" unordered="false" version="2.1">
+    <startNodeMessages>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartProblem</MessageType>
+                <ProblemName>softball-ordered</ProblemName>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>30FE8291-4FFE-02DA-54B5-F451EDF68FE8</transaction_id>
+                <Selection>
+                    <value>problem</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(problem)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartStateEnd</MessageType>
+            </properties>
+        </message>
+    </startNodeMessages>
+    <node doneState="false" locked="false">
+        <text>softball</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>356</x>
+            <y>30</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state1</text>
+        <uniqueID>2</uniqueID>
+        <dimension>
+            <x>541</x>
+            <y>229</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state2</text>
+        <uniqueID>3</uniqueID>
+        <dimension>
+            <x>541</x>
+            <y>339</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state3</text>
+        <uniqueID>4</uniqueID>
+        <dimension>
+            <x>541</x>
+            <y>449</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state4</text>
+        <uniqueID>5</uniqueID>
+        <dimension>
+            <x>541</x>
+            <y>559</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state5</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>541</x>
+            <y>669</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state6</text>
+        <uniqueID>7</uniqueID>
+        <dimension>
+            <x>541</x>
+            <y>779</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state7</text>
+        <uniqueID>8</uniqueID>
+        <dimension>
+            <x>541</x>
+            <y>889</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state8</text>
+        <uniqueID>9</uniqueID>
+        <dimension>
+            <x>541</x>
+            <y>999</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state9</text>
+        <uniqueID>10</uniqueID>
+        <dimension>
+            <x>541</x>
+            <y>1109</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state10</text>
+        <uniqueID>11</uniqueID>
+        <dimension>
+            <x>343</x>
+            <y>1313</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state18</text>
+        <uniqueID>19</uniqueID>
+        <dimension>
+            <x>163</x>
+            <y>231</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state19</text>
+        <uniqueID>20</uniqueID>
+        <dimension>
+            <x>163</x>
+            <y>341</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state20</text>
+        <uniqueID>21</uniqueID>
+        <dimension>
+            <x>163</x>
+            <y>451</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state21</text>
+        <uniqueID>22</uniqueID>
+        <dimension>
+            <x>163</x>
+            <y>561</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state22</text>
+        <uniqueID>23</uniqueID>
+        <dimension>
+            <x>163</x>
+            <y>671</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state23</text>
+        <uniqueID>24</uniqueID>
+        <dimension>
+            <x>163</x>
+            <y>781</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state24</text>
+        <uniqueID>25</uniqueID>
+        <dimension>
+            <x>163</x>
+            <y>891</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state25</text>
+        <uniqueID>26</uniqueID>
+        <dimension>
+            <x>163</x>
+            <y>1001</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state26</text>
+        <uniqueID>27</uniqueID>
+        <dimension>
+            <x>163</x>
+            <y>1111</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state28</text>
+        <uniqueID>29</uniqueID>
+        <dimension>
+            <x>422</x>
+            <y>1542</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state29</text>
+        <uniqueID>30</uniqueID>
+        <dimension>
+            <x>423</x>
+            <y>1702</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state30</text>
+        <uniqueID>31</uniqueID>
+        <dimension>
+            <x>461</x>
+            <y>1897</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state33</text>
+        <uniqueID>34</uniqueID>
+        <dimension>
+            <x>461</x>
+            <y>2016</y>
+        </dimension>
+    </node>
+    <node doneState="true" locked="false">
+        <text>Done_4</text>
+        <uniqueID>35</uniqueID>
+        <dimension>
+            <x>462</x>
+            <y>2126</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state35</text>
+        <uniqueID>36</uniqueID>
+        <dimension>
+            <x>354</x>
+            <y>157</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state36</text>
+        <uniqueID>37</uniqueID>
+        <dimension>
+            <x>96</x>
+            <y>1415</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state38</text>
+        <uniqueID>39</uniqueID>
+        <dimension>
+            <x>154</x>
+            <y>1804</y>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>3</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>6D1A681B-3483-0B80-2336-B89E05AB1DD7</transaction_id>
+                    <Selection>
+                        <value>r1c3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>4</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(8123424987413079358)%</hintMessage>
+            <hintMessage>%(6063867401354136967)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r1c3</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">4</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_addends Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>5</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>1D6FCA29-79D7-D687-5F2E-980FED0C21FD</transaction_id>
+                    <Selection>
+                        <value>dp1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>.</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(-7053551935158006320)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">dp1</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">.</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_decimal_point Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>3</sourceID>
+        <destID>4</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>7</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>0D534753-CD05-3CE9-9E41-D8E4758CC0AD</transaction_id>
+                    <Selection>
+                        <value>r1c4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>6</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(8474004336479031872)%</hintMessage>
+            <hintMessage>%(-2801131504353125445)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r1c4</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">6</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_addends Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>4</sourceID>
+        <destID>5</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>9</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>00896EC5-2697-BEB6-8339-13339B5FE3E4</transaction_id>
+                    <Selection>
+                        <value>r1c5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>7</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(-3065376015676389234)%</hintMessage>
+            <hintMessage>%(4775665303954208856)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r1c5</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">7</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_addends Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>11</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>1808FA25-99B1-B95C-827A-8D0510C5FB8C</transaction_id>
+                    <Selection>
+                        <value>r2c3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>2</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(9206028078092982683)%</hintMessage>
+            <hintMessage>%(-185994313868091631)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r2c3</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">2</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_addends Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>6</sourceID>
+        <destID>7</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>13</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>1ED56133-1D43-A666-0813-15853F334477</transaction_id>
+                    <Selection>
+                        <value>dp2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>.</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(-7053551935158006320)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">dp2</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">.</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_decimal_point Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>7</sourceID>
+        <destID>8</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>15</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>744E2F2B-5499-D39F-B8B1-DC4D0471591C</transaction_id>
+                    <Selection>
+                        <value>r2c4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>9</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(-5554225972332851602)%</hintMessage>
+            <hintMessage>%(-4350010196962057192)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r2c4</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">9</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_addends Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>8</sourceID>
+        <destID>9</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>17</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>071C40FD-6DDB-96DE-D70C-DF268D31FE4B</transaction_id>
+                    <Selection>
+                        <value>r2c5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>9</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(3887119710655472951)%</hintMessage>
+            <hintMessage>%(-5065828866033649690)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r2c5</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">9</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_addends Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>9</sourceID>
+        <destID>10</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>19</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>007BFDA5-9BDF-40B3-F79A-071CAB808137</transaction_id>
+                    <Selection>
+                        <value>r3c5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>6</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(8632865137167425279)%</hintMessage>
+            <hintMessage>%(947884997019204232)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r3c5</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">6</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Add_column_with_carry Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>10</sourceID>
+        <destID>11</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>37</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>76163CCF-72C3-DEAF-328A-205391993041</transaction_id>
+                    <Selection>
+                        <value>dp1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>.</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(-4717508271838979565)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">dp1</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">.</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_decimal_point Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>19</sourceID>
+        <destID>20</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>39</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>7F02A451-8F05-30A1-B9FE-B4B8247EC957</transaction_id>
+                    <Selection>
+                        <value>r1c4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>9</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(-7673097172346422795)%</hintMessage>
+            <hintMessage>%(-4350010196962057192)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r1c4</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">9</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_addends Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>20</sourceID>
+        <destID>21</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>41</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>25911967-FE43-FC77-F2A6-9F405B9C1577</transaction_id>
+                    <Selection>
+                        <value>r1c5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>9</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(3887119710655472951)%</hintMessage>
+            <hintMessage>%(-5065828866033649690)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r1c5</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">9</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_addends Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>21</sourceID>
+        <destID>22</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>43</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>7B1BAE0B-3CB9-9D93-6000-22FD0B2AD877</transaction_id>
+                    <Selection>
+                        <value>r2c2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(5216700620189519861)%</hintMessage>
+            <hintMessage>%(1543847059370734121)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r2c2</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_addends Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>22</sourceID>
+        <destID>23</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>45</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>09CAE125-52C2-E58A-761D-6EB73CD58E8D</transaction_id>
+                    <Selection>
+                        <value>r2c3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>4</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(-7409385492960581120)%</hintMessage>
+            <hintMessage>%(6063867401354136967)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r2c3</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">4</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_addends Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>23</sourceID>
+        <destID>24</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>47</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>2B145BEB-196E-83D6-9F88-499069DC93AA</transaction_id>
+                    <Selection>
+                        <value>dp2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>.</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(-7053551935158006320)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">dp2</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">.</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_decimal_point Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>24</sourceID>
+        <destID>25</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>49</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>31282279-B090-BBE0-EBD1-EE3089128B78</transaction_id>
+                    <Selection>
+                        <value>r2c4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>6</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(-2832546241012368851)%</hintMessage>
+            <hintMessage>%(-2801131504353125445)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r2c4</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">6</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_addends Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>25</sourceID>
+        <destID>26</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>51</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>5AD9EC3B-65ED-FCA4-FEFE-D9D4CB14771E</transaction_id>
+                    <Selection>
+                        <value>r2c5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>7</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(280385615904807700)%</hintMessage>
+            <hintMessage>%(4775665303954208856)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r2c5</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">7</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_addends Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>26</sourceID>
+        <destID>27</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>54</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>744F1F15-D705-943C-DB2B-7795493DF270</transaction_id>
+                    <Selection>
+                        <value>r3c5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>6</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(8632865137167425279)%</hintMessage>
+            <hintMessage>%(947884997019204232)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r3c5</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">6</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Add_column_with_carry Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>27</sourceID>
+        <destID>11</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="false">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>56</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>0F26EE49-817E-F2D8-4A18-72E2A5FEF2EE</transaction_id>
+                    <Selection>
+                        <value>r3c4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>6</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(-7838452502631253934)%</hintMessage>
+            <hintMessage>%(-3318553912403568199)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r3c4</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">6</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Add_column_with_carry_prev Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>11</sourceID>
+        <destID>29</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>58</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>5589CD17-4D90-8033-AD2D-4168BF801BD0</transaction_id>
+                    <Selection>
+                        <value>dp3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>.</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(-7053551935158006320)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">dp3</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">.</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_decimal_point Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>29</sourceID>
+        <destID>30</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>60</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>60B44A17-EFDE-7013-D8A0-98F7706B6422</transaction_id>
+                    <Selection>
+                        <value>r3c3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>7</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(1051120106695927883)%</hintMessage>
+            <hintMessage>%(-2546641115865709402)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r3c3</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">7</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Add_column_with_carry_prev Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>30</sourceID>
+        <destID>31</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>66</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>03BCA615-573E-C95C-2546-D91457B12ABE</transaction_id>
+                    <Selection>
+                        <value>r3c2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(1867449694694976926)%</hintMessage>
+            <hintMessage>%(1543847059370734121)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r3c2</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Add_column_no_carry Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>31</sourceID>
+        <destID>34</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>68</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>180FF853-03AC-F10E-BCA9-474B8298EC3F</transaction_id>
+                    <Selection>
+                        <value>done</value>
+                    </Selection>
+                    <Action>
+                        <value>ButtonPressed</value>
+                    </Action>
+                    <Input>
+                        <value>-1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(-7538229578606087202)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">done</matcherParameter>
+                <matcherParameter name="action">ButtonPressed</matcherParameter>
+                <matcherParameter name="input">-1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>34</sourceID>
+        <destID>35</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>70</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>0FD35437-9D3B-9DFC-C460-FE2CC84C01DC</transaction_id>
+                    <Selection>
+                        <value>sign</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>+</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(6604639385854573387)%</hintMessage>
+            <hintMessage>%(-9102430232048548554)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">sign</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">+</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Choose_operation Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>36</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>75</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>024CBBD3-01C9-E3C5-B6BC-8643BBDC0431</transaction_id>
+                    <Selection>
+                        <value>r1c3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>2</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(-2479910010551505509)%</hintMessage>
+            <hintMessage>%(6673958755308966883)%</hintMessage>
+            <hintMessage>%(-185994313868091631)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r1c3</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">2</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_addends Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>36</sourceID>
+        <destID>19</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="false">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>78</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>48E7B9DB-26C5-33FE-4516-DF497A6B075C</transaction_id>
+                    <Selection>
+                        <value>r1c2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(8086415996065678906)%</hintMessage>
+            <hintMessage>%(6491631929174117921)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r1c2</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_addends Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>36</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>80</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>1AD66943-BDDB-7479-E064-EE9432C4DBC3</transaction_id>
+                    <Selection>
+                        <value>c4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(2309035302489677994)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">c4</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Add_column_with_carry_prev Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>11</sourceID>
+        <destID>37</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>83</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>0E469119-1C0F-909B-DA31-4494317958F3</transaction_id>
+                    <Selection>
+                        <value>r3c4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>6</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(-7838452502631253934)%</hintMessage>
+            <hintMessage>%(-3318553912403568199)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r3c4</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">6</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Add_column_with_carry_prev Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>37</sourceID>
+        <destID>29</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="false">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>85</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>7DC20D31-5914-29F1-7635-1F10BCE35A9C</transaction_id>
+                    <Selection>
+                        <value>c3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(-6187140743088726479)%</hintMessage>
+            <hintMessage>%(-2794967152080678115)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">c3</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Add_column_with_carry_prev Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>30</sourceID>
+        <destID>39</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>88</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>09DFAE1B-3EBD-C880-DA1C-B2B4D48099E3</transaction_id>
+                    <Selection>
+                        <value>r3c3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>7</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage />
+            <hintMessage>%(1051120106695927883)%</hintMessage>
+            <hintMessage>%(-2546641115865709402)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">r3c3</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">7</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Add_column_with_carry_prev Decimal-Addition-and-Subtraction</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>39</sourceID>
+        <destID>31</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <productionRule opportunities="3">
+        <ruleName>Add_column_with_carry_prev</ruleName>
+        <productionSet>Decimal-Addition-and-Subtraction</productionSet>
+        <label>Add column with carry prev</label>
+    </productionRule>
+    <productionRule opportunities="7">
+        <ruleName>Enter_addends</ruleName>
+        <productionSet>Decimal-Addition-and-Subtraction</productionSet>
+        <label>Enter addends</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Add_column_no_carry</ruleName>
+        <productionSet>Decimal-Addition-and-Subtraction</productionSet>
+        <label>Add column no carry</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Add_column_with_carry</ruleName>
+        <productionSet>Decimal-Addition-and-Subtraction</productionSet>
+        <label>Add column with carry</label>
+    </productionRule>
+    <productionRule opportunities="3">
+        <ruleName>Enter_decimal_point</ruleName>
+        <productionSet>Decimal-Addition-and-Subtraction</productionSet>
+        <label>Enter decimal point</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Choose_operation</ruleName>
+        <productionSet>Decimal-Addition-and-Subtraction</productionSet>
+        <label>Choose operation</label>
+    </productionRule>
+    <EdgesGroups ordered="true">
+        <group name="Addition" ordered="false" reenterable="true">
+            <link id="58" />
+            <link id="80" />
+            <link id="56" />
+            <link id="66" />
+            <link id="60" />
+            <link id="68" />
+            <link id="83" />
+            <link id="88" />
+            <link id="85" /></group>
+        <group name="SmallOverLarge" ordered="false" reenterable="true">
+            <link id="51" />
+            <link id="47" />
+            <link id="75" />
+            <link id="43" />
+            <link id="39" />
+            <link id="45" />
+            <link id="37" />
+            <link id="49" />
+            <link id="54" />
+            <link id="41" /></group>
+        <group name="LargeOverSmall" ordered="false" reenterable="true">
+            <link id="15" />
+            <link id="3" />
+            <link id="13" />
+            <link id="9" />
+            <link id="78" />
+            <link id="17" />
+            <link id="7" />
+            <link id="5" />
+            <link id="11" />
+            <link id="19" /></group>
+    </EdgesGroups>
+</stateGraph>

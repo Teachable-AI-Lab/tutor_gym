@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>6.14 Decimal Division</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/CTAT.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/Mathtutor.css">
+    <link rel="stylesheet" type="text/css" href="Assets/6.14.css">
+
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/jquery.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctat.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctatloader.js"></script>
+  </head>
+
+  <body>
+    <main class="CTATTutor">
+      <h1>Tutor</h1>
+
+      <section class="CTATProblemSolving">
+        <h2>Problem Solving</h2>
+
+        <section class="CTATProblem">
+          <h3>Problem</h3>
+
+          <div id="problemstatement" class="CTATTextField"></div>
+          <div id="firstpart" class="CTATTextField"></div>
+          <div id="secondpart" class="CTATTextField"></div>
+        </section>
+
+        <section class="CTATSolution">
+          <h3>Solution</h3>
+
+          <div id="thirdpart" class="CTATTextField"></div>
+          <table>
+            <thead>
+              <tr>
+                <th scope="row"></th>
+                <th scope="col"><div id="column1" class="CTATTextField"></div></th>
+                <th scope="col"><div id="column2" class="CTATTextField"></div></th>
+                <th scope="col"><div id="column3" class="CTATTextField"></div></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><div id="total1" class="CTATTextInput"></div></td>
+                <td><div id="work1" class="CTATTextInput"></div></td>
+                <td><div id="num1" class="CTATTextInput"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td><div id="total2" class="CTATTextInput"></div></td>
+                <td><div id="work2" class="CTATTextInput"></div></td>
+                <td><div id="num2" class="CTATTextInput"></div></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div id="result">
+            <label for="variable">
+              Variable:
+              <span id="variable" class="CTATTextInput"></span>
+            </label>
+            <label for="expression">
+              Expression:
+              <span id="expression" class="CTATTextInput"></span>
+            </label>
+          </div>
+        </section>
+      </section>
+
+      <section class="CTATTools">
+        <h2>Tools</h2>
+
+        <div class="CTATButtons">
+          <div class="CTATDoneButton"></div>
+          <div class="CTATHintButton"></div>
+        </div>
+
+        <section class="CTATHints">
+          <h3>Hints</h3>
+          <div class="CTATHintWindow"></div>
+        </section>
+
+        <section class="CTATSkills">
+          <h3>Skills</h3>
+          <div class="CTATSkillWindow"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

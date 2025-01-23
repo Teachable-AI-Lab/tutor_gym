@@ -1,0 +1,54 @@
+#caption {
+  margin-left: 8px;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 3px 0 7px;
+  width: calc(100% - 14px);
+  font-weight: bold;
+  color: #555;
+  background: #ccc;
+}
+.CTATSolution .table {
+  margin-top: 0;
+  display: table;
+  width: 100%;
+}
+#recombine {
+  margin-left: 8px;
+  border-radius: 0 0 5px 5px;
+  padding: 5px;
+  width: calc(100% - 14px);
+  background: #ccc;
+}
+.row {
+  display: table-row;
+}
+.cell {
+  display: table-cell;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+}
+#main .cell:first-child {
+  width: 14px;
+  text-align: right;
+  font-weight: bold;
+}
+#sign {
+  vertical-align: 2px;
+  font-size: 15px;
+}
+.row.line .cell {
+  height: 6px;
+}
+hr {
+  width: 900%;
+  margin: 2px 0;
+}
+.CTATTextInput {
+  width: initial;
+}
+.CTATTextInput > input[type="text"] {
+  width: 90%;
+  height: 35px;
+  font-size: 20px;
+}

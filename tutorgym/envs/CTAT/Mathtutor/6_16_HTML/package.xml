@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="6.16 Area of Polygons" description="Student will find the area of geometric figures with emphasis on triangles and quadrilaterals." save_state="true">
+  <Problems>
+    <Problem name="01dogRun" label="Large Dog Kennel" description="At the same dog kennel you work, they use larger fenced run for larger dogs; they should have an area of 10 square meters." tutor_flag="tutor" model_file="01dogRun.brd" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="02flag" label="Pirate Flag" description="You are making a flag for the school play. The flag needs to have an area of 3 square yards. You can buy fabric in different widths." tutor_flag="tutor" model_file="02flag.brd" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="03walkway" label="Walkway" description="You are designing a walkway from the garage to your back porch. You have enough cement to cover 8.25 square meters." tutor_flag="tutor" model_file="03walkway.brd" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="03walkway-pretest" label="03walkway Pretest" description="03walkway Pretest" tutor_flag="test" model_file="03walkway-pretest.brd" selection_features="()" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="04tulip" label="Tulip Gardening" description="Your mom is planting her flower garden for next year. She bought enough tulip bulbs to cover 12 square feet and she is choosing between three different spots for planting them." tutor_flag="tutor" model_file="04tulip.brd" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="04tulip-pretest" label="04tulip Pretest" description="04tulip Pretest" tutor_flag="test" model_file="04tulip-pretest.brd" selection_features="()" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="05sandbox" label="Sandbox Designing" description="You are making a sandbox. You have enough sand to cover an area of 13 square yards." tutor_flag="tutor" model_file="05sandbox.brd" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="06bulletin" label="December Bulletin Board" description="Heather is class president and is in charge of making a new bulletin board every month. For December, the bulletin board has to be 5 sq. yards in order for her to fit all of the pictures that her class has drawn." tutor_flag="tutor" model_file="06bulletin.brd" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="07afghan" label="Afghan" description="Suzie is weaving an afghan for her grandmother's birthday. She only have enough mateial to weave an afghan that is 5 sq. yds, and she want it to be as long as possible." tutor_flag="tutor" model_file="07afghan.brd" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="08door" label="Door Designing" description="Carl is designing a new door for his room in wood shop. He has to figure out the exact area of his doorway so that he can buy the right amount of wood. His door must be 3 meters long." tutor_flag="tutor" model_file="08door.brd" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="09basement" label="Shampooing Basement" description="B.J. is shampooing the carpet in his basement. His basement is made up of three rooms. The width of each room is 3.25 yards, but the length of each room is different." tutor_flag="tutor" model_file="09basement.brd" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="09basement-pretest" label="09basement Pretest" description="09basement Pretest" tutor_flag="test" model_file="09basement-pretest.brd" selection_features="()" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="10basement" label="Buying Shampoos" description="B.J. is ready to check out with his carpet shampoo." tutor_flag="tutor" model_file="10basement.brd" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="10basement-pretest" label="10basement Pretest" description="10basement Pretest" tutor_flag="test" model_file="10basement-pretest.brd" selection_features="()" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="11rooms" label="Rooms" description="Adam is putting hardwood floors into three of his rooms in his house. He must figure out the area of each rooms before he can buy the wood. All three rooms are 5 meters wide, but have different lengths." tutor_flag="tutor" model_file="11rooms.brd" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="12wall" label="Painting Wall" description="Matthew is painting a 20-foot-long wall in his bedroom in red. In order for him to purchase the correct amount of paint, he needs to figure out the area of the wall." tutor_flag="tutor" model_file="12wall.brd" student_interface="6.16a.html">
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" occurrences="1"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="13ABDE" label="ABDE" description="Shape ABDE is a parallelogram, that means segment AB and DE are parallel to each other, and BD and AE are parallel to each other as well." tutor_flag="tutor" model_file="13ABDE.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="IdenExp" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="IdenExpPerimeter" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenAdjcSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindPerimeterPara" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="14FIRE" label="FIRE" description="In parallelogram FIRE, segment IR is parallel to segment FE and segment FI and RE are also parallel." tutor_flag="tutor" model_file="14FIRE.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="IdenExp" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindPerimeterPara" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenAdjcSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="IdenExpPerimeter" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="15LEAF" label="LEAF" description="In parallelogram LEAF, segment LE is parallel to segment FA and segment LF and EA are also parallel." tutor_flag="tutor" model_file="15LEAF.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="16ROFL" label="ROFL" description="In a parallelogram, ANY side can be the base as long as it is perpendicular to the height! In the parallelogram ROFL below, OP represents the altitude (or height). Both RO and LF can be used as the base; they are BOTH perpendicular to the height." tutor_flag="tutor" model_file="16ROFL.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="SolvHeight" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="SolvBase" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="17JKLM" label="JKLM" description="JKLM is a parallelogram." tutor_flag="tutor" model_file="17JKLM.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="SolvHeight" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="SolvBase" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="18ABC" label="ABC" description="In Hawaii, there is a hut called 'Pu'uhonua O Honaunau'. It means 'The Place of Refuge of Honaunau'. This was the home of the ruling chief." tutor_flag="tutor" model_file="18ABC.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaTri" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="19SPIN" label="SPIN" description="Two parallelograms you below are the same parallelogram, it is just that one is rotated clock wise 90 degrees from the other. Practice using different heights and base to calculate the area with the parallelogram SPIN!" tutor_flag="tutor" model_file="19SPIN.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="19SPIN-pretest" label="19 Spin Pretest" description="19 Spin Pretest" tutor_flag="test" model_file="19SPIN-pretest.brd" selection_features="()" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="20LAND" label="LAND" description="There is a land shaped like a parallelogram, and you are gathering information about it with a help of a partner. You measured Parallelogram LAND's both of the heights, but your lazy parter only measured one base." tutor_flag="tutor" model_file="20LAND.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="20LAND-pretest" label="20 Land Pretest" description="20 Land Pretest" tutor_flag="test" model_file="20LAND-pretest.brd" selection_features="()" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="21SKW" label="SKW" description="SKW is a triangle. KE is perpendicular to SE." tutor_flag="tutor" model_file="21SKW.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaTri" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="22EVO" label="EVO" description="EVO forms a triangle as shown. MO and EV are parallel to each other. That means MV is perpendicular to both MO and EV." tutor_flag="tutor" model_file="22EVO.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaTri" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="23NEAT" label="NEAT" description="NEAT is a parallelogram." tutor_flag="tutor" model_file="23NEAT.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="SolvBase" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindPerimeterPara" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="SolvHeight" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="24MILK" label="MILK and CUKI" description="Parallelogram MILK and Parallelogram CUKI look different but they have the same area." tutor_flag="tutor" model_file="24MILKCUKI.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="SolvHeight" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="25FROG" label="FROG" description="FROG is a parallelogram. Two heights are marked with dotted lines. 'Base #1' is perpendicular to 'Height #1', and 'Base #2' is perpendicular to 'Height #2'." tutor_flag="tutor" model_file="25FROG.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="SolvHeight" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="SolvBase" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="26GHI" label="GHI" description="Ki'I pohaku is the Hawaiian word for petroglyph - an ancient rock carving. The carving above can be found in Waikoloa, Hawaii. The body of the individual forms a triangle." tutor_flag="tutor" model_file="26GHI.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="26GHI-pretest" label="26 Ghi Pretest" description="26 Ghi Pretest" tutor_flag="test" model_file="26GHI-pretest.brd" selection_features="()" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="27SALT" label="SALT" description="SALT is a parallelogram." tutor_flag="tutor" model_file="27SALT.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="SolvHeight" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="SolvBase" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="28RHOM" label="RHOM" description="RHOM is a very special parallelogram called a Rhombus. It is a parallelogram where all 4 of its sides have the same length!" tutor_flag="tutor" model_file="28RHOM.brd" student_interface="6.16b.html">
+      <Skills>
+        <Skill name="-" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindPerimeterPara" category="6-16_area-of-polygons" occurrences="1"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" occurrences="1"/>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="6.16 HTML" label="6.16 Area of Polygons" description="Student will find the area of geometric figures with emphasis on triangles and quadrilaterals." status="active" picture="6.16.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="01dogRun" position="1" role="0"/>
+        <Problem name="02flag" position="2" role="0"/>
+        <Problem name="03walkway" position="3" role="0"/>
+        <Problem name="04tulip" position="4" role="0"/>
+        <Problem name="05sandbox" position="5" role="0"/>
+        <Problem name="06bulletin" position="6" role="0"/>
+        <Problem name="07afghan" position="7" role="0"/>
+        <Problem name="08door" position="8" role="0"/>
+        <Problem name="09basement" position="9" role="0"/>
+        <Problem name="10basement" position="10" role="0"/>
+        <Problem name="11rooms" position="11" role="0"/>
+        <Problem name="12wall" position="12" role="0"/>
+        <Problem name="13ABDE" position="13" role="0"/>
+        <Problem name="14FIRE" position="14" role="0"/>
+        <Problem name="15LEAF" position="15" role="0"/>
+        <Problem name="16ROFL" position="16" role="0"/>
+        <Problem name="17JKLM" position="17" role="0"/>
+        <Problem name="18ABC" position="18" role="0"/>
+        <Problem name="19SPIN" position="19" role="0"/>
+        <Problem name="20LAND" position="20" role="0"/>
+        <Problem name="21SKW" position="21" role="0"/>
+        <Problem name="22EVO" position="22" role="0"/>
+        <Problem name="23NEAT" position="23" role="0"/>
+        <Problem name="24MILK" position="24" role="0"/>
+        <Problem name="25FROG" position="25" role="0"/>
+        <Problem name="26GHI" position="26" role="0"/>
+        <Problem name="27SALT" position="27" role="0"/>
+        <Problem name="28RHOM" position="28" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" label="Decimal Division" description="Decimal Division" position="13"/>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" label="Decimal Multiplication" description="Decimal Multiplication" position="13"/>
+        <Skill name="IdenExpPerimeter" category="6-16_area-of-polygons" label="Identify expression for the perimeter" description="Identify expression for the perimeter" position="13"/>
+        <Skill name="IdenExp" category="6-16_area-of-polygons" label="Identify expression for a segment" description="Identify expression for a segment" position="13"/>
+        <Skill name="FindPerimeterPara" category="6-16_area-of-polygons" label="Find perimeter of a parallelogram" description="Find perimeter of a parallelogram" position="13"/>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" label="Identify base segment" description="Identify base segment" position="13"/>
+        <Skill name="idenAdjcSeg" category="6-16_area-of-polygons" label="Identify segment adjacent to the base" description="Identify segment adjacent to the base" position="13"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" label="Find area of a parallelogram" description="Find area of a parallelogram" position="13"/>
+        <Skill name="SolvHeight" category="6-16_area-of-polygons" label="Solve for height" description="Solve for height" position="13"/>
+        <Skill name="SolvBase" category="6-16_area-of-polygons" label="Solve for base" description="Solve for base" position="13"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" label="Identify height segment" description="Identify height segment" position="13"/>
+        <Skill name="FindAreaTri" category="6-16_area-of-polygons" label="Find area of a triangle" description="Find area of a triangle" position="13"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.B" label="B. Measurement" description="B. Measurement" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.B.2" label="B.2. Techniques, Tools and Formulas" description="B.2. Apply appropriate techniques, tools and formulas to determine measurements." standard_level="assessment_anchor" parent_name="PA.B" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.C" label="C. Geometry" description="C. Geometry" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Standard name="NCTM.D" label="D. Measurement" description="D. Measurement" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="5th" label="5th Grade" description="5th Grade"/>
+        <Grade name="6th" label="6th Grade" description="6th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.APC" label="Area, Perimeter, Circumference" description="Area, Perimeter, Circumference" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.6" label="6th Grade" description="6th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.6.G" label="6.G. Geometry" description="6.G. Geometry" standard_level="strand" parent_name="CommonCore.6" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+    <ProblemSet name="6.16 HTML Posttest" label="6.16 HTML Posttest" description="6.16 HTML Posttest" status="active" image_height="0" filler_height="0" team_size="1" selection_algorithm="random" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="04tulip-pretest" position="1" role="0"/>
+        <Problem name="10basement-pretest" position="2" role="0"/>
+        <Problem name="19SPIN-pretest" position="3" role="0"/>
+        <Problem name="26GHI-pretest" position="4" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" label="Decimal Multiplication" description="Decimal Multiplication" position="0"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" label="Decimal Division" description="Decimal Division" position="1"/>
+        <Skill name="-" category="6-16_area-of-polygons" label="-" description="-" position="2"/>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" label="Identify base segment" description="Identify base segment" position="3"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" label="Find area of a parallelogram" description="Find area of a parallelogram" position="4"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" label="Identify height segment" description="Identify height segment" position="5"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+      </Categories>
+    </ProblemSet>
+    <ProblemSet name="6.16 HTML Practice" label="6.16 HTML Practice" description="6.16 HTML Practice" status="active" image_height="0" filler_height="0" team_size="1" selection_algorithm="random" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="18ABC" position="1" role="0"/>
+        <Problem name="13ABDE" position="2" role="0"/>
+        <Problem name="07afghan" position="3" role="0"/>
+        <Problem name="06bulletin" position="4" role="0"/>
+        <Problem name="08door" position="5" role="0"/>
+        <Problem name="22EVO" position="6" role="0"/>
+        <Problem name="14FIRE" position="7" role="0"/>
+        <Problem name="25FROG" position="8" role="0"/>
+        <Problem name="17JKLM" position="9" role="0"/>
+        <Problem name="01dogRun" position="10" role="0"/>
+        <Problem name="15LEAF" position="11" role="0"/>
+        <Problem name="24MILK" position="12" role="0"/>
+        <Problem name="23NEAT" position="13" role="0"/>
+        <Problem name="12wall" position="14" role="0"/>
+        <Problem name="02flag" position="15" role="0"/>
+        <Problem name="28RHOM" position="16" role="0"/>
+        <Problem name="16ROFL" position="17" role="0"/>
+        <Problem name="11rooms" position="18" role="0"/>
+        <Problem name="27SALT" position="19" role="0"/>
+        <Problem name="05sandbox" position="20" role="0"/>
+        <Problem name="21SKW" position="21" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" label="Decimal Multiplication" description="Decimal Multiplication" position="0"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" label="Decimal Division" description="Decimal Division" position="1"/>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" label="Identify base segment" description="Identify base segment" position="2"/>
+        <Skill name="-" category="6-16_area-of-polygons" label="-" description="-" position="3"/>
+        <Skill name="IdenExp" category="6-16_area-of-polygons" label="Identify expression for a segment" description="Identify expression for a segment" position="4"/>
+        <Skill name="IdenExpPerimeter" category="6-16_area-of-polygons" label="Identify expression for the perimeter" description="Identify expression for the perimeter" position="5"/>
+        <Skill name="idenAdjcSeg" category="6-16_area-of-polygons" label="Identify segment adjacent to the base" description="Identify segment adjacent to the base" position="6"/>
+        <Skill name="FindPerimeterPara" category="6-16_area-of-polygons" label="Find perimeter of a parallelogram" description="Find perimeter of a parallelogram" position="7"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" label="Find area of a parallelogram" description="Find area of a parallelogram" position="8"/>
+        <Skill name="SolvHeight" category="6-16_area-of-polygons" label="Solve for height" description="Solve for height" position="9"/>
+        <Skill name="SolvBase" category="6-16_area-of-polygons" label="Solve for base" description="Solve for base" position="10"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" label="Identify height segment" description="Identify height segment" position="11"/>
+        <Skill name="FindAreaTri" category="6-16_area-of-polygons" label="Find area of a triangle" description="Find area of a triangle" position="12"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+      </Categories>
+    </ProblemSet>
+    <ProblemSet name="6.16 HTML Pretest" label="6.16 HTML Pretest" description="6.16 HTML Pretest" status="active" image_height="0" filler_height="0" team_size="1" selection_algorithm="random" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="03walkway-pretest" position="1" role="0"/>
+        <Problem name="09basement-pretest" position="2" role="0"/>
+        <Problem name="20LAND-pretest" position="3" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="DecimalMultiplication" category="6.16a_AreaofPolygons" label="Decimal Multiplication" description="Decimal Multiplication" position="0"/>
+        <Skill name="DecimalDivision" category="6.16a_AreaofPolygons" label="Decimal Division" description="Decimal Division" position="1"/>
+        <Skill name="idenBaseSeg" category="6-16_area-of-polygons" label="Identify base segment" description="Identify base segment" position="2"/>
+        <Skill name="-" category="6-16_area-of-polygons" label="-" description="-" position="3"/>
+        <Skill name="FindAreaPara" category="6-16_area-of-polygons" label="Find area of a parallelogram" description="Find area of a parallelogram" position="4"/>
+        <Skill name="idenHeightSeg" category="6-16_area-of-polygons" label="Identify height segment" description="Identify height segment" position="5"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="6.16.png" path="Assets"/>
+    <Asset name="mathtutor_6.16_full.png" path="Assets"/>
+    <Asset name="00intro-pretest.brd" path="FinalBRDs"/>
+    <Asset name="00intro.brd" path="FinalBRDs"/>
+    <Asset name="00intro2-pretest.brd" path="FinalBRDs"/>
+    <Asset name="00intro2.brd" path="FinalBRDs"/>
+    <Asset name="01dogRun.brd" path="FinalBRDs"/>
+    <Asset name="02flag.brd" path="FinalBRDs"/>
+    <Asset name="03walkway-pretest.brd" path="FinalBRDs"/>
+    <Asset name="03walkway.brd" path="FinalBRDs"/>
+    <Asset name="04tulip-pretest.brd" path="FinalBRDs"/>
+    <Asset name="04tulip.brd" path="FinalBRDs"/>
+    <Asset name="05sandbox.brd" path="FinalBRDs"/>
+    <Asset name="06bulletin.brd" path="FinalBRDs"/>
+    <Asset name="07afghan.brd" path="FinalBRDs"/>
+    <Asset name="08door.brd" path="FinalBRDs"/>
+    <Asset name="09basement-pretest.brd" path="FinalBRDs"/>
+    <Asset name="09basement.brd" path="FinalBRDs"/>
+    <Asset name="10basement-pretest.brd" path="FinalBRDs"/>
+    <Asset name="10basement.brd" path="FinalBRDs"/>
+    <Asset name="11rooms.brd" path="FinalBRDs"/>
+    <Asset name="12wall.brd" path="FinalBRDs"/>
+    <Asset name="13ABDE.brd" path="FinalBRDs"/>
+    <Asset name="14FIRE.brd" path="FinalBRDs"/>
+    <Asset name="15LEAF.brd" path="FinalBRDs"/>
+    <Asset name="16ROFL.brd" path="FinalBRDs"/>
+    <Asset name="17JKLM.brd" path="FinalBRDs"/>
+    <Asset name="18ABC.brd" path="FinalBRDs"/>
+    <Asset name="19SPIN-pretest.brd" path="FinalBRDs"/>
+    <Asset name="19SPIN.brd" path="FinalBRDs"/>
+    <Asset name="20LAND-pretest.brd" path="FinalBRDs"/>
+    <Asset name="20LAND.brd" path="FinalBRDs"/>
+    <Asset name="21SKW.brd" path="FinalBRDs"/>
+    <Asset name="22EVO.brd" path="FinalBRDs"/>
+    <Asset name="23NEAT.brd" path="FinalBRDs"/>
+    <Asset name="24MILK.brd" path="FinalBRDs"/>
+    <Asset name="24MILKCUKI.brd" path="FinalBRDs"/>
+    <Asset name="25FROG.brd" path="FinalBRDs"/>
+    <Asset name="26GHI-pretest.brd" path="FinalBRDs"/>
+    <Asset name="26GHI.brd" path="FinalBRDs"/>
+    <Asset name="27SALT.brd" path="FinalBRDs"/>
+    <Asset name="28RHOM.brd" path="FinalBRDs"/>
+    <Asset name="6.16a.html" path="HTML"/>
+    <Asset name="6.16b.html" path="HTML"/>
+    <Asset name="00dogRun.png" path="HTML/Assets"/>
+    <Asset name="01dogRun.png" path="HTML/Assets"/>
+    <Asset name="02pirateFlag.png" path="HTML/Assets"/>
+    <Asset name="03walkway.png" path="HTML/Assets"/>
+    <Asset name="04tulipGarden.png" path="HTML/Assets"/>
+    <Asset name="05sandbox.png" path="HTML/Assets"/>
+    <Asset name="06bulletin.png" path="HTML/Assets"/>
+    <Asset name="07afghan.png" path="HTML/Assets"/>
+    <Asset name="08door.png" path="HTML/Assets"/>
+    <Asset name="09basement.png" path="HTML/Assets"/>
+    <Asset name="10basement.png" path="HTML/Assets"/>
+    <Asset name="11rooms.png" path="HTML/Assets"/>
+    <Asset name="12wallPainting.png" path="HTML/Assets"/>
+    <Asset name="13ABDE.png" path="HTML/Assets"/>
+    <Asset name="14FIRE.png" path="HTML/Assets"/>
+    <Asset name="15LEAF.png" path="HTML/Assets"/>
+    <Asset name="16ROFL.png" path="HTML/Assets"/>
+    <Asset name="17JKLM.png" path="HTML/Assets"/>
+    <Asset name="18ABC.png" path="HTML/Assets"/>
+    <Asset name="18HUT.png" path="HTML/Assets"/>
+    <Asset name="19SPIN.png" path="HTML/Assets"/>
+    <Asset name="20LAND.png" path="HTML/Assets"/>
+    <Asset name="21SKW.png" path="HTML/Assets"/>
+    <Asset name="22EVO.png" path="HTML/Assets"/>
+    <Asset name="23NEAT.png" path="HTML/Assets"/>
+    <Asset name="24MILKCUKI.png" path="HTML/Assets"/>
+    <Asset name="25FROG.png" path="HTML/Assets"/>
+    <Asset name="26GHI.png" path="HTML/Assets"/>
+    <Asset name="26graph.png" path="HTML/Assets"/>
+    <Asset name="26petroglyph.png" path="HTML/Assets"/>
+    <Asset name="27SALT.png" path="HTML/Assets"/>
+    <Asset name="28RHOM.png" path="HTML/Assets"/>
+    <Asset name="6.16.css" path="HTML/Assets"/>
+    <Asset name="6-16a_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="6-16a_finalTemplate.brd" path="MassProduction"/>
+    <Asset name="6-16a_translatable.txt" path="MassProduction"/>
+    <Asset name="6-16a.brd" path="MassProduction"/>
+    <Asset name="6-16a.txt" path="MassProduction"/>
+    <Asset name="6-16b-gloss_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="6-16b-gloss_finalTemplate.brd" path="MassProduction"/>
+    <Asset name="6-16b-gloss_translatable.txt" path="MassProduction"/>
+    <Asset name="6-16b-glossary.txt" path="MassProduction"/>
+    <Asset name="6-16b.brd" path="MassProduction"/>
+    <Asset name="6-16b.txt" path="MassProduction"/>
+    <Asset name="what is 6-16b-glossary.txt" path="MassProduction"/>
+  </Assets>
+</Package>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>6.26 Least Common Multiple</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/CTAT.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/Mathtutor.css">
+    <link rel="stylesheet" type="text/css" href="Assets/6.26.css">
+
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/jquery.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctat.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctatloader.js"></script>
+  </head>
+
+  <body>
+    <main class="CTATTutor">
+      <h1>Tutor</h1>
+
+      <section class="CTATProblemSolving">
+        <h2>Problem Solving</h2>
+
+        <section class="CTATProblem third">
+          <h3>Problem</h3>
+
+          <div id="problemstatement" class="CTATTextField"></div>
+          <div class="CTATTextField">*Enter the multiples of each number, in order. Then click the checkbox to the right of a multiple if the number is a common multiple.</div>
+        </section>
+
+        <section class="CTATSolution twothirds">
+          <h3>Solution</h3>
+
+          <div class="multiples">
+            <div class="list">
+              <div class="CTATTextField">Multiples of <span id="w1" class="CTATTextField"></span> in order:</div>
+              <ul>
+                <li>
+                  <div id="w1m1" class="CTATTextInput" tabindex="1"></div>
+                  <div id="w1cb1" name="w1cb1" class="CTATCheckBox" tabindex="21"></div>
+                </li>
+                <li>
+                  <div id="w1m2" class="CTATTextInput" tabindex="2"></div>
+                  <div id="w1cb2" name="w1cb2" class="CTATCheckBox" tabindex="22"></div>
+                </li>
+                <li>
+                  <div id="w1m3" class="CTATTextInput" tabindex="3"></div>
+                  <div id="w1cb3" name="w1cb3" class="CTATCheckBox" tabindex="23"></div>
+                </li>
+                <li>
+                  <div id="w1m4" class="CTATTextInput" tabindex="4"></div>
+                  <div id="w1cb4" name="w1cb4" class="CTATCheckBox" tabindex="24"></div>
+                </li>
+                <li>
+                  <div id="w1m5" class="CTATTextInput" tabindex="5"></div>
+                  <div id="w1cb5" name="w1cb5" class="CTATCheckBox" tabindex="25"></div>
+                </li>
+                <li>
+                  <div id="w1m6" class="CTATTextInput" tabindex="6"></div>
+                  <div id="w1cb6" name="w1cb6" class="CTATCheckBox" tabindex="26"></div>
+                </li>
+                <li>
+                  <div id="w1m7" class="CTATTextInput" tabindex="7"></div>
+                  <div id="w1cb7" name="w1cb7" class="CTATCheckBox" tabindex="27"></div>
+                </li>
+                <li>
+                  <div id="w1m8" class="CTATTextInput" tabindex="8"></div>
+                  <div id="w1cb8" name="w1cb8" class="CTATCheckBox" tabindex="28"></div>
+                </li>
+                <li>
+                  <div id="w1m9" class="CTATTextInput" tabindex="9"></div>
+                  <div id="w1cb9" name="w1cb9" class="CTATCheckBox" tabindex="29"></div>
+                </li>
+                <li>
+                  <div id="w1m0" class="CTATTextInput" tabindex="10"></div>
+                  <div id="w1cb10" name="w1cb10" class="CTATCheckBox" tabindex="30"></div>
+                </li>
+              </ul>
+            </div>
+            <div class="list">
+              <div class="CTATTextField">Multiples of <span id="w2" class="CTATTextField"></span> in order:</div>
+              <ul>
+                <li>
+                  <div id="w2m1" class="CTATTextInput" tabindex="11"></div>
+                  <div id="w2cb1" name="w2cb1" class="CTATCheckBox" tabindex="31"></div>
+                </li>
+                <li>
+                  <div id="w2m2" class="CTATTextInput" tabindex="12"></div>
+                  <div id="w2cb2" name="w2cb2" class="CTATCheckBox" tabindex="32"></div>
+                </li>
+                <li>
+                  <div id="w2m3" class="CTATTextInput" tabindex="13"></div>
+                  <div id="w2cb3" name="w2cb3" class="CTATCheckBox" tabindex="33"></div>
+                </li>
+                <li>
+                  <div id="w2m4" class="CTATTextInput" tabindex="14"></div>
+                  <div id="w2cb4" name="w2cb4" class="CTATCheckBox" tabindex="34"></div>
+                </li>
+                <li>
+                  <div id="w2m5" class="CTATTextInput" tabindex="15"></div>
+                  <div id="w2cb5" name="w2cb5" class="CTATCheckBox" tabindex="35"></div>
+                </li>
+                <li>
+                  <div id="w2m6" class="CTATTextInput" tabindex="16"></div>
+                  <div id="w2cb6" name="w2cb6" class="CTATCheckBox" tabindex="36"></div>
+                </li>
+                <li>
+                  <div id="w2m7" class="CTATTextInput" tabindex="17"></div>
+                  <div id="w2cb7" name="w2cb7" class="CTATCheckBox" tabindex="37"></div>
+                </li>
+                <li>
+                  <div id="w2m8" class="CTATTextInput" tabindex="18"></div>
+                  <div id="w2cb8" name="w2cb8" class="CTATCheckBox" tabindex="38"></div>
+                </li>
+                <li>
+                  <div id="w2m9" class="CTATTextInput" tabindex="19"></div>
+                  <div id="w2cb9" name="w2cb9" class="CTATCheckBox" tabindex="39"></div>
+                </li>
+                <li>
+                  <div id="w2m0" class="CTATTextInput" tabindex="20"></div>
+                  <div id="w2cb10" name="w2cb10" class="CTATCheckBox" tabindex="40"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="result">
+            <span id="leastcommonmult" class="CTATTextField"></span>
+            <div id="lcm" class="CTATTextInput"></div>
+          </div>
+        </section>
+      </section>
+
+      <section class="CTATTools">
+        <h2>Tools</h2>
+
+        <div class="CTATButtons">
+          <div class="CTATDoneButton"></div>
+          <div class="CTATHintButton"></div>
+        </div>
+
+        <section class="CTATHints">
+          <h3>Hints</h3>
+          <div class="CTATHintWindow"></div>
+        </section>
+
+        <section class="CTATSkills">
+          <h3>Skills</h3>
+          <div class="CTATSkillWindow"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

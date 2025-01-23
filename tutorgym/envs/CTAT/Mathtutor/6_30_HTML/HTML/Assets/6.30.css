@@ -1,0 +1,38 @@
+.CTATSolution {
+  text-align: center;
+}
+.table {
+  margin: 0 auto;
+  display: table;
+}
+.row {
+  display: table-row;
+  text-align: center;
+}
+.cell {
+  display: table-cell;
+  padding: 5px 3px;
+}
+.row:first-child, .cell:first-child {
+  font-weight: bold;
+}
+.CTATTextInput {
+  width: 100%;
+}
+.sentences {
+  margin: 12px auto;
+  display: table;
+}
+.sentences div.line {
+  display: table-row;
+}
+.sentences span {
+  display: table-cell;
+  padding: 3px;
+}
+.sentences span:first-child {
+  text-align: right;
+}
+.sentences .CTATTextInput {
+  width: 50px;
+}

@@ -1,0 +1,1781 @@
+Problem Name	00intro
+%(startStateNodeName)%	done
+%(graphic)%	00dogRun
+%(statement)%	You work at a dog kennel. When a dog comes to the kennel, he gets his own fenced run. The area of a run for a small dog should be 6 square meters. Dogs like to have long runs, so you need to decide which of the following widths will give the runs the longest length.
+%(question1)%	(1) What is the length of the run when the width is 1 meter?
+%(question2)%	(2) You increase the width to 1.5 m, what will the length be?
+%(question3)%	(3) You decrease the width to 0.5 m, what will the length be?
+%(heading1)%	area of the run
+%(heading2)%	width of the run
+%(heading3)%	length of the run
+%(heading4)%	longest run?
+%(unit1)%	sq. meters
+%(unit2)%	meters (m)
+%(unit3)%	meters (m)
+%(unit4)%	-
+%(Variable1)%	---
+%(Variable2)%	BC
+%(Variable3)%	AB
+%(Variable4)%	---
+	
+%(Ans1_a)%	6
+%(Ans2_a)%	6
+%(Ans3_a)%	6
+	
+%(Ans1_b)%	1
+%(Ans2_b)%	1.5
+%(Ans3_b)%	0.5
+	
+%(Ans1_c)%	6
+%(Ans2_c)%	4
+%(Ans3_c)%	12
+%(radio_ans)%	3
+%(radio_mm)%	1
+	
+%(Ans1a_hint1)%	What do you already know from the scenario?
+%(Ans1a_hint2)%	To work through question 1, you must first find the area of the run.
+%(Ans1a_hint3)%	Try reading through the question again to find the total area for a small dog to run.
+%(Ans1a_hint4)%	Try entering '6' in the highlighted field.
+%(Ans1b_hint1)%	What information is provided in this question?
+%(Ans1b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans1b_hint3)%	What is the width of the run?
+%(Ans1b_hint4)%	Try typing 1 into the highlighted space.
+%(Ans1c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans1c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans1c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans1c_hint4)%	After you plug in the values, your formula should read '6 = L * 1' Solve for L.
+	
+%(Ans2a_hint1)%	What do you already know from the scenario?
+%(Ans2a_hint2)%	To work through question 2, you must first find the area of the run.
+%(Ans2a_hint3)%	Try reading through the question again to find the total area for a small dog to run.
+%(Ans2a_hint4)%	Try entering '6' in the highlighted field.
+%(Ans2b_hint1)%	What information is provided in this question?
+%(Ans2b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans2b_hint3)%	What is the width of the run?
+%(Ans2b_hint4)%	Try typing 1.5 into the highlighted space.
+%(Ans2c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans2c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans2c_hint3)%	Plug the given values for the Area (A) and the Width (W) intot he rectangle formula, then solve for Length (L).
+%(Ans2c_hint4)%	After you plug in the values, your formula should read '6 = L * 1.5' Solve for L.
+	
+%(Ans3a_hint1)%	What do you already know from the scenario?
+%(Ans3a_hint2)%	To work through question 3, you must first find the area of the run.
+%(Ans3a_hint3)%	Try reading through the question again to find the total area for a small dog to run.
+%(Ans3a_hint4)%	Try entering '6' in the highlighted field.
+%(Ans3b_hint1)%	What information is provided in this question?
+%(Ans3b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans3b_hint3)%	What is the width of the run?
+%(Ans3b_hint4)%	Try typing 0.5 into the highlighted space.
+%(Ans3c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans3c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans3c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans3c_hint4)%	After you plug in the values, your formula should read '6 = L * 0.5' Solve for L.
+	
+%(radio_hint1)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(radio_hint2)%	12 yds is longer than 6 yds. Therefore, is 6 yds the longest length?  Enter "yes" if it is or "no" if it is not.
+%(radio_hint3)%	Please enter "no" as the response.
+	
+%(goodjob)%	Great job! You've successfully completed this problem!
+%(DONE_hint)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	n/a
+%(bug2)%	n/a
+%(bug3)%	n/a
+%(bug4)%	n/a
+%(bug5)%	n/a
+%(bug6)%	n/a
+%(error_message)%	n/a
+%(visible1)%	TRUE
+%(7137235941890575246)%	What information is provided in this question?
+%(-3741766123344482753)%	What is the width of the run?
+%(-6901952857503427095)%	What do you already know from the scenario?
+%(5645093929203651144)%	Try reading through the question again to find the total area for a small dog to run.
+%(7906032719770737336)%	To work through question 1, you must first find the area of the run.
+%(8105585789468547910)%	After you plug in the values, your formula should read '6 = L * 0.5' Solve for L.
+%(-7753282996957717194)%	Please enter 'n/a' in the highlighted field.
+%(-3741765123324482718)%	Try reading through the question one more time, what is already stated?
+%(8105580789376547759)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-3741763123312482704)%	Try typing 1.5 into the highlighted space.
+%(-7760095407614420741)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7906031719766737317)%	Try reading through the question again to find the total area for a small dog to run.
+%(-6901949857471427038)%	To work through question 3, you must first find the area of the run.
+%(-6734469513105593342)%	Please proceed to the next problem by clicking the "Done" button.
+%(-4099230463346982632)%	Great job! You've successfully completed this problem!
+%(2866120199660265791)%	Try reading through the question one more time, what is already stated?
+%(7906030719758737322)%	Try entering '6' in the highlighted field.
+%(8105579789368547676)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(5162537381742577495)%	Please enter 'n/a' in the highlighted field.
+%(-3269483932975333546)%	Plug the given values for the Area (A) and the Width (W) intot he rectangle formula, then solve for Length (L).
+%(-8865737956518473063)%	Please enter 'n/a' in the highlighted field.
+%(7137232941922575413)%	Try reading through the question one more time, what is already stated?
+%(5645092929199651189)%	To work through question 2, you must first find the area of the run.
+%(7906033719794737403)%	What do you already know from the scenario?
+%(7137233941926575368)%	What is the width of the run?
+%(2866121199680265826)%	What is the width of the run?
+%(-7760100407646420812)%	After you plug in the values, your formula should read '6 = L * 1' Solve for L.
+%(2866119199652265772)%	What information is provided in this question?
+%(5645095929167651022)%	What do you already know from the scenario?
+%(5645090929203651159)%	Try entering '6' in the highlighted field.
+%(2577276927472933268)%	Please enter 'n/a' in the highlighted field.
+%(2866122199688265853)%	Try typing 1 into the highlighted space.
+%(7531104780070120008)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(-7760094407610420738)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(-5166532556208710060)%	No, this is not correct.
+%(-4496519548807638142)%	Please enter 'n/a' in the highlighted field.
+%(7531105780030119883)%	12 yds is longer than 6 yds. Therefore, is 6 yds the longest length?  Enter "yes" if it is or "no" if it is not.
+%(-3269490933015333527)%	After you plug in the values, your formula should read '6 = L * 1.5' Solve for L.
+%(-7760097407642420827)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-6901947857459427024)%	Try entering '6' in the highlighted field.
+%(-3269485932971333456)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(7531106780034119886)%	Please enter "no" as the response.
+%(6940473221322363212)%	n/a
+%(-6901950857491427073)%	Try reading through the question again to find the total area for a small dog to run.
+%(8105578789364547673)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7137230941926575383)%	Try typing 0.5 into the highlighted space.
+%(-3741768123356482775)%	What information is provided in this question?
+%(-4839436666918436389)%	Please enter 'n/a' in the highlighted field.
+%(-3269484932979333549)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+Problem Name	01dogRun
+%(startStateNodeName)%	state8
+%(graphic)%	01dogRun
+%(statement)%	At the same dog kennel you work, they use larger fenced run for larger dogs;  they should have an area of 10 square meters. Dogs like to have long runs, so you need to decide which of the following widths will give the runs the longest length. 
+%(question1)%	(1) What will the length of the run be when the width is 2 meters?
+%(question2)%	(2) You decrease the width to 1.25 m, what will the length be?
+%(question3)%	(3) You decrease the width to 0.5 m, what will the length be?
+%(heading1)%	area of the run
+%(heading2)%	width of the run
+%(heading3)%	length of the run
+%(heading4)%	longest run?
+%(unit1)%	sq. meters
+%(unit2)%	meters (m)
+%(unit3)%	meters (m)
+%(unit4)%	-
+%(Variable1)%	---
+%(Variable2)%	BC
+%(Variable3)%	AB
+%(Variable4)%	---
+	
+%(Ans1_a)%	10
+%(Ans2_a)%	10
+%(Ans3_a)%	10
+	
+%(Ans1_b)%	2
+%(Ans2_b)%	1.25
+%(Ans3_b)%	0.5
+	
+%(Ans1_c)%	5
+%(Ans2_c)%	8
+%(Ans3_c)%	20
+%(radio_ans)%	3
+%(radio_mm)%	1
+	
+%(Ans1a_hint1)%	What do you already know from the scenario?
+%(Ans1a_hint2)%	To work through question 1, you must first find the area of the run.
+%(Ans1a_hint3)%	Try reading through the question again to find the total area for a large dog to run.
+%(Ans1a_hint4)%	Try entering '10' in the highlighted field.
+%(Ans1b_hint1)%	What information is provided in this question?
+%(Ans1b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans1b_hint3)%	What is the width of the run?
+%(Ans1b_hint4)%	Try typing 2 into the highlighted space.
+%(Ans1c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans1c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans1c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans1c_hint4)%	After you plug in the values, your formula should read '10 = L * 2' Solve for L.
+	
+%(Ans2a_hint1)%	What do you already know from the scenario?
+%(Ans2a_hint2)%	To work through question 2, you must first find the area of the run.
+%(Ans2a_hint3)%	Try reading through the question again to find the total area for a large dog to run.
+%(Ans2a_hint4)%	Try entering '10' in the highlighted field.
+%(Ans2b_hint1)%	What information is provided in this question?
+%(Ans2b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans2b_hint3)%	What is the width of the run?
+%(Ans2b_hint4)%	Try typing 1.25 into the highlighted space.
+%(Ans2c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans2c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans2c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans2c_hint4)%	After you plug in the values, your formula should read '10 = L * 1.25' Solve for L.
+	
+%(Ans3a_hint1)%	What do you already know from the scenario?
+%(Ans3a_hint2)%	To work through question 3, you must first find the area of the run.
+%(Ans3a_hint3)%	Try reading through the question again to find the total area for a large dog to run.
+%(Ans3a_hint4)%	Try entering '10' in the highlighted field.
+%(Ans3b_hint1)%	What information is provided in this question?
+%(Ans3b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans3b_hint3)%	What is the width of the run?
+%(Ans3b_hint4)%	Try typing 0.5 into the highlighted space.
+%(Ans3c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans3c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans3c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans3c_hint4)%	After you plug in the values, your formula should read '10 = L * 0.5' Solve for L.
+	
+%(radio_hint1)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(radio_hint2)%	20 yds is longer than 5 yds. Therefore, is 5 yds the longest length?  Enter "yes" if it is or "no" if it is not.
+%(radio_hint3)%	Please enter "no" as the response.
+	
+%(goodjob)%	Great job! You've successfully completed this problem!
+%(DONE_hint)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	n/a
+%(bug2)%	n/a
+%(bug3)%	n/a
+%(bug4)%	n/a
+%(bug5)%	n/a
+%(bug6)%	n/a
+%(error_message)%	n/a
+%(visible1)%	TRUE
+%(7137235941890575246)%	What information is provided in this question?
+%(-3741766123344482753)%	What is the width of the run?
+%(-6901952857503427095)%	What do you already know from the scenario?
+%(5645093929203651144)%	Try reading through the question again to find the total area for a large dog to run.
+%(7906032719770737336)%	To work through question 1, you must first find the area of the run.
+%(8105585789468547910)%	After you plug in the values, your formula should read '10 = L * 0.5' Solve for L.
+%(-7753282996957717194)%	Please enter 'n/a' in the highlighted field.
+%(-3741765123324482718)%	Try reading through the question one more time, what is already stated?
+%(8105580789376547759)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-3741763123312482704)%	Try typing 1.25 into the highlighted space.
+%(-7760095407614420741)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7906031719766737317)%	Try reading through the question again to find the total area for a large dog to run.
+%(-6901949857471427038)%	To work through question 3, you must first find the area of the run.
+%(-6734469513105593342)%	Please proceed to the next problem by clicking the "Done" button.
+%(-4099230463346982632)%	Great job! You've successfully completed this problem!
+%(2866120199660265791)%	Try reading through the question one more time, what is already stated?
+%(7906030719758737322)%	Try entering '10' in the highlighted field.
+%(8105579789368547676)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(5162537381742577495)%	Please enter 'n/a' in the highlighted field.
+%(-3269483932975333546)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(-8865737956518473063)%	Please enter 'n/a' in the highlighted field.
+%(7137232941922575413)%	Try reading through the question one more time, what is already stated?
+%(5645092929199651189)%	To work through question 2, you must first find the area of the run.
+%(7906033719794737403)%	What do you already know from the scenario?
+%(7137233941926575368)%	What is the width of the run?
+%(2866121199680265826)%	What is the width of the run?
+%(-7760100407646420812)%	After you plug in the values, your formula should read '10 = L * 2' Solve for L.
+%(2866119199652265772)%	What information is provided in this question?
+%(5645095929167651022)%	What do you already know from the scenario?
+%(5645090929203651159)%	Try entering '10' in the highlighted field.
+%(2577276927472933268)%	Please enter 'n/a' in the highlighted field.
+%(2866122199688265853)%	Try typing 2 into the highlighted space.
+%(7531104780070120008)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(-7760094407610420738)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(-5166532556208710060)%	No, this is not correct.
+%(-4496519548807638142)%	Please enter 'n/a' in the highlighted field.
+%(7531105780030119883)%	20 yds is longer than 5 yds. Therefore, is 5 yds the longest length?  Enter "yes" if it is or "no" if it is not.
+%(-3269490933015333527)%	After you plug in the values, your formula should read '10 = L * 1.25' Solve for L.
+%(-7760097407642420827)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-6901947857459427024)%	Try entering '10' in the highlighted field.
+%(-3269485932971333456)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(7531106780034119886)%	Please enter "no" as the response.
+%(6940473221322363212)%	n/a
+%(-6901950857491427073)%	Try reading through the question again to find the total area for a large dog to run.
+%(8105578789364547673)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7137230941926575383)%	Try typing 0.5 into the highlighted space.
+%(-3741768123356482775)%	What information is provided in this question?
+%(-4839436666918436389)%	Please enter 'n/a' in the highlighted field.
+%(-3269484932979333549)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+Problem Name	02flag
+%(startStateNodeName)%	state7
+%(graphic)%	02pirateFlag
+%(statement)%	You are making a flag for the school play. The flag needs to have an area of 3 square yards. You can buy fabric in different widths. Figure out how long the fabric piece would need to be for the different widths given. Which width will give you the longest flag?
+%(question1)%	(1) If the width of the fabric is 1 yard, what length of fabric will you need?
+%(question2)%	(2) What if the width of the fabric is 0.75 yds?
+%(question3)%	(3) What if the width of the fabric is 1.5 yds?
+%(heading1)%	area of the flag
+%(heading2)%	width of the fabric
+%(heading3)%	length of the fabric
+%(heading4)%	longest flag?
+%(unit1)%	sq. yards
+%(unit2)%	yards (yds)
+%(unit3)%	yards (yds)
+%(unit4)%	-
+%(Variable1)%	---
+%(Variable2)%	BC
+%(Variable3)%	AB
+%(Variable4)%	---
+	
+%(Ans1_a)%	3
+%(Ans2_a)%	3
+%(Ans3_a)%	3
+	
+%(Ans1_b)%	1
+%(Ans2_b)%	0.75
+%(Ans3_b)%	1.5
+	
+%(Ans1_c)%	3
+%(Ans2_c)%	4
+%(Ans3_c)%	2
+%(radio_ans)%	2
+%(radio_mm)%	1
+	
+%(Ans1a_hint1)%	What do you already know from the scenario?
+%(Ans1a_hint2)%	To work through question 1, you must first find the area of the flag.
+%(Ans1a_hint3)%	Try reading through the question again to find the total area of the flag.
+%(Ans1a_hint4)%	Try entering '3' in the highlighted field.
+%(Ans1b_hint1)%	What information is provided in this question?
+%(Ans1b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans1b_hint3)%	What is the width of the flag?
+%(Ans1b_hint4)%	Try typing 1 into the highlighted space.
+%(Ans1c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans1c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans1c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans1c_hint4)%	After you plug in the values, your formula should read '3 = L * 1' Solve for L.
+	
+%(Ans2a_hint1)%	What do you already know from the scenario?
+%(Ans2a_hint2)%	To work through question 2, you must first find the area of the flag.
+%(Ans2a_hint3)%	Try reading through the question again to find the total area of the flag.
+%(Ans2a_hint4)%	Try entering '3' in the highlighted field.
+%(Ans2b_hint1)%	What information is provided in this question?
+%(Ans2b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans2b_hint3)%	What is the width of the flag?
+%(Ans2b_hint4)%	Try typing 0.75 into the highlighted space.
+%(Ans2c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans2c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans2c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans2c_hint4)%	After you plug in the values, your formula should read '3 = L * 0.75' Solve for L.
+	
+%(Ans3a_hint1)%	What do you already know from the scenario?
+%(Ans3a_hint2)%	To work through question 3, you must first find the area of the flag.
+%(Ans3a_hint3)%	Try reading through the question again to find the total area of the flag.
+%(Ans3a_hint4)%	Try entering '3' in the highlighted field.
+%(Ans3b_hint1)%	What information is provided in this question?
+%(Ans3b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans3b_hint3)%	What is the width of the flag?
+%(Ans3b_hint4)%	Try typing 1.5 into the highlighted space.
+%(Ans3c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans3c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans3c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans3c_hint4)%	After you plug in the values, your formula should read '3 = L * 1.5' Solve for L.
+	
+%(radio_hint1)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(radio_hint2)%	4 yds is longer than 3 yds. Therefore, is 3 yds the longest length?  Enter "yes" if it is or "no" if it is not.
+%(radio_hint3)%	Please enter "no" as the response.
+	
+%(goodjob)%	Great job! You've successfully completed this problem!
+%(DONE_hint)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	n/a
+%(bug2)%	n/a
+%(bug3)%	n/a
+%(bug4)%	n/a
+%(bug5)%	n/a
+%(bug6)%	n/a
+%(error_message)%	n/a
+%(visible1)%	TRUE
+%(7137235941890575246)%	What information is provided in this question?
+%(-3741766123344482753)%	What is the width of the flag?
+%(-6901952857503427095)%	What do you already know from the scenario?
+%(5645093929203651144)%	Try reading through the question again to find the total area of the flag.
+%(7906032719770737336)%	To work through question 1, you must first find the area of the flag.
+%(8105585789468547910)%	After you plug in the values, your formula should read '3 = L * 1.5' Solve for L.
+%(-7753282996957717194)%	Please enter 'n/a' in the highlighted field.
+%(-3741765123324482718)%	Try reading through the question one more time, what is already stated?
+%(8105580789376547759)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-3741763123312482704)%	Try typing 0.75 into the highlighted space.
+%(-7760095407614420741)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7906031719766737317)%	Try reading through the question again to find the total area of the flag.
+%(-6901949857471427038)%	To work through question 3, you must first find the area of the flag.
+%(-6734469513105593342)%	Please proceed to the next problem by clicking the "Done" button.
+%(-4099230463346982632)%	Great job! You've successfully completed this problem!
+%(2866120199660265791)%	Try reading through the question one more time, what is already stated?
+%(7906030719758737322)%	Try entering '3' in the highlighted field.
+%(8105579789368547676)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(5162537381742577495)%	Please enter 'n/a' in the highlighted field.
+%(-3269483932975333546)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(-8865737956518473063)%	Please enter 'n/a' in the highlighted field.
+%(7137232941922575413)%	Try reading through the question one more time, what is already stated?
+%(5645092929199651189)%	To work through question 2, you must first find the area of the flag.
+%(7906033719794737403)%	What do you already know from the scenario?
+%(7137233941926575368)%	What is the width of the flag?
+%(2866121199680265826)%	What is the width of the flag?
+%(-7760100407646420812)%	After you plug in the values, your formula should read '3 = L * 1' Solve for L.
+%(2866119199652265772)%	What information is provided in this question?
+%(5645095929167651022)%	What do you already know from the scenario?
+%(5645090929203651159)%	Try entering '3' in the highlighted field.
+%(2577276927472933268)%	Please enter 'n/a' in the highlighted field.
+%(2866122199688265853)%	Try typing 1 into the highlighted space.
+%(7531104780070120008)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(-7760094407610420738)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(-5166532556208710060)%	No, this is not correct.
+%(-4496519548807638142)%	Please enter 'n/a' in the highlighted field.
+%(7531105780030119883)%	4 yds is longer than 3 yds. Therefore, is 3 yds the longest length?  Enter "yes" if it is or "no" if it is not.
+%(-3269490933015333527)%	After you plug in the values, your formula should read '3 = L * 0.75' Solve for L.
+%(-7760097407642420827)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-6901947857459427024)%	Try entering '3' in the highlighted field.
+%(-3269485932971333456)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(7531106780034119886)%	Please enter "no" as the response.
+%(6940473221322363212)%	n/a
+%(-6901950857491427073)%	Try reading through the question again to find the total area of the flag.
+%(8105578789364547673)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7137230941926575383)%	Try typing 1.5 into the highlighted space.
+%(-3741768123356482775)%	What information is provided in this question?
+%(-4839436666918436389)%	Please enter 'n/a' in the highlighted field.
+%(-3269484932979333549)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+Problem Name	03walkway
+%(startStateNodeName)%	state15
+%(graphic)%	03walkway
+%(statement)%	You are designing a walkway from the garage to your back porch. You have enough cement to cover 8.25 square meters. To the right are some possible widths for the walkway. What width would give you the longest walkway?
+%(question1)%	(1) The width of the walkway 0.75 meters, how long will the walkway be?
+%(question2)%	(2) The width is 0.6 m, what will the length be?
+%(question3)%	(3) You want a skinny walkway at only 0.3 m wide, how long could the walkway be?
+%(heading1)%	area of the walkway
+%(heading2)%	width of the walkway
+%(heading3)%	length of the walkway
+%(heading4)%	longest walkway?
+%(unit1)%	sq. meters
+%(unit2)%	meters (m)
+%(unit3)%	meters (m)
+%(unit4)%	-
+%(Variable1)%	---
+%(Variable2)%	BC
+%(Variable3)%	AB
+%(Variable4)%	---
+	
+%(Ans1_a)%	8.25
+%(Ans2_a)%	8.25
+%(Ans3_a)%	8.25
+	
+%(Ans1_b)%	0.75
+%(Ans2_b)%	0.6
+%(Ans3_b)%	0.3
+	
+%(Ans1_c)%	11
+%(Ans2_c)%	13.75
+%(Ans3_c)%	27.5
+%(radio_ans)%	3
+%(radio_mm)%	1
+	
+%(Ans1a_hint1)%	What do you already know from the scenario?
+%(Ans1a_hint2)%	To work through question 1, you must first find the area of the walkway.
+%(Ans1a_hint3)%	Try reading through the question again to find the total area of the walkway you are planning to lay.
+%(Ans1a_hint4)%	Try entering '8.25' in the highlighted field.
+%(Ans1b_hint1)%	What information is provided in this question?
+%(Ans1b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans1b_hint3)%	What is the width of the walkway?
+%(Ans1b_hint4)%	Try typing 0.75 into the highlighted space.
+%(Ans1c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans1c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans1c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans1c_hint4)%	After you plug in the values, your formula should read '8.25 = L * 0.75' Solve for L.
+	
+%(Ans2a_hint1)%	What do you already know from the scenario?
+%(Ans2a_hint2)%	To work through question 2, you must first find the area of the walkway.
+%(Ans2a_hint3)%	Try reading through the question again to find the total area of the walkway you are planning to lay.
+%(Ans2a_hint4)%	Try entering '8.25' in the highlighted field.
+%(Ans2b_hint1)%	What information is provided in this question?
+%(Ans2b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans2b_hint3)%	What is the width of the walkway?
+%(Ans2b_hint4)%	Try typing 0.6 into the highlighted space.
+%(Ans2c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans2c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans2c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans2c_hint4)%	After you plug in the values, your formula should read '8.25 = L * 0.6' Solve for L.
+	
+%(Ans3a_hint1)%	What do you already know from the scenario?
+%(Ans3a_hint2)%	To work through question 3, you must first find the area of the walkway.
+%(Ans3a_hint3)%	Try reading through the question again to find the total area of the walkway you are planning to lay.
+%(Ans3a_hint4)%	Try entering '8.25' in the highlighted field.
+%(Ans3b_hint1)%	What information is provided in this question?
+%(Ans3b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans3b_hint3)%	What is the width of the walkway?
+%(Ans3b_hint4)%	Try typing 0.3 into the highlighted space.
+%(Ans3c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans3c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans3c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans3c_hint4)%	After you plug in the values, your formula should read '8.25 = L * 0.3' Solve for L.
+	
+%(radio_hint1)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(radio_hint2)%	27.5 yds is longer than 11 yds. Therefore, is 11 yds the longest length?  Enter "yes" if it is or "no" if it is not.
+%(radio_hint3)%	Please enter "no" as the response.
+	
+%(goodjob)%	Great job! You've successfully completed this problem!
+%(DONE_hint)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	n/a
+%(bug2)%	n/a
+%(bug3)%	n/a
+%(bug4)%	n/a
+%(bug5)%	n/a
+%(bug6)%	n/a
+%(error_message)%	n/a
+%(visible1)%	TRUE
+%(7137235941890575246)%	What information is provided in this question?
+%(-3741766123344482753)%	What is the width of the walkway?
+%(-6901952857503427095)%	What do you already know from the scenario?
+%(5645093929203651144)%	Try reading through the question again to find the total area of the walkway you are planning to lay.
+%(7906032719770737336)%	To work through question 1, you must first find the area of the walkway.
+%(8105585789468547910)%	After you plug in the values, your formula should read '8.25 = L * 0.3' Solve for L.
+%(-7753282996957717194)%	Please enter 'n/a' in the highlighted field.
+%(-3741765123324482718)%	Try reading through the question one more time, what is already stated?
+%(8105580789376547759)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-3741763123312482704)%	Try typing 0.6 into the highlighted space.
+%(-7760095407614420741)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7906031719766737317)%	Try reading through the question again to find the total area of the walkway you are planning to lay.
+%(-6901949857471427038)%	To work through question 3, you must first find the area of the walkway.
+%(-6734469513105593342)%	Please proceed to the next problem by clicking the "Done" button.
+%(-4099230463346982632)%	Great job! You've successfully completed this problem!
+%(2866120199660265791)%	Try reading through the question one more time, what is already stated?
+%(7906030719758737322)%	Try entering '8.25' in the highlighted field.
+%(8105579789368547676)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(5162537381742577495)%	Please enter 'n/a' in the highlighted field.
+%(-3269483932975333546)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(-8865737956518473063)%	Please enter 'n/a' in the highlighted field.
+%(7137232941922575413)%	Try reading through the question one more time, what is already stated?
+%(5645092929199651189)%	To work through question 2, you must first find the area of the walkway.
+%(7906033719794737403)%	What do you already know from the scenario?
+%(7137233941926575368)%	What is the width of the walkway?
+%(2866121199680265826)%	What is the width of the walkway?
+%(-7760100407646420812)%	After you plug in the values, your formula should read '8.25 = L * 0.75' Solve for L.
+%(2866119199652265772)%	What information is provided in this question?
+%(5645095929167651022)%	What do you already know from the scenario?
+%(5645090929203651159)%	Try entering '8.25' in the highlighted field.
+%(2577276927472933268)%	Please enter 'n/a' in the highlighted field.
+%(2866122199688265853)%	Try typing 0.75 into the highlighted space.
+%(7531104780070120008)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(-7760094407610420738)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(-5166532556208710060)%	No, this is not correct.
+%(-4496519548807638142)%	Please enter 'n/a' in the highlighted field.
+%(7531105780030119883)%	27.5 yds is longer than 11 yds. Therefore, is 11 yds the longest length?  Enter "yes" if it is or "no" if it is not.
+%(-3269490933015333527)%	After you plug in the values, your formula should read '8.25 = L * 0.6' Solve for L.
+%(-7760097407642420827)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-6901947857459427024)%	Try entering '8.25' in the highlighted field.
+%(-3269485932971333456)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(7531106780034119886)%	Please enter "no" as the response.
+%(6940473221322363212)%	n/a
+%(-6901950857491427073)%	Try reading through the question again to find the total area of the walkway you are planning to lay.
+%(8105578789364547673)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7137230941926575383)%	Try typing 0.3 into the highlighted space.
+%(-3741768123356482775)%	What information is provided in this question?
+%(-4839436666918436389)%	Please enter 'n/a' in the highlighted field.
+%(-3269484932979333549)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+Problem Name	04tulip
+%(startStateNodeName)%	
+%(graphic)%	04tulipGarden
+%(statement)%	Your mom is planting her flower garden for next year. She bought enough tulip bulbs to cover 12 square feet and she is choosing between three different spots for planting them. Figure out how long each garden plot would be if she uses all her bulbs in one plot. Which width will give her the longest plot?
+%(question1)%	(1) One spot is 0.6 feet wide. How long would this garden plot be?
+%(question2)%	(2) Another spot is 0.8 ft wide. How long would this garden plot be?
+%(question3)%	(3) A third spot is 1.2 ft wide. How long would this plot be?
+%(heading1)%	area of the garden plot
+%(heading2)%	width of the garden plot
+%(heading3)%	length of the garden plot
+%(heading4)%	longest plot?
+%(unit1)%	sq. feet
+%(unit2)%	feet (ft)
+%(unit3)%	feet (ft)
+%(unit4)%	-
+%(Variable1)%	---
+%(Variable2)%	AB
+%(Variable3)%	AD
+%(Variable4)%	---
+	
+%(Ans1_a)%	12
+%(Ans2_a)%	12
+%(Ans3_a)%	12
+	
+%(Ans1_b)%	0.6
+%(Ans2_b)%	0.8
+%(Ans3_b)%	1.2
+	
+%(Ans1_c)%	20
+%(Ans2_c)%	15
+%(Ans3_c)%	10
+%(radio_ans)%	1
+%(radio_mm)%	1
+	
+%(Ans1a_hint1)%	What do you already know from the scenario?
+%(Ans1a_hint2)%	To work through question 1, you must first find the area of the garden plot.
+%(Ans1a_hint3)%	Try reading through the question again to find the total area of the garden plot.
+%(Ans1a_hint4)%	Try entering '12' in the highlighted field.
+%(Ans1b_hint1)%	What information is provided in this question?
+%(Ans1b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans1b_hint3)%	What is the width of the garden plot?
+%(Ans1b_hint4)%	Try typing 0.6 into the highlighted space.
+%(Ans1c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans1c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans1c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans1c_hint4)%	After you plug in the values, your formula should read '12 = L * 0.6' Solve for L.
+	
+%(Ans2a_hint1)%	What do you already know from the scenario?
+%(Ans2a_hint2)%	To work through question 2, you must first find the area of the garden plot.
+%(Ans2a_hint3)%	Try reading through the question again to find the total area of the garden plot.
+%(Ans2a_hint4)%	Try entering '12' in the highlighted field.
+%(Ans2b_hint1)%	What information is provided in this question?
+%(Ans2b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans2b_hint3)%	What is the width of the garden plot?
+%(Ans2b_hint4)%	Try typing 0.8 into the highlighted space.
+%(Ans2c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans2c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans2c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans2c_hint4)%	After you plug in the values, your formula should read '12 = L * 0.8' Solve for L.
+	
+%(Ans3a_hint1)%	What do you already know from the scenario?
+%(Ans3a_hint2)%	To work through question 3, you must first find the area of the garden plot.
+%(Ans3a_hint3)%	Try reading through the question again to find the total area of the garden plot.
+%(Ans3a_hint4)%	Try entering '12' in the highlighted field.
+%(Ans3b_hint1)%	What information is provided in this question?
+%(Ans3b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans3b_hint3)%	What is the width of the garden plot?
+%(Ans3b_hint4)%	Try typing 1.2 into the highlighted space.
+%(Ans3c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans3c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans3c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans3c_hint4)%	After you plug in the values, your formula should read '12 = L * 1.2' Solve for L.
+	
+%(radio_hint1)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(radio_hint2)%	20 ft is longer than the other two lengths. Enter "yes" or "no" in the highlighted cell.
+%(radio_hint3)%	Please enter "yes" as the response.
+	
+%(goodjob)%	Great job! You've successfully completed this problem!
+%(DONE_hint)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	n/a
+%(bug2)%	n/a
+%(bug3)%	n/a
+%(bug4)%	n/a
+%(bug5)%	n/a
+%(bug6)%	n/a
+%(error_message)%	n/a
+%(visible1)%	TRUE
+%(7137235941890575246)%	What information is provided in this question?
+%(-3741766123344482753)%	What is the width of the garden plot?
+%(-6901952857503427095)%	What do you already know from the scenario?
+%(5645093929203651144)%	Try reading through the question again to find the total area of the garden plot.
+%(7906032719770737336)%	To work through question 1, you must first find the area of the garden plot.
+%(8105585789468547910)%	After you plug in the values, your formula should read '12 = L * 1.2' Solve for L.
+%(-7753282996957717194)%	Please enter 'n/a' in the highlighted field.
+%(-3741765123324482718)%	Try reading through the question one more time, what is already stated?
+%(8105580789376547759)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-3741763123312482704)%	Try typing 0.8 into the highlighted space.
+%(-7760095407614420741)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7906031719766737317)%	Try reading through the question again to find the total area of the garden plot.
+%(-6901949857471427038)%	To work through question 3, you must first find the area of the garden plot.
+%(-6734469513105593342)%	Please proceed to the next problem by clicking the "Done" button.
+%(-4099230463346982632)%	Great job! You've successfully completed this problem!
+%(2866120199660265791)%	Try reading through the question one more time, what is already stated?
+%(7906030719758737322)%	Try entering '12' in the highlighted field.
+%(8105579789368547676)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(5162537381742577495)%	Please enter 'n/a' in the highlighted field.
+%(-3269483932975333546)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(-8865737956518473063)%	Please enter 'n/a' in the highlighted field.
+%(7137232941922575413)%	Try reading through the question one more time, what is already stated?
+%(5645092929199651189)%	To work through question 2, you must first find the area of the garden plot.
+%(7906033719794737403)%	What do you already know from the scenario?
+%(7137233941926575368)%	What is the width of the garden plot?
+%(2866121199680265826)%	What is the width of the garden plot?
+%(-7760100407646420812)%	After you plug in the values, your formula should read '12 = L * 0.6' Solve for L.
+%(2866119199652265772)%	What information is provided in this question?
+%(5645095929167651022)%	What do you already know from the scenario?
+%(5645090929203651159)%	Try entering '12' in the highlighted field.
+%(2577276927472933268)%	Please enter 'n/a' in the highlighted field.
+%(2866122199688265853)%	Try typing 0.6 into the highlighted space.
+%(7531104780070120008)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(-7760094407610420738)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(-5166532556208710060)%	No, this is not correct.
+%(-4496519548807638142)%	Please enter 'n/a' in the highlighted field.
+%(7531105780030119883)%	20 ft is longer than the other two lengths. Enter "yes" or "no" in the highlighted cell.
+%(-3269490933015333527)%	After you plug in the values, your formula should read '12 = L * 0.8' Solve for L.
+%(-7760097407642420827)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-6901947857459427024)%	Try entering '12' in the highlighted field.
+%(-3269485932971333456)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(7531106780034119886)%	Please enter "yes" as the response.
+%(6940473221322363212)%	n/a
+%(-6901950857491427073)%	Try reading through the question again to find the total area of the garden plot.
+%(8105578789364547673)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7137230941926575383)%	Try typing 1.2 into the highlighted space.
+%(-3741768123356482775)%	What information is provided in this question?
+%(-4839436666918436389)%	Please enter 'n/a' in the highlighted field.
+%(-3269484932979333549)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+Problem Name	05sandbox
+%(startStateNodeName)%	
+%(graphic)%	05sandbox
+%(statement)%	You are making a sandbox. You have enough sand to cover an area of 13 square yards. Which of the following widths for the sandbox will give you the shortest length for the sandbox?
+%(question1)%	(1) What will the length be if the width is 1.3 yards long?
+%(question2)%	(2) What if the width is 1 yds long?
+%(question3)%	(3) What if the width is 0.65 yds long?
+%(heading1)%	area of the sandbox
+%(heading2)%	width of the sandbox
+%(heading3)%	length of the sandbox
+%(heading4)%	shortest length for the sandbox?
+%(unit1)%	sq. yards
+%(unit2)%	yards (yds)
+%(unit3)%	yards (yds)
+%(unit4)%	-
+%(Variable1)%	---
+%(Variable2)%	AB
+%(Variable3)%	AD
+%(Variable4)%	---
+	
+%(Ans1_a)%	13
+%(Ans2_a)%	13
+%(Ans3_a)%	13
+	
+%(Ans1_b)%	1.3
+%(Ans2_b)%	1
+%(Ans3_b)%	0.65
+	
+%(Ans1_c)%	10
+%(Ans2_c)%	13
+%(Ans3_c)%	20
+%(radio_ans)%	1
+%(radio_mm)%	1
+	
+%(Ans1a_hint1)%	What do you already know from the scenario?
+%(Ans1a_hint2)%	To work through question 1, you must first find the area of the sandbox?
+%(Ans1a_hint3)%	Try reading through the question again to find the total area of the sandbox.
+%(Ans1a_hint4)%	Try entering '13' in the highlighted field.
+%(Ans1b_hint1)%	What information is provided in this question?
+%(Ans1b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans1b_hint3)%	What is the width of the sandbox?
+%(Ans1b_hint4)%	Try typing 1.3 into the highlighted space.
+%(Ans1c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans1c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans1c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans1c_hint4)%	After you plug in the values, your formula should read '13 = L * 1.3' Solve for L.
+	
+%(Ans2a_hint1)%	What do you already know from the scenario?
+%(Ans2a_hint2)%	To work through question 2, you must first find the area of the sandbox?
+%(Ans2a_hint3)%	Try reading through the question again to find the total area of the sandbox.
+%(Ans2a_hint4)%	Try entering '13' in the highlighted field.
+%(Ans2b_hint1)%	What information is provided in this question?
+%(Ans2b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans2b_hint3)%	What is the width of the sandbox?
+%(Ans2b_hint4)%	Try typing 1 into the highlighted space.
+%(Ans2c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans2c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans2c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans2c_hint4)%	After you plug in the values, your formula should read '13 = L * 1' Solve for L.
+	
+%(Ans3a_hint1)%	What do you already know from the scenario?
+%(Ans3a_hint2)%	To work through question 3, you must first find the area of the sandbox?
+%(Ans3a_hint3)%	Try reading through the question again to find the total area of the sandbox.
+%(Ans3a_hint4)%	Try entering '13' in the highlighted field.
+%(Ans3b_hint1)%	What information is provided in this question?
+%(Ans3b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans3b_hint3)%	What is the width of the sandbox?
+%(Ans3b_hint4)%	Try typing 0.65 into the highlighted space.
+%(Ans3c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans3c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans3c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans3c_hint4)%	After you plug in the values, your formula should read '13 = L * 0.65' Solve for L.
+	
+%(radio_hint1)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(radio_hint2)%	10 ft is longer than the other two lengths. Enter "yes" or "no" in the highlighted cell.
+%(radio_hint3)%	Please enter "yes" as the response.
+	
+%(goodjob)%	Great job! You've successfully completed this problem!
+%(DONE_hint)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	n/a
+%(bug2)%	n/a
+%(bug3)%	n/a
+%(bug4)%	n/a
+%(bug5)%	n/a
+%(bug6)%	n/a
+%(error_message)%	n/a
+%(visible1)%	TRUE
+%(7137235941890575246)%	What information is provided in this question?
+%(-3741766123344482753)%	What is the width of the sandbox?
+%(-6901952857503427095)%	What do you already know from the scenario?
+%(5645093929203651144)%	Try reading through the question again to find the total area of the sandbox.
+%(7906032719770737336)%	To work through question 1, you must first find the area of the sandbox?
+%(8105585789468547910)%	After you plug in the values, your formula should read '13 = L * 0.65' Solve for L.
+%(-7753282996957717194)%	Please enter 'n/a' in the highlighted field.
+%(-3741765123324482718)%	Try reading through the question one more time, what is already stated?
+%(8105580789376547759)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-3741763123312482704)%	Try typing 1 into the highlighted space.
+%(-7760095407614420741)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7906031719766737317)%	Try reading through the question again to find the total area of the sandbox.
+%(-6901949857471427038)%	To work through question 3, you must first find the area of the sandbox?
+%(-6734469513105593342)%	Please proceed to the next problem by clicking the "Done" button.
+%(-4099230463346982632)%	Great job! You've successfully completed this problem!
+%(2866120199660265791)%	Try reading through the question one more time, what is already stated?
+%(7906030719758737322)%	Try entering '13' in the highlighted field.
+%(8105579789368547676)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(5162537381742577495)%	Please enter 'n/a' in the highlighted field.
+%(-3269483932975333546)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(-8865737956518473063)%	Please enter 'n/a' in the highlighted field.
+%(7137232941922575413)%	Try reading through the question one more time, what is already stated?
+%(5645092929199651189)%	To work through question 2, you must first find the area of the sandbox?
+%(7906033719794737403)%	What do you already know from the scenario?
+%(7137233941926575368)%	What is the width of the sandbox?
+%(2866121199680265826)%	What is the width of the sandbox?
+%(-7760100407646420812)%	After you plug in the values, your formula should read '13 = L * 1.3' Solve for L.
+%(2866119199652265772)%	What information is provided in this question?
+%(5645095929167651022)%	What do you already know from the scenario?
+%(5645090929203651159)%	Try entering '13' in the highlighted field.
+%(2577276927472933268)%	Please enter 'n/a' in the highlighted field.
+%(2866122199688265853)%	Try typing 1.3 into the highlighted space.
+%(7531104780070120008)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(-7760094407610420738)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(-5166532556208710060)%	No, this is not correct.
+%(-4496519548807638142)%	Please enter 'n/a' in the highlighted field.
+%(7531105780030119883)%	10 ft is longer than the other two lengths. Enter "yes" or "no" in the highlighted cell.
+%(-3269490933015333527)%	After you plug in the values, your formula should read '13 = L * 1' Solve for L.
+%(-7760097407642420827)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-6901947857459427024)%	Try entering '13' in the highlighted field.
+%(-3269485932971333456)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(7531106780034119886)%	Please enter "yes" as the response.
+%(6940473221322363212)%	n/a
+%(-6901950857491427073)%	Try reading through the question again to find the total area of the sandbox.
+%(8105578789364547673)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7137230941926575383)%	Try typing 0.65 into the highlighted space.
+%(-3741768123356482775)%	What information is provided in this question?
+%(-4839436666918436389)%	Please enter 'n/a' in the highlighted field.
+%(-3269484932979333549)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+Problem Name	06bulletin
+%(startStateNodeName)%	
+%(graphic)%	06bulletin
+%(statement)%	Heather is class president and is in charge of making a new bulletin board every month. For December, the bulletin board has to be 5 sq. yards in order for her to fit all of the pictures that her class has drawn. Figure out which measurements will give Heather the longest bulletin board?
+%(question1)%	(1) If the width of the bulletin board is 1 yard, what would the length need to be?
+%(question2)%	(2) If the bulletin board is 0.5 yards wide, what would the length need to be?
+%(question3)%	(3) If the board is 1.25 yards wide, what would the length need to be?
+%(heading1)%	area of the bulletin board
+%(heading2)%	width of the bulletin board
+%(heading3)%	length of the bulletin board
+%(heading4)%	longest bulletin board?
+%(unit1)%	sq. yards
+%(unit2)%	yards (yds)
+%(unit3)%	yards (yds)
+%(unit4)%	-
+%(Variable1)%	---
+%(Variable2)%	AB
+%(Variable3)%	AD
+%(Variable4)%	---
+	
+%(Ans1_a)%	5
+%(Ans2_a)%	5
+%(Ans3_a)%	5
+	
+%(Ans1_b)%	1
+%(Ans2_b)%	0.5
+%(Ans3_b)%	1.25
+	
+%(Ans1_c)%	5
+%(Ans2_c)%	10
+%(Ans3_c)%	4
+%(radio_ans)%	2
+%(radio_mm)%	1
+	
+%(Ans1a_hint1)%	What do you already know from the scenario?
+%(Ans1a_hint2)%	To work through question 1, you must first find the area of the bulletin board.
+%(Ans1a_hint3)%	Try reading through the question again to find the total area of the bulletin board.
+%(Ans1a_hint4)%	Try entering '5' in the highlighted field.
+%(Ans1b_hint1)%	What information is provided in this question?
+%(Ans1b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans1b_hint3)%	What is the width of the bulletin board?
+%(Ans1b_hint4)%	Try typing 1 into the highlighted space.
+%(Ans1c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans1c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans1c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans1c_hint4)%	After you plug in the values, your formula should read '5 = L * 1' Solve for L.
+	
+%(Ans2a_hint1)%	What do you already know from the scenario?
+%(Ans2a_hint2)%	To work through question 2, you must first find the area of the bulletin board.
+%(Ans2a_hint3)%	Try reading through the question again to find the total area of the bulletin board.
+%(Ans2a_hint4)%	Try entering '5' in the highlighted field.
+%(Ans2b_hint1)%	What information is provided in this question?
+%(Ans2b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans2b_hint3)%	What is the width of the bulletin board?
+%(Ans2b_hint4)%	Try typing 0.5 into the highlighted space.
+%(Ans2c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans2c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans2c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans2c_hint4)%	After you plug in the values, your formula should read '5 = L * 0.5' Solve for L.
+	
+%(Ans3a_hint1)%	What do you already know from the scenario?
+%(Ans3a_hint2)%	To work through question 3, you must first find the area of the bulletin board.
+%(Ans3a_hint3)%	Try reading through the question again to find the total area of the bulletin board.
+%(Ans3a_hint4)%	Try entering '5' in the highlighted field.
+%(Ans3b_hint1)%	What information is provided in this question?
+%(Ans3b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans3b_hint3)%	What is the width of the bulletin board?
+%(Ans3b_hint4)%	Try typing 1.25 into the highlighted space.
+%(Ans3c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans3c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans3c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans3c_hint4)%	After you plug in the values, your formula should read '5 = L * 1.25' Solve for L.
+	
+%(radio_hint1)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(radio_hint2)%	10 yds is longer than 5 yds. Therefore, is 5 yds the longest length?  Enter "yes" if it is or "no" if it is not.
+%(radio_hint3)%	Please enter "no" as the response.
+	
+%(goodjob)%	Great job! You've successfully completed this problem!
+%(DONE_hint)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	n/a
+%(bug2)%	n/a
+%(bug3)%	n/a
+%(bug4)%	n/a
+%(bug5)%	n/a
+%(bug6)%	n/a
+%(error_message)%	n/a
+%(visible1)%	TRUE
+%(7137235941890575246)%	What information is provided in this question?
+%(-3741766123344482753)%	What is the width of the bulletin board?
+%(-6901952857503427095)%	What do you already know from the scenario?
+%(5645093929203651144)%	Try reading through the question again to find the total area of the bulletin board.
+%(7906032719770737336)%	To work through question 1, you must first find the area of the bulletin board.
+%(8105585789468547910)%	After you plug in the values, your formula should read '5 = L * 1.25' Solve for L.
+%(-7753282996957717194)%	Please enter 'n/a' in the highlighted field.
+%(-3741765123324482718)%	Try reading through the question one more time, what is already stated?
+%(8105580789376547759)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-3741763123312482704)%	Try typing 0.5 into the highlighted space.
+%(-7760095407614420741)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7906031719766737317)%	Try reading through the question again to find the total area of the bulletin board.
+%(-6901949857471427038)%	To work through question 3, you must first find the area of the bulletin board.
+%(-6734469513105593342)%	Please proceed to the next problem by clicking the "Done" button.
+%(-4099230463346982632)%	Great job! You've successfully completed this problem!
+%(2866120199660265791)%	Try reading through the question one more time, what is already stated?
+%(7906030719758737322)%	Try entering '5' in the highlighted field.
+%(8105579789368547676)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(5162537381742577495)%	Please enter 'n/a' in the highlighted field.
+%(-3269483932975333546)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(-8865737956518473063)%	Please enter 'n/a' in the highlighted field.
+%(7137232941922575413)%	Try reading through the question one more time, what is already stated?
+%(5645092929199651189)%	To work through question 2, you must first find the area of the bulletin board.
+%(7906033719794737403)%	What do you already know from the scenario?
+%(7137233941926575368)%	What is the width of the bulletin board?
+%(2866121199680265826)%	What is the width of the bulletin board?
+%(-7760100407646420812)%	After you plug in the values, your formula should read '5 = L * 1' Solve for L.
+%(2866119199652265772)%	What information is provided in this question?
+%(5645095929167651022)%	What do you already know from the scenario?
+%(5645090929203651159)%	Try entering '5' in the highlighted field.
+%(2577276927472933268)%	Please enter 'n/a' in the highlighted field.
+%(2866122199688265853)%	Try typing 1 into the highlighted space.
+%(7531104780070120008)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(-7760094407610420738)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(-5166532556208710060)%	No, this is not correct.
+%(-4496519548807638142)%	Please enter 'n/a' in the highlighted field.
+%(7531105780030119883)%	10 yds is longer than 5 yds. Therefore, is 5 yds the longest length?  Enter "yes" if it is or "no" if it is not.
+%(-3269490933015333527)%	After you plug in the values, your formula should read '5 = L * 0.5' Solve for L.
+%(-7760097407642420827)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-6901947857459427024)%	Try entering '5' in the highlighted field.
+%(-3269485932971333456)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(7531106780034119886)%	Please enter "no" as the response.
+%(6940473221322363212)%	n/a
+%(-6901950857491427073)%	Try reading through the question again to find the total area of the bulletin board.
+%(8105578789364547673)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7137230941926575383)%	Try typing 1.25 into the highlighted space.
+%(-3741768123356482775)%	What information is provided in this question?
+%(-4839436666918436389)%	Please enter 'n/a' in the highlighted field.
+%(-3269484932979333549)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+Problem Name	07afghan
+%(startStateNodeName)%	
+%(graphic)%	07afghan
+%(statement)%	Suzie is weaving an afghan for her grandmother's birthday. She only have enough mateial to weave an afghan that is 5 sq. yds, and she want it to be as long as possible. Calculate the length that the afghan should be for each of the following widths. Which afghan would be the longest?
+%(question1)%	(1) The width of the afghan is 0.5 yds.
+%(question2)%	(2) The width of the afghan is 2.5 yds.
+%(question3)%	(3) The width of the afghan is 1.25 yds.
+%(heading1)%	area of the afghan
+%(heading2)%	width of the fabric
+%(heading3)%	length of the fabric
+%(heading4)%	longest afghan?
+%(unit1)%	sq. yards
+%(unit2)%	yards (yds)
+%(unit3)%	yards (yds)
+%(unit4)%	-
+%(Variable1)%	---
+%(Variable2)%	AB
+%(Variable3)%	BC
+%(Variable4)%	---
+	
+%(Ans1_a)%	5
+%(Ans2_a)%	5
+%(Ans3_a)%	5
+	
+%(Ans1_b)%	0.5
+%(Ans2_b)%	2.5
+%(Ans3_b)%	1.25
+	
+%(Ans1_c)%	10
+%(Ans2_c)%	2
+%(Ans3_c)%	4
+%(radio_ans)%	1
+%(radio_mm)%	1
+	
+%(Ans1a_hint1)%	What do you already know from the scenario?
+%(Ans1a_hint2)%	To work through question 1, you must first find the area of the afghan.
+%(Ans1a_hint3)%	Try reading through the question again to find the total area of the fabric.
+%(Ans1a_hint4)%	Try entering '5' in the highlighted field.
+%(Ans1b_hint1)%	What information is provided in this question?
+%(Ans1b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans1b_hint3)%	What is the width of the afghan?
+%(Ans1b_hint4)%	Try typing 0.5 into the highlighted space.
+%(Ans1c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans1c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans1c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans1c_hint4)%	After you plug in the values, your formula should read '5 = L * 0.5' Solve for L.
+	
+%(Ans2a_hint1)%	What do you already know from the scenario?
+%(Ans2a_hint2)%	To work through question 2, you must first find the area of the afghan.
+%(Ans2a_hint3)%	Try reading through the question again to find the total area of the fabric.
+%(Ans2a_hint4)%	Try entering '5' in the highlighted field.
+%(Ans2b_hint1)%	What information is provided in this question?
+%(Ans2b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans2b_hint3)%	What is the width of the afghan?
+%(Ans2b_hint4)%	Try typing 2.5 into the highlighted space.
+%(Ans2c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans2c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans2c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans2c_hint4)%	After you plug in the values, your formula should read '5 = L * 2.5' Solve for L.
+	
+%(Ans3a_hint1)%	What do you already know from the scenario?
+%(Ans3a_hint2)%	To work through question 3, you must first find the area of the afghan.
+%(Ans3a_hint3)%	Try reading through the question again to find the total area of the fabric.
+%(Ans3a_hint4)%	Try entering '5' in the highlighted field.
+%(Ans3b_hint1)%	What information is provided in this question?
+%(Ans3b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans3b_hint3)%	What is the width of the afghan?
+%(Ans3b_hint4)%	Try typing 1.25 into the highlighted space.
+%(Ans3c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans3c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans3c_hint3)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(Ans3c_hint4)%	After you plug in the values, your formula should read '5 = L * 1.25' Solve for L.
+	
+%(radio_hint1)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(radio_hint2)%	10 ft is longer than the other two lengths. Enter "yes" or "no" in the highlighted cell.
+%(radio_hint3)%	Please enter "yes" as the response.
+	
+%(goodjob)%	Great job! You've successfully completed this problem!
+%(DONE_hint)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	n/a
+%(bug2)%	n/a
+%(bug3)%	n/a
+%(bug4)%	n/a
+%(bug5)%	n/a
+%(bug6)%	n/a
+%(error_message)%	n/a
+%(visible1)%	TRUE
+%(7137235941890575246)%	What information is provided in this question?
+%(-3741766123344482753)%	What is the width of the afghan?
+%(-6901952857503427095)%	What do you already know from the scenario?
+%(5645093929203651144)%	Try reading through the question again to find the total area of the fabric.
+%(7906032719770737336)%	To work through question 1, you must first find the area of the afghan.
+%(8105585789468547910)%	After you plug in the values, your formula should read '5 = L * 1.25' Solve for L.
+%(-7753282996957717194)%	Please enter 'n/a' in the highlighted field.
+%(-3741765123324482718)%	Try reading through the question one more time, what is already stated?
+%(8105580789376547759)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-3741763123312482704)%	Try typing 2.5 into the highlighted space.
+%(-7760095407614420741)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7906031719766737317)%	Try reading through the question again to find the total area of the fabric.
+%(-6901949857471427038)%	To work through question 3, you must first find the area of the afghan.
+%(-6734469513105593342)%	Please proceed to the next problem by clicking the "Done" button.
+%(-4099230463346982632)%	Great job! You've successfully completed this problem!
+%(2866120199660265791)%	Try reading through the question one more time, what is already stated?
+%(7906030719758737322)%	Try entering '5' in the highlighted field.
+%(8105579789368547676)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(5162537381742577495)%	Please enter 'n/a' in the highlighted field.
+%(-3269483932975333546)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(-8865737956518473063)%	Please enter 'n/a' in the highlighted field.
+%(7137232941922575413)%	Try reading through the question one more time, what is already stated?
+%(5645092929199651189)%	To work through question 2, you must first find the area of the afghan.
+%(7906033719794737403)%	What do you already know from the scenario?
+%(7137233941926575368)%	What is the width of the afghan?
+%(2866121199680265826)%	What is the width of the afghan?
+%(-7760100407646420812)%	After you plug in the values, your formula should read '5 = L * 0.5' Solve for L.
+%(2866119199652265772)%	What information is provided in this question?
+%(5645095929167651022)%	What do you already know from the scenario?
+%(5645090929203651159)%	Try entering '5' in the highlighted field.
+%(2577276927472933268)%	Please enter 'n/a' in the highlighted field.
+%(2866122199688265853)%	Try typing 0.5 into the highlighted space.
+%(7531104780070120008)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(-7760094407610420738)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(-5166532556208710060)%	No, this is not correct.
+%(-4496519548807638142)%	Please enter 'n/a' in the highlighted field.
+%(7531105780030119883)%	10 ft is longer than the other two lengths. Enter "yes" or "no" in the highlighted cell.
+%(-3269490933015333527)%	After you plug in the values, your formula should read '5 = L * 2.5' Solve for L.
+%(-7760097407642420827)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-6901947857459427024)%	Try entering '5' in the highlighted field.
+%(-3269485932971333456)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(7531106780034119886)%	Please enter "yes" as the response.
+%(6940473221322363212)%	n/a
+%(-6901950857491427073)%	Try reading through the question again to find the total area of the fabric.
+%(8105578789364547673)%	Plug the given values for the Area (A) and the Width (W) into the rectangle formula, then solve for Length (L).
+%(7137230941926575383)%	Try typing 1.25 into the highlighted space.
+%(-3741768123356482775)%	What information is provided in this question?
+%(-4839436666918436389)%	Please enter 'n/a' in the highlighted field.
+%(-3269484932979333549)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+Problem Name	08door
+%(startStateNodeName)%	
+%(graphic)%	08door
+%(statement)%	Carl is designing a new door for his room in wood shop. He has to figure out the exact area of his doorway so that he can buy the right amount of wood. His door must be 3 meters long. If so, which option will make a door with the greatest area?
+%(question1)%	(1) Figure out the area of Carl's door if the width of the doorway is 0.75 meters.
+%(question2)%	(2) Figure out the area of Car'ls door if the width of the doorway is 0.95 m.
+%(question3)%	(3) Figure out the area of Carl's door if the width of the doorway is 1.1 m.
+%(heading1)%	length of the door
+%(heading2)%	width of the door
+%(heading3)%	area of the door
+%(heading4)%	greatest area?
+%(unit1)%	meters (m)
+%(unit2)%	meters (m)
+%(unit3)%	square meters
+%(unit4)%	-
+%(Variable1)%	AB
+%(Variable2)%	BC
+%(Variable3)%	---
+%(Variable4)%	---
+	
+%(Ans1_a)%	3
+%(Ans2_a)%	3
+%(Ans3_a)%	3
+	
+%(Ans1_b)%	0.75
+%(Ans2_b)%	0.95
+%(Ans3_b)%	1.1
+	
+%(Ans1_c)%	2.25
+%(Ans2_c)%	2.85
+%(Ans3_c)%	3.3
+%(radio_ans)%	3
+%(radio_mm)%	1
+	
+%(Ans1a_hint1)%	What do you already know from the scenario?
+%(Ans1a_hint2)%	To work through question 1, you must first find the length of the door.
+%(Ans1a_hint3)%	Try reading through the question again to find the length of the door Carl is trying to build.
+%(Ans1a_hint4)%	Try entering '3' in the highlighted field.
+%(Ans1b_hint1)%	What information is provided in this question?
+%(Ans1b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans1b_hint3)%	What is the width of the door?
+%(Ans1b_hint4)%	Try typing 0.75 into the highlighted space.
+%(Ans1c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans1c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans1c_hint3)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(Ans1c_hint4)%	After you plug in the values, your formula should read 'A = 3 * 0.75' Solve for A.
+	
+%(Ans2a_hint1)%	What do you already know from the scenario?
+%(Ans2a_hint2)%	To work through question 2, you must first find the length of the door.
+%(Ans2a_hint3)%	Try reading through the question again to find the length of the door Carl is trying to build.
+%(Ans2a_hint4)%	Try entering '3' in the highlighted field.
+%(Ans2b_hint1)%	What information is provided in this question?
+%(Ans2b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans2b_hint3)%	What is the width of the door?
+%(Ans2b_hint4)%	Try typing 0.95 into the highlighted space.
+%(Ans2c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans2c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans2c_hint3)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(Ans2c_hint4)%	After you plug in the values, your formula should read 'A = 3 * 0.95' Solve for A.
+	
+%(Ans3a_hint1)%	What do you already know from the scenario?
+%(Ans3a_hint2)%	To work through question 3, you must first find the length of the door.
+%(Ans3a_hint3)%	Try reading through the question again to find the length of the door Carl is trying to build.
+%(Ans3a_hint4)%	Try entering '3' in the highlighted field.
+%(Ans3b_hint1)%	What information is provided in this question?
+%(Ans3b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans3b_hint3)%	What is the width of the door?
+%(Ans3b_hint4)%	Try typing 1.1 into the highlighted space.
+%(Ans3c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans3c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans3c_hint3)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(Ans3c_hint4)%	After you plug in the values, your formula should read 'A = 3 * 1.1' Solve for A.
+	
+%(radio_hint1)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(radio_hint2)%	3.3 square yds is larger than 2.25 square yds. Therefore, is 2.25 square yds the largest area?  Enter "yes" if it is or "no" if it is not.
+%(radio_hint3)%	Please enter "no" as the response.
+	
+%(goodjob)%	Great job! You've successfully completed this problem!
+%(DONE_hint)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	n/a
+%(bug2)%	n/a
+%(bug3)%	n/a
+%(bug4)%	n/a
+%(bug5)%	n/a
+%(bug6)%	n/a
+%(error_message)%	n/a
+%(visible1)%	TRUE
+%(7137235941890575246)%	What information is provided in this question?
+%(-3741766123344482753)%	What is the width of the door?
+%(-6901952857503427095)%	What do you already know from the scenario?
+%(5645093929203651144)%	Try reading through the question again to find the length of the door Carl is trying to build.
+%(7906032719770737336)%	To work through question 1, you must first find the length of the door.
+%(8105585789468547910)%	After you plug in the values, your formula should read 'A = 3 * 1.1' Solve for A.
+%(-7753282996957717194)%	Please enter 'n/a' in the highlighted field.
+%(-3741765123324482718)%	Try reading through the question one more time, what is already stated?
+%(8105580789376547759)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-3741763123312482704)%	Try typing 0.95 into the highlighted space.
+%(-7760095407614420741)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(7906031719766737317)%	Try reading through the question again to find the length of the door Carl is trying to build.
+%(-6901949857471427038)%	To work through question 3, you must first find the length of the door.
+%(-6734469513105593342)%	Please proceed to the next problem by clicking the "Done" button.
+%(-4099230463346982632)%	Great job! You've successfully completed this problem!
+%(2866120199660265791)%	Try reading through the question one more time, what is already stated?
+%(7906030719758737322)%	Try entering '3' in the highlighted field.
+%(8105579789368547676)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(5162537381742577495)%	Please enter 'n/a' in the highlighted field.
+%(-3269483932975333546)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(-8865737956518473063)%	Please enter 'n/a' in the highlighted field.
+%(7137232941922575413)%	Try reading through the question one more time, what is already stated?
+%(5645092929199651189)%	To work through question 2, you must first find the length of the door.
+%(7906033719794737403)%	What do you already know from the scenario?
+%(7137233941926575368)%	What is the width of the door?
+%(2866121199680265826)%	What is the width of the door?
+%(-7760100407646420812)%	After you plug in the values, your formula should read 'A = 3 * 0.75' Solve for A.
+%(2866119199652265772)%	What information is provided in this question?
+%(5645095929167651022)%	What do you already know from the scenario?
+%(5645090929203651159)%	Try entering '3' in the highlighted field.
+%(2577276927472933268)%	Please enter 'n/a' in the highlighted field.
+%(2866122199688265853)%	Try typing 0.75 into the highlighted space.
+%(7531104780070120008)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(-7760094407610420738)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(-5166532556208710060)%	No, this is not correct.
+%(-4496519548807638142)%	Please enter 'n/a' in the highlighted field.
+%(7531105780030119883)%	3.3 square yds is larger than 2.25 square yds. Therefore, is 2.25 square yds the largest area?  Enter "yes" if it is or "no" if it is not.
+%(-3269490933015333527)%	After you plug in the values, your formula should read 'A = 3 * 0.95' Solve for A.
+%(-7760097407642420827)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-6901947857459427024)%	Try entering '3' in the highlighted field.
+%(-3269485932971333456)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(7531106780034119886)%	Please enter "no" as the response.
+%(6940473221322363212)%	n/a
+%(-6901950857491427073)%	Try reading through the question again to find the length of the door Carl is trying to build.
+%(8105578789364547673)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(7137230941926575383)%	Try typing 1.1 into the highlighted space.
+%(-3741768123356482775)%	What information is provided in this question?
+%(-4839436666918436389)%	Please enter 'n/a' in the highlighted field.
+%(-3269484932979333549)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+Problem Name	09basement
+%(startStateNodeName)%	
+%(graphic)%	09basement
+%(statement)%	B.J. is shampooing the carpet in his basement. His basement is made up of three rooms. The width of each room is 3.25 yards, but the length of each room is different. B.J. has to figure out the area of each room in his basement so he can purchase the correct amount of shampoo. which room is the smallest?
+%(question1)%	(1) The first room in B.J's basement is 4 yds long.
+%(question2)%	(2) The second room is 6 yds long.
+%(question3)%	(3) The third room is 2 yds long.
+%(heading1)%	length of the room
+%(heading2)%	width of the room
+%(heading3)%	area of the room
+%(heading4)%	smallest area?
+%(unit1)%	yards (yds)
+%(unit2)%	yards (yds)
+%(unit3)%	square yards
+%(unit4)%	-
+%(Variable1)%	AB
+%(Variable2)%	BC
+%(Variable3)%	---
+%(Variable4)%	---
+	
+%(Ans1_a)%	4
+%(Ans2_a)%	6
+%(Ans3_a)%	2
+	
+%(Ans1_b)%	3.25
+%(Ans2_b)%	3.25
+%(Ans3_b)%	3.25
+	
+%(Ans1_c)%	13
+%(Ans2_c)%	19.5
+%(Ans3_c)%	6.5
+%(radio_ans)%	3
+%(radio_mm)%	1
+	
+%(Ans1a_hint1)%	What do you already know from the scenario?
+%(Ans1a_hint2)%	To work through question 1, you must first find the length of the first room.
+%(Ans1a_hint3)%	Try reading through the question again to find the length of the first room of B.J.s basement.
+%(Ans1a_hint4)%	Try entering '4' in the highlighted field.
+%(Ans1b_hint1)%	What information is provided in this question?
+%(Ans1b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans1b_hint3)%	What is the width of the room?
+%(Ans1b_hint4)%	Try typing 3.25 into the highlighted space.
+%(Ans1c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans1c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans1c_hint3)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(Ans1c_hint4)%	After you plug in the values, your formula should read 'A = 4 * 3.25' Solve for A.
+	
+%(Ans2a_hint1)%	What do you already know from the scenario?
+%(Ans2a_hint2)%	To work through question 2, you must first find the length of the first room.
+%(Ans2a_hint3)%	Try reading through the question again to find the length of the first room of B.J.s basement.
+%(Ans2a_hint4)%	Try entering '6' in the highlighted field.
+%(Ans2b_hint1)%	What information is provided in this question?
+%(Ans2b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans2b_hint3)%	What is the width of the room?
+%(Ans2b_hint4)%	Try typing 3.25 into the highlighted space.
+%(Ans2c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans2c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans2c_hint3)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(Ans2c_hint4)%	After you plug in the values, your formula should read 'A = 6 * 3.25' Solve for A.
+	
+%(Ans3a_hint1)%	What do you already know from the scenario?
+%(Ans3a_hint2)%	To work through question 3, you must first find the length of the first room.
+%(Ans3a_hint3)%	Try reading through the question again to find the length of the first room of B.J.s basement.
+%(Ans3a_hint4)%	Try entering '2' in the highlighted field.
+%(Ans3b_hint1)%	What information is provided in this question?
+%(Ans3b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans3b_hint3)%	What is the width of the room?
+%(Ans3b_hint4)%	Try typing 3.25 into the highlighted space.
+%(Ans3c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans3c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans3c_hint3)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(Ans3c_hint4)%	After you plug in the values, your formula should read 'A = 2 * 3.25' Solve for A.
+	
+%(radio_hint1)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(radio_hint2)%	6.5 square yds is larger than 13 square yds. Therefore, is 13 square yds the largest area?  Enter "yes" if it is or "no" if it is not.
+%(radio_hint3)%	Please enter "no" as the response.
+	
+%(goodjob)%	Great job! You've successfully completed this problem!
+%(DONE_hint)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	n/a
+%(bug2)%	n/a
+%(bug3)%	n/a
+%(bug4)%	n/a
+%(bug5)%	n/a
+%(bug6)%	n/a
+%(error_message)%	n/a
+%(visible1)%	TRUE
+%(7137235941890575246)%	What information is provided in this question?
+%(-3741766123344482753)%	What is the width of the room?
+%(-6901952857503427095)%	What do you already know from the scenario?
+%(5645093929203651144)%	Try reading through the question again to find the length of the first room of B.J.s basement.
+%(7906032719770737336)%	To work through question 1, you must first find the length of the first room.
+%(8105585789468547910)%	After you plug in the values, your formula should read 'A = 2 * 3.25' Solve for A.
+%(-7753282996957717194)%	Please enter 'n/a' in the highlighted field.
+%(-3741765123324482718)%	Try reading through the question one more time, what is already stated?
+%(8105580789376547759)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-3741763123312482704)%	Try typing 3.25 into the highlighted space.
+%(-7760095407614420741)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(7906031719766737317)%	Try reading through the question again to find the length of the first room of B.J.s basement.
+%(-6901949857471427038)%	To work through question 3, you must first find the length of the first room.
+%(-6734469513105593342)%	Please proceed to the next problem by clicking the "Done" button.
+%(-4099230463346982632)%	Great job! You've successfully completed this problem!
+%(2866120199660265791)%	Try reading through the question one more time, what is already stated?
+%(7906030719758737322)%	Try entering '4' in the highlighted field.
+%(8105579789368547676)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(5162537381742577495)%	Please enter 'n/a' in the highlighted field.
+%(-3269483932975333546)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(-8865737956518473063)%	Please enter 'n/a' in the highlighted field.
+%(7137232941922575413)%	Try reading through the question one more time, what is already stated?
+%(5645092929199651189)%	To work through question 2, you must first find the length of the first room.
+%(7906033719794737403)%	What do you already know from the scenario?
+%(7137233941926575368)%	What is the width of the room?
+%(2866121199680265826)%	What is the width of the room?
+%(-7760100407646420812)%	After you plug in the values, your formula should read 'A = 4 * 3.25' Solve for A.
+%(2866119199652265772)%	What information is provided in this question?
+%(5645095929167651022)%	What do you already know from the scenario?
+%(5645090929203651159)%	Try entering '6' in the highlighted field.
+%(2577276927472933268)%	Please enter 'n/a' in the highlighted field.
+%(2866122199688265853)%	Try typing 3.25 into the highlighted space.
+%(7531104780070120008)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(-7760094407610420738)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(-5166532556208710060)%	No, this is not correct.
+%(-4496519548807638142)%	Please enter 'n/a' in the highlighted field.
+%(7531105780030119883)%	6.5 square yds is larger than 13 square yds. Therefore, is 13 square yds the largest area?  Enter "yes" if it is or "no" if it is not.
+%(-3269490933015333527)%	After you plug in the values, your formula should read 'A = 6 * 3.25' Solve for A.
+%(-7760097407642420827)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-6901947857459427024)%	Try entering '2' in the highlighted field.
+%(-3269485932971333456)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(7531106780034119886)%	Please enter "no" as the response.
+%(6940473221322363212)%	n/a
+%(-6901950857491427073)%	Try reading through the question again to find the length of the first room of B.J.s basement.
+%(8105578789364547673)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(7137230941926575383)%	Try typing 3.25 into the highlighted space.
+%(-3741768123356482775)%	What information is provided in this question?
+%(-4839436666918436389)%	Please enter 'n/a' in the highlighted field.
+%(-3269484932979333549)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+Problem Name	10basement
+%(startStateNodeName)%	
+%(graphic)%	10basement
+%(statement)%	B.J. is ready to check out with his carpet shampoo. If each bottle costs $5.80, how much would it cost to shampoo each of the rooms in his basement?
+%(question1)%	(1) Room #1 requires 2 bottles.
+%(question2)%	(2) Room #2 requires 3 bottles.
+%(question3)%	(3) Room #3 requires 1 bottles.
+%(heading1)%	cost of each bottle
+%(heading2)%	number of bottles needed
+%(heading3)%	cost to shampoo the room
+%(heading4)%	-
+%(unit1)%	dollars ($)
+%(unit2)%	bottles
+%(unit3)%	dollars ($)
+%(unit4)%	-
+%(Variable1)%	-
+%(Variable2)%	-
+%(Variable3)%	-
+%(Variable4)%	-
+	
+%(Ans1_a)%	5.80
+%(Ans2_a)%	5.80
+%(Ans3_a)%	5.80
+	
+%(Ans1_b)%	2
+%(Ans2_b)%	3
+%(Ans3_b)%	1
+	
+%(Ans1_c)%	11.6
+%(Ans2_c)%	17.4
+%(Ans3_c)%	5.8
+%(radio_ans)%	n/a
+%(radio_mm)%	0
+	
+%(Ans1a_hint1)%	What do you already know from the scenario?
+%(Ans1a_hint2)%	To work through question 1, you must first find the cost of each bottle.
+%(Ans1a_hint3)%	Try reading through the question again to find the cost of each bottle of shampoo that B.J. is buying.
+%(Ans1a_hint4)%	Try entering '5.80' in the highlighted field.
+%(Ans1b_hint1)%	What information is provided in this question?
+%(Ans1b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans1b_hint3)%	What is the number of bottles needed for the first room?
+%(Ans1b_hint4)%	Try typing 2 into the highlighted space.
+%(Ans1c_hint1)%	For this problem, you will need to multiply the number of bottles by the price of the individual bottle to find the total cost.
+%(Ans1c_hint2)%	What is the cost of the individual bottle? What is the number of bottles needed? What are these two numbers multiplied by each other?
+%(Ans1c_hint3)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(Ans1c_hint4)%	After you plug in the values, your formula should read 'Total cost = 5.80 * 2' Solve for the total cost
+	
+%(Ans2a_hint1)%	What do you already know from the scenario?
+%(Ans2a_hint2)%	To work through question 2, you must first find the cost of each bottle.
+%(Ans2a_hint3)%	Try reading through the question again to find the cost of each bottle of shampoo that B.J. is buying.
+%(Ans2a_hint4)%	Try entering '5.80' in the highlighted field.
+%(Ans2b_hint1)%	What information is provided in this question?
+%(Ans2b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans2b_hint3)%	What is the number of bottles needed for the first room?
+%(Ans2b_hint4)%	Try typing 3 into the highlighted space.
+%(Ans2c_hint1)%	For this problem, you will need to multiply the number of bottles by the price of the individual bottle to find the total cost.
+%(Ans2c_hint2)%	What is the cost of the individual bottle? What is the number of bottles needed? What are these two numbers multiplied by each other?
+%(Ans2c_hint3)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(Ans2c_hint4)%	After you plug in the values, your formula should read 'Total cost = 5.80 * 3' Solve for the total cost
+	
+%(Ans3a_hint1)%	What do you already know from the scenario?
+%(Ans3a_hint2)%	To work through question 3, you must first find the cost of each bottle.
+%(Ans3a_hint3)%	Try reading through the question again to find the cost of each bottle of shampoo that B.J. is buying.
+%(Ans3a_hint4)%	Try entering '5.80' in the highlighted field.
+%(Ans3b_hint1)%	What information is provided in this question?
+%(Ans3b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans3b_hint3)%	What is the number of bottles needed for the first room?
+%(Ans3b_hint4)%	Try typing 1 into the highlighted space.
+%(Ans3c_hint1)%	For this problem, you will need to multiply the number of bottles by the price of the individual bottle to find the total cost.
+%(Ans3c_hint2)%	What is the cost of the individual bottle? What is the number of bottles needed? What are these two numbers multiplied by each other?
+%(Ans3c_hint3)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(Ans3c_hint4)%	After you plug in the values, your formula should read 'Total cost = 5.80 * 1' Solve for the total cost
+	
+%(radio_hint1)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(radio_hint2)%	5.8 square yds is larger than 11.6 square yds. Therefore, is 11.6 square yds the largest area?  Enter "yes" if it is or "no" if it is not.
+%(radio_hint3)%	Please enter "no" as the response.
+	
+%(goodjob)%	Great job! You've successfully completed this problem!
+%(DONE_hint)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	5.8
+%(bug2)%	11.6
+%(bug3)%	5.8
+%(bug4)%	17.4
+%(bug5)%	5.8
+%(bug6)%	5.8
+%(error_message)%	Please consider the last decimal place for the monetary value. Enter '10.00' rather than just '10.'
+%(visible1)%	FALSE
+%(7137235941890575246)%	What information is provided in this question?
+%(-3741766123344482753)%	What is the number of bottles needed for the first room?
+%(-6901952857503427095)%	What do you already know from the scenario?
+%(5645093929203651144)%	Try reading through the question again to find the cost of each bottle of shampoo that B.J. is buying.
+%(7906032719770737336)%	To work through question 1, you must first find the cost of each bottle.
+%(8105585789468547910)%	After you plug in the values, your formula should read 'Total cost = 5.80 * 1' Solve for the total cost
+%(-7753282996957717194)%	Please enter '5.8' in the highlighted field.
+%(-3741765123324482718)%	Try reading through the question one more time, what is already stated?
+%(8105580789376547759)%	For this problem, you will need to multiply the number of bottles by the price of the individual bottle to find the total cost.
+%(-3741763123312482704)%	Try typing 3 into the highlighted space.
+%(-7760095407614420741)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(7906031719766737317)%	Try reading through the question again to find the cost of each bottle of shampoo that B.J. is buying.
+%(-6901949857471427038)%	To work through question 3, you must first find the cost of each bottle.
+%(-6734469513105593342)%	Please proceed to the next problem by clicking the "Done" button.
+%(-4099230463346982632)%	Great job! You've successfully completed this problem!
+%(2866120199660265791)%	Try reading through the question one more time, what is already stated?
+%(7906030719758737322)%	Try entering '5.80' in the highlighted field.
+%(8105579789368547676)%	What is the cost of the individual bottle? What is the number of bottles needed? What are these two numbers multiplied by each other?
+%(5162537381742577495)%	Please enter '11.6' in the highlighted field.
+%(-3269483932975333546)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(-8865737956518473063)%	Please enter '17.4' in the highlighted field.
+%(7137232941922575413)%	Try reading through the question one more time, what is already stated?
+%(5645092929199651189)%	To work through question 2, you must first find the cost of each bottle.
+%(7906033719794737403)%	What do you already know from the scenario?
+%(7137233941926575368)%	What is the number of bottles needed for the first room?
+%(2866121199680265826)%	What is the number of bottles needed for the first room?
+%(-7760100407646420812)%	After you plug in the values, your formula should read 'Total cost = 5.80 * 2' Solve for the total cost
+%(2866119199652265772)%	What information is provided in this question?
+%(5645095929167651022)%	What do you already know from the scenario?
+%(5645090929203651159)%	Try entering '5.80' in the highlighted field.
+%(2577276927472933268)%	Please enter '5.8' in the highlighted field.
+%(2866122199688265853)%	Try typing 2 into the highlighted space.
+%(7531104780070120008)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(-7760094407610420738)%	What is the cost of the individual bottle? What is the number of bottles needed? What are these two numbers multiplied by each other?
+%(-5166532556208710060)%	No, this is not correct.
+%(-4496519548807638142)%	Please enter '5.8' in the highlighted field.
+%(7531105780030119883)%	5.8 square yds is larger than 11.6 square yds. Therefore, is 11.6 square yds the largest area?  Enter "yes" if it is or "no" if it is not.
+%(-3269490933015333527)%	After you plug in the values, your formula should read 'Total cost = 5.80 * 3' Solve for the total cost
+%(-7760097407642420827)%	For this problem, you will need to multiply the number of bottles by the price of the individual bottle to find the total cost.
+%(-6901947857459427024)%	Try entering '5.80' in the highlighted field.
+%(-3269485932971333456)%	For this problem, you will need to multiply the number of bottles by the price of the individual bottle to find the total cost.
+%(7531106780034119886)%	Please enter "no" as the response.
+%(6940473221322363212)%	Please consider the last decimal place for the monetary value. Enter '10.00' rather than just '10.'
+%(-6901950857491427073)%	Try reading through the question again to find the cost of each bottle of shampoo that B.J. is buying.
+%(8105578789364547673)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(7137230941926575383)%	Try typing 1 into the highlighted space.
+%(-3741768123356482775)%	What information is provided in this question?
+%(-4839436666918436389)%	Please enter '5.8' in the highlighted field.
+%(-3269484932979333549)%	What is the cost of the individual bottle? What is the number of bottles needed? What are these two numbers multiplied by each other?
+Problem Name	11rooms
+%(startStateNodeName)%	
+%(graphic)%	11rooms
+%(statement)%	Adam is putting hardwood floors into three of his rooms in his house. He must figure out the area of each rooms before he can buy the wood. All three rooms are 5 meters wide, but have different lengths. Calculate the area of each rooms for each of the following lengths.
+%(question1)%	1. Room 1's length is 4.5 meters.
+%(question2)%	2. Room 2's length is 3.4 meters.
+%(question3)%	3. Room 3's length is 6.4 meters.
+%(heading1)%	length of the room
+%(heading2)%	width of the room
+%(heading3)%	area of the room
+%(heading4)%	-
+%(unit1)%	meters (m)
+%(unit2)%	meters (m)
+%(unit3)%	sq. meters
+%(unit4)%	-
+%(Variable1)%	AB
+%(Variable2)%	BC
+%(Variable3)%	---
+%(Variable4)%	-
+	
+%(Ans1_a)%	4.5
+%(Ans2_a)%	3.4
+%(Ans3_a)%	6.4
+	
+%(Ans1_b)%	5
+%(Ans2_b)%	5
+%(Ans3_b)%	5
+	
+%(Ans1_c)%	22.5
+%(Ans2_c)%	17
+%(Ans3_c)%	32
+%(radio_ans)%	n/a
+%(radio_mm)%	0
+	
+%(Ans1a_hint1)%	What do you already know from the scenario?
+%(Ans1a_hint2)%	To work through question 1, you must first find the length of the room.
+%(Ans1a_hint3)%	Try reading through the question again to find the length of the Adam's living room.
+%(Ans1a_hint4)%	Try entering '4.5' in the highlighted field.
+%(Ans1b_hint1)%	What information is provided in this question?
+%(Ans1b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans1b_hint3)%	What is the width of the room?
+%(Ans1b_hint4)%	Try typing 5 into the highlighted space.
+%(Ans1c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans1c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans1c_hint3)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(Ans1c_hint4)%	After you plug in the values, your formula should read 'A = 4.5 * 5' Solve for A.
+	
+%(Ans2a_hint1)%	What do you already know from the scenario?
+%(Ans2a_hint2)%	To work through question 2, you must first find the length of the room.
+%(Ans2a_hint3)%	Try reading through the question again to find the length of the Adam's living room.
+%(Ans2a_hint4)%	Try entering '3.4' in the highlighted field.
+%(Ans2b_hint1)%	What information is provided in this question?
+%(Ans2b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans2b_hint3)%	What is the width of the room?
+%(Ans2b_hint4)%	Try typing 5 into the highlighted space.
+%(Ans2c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans2c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans2c_hint3)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(Ans2c_hint4)%	After you plug in the values, your formula should read 'A = 3.4 * 5' Solve for A.
+	
+%(Ans3a_hint1)%	What do you already know from the scenario?
+%(Ans3a_hint2)%	To work through question 3, you must first find the length of the room.
+%(Ans3a_hint3)%	Try reading through the question again to find the length of the Adam's living room.
+%(Ans3a_hint4)%	Try entering '6.4' in the highlighted field.
+%(Ans3b_hint1)%	What information is provided in this question?
+%(Ans3b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans3b_hint3)%	What is the width of the room?
+%(Ans3b_hint4)%	Try typing 5 into the highlighted space.
+%(Ans3c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(Ans3c_hint2)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(Ans3c_hint3)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(Ans3c_hint4)%	After you plug in the values, your formula should read 'A = 6.4 * 5' Solve for A.
+	
+%(radio_hint1)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(radio_hint2)%	32 square yds is larger than 22.5 square yds. Therefore, is 22.5 square yds the largest area?  Enter "yes" if it is or "no" if it is not.
+%(radio_hint3)%	Please enter "no" as the response.
+	
+%(goodjob)%	Great job! You've successfully completed this problem!
+%(DONE_hint)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	n/a
+%(bug2)%	n/a
+%(bug3)%	n/a
+%(bug4)%	n/a
+%(bug5)%	n/a
+%(bug6)%	n/a
+%(error_message)%	n/a
+%(visible1)%	FALSE
+%(7137235941890575246)%	What information is provided in this question?
+%(-3741766123344482753)%	What is the width of the room?
+%(-6901952857503427095)%	What do you already know from the scenario?
+%(5645093929203651144)%	Try reading through the question again to find the length of the Adam's living room.
+%(7906032719770737336)%	To work through question 1, you must first find the length of the room.
+%(8105585789468547910)%	After you plug in the values, your formula should read 'A = 6.4 * 5' Solve for A.
+%(-7753282996957717194)%	Please enter 'n/a' in the highlighted field.
+%(-3741765123324482718)%	Try reading through the question one more time, what is already stated?
+%(8105580789376547759)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-3741763123312482704)%	Try typing 5 into the highlighted space.
+%(-7760095407614420741)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(7906031719766737317)%	Try reading through the question again to find the length of the Adam's living room.
+%(-6901949857471427038)%	To work through question 3, you must first find the length of the room.
+%(-6734469513105593342)%	Please proceed to the next problem by clicking the "Done" button.
+%(-4099230463346982632)%	Great job! You've successfully completed this problem!
+%(2866120199660265791)%	Try reading through the question one more time, what is already stated?
+%(7906030719758737322)%	Try entering '4.5' in the highlighted field.
+%(8105579789368547676)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(5162537381742577495)%	Please enter 'n/a' in the highlighted field.
+%(-3269483932975333546)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(-8865737956518473063)%	Please enter 'n/a' in the highlighted field.
+%(7137232941922575413)%	Try reading through the question one more time, what is already stated?
+%(5645092929199651189)%	To work through question 2, you must first find the length of the room.
+%(7906033719794737403)%	What do you already know from the scenario?
+%(7137233941926575368)%	What is the width of the room?
+%(2866121199680265826)%	What is the width of the room?
+%(-7760100407646420812)%	After you plug in the values, your formula should read 'A = 4.5 * 5' Solve for A.
+%(2866119199652265772)%	What information is provided in this question?
+%(5645095929167651022)%	What do you already know from the scenario?
+%(5645090929203651159)%	Try entering '3.4' in the highlighted field.
+%(2577276927472933268)%	Please enter 'n/a' in the highlighted field.
+%(2866122199688265853)%	Try typing 5 into the highlighted space.
+%(7531104780070120008)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(-7760094407610420738)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+%(-5166532556208710060)%	No, this is not correct.
+%(-4496519548807638142)%	Please enter 'n/a' in the highlighted field.
+%(7531105780030119883)%	32 square yds is larger than 22.5 square yds. Therefore, is 22.5 square yds the largest area?  Enter "yes" if it is or "no" if it is not.
+%(-3269490933015333527)%	After you plug in the values, your formula should read 'A = 3.4 * 5' Solve for A.
+%(-7760097407642420827)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(-6901947857459427024)%	Try entering '6.4' in the highlighted field.
+%(-3269485932971333456)%	In a rectangle, you know how to find the area by multiplying the length by the width.
+%(7531106780034119886)%	Please enter "no" as the response.
+%(6940473221322363212)%	n/a
+%(-6901950857491427073)%	Try reading through the question again to find the length of the Adam's living room.
+%(8105578789364547673)%	Plug the given values for the Length (L) and the Width (W) into the rectangle formula, then solve for Area (A).
+%(7137230941926575383)%	Try typing 5 into the highlighted space.
+%(-3741768123356482775)%	What information is provided in this question?
+%(-4839436666918436389)%	Please enter 'n/a' in the highlighted field.
+%(-3269484932979333549)%	In a rectangle, A = L * W, where L is the length, W is the width. Which segment in the diagram is the length? Which is the width?
+Problem Name	12wall
+%(startStateNodeName)%	
+%(graphic)%	12wallPainting
+%(statement)%	Matthew is painting a 20-foot-long wall in his bedroom in red. In order for him to purchase the correct amount of paint, he needs to figure out the area of the wall. Which option will require the least paint?
+%(question1)%	(1) Matthew paints the entire wall,  the height being 10.5 ft. What is the area?
+%(question2)%	(2) Matthew is painting from top to bottom, and decide to paint only to a height of 9.5 ft. What is the area?
+%(question3)%	(3) Matthew is painting from right to left, and decide to paint only to a length of 14 ft. What is the area?
+%(heading1)%	length of the wall
+%(heading2)%	height of the wall
+%(heading3)%	area of the wall
+%(heading4)%	least paint needed?
+%(unit1)%	feet (ft)
+%(unit2)%	feet (ft)
+%(unit3)%	sq. feet
+%(unit4)%	-
+%(Variable1)%	BC
+%(Variable2)%	AB
+%(Variable3)%	---
+%(Variable4)%	---
+	
+%(Ans1_a)%	20
+%(Ans2_a)%	20
+%(Ans3_a)%	14
+	
+%(Ans1_b)%	10.5
+%(Ans2_b)%	9.5
+%(Ans3_b)%	10.5
+	
+%(Ans1_c)%	210
+%(Ans2_c)%	190
+%(Ans3_c)%	147
+%(radio_ans)%	3
+%(radio_mm)%	1
+	
+%(Ans1a_hint1)%	What do you already know from the scenario?
+%(Ans1a_hint2)%	To work through question 1, you must first find the length of the wall.
+%(Ans1a_hint3)%	Try reading through the question again to find the length of the wall Matthew is trying to paint.
+%(Ans1a_hint4)%	Try entering '20' in the highlighted field.
+%(Ans1b_hint1)%	What information is provided in this question?
+%(Ans1b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans1b_hint3)%	What is the height of the wall?
+%(Ans1b_hint4)%	Try typing 10.5 into the highlighted space.
+%(Ans1c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the height.
+%(Ans1c_hint2)%	In a rectangle, A = L * H, where L is the length and H is the height. Which segment in the diagram is the length? Which is the height?
+%(Ans1c_hint3)%	Plug the given values for the Length (L) and the Height (H) into the rectangle formula, then solve for Area (A).
+%(Ans1c_hint4)%	After you plug in the values, your formula should read 'A = 20 * 10.5' Solve for A.
+	
+%(Ans2a_hint1)%	What do you already know from the scenario?
+%(Ans2a_hint2)%	To work through question 2, you must first find the length of the wall.
+%(Ans2a_hint3)%	Try reading through the question again to find the length of the wall Matthew is trying to paint.
+%(Ans2a_hint4)%	Try entering '20' in the highlighted field.
+%(Ans2b_hint1)%	What information is provided in this question?
+%(Ans2b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans2b_hint3)%	What is the height of the wall?
+%(Ans2b_hint4)%	Try typing 9.5 into the highlighted space.
+%(Ans2c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the height.
+%(Ans2c_hint2)%	In a rectangle, A = L * H, where L is the length and H is the height. Which segment in the diagram is the length? Which is the height?
+%(Ans2c_hint3)%	Plug the given values for the Length (L) and the Height (H) into the rectangle formula, then solve for Area (A).
+%(Ans2c_hint4)%	After you plug in the values, your formula should read 'A = 20 * 9.5' Solve for A.
+	
+%(Ans3a_hint1)%	What do you already know from the scenario?
+%(Ans3a_hint2)%	To work through question 3, you must first find the length of the wall.
+%(Ans3a_hint3)%	Try reading through the question again to find the length of the wall Matthew is trying to paint.
+%(Ans3a_hint4)%	Try entering '14' in the highlighted field.
+%(Ans3b_hint1)%	What information is provided in this question?
+%(Ans3b_hint2)%	Try reading through the question one more time, what is already stated?
+%(Ans3b_hint3)%	What is the height of the wall?
+%(Ans3b_hint4)%	Try typing 10.5 into the highlighted space.
+%(Ans3c_hint1)%	In a rectangle, you know how to find the area by multiplying the length by the height.
+%(Ans3c_hint2)%	In a rectangle, A = L * H, where L is the length and H is the height. Which segment in the diagram is the length? Which is the height?
+%(Ans3c_hint3)%	Plug the given values for the Length (L) and the Height (H) into the rectangle formula, then solve for Area (A).
+%(Ans3c_hint4)%	After you plug in the values, your formula should read 'A = 14 * 10.5' Solve for A.
+	
+%(radio_hint1)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(radio_hint2)%	147 square yds is larger than 210 square yds. Therefore, is 210 square yds the largest area?  Enter "yes" if it is or "no" if it is not.
+%(radio_hint3)%	Please enter "no" as the response.
+	
+%(goodjob)%	Great job! You've successfully completed this problem!
+%(DONE_hint)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	n/a
+%(bug2)%	n/a
+%(bug3)%	n/a
+%(bug4)%	n/a
+%(bug5)%	n/a
+%(bug6)%	n/a
+%(error_message)%	n/a
+%(visible1)%	TRUE 
+%(7137235941890575246)%	What information is provided in this question?
+%(-3741766123344482753)%	What is the height of the wall?
+%(-6901952857503427095)%	What do you already know from the scenario?
+%(5645093929203651144)%	Try reading through the question again to find the length of the wall Matthew is trying to paint.
+%(7906032719770737336)%	To work through question 1, you must first find the length of the wall.
+%(8105585789468547910)%	After you plug in the values, your formula should read 'A = 14 * 10.5' Solve for A.
+%(-7753282996957717194)%	Please enter 'n/a' in the highlighted field.
+%(-3741765123324482718)%	Try reading through the question one more time, what is already stated?
+%(8105580789376547759)%	In a rectangle, you know how to find the area by multiplying the length by the height.
+%(-3741763123312482704)%	Try typing 9.5 into the highlighted space.
+%(-7760095407614420741)%	Plug the given values for the Length (L) and the Height (H) into the rectangle formula, then solve for Area (A).
+%(7906031719766737317)%	Try reading through the question again to find the length of the wall Matthew is trying to paint.
+%(-6901949857471427038)%	To work through question 3, you must first find the length of the wall.
+%(-6734469513105593342)%	Please proceed to the next problem by clicking the "Done" button.
+%(-4099230463346982632)%	Great job! You've successfully completed this problem!
+%(2866120199660265791)%	Try reading through the question one more time, what is already stated?
+%(7906030719758737322)%	Try entering '20' in the highlighted field.
+%(8105579789368547676)%	In a rectangle, A = L * H, where L is the length and H is the height. Which segment in the diagram is the length? Which is the height?
+%(5162537381742577495)%	Please enter 'n/a' in the highlighted field.
+%(-3269483932975333546)%	Plug the given values for the Length (L) and the Height (H) into the rectangle formula, then solve for Area (A).
+%(-8865737956518473063)%	Please enter 'n/a' in the highlighted field.
+%(7137232941922575413)%	Try reading through the question one more time, what is already stated?
+%(5645092929199651189)%	To work through question 2, you must first find the length of the wall.
+%(7906033719794737403)%	What do you already know from the scenario?
+%(7137233941926575368)%	What is the height of the wall?
+%(2866121199680265826)%	What is the height of the wall?
+%(-7760100407646420812)%	After you plug in the values, your formula should read 'A = 20 * 10.5' Solve for A.
+%(2866119199652265772)%	What information is provided in this question?
+%(5645095929167651022)%	What do you already know from the scenario?
+%(5645090929203651159)%	Try entering '20' in the highlighted field.
+%(2577276927472933268)%	Please enter 'n/a' in the highlighted field.
+%(2866122199688265853)%	Try typing 10.5 into the highlighted space.
+%(7531104780070120008)%	Which one has the choises are ______ ? Please choose among the highlighted radio buttons.
+%(-7760094407610420738)%	In a rectangle, A = L * H, where L is the length and H is the height. Which segment in the diagram is the length? Which is the height?
+%(-5166532556208710060)%	No, this is not correct.
+%(-4496519548807638142)%	Please enter 'n/a' in the highlighted field.
+%(7531105780030119883)%	147 square yds is larger than 210 square yds. Therefore, is 210 square yds the largest area?  Enter "yes" if it is or "no" if it is not.
+%(-3269490933015333527)%	After you plug in the values, your formula should read 'A = 20 * 9.5' Solve for A.
+%(-7760097407642420827)%	In a rectangle, you know how to find the area by multiplying the length by the height.
+%(-6901947857459427024)%	Try entering '14' in the highlighted field.
+%(-3269485932971333456)%	In a rectangle, you know how to find the area by multiplying the length by the height.
+%(7531106780034119886)%	Please enter "no" as the response.
+%(6940473221322363212)%	n/a
+%(-6901950857491427073)%	Try reading through the question again to find the length of the wall Matthew is trying to paint.
+%(8105578789364547673)%	Plug the given values for the Length (L) and the Height (H) into the rectangle formula, then solve for Area (A).
+%(7137230941926575383)%	Try typing 10.5 into the highlighted space.
+%(-3741768123356482775)%	What information is provided in this question?
+%(-4839436666918436389)%	Please enter 'n/a' in the highlighted field.
+%(-3269484932979333549)%	In a rectangle, A = L * H, where L is the length and H is the height. Which segment in the diagram is the length? Which is the height?

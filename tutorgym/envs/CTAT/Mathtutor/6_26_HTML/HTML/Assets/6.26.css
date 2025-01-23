@@ -1,0 +1,14 @@
+.multiples {
+  display: flex;
+  justify-content: space-around;
+}
+ul {
+  list-style: none;
+  padding: 0
+}
+ul li::before {
+  content: "\200B";
+}
+.result {
+  text-align: center;
+}

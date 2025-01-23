@@ -1,0 +1,76 @@
+.CTATProblemSolving {
+  flex-direction: column;
+}
+.CTATProblem {
+  flex: none;
+}
+.CTATSolution {
+  width: calc(100% - 20px);
+  flex: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.factors, .common_factors {
+  flex: 1;
+  min-width: 390px;
+  min-height: 225px;
+  text-align: center;
+}
+.factors {
+  border-right: 2px solid gray;
+  padding-right: 9px;
+}
+.lists {
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 819px) {
+  .factors, .common_factors {
+    min-height: 0;
+  }
+}
+@media (max-width: 578px) and (max-height: 900px) {
+  .factors, .common_factors {
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 450px) {
+  .factors, .common_factors {
+    min-width: 300px;
+  }
+}
+ul {
+  list-style: none;
+  padding: 0
+}
+ul li::before {
+  content: "\200B";
+}
+ul li .CTATTextField {
+  display: inline;
+}
+#DoneWithFactorPairs {
+  margin-top: 8px;
+}
+.common_factors {
+  padding-left: 9px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.box {
+  margin: 10px;
+  min-width: 215px;
+  padding: 20px;
+  background-color: #feffc7;
+}
+.box .CTATTextField {
+  margin-bottom: 10px;
+}
+.CTATTextInput {
+  width: 45px;
+}

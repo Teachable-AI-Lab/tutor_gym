@@ -1,0 +1,5152 @@
+Problem Name	test1
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	Please subtract 6.49 from 18.37
+%(temp-numbers)%	Please subtract 6.49 from 18.37
+%(op)%	-
+%(decimalposition)%	n1d6
+%(decimalposition2)%	n2d6
+%(carry_dec_loc)%	r1c6
+%(carry_dec_loc2)%	r2c6
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d1hint3)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d2hint3)%	
+%(n1d3req)%	0
+%(n1d3)%	0
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d3hint3)%	
+%(n1d4req)%	1
+%(n1d4)%	1
+%(n1d4hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d4hint2)%	18.37 is the larger number. Please enter the digit in the tens place of 18.37
+%(n1d4hint3)%	The digit in the tens place of 18.37 is 1. Please enter 1.
+%(n1d5req)%	1
+%(n1d5)%	8
+%(n1d5hint1)%	Please enter the digit in the ones place of 18.37
+%(n1d5hint2)%	The digit in the ones place of 18.37 is 8. Please enter 8.
+%(n1d5hint3)%	
+%(n1d6req)%	0
+%(n1d6)%	---
+%(n1d6hint1)%	
+%(n1d6hint2)%	
+%(n1d7req)%	1
+%(n1d7)%	3
+%(n1d7hint1)%	Please enter the digit in the tenths place of 18.37.
+%(n1d7hint2)%	The digit in the tenths place of 18.37 is 3. Please enter 3.
+%(n1d8req)%	1
+%(n1d8)%	7
+%(n1d8hint1)%	Please enter the digit in the hundredths place of 18.37.
+%(n1d8hint2)%	The digit in the hundredths place of 18.37 is 7. Please enter 7.
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	0
+%(n2d4)%	0
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	1
+%(n2d5)%	6
+%(n2d5hint1)%	Please enter the digit in the ones place of 6.49.
+%(n2d5hint2)%	The digit in the ones place of 6.49 is 6. Please enter 6.
+%(n2d6req)%	0
+%(n2d6)%	---
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	1
+%(n2d7)%	4
+%(n2d7hint1)%	Please enter the digit in the tenths place of 6.49.
+%(n2d7hint2)%	The digit in the tenths place of 6.49 is 4. Please enter 4.
+%(n2d8req)%	1
+%(n2d8)%	9
+%(n2d8hint1)%	Please enter the digit in the hundredths place of 6.49.
+%(n2d8hint2)%	The digit in the hundredths place of 6.49 is 9. Please enter 9.
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	0
+%(r1c3hint1)%	
+%(r1c3hint2)%	
+%(r1c4)%	0
+%(r1c4hint1)%	
+%(r1c4hint2)%	
+%(r1c5)%	0
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	0
+%(r1c6hint1)%	
+%(r1c6hint2)%	
+%(r1c7)%	12
+%(r1c7hint1)%	You need to regroup to complete subtraction in the tenths column. Borrow 1 one to do this. Remember that 1 one is equal to 10 tenths.
+%(r1c7hint2)%	After regrouping 1 one into 10 tenths, add it to the 2 tenths you already have. Please enter 12 in this box.
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	0
+%(r2c1hint1)%	
+%(r2c1hint2)%	
+%(r2c2)%	0
+%(r2c2hint1)%	
+%(r2c2hint2)%	
+%(r2c3)%	0
+%(r2c3hint1)%	
+%(r2c3hint2)%	
+%(r2c4)%	0
+%(r2c4hint1)%	
+%(r2c4hint2)%	
+%(r2c5)%	7
+%(r2c5hint1)%	Since you needed to regroup to complete subtraction in the tenths column, you have used and must take away 1 one.
+%(r2c5hint2)%	After taking 1 one from 8 ones, you have 7 ones left. Please enter 7 in this box.
+%(r2c6)%	0
+%(r2c6hint1)%	
+%(r2c6hint2)%	
+%(r2c7)%	2
+%(r2c7hint1)%	Since you needed to regroup to complete subtraction in the hundredths column, you have used and must take away one tenth.
+%(r2c7hint2)%	After taking 1 tenth from 3 tenths, you have 2 tenths left. Please enter 2 in this box.
+%(r2c8)%	17
+%(r2c8hint1)%	You need to regroup to complete subtraction in the hundredths column. Borrow 1 tenth to do this. Remember that 1 tenth is equal to 10 hundredths.
+%(r2c8hint2)%	After regrouping 1 tenth into 10 hundredths, add it to the 7 hundreths you already have. Please enter 17 in this box.
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a1hint3)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a2hint3)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a3hint3)%	
+%(a4req)%	1
+%(a4)%	1
+%(a4hint1)%	Since you did not need to regroup to complete subtraction in the ones column, you are subtracting 0 tens from 1 ten. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a4hint2)%	You do not need to borrow to complete this step, so you need to evaluate 1 ten - 0 tens. 
+%(a4hint3)%	Please enter 1 in the highlighted box.
+%(a5req)%	1
+%(a5)%	1
+%(a5hint1)%	Since you needed to regroup 1 one into 10 tenths, you need to enter the difference between 7 and 6 in this box.
+%(a5hint2)%	You do not need to regroup to complete this step, so you need to evaluate 7 ones - 6 ones.
+%(a5hint3)%	Please enter 1 in the highlighted box.
+%(a6req)%	1
+%(a6)%	.
+%(a6hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a6hint2)%	
+%(a6hint3)%	
+%(a7req)%	1
+%(a7)%	8
+%(a7hint1)%	Since you needed to regroup to complete subtraction in the hundredths column, you are subtracting 4 tenths from 2 tenths, and must borrow from the ones column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(a7hint2)%	After borrowing, you need to evaluate 12 tenths - 4 tenths.
+%(a7hint3)%	Please enter 8 in the highlighted box.
+%(a8req)%	1
+%(a8)%	8
+%(a8hint1)%	In this column, you are subtracting 9 hundredths from 7 hundredths. Since 9 is larger than 7, you must borrow from the tenths column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(a8hint2)%	After borrowing, you need to evaluate 17 hundredths - 9 hundredths.
+%(a8hint3)%	Please enter 8 in the highlighted box.
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+%(a9hint3)%	
+	
+%(small_number_error_location)%	n1d5
+%(small_number_error)%	6
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-leading-or-trailing-zero
+%(n1d4_skill)%	Enter-givens
+%(n1d5_skill)%	Enter-givens
+%(n1d6_skill)%	Align-decimals
+%(n1d7_skill)%	Enter-givens
+%(n1d8_skill)%	Enter-givens
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-leading-or-trailing-zero
+%(n2d5_skill)%	Enter-givens
+%(n2d6_skill)%	Align-decimals
+%(n2d7_skill)%	Enter-givens
+%(n2d8_skill)%	Enter-givens
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(a8_skill)%	Subtract-with-borrow
+%(a7_skill)%	Subtract-with-borrow
+%(a6_skill)%	Align-decimals
+%(a5_skill)%	Subtract-with-lend
+%(a4_skill)%	Subtract-no-borrow-or-lend
+%(a3_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill)%	Enter-leading-or-trailing-zero
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(3056407978218874328)%	
+%(3111529056432992585)%	
+%(-4766528366246230012)%	Since you needed to regroup to complete subtraction in the hundredths column, you have used and must take away one tenth.
+%(4122547966151021001)%	
+%(-5958682527562602422)%	
+%(5939726124832416050)%	
+%(3056404978218874403)%	
+%(-6907532864849400112)%	The digit in the tenths place of 6.49 is 4. Please enter 4.
+%(1953684789227255040)%	
+%(-7432409857962594680)%	
+%(-103575905657380754)%	You do not need to borrow to complete this step, so you need to evaluate 1 ten - 0 tens. 
+%(9041504051517695496)%	
+%(-1140766803479447250)%	Since you needed to regroup to complete subtraction in the tenths column, you have used and must take away 1 one.
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(5939724124836416020)%	
+%(4122546966191021130)%	
+%(893113643897759373)%	You need to regroup to complete subtraction in the tenths column. Borrow 1 one to do this. Remember that 1 one is equal to 10 tenths.
+%(6213752517472455109)%	The digit in the hundredths place of 6.49 is 9. Please enter 9.
+%(641186239155714071)%	
+%(-4733341091933527816)%	18.37 is the larger number. Please enter the digit in the tens place of 18.37
+%(-3353313824202496550)%	Please enter 8 in the highlighted box.
+%(267630474009556348)%	The digit in the hundredths place of 18.37 is 7. Please enter 7.
+%(1730749668174863887)%	
+%(6382391196249600991)%	
+%(1847841181010240103)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	Please enter the digit in the hundredths place of 18.37.
+%(3111528056472992714)%	
+%(3982482621457137133)%	You do not need to regroup to complete this step, so you need to evaluate 7 ones - 6 ones.
+%(1951833195040611473)%	In this column, you are subtracting 9 hundredths from 7 hundredths. Since 9 is larger than 7, you must borrow from the tenths column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(-9202527078397046537)%	
+%(3982483621461137128)%	Please enter 1 in the highlighted box.
+%(1847844181042240188)%	
+%(2955207463892187106)%	
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	Please enter the digit in the ones place of 18.37
+%(-103578905657380747)%	Since you did not need to regroup to complete subtraction in the ones column, you are subtracting 0 tens from 1 ten. Please use the boxes in the gray area above to help you regroup if necessary.
+%(9041503051529695589)%	
+%(-9202526078393046582)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	
+%(-1995939531117924798)%	
+%(2701072456702758032)%	
+%(-7432412857962594669)%	
+%(-6058999401977538257)%	
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	After regrouping 1 tenth into 10 hundredths, add it to the 7 hundreths you already have. Please enter 17 in this box.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-3867476976281168443)%	
+%(3094705722605100522)%	Please enter the digit in the tenths place of 18.37.
+%(-9202524078429046708)%	
+%(641187239159714154)%	
+%(6213751517464455158)%	Please enter the digit in the hundredths place of 6.49.
+%(3982485621489137190)%	Since you needed to regroup 1 one into 10 tenths, you need to enter the difference between 7 and 6 in this box.
+%(-5958681527602602551)%	
+%(-4644522401360927443)%	
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	You need to regroup to complete subtraction in the hundredths column. Borrow 1 tenth to do this. Remember that 1 tenth is equal to 10 hundredths.
+%(-654682931131624435)%	
+%(893112643889759422)%	After regrouping 1 one into 10 tenths, add it to the 2 tenths you already have. Please enter 12 in this box.
+%(4989872382532288054)%	The digit in the ones place of 6.49 is 6. Please enter 6.
+%(1953686789223255102)%	
+%(-654681931127624440)%	
+%(-654680931119624421)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(3094706722693100777)%	The digit in the tenths place of 18.37 is 3. Please enter 3.
+%(-4766531366246229905)%	After taking 1 tenth from 3 tenths, you have 2 tenths left. Please enter 2 in this box.
+%(1951836195136611818)%	After borrowing, you need to evaluate 17 hundredths - 9 hundredths.
+%(-5088806614309645506)%	
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the tenths place of 6.49.
+%(-5039427320210567376)%	
+%(8676310691293844476)%	
+%(-1140765803471447235)%	After taking 1 one from 8 ones, you have 7 ones left. Please enter 7 in this box.
+%(-7048402377707711960)%	
+%(-103576905645380797)%	Please enter 1 in the highlighted box.
+%(7703666018947561602)%	
+%(-5088807614313645509)%	The digit in the ones place of 18.37 is 8. Please enter 8.
+%(-6058996401977538364)%	
+%(2955208463884187009)%	
+%(-3353315824230496612)%	Since you needed to regroup to complete subtraction in the hundredths column, you are subtracting 4 tenths from 2 tenths, and must borrow from the ones column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(-7793444101545105188)%	
+%(1951835195132611823)%	Please enter 8 in the highlighted box.
+%(-4644523401368927522)%	
+%(6809645260764282625)%	
+%(-7048405377707711949)%	
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	Please enter the digit in the ones place of 6.49.
+%(2701069456606757787)%	
+%(-4733342091921527851)%	The digit in the tens place of 18.37 is 1. Please enter 1.
+%(-1995938531125924767)%	
+%(9041502051521695510)%	
+%(6382390196225600924)%	
+%(6382389196221600897)%	
+%(6809644260772282722)%	
+%(5939723124832416025)%	
+%(-3353314824206496545)%	After borrowing, you need to evaluate 12 tenths - 4 tenths.
+Problem Name	test2
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	Please subtract 10.7 from 15.5
+%(temp-numbers)%	Please subtract 10.7 from 15.5
+%(op)%	-
+%(decimalposition)%	n1d4
+%(decimalposition2)%	n2d4
+%(carry_dec_loc)%	r1c4
+%(carry_dec_loc2)%	r2c4
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d1hint3)%	
+%(n1d2req)%	1
+%(n1d2)%	1
+%(n1d2hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d2hint2)%	15.5 is the larger number. Please enter the digit in the tens place of 15.5
+%(n1d2hint3)%	The digit in the tens place of 15.5 is 1. Please enter 1.
+%(n1d3req)%	1
+%(n1d3)%	5
+%(n1d3hint1)%	Please enter the digit in the ones place of 15.5
+%(n1d3hint2)%	The digit in the ones place of 15.5 is 5. Please enter 5.
+%(n1d3hint3)%	
+%(n1d4req)%	0
+%(n1d4)%	---
+%(n1d4hint1)%	
+%(n1d4hint2)%	
+%(n1d4hint3)%	
+%(n1d5req)%	1
+%(n1d5)%	5
+%(n1d5hint1)%	Please enter the digit in the tenths place of 15.5.
+%(n1d5hint2)%	The digit in the tenths place of 15.5 is 5. Please enter 5.
+%(n1d5hint3)%	
+%(n1d6req)%	0
+%(n1d6)%	0
+%(n1d6hint1)%	
+%(n1d6hint2)%	
+%(n1d7req)%	0
+%(n1d7)%	0
+%(n1d7hint1)%	
+%(n1d7hint2)%	
+%(n1d8req)%	0
+%(n1d8)%	0
+%(n1d8hint1)%	
+%(n1d8hint2)%	
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	1
+%(n2d2)%	1
+%(n2d2hint1)%	Please enter the digit in the tens place of 10.7.
+%(n2d2hint2)%	The digit in the tens place of 10.7 is 1. Please enter 1.
+%(n2d3req)%	1
+%(n2d3)%	0
+%(n2d3hint1)%	Please enter the digit in the ones place of 10.7.
+%(n2d3hint2)%	The digit in the ones place of 10.7 is 0. Please enter 0.
+%(n2d4req)%	0
+%(n2d4)%	---
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	1
+%(n2d5)%	7
+%(n2d5hint1)%	Please enter the digit in the tenths place of 10.7.
+%(n2d5hint2)%	The digit in the tenths place of 10.7 is 7. Please enter 7.
+%(n2d6req)%	0
+%(n2d6)%	0
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	0
+%(n2d7)%	0
+%(n2d7hint1)%	
+%(n2d7hint2)%	
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	0
+%(r1c3hint1)%	
+%(r1c3hint2)%	
+%(r1c4)%	0
+%(r1c4hint1)%	
+%(r1c4hint2)%	
+%(r1c5)%	0
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	0
+%(r1c6hint1)%	
+%(r1c6hint2)%	
+%(r1c7)%	0
+%(r1c7hint1)%	
+%(r1c7hint2)%	
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	0
+%(r2c1hint1)%	
+%(r2c1hint2)%	
+%(r2c2)%	0
+%(r2c2hint1)%	
+%(r2c2hint2)%	
+%(r2c3)%	4
+%(r2c3hint1)%	Since you needed to regroup to complete subtraction in the tenths column, you have used and must take away 1 one.
+%(r2c3hint2)%	After taking 1 one from 5 ones, you have 4 ones left. Please enter 4 in this box.
+%(r2c4)%	0
+%(r2c4hint1)%	
+%(r2c4hint2)%	
+%(r2c5)%	15
+%(r2c5hint1)%	You need to regroup to complete subtraction in the tenths column. Borrow 1 one to do this. Remember that 1 one is equal to 10 tenths.
+%(r2c5hint2)%	After regrouping 1 one into 10 tenths, add it to the 5 tenths you already have. Please enter 15 in this box.
+%(r2c6)%	0
+%(r2c6hint1)%	
+%(r2c6hint2)%	
+%(r2c7)%	0
+%(r2c7hint1)%	
+%(r2c7hint2)%	
+%(r2c8)%	0
+%(r2c8hint1)%	
+%(r2c8hint2)%	
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a1hint3)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a2hint3)%	
+%(a3req)%	1
+%(a3)%	4
+%(a3hint1)%	Since you needed to regroup to complete subtraction in the tenths column, you are subtracting 0 ones from 4 ones.
+%(a3hint2)%	You do not need to borrow to complete this step, so you need to evaluate 4 ones - 0 ones.
+%(a3hint3)%	Please enter 4 in the highlighted box.
+%(a4req)%	1
+%(a4)%	.
+%(a4hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a4hint2)%	
+%(a4hint3)%	
+%(a5req)%	1
+%(a5)%	8
+%(a5hint1)%	You need to subtract 7 tenths from 5 tenths.
+%(a5hint2)%	You will need to regroup to do the subtraction. Use the boxes above to regroup.
+%(a5hint3)%	The difference between 15 and 7 is 8. Please enter 8 in the highlighted box.
+%(a6req)%	0
+%(a6)%	0
+%(a6hint1)%	
+%(a6hint2)%	
+%(a6hint3)%	
+%(a7req)%	0
+%(a7)%	0
+%(a7hint1)%	
+%(a7hint2)%	
+%(a7hint3)%	
+%(a8req)%	0
+%(a8)%	0
+%(a8hint1)%	
+%(a8hint2)%	
+%(a8hint3)%	
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+%(a9hint3)%	
+	
+%(small_number_error_location)%	n1d3
+%(small_number_error)%	0
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-givens
+%(n1d3_skill)%	Enter-givens
+%(n1d4_skill)%	Align-decimals
+%(n1d5_skill)%	Enter-givens
+%(n1d6_skill)%	Enter-leading-or-trailing-zero
+%(n1d7_skill)%	Enter-leading-or-trailing-zero
+%(n1d8_skill)%	Enter-leading-or-trailing-zero
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-givens
+%(n2d3_skill)%	Enter-givens
+%(n2d4_skill)%	Align-decimals
+%(n2d5_skill)%	Enter-givens
+%(n2d6_skill)%	Enter-leading-or-trailing-zero
+%(n2d7_skill)%	Enter-leading-or-trailing-zero
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(a8_skill)%	Enter-leading-or-trailing-zero
+%(a7_skill)%	Enter-leading-or-trailing-zero
+%(a6_skill)%	Enter-leading-or-trailing-zero
+%(a5_skill)%	Subtract-with-borrow
+%(a4_skill)%	Align-decimals
+%(a3_skill)%	Subtract-with-lend
+%(a2_skill)%	Enter-leading-or-trailing-zero
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(3056407978218874328)%	
+%(3111529056432992585)%	
+%(-4766528366246230012)%	
+%(4122547966151021001)%	
+%(-5958682527562602422)%	
+%(5939726124832416050)%	
+%(3056404978218874403)%	
+%(-6907532864849400112)%	
+%(1953684789227255040)%	Since you needed to regroup to complete subtraction in the tenths column, you are subtracting 0 ones from 4 ones.
+%(-7432409857962594680)%	Since you needed to regroup to complete subtraction in the tenths column, you have used and must take away 1 one.
+%(-103575905657380754)%	
+%(9041504051517695496)%	
+%(-1140766803479447250)%	You need to regroup to complete subtraction in the tenths column. Borrow 1 one to do this. Remember that 1 one is equal to 10 tenths.
+%(641188239247714409)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(-6634764911781064177)%	The digit in the tens place of 10.7 is 1. Please enter 1.
+%(1953685789235255059)%	You do not need to borrow to complete this step, so you need to evaluate 4 ones - 0 ones.
+%(5939724124836416020)%	
+%(4122546966191021130)%	
+%(893113643897759373)%	
+%(6213752517472455109)%	
+%(641186239155714071)%	The digit in the tens place of 15.5 is 1. Please enter 1.
+%(-4733341091933527816)%	
+%(-3353313824202496550)%	
+%(267630474009556348)%	
+%(1730749668174863887)%	
+%(6382391196249600991)%	
+%(1847841181010240103)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	
+%(3111528056472992714)%	
+%(3982482621457137133)%	You will need to regroup to do the subtraction. Use the boxes above to regroup.
+%(1951833195040611473)%	
+%(-9202527078397046537)%	
+%(3982483621461137128)%	The difference between 15 and 7 is 8. Please enter 8 in the highlighted box.
+%(1847844181042240188)%	
+%(2955207463892187106)%	
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	Please enter the digit in the tenths place of 15.5.
+%(-103578905657380747)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(9041503051529695589)%	The digit in the ones place of 15.5 is 5. Please enter 5.
+%(-9202526078393046582)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	
+%(-1995939531117924798)%	
+%(2701072456702758032)%	
+%(-7432412857962594669)%	After taking 1 one from 5 ones, you have 4 ones left. Please enter 4 in this box.
+%(-6058999401977538257)%	
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-3867476976281168443)%	
+%(3094705722605100522)%	
+%(-9202524078429046708)%	
+%(641187239159714154)%	15.5 is the larger number. Please enter the digit in the tens place of 15.5
+%(6213751517464455158)%	
+%(3982485621489137190)%	You need to subtract 7 tenths from 5 tenths.
+%(-5958681527602602551)%	
+%(-4644522401360927443)%	
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	
+%(-654682931131624435)%	
+%(893112643889759422)%	
+%(4989872382532288054)%	The digit in the tenths place of 10.7 is 7. Please enter 7.
+%(1953686789223255102)%	Please enter 4 in the highlighted box.
+%(-654681931127624440)%	
+%(-654680931119624421)%	
+%(-7793447101577105273)%	Please enter the digit in the ones place of 10.7.
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	
+%(3094706722693100777)%	
+%(-4766531366246229905)%	
+%(1951836195136611818)%	
+%(-5088806614309645506)%	
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	Please enter the digit in the tens place of 10.7.
+%(-6907535864945400357)%	
+%(-5039427320210567376)%	
+%(8676310691293844476)%	
+%(-1140765803471447235)%	After regrouping 1 one into 10 tenths, add it to the 5 tenths you already have. Please enter 15 in this box.
+%(-7048402377707711960)%	
+%(-103576905645380797)%	
+%(7703666018947561602)%	
+%(-5088807614313645509)%	The digit in the tenths place of 15.5 is 5. Please enter 5.
+%(-6058996401977538364)%	
+%(2955208463884187009)%	
+%(-3353315824230496612)%	
+%(-7793444101545105188)%	The digit in the ones place of 10.7 is 0. Please enter 0.
+%(1951835195132611823)%	
+%(-4644523401368927522)%	
+%(6809645260764282625)%	
+%(-7048405377707711949)%	
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	Please enter the digit in the tenths place of 10.7.
+%(2701069456606757787)%	
+%(-4733342091921527851)%	
+%(-1995938531125924767)%	
+%(9041502051521695510)%	Please enter the digit in the ones place of 15.5
+%(6382390196225600924)%	
+%(6382389196221600897)%	
+%(6809644260772282722)%	
+%(5939723124832416025)%	
+%(-3353314824206496545)%	
+Problem Name	p13
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	On an average day, Canadians spend 1.052 million dollars on video games. Of this total, 0.76 million is spent on Playbox games. How many millions of dollars do they spend on other video games per day?
+%(temp-numbers)%	Please subtract 0.76 from 1.052
+%(op)%	-
+%(decimalposition)%	n1d5
+%(decimalposition2)%	n2d5
+%(carry_dec_loc)%	r1c5
+%(carry_dec_loc2)%	r2c5
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d1hint3)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d2hint3)%	
+%(n1d3req)%	0
+%(n1d3)%	0
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d3hint3)%	
+%(n1d4req)%	1
+%(n1d4)%	1
+%(n1d4hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d4hint2)%	1.052 is the larger number. Please enter the digit in the ones place of 1.052.
+%(n1d4hint3)%	The digit in the ones place of 1.052 is 1. Please enter 1.
+%(n1d5req)%	0
+%(n1d5)%	---
+%(n1d5hint1)%	
+%(n1d5hint2)%	
+%(n1d5hint3)%	
+%(n1d6req)%	1
+%(n1d6)%	0
+%(n1d6hint1)%	Please enter the digit in the tenths place of 1.052.
+%(n1d6hint2)%	The digit in the tenths place of 1.052 is 0. Please enter 0.
+%(n1d7req)%	1
+%(n1d7)%	5
+%(n1d7hint1)%	Please enter the digit in the hundredths place of 1.052.
+%(n1d7hint2)%	The digit in the hundredths place of 1.052 is 5. Please enter 5.
+%(n1d8req)%	1
+%(n1d8)%	2
+%(n1d8hint1)%	Please enter the digit in the thousandths place of 1.052.
+%(n1d8hint2)%	The digit in the thousandths place of 1.052 is 2. Please enter 2.
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	0
+%(n2d4)%	0
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	0
+%(n2d5)%	---
+%(n2d5hint1)%	
+%(n2d5hint2)%	
+%(n2d6req)%	1
+%(n2d6)%	7
+%(n2d6hint1)%	Please enter the digit in the tenths place of 0.76.
+%(n2d6hint2)%	The digit in the tenths place of 0.76 is 7. Please enter 7.
+%(n2d7req)%	1
+%(n2d7)%	6
+%(n2d7hint1)%	Please enter the digit in the hundredths place of 0.76.
+%(n2d7hint2)%	The digit in the hundredths place of 0.76 is 6. Please enter 6.
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	0
+%(r1c3hint1)%	
+%(r1c3hint2)%	
+%(r1c4)%	0
+%(r1c4hint1)%	
+%(r1c4hint2)%	
+%(r1c5)%	0
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	9
+%(r1c6hint1)%	You needed to regroup 1 tenth into 10 hundredths. You need to take away 1 one and enter the result here. 
+%(r1c6hint2)%	10 minus 1 is 0. Enter 9 in this box.
+%(r1c7)%	0
+%(r1c7hint1)%	
+%(r1c7hint2)%	
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	0
+%(r2c1hint1)%	
+%(r2c1hint2)%	
+%(r2c2)%	0
+%(r2c2hint1)%	
+%(r2c2hint2)%	
+%(r2c3)%	0
+%(r2c3hint1)%	
+%(r2c3hint2)%	
+%(r2c4)%	0
+%(r2c4hint1)%	You regrouped 1 one into 10 tenths. You need to subtract that from the number of ones and enter the result in this box.
+%(r2c4hint2)%	You had 1 one. 1 minus 1 is 0. Enter 0 in this box.
+%(r2c5)%	0
+%(r2c5hint1)%	
+%(r2c5hint2)%	
+%(r2c6)%	10
+%(r2c6hint1)%	You need to regroup 1 one into 10 tenths in order to regroup 1 tenth into 10 hundredths.
+%(r2c6hint2)%	Regroup 1 one into 10 tenths. Enter 10 in this box.
+%(r2c7)%	15
+%(r2c7hint1)%	You can use this box to regroup 1 tenth into 10 hundredths.
+%(r2c7hint2)%	After regrouping 1 tenth into 10 hundredths, add the 10 hundredths to the 5 hundredths you already have. Enter 15 in this box.
+%(r2c8)%	0
+%(r2c8hint1)%	
+%(r2c8hint2)%	
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a1hint3)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a2hint3)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a3hint3)%	
+%(a4req)%	0
+%(a4)%	0
+%(a4hint1)%	
+%(a4hint2)%	
+%(a4hint3)%	
+%(a5req)%	1
+%(a5)%	.
+%(a5hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a5hint2)%	
+%(a5hint3)%	
+%(a6req)%	1
+%(a6)%	2
+%(a6hint1)%	You need to subtract 7 tenths from 9 tenths.
+%(a6hint2)%	You do not need to regroup to complete this step, so you need to evaluate 9 tenths - 7 tenths.
+%(a6hint3)%	Please enter 2 in the highlighted box.
+%(a7req)%	1
+%(a7)%	9
+%(a7hint1)%	Since you did not need to regroup to complete subtraction in the thousandths column, you are subtracting 6 hundredths from 5 hundredths. Now you must borrow from the tenths column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(a7hint2)%	Since there are 0 tenths, you need to convert 1 one into 10 tenths. Then, you can convert 1 tenth into 10 hundredths. After this conversion, you need to evaluate 15 hundredths - 6 hundredths. 
+%(a7hint3)%	Please enter 9 in the highlighted box.
+%(a8req)%	1
+%(a8)%	2
+%(a8hint1)%	In this column, you are subtracting 0 thousandths from 2 thousandths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a8hint2)%	You do not need to borrow to complete this step, so you need to evaluate 2 thousandths - 0 thousandths.
+%(a8hint3)%	Please enter 2 in the highlighted box.
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+%(a9hint3)%	
+	
+%(small_number_error_location)%	n1d6
+%(small_number_error)%	6
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-leading-or-trailing-zero
+%(n1d4_skill)%	Enter-givens
+%(n1d5_skill)%	Align-decimals
+%(n1d6_skill)%	Enter-givens
+%(n1d7_skill)%	Enter-givens
+%(n1d8_skill)%	Enter-givens
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-leading-or-trailing-zero
+%(n2d5_skill)%	Align-decimals
+%(n2d6_skill)%	Enter-givens
+%(n2d7_skill)%	Enter-givens
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(a8_skill)%	Subtract-no-borrow-or-lend
+%(a7_skill)%	Subtract-with-borrow
+%(a6_skill)%	Subtract-with-borrow
+%(a5_skill)%	Align-decimals
+%(a4_skill)%	Subtract-with-lend
+%(a3_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill)%	Enter-leading-or-trailing-zero
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(3056407978218874328)%	
+%(3111529056432992585)%	10 minus 1 is 0. Enter 9 in this box.
+%(-4766528366246230012)%	You can use this box to regroup 1 tenth into 10 hundredths.
+%(4122547966151021001)%	
+%(-5958682527562602422)%	
+%(5939726124832416050)%	
+%(3056404978218874403)%	
+%(-6907532864849400112)%	The digit in the hundredths place of 0.76 is 6. Please enter 6.
+%(1953684789227255040)%	
+%(-7432409857962594680)%	
+%(-103575905657380754)%	
+%(9041504051517695496)%	
+%(-1140766803479447250)%	
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(5939724124836416020)%	
+%(4122546966191021130)%	
+%(893113643897759373)%	
+%(6213752517472455109)%	
+%(641186239155714071)%	
+%(-4733341091933527816)%	1.052 is the larger number. Please enter the digit in the ones place of 1.052.
+%(-3353313824202496550)%	Please enter 9 in the highlighted box.
+%(267630474009556348)%	The digit in the thousandths place of 1.052 is 2. Please enter 2.
+%(1730749668174863887)%	
+%(6382391196249600991)%	
+%(1847841181010240103)%	You need to regroup 1 one into 10 tenths in order to regroup 1 tenth into 10 hundredths.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	Please enter the digit in the thousandths place of 1.052.
+%(3111528056472992714)%	You needed to regroup 1 tenth into 10 hundredths. You need to take away 1 one and enter the result here. 
+%(3982482621457137133)%	
+%(1951833195040611473)%	In this column, you are subtracting 0 thousandths from 2 thousandths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-9202527078397046537)%	
+%(3982483621461137128)%	
+%(1847844181042240188)%	Regroup 1 one into 10 tenths. Enter 10 in this box.
+%(2955207463892187106)%	You had 1 one. 1 minus 1 is 0. Enter 0 in this box.
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	
+%(-103578905657380747)%	
+%(9041503051529695589)%	
+%(-9202526078393046582)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	
+%(-1995939531117924798)%	
+%(2701072456702758032)%	
+%(-7432412857962594669)%	
+%(-6058999401977538257)%	
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-3867476976281168443)%	
+%(3094705722605100522)%	Please enter the digit in the hundredths place of 1.052.
+%(-9202524078429046708)%	
+%(641187239159714154)%	
+%(6213751517464455158)%	
+%(3982485621489137190)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(-5958681527602602551)%	
+%(-4644522401360927443)%	Please enter the digit in the tenths place of 1.052.
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	
+%(-654682931131624435)%	Please enter 2 in the highlighted box.
+%(893112643889759422)%	
+%(4989872382532288054)%	
+%(1953686789223255102)%	
+%(-654681931127624440)%	You do not need to regroup to complete this step, so you need to evaluate 9 tenths - 7 tenths.
+%(-654680931119624421)%	You need to subtract 7 tenths from 9 tenths.
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(3094706722693100777)%	The digit in the hundredths place of 1.052 is 5. Please enter 5.
+%(-4766531366246229905)%	After regrouping 1 tenth into 10 hundredths, add the 10 hundredths to the 5 hundredths you already have. Enter 15 in this box.
+%(1951836195136611818)%	You do not need to borrow to complete this step, so you need to evaluate 2 thousandths - 0 thousandths.
+%(-5088806614309645506)%	
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the hundredths place of 0.76.
+%(-5039427320210567376)%	
+%(8676310691293844476)%	
+%(-1140765803471447235)%	
+%(-7048402377707711960)%	Please enter the digit in the tenths place of 0.76.
+%(-103576905645380797)%	
+%(7703666018947561602)%	
+%(-5088807614313645509)%	
+%(-6058996401977538364)%	
+%(2955208463884187009)%	You regrouped 1 one into 10 tenths. You need to subtract that from the number of ones and enter the result in this box.
+%(-3353315824230496612)%	Since you did not need to regroup to complete subtraction in the thousandths column, you are subtracting 6 hundredths from 5 hundredths. Now you must borrow from the tenths column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(-7793444101545105188)%	
+%(1951835195132611823)%	Please enter 2 in the highlighted box.
+%(-4644523401368927522)%	The digit in the tenths place of 1.052 is 0. Please enter 0.
+%(6809645260764282625)%	
+%(-7048405377707711949)%	The digit in the tenths place of 0.76 is 7. Please enter 7.
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	
+%(2701069456606757787)%	
+%(-4733342091921527851)%	The digit in the ones place of 1.052 is 1. Please enter 1.
+%(-1995938531125924767)%	
+%(9041502051521695510)%	
+%(6382390196225600924)%	
+%(6382389196221600897)%	
+%(6809644260772282722)%	
+%(5939723124832416025)%	
+%(-3353314824206496545)%	Since there are 0 tenths, you need to convert 1 one into 10 tenths. Then, you can convert 1 tenth into 10 hundredths. After this conversion, you need to evaluate 15 hundredths - 6 hundredths. 
+Problem Name	p14
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	The heaviest human brain was 3.045 kilograms, while the lightest was 0.67 kilograms. What was the difference in their weights?
+%(temp-numbers)%	Please subtract 0.67 from 3.045
+%(op)%	-
+%(decimalposition)%	n1d6
+%(decimalposition2)%	n2d6
+%(carry_dec_loc)%	r1c6
+%(carry_dec_loc2)%	r2c6
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d1hint3)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d2hint3)%	
+%(n1d3req)%	0
+%(n1d3)%	0
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d3hint3)%	
+%(n1d4req)%	0
+%(n1d4)%	0
+%(n1d4hint1)%	
+%(n1d4hint2)%	
+%(n1d4hint3)%	
+%(n1d5req)%	1
+%(n1d5)%	3
+%(n1d5hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d5hint2)%	3.045 is the larger number. Please enter the digit in the ones place of 3.045.
+%(n1d5hint3)%	The digit in the ones place of 3.045 is 3. Please enter 3.
+%(n1d6req)%	0
+%(n1d6)%	---
+%(n1d6hint1)%	
+%(n1d6hint2)%	
+%(n1d7req)%	1
+%(n1d7)%	0
+%(n1d7hint1)%	Please enter the digit in the tenths place of 3.045.
+%(n1d7hint2)%	The digit in the tenths place of 3.045 is 0. Please enter 0.
+%(n1d8req)%	1
+%(n1d8)%	4
+%(n1d8hint1)%	Please enter the digit in the hundredths place of 3.045.
+%(n1d8hint2)%	The digit in the hundredths place of 3.045 is 4. Please enter 4.
+%(n1d9req)%	1
+%(n1d9)%	5
+%(n1d9hint1)%	Please enter the digit in the thousandths place of 3.045.
+%(n1d9hint2)%	The digit in the thousandths place of 3.045 is 5. Please enter 5.
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	0
+%(n2d4)%	0
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	0
+%(n2d5)%	0
+%(n2d5hint1)%	
+%(n2d5hint2)%	
+%(n2d6req)%	0
+%(n2d6)%	---
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	1
+%(n2d7)%	6
+%(n2d7hint1)%	Please enter the digit in the tenths place of 0.67.
+%(n2d7hint2)%	The digit in the tenths place of 0.67 is 6. Please enter 6.
+%(n2d8req)%	1
+%(n2d8)%	7
+%(n2d8hint1)%	Please enter the digit in the hundredths place of 0.67.
+%(n2d8hint2)%	The digit in the hundredths place of 0.67 is 7. Please enter 7.
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	0
+%(r1c3hint1)%	
+%(r1c3hint2)%	
+%(r1c4)%	0
+%(r1c4hint1)%	
+%(r1c4hint2)%	
+%(r1c5)%	0
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	0
+%(r1c6hint1)%	
+%(r1c6hint2)%	
+%(r1c7)%	9
+%(r1c7hint1)%	You needed to regroup 1 tenth into 10 hundredths. You need to take away 1 one and enter the result here. 
+%(r1c7hint2)%	10 minus 1 is 0. Enter 9 in this box.
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	0
+%(r2c1hint1)%	
+%(r2c1hint2)%	
+%(r2c2)%	0
+%(r2c2hint1)%	
+%(r2c2hint2)%	
+%(r2c3)%	0
+%(r2c3hint1)%	
+%(r2c3hint2)%	
+%(r2c4)%	0
+%(r2c4hint1)%	
+%(r2c4hint2)%	
+%(r2c5)%	2
+%(r2c5hint1)%	You regrouped 1 one into 10 tenths. You need to subtract that from the number of ones and enter the result in this box.
+%(r2c5hint2)%	You had 3 ones. 3 minus 1 is 2. Enter 2 in this box.
+%(r2c6)%	0
+%(r2c6hint1)%	
+%(r2c6hint2)%	
+%(r2c7)%	10
+%(r2c7hint1)%	You need to regroup 1 one into 10 tenths in order to regroup 1 tenth into 10 hundredths.
+%(r2c7hint2)%	Regroup 1 one into 10 tenths. Enter 10 in this box.
+%(r2c8)%	14
+%(r2c8hint1)%	You can use this box to regroup 1 tenth into 10 hundredths.
+%(r2c8hint2)%	After regrouping 1 tenth into 10 hundredths, add it to the 4 hundredths you already have. Enter 14 in this box.
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a1hint3)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a2hint3)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a3hint3)%	
+%(a4req)%	0
+%(a4)%	0
+%(a4hint1)%	
+%(a4hint2)%	
+%(a4hint3)%	
+%(a5req)%	1
+%(a5)%	2
+%(a5hint1)%	Since you needed to regroup to complete subtraction in the tenths column, you are subtracting 0 ones from 2 ones. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a5hint2)%	You do not need to borrow to complete this step, so you need to evaluate 2 ones - 0 ones.
+%(a5hint3)%	Please enter 2 in the highlighted box.
+%(a6req)%	1
+%(a6)%	.
+%(a6hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a6hint2)%	
+%(a6hint3)%	
+%(a7req)%	1
+%(a7)%	3
+%(a7hint1)%	Since you needed to regroup to complete subtraction in the hundredths column, you are subtracting 6 tenths from 9 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a7hint2)%	You do not need to borrow to complete this step, so you need to evaluate 9 tenths - 6 tenths.
+%(a7hint3)%	Please enter 3 in the highlighted box.
+%(a8req)%	1
+%(a8)%	7
+%(a8hint1)%	Since you did not need to regroup to complete subtraction in the thousandths column, you are subtracting 7 hundredths from 4 hundredths. Now you must borrow from the tenths column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(a8hint2)%	Since there are 0 tenths, you need to convert 1 one into 10 tenths. Then, you can convert 1 tenth into 10 hundredths. After this conversion, you need to evaluate 14 hundredths - 7 hundredths. 
+%(a8hint3)%	Please enter 7 in the highlighted box.
+%(a9req)%	1
+%(a9)%	5
+%(a9hint1)%	In this column, you are subtracting 0 thousandths from 5 thousandths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a9hint2)%	You do not need to borrow to complete this step, so you need to evaluate 5 thousandths - 0 thousandths.
+%(a9hint3)%	Please enter 5 in the highlighted box.
+	
+%(small_number_error_location)%	n1d5
+%(small_number_error)%	0
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-leading-or-trailing-zero
+%(n1d4_skill)%	Enter-leading-or-trailing-zero
+%(n1d5_skill)%	Enter-givens
+%(n1d6_skill)%	Align-decimals
+%(n1d7_skill)%	Enter-givens
+%(n1d8_skill)%	Enter-givens
+%(n1d9_skill)%	Enter-givens
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-leading-or-trailing-zero
+%(n2d5_skill)%	Enter-leading-or-trailing-zero
+%(n2d6_skill)%	Align-decimals
+%(n2d7_skill)%	Enter-givens
+%(n2d8_skill)%	Enter-givens
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Subtract-no-borrow-or-lend
+%(a8_skill)%	Subtract-with-borrow
+%(a7_skill)%	Subtract-with-borrow
+%(a6_skill)%	Align-decimals
+%(a5_skill)%	Subtract-with-lend
+%(a4_skill)%	Enter-leading-or-trailing-zero
+%(a3_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill)%	Enter-leading-or-trailing-zero
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(3056407978218874328)%	
+%(3111529056432992585)%	
+%(-4766528366246230012)%	You need to regroup 1 one into 10 tenths in order to regroup 1 tenth into 10 hundredths.
+%(4122547966151021001)%	
+%(-5958682527562602422)%	
+%(5939726124832416050)%	In this column, you are subtracting 0 thousandths from 5 thousandths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(3056404978218874403)%	
+%(-6907532864849400112)%	The digit in the tenths place of 0.67 is 6. Please enter 6.
+%(1953684789227255040)%	
+%(-7432409857962594680)%	
+%(-103575905657380754)%	
+%(9041504051517695496)%	
+%(-1140766803479447250)%	You regrouped 1 one into 10 tenths. You need to subtract that from the number of ones and enter the result in this box.
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(5939724124836416020)%	Please enter 5 in the highlighted box.
+%(4122546966191021130)%	
+%(893113643897759373)%	You needed to regroup 1 tenth into 10 hundredths. You need to take away 1 one and enter the result here. 
+%(6213752517472455109)%	The digit in the hundredths place of 0.67 is 7. Please enter 7.
+%(641186239155714071)%	
+%(-4733341091933527816)%	
+%(-3353313824202496550)%	Please enter 3 in the highlighted box.
+%(267630474009556348)%	The digit in the hundredths place of 3.045 is 4. Please enter 4.
+%(1730749668174863887)%	
+%(6382391196249600991)%	
+%(1847841181010240103)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	Please enter the digit in the hundredths place of 3.045.
+%(3111528056472992714)%	
+%(3982482621457137133)%	You do not need to borrow to complete this step, so you need to evaluate 2 ones - 0 ones.
+%(1951833195040611473)%	Since you did not need to regroup to complete subtraction in the thousandths column, you are subtracting 7 hundredths from 4 hundredths. Now you must borrow from the tenths column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(-9202527078397046537)%	
+%(3982483621461137128)%	Please enter 2 in the highlighted box.
+%(1847844181042240188)%	
+%(2955207463892187106)%	
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(-103578905657380747)%	
+%(9041503051529695589)%	
+%(-9202526078393046582)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	
+%(-1995939531117924798)%	
+%(2701072456702758032)%	
+%(-7432412857962594669)%	
+%(-6058999401977538257)%	The digit in the thousandths place of 3.045 is 5. Please enter 5.
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	After regrouping 1 tenth into 10 hundredths, add it to the 4 hundredths you already have. Enter 14 in this box.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-3867476976281168443)%	
+%(3094705722605100522)%	Please enter the digit in the tenths place of 3.045.
+%(-9202524078429046708)%	
+%(641187239159714154)%	
+%(6213751517464455158)%	Please enter the digit in the hundredths place of 0.67.
+%(3982485621489137190)%	Since you needed to regroup to complete subtraction in the tenths column, you are subtracting 0 ones from 2 ones. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-5958681527602602551)%	
+%(-4644522401360927443)%	
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	You can use this box to regroup 1 tenth into 10 hundredths.
+%(-654682931131624435)%	
+%(893112643889759422)%	10 minus 1 is 0. Enter 9 in this box.
+%(4989872382532288054)%	
+%(1953686789223255102)%	
+%(-654681931127624440)%	
+%(-654680931119624421)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	
+%(3094706722693100777)%	The digit in the tenths place of 3.045 is 0. Please enter 0.
+%(-4766531366246229905)%	Regroup 1 one into 10 tenths. Enter 10 in this box.
+%(1951836195136611818)%	Since there are 0 tenths, you need to convert 1 one into 10 tenths. Then, you can convert 1 tenth into 10 hundredths. After this conversion, you need to evaluate 14 hundredths - 7 hundredths. 
+%(-5088806614309645506)%	The digit in the ones place of 3.045 is 3. Please enter 3.
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the tenths place of 0.67.
+%(-5039427320210567376)%	
+%(8676310691293844476)%	
+%(-1140765803471447235)%	You had 3 ones. 3 minus 1 is 2. Enter 2 in this box.
+%(-7048402377707711960)%	
+%(-103576905645380797)%	
+%(7703666018947561602)%	
+%(-5088807614313645509)%	3.045 is the larger number. Please enter the digit in the ones place of 3.045.
+%(-6058996401977538364)%	Please enter the digit in the thousandths place of 3.045.
+%(2955208463884187009)%	
+%(-3353315824230496612)%	Since you needed to regroup to complete subtraction in the hundredths column, you are subtracting 6 tenths from 9 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-7793444101545105188)%	
+%(1951835195132611823)%	Please enter 7 in the highlighted box.
+%(-4644523401368927522)%	
+%(6809645260764282625)%	
+%(-7048405377707711949)%	
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	
+%(2701069456606757787)%	
+%(-4733342091921527851)%	
+%(-1995938531125924767)%	
+%(9041502051521695510)%	
+%(6382390196225600924)%	
+%(6382389196221600897)%	
+%(6809644260772282722)%	
+%(5939723124832416025)%	You do not need to borrow to complete this step, so you need to evaluate 5 thousandths - 0 thousandths.
+%(-3353314824206496545)%	You do not need to borrow to complete this step, so you need to evaluate 9 tenths - 6 tenths.
+Problem Name	p15
+	faded1
+%(startStateNodeName)%	state47
+%(problemstatement)%	Lisa Lilly was the best runner in the eighth grade. One day she ran the 400m dash in 2.5 minutes and the 400m over low hurdles in 3.74 minutes. How much longer did it take her to run the 400m over low hurdles than it did to run the 400m dash?
+%(temp-numbers)%	Please subtract 2.5 from 3.74
+%(op)%	-
+%(decimalposition)%	n1d4
+%(decimalposition2)%	n2d4
+%(carry_dec_loc)%	r1c4
+%(carry_dec_loc2)%	r2c4
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d1hint3)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d2hint3)%	
+%(n1d3req)%	1
+%(n1d3)%	3
+%(n1d3hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d3hint2)%	3.74 is the larger number. Please enter the digit in the ones place of 3.74.
+%(n1d3hint3)%	The digit in the ones place of 3.74 is 3. Please enter 3.
+%(n1d4req)%	0
+%(n1d4)%	.
+%(n1d4hint1)%	
+%(n1d4hint2)%	
+%(n1d4hint3)%	
+%(n1d5req)%	1
+%(n1d5)%	7
+%(n1d5hint1)%	Please enter the digit in the tenths place of 3.74.
+%(n1d5hint2)%	The digit in the tenths place of 3.74 is 7. Please enter 7.
+%(n1d5hint3)%	
+%(n1d6req)%	1
+%(n1d6)%	4
+%(n1d6hint1)%	Please enter the digit in the hundredths place of 3.74.
+%(n1d6hint2)%	The digit in the hundredths place of 3.74 is 4. Please enter 4.
+%(n1d7req)%	0
+%(n1d7)%	0
+%(n1d7hint1)%	
+%(n1d7hint2)%	
+%(n1d8req)%	0
+%(n1d8)%	0
+%(n1d8hint1)%	
+%(n1d8hint2)%	
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	1
+%(n2d3)%	2
+%(n2d3hint1)%	Please enter the digit in the ones place of 2.5.
+%(n2d3hint2)%	The digit in the ones place of 2.5 is 2. Please enter 2.
+%(n2d4req)%	0
+%(n2d4)%	.
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	1
+%(n2d5)%	5
+%(n2d5hint1)%	Please enter the digit in the tenths place of 2.5.
+%(n2d5hint2)%	The digit in the tenths place of 2.5 is 5. Please enter 5.
+%(n2d6req)%	0
+%(n2d6)%	0
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	0
+%(n2d7)%	0
+%(n2d7hint1)%	
+%(n2d7hint2)%	
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	0
+%(r1c3hint1)%	
+%(r1c3hint2)%	
+%(r1c4)%	.
+%(r1c4hint1)%	
+%(r1c4hint2)%	
+%(r1c5)%	0
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	0
+%(r1c6hint1)%	
+%(r1c6hint2)%	
+%(r1c7)%	0
+%(r1c7hint1)%	
+%(r1c7hint2)%	
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	0
+%(r2c1hint1)%	
+%(r2c1hint2)%	
+%(r2c2)%	0
+%(r2c2hint1)%	
+%(r2c2hint2)%	
+%(r2c3)%	0
+%(r2c3hint1)%	
+%(r2c3hint2)%	
+%(r2c4)%	.
+%(r2c4hint1)%	
+%(r2c4hint2)%	
+%(r2c5)%	0
+%(r2c5hint1)%	
+%(r2c5hint2)%	
+%(r2c6)%	0
+%(r2c6hint1)%	
+%(r2c6hint2)%	
+%(r2c7)%	0
+%(r2c7hint1)%	
+%(r2c7hint2)%	
+%(r2c8)%	0
+%(r2c8hint1)%	
+%(r2c8hint2)%	
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a1hint3)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a2hint3)%	
+%(a3req)%	1
+%(a3)%	1
+%(a3hint1)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 2 ones from 3 ones. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a3hint2)%	You do not need to borrow to complete this step, so you need to evaluate 3 ones - 2 ones.
+%(a3hint3)%	Please enter 1 in the highlighted box.
+%(a4req)%	1
+%(a4)%	.
+%(a4hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a4hint2)%	
+%(a4hint3)%	
+%(a5req)%	1
+%(a5)%	2
+%(a5hint1)%	Since you did not need to regroup to complete subtraction in the hundredths column, you are subtracting 5 tenths from 7 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a5hint2)%	You do not need to borrow to complete this step, so you need to evaluate 7 tenths - 5 tenths.
+%(a5hint3)%	Please enter 2 in the highlighted box.
+%(a6req)%	1
+%(a6)%	4
+%(a6hint1)%	In this column, you are subtracting 0 hundredths from 4 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a6hint2)%	You do not need to borrow to complete this step, so you need to evaluate 4 hundredths - 0 hundredths.
+%(a6hint3)%	Please enter 4 in the highlighted box.
+%(a7req)%	0
+%(a7)%	0
+%(a7hint1)%	
+%(a7hint2)%	
+%(a7hint3)%	
+%(a8req)%	0
+%(a8)%	0
+%(a8hint1)%	
+%(a8hint2)%	
+%(a8hint3)%	
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+%(a9hint3)%	
+	
+%(small_number_error_location)%	n1d3
+%(small_number_error)%	2
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-givens
+%(n1d4_skill)%	Align-decimals
+%(n1d5_skill)%	Enter-givens
+%(n1d6_skill)%	Enter-givens
+%(n1d7_skill)%	Enter-leading-or-trailing-zero
+%(n1d8_skill)%	Enter-leading-or-trailing-zero
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-givens
+%(n2d4_skill)%	Align-decimals
+%(n2d5_skill)%	Enter-givens
+%(n2d6_skill)%	Enter-leading-or-trailing-zero
+%(n2d7_skill)%	Enter-leading-or-trailing-zero
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(a8_skill)%	Enter-leading-or-trailing-zero
+%(a7_skill)%	Enter-leading-or-trailing-zero
+%(a6_skill)%	Subtract-no-borrow-or-lend
+%(a5_skill)%	Subtract-with-borrow
+%(a4_skill)%	Align-decimals
+%(a3_skill)%	Subtract-with-lend
+%(a2_skill)%	Enter-leading-or-trailing-zero
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(3056407978218874328)%	
+%(3111529056432992585)%	
+%(-4766528366246230012)%	
+%(4122547966151021001)%	
+%(-5958682527562602422)%	
+%(5939726124832416050)%	
+%(3056404978218874403)%	
+%(-6907532864849400112)%	
+%(1953684789227255040)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 2 ones from 3 ones. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-7432409857962594680)%	
+%(-103575905657380754)%	
+%(9041504051517695496)%	The digit in the ones place of 3.74 is 3. Please enter 3.
+%(-1140766803479447250)%	
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	You do not need to borrow to complete this step, so you need to evaluate 3 ones - 2 ones.
+%(5939724124836416020)%	
+%(4122546966191021130)%	
+%(893113643897759373)%	
+%(6213752517472455109)%	
+%(641186239155714071)%	
+%(-4733341091933527816)%	
+%(-3353313824202496550)%	
+%(267630474009556348)%	
+%(1730749668174863887)%	
+%(6382391196249600991)%	
+%(1847841181010240103)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	
+%(3111528056472992714)%	
+%(3982482621457137133)%	You do not need to borrow to complete this step, so you need to evaluate 7 tenths - 5 tenths.
+%(1951833195040611473)%	
+%(-9202527078397046537)%	
+%(3982483621461137128)%	Please enter 2 in the highlighted box.
+%(1847844181042240188)%	
+%(2955207463892187106)%	
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	Please enter the digit in the tenths place of 3.74.
+%(-103578905657380747)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(9041503051529695589)%	3.74 is the larger number. Please enter the digit in the ones place of 3.74.
+%(-9202526078393046582)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	
+%(-1995939531117924798)%	
+%(2701072456702758032)%	
+%(-7432412857962594669)%	
+%(-6058999401977538257)%	
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-3867476976281168443)%	
+%(3094705722605100522)%	
+%(-9202524078429046708)%	
+%(641187239159714154)%	
+%(6213751517464455158)%	
+%(3982485621489137190)%	Since you did not need to regroup to complete subtraction in the hundredths column, you are subtracting 5 tenths from 7 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-5958681527602602551)%	
+%(-4644522401360927443)%	Please enter the digit in the hundredths place of 3.74.
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	
+%(-654682931131624435)%	Please enter 4 in the highlighted box.
+%(893112643889759422)%	
+%(4989872382532288054)%	The digit in the tenths place of 2.5 is 5. Please enter 5.
+%(1953686789223255102)%	Please enter 1 in the highlighted box.
+%(-654681931127624440)%	You do not need to borrow to complete this step, so you need to evaluate 4 hundredths - 0 hundredths.
+%(-654680931119624421)%	In this column, you are subtracting 0 hundredths from 4 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-7793447101577105273)%	Please enter the digit in the ones place of 2.5.
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	
+%(3094706722693100777)%	
+%(-4766531366246229905)%	
+%(1951836195136611818)%	
+%(-5088806614309645506)%	
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	
+%(-5039427320210567376)%	
+%(8676310691293844476)%	
+%(-1140765803471447235)%	
+%(-7048402377707711960)%	
+%(-103576905645380797)%	
+%(7703666018947561602)%	
+%(-5088807614313645509)%	The digit in the tenths place of 3.74 is 7. Please enter 7.
+%(-6058996401977538364)%	
+%(2955208463884187009)%	
+%(-3353315824230496612)%	
+%(-7793444101545105188)%	The digit in the ones place of 2.5 is 2. Please enter 2.
+%(1951835195132611823)%	
+%(-4644523401368927522)%	The digit in the hundredths place of 3.74 is 4. Please enter 4.
+%(6809645260764282625)%	
+%(-7048405377707711949)%	
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	Please enter the digit in the tenths place of 2.5.
+%(2701069456606757787)%	
+%(-4733342091921527851)%	
+%(-1995938531125924767)%	
+%(9041502051521695510)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(6382390196225600924)%	
+%(6382389196221600897)%	
+%(6809644260772282722)%	
+%(5939723124832416025)%	
+%(-3353314824206496545)%	
+Problem Name	p16
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	A typical car accelerates from 0 to 60 mph in 5.4 seconds. The fastest car acceleration on record is 2.3 faster than this. What is the fastest car acceleration time?
+%(temp-numbers)%	Please subtract 2.3 from 5.4
+%(op)%	-
+%(decimalposition)%	n1d6
+%(decimalposition2)%	n2d6
+%(carry_dec_loc)%	r1c6
+%(carry_dec_loc2)%	r2c6
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d1hint3)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d2hint3)%	
+%(n1d3req)%	0
+%(n1d3)%	0
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d3hint3)%	
+%(n1d4req)%	0
+%(n1d4)%	0
+%(n1d4hint1)%	
+%(n1d4hint2)%	
+%(n1d4hint3)%	
+%(n1d5req)%	1
+%(n1d5)%	5
+%(n1d5hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d5hint2)%	5.4 is the larger number. Please enter the digit in the ones place of 5.4.
+%(n1d5hint3)%	The digit in the ones place of 5.4 is 5. Please enter 5.
+%(n1d6req)%	0
+%(n1d6)%	---
+%(n1d6hint1)%	
+%(n1d6hint2)%	
+%(n1d7req)%	1
+%(n1d7)%	4
+%(n1d7hint1)%	Please enter the digit in the tenths place of 5.4.
+%(n1d7hint2)%	The digit in the tenths place of 5.4 is 4. Please enter 4.
+%(n1d8req)%	0
+%(n1d8)%	0
+%(n1d8hint1)%	
+%(n1d8hint2)%	
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	0
+%(n2d4)%	0
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	1
+%(n2d5)%	2
+%(n2d5hint1)%	Please enter the digit in the ones place of 2.3.
+%(n2d5hint2)%	The digit in the ones place of 2.3 is 2. Please enter 2.
+%(n2d6req)%	0
+%(n2d6)%	---
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	1
+%(n2d7)%	3
+%(n2d7hint1)%	Please enter the digit in the tenths place of 2.3.
+%(n2d7hint2)%	The digit in the tenths place of 2.3 is 3. Please enter 3.
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	0
+%(r1c3hint1)%	
+%(r1c3hint2)%	
+%(r1c4)%	0
+%(r1c4hint1)%	
+%(r1c4hint2)%	
+%(r1c5)%	0
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	0
+%(r1c6hint1)%	
+%(r1c6hint2)%	
+%(r1c7)%	0
+%(r1c7hint1)%	
+%(r1c7hint2)%	
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	0
+%(r2c1hint1)%	
+%(r2c1hint2)%	
+%(r2c2)%	0
+%(r2c2hint1)%	
+%(r2c2hint2)%	
+%(r2c3)%	0
+%(r2c3hint1)%	
+%(r2c3hint2)%	
+%(r2c4)%	0
+%(r2c4hint1)%	
+%(r2c4hint2)%	
+%(r2c5)%	0
+%(r2c5hint1)%	
+%(r2c5hint2)%	
+%(r2c6)%	0
+%(r2c6hint1)%	
+%(r2c6hint2)%	
+%(r2c7)%	0
+%(r2c7hint1)%	
+%(r2c7hint2)%	
+%(r2c8)%	0
+%(r2c8hint1)%	
+%(r2c8hint2)%	
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a1hint3)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a2hint3)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a3hint3)%	
+%(a4req)%	0
+%(a4)%	0
+%(a4hint1)%	
+%(a4hint2)%	
+%(a4hint3)%	
+%(a5req)%	1
+%(a5)%	3
+%(a5hint1)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 2 ones from 5 ones. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a5hint2)%	You do not need to borrow to complete this step, so you need to evaluate 5 ones - 2 ones.
+%(a5hint3)%	Please enter 3 in the highlighted box.
+%(a6req)%	1
+%(a6)%	.
+%(a6hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a6hint2)%	
+%(a6hint3)%	
+%(a7req)%	1
+%(a7)%	1
+%(a7hint1)%	In this column, you are subtracting 3  tenths from 4 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a7hint2)%	You do not need to borrow to complete this step, so you need to evaluate 4 tenths - 3 tenths.
+%(a7hint3)%	Please enter 1 in the highlighted box.
+%(a8req)%	0
+%(a8)%	0
+%(a8hint1)%	
+%(a8hint2)%	
+%(a8hint3)%	
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+%(a9hint3)%	
+	
+%(small_number_error_location)%	n1d5
+%(small_number_error)%	2
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-leading-or-trailing-zero
+%(n1d4_skill)%	Enter-leading-or-trailing-zero
+%(n1d5_skill)%	Enter-givens
+%(n1d6_skill)%	Align-decimals
+%(n1d7_skill)%	Enter-givens
+%(n1d8_skill)%	Enter-leading-or-trailing-zero
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-leading-or-trailing-zero
+%(n2d5_skill)%	Enter-givens
+%(n2d6_skill)%	Align-decimals
+%(n2d7_skill)%	Enter-givens
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(a8_skill)%	Enter-leading-or-trailing-zero
+%(a7_skill)%	Subtract-no-borrow-or-lend
+%(a6_skill)%	Align-decimals
+%(a5_skill)%	Subtract-no-borrow-or-lend
+%(a4_skill)%	Enter-leading-or-trailing-zero
+%(a3_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill)%	Enter-leading-or-trailing-zero
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(3056407978218874328)%	
+%(3111529056432992585)%	
+%(-4766528366246230012)%	
+%(4122547966151021001)%	
+%(-5958682527562602422)%	
+%(5939726124832416050)%	
+%(3056404978218874403)%	
+%(-6907532864849400112)%	The digit in the tenths place of 2.3 is 3. Please enter 3.
+%(1953684789227255040)%	
+%(-7432409857962594680)%	
+%(-103575905657380754)%	
+%(9041504051517695496)%	
+%(-1140766803479447250)%	
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(5939724124836416020)%	
+%(4122546966191021130)%	
+%(893113643897759373)%	
+%(6213752517472455109)%	
+%(641186239155714071)%	
+%(-4733341091933527816)%	
+%(-3353313824202496550)%	Please enter 1 in the highlighted box.
+%(267630474009556348)%	
+%(1730749668174863887)%	
+%(6382391196249600991)%	
+%(1847841181010240103)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	
+%(3111528056472992714)%	
+%(3982482621457137133)%	You do not need to borrow to complete this step, so you need to evaluate 5 ones - 2 ones.
+%(1951833195040611473)%	
+%(-9202527078397046537)%	
+%(3982483621461137128)%	Please enter 3 in the highlighted box.
+%(1847844181042240188)%	
+%(2955207463892187106)%	
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(-103578905657380747)%	
+%(9041503051529695589)%	
+%(-9202526078393046582)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	
+%(-1995939531117924798)%	
+%(2701072456702758032)%	
+%(-7432412857962594669)%	
+%(-6058999401977538257)%	
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-3867476976281168443)%	
+%(3094705722605100522)%	Please enter the digit in the tenths place of 5.4.
+%(-9202524078429046708)%	
+%(641187239159714154)%	
+%(6213751517464455158)%	
+%(3982485621489137190)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 2 ones from 5 ones. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-5958681527602602551)%	
+%(-4644522401360927443)%	
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	
+%(-654682931131624435)%	
+%(893112643889759422)%	
+%(4989872382532288054)%	The digit in the ones place of 2.3 is 2. Please enter 2.
+%(1953686789223255102)%	
+%(-654681931127624440)%	
+%(-654680931119624421)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	
+%(3094706722693100777)%	The digit in the tenths place of 5.4 is 4. Please enter 4.
+%(-4766531366246229905)%	
+%(1951836195136611818)%	
+%(-5088806614309645506)%	The digit in the ones place of 5.4 is 5. Please enter 5.
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the tenths place of 2.3.
+%(-5039427320210567376)%	
+%(8676310691293844476)%	
+%(-1140765803471447235)%	
+%(-7048402377707711960)%	
+%(-103576905645380797)%	
+%(7703666018947561602)%	
+%(-5088807614313645509)%	5.4 is the larger number. Please enter the digit in the ones place of 5.4.
+%(-6058996401977538364)%	
+%(2955208463884187009)%	
+%(-3353315824230496612)%	In this column, you are subtracting 3  tenths from 4 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-7793444101545105188)%	
+%(1951835195132611823)%	
+%(-4644523401368927522)%	
+%(6809645260764282625)%	
+%(-7048405377707711949)%	
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	Please enter the digit in the ones place of 2.3.
+%(2701069456606757787)%	
+%(-4733342091921527851)%	
+%(-1995938531125924767)%	
+%(9041502051521695510)%	
+%(6382390196225600924)%	
+%(6382389196221600897)%	
+%(6809644260772282722)%	
+%(5939723124832416025)%	
+%(-3353314824206496545)%	You do not need to borrow to complete this step, so you need to evaluate 4 tenths - 3 tenths.
+Problem Name	p17
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	In 1926, an ounce of silver cose $0.50. In 1989, an ounce of silver was worth $5.23. How much more did silver cost in 1989?
+%(temp-numbers)%	Please subtract 0.50 from 5.23
+%(op)%	-
+%(decimalposition)%	n1d5
+%(decimalposition2)%	n2d5
+%(carry_dec_loc)%	r1c5
+%(carry_dec_loc2)%	r2c5
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d1hint3)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d2hint3)%	
+%(n1d3req)%	0
+%(n1d3)%	0
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d3hint3)%	
+%(n1d4req)%	1
+%(n1d4)%	5
+%(n1d4hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d4hint2)%	5.23 is the larger number. Please enter the digit in the ones place of 5.23.
+%(n1d4hint3)%	The digit in the ones place of 5.23 is 5. Please enter 5.
+%(n1d5req)%	0
+%(n1d5)%	---
+%(n1d5hint1)%	
+%(n1d5hint2)%	
+%(n1d5hint3)%	
+%(n1d6req)%	1
+%(n1d6)%	2
+%(n1d6hint1)%	Please enter the digit in the tenths place of 5.23.
+%(n1d6hint2)%	The digit in the tenths place of 5.23 is 2. Please enter 2.
+%(n1d7req)%	1
+%(n1d7)%	3
+%(n1d7hint1)%	Please enter the digit in the hundredths place of 5.23.
+%(n1d7hint2)%	The digit in the hundredths place of 5.23 is 3. Please enter 3.
+%(n1d8req)%	0
+%(n1d8)%	0
+%(n1d8hint1)%	
+%(n1d8hint2)%	
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	0
+%(n2d4)%	0
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	0
+%(n2d5)%	---
+%(n2d5hint1)%	
+%(n2d5hint2)%	
+%(n2d6req)%	1
+%(n2d6)%	5
+%(n2d6hint1)%	Please enter the digit in the tenths place of 0.50.
+%(n2d6hint2)%	The digit in the tenths place of 0.50 is 5. Please enter 5.
+%(n2d7req)%	1
+%(n2d7)%	0
+%(n2d7hint1)%	Please enter the digit in the hundredths place of 0.50.
+%(n2d7hint2)%	The digit in the hundredths place of 0.50 is 0. Please enter 0.
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	0
+%(r1c3hint1)%	
+%(r1c3hint2)%	
+%(r1c4)%	0
+%(r1c4hint1)%	
+%(r1c4hint2)%	
+%(r1c5)%	0
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	0
+%(r1c6hint1)%	
+%(r1c6hint2)%	
+%(r1c7)%	0
+%(r1c7hint1)%	
+%(r1c7hint2)%	
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	0
+%(r2c1hint1)%	
+%(r2c1hint2)%	
+%(r2c2)%	0
+%(r2c2hint1)%	
+%(r2c2hint2)%	
+%(r2c3)%	0
+%(r2c3hint1)%	
+%(r2c3hint2)%	
+%(r2c4)%	4
+%(r2c4hint1)%	You regrouped 1 one into 10 tenths. You need to subtract that from the number of ones and enter the result in this box.
+%(r2c4hint2)%	You had 5 ones. 5 minus 1 is 4. Enter 4 in this box.
+%(r2c5)%	0
+%(r2c5hint1)%	
+%(r2c5hint2)%	
+%(r2c6)%	12
+%(r2c6hint1)%	Since you cannot subtract 5 tenths from 2 tenths, you need to regroup 1 one into 10 tenths.
+%(r2c6hint2)%	After borrowing 1 one, you have 10 tenths plus 2 tenths. Enter 12 in this box.
+%(r2c7)%	0
+%(r2c7hint1)%	
+%(r2c7hint2)%	
+%(r2c8)%	0
+%(r2c8hint1)%	
+%(r2c8hint2)%	
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a1hint3)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a2hint3)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a3hint3)%	
+%(a4req)%	1
+%(a4)%	4
+%(a4hint1)%	Since you needed to regroup 1 one into 10 tenths, you need to enter the difference between 4 ones and 0 ones in this box.
+%(a4hint2)%	You do not need to regroup to complete this step, so you need to evaluate 4 ones - 0 ones.
+%(a4hint3)%	Please enter 4 in the highlighted box.
+%(a5req)%	1
+%(a5)%	.
+%(a5hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a5hint2)%	
+%(a5hint3)%	
+%(a6req)%	1
+%(a6)%	7
+%(a6hint1)%	You need to subtract 5 tenths from 2 tenths.
+%(a6hint2)%	You will need to regroup to do the subtraction. Use the boxes above to regroup.
+%(a6hint3)%	The difference between 12 and 5 is 7. Please enter 7 in the highlighted box.
+%(a7req)%	1
+%(a7)%	3
+%(a7hint1)%	In this column, you are subtracting 0 hundredths from 3 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a7hint2)%	You do not need to borrow to complete this step, so you need to evaluate 3 hundredths - 0 hundredths.
+%(a7hint3)%	Please enter 3 in the highlighted box.
+%(a8req)%	0
+%(a8)%	0
+%(a8hint1)%	
+%(a8hint2)%	
+%(a8hint3)%	
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+%(a9hint3)%	
+	
+%(small_number_error_location)%	n1d4
+%(small_number_error)%	0
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-leading-or-trailing-zero
+%(n1d4_skill)%	Enter-givens
+%(n1d5_skill)%	Align-decimals
+%(n1d6_skill)%	Enter-givens
+%(n1d7_skill)%	Enter-givens
+%(n1d8_skill)%	Enter-leading-or-trailing-zero
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-leading-or-trailing-zero
+%(n2d5_skill)%	Align-decimals
+%(n2d6_skill)%	Enter-givens
+%(n2d7_skill)%	Enter-givens
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(a8_skill)%	Enter-leading-or-trailing-zero
+%(a7_skill)%	Subtract-no-borrow-or-lend
+%(a6_skill)%	Subtract-with-borrow
+%(a5_skill)%	Align-decimals
+%(a4_skill)%	Subtract-with-lend
+%(a3_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill)%	Enter-leading-or-trailing-zero
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(3056407978218874328)%	
+%(3111529056432992585)%	
+%(-4766528366246230012)%	
+%(4122547966151021001)%	
+%(-5958682527562602422)%	
+%(5939726124832416050)%	
+%(3056404978218874403)%	
+%(-6907532864849400112)%	The digit in the hundredths place of 0.50 is 0. Please enter 0.
+%(1953684789227255040)%	
+%(-7432409857962594680)%	
+%(-103575905657380754)%	You do not need to regroup to complete this step, so you need to evaluate 4 ones - 0 ones.
+%(9041504051517695496)%	
+%(-1140766803479447250)%	
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(5939724124836416020)%	
+%(4122546966191021130)%	
+%(893113643897759373)%	
+%(6213752517472455109)%	
+%(641186239155714071)%	
+%(-4733341091933527816)%	5.23 is the larger number. Please enter the digit in the ones place of 5.23.
+%(-3353313824202496550)%	Please enter 3 in the highlighted box.
+%(267630474009556348)%	
+%(1730749668174863887)%	
+%(6382391196249600991)%	
+%(1847841181010240103)%	Since you cannot subtract 5 tenths from 2 tenths, you need to regroup 1 one into 10 tenths.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	
+%(3111528056472992714)%	
+%(3982482621457137133)%	
+%(1951833195040611473)%	
+%(-9202527078397046537)%	
+%(3982483621461137128)%	
+%(1847844181042240188)%	After borrowing 1 one, you have 10 tenths plus 2 tenths. Enter 12 in this box.
+%(2955207463892187106)%	You had 5 ones. 5 minus 1 is 4. Enter 4 in this box.
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	
+%(-103578905657380747)%	Since you needed to regroup 1 one into 10 tenths, you need to enter the difference between 4 ones and 0 ones in this box.
+%(9041503051529695589)%	
+%(-9202526078393046582)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	
+%(-1995939531117924798)%	
+%(2701072456702758032)%	
+%(-7432412857962594669)%	
+%(-6058999401977538257)%	
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-3867476976281168443)%	
+%(3094705722605100522)%	Please enter the digit in the hundredths place of 5.23.
+%(-9202524078429046708)%	
+%(641187239159714154)%	
+%(6213751517464455158)%	
+%(3982485621489137190)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(-5958681527602602551)%	
+%(-4644522401360927443)%	Please enter the digit in the tenths place of 5.23.
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	
+%(-654682931131624435)%	The difference between 12 and 5 is 7. Please enter 7 in the highlighted box.
+%(893112643889759422)%	
+%(4989872382532288054)%	
+%(1953686789223255102)%	
+%(-654681931127624440)%	You will need to regroup to do the subtraction. Use the boxes above to regroup.
+%(-654680931119624421)%	You need to subtract 5 tenths from 2 tenths.
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(3094706722693100777)%	The digit in the hundredths place of 5.23 is 3. Please enter 3.
+%(-4766531366246229905)%	
+%(1951836195136611818)%	
+%(-5088806614309645506)%	
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the hundredths place of 0.50.
+%(-5039427320210567376)%	
+%(8676310691293844476)%	
+%(-1140765803471447235)%	
+%(-7048402377707711960)%	Please enter the digit in the tenths place of 0.50.
+%(-103576905645380797)%	Please enter 4 in the highlighted box.
+%(7703666018947561602)%	
+%(-5088807614313645509)%	
+%(-6058996401977538364)%	
+%(2955208463884187009)%	You regrouped 1 one into 10 tenths. You need to subtract that from the number of ones and enter the result in this box.
+%(-3353315824230496612)%	In this column, you are subtracting 0 hundredths from 3 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-7793444101545105188)%	
+%(1951835195132611823)%	
+%(-4644523401368927522)%	The digit in the tenths place of 5.23 is 2. Please enter 2.
+%(6809645260764282625)%	
+%(-7048405377707711949)%	The digit in the tenths place of 0.50 is 5. Please enter 5.
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	
+%(2701069456606757787)%	
+%(-4733342091921527851)%	The digit in the ones place of 5.23 is 5. Please enter 5.
+%(-1995938531125924767)%	
+%(9041502051521695510)%	
+%(6382390196225600924)%	
+%(6382389196221600897)%	
+%(6809644260772282722)%	
+%(5939723124832416025)%	
+%(-3353314824206496545)%	You do not need to borrow to complete this step, so you need to evaluate 3 hundredths - 0 hundredths.
+Problem Name	p18
+	faded3
+%(startStateNodeName)%	state46
+%(problemstatement)%	The earth is 12.742 megameters wide. How much wider is the earth than the moon if the moon is 1.74 megameters wide?
+%(temp-numbers)%	Please subtract 1.74 from 12.742
+%(op)%	-
+%(decimalposition)%	n1d3
+%(decimalposition2)%	n2d3
+%(carry_dec_loc)%	r1c3
+%(carry_dec_loc2)%	r2c3
+%(n1d1req)%	1
+%(n1d1)%	1
+%(n1d1hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d1hint2)%	12.742 is the larger number. Please enter the digit in the tens place of 12.742.
+%(n1d1hint3)%	The digit in the tens place of 12.742 is 1. Please enter 1.
+%(n1d2req)%	1
+%(n1d2)%	2
+%(n1d2hint1)%	Please enter the digit in the ones place of 12.742.
+%(n1d2hint2)%	The digit in the ones place of 2.742 is 2. Please enter 2.
+%(n1d2hint3)%	
+%(n1d3req)%	0
+%(n1d3)%	.
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d3hint3)%	
+%(n1d4req)%	1
+%(n1d4)%	7
+%(n1d4hint1)%	Please enter the digit in the tenths place of 2.742.
+%(n1d4hint2)%	The digit in the tenths place of 2.742 is 7. Please enter 7.
+%(n1d4hint3)%	
+%(n1d5req)%	1
+%(n1d5)%	4
+%(n1d5hint1)%	Please enter the digit in the hundredths place of 2.742.
+%(n1d5hint2)%	The digit in the hundredths place of 2.742 is 4. Please enter 4.
+%(n1d5hint3)%	
+%(n1d6req)%	1
+%(n1d6)%	2
+%(n1d6hint1)%	Please enter the digit in the thousandths place of 2.742.
+%(n1d6hint2)%	The digit in the thousandths place of 2.742 is 2. Please enter 2.
+%(n1d7req)%	0
+%(n1d7)%	0
+%(n1d7hint1)%	
+%(n1d7hint2)%	
+%(n1d8req)%	0
+%(n1d8)%	0
+%(n1d8hint1)%	
+%(n1d8hint2)%	
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	1
+%(n2d2)%	1
+%(n2d2hint1)%	Please enter the digit in the ones place of 1.74.
+%(n2d2hint2)%	The digit in the ones place of 1.74 is 1. Please enter 1.
+%(n2d3req)%	0
+%(n2d3)%	---
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	1
+%(n2d4)%	7
+%(n2d4hint1)%	Please enter the digit in the tenths place of 1.74.
+%(n2d4hint2)%	The digit in the tenths place of 1.74 is 7. Please enter 7.
+%(n2d5req)%	1
+%(n2d5)%	4
+%(n2d5hint1)%	Please enter the digit in the hundredths place of 1.74.
+%(n2d5hint2)%	The digit in the hundredths place of 1.74 is 4. Please enter 4.
+%(n2d6req)%	0
+%(n2d6)%	0
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	0
+%(n2d7)%	0
+%(n2d7hint1)%	
+%(n2d7hint2)%	
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	.
+%(r1c3hint1)%	
+%(r1c3hint2)%	
+%(r1c4)%	0
+%(r1c4hint1)%	
+%(r1c4hint2)%	
+%(r1c5)%	0
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	0
+%(r1c6hint1)%	
+%(r1c6hint2)%	
+%(r1c7)%	0
+%(r1c7hint1)%	
+%(r1c7hint2)%	
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	0
+%(r2c1hint1)%	
+%(r2c1hint2)%	
+%(r2c2)%	0
+%(r2c2hint1)%	
+%(r2c2hint2)%	
+%(r2c3)%	.
+%(r2c3hint1)%	
+%(r2c3hint2)%	
+%(r2c4)%	0
+%(r2c4hint1)%	
+%(r2c4hint2)%	
+%(r2c5)%	0
+%(r2c5hint1)%	
+%(r2c5hint2)%	
+%(r2c6)%	0
+%(r2c6hint1)%	
+%(r2c6hint2)%	
+%(r2c7)%	0
+%(r2c7hint1)%	
+%(r2c7hint2)%	
+%(r2c8)%	0
+%(r2c8hint1)%	
+%(r2c8hint2)%	
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	1
+%(a1)%	1
+%(a1hint1)%	Since you did not need to regroup to complete subtraction in the ones column, you are subtracting 0 tens from 1 tens. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a1hint2)%	You do not need to borrow to complete this step, so you need to evaluate 1 tens - 0 tens.
+%(a1hint3)%	Please enter 1 in the highlighted box.
+%(a2req)%	1
+%(a2)%	1
+%(a2hint1)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 1 ones from 2 ones. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a2hint2)%	You do not need to borrow to complete this step, so you need to evaluate 2 ones - 1 ones.
+%(a2hint3)%	Please enter 1 in the highlighted box.
+%(a3req)%	1
+%(a3)%	.
+%(a3hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a3hint2)%	
+%(a3hint3)%	
+%(a4req)%	1
+%(a4)%	0
+%(a4hint1)%	Since you did not need to regroup to complete subtraction in the hundredths column, you are subtracting 7 tenths from 7 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a4hint2)%	You do not need to borrow to complete this step, so you need to evaluate 7 tenths - 7 tenths.
+%(a4hint3)%	Please enter 0 in the highlighted field.
+%(a5req)%	1
+%(a5)%	0
+%(a5hint1)%	Since you did not need to regroup to complete subtraction in the thousandths column, you are subtracting 4 hundredths from 4 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a5hint2)%	You do not need to borrow to complete this step, so you need to evaluate 4 hundredths - 4 hundredths.
+%(a5hint3)%	Please enter 0 in the highlighted field.
+%(a6req)%	1
+%(a6)%	2
+%(a6hint1)%	In this column, you are subtracting 0 thousandths from 2 thousandths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a6hint2)%	You do not need to borrow to complete this step, so you need to evaluate 2 thousandths - 0 thousandths.
+%(a6hint3)%	Please enter 2 in the highlighted box.
+%(a7req)%	0
+%(a7)%	0
+%(a7hint1)%	
+%(a7hint2)%	
+%(a7hint3)%	
+%(a8req)%	0
+%(a8)%	0
+%(a8hint1)%	
+%(a8hint2)%	
+%(a8hint3)%	
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+%(a9hint3)%	
+	
+%(small_number_error_location)%	n1d2
+%(small_number_error)%	1
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-givens
+%(n1d2_skill)%	Enter-givens
+%(n1d3_skill)%	Align-decimals
+%(n1d4_skill)%	Enter-givens
+%(n1d5_skill)%	Enter-givens
+%(n1d6_skill)%	Enter-givens
+%(n1d7_skill)%	Enter-leading-or-trailing-zero
+%(n1d8_skill)%	Enter-leading-or-trailing-zero
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-givens
+%(n2d3_skill)%	Align-decimals
+%(n2d4_skill)%	Enter-givens
+%(n2d5_skill)%	Enter-givens
+%(n2d6_skill)%	Enter-leading-or-trailing-zero
+%(n2d7_skill)%	Enter-leading-or-trailing-zero
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(a8_skill)%	Enter-leading-or-trailing-zero
+%(a7_skill)%	Enter-leading-or-trailing-zero
+%(a6_skill)%	Subtract-no-borrow-or-lend
+%(a5_skill)%	Subtract-no-borrow-or-lend
+%(a4_skill)%	Subtract-no-borrow-or-lend
+%(a3_skill)%	Align-decimals
+%(a2_skill)%	Subtract-no-borrow-or-lend
+%(a1_skill)%	Subtract-no-borrow-or-lend
+%(3056407978218874328)%	
+%(3111529056432992585)%	
+%(-4766528366246230012)%	
+%(4122547966151021001)%	
+%(-5958682527562602422)%	
+%(5939726124832416050)%	
+%(3056404978218874403)%	
+%(-6907532864849400112)%	
+%(1953684789227255040)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(-7432409857962594680)%	
+%(-103575905657380754)%	You do not need to borrow to complete this step, so you need to evaluate 7 tenths - 7 tenths.
+%(9041504051517695496)%	
+%(-1140766803479447250)%	
+%(641188239247714409)%	Please enter the digit in the ones place of 12.742.
+%(-6634764911781064177)%	The digit in the ones place of 1.74 is 1. Please enter 1.
+%(1953685789235255059)%	
+%(5939724124836416020)%	
+%(4122546966191021130)%	
+%(893113643897759373)%	
+%(6213752517472455109)%	
+%(641186239155714071)%	
+%(-4733341091933527816)%	The digit in the tenths place of 2.742 is 7. Please enter 7.
+%(-3353313824202496550)%	
+%(267630474009556348)%	
+%(1730749668174863887)%	
+%(6382391196249600991)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 1 ones from 2 ones. Please use the boxes in the gray area above to help you regroup if necessary.
+%(1847841181010240103)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	Since you did not need to regroup to complete subtraction in the ones column, you are subtracting 0 tens from 1 tens. Please use the boxes in the gray area above to help you regroup if necessary.
+%(7703667018939561633)%	
+%(267627473977556263)%	
+%(3111528056472992714)%	
+%(3982482621457137133)%	You do not need to borrow to complete this step, so you need to evaluate 4 hundredths - 4 hundredths.
+%(1951833195040611473)%	
+%(-9202527078397046537)%	12.742 is the larger number. Please enter the digit in the tens place of 12.742.
+%(3982483621461137128)%	Please enter 0 in the highlighted field.
+%(1847844181042240188)%	
+%(2955207463892187106)%	
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	Please enter the digit in the hundredths place of 2.742.
+%(-103578905657380747)%	Since you did not need to regroup to complete subtraction in the hundredths column, you are subtracting 7 tenths from 7 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(9041503051529695589)%	
+%(-9202526078393046582)%	The digit in the tens place of 12.742 is 1. Please enter 1.
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	
+%(-1995939531117924798)%	
+%(2701072456702758032)%	
+%(-7432412857962594669)%	
+%(-6058999401977538257)%	
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	You do not need to borrow to complete this step, so you need to evaluate 1 tens - 0 tens.
+%(-3867476976281168443)%	
+%(3094705722605100522)%	
+%(-9202524078429046708)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(641187239159714154)%	The digit in the ones place of 2.742 is 2. Please enter 2.
+%(6213751517464455158)%	
+%(3982485621489137190)%	Since you did not need to regroup to complete subtraction in the thousandths column, you are subtracting 4 hundredths from 4 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-5958681527602602551)%	
+%(-4644522401360927443)%	Please enter the digit in the thousandths place of 2.742.
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	
+%(-654682931131624435)%	Please enter 2 in the highlighted box.
+%(893112643889759422)%	
+%(4989872382532288054)%	The digit in the hundredths place of 1.74 is 4. Please enter 4.
+%(1953686789223255102)%	
+%(-654681931127624440)%	You do not need to borrow to complete this step, so you need to evaluate 2 thousandths - 0 thousandths.
+%(-654680931119624421)%	In this column, you are subtracting 0 thousandths from 2 thousandths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	Please enter the digit in the tenths place of 2.742.
+%(3094706722693100777)%	
+%(-4766531366246229905)%	
+%(1951836195136611818)%	
+%(-5088806614309645506)%	
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	Please enter the digit in the ones place of 1.74.
+%(-6907535864945400357)%	
+%(-5039427320210567376)%	
+%(8676310691293844476)%	Please enter 1 in the highlighted box.
+%(-1140765803471447235)%	
+%(-7048402377707711960)%	
+%(-103576905645380797)%	Please enter 0 in the highlighted field.
+%(7703666018947561602)%	
+%(-5088807614313645509)%	The digit in the hundredths place of 2.742 is 4. Please enter 4.
+%(-6058996401977538364)%	
+%(2955208463884187009)%	
+%(-3353315824230496612)%	
+%(-7793444101545105188)%	
+%(1951835195132611823)%	
+%(-4644523401368927522)%	The digit in the thousandths place of 2.742 is 2. Please enter 2.
+%(6809645260764282625)%	The digit in the tenths place of 1.74 is 7. Please enter 7.
+%(-7048405377707711949)%	
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	Please enter the digit in the hundredths place of 1.74.
+%(2701069456606757787)%	
+%(-4733342091921527851)%	
+%(-1995938531125924767)%	
+%(9041502051521695510)%	
+%(6382390196225600924)%	You do not need to borrow to complete this step, so you need to evaluate 2 ones - 1 ones.
+%(6382389196221600897)%	Please enter 1 in the highlighted box.
+%(6809644260772282722)%	Please enter the digit in the tenths place of 1.74.
+%(5939723124832416025)%	
+%(-3353314824206496545)%	
+Problem Name	p19
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	The biggest ice cream sundae weighed 22.9 tons. The makers used 18.4 tons of ice cream. How many tons of toppings did they add to the ice cream to make the sundae?
+%(temp-numbers)%	Please subtract 18.4 from 22.9
+%(op)%	-
+%(decimalposition)%	n1d7
+%(decimalposition2)%	n2d7
+%(carry_dec_loc)%	r1c7
+%(carry_dec_loc2)%	r2c7
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d1hint3)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d2hint3)%	
+%(n1d3req)%	0
+%(n1d3)%	0
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d3hint3)%	
+%(n1d4req)%	0
+%(n1d4)%	0
+%(n1d4hint1)%	
+%(n1d4hint2)%	
+%(n1d4hint3)%	
+%(n1d5req)%	1
+%(n1d5)%	2
+%(n1d5hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d5hint2)%	22.9 is the larger number. Please enter the digit in the tens place of 22.9.
+%(n1d5hint3)%	The digit in the tens place of 22.9 is 2. Please enter 2.
+%(n1d6req)%	1
+%(n1d6)%	2
+%(n1d6hint1)%	Please enter the digit in the ones place of 22.9.
+%(n1d6hint2)%	The digit in the ones place of 22.9 is 2. Please enter 2.
+%(n1d7req)%	0
+%(n1d7)%	---
+%(n1d7hint1)%	
+%(n1d7hint2)%	
+%(n1d8req)%	1
+%(n1d8)%	9
+%(n1d8hint1)%	Please enter the digit in the tenths place of 22.9.
+%(n1d8hint2)%	The digit in the tenths place of 22.9 is 9. Please enter 9.
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	0
+%(n2d4)%	0
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	1
+%(n2d5)%	1
+%(n2d5hint1)%	Please enter the digit in the tens place of 18.4.
+%(n2d5hint2)%	The digit in the tens place of 18.4 is 1. Please enter 1.
+%(n2d6req)%	1
+%(n2d6)%	8
+%(n2d6hint1)%	Please enter the digit in the ones place of 18.4.
+%(n2d6hint2)%	The digit in the ones place of 18.4 is 8. Please enter 8.
+%(n2d7req)%	0
+%(n2d7)%	---
+%(n2d7hint1)%	
+%(n2d7hint2)%	
+%(n2d8req)%	1
+%(n2d8)%	4
+%(n2d8hint1)%	Please enter the digit in the tenths place of 18.4.
+%(n2d8hint2)%	The digit in the tenths place of 18.4 is 4. Please enter 4.
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	0
+%(r1c3hint1)%	
+%(r1c3hint2)%	
+%(r1c4)%	0
+%(r1c4hint1)%	
+%(r1c4hint2)%	
+%(r1c5)%	0
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	0
+%(r1c6hint1)%	
+%(r1c6hint2)%	
+%(r1c7)%	0
+%(r1c7hint1)%	
+%(r1c7hint2)%	
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	0
+%(r2c1hint1)%	
+%(r2c1hint2)%	
+%(r2c2)%	0
+%(r2c2hint1)%	
+%(r2c2hint2)%	
+%(r2c3)%	0
+%(r2c3hint1)%	
+%(r2c3hint2)%	
+%(r2c4)%	0
+%(r2c4hint1)%	
+%(r2c4hint2)%	
+%(r2c5)%	1
+%(r2c5hint1)%	You regrouped 1 ten into 10 ones. You need to subtract that from the number of tens and put the result in this box.
+%(r2c5hint2)%	You had 2 tens. 2 minus 1 is 1. Enter 1 in this box.
+%(r2c6)%	12
+%(r2c6hint1)%	Since you cannot subtract 8 ones from 2 ones, you need to regroup 1 ten into 10 ones. 
+%(r2c6hint2)%	After borrowing 1 ten, you have 10 ones plus 2 ones. Enter 12 in this box.
+%(r2c7)%	0
+%(r2c7hint1)%	
+%(r2c7hint2)%	
+%(r2c8)%	0
+%(r2c8hint1)%	
+%(r2c8hint2)%	
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a1hint3)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a2hint3)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a3hint3)%	
+%(a4req)%	0
+%(a4)%	0
+%(a4hint1)%	
+%(a4hint2)%	
+%(a4hint3)%	
+%(a5req)%	0
+%(a5)%	0
+%(a5hint1)%	
+%(a5hint2)%	
+%(a5hint3)%	
+%(a6req)%	1
+%(a6)%	4
+%(a6hint1)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 8 ones from 2 ones, and must borrow from the tens column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(a6hint2)%	After borrowing, you need to evaluate 12 ones - 8 ones.
+%(a6hint3)%	Please enter 4 in the highlighted box.
+%(a7req)%	1
+%(a7)%	.
+%(a7hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a7hint2)%	
+%(a7hint3)%	
+%(a8req)%	1
+%(a8)%	5
+%(a8hint1)%	In this column, you are subtracting 4 tenths from 9 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a8hint2)%	You do not need to borrow to complete this step, so you need to evaluate 9 tenths - 5 tenths.
+%(a8hint3)%	Please enter 5 in the highlighted box.
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+%(a9hint3)%	
+	
+%(small_number_error_location)%	n1d5
+%(small_number_error)%	1
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-leading-or-trailing-zero
+%(n1d4_skill)%	Enter-leading-or-trailing-zero
+%(n1d5_skill)%	Enter-givens
+%(n1d6_skill)%	Align-decimals
+%(n1d7_skill)%	Enter-givens
+%(n1d8_skill)%	Enter-givens
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-leading-or-trailing-zero
+%(n2d5_skill)%	Enter-givens
+%(n2d6_skill)%	Align-decimals
+%(n2d7_skill)%	Enter-givens
+%(n2d8_skill)%	Enter-givens
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(a8_skill)%	Subtract-no-borrow-or-lend
+%(a7_skill)%	Align-decimals
+%(a6_skill)%	Subtract-with-borrow
+%(a5_skill)%	Subtract-with-lend
+%(a4_skill)%	Enter-leading-or-trailing-zero
+%(a3_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill)%	Enter-leading-or-trailing-zero
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(3056407978218874328)%	
+%(3111529056432992585)%	
+%(-4766528366246230012)%	
+%(4122547966151021001)%	
+%(-5958682527562602422)%	
+%(5939726124832416050)%	
+%(3056404978218874403)%	
+%(-6907532864849400112)%	
+%(1953684789227255040)%	
+%(-7432409857962594680)%	
+%(-103575905657380754)%	
+%(9041504051517695496)%	
+%(-1140766803479447250)%	You regrouped 1 ten into 10 ones. You need to subtract that from the number of tens and put the result in this box.
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(5939724124836416020)%	
+%(4122546966191021130)%	
+%(893113643897759373)%	
+%(6213752517472455109)%	The digit in the tenths place of 18.4 is 4. Please enter 4.
+%(641186239155714071)%	
+%(-4733341091933527816)%	
+%(-3353313824202496550)%	
+%(267630474009556348)%	The digit in the tenths place of 22.9 is 9. Please enter 9.
+%(1730749668174863887)%	
+%(6382391196249600991)%	
+%(1847841181010240103)%	Since you cannot subtract 8 ones from 2 ones, you need to regroup 1 ten into 10 ones. 
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	Please enter the digit in the tenths place of 22.9.
+%(3111528056472992714)%	
+%(3982482621457137133)%	
+%(1951833195040611473)%	In this column, you are subtracting 4 tenths from 9 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-9202527078397046537)%	
+%(3982483621461137128)%	
+%(1847844181042240188)%	After borrowing 1 ten, you have 10 ones plus 2 ones. Enter 12 in this box.
+%(2955207463892187106)%	
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(-103578905657380747)%	
+%(9041503051529695589)%	
+%(-9202526078393046582)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	
+%(-1995939531117924798)%	
+%(2701072456702758032)%	
+%(-7432412857962594669)%	
+%(-6058999401977538257)%	
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-3867476976281168443)%	
+%(3094705722605100522)%	
+%(-9202524078429046708)%	
+%(641187239159714154)%	
+%(6213751517464455158)%	Please enter the digit in the tenths place of 18.4.
+%(3982485621489137190)%	
+%(-5958681527602602551)%	
+%(-4644522401360927443)%	Please enter the digit in the ones place of 22.9.
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	
+%(-654682931131624435)%	Please enter 4 in the highlighted box.
+%(893112643889759422)%	
+%(4989872382532288054)%	The digit in the tens place of 18.4 is 1. Please enter 1.
+%(1953686789223255102)%	
+%(-654681931127624440)%	After borrowing, you need to evaluate 12 ones - 8 ones.
+%(-654680931119624421)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 8 ones from 2 ones, and must borrow from the tens column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	
+%(3094706722693100777)%	
+%(-4766531366246229905)%	
+%(1951836195136611818)%	You do not need to borrow to complete this step, so you need to evaluate 9 tenths - 5 tenths.
+%(-5088806614309645506)%	The digit in the tens place of 22.9 is 2. Please enter 2.
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	
+%(-5039427320210567376)%	
+%(8676310691293844476)%	
+%(-1140765803471447235)%	You had 2 tens. 2 minus 1 is 1. Enter 1 in this box.
+%(-7048402377707711960)%	Please enter the digit in the ones place of 18.4.
+%(-103576905645380797)%	
+%(7703666018947561602)%	
+%(-5088807614313645509)%	22.9 is the larger number. Please enter the digit in the tens place of 22.9.
+%(-6058996401977538364)%	
+%(2955208463884187009)%	
+%(-3353315824230496612)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(-7793444101545105188)%	
+%(1951835195132611823)%	Please enter 5 in the highlighted box.
+%(-4644523401368927522)%	The digit in the ones place of 22.9 is 2. Please enter 2.
+%(6809645260764282625)%	
+%(-7048405377707711949)%	The digit in the ones place of 18.4 is 8. Please enter 8.
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	Please enter the digit in the tens place of 18.4.
+%(2701069456606757787)%	
+%(-4733342091921527851)%	
+%(-1995938531125924767)%	
+%(9041502051521695510)%	
+%(6382390196225600924)%	
+%(6382389196221600897)%	
+%(6809644260772282722)%	
+%(5939723124832416025)%	
+%(-3353314824206496545)%	
+Problem Name	p20
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	Micron computer company spent $30.9 million on internet advertising in 1997, and IPM spent $20.1 million. What is the difference between the advertising costs (in millions)?
+%(temp-numbers)%	Please subtract 20.1 from 30.9
+%(op)%	-
+%(decimalposition)%	n1d6
+%(decimalposition2)%	n2d6
+%(carry_dec_loc)%	r1c6
+%(carry_dec_loc2)%	r2c6
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d1hint3)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d2hint3)%	
+%(n1d3req)%	0
+%(n1d3)%	0
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d3hint3)%	
+%(n1d4req)%	1
+%(n1d4)%	3
+%(n1d4hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d4hint2)%	30.9 is the larger number. Please enter the digit in the tens place of 30.9.
+%(n1d4hint3)%	The digit in the tens place of 30.9 is 3. Please enter 3.
+%(n1d5req)%	1
+%(n1d5)%	0
+%(n1d5hint1)%	Please enter the digit in the ones place of 30.9.
+%(n1d5hint2)%	The digit in the ones place of 30.9 is 0. Please enter 0.
+%(n1d5hint3)%	
+%(n1d6req)%	0
+%(n1d6)%	---
+%(n1d6hint1)%	
+%(n1d6hint2)%	
+%(n1d7req)%	1
+%(n1d7)%	9
+%(n1d7hint1)%	Please enter the digit in the tenths place of 30.9.
+%(n1d7hint2)%	The digit in the tenths place of 30.9 is 9. Please enter 9.
+%(n1d8req)%	0
+%(n1d8)%	0
+%(n1d8hint1)%	
+%(n1d8hint2)%	
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	1
+%(n2d4)%	2
+%(n2d4hint1)%	Please enter the digit in the tens place of 20.1.
+%(n2d4hint2)%	The digit in the tens place of 20.1 is 2. Please enter 2.
+%(n2d5req)%	1
+%(n2d5)%	0
+%(n2d5hint1)%	
+%(n2d5hint2)%	
+%(n2d6req)%	0
+%(n2d6)%	---
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	1
+%(n2d7)%	1
+%(n2d7hint1)%	Please enter the digit in the tenths place of 20.1.
+%(n2d7hint2)%	The digit in the tenths place of 20.1 is 1. Please enter 1.
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	0
+%(r1c3hint1)%	
+%(r1c3hint2)%	
+%(r1c4)%	0
+%(r1c4hint1)%	
+%(r1c4hint2)%	
+%(r1c5)%	0
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	0
+%(r1c6hint1)%	
+%(r1c6hint2)%	
+%(r1c7)%	0
+%(r1c7hint1)%	
+%(r1c7hint2)%	
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	0
+%(r2c1hint1)%	
+%(r2c1hint2)%	
+%(r2c2)%	0
+%(r2c2hint1)%	
+%(r2c2hint2)%	
+%(r2c3)%	0
+%(r2c3hint1)%	
+%(r2c3hint2)%	
+%(r2c4)%	0
+%(r2c4hint1)%	
+%(r2c4hint2)%	
+%(r2c5)%	0
+%(r2c5hint1)%	
+%(r2c5hint2)%	
+%(r2c6)%	0
+%(r2c6hint1)%	
+%(r2c6hint2)%	
+%(r2c7)%	0
+%(r2c7hint1)%	
+%(r2c7hint2)%	
+%(r2c8)%	0
+%(r2c8hint1)%	
+%(r2c8hint2)%	
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a1hint3)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a2hint3)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a3hint3)%	
+%(a4req)%	1
+%(a4)%	1
+%(a4hint1)%	Since you did not need to regroup to complete subtraction in the ones column, you are subtracting 2 tens from 3 tens. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a4hint2)%	You do not need to borrow to complete this step, so you need to evaluate 3 tens - 2 tens.
+%(a4hint3)%	Please enter 1 in the highlighted box.
+%(a5req)%	1
+%(a5)%	0
+%(a5hint1)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 0 ones from 0 ones. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a5hint2)%	You do not need to borrow to complete this step, so you need to evaluate 0 ones - 0 ones.
+%(a5hint3)%	Please enter 0 in the highlighted box.
+%(a6req)%	1
+%(a6)%	.
+%(a6hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a6hint2)%	
+%(a6hint3)%	
+%(a7req)%	1
+%(a7)%	8
+%(a7hint1)%	In this column, you are subtracting 1 tenths from 9 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a7hint2)%	You do not need to borrow to complete this step, so you need to evaluate 9 tenths - 1 tenths.
+%(a7hint3)%	Please enter 8 in the highlighted box.
+%(a8req)%	0
+%(a8)%	0
+%(a8hint1)%	
+%(a8hint2)%	
+%(a8hint3)%	
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+%(a9hint3)%	
+	
+%(small_number_error_location)%	n1d4
+%(small_number_error)%	2
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-leading-or-trailing-zero
+%(n1d4_skill)%	Enter-givens
+%(n1d5_skill)%	Enter-givens
+%(n1d6_skill)%	Align-decimals
+%(n1d7_skill)%	Enter-givens
+%(n1d8_skill)%	Enter-leading-or-trailing-zero
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-givens
+%(n2d5_skill)%	Enter-givens
+%(n2d6_skill)%	Align-decimals
+%(n2d7_skill)%	Enter-givens
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(a8_skill)%	Enter-leading-or-trailing-zero
+%(a7_skill)%	Subtract-no-borrow-or-lend
+%(a6_skill)%	Align-decimals
+%(a5_skill)%	Subtract-no-borrow-or-lend
+%(a4_skill)%	Subtract-no-borrow-or-lend
+%(a3_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill)%	Enter-leading-or-trailing-zero
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(3056407978218874328)%	
+%(3111529056432992585)%	
+%(-4766528366246230012)%	
+%(4122547966151021001)%	
+%(-5958682527562602422)%	
+%(5939726124832416050)%	
+%(3056404978218874403)%	
+%(-6907532864849400112)%	The digit in the tenths place of 20.1 is 1. Please enter 1.
+%(1953684789227255040)%	
+%(-7432409857962594680)%	
+%(-103575905657380754)%	You do not need to borrow to complete this step, so you need to evaluate 3 tens - 2 tens.
+%(9041504051517695496)%	
+%(-1140766803479447250)%	
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(5939724124836416020)%	
+%(4122546966191021130)%	
+%(893113643897759373)%	
+%(6213752517472455109)%	
+%(641186239155714071)%	
+%(-4733341091933527816)%	30.9 is the larger number. Please enter the digit in the tens place of 30.9.
+%(-3353313824202496550)%	Please enter 8 in the highlighted box.
+%(267630474009556348)%	
+%(1730749668174863887)%	
+%(6382391196249600991)%	
+%(1847841181010240103)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	
+%(3111528056472992714)%	
+%(3982482621457137133)%	You do not need to borrow to complete this step, so you need to evaluate 0 ones - 0 ones.
+%(1951833195040611473)%	
+%(-9202527078397046537)%	
+%(3982483621461137128)%	Please enter 0 in the highlighted box.
+%(1847844181042240188)%	
+%(2955207463892187106)%	
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	Please enter the digit in the ones place of 30.9.
+%(-103578905657380747)%	Since you did not need to regroup to complete subtraction in the ones column, you are subtracting 2 tens from 3 tens. Please use the boxes in the gray area above to help you regroup if necessary.
+%(9041503051529695589)%	
+%(-9202526078393046582)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	
+%(-1995939531117924798)%	
+%(2701072456702758032)%	
+%(-7432412857962594669)%	
+%(-6058999401977538257)%	
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-3867476976281168443)%	
+%(3094705722605100522)%	Please enter the digit in the tenths place of 30.9.
+%(-9202524078429046708)%	
+%(641187239159714154)%	
+%(6213751517464455158)%	
+%(3982485621489137190)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 0 ones from 0 ones. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-5958681527602602551)%	
+%(-4644522401360927443)%	
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	
+%(-654682931131624435)%	
+%(893112643889759422)%	
+%(4989872382532288054)%	
+%(1953686789223255102)%	
+%(-654681931127624440)%	
+%(-654680931119624421)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(3094706722693100777)%	The digit in the tenths place of 30.9 is 9. Please enter 9.
+%(-4766531366246229905)%	
+%(1951836195136611818)%	
+%(-5088806614309645506)%	
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the tenths place of 20.1.
+%(-5039427320210567376)%	
+%(8676310691293844476)%	
+%(-1140765803471447235)%	
+%(-7048402377707711960)%	
+%(-103576905645380797)%	Please enter 1 in the highlighted box.
+%(7703666018947561602)%	
+%(-5088807614313645509)%	The digit in the ones place of 30.9 is 0. Please enter 0.
+%(-6058996401977538364)%	
+%(2955208463884187009)%	
+%(-3353315824230496612)%	In this column, you are subtracting 1 tenths from 9 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-7793444101545105188)%	
+%(1951835195132611823)%	
+%(-4644523401368927522)%	
+%(6809645260764282625)%	The digit in the tens place of 20.1 is 2. Please enter 2.
+%(-7048405377707711949)%	
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	
+%(2701069456606757787)%	
+%(-4733342091921527851)%	The digit in the tens place of 30.9 is 3. Please enter 3.
+%(-1995938531125924767)%	
+%(9041502051521695510)%	
+%(6382390196225600924)%	
+%(6382389196221600897)%	
+%(6809644260772282722)%	Please enter the digit in the tens place of 20.1.
+%(5939723124832416025)%	
+%(-3353314824206496545)%	You do not need to borrow to complete this step, so you need to evaluate 9 tenths - 1 tenths.
+Problem Name	p21
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	The oldest Olympic bobsled champion was 48.99 years old. The youngest Olympic bobsled champion was 16.7 years old. What is the difference in age between the oldest and youngest champion?
+%(temp-numbers)%	Please subtract 16.7 from 48.99
+%(op)%	-
+%(decimalposition)%	n1d4
+%(decimalposition2)%	n2d4
+%(carry_dec_loc)%	r1c4
+%(carry_dec_loc2)%	r2c4
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d1hint3)%	
+%(n1d2req)%	1
+%(n1d2)%	4
+%(n1d2hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d2hint2)%	48.99 is the larger number. Please enter the digit in the tens place of 48.99.
+%(n1d2hint3)%	The digit in the tens place of 48.99 is 4. Please enter 4.
+%(n1d3req)%	1
+%(n1d3)%	8
+%(n1d3hint1)%	Please enter the digit in the ones place of 48.99.
+%(n1d3hint2)%	The digit in the ones place of 48.99 is 8. Please enter 8.
+%(n1d3hint3)%	
+%(n1d4req)%	0
+%(n1d4)%	---
+%(n1d4hint1)%	
+%(n1d4hint2)%	
+%(n1d4hint3)%	
+%(n1d5req)%	1
+%(n1d5)%	9
+%(n1d5hint1)%	Please enter the digit in the tenths place of 48.99.
+%(n1d5hint2)%	The digit in the tenths place of 48.99 is 9. Please enter 9.
+%(n1d5hint3)%	
+%(n1d6req)%	1
+%(n1d6)%	9
+%(n1d6hint1)%	Please enter the digit in the hundredths place of 48.99.
+%(n1d6hint2)%	The digit in the hundredths place of 48.99 is 9. Please enter 9.
+%(n1d7req)%	0
+%(n1d7)%	0
+%(n1d7hint1)%	
+%(n1d7hint2)%	
+%(n1d8req)%	0
+%(n1d8)%	0
+%(n1d8hint1)%	
+%(n1d8hint2)%	
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	1
+%(n2d2)%	1
+%(n2d2hint1)%	Please enter the digit in the tens place of 16.7.
+%(n2d2hint2)%	The digit in the tens place of 16.7 is 1. Please enter 1.
+%(n2d3req)%	1
+%(n2d3)%	6
+%(n2d3hint1)%	Please enter the digit in the ones place of 16.7.
+%(n2d3hint2)%	The digit in the ones place of 16.7 is 6. Please enter 6.
+%(n2d4req)%	0
+%(n2d4)%	---
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	1
+%(n2d5)%	7
+%(n2d5hint1)%	Please enter the digit in the tenths place of 16.7.
+%(n2d5hint2)%	The digit in the tenths place of 16.7 is 7. Please enter 7.
+%(n2d6req)%	0
+%(n2d6)%	0
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	0
+%(n2d7)%	0
+%(n2d7hint1)%	
+%(n2d7hint2)%	
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	0
+%(r1c3hint1)%	
+%(r1c3hint2)%	
+%(r1c4)%	0
+%(r1c4hint1)%	
+%(r1c4hint2)%	
+%(r1c5)%	0
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	0
+%(r1c6hint1)%	
+%(r1c6hint2)%	
+%(r1c7)%	0
+%(r1c7hint1)%	
+%(r1c7hint2)%	
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	0
+%(r2c1hint1)%	
+%(r2c1hint2)%	
+%(r2c2)%	0
+%(r2c2hint1)%	
+%(r2c2hint2)%	
+%(r2c3)%	0
+%(r2c3hint1)%	
+%(r2c3hint2)%	
+%(r2c4)%	0
+%(r2c4hint1)%	
+%(r2c4hint2)%	
+%(r2c5)%	0
+%(r2c5hint1)%	
+%(r2c5hint2)%	
+%(r2c6)%	0
+%(r2c6hint1)%	
+%(r2c6hint2)%	
+%(r2c7)%	0
+%(r2c7hint1)%	
+%(r2c7hint2)%	
+%(r2c8)%	0
+%(r2c8hint1)%	
+%(r2c8hint2)%	
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a1hint3)%	
+%(a2req)%	1
+%(a2)%	3
+%(a2hint1)%	Since you did not need to regroup to complete subtraction in the ones column, you are subtracting 1 tens from 4 tens. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a2hint2)%	You do not need to borrow to complete this step, so you need to evaluate 4 tens - 1 tens.
+%(a2hint3)%	Please enter 3 in the highlighted box.
+%(a3req)%	1
+%(a3)%	2
+%(a3hint1)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 6 ones from 8 ones. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a3hint2)%	You do not need to borrow to complete this step, so you need to evaluate 8 ones - 6 ones.
+%(a3hint3)%	Please enter 2 in the highlighted box.
+%(a4req)%	1
+%(a4)%	.
+%(a4hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a4hint2)%	
+%(a4hint3)%	
+%(a5req)%	1
+%(a5)%	2
+%(a5hint1)%	Since you did not need to regroup to complete subtraction in the hundredths column, you are subtracting 7 tenths from 9 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a5hint2)%	You do not need to borrow to complete this step, so you need to evaluate 9 tenths - 7 tenths.
+%(a5hint3)%	Please enter 2 in the highlighted box.
+%(a6req)%	1
+%(a6)%	9
+%(a6hint1)%	In this column, you are subtracting 0 hundredths from 9 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a6hint2)%	You do not need to borrow to complete this step, so you need to evaluate 9 hundredths - 0 hundredths.
+%(a6hint3)%	Please enter 9 in the highlighted box.
+%(a7req)%	0
+%(a7)%	0
+%(a7hint1)%	
+%(a7hint2)%	
+%(a7hint3)%	
+%(a8req)%	0
+%(a8)%	0
+%(a8hint1)%	
+%(a8hint2)%	
+%(a8hint3)%	
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+%(a9hint3)%	
+	
+%(small_number_error_location)%	n1d2
+%(small_number_error)%	1
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-givens
+%(n1d3_skill)%	Enter-givens
+%(n1d4_skill)%	Align-decimals
+%(n1d5_skill)%	Enter-givens
+%(n1d6_skill)%	Enter-givens
+%(n1d7_skill)%	Enter-leading-or-trailing-zero
+%(n1d8_skill)%	Enter-leading-or-trailing-zero
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-givens
+%(n2d3_skill)%	Enter-givens
+%(n2d4_skill)%	Align-decimals
+%(n2d5_skill)%	Enter-givens
+%(n2d6_skill)%	Enter-leading-or-trailing-zero
+%(n2d7_skill)%	Enter-leading-or-trailing-zero
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(a8_skill)%	Enter-leading-or-trailing-zero
+%(a7_skill)%	Enter-leading-or-trailing-zero
+%(a6_skill)%	Subtract-no-borrow-or-lend
+%(a5_skill)%	Subtract-no-borrow-or-lend
+%(a4_skill)%	Align-decimals
+%(a3_skill)%	Subtract-no-borrow-or-lend
+%(a2_skill)%	Subtract-no-borrow-or-lend
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(3056407978218874328)%	
+%(3111529056432992585)%	
+%(-4766528366246230012)%	
+%(4122547966151021001)%	
+%(-5958682527562602422)%	
+%(5939726124832416050)%	
+%(3056404978218874403)%	
+%(-6907532864849400112)%	
+%(1953684789227255040)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 6 ones from 8 ones. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-7432409857962594680)%	
+%(-103575905657380754)%	
+%(9041504051517695496)%	
+%(-1140766803479447250)%	
+%(641188239247714409)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(-6634764911781064177)%	The digit in the tens place of 16.7 is 1. Please enter 1.
+%(1953685789235255059)%	You do not need to borrow to complete this step, so you need to evaluate 8 ones - 6 ones.
+%(5939724124836416020)%	
+%(4122546966191021130)%	
+%(893113643897759373)%	
+%(6213752517472455109)%	
+%(641186239155714071)%	The digit in the tens place of 48.99 is 4. Please enter 4.
+%(-4733341091933527816)%	
+%(-3353313824202496550)%	
+%(267630474009556348)%	
+%(1730749668174863887)%	
+%(6382391196249600991)%	Since you did not need to regroup to complete subtraction in the ones column, you are subtracting 1 tens from 4 tens. Please use the boxes in the gray area above to help you regroup if necessary.
+%(1847841181010240103)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	
+%(3111528056472992714)%	
+%(3982482621457137133)%	You do not need to borrow to complete this step, so you need to evaluate 9 tenths - 7 tenths.
+%(1951833195040611473)%	
+%(-9202527078397046537)%	
+%(3982483621461137128)%	Please enter 2 in the highlighted box.
+%(1847844181042240188)%	
+%(2955207463892187106)%	
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	Please enter the digit in the tenths place of 48.99.
+%(-103578905657380747)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(9041503051529695589)%	The digit in the ones place of 48.99 is 8. Please enter 8.
+%(-9202526078393046582)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	
+%(-1995939531117924798)%	
+%(2701072456702758032)%	
+%(-7432412857962594669)%	
+%(-6058999401977538257)%	
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-3867476976281168443)%	
+%(3094705722605100522)%	
+%(-9202524078429046708)%	
+%(641187239159714154)%	48.99 is the larger number. Please enter the digit in the tens place of 48.99.
+%(6213751517464455158)%	
+%(3982485621489137190)%	Since you did not need to regroup to complete subtraction in the hundredths column, you are subtracting 7 tenths from 9 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-5958681527602602551)%	
+%(-4644522401360927443)%	Please enter the digit in the hundredths place of 48.99.
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	
+%(-654682931131624435)%	Please enter 9 in the highlighted box.
+%(893112643889759422)%	
+%(4989872382532288054)%	The digit in the tenths place of 16.7 is 7. Please enter 7.
+%(1953686789223255102)%	Please enter 2 in the highlighted box.
+%(-654681931127624440)%	You do not need to borrow to complete this step, so you need to evaluate 9 hundredths - 0 hundredths.
+%(-654680931119624421)%	In this column, you are subtracting 0 hundredths from 9 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-7793447101577105273)%	Please enter the digit in the ones place of 16.7.
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	
+%(3094706722693100777)%	
+%(-4766531366246229905)%	
+%(1951836195136611818)%	
+%(-5088806614309645506)%	
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	Please enter the digit in the tens place of 16.7.
+%(-6907535864945400357)%	
+%(-5039427320210567376)%	
+%(8676310691293844476)%	
+%(-1140765803471447235)%	
+%(-7048402377707711960)%	
+%(-103576905645380797)%	
+%(7703666018947561602)%	
+%(-5088807614313645509)%	The digit in the tenths place of 48.99 is 9. Please enter 9.
+%(-6058996401977538364)%	
+%(2955208463884187009)%	
+%(-3353315824230496612)%	
+%(-7793444101545105188)%	The digit in the ones place of 16.7 is 6. Please enter 6.
+%(1951835195132611823)%	
+%(-4644523401368927522)%	The digit in the hundredths place of 48.99 is 9. Please enter 9.
+%(6809645260764282625)%	
+%(-7048405377707711949)%	
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	Please enter the digit in the tenths place of 16.7.
+%(2701069456606757787)%	
+%(-4733342091921527851)%	
+%(-1995938531125924767)%	
+%(9041502051521695510)%	Please enter the digit in the ones place of 48.99.
+%(6382390196225600924)%	You do not need to borrow to complete this step, so you need to evaluate 4 tens - 1 tens.
+%(6382389196221600897)%	Please enter 3 in the highlighted box.
+%(6809644260772282722)%	
+%(5939723124832416025)%	
+%(-3353314824206496545)%	
+Problem Name	p22
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	Shawn has $50.09 and buys a fleece for $46.27. How much does he have left over?
+%(temp-numbers)%	Please subtract 46.27 from 50.09
+%(op)%	-
+%(decimalposition)%	n1d5
+%(decimalposition2)%	n2d5
+%(carry_dec_loc)%	r1c5
+%(carry_dec_loc2)%	r2c5
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d1hint3)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d2hint3)%	
+%(n1d3req)%	1
+%(n1d3)%	5
+%(n1d3hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d3hint2)%	50.09 is the larger number. Please enter the digit in the tens place of 50.09.
+%(n1d3hint3)%	The digit in the tens place of 50.09 is 5. Please enter 5.
+%(n1d4req)%	1
+%(n1d4)%	0
+%(n1d4hint1)%	Please enter the digit in the ones place of 50.09.
+%(n1d4hint2)%	The digit in the ones place of 50.09 is 0. Please enter 0.
+%(n1d4hint3)%	
+%(n1d5req)%	0
+%(n1d5)%	---
+%(n1d5hint1)%	
+%(n1d5hint2)%	
+%(n1d5hint3)%	
+%(n1d6req)%	1
+%(n1d6)%	0
+%(n1d6hint1)%	Please enter the digit in the tenths place of 50.09.
+%(n1d6hint2)%	The digit in the tenths place of 50.09 is 0. Please enter 0.
+%(n1d7req)%	1
+%(n1d7)%	9
+%(n1d7hint1)%	Please enter the digit in the hundredths place of 50.09.
+%(n1d7hint2)%	The digit in the hundredths place of 50.09 is 9. Please enter 9.
+%(n1d8req)%	0
+%(n1d8)%	0
+%(n1d8hint1)%	
+%(n1d8hint2)%	
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	1
+%(n2d3)%	4
+%(n2d3hint1)%	Please enter the digit in the tens place of 46.27.
+%(n2d3hint2)%	The digit in the tens place of 46.27 is 4. Please enter 4.
+%(n2d4req)%	1
+%(n2d4)%	6
+%(n2d4hint1)%	Please enter the digit in the ones place of 46.27.
+%(n2d4hint2)%	The digit in the ones place of 46.27 is 6. Please enter 6.
+%(n2d5req)%	0
+%(n2d5)%	---
+%(n2d5hint1)%	
+%(n2d5hint2)%	
+%(n2d6req)%	1
+%(n2d6)%	2
+%(n2d6hint1)%	Please enter the digit in the tenths place of 46.27.
+%(n2d6hint2)%	The digit in the tenths place of 46.27 is 2. Please enter 2.
+%(n2d7req)%	1
+%(n2d7)%	7
+%(n2d7hint1)%	Please enter the digit in the hundredths place of 46.27.
+%(n2d7hint2)%	The digit in the hundredths place of 46.27 is 7. Please enter 7.
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	0
+%(r1c3hint1)%	
+%(r1c3hint2)%	
+%(r1c4)%	9
+%(r1c4hint1)%	You needed to regroup 1 one into 10 tenths. How many ones remain?
+%(r1c4hint2)%	Since you regrouped 1 one into 10 tenths, there are 9 ones left. Enter 9 in this box.
+%(r1c5)%	
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	0
+%(r1c6hint1)%	
+%(r1c6hint2)%	
+%(r1c7)%	0
+%(r1c7hint1)%	
+%(r1c7hint2)%	
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	0
+%(r2c1hint1)%	
+%(r2c1hint2)%	
+%(r2c2)%	0
+%(r2c2hint1)%	
+%(r2c2hint2)%	
+%(r2c3)%	4
+%(r2c3hint1)%	You regrouped 1 ten into 10 ones. You need to subtract that from the tens and put the result in this box.
+%(r2c3hint2)%	You had 5 tens. 5 minus 1 is 4. Enter 4 in this box.
+%(r2c4)%	10
+%(r2c4hint1)%	Since you cannot subtract 6 ones from 0 ones, you need to regroup 1 ten into 10 ones. 
+%(r2c4hint2)%	After borrowing 1 ten, you have 10 ones. Enter 10 in this box.
+%(r2c5)%	0
+%(r2c5hint1)%	
+%(r2c5hint2)%	
+%(r2c6)%	10
+%(r2c6hint1)%	Since you cannot subtract 2 tenths from 0 tenths, you need to regroup 1 one into 10 tenths.
+%(r2c6hint2)%	After borrowing 1 one, you have 10 tenths. Enter 10 in this box.
+%(r2c7)%	0
+%(r2c7hint1)%	
+%(r2c7hint2)%	
+%(r2c8)%	0
+%(r2c8hint1)%	
+%(r2c8hint2)%	
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a1hint3)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a2hint3)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a3hint3)%	
+%(a4req)%	1
+%(a4)%	3
+%(a4hint1)%	Since you needed to regroup to complete subtraction in the tenths column, you are subtracting 6 ones from 9 ones.
+%(a4hint2)%	You do not need to borrow to complete this step, so you need to evaluate 9 ones - 6 ones.
+%(a4hint3)%	Please enter 3 in the highlighted box.
+%(a5req)%	1
+%(a5)%	.
+%(a5hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a5hint2)%	
+%(a5hint3)%	
+%(a6req)%	1
+%(a6)%	8
+%(a6hint1)%	Since you did not need to regroup to complete subtraction in the hundredths column, you are subtracting 2 tenths from 0 tenths. Now you must borrow from the ones column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(a6hint2)%	Since there are 0 ones, you need to convert 1 ten into 10 ones. Then, you can convert 1 one into 10 tenths. After this conversion, you need to evaluate 10 tenths - 2 tenths. 
+%(a6hint3)%	Please enter 8 in the highlighted box.
+%(a7req)%	1
+%(a7)%	2
+%(a7hint1)%	In this column, you are subtracting 7 hundredths from 9 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a7hint2)%	You do not need to borrow to complete this step, so you need to evaluate 9 hundredths - 7 hundredths.
+%(a7hint3)%	Please enter 2 in the highlighted box.
+%(a8req)%	0
+%(a8)%	0
+%(a8hint1)%	
+%(a8hint2)%	
+%(a8hint3)%	
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+%(a9hint3)%	
+	
+%(small_number_error_location)%	n1d3
+%(small_number_error)%	4
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-givens
+%(n1d4_skill)%	Enter-givens
+%(n1d5_skill)%	Align-decimals
+%(n1d6_skill)%	Enter-givens
+%(n1d7_skill)%	Enter-givens
+%(n1d8_skill)%	Enter-leading-or-trailing-zero
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-givens
+%(n2d4_skill)%	Enter-givens
+%(n2d5_skill)%	Align-decimals
+%(n2d6_skill)%	Enter-givens
+%(n2d7_skill)%	Enter-givens
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(a8_skill)%	Enter-leading-or-trailing-zero
+%(a7_skill)%	Subtract-no-borrow-or-lend
+%(a6_skill)%	Subtract-with-borrow
+%(a5_skill)%	Align-decimals
+%(a4_skill)%	Subtract-with-borrow
+%(a3_skill)%	Subtract-with-lend
+%(a2_skill)%	Enter-leading-or-trailing-zero
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(3056407978218874328)%	
+%(3111529056432992585)%	
+%(-4766528366246230012)%	
+%(4122547966151021001)%	
+%(-5958682527562602422)%	
+%(5939726124832416050)%	
+%(3056404978218874403)%	
+%(-6907532864849400112)%	The digit in the hundredths place of 46.27 is 7. Please enter 7.
+%(1953684789227255040)%	
+%(-7432409857962594680)%	You regrouped 1 ten into 10 ones. You need to subtract that from the tens and put the result in this box.
+%(-103575905657380754)%	You do not need to borrow to complete this step, so you need to evaluate 9 ones - 6 ones.
+%(9041504051517695496)%	The digit in the tens place of 50.09 is 5. Please enter 5.
+%(-1140766803479447250)%	
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(5939724124836416020)%	
+%(4122546966191021130)%	
+%(893113643897759373)%	
+%(6213752517472455109)%	
+%(641186239155714071)%	
+%(-4733341091933527816)%	The digit in the ones place of 50.09 is 0. Please enter 0.
+%(-3353313824202496550)%	Please enter 2 in the highlighted box.
+%(267630474009556348)%	
+%(1730749668174863887)%	
+%(6382391196249600991)%	
+%(1847841181010240103)%	Since you cannot subtract 2 tenths from 0 tenths, you need to regroup 1 one into 10 tenths.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	
+%(3111528056472992714)%	
+%(3982482621457137133)%	
+%(1951833195040611473)%	
+%(-9202527078397046537)%	
+%(3982483621461137128)%	
+%(1847844181042240188)%	After borrowing 1 one, you have 10 tenths. Enter 10 in this box.
+%(2955207463892187106)%	After borrowing 1 ten, you have 10 ones. Enter 10 in this box.
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	
+%(-103578905657380747)%	Since you needed to regroup to complete subtraction in the tenths column, you are subtracting 6 ones from 9 ones.
+%(9041503051529695589)%	50.09 is the larger number. Please enter the digit in the tens place of 50.09.
+%(-9202526078393046582)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	
+%(-1995939531117924798)%	
+%(2701072456702758032)%	You needed to regroup 1 one into 10 tenths. How many ones remain?
+%(-7432412857962594669)%	You had 5 tens. 5 minus 1 is 4. Enter 4 in this box.
+%(-6058999401977538257)%	
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-3867476976281168443)%	
+%(3094705722605100522)%	Please enter the digit in the hundredths place of 50.09.
+%(-9202524078429046708)%	
+%(641187239159714154)%	
+%(6213751517464455158)%	
+%(3982485621489137190)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(-5958681527602602551)%	
+%(-4644522401360927443)%	Please enter the digit in the tenths place of 50.09.
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	
+%(-654682931131624435)%	Please enter 8 in the highlighted box.
+%(893112643889759422)%	
+%(4989872382532288054)%	
+%(1953686789223255102)%	
+%(-654681931127624440)%	Since there are 0 ones, you need to convert 1 ten into 10 ones. Then, you can convert 1 one into 10 tenths. After this conversion, you need to evaluate 10 tenths - 2 tenths. 
+%(-654680931119624421)%	Since you did not need to regroup to complete subtraction in the hundredths column, you are subtracting 2 tenths from 0 tenths. Now you must borrow from the ones column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(-7793447101577105273)%	Please enter the digit in the tens place of 46.27.
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	Please enter the digit in the ones place of 50.09.
+%(3094706722693100777)%	The digit in the hundredths place of 50.09 is 9. Please enter 9.
+%(-4766531366246229905)%	
+%(1951836195136611818)%	
+%(-5088806614309645506)%	
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the hundredths place of 46.27.
+%(-5039427320210567376)%	
+%(8676310691293844476)%	
+%(-1140765803471447235)%	
+%(-7048402377707711960)%	Please enter the digit in the tenths place of 46.27.
+%(-103576905645380797)%	Please enter 3 in the highlighted box.
+%(7703666018947561602)%	
+%(-5088807614313645509)%	
+%(-6058996401977538364)%	
+%(2955208463884187009)%	Since you cannot subtract 6 ones from 0 ones, you need to regroup 1 ten into 10 ones. 
+%(-3353315824230496612)%	In this column, you are subtracting 7 hundredths from 9 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-7793444101545105188)%	The digit in the tens place of 46.27 is 4. Please enter 4.
+%(1951835195132611823)%	
+%(-4644523401368927522)%	The digit in the tenths place of 50.09 is 0. Please enter 0.
+%(6809645260764282625)%	The digit in the ones place of 46.27 is 6. Please enter 6.
+%(-7048405377707711949)%	The digit in the tenths place of 46.27 is 2. Please enter 2.
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	
+%(2701069456606757787)%	Since you regrouped 1 one into 10 tenths, there are 9 ones left. Enter 9 in this box.
+%(-4733342091921527851)%	
+%(-1995938531125924767)%	
+%(9041502051521695510)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(6382390196225600924)%	
+%(6382389196221600897)%	
+%(6809644260772282722)%	Please enter the digit in the ones place of 46.27.
+%(5939723124832416025)%	
+%(-3353314824206496545)%	You do not need to borrow to complete this step, so you need to evaluate 9 hundredths - 7 hundredths.
+Problem Name	p24
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	I spend $33 a week on food, and have budgeted $50.75 for food and entertainment. How much do I have left for entertainment each week?
+%(temp-numbers)%	Please subtract 33 from 50.75
+%(op)%	-
+%(decimalposition)%	n1d3
+%(decimalposition2)%	n2d3
+%(carry_dec_loc)%	r1c3
+%(carry_dec_loc2)%	r2c3
+%(n1d1req)%	1
+%(n1d1)%	5
+%(n1d1hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d1hint2)%	50.75 is the larger number. Please enter the digit in the tens place of 50.75.
+%(n1d1hint3)%	The digit in the tens place of 50.75 is 5. Please enter 5.
+%(n1d2req)%	1
+%(n1d2)%	0
+%(n1d2hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d2hint2)%	Please enter the digit in the ones place of 50.75.
+%(n1d2hint3)%	The digit in the ones place of 50.75 is 0. Please enter 0.
+%(n1d3req)%	0
+%(n1d3)%	---
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d3hint3)%	
+%(n1d4req)%	1
+%(n1d4)%	7
+%(n1d4hint1)%	Please enter the digit in the tenths place of 50.75.
+%(n1d4hint2)%	The digit in the tenths place of 50.75 is 7. Please enter 7.
+%(n1d4hint3)%	
+%(n1d5req)%	1
+%(n1d5)%	5
+%(n1d5hint1)%	Please enter the digit in the hundredths place of 50.75.
+%(n1d5hint2)%	The digit in the hundredths place of 50.75 is 5. Please enter 5.
+%(n1d5hint3)%	
+%(n1d6req)%	0
+%(n1d6)%	0
+%(n1d6hint1)%	
+%(n1d6hint2)%	
+%(n1d7req)%	0
+%(n1d7)%	0
+%(n1d7hint1)%	
+%(n1d7hint2)%	
+%(n1d8req)%	0
+%(n1d8)%	0
+%(n1d8hint1)%	
+%(n1d8hint2)%	
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	1
+%(n2d1)%	3
+%(n2d1hint1)%	Please enter the digit in the tens place of 33.
+%(n2d1hint2)%	The digit in the tens place of 33 is 3. Please enter 3.
+%(n2d2req)%	1
+%(n2d2)%	3
+%(n2d2hint1)%	Please enter the digit in the ones place of 33.
+%(n2d2hint2)%	The digit in the ones place of 33 is 3. Please enter 3.
+%(n2d3req)%	0
+%(n2d3)%	---
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	0
+%(n2d4)%	0
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	0
+%(n2d5)%	0
+%(n2d5hint1)%	
+%(n2d5hint2)%	
+%(n2d6req)%	0
+%(n2d6)%	0
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	0
+%(n2d7)%	0
+%(n2d7hint1)%	
+%(n2d7hint2)%	
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	0
+%(r1c3hint1)%	
+%(r1c3hint2)%	
+%(r1c4)%	0
+%(r1c4hint1)%	
+%(r1c4hint2)%	
+%(r1c5)%	0
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	0
+%(r1c6hint1)%	
+%(r1c6hint2)%	
+%(r1c7)%	0
+%(r1c7hint1)%	
+%(r1c7hint2)%	
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	4
+%(r2c1hint1)%	Since you needed to regroup 1 ten into 10 ones, you need to reduce the number of tens by 1.
+%(r2c1hint2)%	After regrouping, you have 4 tens left. Enter 4 in this box.
+%(r2c2)%	10
+%(r2c2hint1)%	You need to regroup 1 ten into 10 ones so you can subtract this column.
+%(r2c2hint2)%	Since you needed to regroup 1 ten into 10 ones, enter 10 in this box.
+%(r2c3)%	0
+%(r2c3hint1)%	
+%(r2c3hint2)%	
+%(r2c4)%	0
+%(r2c4hint1)%	
+%(r2c4hint2)%	
+%(r2c5)%	0
+%(r2c5hint1)%	
+%(r2c5hint2)%	
+%(r2c6)%	0
+%(r2c6hint1)%	
+%(r2c6hint2)%	
+%(r2c7)%	0
+%(r2c7hint1)%	
+%(r2c7hint2)%	
+%(r2c8)%	0
+%(r2c8hint1)%	
+%(r2c8hint2)%	
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	1
+%(a1)%	1
+%(a1hint1)%	Since you needed to regroup to complete subtraction in the ones column, you are subtracting 3 tens from 4 tens. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a1hint2)%	You do not need to borrow to complete this step, so you need to evaluate 4 tens - 3 tens.
+%(a1hint3)%	Please enter 1 in the highlighted box.
+%(a2req)%	1
+%(a2)%	7
+%(a2hint1)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 3 ones from 0 ones, and must borrow from the tens column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(a2hint2)%	After borrowing, you need to evaluate 10 ones - 3 ones.
+%(a2hint3)%	Please enter 7 in the highlighted box.
+%(a3req)%	1
+%(a3)%	.
+%(a3hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a3hint2)%	
+%(a3hint3)%	
+%(a4req)%	1
+%(a4)%	7
+%(a4hint1)%	Since you did not need to regroup to complete subtraction in the hundredths column, you are subtracting 0 tenths from 7 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a4hint2)%	You do not need to borrow to complete this step, so you need to evaluate 7 tenths - 0 tenths.
+%(a4hint3)%	Please enter 7 in the highlighted box.
+%(a5req)%	1
+%(a5)%	5
+%(a5hint1)%	In this column, you are subtracting 0 hundredths from 5 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a5hint2)%	You do not need to borrow to complete this step, so you need to evaluate 5 hundredths - 0 hundredths.
+%(a5hint3)%	Please enter 5 in the highlighted box.
+%(a6req)%	0
+%(a6)%	0
+%(a6hint1)%	
+%(a6hint2)%	
+%(a6hint3)%	
+%(a7req)%	0
+%(a7)%	0
+%(a7hint1)%	
+%(a7hint2)%	
+%(a7hint3)%	
+%(a8req)%	0
+%(a8)%	0
+%(a8hint1)%	
+%(a8hint2)%	
+%(a8hint3)%	
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+%(a9hint3)%	
+	
+%(small_number_error_location)%	n1d1
+%(small_number_error)%	3
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-givens
+%(n1d2_skill)%	Enter-givens
+%(n1d3_skill)%	Align-decimals
+%(n1d4_skill)%	Enter-givens
+%(n1d5_skill)%	Enter-givens
+%(n1d6_skill)%	Enter-leading-or-trailing-zero
+%(n1d7_skill)%	Enter-leading-or-trailing-zero
+%(n1d8_skill)%	Enter-leading-or-trailing-zero
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+%(n2d1_skill)%	Enter-givens
+%(n2d2_skill)%	Enter-givens
+%(n2d3_skill)%	Align-decimals
+%(n2d4_skill)%	Enter-givens
+%(n2d5_skill)%	Enter-givens
+%(n2d6_skill)%	Enter-leading-or-trailing-zero
+%(n2d7_skill)%	Enter-leading-or-trailing-zero
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(a8_skill)%	Enter-leading-or-trailing-zero
+%(a7_skill)%	Enter-leading-or-trailing-zero
+%(a6_skill)%	Enter-leading-or-trailing-zero
+%(a5_skill)%	Subtract-no-borrow-or-lend
+%(a4_skill)%	Subtract-no-borrow-or-lend
+%(a3_skill)%	Align-decimals
+%(a2_skill)%	Subtract-with-borrow
+%(a1_skill)%	Subtract-with-lend
+%(3056407978218874328)%	
+%(3111529056432992585)%	
+%(-4766528366246230012)%	
+%(4122547966151021001)%	
+%(-5958682527562602422)%	
+%(5939726124832416050)%	
+%(3056404978218874403)%	
+%(-6907532864849400112)%	
+%(1953684789227255040)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(-7432409857962594680)%	
+%(-103575905657380754)%	You do not need to borrow to complete this step, so you need to evaluate 7 tenths - 0 tenths.
+%(9041504051517695496)%	
+%(-1140766803479447250)%	
+%(641188239247714409)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(-6634764911781064177)%	The digit in the ones place of 33 is 3. Please enter 3.
+%(1953685789235255059)%	
+%(5939724124836416020)%	
+%(4122546966191021130)%	
+%(893113643897759373)%	
+%(6213752517472455109)%	
+%(641186239155714071)%	The digit in the ones place of 50.75 is 0. Please enter 0.
+%(-4733341091933527816)%	The digit in the tenths place of 50.75 is 7. Please enter 7.
+%(-3353313824202496550)%	
+%(267630474009556348)%	
+%(1730749668174863887)%	
+%(6382391196249600991)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 3 ones from 0 ones, and must borrow from the tens column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(1847841181010240103)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	Since you needed to regroup to complete subtraction in the ones column, you are subtracting 3 tens from 4 tens. Please use the boxes in the gray area above to help you regroup if necessary.
+%(7703667018939561633)%	Please enter the digit in the tens place of 33.
+%(267627473977556263)%	
+%(3111528056472992714)%	
+%(3982482621457137133)%	You do not need to borrow to complete this step, so you need to evaluate 5 hundredths - 0 hundredths.
+%(1951833195040611473)%	
+%(-9202527078397046537)%	50.75 is the larger number. Please enter the digit in the tens place of 50.75.
+%(3982483621461137128)%	Please enter 5 in the highlighted box.
+%(1847844181042240188)%	
+%(2955207463892187106)%	
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	Please enter the digit in the hundredths place of 50.75.
+%(-103578905657380747)%	Since you did not need to regroup to complete subtraction in the hundredths column, you are subtracting 0 tenths from 7 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(9041503051529695589)%	
+%(-9202526078393046582)%	The digit in the tens place of 50.75 is 5. Please enter 5.
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	You need to regroup 1 ten into 10 ones so you can subtract this column.
+%(-1995939531117924798)%	Since you needed to regroup 1 ten into 10 ones, you need to reduce the number of tens by 1.
+%(2701072456702758032)%	
+%(-7432412857962594669)%	
+%(-6058999401977538257)%	
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	You do not need to borrow to complete this step, so you need to evaluate 4 tens - 3 tens.
+%(-3867476976281168443)%	
+%(3094705722605100522)%	
+%(-9202524078429046708)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(641187239159714154)%	Please enter the digit in the ones place of 50.75.
+%(6213751517464455158)%	
+%(3982485621489137190)%	In this column, you are subtracting 0 hundredths from 5 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-5958681527602602551)%	
+%(-4644522401360927443)%	
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	
+%(-654682931131624435)%	
+%(893112643889759422)%	
+%(4989872382532288054)%	
+%(1953686789223255102)%	
+%(-654681931127624440)%	
+%(-654680931119624421)%	
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	Please enter the digit in the tenths place of 50.75.
+%(3094706722693100777)%	
+%(-4766531366246229905)%	
+%(1951836195136611818)%	
+%(-5088806614309645506)%	
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	Please enter the digit in the ones place of 33.
+%(-6907535864945400357)%	
+%(-5039427320210567376)%	Since you needed to regroup 1 ten into 10 ones, enter 10 in this box.
+%(8676310691293844476)%	Please enter 1 in the highlighted box.
+%(-1140765803471447235)%	
+%(-7048402377707711960)%	
+%(-103576905645380797)%	Please enter 7 in the highlighted box.
+%(7703666018947561602)%	The digit in the tens place of 33 is 3. Please enter 3.
+%(-5088807614313645509)%	The digit in the hundredths place of 50.75 is 5. Please enter 5.
+%(-6058996401977538364)%	
+%(2955208463884187009)%	
+%(-3353315824230496612)%	
+%(-7793444101545105188)%	
+%(1951835195132611823)%	
+%(-4644523401368927522)%	
+%(6809645260764282625)%	
+%(-7048405377707711949)%	
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	
+%(2701069456606757787)%	
+%(-4733342091921527851)%	
+%(-1995938531125924767)%	After regrouping, you have 4 tens left. Enter 4 in this box.
+%(9041502051521695510)%	
+%(6382390196225600924)%	After borrowing, you need to evaluate 10 ones - 3 ones.
+%(6382389196221600897)%	Please enter 7 in the highlighted box.
+%(6809644260772282722)%	
+%(5939723124832416025)%	
+%(-3353314824206496545)%	
+Problem Name	p25
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	Punxsutawney Phil, the famous weather-predicting groundhog, has accurately reported the end of winter 45.3% of the time. New Jersey's Woodrow K. Chuck has accurately predicted the end of winter 54.18% of the time. Woodrow K. Chuck has been how many percentage points better at predicting the weather than Punxsutawney Phil?
+%(temp-numbers)%	Please subtract 45.3 from 54.18
+%(op)%	-
+%(decimalposition)%	n1d4
+%(decimalposition2)%	n2d4
+%(carry_dec_loc)%	r1c4
+%(carry_dec_loc2)%	r2c4
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d1hint3)%	
+%(n1d2req)%	1
+%(n1d2)%	5
+%(n1d2hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d2hint2)%	54.18 is the larger number. Please enter the digit in the tens place of 54.18.
+%(n1d2hint3)%	The digit in the tens place of 54.18 is 5. Please enter 5.
+%(n1d3req)%	1
+%(n1d3)%	4
+%(n1d3hint1)%	Please enter the digit in the ones place of 54.18.
+%(n1d3hint2)%	The digit in the ones place of 54.18 is 4. Please enter 4.
+%(n1d3hint3)%	
+%(n1d4req)%	0
+%(n1d4)%	---
+%(n1d4hint1)%	
+%(n1d4hint2)%	
+%(n1d4hint3)%	
+%(n1d5req)%	1
+%(n1d5)%	1
+%(n1d5hint1)%	Please enter the digit in the tenths place of 54.18.
+%(n1d5hint2)%	The digit in the tenths place of 54.18 is 1. Please enter 1.
+%(n1d5hint3)%	
+%(n1d6req)%	1
+%(n1d6)%	8
+%(n1d6hint1)%	Please enter the digit in the hundredths place of 54.18.
+%(n1d6hint2)%	The digit in the hundredths place of 54.18 is 8. Please enter 8.
+%(n1d7req)%	0
+%(n1d7)%	0
+%(n1d7hint1)%	
+%(n1d7hint2)%	
+%(n1d8req)%	0
+%(n1d8)%	0
+%(n1d8hint1)%	
+%(n1d8hint2)%	
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	1
+%(n2d2)%	4
+%(n2d2hint1)%	Please enter the digit in the tens place of 45.3.
+%(n2d2hint2)%	The digit in the tens place of 45.3 is 4. Please enter 4.
+%(n2d3req)%	1
+%(n2d3)%	5
+%(n2d3hint1)%	Please enter the digit in the ones place of 45.3.
+%(n2d3hint2)%	The digit in the ones place of 45.3 is 5. Please enter 5.
+%(n2d4req)%	0
+%(n2d4)%	---
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	1
+%(n2d5)%	3
+%(n2d5hint1)%	Please enter the digit in the tenths place of 45.3.
+%(n2d5hint2)%	The digit in the tenths place of 45.3 is 3. Please enter 3.
+%(n2d6req)%	
+%(n2d6)%	
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	0
+%(n2d7)%	0
+%(n2d7hint1)%	
+%(n2d7hint2)%	
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	13
+%(r1c3hint1)%	You cannot subtract 5 from 3 so you need to regroup 1 ten into 10 ones.
+%(r1c3hint2)%	Since you regrouped 1 ten into 10 ones, you only have 4 tens left. Enter 4 in this box.
+%(r1c4)%	0
+%(r1c4hint1)%	
+%(r1c4hint2)%	
+%(r1c5)%	0
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	0
+%(r1c6hint1)%	
+%(r1c6hint2)%	
+%(r1c7)%	0
+%(r1c7hint1)%	
+%(r1c7hint2)%	
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	0
+%(r2c1hint1)%	
+%(r2c1hint2)%	
+%(r2c2)%	4
+%(r2c2hint1)%	You regrouped 1 ten into 10 ones. You need to subtract that from the tens and put the result in this box.
+%(r2c2hint2)%	You had 5 tens. 5 minus 1 is 4. Enter 4 in this box.
+%(r2c3)%	3
+%(r2c3hint1)%	You regrouped 1 one into 10 tenths. You need to subtract that from the number of ones and put the result in this box.
+%(r2c3hint2)%	You had 4 ones. 4 minus 1 is 3. Enter 3 in this box.
+%(r2c4)%	0
+%(r2c4hint1)%	
+%(r2c4hint2)%	
+%(r2c5)%	11
+%(r2c5hint1)%	Since you cannot subtract 3 tenths from 1 tenth, you need to regroup 1 one into 10 tenths.
+%(r2c5hint2)%	After borrowing 1 ten, you have 11 tenths. Enter 11 in this box.
+%(r2c6)%	0
+%(r2c6hint1)%	
+%(r2c6hint2)%	
+%(r2c7)%	0
+%(r2c7hint1)%	
+%(r2c7hint2)%	
+%(r2c8)%	0
+%(r2c8hint1)%	
+%(r2c8hint2)%	
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a1hint3)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a2hint3)%	
+%(a3req)%	1
+%(a3)%	8
+%(a3hint1)%	Since you needed to regroup to complete subtraction in the tenths column, you are subtracting 5 ones from 9 ones, and must borrow from the tens column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(a3hint2)%	After borrowing, you need to evaluate 13 ones - 5 ones.
+%(a3hint3)%	Please enter 8 in the highlighted box.
+%(a4req)%	1
+%(a4)%	.
+%(a4hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a4hint2)%	
+%(a4hint3)%	
+%(a5req)%	1
+%(a5)%	8
+%(a5hint1)%	Since you did not need to regroup to complete subtraction in the hundredths column, you are subtracting 3 tenths from 1 tenths, and must borrow from the ones column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(a5hint2)%	After borrowing, you need to evaluate 11 tenths - 3 tenths.
+%(a5hint3)%	Please enter 8 in the highlighted box.
+%(a6req)%	1
+%(a6)%	8
+%(a6hint1)%	In this column, you are subtracting 0 hundredths from 8 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a6hint2)%	You do not need to borrow to complete this step, so you need to evaluate 8 hundredths - 0 hundredths.
+%(a6hint3)%	Please enter 8 in the highlighted box.
+%(a7req)%	0
+%(a7)%	0
+%(a7hint1)%	
+%(a7hint2)%	
+%(a7hint3)%	
+%(a8req)%	0
+%(a8)%	0
+%(a8hint1)%	
+%(a8hint2)%	
+%(a8hint3)%	
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+%(a9hint3)%	
+	
+%(small_number_error_location)%	n1d2
+%(small_number_error)%	4
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-givens
+%(n1d3_skill)%	Enter-givens
+%(n1d4_skill)%	Align-decimals
+%(n1d5_skill)%	Enter-givens
+%(n1d6_skill)%	Enter-givens
+%(n1d7_skill)%	Enter-leading-or-trailing-zero
+%(n1d8_skill)%	Enter-leading-or-trailing-zero
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-givens
+%(n2d3_skill)%	Enter-givens
+%(n2d4_skill)%	Align-decimals
+%(n2d5_skill)%	Enter-givens
+%(n2d6_skill)%	Enter-leading-or-trailing-zero
+%(n2d7_skill)%	Enter-leading-or-trailing-zero
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(a8_skill)%	Enter-leading-or-trailing-zero
+%(a7_skill)%	Enter-leading-or-trailing-zero
+%(a6_skill)%	Subtract-no-borrow-or-lend
+%(a5_skill)%	Subtract-with-borrow
+%(a4_skill)%	Align-decimals
+%(a3_skill)%	Subtract-with-borrow
+%(a2_skill)%	Subtract-with-lend
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(3056407978218874328)%	
+%(3111529056432992585)%	
+%(-4766528366246230012)%	
+%(4122547966151021001)%	
+%(-5958682527562602422)%	Since you regrouped 1 ten into 10 ones, you only have 4 tens left. Enter 4 in this box.
+%(5939726124832416050)%	
+%(3056404978218874403)%	
+%(-6907532864849400112)%	
+%(1953684789227255040)%	Since you needed to regroup to complete subtraction in the tenths column, you are subtracting 5 ones from 9 ones, and must borrow from the tens column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(-7432409857962594680)%	You regrouped 1 one into 10 tenths. You need to subtract that from the number of ones and put the result in this box.
+%(-103575905657380754)%	
+%(9041504051517695496)%	
+%(-1140766803479447250)%	Since you cannot subtract 3 tenths from 1 tenth, you need to regroup 1 one into 10 tenths.
+%(641188239247714409)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(-6634764911781064177)%	The digit in the tens place of 45.3 is 4. Please enter 4.
+%(1953685789235255059)%	After borrowing, you need to evaluate 13 ones - 5 ones.
+%(5939724124836416020)%	
+%(4122546966191021130)%	
+%(893113643897759373)%	
+%(6213752517472455109)%	
+%(641186239155714071)%	The digit in the tens place of 54.18 is 5. Please enter 5.
+%(-4733341091933527816)%	
+%(-3353313824202496550)%	
+%(267630474009556348)%	
+%(1730749668174863887)%	
+%(6382391196249600991)%	
+%(1847841181010240103)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	
+%(3111528056472992714)%	
+%(3982482621457137133)%	After borrowing, you need to evaluate 11 tenths - 3 tenths.
+%(1951833195040611473)%	
+%(-9202527078397046537)%	
+%(3982483621461137128)%	Please enter 8 in the highlighted box.
+%(1847844181042240188)%	
+%(2955207463892187106)%	
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	Please enter the digit in the tenths place of 54.18.
+%(-103578905657380747)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(9041503051529695589)%	The digit in the ones place of 54.18 is 4. Please enter 4.
+%(-9202526078393046582)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	You regrouped 1 ten into 10 ones. You need to subtract that from the tens and put the result in this box.
+%(-1995939531117924798)%	
+%(2701072456702758032)%	
+%(-7432412857962594669)%	You had 4 ones. 4 minus 1 is 3. Enter 3 in this box.
+%(-6058999401977538257)%	
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-3867476976281168443)%	
+%(3094705722605100522)%	
+%(-9202524078429046708)%	
+%(641187239159714154)%	54.18 is the larger number. Please enter the digit in the tens place of 54.18.
+%(6213751517464455158)%	
+%(3982485621489137190)%	Since you did not need to regroup to complete subtraction in the hundredths column, you are subtracting 3 tenths from 1 tenths, and must borrow from the ones column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(-5958681527602602551)%	You cannot subtract 5 from 3 so you need to regroup 1 ten into 10 ones.
+%(-4644522401360927443)%	Please enter the digit in the hundredths place of 54.18.
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	
+%(-654682931131624435)%	Please enter 8 in the highlighted box.
+%(893112643889759422)%	
+%(4989872382532288054)%	The digit in the tenths place of 45.3 is 3. Please enter 3.
+%(1953686789223255102)%	Please enter 8 in the highlighted box.
+%(-654681931127624440)%	You do not need to borrow to complete this step, so you need to evaluate 8 hundredths - 0 hundredths.
+%(-654680931119624421)%	In this column, you are subtracting 0 hundredths from 8 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-7793447101577105273)%	Please enter the digit in the ones place of 45.3.
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	
+%(3094706722693100777)%	
+%(-4766531366246229905)%	
+%(1951836195136611818)%	
+%(-5088806614309645506)%	
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	Please enter the digit in the tens place of 45.3.
+%(-6907535864945400357)%	
+%(-5039427320210567376)%	You had 5 tens. 5 minus 1 is 4. Enter 4 in this box.
+%(8676310691293844476)%	
+%(-1140765803471447235)%	After borrowing 1 ten, you have 11 tenths. Enter 11 in this box.
+%(-7048402377707711960)%	
+%(-103576905645380797)%	
+%(7703666018947561602)%	
+%(-5088807614313645509)%	The digit in the tenths place of 54.18 is 1. Please enter 1.
+%(-6058996401977538364)%	
+%(2955208463884187009)%	
+%(-3353315824230496612)%	
+%(-7793444101545105188)%	The digit in the ones place of 45.3 is 5. Please enter 5.
+%(1951835195132611823)%	
+%(-4644523401368927522)%	The digit in the hundredths place of 54.18 is 8. Please enter 8.
+%(6809645260764282625)%	
+%(-7048405377707711949)%	
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	Please enter the digit in the tenths place of 45.3.
+%(2701069456606757787)%	
+%(-4733342091921527851)%	
+%(-1995938531125924767)%	
+%(9041502051521695510)%	Please enter the digit in the ones place of 54.18.
+%(6382390196225600924)%	
+%(6382389196221600897)%	
+%(6809644260772282722)%	
+%(5939723124832416025)%	
+%(-3353314824206496545)%	
+Problem Name	p26
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	The oldest person to play professional baseball, Leroy "Satchel" Paige, was 59.219 years old. The youngest, Joseph Nuxhall, was 18.86 years old. What is the difference in their ages?
+%(temp-numbers)%	Please subtract 18.86 from 59.219
+%(op)%	-
+%(decimalposition)%	n1d6
+%(decimalposition2)%	n2d6
+%(carry_dec_loc)%	r1c6
+%(carry_dec_loc2)%	r2c6
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d1hint3)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d2hint3)%	
+%(n1d3req)%	0
+%(n1d3)%	0
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d3hint3)%	
+%(n1d4req)%	1
+%(n1d4)%	5
+%(n1d4hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d4hint2)%	59.219 is the larger number. Please enter the digit in the tens place of 59.219.
+%(n1d4hint3)%	The digit in the tens place of 59.219 is 5. Please enter 5.
+%(n1d5req)%	1
+%(n1d5)%	9
+%(n1d5hint1)%	Please enter the digit in the ones place of 59.219.
+%(n1d5hint2)%	The digit in the ones place of 59.219 is 9. Please enter 9.
+%(n1d5hint3)%	
+%(n1d6req)%	0
+%(n1d6)%	---
+%(n1d6hint1)%	
+%(n1d6hint2)%	
+%(n1d7req)%	1
+%(n1d7)%	2
+%(n1d7hint1)%	Please enter the digit in the tenths place of 59.219.
+%(n1d7hint2)%	The digit in the tenths place of 59.219 is 2. Please enter 2.
+%(n1d8req)%	1
+%(n1d8)%	1
+%(n1d8hint1)%	Please enter the digit in the hundredths place of 59.219.
+%(n1d8hint2)%	The digit in the hundredths place of 59.219 is 1. Please enter 1.
+%(n1d9req)%	1
+%(n1d9)%	9
+%(n1d9hint1)%	Please enter the digit in the thousandths place of 59.219.
+%(n1d9hint2)%	The digit in the thousandths place of 59.219 is 9. Please enter 9.
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	1
+%(n2d4)%	1
+%(n2d4hint1)%	Please enter the digit in the tens place of 18.86.
+%(n2d4hint2)%	The digit in the tens place of 18.86 is 1. Please enter 1.
+%(n2d5req)%	1
+%(n2d5)%	8
+%(n2d5hint1)%	Please enter the digit in the ones place of 18.86.
+%(n2d5hint2)%	The digit in the ones place of 18.86 is 8. Please enter 8.
+%(n2d6req)%	0
+%(n2d6)%	---
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	1
+%(n2d7)%	8
+%(n2d7hint1)%	Please enter the digit in the tenths place of 18.86.
+%(n2d7hint2)%	The digit in the tenths place of 18.86 is 8. Please enter 8.
+%(n2d8req)%	1
+%(n2d8)%	6
+%(n2d8hint1)%	Please enter the digit in the hundredths place of 18.86.
+%(n2d8hint2)%	The digit in the hundredths place of 18.86 is 6. Please enter 6.
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	0
+%(r1c3hint1)%	
+%(r1c3hint2)%	
+%(r1c4)%	0
+%(r1c4hint1)%	
+%(r1c4hint2)%	
+%(r1c5)%	0
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	0
+%(r1c6hint1)%	
+%(r1c6hint2)%	
+%(r1c7)%	11
+%(r1c7hint1)%	You cannot subtract 8 tenths from 1 without regrouping. You must regroup 1 one into 10 tenths.
+%(r1c7hint2)%	You had one tenth. After regrouping 1 one into 10 tenths, you have 10 more. 1 plus 10 is 11. Enter 11 in this box.
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	0
+%(r2c1hint1)%	
+%(r2c1hint2)%	
+%(r2c2)%	0
+%(r2c2hint1)%	
+%(r2c2hint2)%	
+%(r2c3)%	0
+%(r2c3hint1)%	
+%(r2c3hint2)%	
+%(r2c4)%	0
+%(r2c4hint1)%	
+%(r2c4hint2)%	
+%(r2c5)%	8
+%(r2c5hint1)%	You needed to regroup 1 one into 10 tenths. You need to subtract that from the ones and put the answer in this box.
+%(r2c5hint2)%	When you subtract 1 one from 9 ones, you are left with 8 ones. Enter 8 in this box.
+%(r2c6)%	0
+%(r2c6hint1)%	
+%(r2c6hint2)%	
+%(r2c7)%	1
+%(r2c7hint1)%	You needed to regroup 1 tenth into 10 hundredths. You need to subtract that from the tenths and put the answer in this box.
+%(r2c7hint2)%	You need to subtract 1 from the number of tenths. 2 minus 1 is 1. Enter 1 in the box.
+%(r2c8)%	11
+%(r2c8hint1)%	You need to regroup to complete subtraction in the hundredths column. Borrow 1 tenth to do this. Remember that 1 tenth is equal to 10 hundredths.
+%(r2c8hint2)%	After regrouping 1 tenth into 10 hundredths, add it to the 1 hundreth you already have. Please enter 11 in this box.
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a1hint3)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a2hint3)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a3hint3)%	
+%(a4req)%	1
+%(a4)%	4
+%(a4hint1)%	Since you did not need to regroup to complete subtraction in the ones column, you are subtracting 1 tens from 5 tens. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a4hint2)%	You do not need to borrow to complete this step, so you need to evaluate 5 tens - 1 tens.
+%(a4hint3)%	Please enter 4 in the highlighted box.
+%(a5req)%	1
+%(a5)%	0
+%(a5hint1)%	Since you needed to regroup to complete subtraction in the tenths column, you are subtracting 8 ones from 8 ones.
+%(a5hint2)%	You do not need to borrow to complete this step, so you need to evaluate 8 ones - 8 ones.
+%(a5hint3)%	Please enter 0 in the highlighted box.
+%(a6req)%	1
+%(a6)%	.
+%(a6hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a6hint2)%	
+%(a6hint3)%	
+%(a7req)%	1
+%(a7)%	3
+%(a7hint1)%	Since you needed to regroup to complete subtraction in the hundredths column, you are subtracting 8 tenths from 1 tenth, and must borrow from the ones column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(a7hint2)%	After borrowing, you need to evaluate 11 tenths - 8 tenths.
+%(a7hint3)%	Please enter 3 in the highlighted box.
+%(a8req)%	1
+%(a8)%	5
+%(a8hint1)%	Since you did not need to regroup to complete subtraction in the thousandths column, you are subtracting 6 hundredths from 1 hundredths. Now you must borrow from the tenths column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(a8hint2)%	After borrowing, you need to evaluate 11 hundredths - 6 hundredths.
+%(a8hint3)%	Please enter 5 in the highlighted box.
+%(a9req)%	1
+%(a9)%	9
+%(a9hint1)%	In this column, you are subtracting 0 thousandths from 9 thousandths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a9hint2)%	You do not need to borrow to complete this step, so you need to evaluate 9 thousandths - 0 thousandths.
+%(a9hint3)%	Please enter 9 in the highlighted box.
+	
+%(small_number_error_location)%	n1d4
+%(small_number_error)%	1
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-leading-or-trailing-zero
+%(n1d4_skill)%	Enter-givens
+%(n1d5_skill)%	Enter-givens
+%(n1d6_skill)%	Align-decimals
+%(n1d7_skill)%	Enter-givens
+%(n1d8_skill)%	Enter-givens
+%(n1d9_skill)%	Enter-givens
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-givens
+%(n2d5_skill)%	Enter-givens
+%(n2d6_skill)%	Align-decimals
+%(n2d7_skill)%	Enter-givens
+%(n2d8_skill)%	Enter-givens
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Subtract-no-borrow-or-lend
+%(a8_skill)%	Subtract-with-borrow
+%(a7_skill)%	Subtract-with-borrow
+%(a6_skill)%	Align-decimals
+%(a5_skill)%	Subtract-with-lend
+%(a4_skill)%	Subtract-no-borrow-or-lend
+%(a3_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill)%	Enter-leading-or-trailing-zero
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(3056407978218874328)%	
+%(3111529056432992585)%	
+%(-4766528366246230012)%	You needed to regroup 1 tenth into 10 hundredths. You need to subtract that from the tenths and put the answer in this box.
+%(4122547966151021001)%	
+%(-5958682527562602422)%	
+%(5939726124832416050)%	In this column, you are subtracting 0 thousandths from 9 thousandths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(3056404978218874403)%	
+%(-6907532864849400112)%	The digit in the tenths place of 18.86 is 8. Please enter 8.
+%(1953684789227255040)%	
+%(-7432409857962594680)%	
+%(-103575905657380754)%	You do not need to borrow to complete this step, so you need to evaluate 5 tens - 1 tens.
+%(9041504051517695496)%	
+%(-1140766803479447250)%	You needed to regroup 1 one into 10 tenths. You need to subtract that from the ones and put the answer in this box.
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(5939724124836416020)%	Please enter 9 in the highlighted box.
+%(4122546966191021130)%	
+%(893113643897759373)%	You cannot subtract 8 tenths from 1 without regrouping. You must regroup 1 one into 10 tenths.
+%(6213752517472455109)%	The digit in the hundredths place of 18.86 is 6. Please enter 6.
+%(641186239155714071)%	
+%(-4733341091933527816)%	59.219 is the larger number. Please enter the digit in the tens place of 59.219.
+%(-3353313824202496550)%	Please enter 3 in the highlighted box.
+%(267630474009556348)%	The digit in the hundredths place of 59.219 is 1. Please enter 1.
+%(1730749668174863887)%	
+%(6382391196249600991)%	
+%(1847841181010240103)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	Please enter the digit in the hundredths place of 59.219.
+%(3111528056472992714)%	
+%(3982482621457137133)%	You do not need to borrow to complete this step, so you need to evaluate 8 ones - 8 ones.
+%(1951833195040611473)%	Since you did not need to regroup to complete subtraction in the thousandths column, you are subtracting 6 hundredths from 1 hundredths. Now you must borrow from the tenths column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(-9202527078397046537)%	
+%(3982483621461137128)%	Please enter 0 in the highlighted box.
+%(1847844181042240188)%	
+%(2955207463892187106)%	
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	Please enter the digit in the ones place of 59.219.
+%(-103578905657380747)%	Since you did not need to regroup to complete subtraction in the ones column, you are subtracting 1 tens from 5 tens. Please use the boxes in the gray area above to help you regroup if necessary.
+%(9041503051529695589)%	
+%(-9202526078393046582)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	
+%(-1995939531117924798)%	
+%(2701072456702758032)%	
+%(-7432412857962594669)%	
+%(-6058999401977538257)%	The digit in the thousandths place of 59.219 is 9. Please enter 9.
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	After regrouping 1 tenth into 10 hundredths, add it to the 1 hundreth you already have. Please enter 11 in this box.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-3867476976281168443)%	
+%(3094705722605100522)%	Please enter the digit in the tenths place of 59.219.
+%(-9202524078429046708)%	
+%(641187239159714154)%	
+%(6213751517464455158)%	Please enter the digit in the hundredths place of 18.86.
+%(3982485621489137190)%	Since you needed to regroup to complete subtraction in the tenths column, you are subtracting 8 ones from 8 ones.
+%(-5958681527602602551)%	
+%(-4644522401360927443)%	
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	You need to regroup to complete subtraction in the hundredths column. Borrow 1 tenth to do this. Remember that 1 tenth is equal to 10 hundredths.
+%(-654682931131624435)%	
+%(893112643889759422)%	You had one tenth. After regrouping 1 one into 10 tenths, you have 10 more. 1 plus 10 is 11. Enter 11 in this box.
+%(4989872382532288054)%	The digit in the ones place of 18.86 is 8. Please enter 8.
+%(1953686789223255102)%	
+%(-654681931127624440)%	
+%(-654680931119624421)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(3094706722693100777)%	The digit in the tenths place of 59.219 is 2. Please enter 2.
+%(-4766531366246229905)%	You need to subtract 1 from the number of tenths. 2 minus 1 is 1. Enter 1 in the box.
+%(1951836195136611818)%	After borrowing, you need to evaluate 11 hundredths - 6 hundredths.
+%(-5088806614309645506)%	
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the tenths place of 18.86.
+%(-5039427320210567376)%	
+%(8676310691293844476)%	
+%(-1140765803471447235)%	When you subtract 1 one from 9 ones, you are left with 8 ones. Enter 8 in this box.
+%(-7048402377707711960)%	
+%(-103576905645380797)%	Please enter 4 in the highlighted box.
+%(7703666018947561602)%	
+%(-5088807614313645509)%	The digit in the ones place of 59.219 is 9. Please enter 9.
+%(-6058996401977538364)%	Please enter the digit in the thousandths place of 59.219.
+%(2955208463884187009)%	
+%(-3353315824230496612)%	Since you needed to regroup to complete subtraction in the hundredths column, you are subtracting 8 tenths from 1 tenth, and must borrow from the ones column to complete this step. Please use the boxes in the gray area above to help you regroup.
+%(-7793444101545105188)%	
+%(1951835195132611823)%	Please enter 5 in the highlighted box.
+%(-4644523401368927522)%	
+%(6809645260764282625)%	The digit in the tens place of 18.86 is 1. Please enter 1.
+%(-7048405377707711949)%	
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	Please enter the digit in the ones place of 18.86.
+%(2701069456606757787)%	
+%(-4733342091921527851)%	The digit in the tens place of 59.219 is 5. Please enter 5.
+%(-1995938531125924767)%	
+%(9041502051521695510)%	
+%(6382390196225600924)%	
+%(6382389196221600897)%	
+%(6809644260772282722)%	Please enter the digit in the tens place of 18.86.
+%(5939723124832416025)%	You do not need to borrow to complete this step, so you need to evaluate 9 thousandths - 0 thousandths.
+%(-3353314824206496545)%	After borrowing, you need to evaluate 11 tenths - 8 tenths.
+Problem Name	p27
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	The longest running primetime TV show, the Simpsons, has been running for 20.51 years. The longest running comic strip, The Dandy, has run for 73.545. years. How much longer has the comic strip been running?
+%(temp-numbers)%	Please subtract 20.51 from 73.545
+%(op)%	-
+%(decimalposition)%	n1d5
+%(decimalposition2)%	n2d5
+%(carry_dec_loc)%	r1c5
+%(carry_dec_loc2)%	r2c5
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d1hint3)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d2hint3)%	
+%(n1d3req)%	1
+%(n1d3)%	7
+%(n1d3hint1)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(n1d3hint2)%	73.545 is the larger number. Please enter the digit in the tens place of 73.545.
+%(n1d3hint3)%	The digit in the tens place of 73.545 is 7. Please enter 7.
+%(n1d4req)%	1
+%(n1d4)%	3
+%(n1d4hint1)%	Please enter the digit in the ones place of 73.545.
+%(n1d4hint2)%	The digit in the ones place of 73.545 is 3. Please enter 3.
+%(n1d4hint3)%	
+%(n1d5req)%	0
+%(n1d5)%	---
+%(n1d5hint1)%	
+%(n1d5hint2)%	
+%(n1d5hint3)%	
+%(n1d6req)%	1
+%(n1d6)%	5
+%(n1d6hint1)%	Please enter the digit in the tenths place of 73.545.
+%(n1d6hint2)%	The digit in the tenths place of 73.545 is 5. Please enter 5.
+%(n1d7req)%	1
+%(n1d7)%	4
+%(n1d7hint1)%	Please enter the digit in the hundredths place of 73.545.
+%(n1d7hint2)%	The digit in the hundredths place of 73.545 is 4. Please enter 4.
+%(n1d8req)%	1
+%(n1d8)%	5
+%(n1d8hint1)%	Please enter the digit in the thousandths place of 73.545.
+%(n1d8hint2)%	The digit in the thousandths place of 73.545 is 5. Please enter 5.
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	1
+%(n2d3)%	2
+%(n2d3hint1)%	Please enter the digit in the tens place of 20.51.
+%(n2d3hint2)%	The digit in the tens place of 20.51 is 2. Please enter 2.
+%(n2d4req)%	1
+%(n2d4)%	0
+%(n2d4hint1)%	Please enter the digit in the ones place of 20.51.
+%(n2d4hint2)%	The digit in the ones place of 20.51 is 0. Please enter 0.
+%(n2d5req)%	0
+%(n2d5)%	---
+%(n2d5hint1)%	
+%(n2d5hint2)%	
+%(n2d6req)%	1
+%(n2d6)%	5
+%(n2d6hint1)%	Please enter the digit in the tenths place of 20.51.
+%(n2d6hint2)%	The digit in the tenths place of 20.51 is 5. Please enter 5.
+%(n2d7req)%	1
+%(n2d7)%	1
+%(n2d7hint1)%	Please enter the digit in the hundredths place of 20.51.
+%(n2d7hint2)%	The digit in the hundredths place of 20.51 is 1. Please enter 1.
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"r1c1,r1c2,r1c3,r1c4,r1c5,r1c6,r1c7,r1c8,r1c9,r2c1,r2c2,r2c3,r2c4,r2c5,r2c6,r2c7,r2c8,r2c9"
+%(r1c2)%	0
+%(r1c2hint1)%	
+%(r1c2hint2)%	
+%(r1c3)%	0
+%(r1c3hint1)%	
+%(r1c3hint2)%	
+%(r1c4)%	0
+%(r1c4hint1)%	
+%(r1c4hint2)%	
+%(r1c5)%	0
+%(r1c5hint1)%	
+%(r1c5hint2)%	
+%(r1c6)%	0
+%(r1c6hint1)%	
+%(r1c6hint2)%	
+%(r1c7)%	0
+%(r1c7hint1)%	
+%(r1c7hint2)%	
+%(r1c8)%	0
+%(r1c8hint1)%	
+%(r1c8hint2)%	
+%(r2c1)%	0
+%(r2c1hint1)%	
+%(r2c1hint2)%	
+%(r2c2)%	0
+%(r2c2hint1)%	
+%(r2c2hint2)%	
+%(r2c3)%	0
+%(r2c3hint1)%	
+%(r2c3hint2)%	
+%(r2c4)%	0
+%(r2c4hint1)%	
+%(r2c4hint2)%	
+%(r2c5)%	0
+%(r2c5hint1)%	
+%(r2c5hint2)%	
+%(r2c6)%	0
+%(r2c6hint1)%	
+%(r2c6hint2)%	
+%(r2c7)%	0
+%(r2c7hint1)%	
+%(r2c7hint2)%	
+%(r2c8)%	0
+%(r2c8hint1)%	
+%(r2c8hint2)%	
+%(r2c9)%	0
+%(r2c9hint1)%	
+%(r2c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a1hint3)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a2hint3)%	
+%(a3req)%	1
+%(a3)%	5
+%(a3hint1)%	Since you did not need to regroup to complete subtraction in the ones column, you are subtracting 2 tens from 7 tens. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a3hint2)%	You do not need to borrow to complete this step, so you need to evaluate 7 tens - 2 tens.
+%(a3hint3)%	Please enter 5 in the highlighted box.
+%(a4req)%	1
+%(a4)%	3
+%(a4hint1)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 0 ones from 3 ones. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a4hint2)%	You do not need to borrow to complete this step, so you need to evaluate 3 ones - 0 ones.
+%(a4hint3)%	Please enter 3 in the highlighted box.
+%(a5req)%	1
+%(a5)%	.
+%(a5hint1)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(a5hint2)%	
+%(a5hint3)%	
+%(a6req)%	1
+%(a6)%	0
+%(a6hint1)%	Since you did not need to regroup to complete subtraction in the hundredths column, you are subtracting 5 tenths from 5 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a6hint2)%	You do not need to borrow to complete this step, so you need to evaluate 5 tenths - 5 tenths.
+%(a6hint3)%	Please enter 0 in the highlighted box.
+%(a7req)%	1
+%(a7)%	3
+%(a7hint1)%	Since you did not need to regroup to complete subtraction in the thousandths column, you are subtracting 1 hundredths from 4 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a7hint2)%	You do not need to borrow to complete this step, so you need to evaluate 4 hundredths - 1 hundredths.
+%(a7hint3)%	Please enter 3 in the highlighted box.
+%(a8req)%	1
+%(a8)%	5
+%(a8hint1)%	In this column, you are subtracting 0 thousandths from 5 thousandths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(a8hint2)%	You do not need to borrow to complete this step, so you need to evaluate 5 thousandths - 0 thousandths.
+%(a8hint3)%	Please enter 5 in the highlighted box.
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+%(a9hint3)%	
+	
+%(small_number_error_location)%	n1d3
+%(small_number_error)%	2
+%(subtraction_error_msg)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-givens
+%(n1d4_skill)%	Enter-givens
+%(n1d5_skill)%	Align-decimals
+%(n1d6_skill)%	Enter-givens
+%(n1d7_skill)%	Enter-givens
+%(n1d8_skill)%	Enter-givens
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-givens
+%(n2d4_skill)%	Enter-givens
+%(n2d5_skill)%	Align-decimals
+%(n2d6_skill)%	Enter-givens
+%(n2d7_skill)%	Enter-givens
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(a8_skill)%	Subtract-no-borrow-or-lend
+%(a7_skill)%	Subtract-no-borrow-or-lend
+%(a6_skill)%	Subtract-no-borrow-or-lend
+%(a5_skill)%	Align-decimals
+%(a4_skill)%	Subtract-no-borrow-or-lend
+%(a3_skill)%	Subtract-no-borrow-or-lend
+%(a2_skill)%	Enter-leading-or-trailing-zero
+%(a1_skill)%	Enter-leading-or-trailing-zero 
+%(3056407978218874328)%	
+%(3111529056432992585)%	
+%(-4766528366246230012)%	
+%(4122547966151021001)%	
+%(-5958682527562602422)%	
+%(5939726124832416050)%	
+%(3056404978218874403)%	
+%(-6907532864849400112)%	The digit in the hundredths place of 20.51 is 1. Please enter 1.
+%(1953684789227255040)%	Since you did not need to regroup to complete subtraction in the ones column, you are subtracting 2 tens from 7 tens. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-7432409857962594680)%	
+%(-103575905657380754)%	You do not need to borrow to complete this step, so you need to evaluate 3 ones - 0 ones.
+%(9041504051517695496)%	The digit in the tens place of 73.545 is 7. Please enter 7.
+%(-1140766803479447250)%	
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	You do not need to borrow to complete this step, so you need to evaluate 7 tens - 2 tens.
+%(5939724124836416020)%	
+%(4122546966191021130)%	
+%(893113643897759373)%	
+%(6213752517472455109)%	
+%(641186239155714071)%	
+%(-4733341091933527816)%	The digit in the ones place of 73.545 is 3. Please enter 3.
+%(-3353313824202496550)%	Please enter 3 in the highlighted box.
+%(267630474009556348)%	The digit in the thousandths place of 73.545 is 5. Please enter 5.
+%(1730749668174863887)%	
+%(6382391196249600991)%	
+%(1847841181010240103)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	Please enter the digit in the thousandths place of 73.545.
+%(3111528056472992714)%	
+%(3982482621457137133)%	
+%(1951833195040611473)%	In this column, you are subtracting 0 thousandths from 5 thousandths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-9202527078397046537)%	
+%(3982483621461137128)%	
+%(1847844181042240188)%	
+%(2955207463892187106)%	
+%(-3867477976289168394)%	
+%(-5088804614345645648)%	
+%(-103578905657380747)%	Since you did not need to regroup to complete subtraction in the tenths column, you are subtracting 0 ones from 3 ones. Please use the boxes in the gray area above to help you regroup if necessary.
+%(9041503051529695589)%	73.545 is the larger number. Please enter the digit in the tens place of 73.545.
+%(-9202526078393046582)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(-5039430320178567237)%	
+%(-1995939531117924798)%	
+%(2701072456702758032)%	
+%(-7432412857962594669)%	
+%(-6058999401977538257)%	
+%(3533853156491766210)%	Think about where the second number needs to be placed for you to solve this problem.
+%(8477996607481723678)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-3867476976281168443)%	
+%(3094705722605100522)%	Please enter the digit in the hundredths place of 73.545.
+%(-9202524078429046708)%	
+%(641187239159714154)%	
+%(6213751517464455158)%	
+%(3982485621489137190)%	This is the position of the decimal point. Please enter a '.' in the box.
+%(-5958681527602602551)%	
+%(-4644522401360927443)%	Please enter the digit in the tenths place of 73.545.
+%(-3098135307542727126)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(8477997607489723757)%	
+%(-654682931131624435)%	Please enter 0 in the highlighted box.
+%(893112643889759422)%	
+%(4989872382532288054)%	
+%(1953686789223255102)%	Please enter 5 in the highlighted box.
+%(-654681931127624440)%	You do not need to borrow to complete this step, so you need to evaluate 5 tenths - 5 tenths.
+%(-654680931119624421)%	Since you did not need to regroup to complete subtraction in the hundredths column, you are subtracting 5 tenths from 5 tenths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-7793447101577105273)%	Please enter the digit in the tens place of 20.51.
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	Please enter the digit in the ones place of 73.545.
+%(3094706722693100777)%	The digit in the hundredths place of 73.545 is 4. Please enter 4.
+%(-4766531366246229905)%	
+%(1951836195136611818)%	You do not need to borrow to complete this step, so you need to evaluate 5 thousandths - 0 thousandths.
+%(-5088806614309645506)%	
+%(1730752668174863908)%	
+%(-3098134307454726871)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the hundredths place of 20.51.
+%(-5039427320210567376)%	
+%(8676310691293844476)%	
+%(-1140765803471447235)%	
+%(-7048402377707711960)%	Please enter the digit in the tenths place of 20.51.
+%(-103576905645380797)%	Please enter 3 in the highlighted box.
+%(7703666018947561602)%	
+%(-5088807614313645509)%	
+%(-6058996401977538364)%	
+%(2955208463884187009)%	
+%(-3353315824230496612)%	Since you did not need to regroup to complete subtraction in the thousandths column, you are subtracting 1 hundredths from 4 hundredths. Please use the boxes in the gray area above to help you regroup if necessary.
+%(-7793444101545105188)%	The digit in the tens place of 20.51 is 2. Please enter 2.
+%(1951835195132611823)%	Please enter 5 in the highlighted box.
+%(-4644523401368927522)%	The digit in the tenths place of 73.545 is 5. Please enter 5.
+%(6809645260764282625)%	The digit in the ones place of 20.51 is 0. Please enter 0.
+%(-7048405377707711949)%	The digit in the tenths place of 20.51 is 5. Please enter 5.
+%(-6774845964748173943)%	Since you are subtracting in this problem, you need to enter the larger number in the top row.
+%(4989873382540288005)%	
+%(2701069456606757787)%	
+%(-4733342091921527851)%	
+%(-1995938531125924767)%	
+%(9041502051521695510)%	In subtraction, you need to enter the larger number first. Which number should be entered in the top row for this problem?
+%(6382390196225600924)%	
+%(6382389196221600897)%	
+%(6809644260772282722)%	Please enter the digit in the ones place of 20.51.
+%(5939723124832416025)%	
+%(-3353314824206496545)%	You do not need to borrow to complete this step, so you need to evaluate 4 hundredths - 1 hundredths.

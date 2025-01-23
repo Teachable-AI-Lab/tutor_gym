@@ -1,0 +1,46 @@
+.table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.row {
+  display: table-row;
+}
+.row:first-child {
+  height: 80px;
+  font-weight: bold;
+}
+.row:first-child > div > div {
+  width: 39px;
+  transform: translate(-5px, 20px) rotate(315deg);
+  white-space: nowrap;
+}
+.cell {
+  display: table-cell;
+  width: 10%;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+}
+.cell:first-child {
+  width: 20%;
+  text-align: right;
+}
+.cell span {
+  font-weight: bold;
+}
+#sign {
+  width: 50%;
+}
+.CTATTextInput {
+  width: initial;
+}
+.CTATTextInput > input[type="text"] {
+  width: 90%;
+  height: 35px;
+  font-size: 20px;
+}
+hr {
+  width: 400%;
+  margin: 2px 0 2px 100%;
+}

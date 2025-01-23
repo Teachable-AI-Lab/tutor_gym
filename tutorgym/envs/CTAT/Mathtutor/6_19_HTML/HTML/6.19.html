@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>6.19 Fractions and Estimates</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/CTAT.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/Mathtutor.css">
+    <link rel="stylesheet" type="text/css" href="Assets/6.19.css">
+
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/jquery.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctat.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctatloader.js"></script>
+  </head>
+
+  <body>
+    <main class="CTATTutor">
+      <h1>Tutor</h1>
+
+      <section class="CTATProblemSolving">
+        <h2>Problem Solving</h2>
+
+        <div>
+          <section class="CTATProblem twothirds">
+            <h3>Problem</h3>
+            <div id="statement" class="CTATTextField"></div>
+          </section>
+
+          <section class="CTATSolution CTATElement third">
+            <h3>Additional Steps</h3>
+            <div id="fractionStep" class="CTATGroupingComponent">
+              <div id="statement2" class="CTATTextField"></div>
+              <div id="fractions">
+                <div class="fraction">
+                  <div id="f1" class="CTATTextInput"></div>
+                  <hr class="fractionBar">
+                  <div id="f2" class="CTATTextInput"></div>
+                </div>
+                <div id="convert" class="CTATButton">Convert</div>
+                <div id="rightFraction" class="CTATGroupingComponent">
+                  <span id="equal">=</span>
+                  <div id="m1" class="CTATTextInput"></div>
+                  <div class="fraction">
+                    <div id="m2" class="CTATTextInput"></div>
+                    <hr class="fractionBar">
+                    <div id="m3" class="CTATTextInput"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="CTATSolution">
+          <h3>Solution</h3>
+
+          <div id="numlineHint" class="CTATTextField"></div>
+          <div id="numline" class="CTATNumberLine" data-ctat-minimum="0" data-ctat-maximum="1" data-ctat-small-tick-step="0"
+               data-ctat-snap="true" data-ctat-denominator="1"></div>
+        </section>
+      </section>
+
+      <section class="CTATTools">
+        <h2>Tools</h2>
+
+        <div class="CTATButtons">
+          <div class="CTATDoneButton"></div>
+          <div class="CTATHintButton"></div>
+        </div>
+
+        <section class="CTATHints">
+          <h3>Hints</h3>
+          <div class="CTATHintWindow"></div>
+        </section>
+
+        <section class="CTATSkills">
+          <h3>Skills</h3>
+          <div class="CTATSkillWindow"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

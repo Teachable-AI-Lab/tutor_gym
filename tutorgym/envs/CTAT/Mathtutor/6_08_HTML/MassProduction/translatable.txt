@@ -1,0 +1,1104 @@
+Problem Name	1
+%(startStateNodeName)%	
+%(Problem_intro1)%	1. Enter 2.4 to show the place value of each digit (simplest form).
+%(Problem_intro2)%	2. You need to borrow to get 14 tenths. How many ones and hundredths do you need now?
+%(Problem_intro3)%	3. What if the number of tenths is 18?
+	
+%(link_r2_mostLeft)%	r2c1
+%(link_r2_Center)%	r2c2
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c3
+%(value_r2)%	14
+	
+%(link_r3_mostLeft)%	r3c1
+%(link_r3_Center)%	r3c2
+%(link_r3_mostRight)%	r3c4
+%(given_value_r3)%	r3c3
+%(value_r3)%	18
+	
+%(totalTableDecValue_r2_mostLeft)%	input, r2c2, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, input, r2c3, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	input, r3c2, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, input, r3c3, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, r3c3, input
+	
+%(name)%	   
+%(total)%	240
+%(noTradeValue_r2_mostLeft)%	0
+%(noTradeValue_r2_Center)%	2
+%(noTradeValue_r2_mostRight)%	0
+	
+%(noTradeValue_r3_mostLeft)%	0
+%(noTradeValue_r3_Center)%	2
+%(noTradeValue_r3_mostRight)%	0
+	
+%(column_1_type)%	tens
+%(column_2_type)%	ones
+%(column_3_type)%	tenths
+%(column_4_type)%	hundredths
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	
+%(hint_r2_mostLeft_level_2)%	
+%(hint_r2_mostLeft_level_3)%	
+	
+%(hint_r2_mostRight_level_1)%	
+%(hint_r2_mostRight_level_2)%	
+%(hint_r2_mostRight_level_3)%	
+	
+%(hint_r2_Center_level_1)%	If you have already entered     <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> should you enter to get <%=fmtDecimal(240/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> you can have without going over <%=fmtDecimal(240/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((240-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	
+%(hint_r3_mostLeft_level_2)%	
+%(hint_r3_mostLeft_level_3)%	
+	
+%(hint_r3_mostRight_level_1)%	If you have already given     <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 1)%> should you give     to get <%=fmtDecimal(240/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 1)%> you can have without going over <%=fmtDecimal(240/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((240-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given     <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> should you give     to get <%=fmtDecimal(240/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> you can enter without going over <%=fmtDecimal(240/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((240-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 0)))%>
+	
+%(hint_r1c1_level_1)%	
+%(hint_r1c1_level_2)%	
+%(hint_r1c1_level_3)%	
+	
+%(hint_r1c2_level_1)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> should you enter to get <%=fmtDecimal(240/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over <%=fmtDecimal(240/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((240-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)*floor(240/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(240/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over <%=fmtDecimal(240/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((240-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)*floor(240/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	
+%(hint_r1c4_level_2)%	
+%(hint_r1c4_level_3)%	
+	
+	
+%(r1c1_min)%	0
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	0
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	0
+%(link_r3_mostLeft_max)%	1
+%(r1c4_min)%	0
+%(r1c4_max)%	1
+%(link_r2_mostRight_min)%	0
+%(link_r2_mostRight_max)%	1
+%(link_r3_mostRight_min)%	1
+%(link_r3_mostRight_max)%	1
+	
+%(r1c1)%	
+%(r1c2)%	
+%(r1c3)%	
+%(r1c4)%	
+%(4496962056300963153)%	If you have already given     <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give     to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	
+%(-6292769245166384709)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((240-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	
+%(-5350911774282051931)%	
+%(-213056756848980930)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	
+%(-213054756852981056)%	Try entering <%=round(floor((240-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(240/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	
+%(1536371731755848561)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((240-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(240/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	
+%(-3036209045161016917)%	
+%(4496964056296963183)%	Try entering <%=round(floor((240-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	
+%(-5350913774278051965)%	
+%(1536370731763848530)%	If you have already given     <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give     to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	
+%(-3036206045161016912)%	
+%(7368804326215549730)%	
+%(-136516223160505835)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((240-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	
+%(-5350914774282051954)%	
+%(-136515223168505802)%	If you have already entered     <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+Problem Name	2
+%(startStateNodeName)%	state54
+%(Problem_intro1)%	1. Enter 0.72 to show the place value of each digit (simplest form).
+%(Problem_intro2)%	2. Increase the number of hundredths to 12. How many tenths will you need to make 0.72?
+%(Problem_intro3)%	3. What if the number of hundredths is 22?
+	
+%(link_r2_mostLeft)%	r2c1
+%(link_r2_Center)%	r2c2
+%(link_r2_mostRight)%	r2c3
+%(given_value_r2)%	r2c4
+%(value_r2)%	12
+	
+%(link_r3_mostLeft)%	r3c1
+%(link_r3_Center)%	r3c2
+%(link_r3_mostRight)%	r3c3
+%(given_value_r3)%	r3c4
+%(value_r3)%	22
+	
+%(totalTableDecValue_r2_mostLeft)%	input, r2c2, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, input, r2c3, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, input, r2c4
+	
+%(totalTableDecValue_r3_mostLeft)%	input, r3c2, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, input, r3c3, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, input, r3c4
+	
+%(name)%	
+%(total)%	72
+%(noTradeValue_r2_mostLeft)%	0
+%(noTradeValue_r2_Center)%	0
+%(noTradeValue_r2_mostRight)%	6
+	
+%(noTradeValue_r3_mostLeft)%	0
+%(noTradeValue_r3_Center)%	0
+%(noTradeValue_r3_mostRight)%	5
+	
+%(column_1_type)%	tens
+%(column_2_type)%	ones
+%(column_3_type)%	tenths
+%(column_4_type)%	hundredths
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	
+%(hint_r2_mostLeft_level_2)%	
+%(hint_r2_mostLeft_level_3)%	
+	
+%(hint_r2_mostRight_level_1)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c3", 1)%> should you enter to get <%=fmtDecimal(72/100,2)%>?
+%(hint_r2_mostRight_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c3", 1)%> you can enter without going over <%=fmtDecimal(72/100,2)%>?
+%(hint_r2_mostRight_level_3)%	Try entering <%=round(floor((72-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c3", 0)))%>
+	
+%(hint_r2_Center_level_1)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> should you enter to get <%=fmtDecimal(72/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> you can have without going over <%=fmtDecimal(72/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((72-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	
+%(hint_r3_mostLeft_level_2)%	
+%(hint_r3_mostLeft_level_3)%	
+	
+%(hint_r3_mostRight_level_1)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c3", 1)%> should you give  to get <%=fmtDecimal(72/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c3", 1)%> you can have without going over <%=fmtDecimal(72/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((72-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c3", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> should you give  to get <%=fmtDecimal(72/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> you can enter without going over <%=fmtDecimal(72/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((72-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 0)))%>
+	
+%(hint_r1c1_level_1)%	
+%(hint_r1c1_level_2)%	
+%(hint_r1c1_level_3)%	
+	
+%(hint_r1c2_level_1)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> should you enter to get <%=fmtDecimal(72/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over <%=fmtDecimal(72/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((72-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)*floor(72/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(72/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over <%=fmtDecimal(72/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((72-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)*floor(72/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c4", 1)%>  should you enter to get <%=fmtDecimal(72/100,2)%>?
+%(hint_r1c4_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over <%=fmtDecimal(72/100,2)%>?
+%(hint_r1c4_level_3)%	Try entering <%=round(floor((72-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)*floor(72/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)))))%>
+	
+	
+%(r1c1_min)%	0
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	0
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	0
+%(link_r3_mostLeft_max)%	1
+%(r1c4_min)%	1
+%(r1c4_max)%	1
+%(link_r2_mostRight_min)%	1
+%(link_r2_mostRight_max)%	1
+%(link_r3_mostRight_min)%	1
+%(link_r3_mostRight_max)%	1
+	
+%(r1c1)%	0
+%(r1c2)%	0
+%(r1c3)%	7
+%(r1c4)%	2
+%(4496962056300963153)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give  to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	
+%(-6292769245166384709)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((72-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350911774282051931)%	
+%(-213056756848980930)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	
+%(-213054756852981056)%	Try entering <%=round(floor((72-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(72/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	Try entering <%=round(floor((72-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)*floor(72/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))))%>
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	
+%(1536371731755848561)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((72-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(72/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	
+%(-3036209045161016917)%	
+%(4496964056296963183)%	Try entering <%=round(floor((72-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350913774278051965)%	
+%(1536370731763848530)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give  to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%>  should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-3036206045161016912)%	
+%(7368804326215549730)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136516223160505835)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((72-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	Try entering <%=round(floor((72-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 0)))%>
+%(-5350914774282051954)%	
+%(-136515223168505802)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+Problem Name	3
+%(startStateNodeName)%	state12
+%(Problem_intro1)%	1. Enter 78.16 to show the place value of each digit (simplest form).
+%(Problem_intro2)%	2. You need to borrow one from the tens column, what is another way to show 78.16?
+%(Problem_intro3)%	3. What if you only have 5 tens?
+	
+%(link_r2_mostLeft)%	r2c2
+%(link_r2_Center)%	r2c3
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c1
+%(value_r2)%	6
+	
+%(link_r3_mostLeft)%	r3c2
+%(link_r3_Center)%	r3c3
+%(link_r3_mostRight)%	r3c4
+%(given_value_r3)%	r3c1
+%(value_r3)%	5
+	
+%(totalTableDecValue_r2_mostLeft)%	r2c1, input, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, r2c2, input, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	r3c1, input, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, r3c2, input, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, r3c3, input
+	
+%(name)%	 
+%(total)%	7816
+%(noTradeValue_r2_mostLeft)%	18
+%(noTradeValue_r2_Center)%	1
+%(noTradeValue_r2_mostRight)%	6
+	
+%(noTradeValue_r3_mostLeft)%	28
+%(noTradeValue_r3_Center)%	1
+%(noTradeValue_r3_mostRight)%	6
+	
+%(column_1_type)%	tens
+%(column_2_type)%	ones
+%(column_3_type)%	tenths
+%(column_4_type)%	hundredths
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	If you have already entered   <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> should you enter to get <%=fmtDecimal(7816/100,2)%>?
+%(hint_r2_mostLeft_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> you can enter without going over <%=fmtDecimal(7816/100,2)%>?
+%(hint_r2_mostLeft_level_3)%	Try entering <%=round(floor((7816-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 0)))%>
+	
+%(hint_r2_mostRight_level_1)%	If you have already entered   <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c4", 1)%> should you enter to get <%=fmtDecimal(7816/100,2)%>?
+%(hint_r2_mostRight_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c4", 1)%> you can enter without going over <%=fmtDecimal(7816/100,2)%>?
+%(hint_r2_mostRight_level_3)%	Try entering <%=round(floor((7816-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c4", 0)))%>
+	
+%(hint_r2_Center_level_1)%	If you have already entered   <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c3", 1)%> should you enter to get <%=fmtDecimal(7816/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c3", 1)%> you can have without going over <%=fmtDecimal(7816/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((7816-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c3", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	If you have already entered   <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> should you enter to get <%=fmtDecimal(7816/100,2)%>?
+%(hint_r3_mostLeft_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> you can have without going over <%=fmtDecimal(7816/100,2)%>?
+%(hint_r3_mostLeft_level_3)%	Try entering <%=round(floor((7816-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 0)))%>
+	
+%(hint_r3_mostRight_level_1)%	If you have already given   <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 1)%> should you give   to get <%=fmtDecimal(7816/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 1)%> you can have without going over <%=fmtDecimal(7816/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((7816-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given   <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c3", 1)%> should you give   to get <%=fmtDecimal(7816/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c3", 1)%> you can enter without going over <%=fmtDecimal(7816/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((7816-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c3", 0)))%>
+	
+%(hint_r1c1_level_1)%	What number should go in the  <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c1", 1)%>  place ?
+%(hint_r1c1_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c1", 1)%> you can have without going over <%=fmtDecimal(7816/100,2)%>?
+%(hint_r1c1_level_3)%	Try entering <%=round(floor((7816-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c1", 0)))%>
+	
+%(hint_r1c2_level_1)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> should you enter to get <%=fmtDecimal(7816/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over <%=fmtDecimal(7816/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((7816-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)*floor(7816/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(7816/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over <%=fmtDecimal(7816/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((7816-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)*floor(7816/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c4", 1)%>  should you enter to get <%=fmtDecimal(7816/100,2)%>?
+%(hint_r1c4_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over <%=fmtDecimal(7816/100,2)%>?
+%(hint_r1c4_level_3)%	Try entering <%=round(floor((7816-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)*floor(7816/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)))))%>
+	
+	
+%(r1c1_min)%	1
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	1
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	1
+%(link_r3_mostLeft_max)%	1
+%(r1c4_min)%	1
+%(r1c4_max)%	1
+%(link_r2_mostRight_min)%	1
+%(link_r2_mostRight_max)%	1
+%(link_r3_mostRight_min)%	1
+%(link_r3_mostRight_max)%	1
+	
+%(r1c1)%	7
+%(r1c2)%	8
+%(r1c3)%	1
+%(r1c4)%	6
+%(4496962056300963153)%	If you have already given   <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give   to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292769245166384709)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((7816-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	If you have already entered   <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350911774282051931)%	If you have already entered   <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-213056756848980930)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	If you have already entered   <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-213054756852981056)%	Try entering <%=round(floor((7816-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(7816/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	Try entering <%=round(floor((7816-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)*floor(7816/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))))%>
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	Try entering <%=round(floor((7816-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 0)))%>
+%(1536371731755848561)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((7816-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(7816/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	Try entering <%=round(floor((7816-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 0)))%>
+%(-3036209045161016917)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(4496964056296963183)%	Try entering <%=round(floor((7816-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350913774278051965)%	Try entering <%=round(floor((7816-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 0)))%>
+%(1536370731763848530)%	If you have already given   <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give   to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%>  should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-3036206045161016912)%	What number should go in the  <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%>  place ?
+%(7368804326215549730)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136516223160505835)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((7816-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	Try entering <%=round(floor((7816-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 0)))%>
+%(-5350914774282051954)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136515223168505802)%	If you have already entered   <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+Problem Name	4
+%(startStateNodeName)%	state2
+%(Problem_intro1)%	1. Enter 1.76 to show the place value of each digit (simplest form).
+%(Problem_intro2)%	2. You need to borrow from the tenths, so now you have only 6 tenths. How many ones and hundredths do you need?
+%(Problem_intro3)%	3. What if there are only 5 tenths?
+	
+%(link_r2_mostLeft)%	r2c1
+%(link_r2_Center)%	r2c2
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c3
+%(value_r2)%	6
+	
+%(link_r3_mostLeft)%	r3c1
+%(link_r3_Center)%	r3c2
+%(link_r3_mostRight)%	r3c4
+%(given_value_r3)%	r3c3
+%(value_r3)%	5
+	
+%(totalTableDecValue_r2_mostLeft)%	input, r2c2, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, input, r2c3, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	input, r3c2, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, input, r3c3, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, r3c3, input
+	
+%(name)%	
+%(total)%	176
+%(noTradeValue_r2_mostLeft)%	0
+%(noTradeValue_r2_Center)%	1
+%(noTradeValue_r2_mostRight)%	16
+	
+%(noTradeValue_r3_mostLeft)%	0
+%(noTradeValue_r3_Center)%	1
+%(noTradeValue_r3_mostRight)%	26
+	
+%(column_1_type)%	tens
+%(column_2_type)%	ones
+%(column_3_type)%	tenths
+%(column_4_type)%	hundredths
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	
+%(hint_r2_mostLeft_level_2)%	
+%(hint_r2_mostLeft_level_3)%	
+	
+%(hint_r2_mostRight_level_1)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c4", 1)%> should you enter to get <%=fmtDecimal(176/100,2)%>?
+%(hint_r2_mostRight_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c4", 1)%> you can enter without going over <%=fmtDecimal(176/100,2)%>?
+%(hint_r2_mostRight_level_3)%	Try entering <%=round(floor((176-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c4", 0)))%>
+	
+%(hint_r2_Center_level_1)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> should you enter to get <%=fmtDecimal(176/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> you can have without going over <%=fmtDecimal(176/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((176-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	
+%(hint_r3_mostLeft_level_2)%	
+%(hint_r3_mostLeft_level_3)%	
+	
+%(hint_r3_mostRight_level_1)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 1)%> should you give  to get <%=fmtDecimal(176/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 1)%> you can have without going over <%=fmtDecimal(176/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((176-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> should you give  to get <%=fmtDecimal(176/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> you can enter without going over <%=fmtDecimal(176/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((176-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 0)))%>
+	
+%(hint_r1c1_level_1)%	
+%(hint_r1c1_level_2)%	
+%(hint_r1c1_level_3)%	
+	
+%(hint_r1c2_level_1)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> should you enter to get <%=fmtDecimal(176/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over <%=fmtDecimal(176/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((176-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)*floor(176/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(176/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over <%=fmtDecimal(176/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((176-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)*floor(176/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c4", 1)%>  should you enter to get <%=fmtDecimal(176/100,2)%>?
+%(hint_r1c4_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over <%=fmtDecimal(176/100,2)%>?
+%(hint_r1c4_level_3)%	Try entering <%=round(floor((176-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)*floor(176/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)))))%>
+	
+	
+%(r1c1_min)%	0
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	0
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	0
+%(link_r3_mostLeft_max)%	1
+%(r1c4_min)%	1
+%(r1c4_max)%	1
+%(link_r2_mostRight_min)%	1
+%(link_r2_mostRight_max)%	1
+%(link_r3_mostRight_min)%	1
+%(link_r3_mostRight_max)%	1
+	
+%(r1c1)%	0
+%(r1c2)%	1
+%(r1c3)%	7
+%(r1c4)%	6
+%(4496962056300963153)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give  to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	
+%(-6292769245166384709)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((176-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350911774282051931)%	
+%(-213056756848980930)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	
+%(-213054756852981056)%	Try entering <%=round(floor((176-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(176/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	Try entering <%=round(floor((176-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)*floor(176/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))))%>
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	
+%(1536371731755848561)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((176-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(176/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	
+%(-3036209045161016917)%	
+%(4496964056296963183)%	Try entering <%=round(floor((176-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350913774278051965)%	
+%(1536370731763848530)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give  to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%>  should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-3036206045161016912)%	
+%(7368804326215549730)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136516223160505835)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((176-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	Try entering <%=round(floor((176-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 0)))%>
+%(-5350914774282051954)%	
+%(-136515223168505802)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+Problem Name	5
+%(startStateNodeName)%	
+%(Problem_intro1)%	1. Enter 69.3 to show the place value of each digit (simplest form).
+%(Problem_intro2)%	2. You need to borrow to get 13 tenths. How many tens and ones do you need?
+%(Problem_intro3)%	3. What if the number of tenths is 93?
+	
+%(link_r2_mostLeft)%	r2c1
+%(link_r2_Center)%	r2c2
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c3
+%(value_r2)%	13
+	
+%(link_r3_mostLeft)%	r3c1
+%(link_r3_Center)%	r3c2
+%(link_r3_mostRight)%	r3c4
+%(given_value_r3)%	r3c3
+%(value_r3)%	93
+	
+%(totalTableDecValue_r2_mostLeft)%	input, r2c2, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, input, r2c3, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	input, r3c2, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, input, r3c3, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, r3c3, input
+	
+%(name)%	 
+%(total)%	6930
+%(noTradeValue_r2_mostLeft)%	6
+%(noTradeValue_r2_Center)%	9
+%(noTradeValue_r2_mostRight)%	0
+	
+%(noTradeValue_r3_mostLeft)%	6
+%(noTradeValue_r3_Center)%	9
+%(noTradeValue_r3_mostRight)%	0
+	
+%(column_1_type)%	tens
+%(column_2_type)%	ones
+%(column_3_type)%	tenths
+%(column_4_type)%	hundredths
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	If you have already entered   <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c1", 1)%> should you enter to get <%=fmtDecimal(6930/100,2)%>?
+%(hint_r2_mostLeft_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c1", 1)%> you can enter without going over <%=fmtDecimal(6930/100,2)%>?
+%(hint_r2_mostLeft_level_3)%	Try entering <%=round(floor((6930-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c1", 0)))%>
+	
+%(hint_r2_mostRight_level_1)%	
+%(hint_r2_mostRight_level_2)%	
+%(hint_r2_mostRight_level_3)%	
+	
+%(hint_r2_Center_level_1)%	If you have already entered   <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> should you enter to get <%=fmtDecimal(6930/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> you can have without going over <%=fmtDecimal(6930/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((6930-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	If you have already entered   <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c1", 1)%> should you enter to get <%=fmtDecimal(6930/100,2)%>?
+%(hint_r3_mostLeft_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c1", 1)%> you can have without going over <%=fmtDecimal(6930/100,2)%>?
+%(hint_r3_mostLeft_level_3)%	Try entering <%=round(floor((6930-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c1", 0)))%>
+	
+%(hint_r3_mostRight_level_1)%	
+%(hint_r3_mostRight_level_2)%	
+%(hint_r3_mostRight_level_3)%	
+	
+%(hint_r3_Center_level_1)%	If you have already given   <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> should you give   to get <%=fmtDecimal(6930/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> you can enter without going over <%=fmtDecimal(6930/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((6930-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 0)))%>
+	
+%(hint_r1c1_level_1)%	What number should go in the  <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c1", 1)%>  place ?
+%(hint_r1c1_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c1", 1)%> you can have without going over <%=fmtDecimal(6930/100,2)%>?
+%(hint_r1c1_level_3)%	Try entering <%=round(floor((6930-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c1", 0)))%>
+	
+%(hint_r1c2_level_1)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> should you enter to get <%=fmtDecimal(6930/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over <%=fmtDecimal(6930/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((6930-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)*floor(6930/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(6930/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over <%=fmtDecimal(6930/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((6930-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)*floor(6930/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	
+%(hint_r1c4_level_2)%	
+%(hint_r1c4_level_3)%	
+	
+	
+%(r1c1_min)%	1
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	1
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	1
+%(link_r3_mostLeft_max)%	1
+%(r1c4_min)%	0
+%(r1c4_max)%	1
+%(link_r2_mostRight_min)%	0
+%(link_r2_mostRight_max)%	1
+%(link_r3_mostRight_min)%	0
+%(link_r3_mostRight_max)%	1
+	
+%(r1c1)%	
+%(r1c2)%	
+%(r1c3)%	
+%(r1c4)%	
+%(4496962056300963153)%	If you have already given   <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give   to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292769245166384709)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	
+%(-5350911774282051931)%	If you have already entered   <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-213056756848980930)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	If you have already entered   <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-213054756852981056)%	Try entering <%=round(floor((6930-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(6930/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	Try entering <%=round(floor((6930-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 0)))%>
+%(1536371731755848561)%	
+%(-6292767245154384723)%	Try entering <%=round(floor((6930-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(6930/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	Try entering <%=round(floor((6930-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 0)))%>
+%(-3036209045161016917)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(4496964056296963183)%	Try entering <%=round(floor((6930-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	
+%(-5350913774278051965)%	Try entering <%=round(floor((6930-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 0)))%>
+%(1536370731763848530)%	
+%(7368805326239549793)%	
+%(-3036206045161016912)%	What number should go in the  <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%>  place ?
+%(7368804326215549730)%	
+%(-136516223160505835)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((6930-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	
+%(-5350914774282051954)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136515223168505802)%	If you have already entered   <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+Problem Name	6
+%(startStateNodeName)%	
+%(Problem_intro1)%	1. Enter 5.09 to show the place value of each digit (simplest form).
+%(Problem_intro2)%	2. You need to borrow to get 10 tenths. How many ones and hundredths do you need?
+%(Problem_intro3)%	3. What if you had 9 tenths?
+	
+%(link_r2_mostLeft)%	r2c1
+%(link_r2_Center)%	r2c2
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c3
+%(value_r2)%	10
+	
+%(link_r3_mostLeft)%	r3c1
+%(link_r3_Center)%	r3c2
+%(link_r3_mostRight)%	r3c4
+%(given_value_r3)%	r3c3
+%(value_r3)%	9
+	
+%(totalTableDecValue_r2_mostLeft)%	input, r2c2, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, input, r2c3, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	input, r3c2, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, input, r3c3, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, r3c3, input
+	
+%(name)%	 
+%(total)%	509
+%(noTradeValue_r2_mostLeft)%	0
+%(noTradeValue_r2_Center)%	5
+%(noTradeValue_r2_mostRight)%	9
+	
+%(noTradeValue_r3_mostLeft)%	0
+%(noTradeValue_r3_Center)%	5
+%(noTradeValue_r3_mostRight)%	9
+	
+%(column_1_type)%	tens
+%(column_2_type)%	ones
+%(column_3_type)%	tenths
+%(column_4_type)%	hundredths
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	
+%(hint_r2_mostLeft_level_2)%	
+%(hint_r2_mostLeft_level_3)%	
+	
+%(hint_r2_mostRight_level_1)%	If you have already entered   <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c4", 1)%> should you enter to get <%=fmtDecimal(509/100,2)%>?
+%(hint_r2_mostRight_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c4", 1)%> you can enter without going over <%=fmtDecimal(509/100,2)%>?
+%(hint_r2_mostRight_level_3)%	Try entering <%=round(floor((509-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c4", 0)))%>
+	
+%(hint_r2_Center_level_1)%	If you have already entered   <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> should you enter to get <%=fmtDecimal(509/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> you can have without going over <%=fmtDecimal(509/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((509-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	
+%(hint_r3_mostLeft_level_2)%	
+%(hint_r3_mostLeft_level_3)%	
+	
+%(hint_r3_mostRight_level_1)%	If you have already given   <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 1)%> should you give   to get <%=fmtDecimal(509/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 1)%> you can have without going over <%=fmtDecimal(509/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((509-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given   <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> should you give   to get <%=fmtDecimal(509/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> you can enter without going over <%=fmtDecimal(509/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((509-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 0)))%>
+	
+%(hint_r1c1_level_1)%	
+%(hint_r1c1_level_2)%	
+%(hint_r1c1_level_3)%	
+	
+%(hint_r1c2_level_1)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> should you enter to get <%=fmtDecimal(509/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over <%=fmtDecimal(509/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((509-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)*floor(509/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(509/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over <%=fmtDecimal(509/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((509-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)*floor(509/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c4", 1)%>  should you enter to get <%=fmtDecimal(509/100,2)%>?
+%(hint_r1c4_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over <%=fmtDecimal(509/100,2)%>?
+%(hint_r1c4_level_3)%	Try entering <%=round(floor((509-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)*floor(509/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)))))%>
+	
+	
+%(r1c1_min)%	0
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	0
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	0
+%(link_r3_mostLeft_max)%	1
+%(r1c4_min)%	1
+%(r1c4_max)%	1
+%(link_r2_mostRight_min)%	1
+%(link_r2_mostRight_max)%	1
+%(link_r3_mostRight_min)%	1
+%(link_r3_mostRight_max)%	1
+	
+%(r1c1)%	
+%(r1c2)%	
+%(r1c3)%	
+%(r1c4)%	
+%(4496962056300963153)%	If you have already given   <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give   to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	
+%(-6292769245166384709)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((509-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	If you have already entered   <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350911774282051931)%	
+%(-213056756848980930)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	
+%(-213054756852981056)%	Try entering <%=round(floor((509-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(509/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	Try entering <%=round(floor((509-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)*floor(509/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))))%>
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	
+%(1536371731755848561)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((509-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(509/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	
+%(-3036209045161016917)%	
+%(4496964056296963183)%	Try entering <%=round(floor((509-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350913774278051965)%	
+%(1536370731763848530)%	If you have already given   <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give   to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%>  should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-3036206045161016912)%	
+%(7368804326215549730)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136516223160505835)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((509-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	Try entering <%=round(floor((509-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 0)))%>
+%(-5350914774282051954)%	
+%(-136515223168505802)%	If you have already entered   <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+Problem Name	7
+%(startStateNodeName)%	
+%(Problem_intro1)%	1. Enter 3.08 to show the place value of each digit (simplest form).
+%(Problem_intro2)%	2. You need to borrow to get 10 tenths. How many ones and hundredths do you need?
+%(Problem_intro3)%	3. What if you needed to borrow from the tenths now and only had 9 tenths?
+	
+%(link_r2_mostLeft)%	r2c1
+%(link_r2_Center)%	r2c2
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c3
+%(value_r2)%	10
+	
+%(link_r3_mostLeft)%	r3c1
+%(link_r3_Center)%	r3c2
+%(link_r3_mostRight)%	r3c4
+%(given_value_r3)%	r3c3
+%(value_r3)%	9
+	
+%(totalTableDecValue_r2_mostLeft)%	input, r2c2, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, input, r2c3, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	input, r3c2, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, input, r3c3, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, r3c3, input
+	
+%(name)%	
+%(total)%	308
+%(noTradeValue_r2_mostLeft)%	0
+%(noTradeValue_r2_Center)%	3
+%(noTradeValue_r2_mostRight)%	8
+	
+%(noTradeValue_r3_mostLeft)%	0
+%(noTradeValue_r3_Center)%	3
+%(noTradeValue_r3_mostRight)%	8
+	
+%(column_1_type)%	tens
+%(column_2_type)%	ones
+%(column_3_type)%	tenths
+%(column_4_type)%	hundredths
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	
+%(hint_r2_mostLeft_level_2)%	
+%(hint_r2_mostLeft_level_3)%	
+	
+%(hint_r2_mostRight_level_1)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c4", 1)%> should you enter to get <%=fmtDecimal(308/100,2)%>?
+%(hint_r2_mostRight_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c4", 1)%> you can enter without going over <%=fmtDecimal(308/100,2)%>?
+%(hint_r2_mostRight_level_3)%	Try entering <%=round(floor((308-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c4", 0)))%>
+	
+%(hint_r2_Center_level_1)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> should you enter to get <%=fmtDecimal(308/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> you can have without going over <%=fmtDecimal(308/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((308-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	
+%(hint_r3_mostLeft_level_2)%	
+%(hint_r3_mostLeft_level_3)%	
+	
+%(hint_r3_mostRight_level_1)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 1)%> should you give  to get <%=fmtDecimal(308/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 1)%> you can have without going over <%=fmtDecimal(308/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((308-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> should you give  to get <%=fmtDecimal(308/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> you can enter without going over <%=fmtDecimal(308/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((308-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 0)))%>
+	
+%(hint_r1c1_level_1)%	
+%(hint_r1c1_level_2)%	
+%(hint_r1c1_level_3)%	
+	
+%(hint_r1c2_level_1)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> should you enter to get <%=fmtDecimal(308/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over <%=fmtDecimal(308/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((308-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)*floor(308/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(308/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over <%=fmtDecimal(308/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((308-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)*floor(308/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c4", 1)%>  should you enter to get <%=fmtDecimal(308/100,2)%>?
+%(hint_r1c4_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over <%=fmtDecimal(308/100,2)%>?
+%(hint_r1c4_level_3)%	Try entering <%=round(floor((308-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)*floor(308/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)))))%>
+	
+	
+%(r1c1_min)%	0
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	0
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	0
+%(link_r3_mostLeft_max)%	1
+%(r1c4_min)%	1
+%(r1c4_max)%	1
+%(link_r2_mostRight_min)%	1
+%(link_r2_mostRight_max)%	1
+%(link_r3_mostRight_min)%	1
+%(link_r3_mostRight_max)%	1
+	
+%(r1c1)%	
+%(r1c2)%	
+%(r1c3)%	
+%(r1c4)%	
+%(4496962056300963153)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give  to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	
+%(-6292769245166384709)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((308-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350911774282051931)%	
+%(-213056756848980930)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	
+%(-213054756852981056)%	Try entering <%=round(floor((308-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(308/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	Try entering <%=round(floor((308-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)*floor(308/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))))%>
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	
+%(1536371731755848561)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((308-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(308/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	
+%(-3036209045161016917)%	
+%(4496964056296963183)%	Try entering <%=round(floor((308-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350913774278051965)%	
+%(1536370731763848530)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give  to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%>  should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-3036206045161016912)%	
+%(7368804326215549730)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136516223160505835)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((308-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	Try entering <%=round(floor((308-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 0)))%>
+%(-5350914774282051954)%	
+%(-136515223168505802)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+Problem Name	8
+%(startStateNodeName)%	
+%(Problem_intro1)%	1. Enter 20.96 to show the place value of each digit (simplest form).
+%(Problem_intro2)%	2. You need to borrow to get 19 tenths. How many tens, ones, and hundredths will you have?
+%(Problem_intro3)%	3. What if the number of tenths is 29?
+	
+%(link_r2_mostLeft)%	r2c1
+%(link_r2_Center)%	r2c2
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c3
+%(value_r2)%	19
+	
+%(link_r3_mostLeft)%	r3c1
+%(link_r3_Center)%	r3c2
+%(link_r3_mostRight)%	r3c4
+%(given_value_r3)%	r3c3
+%(value_r3)%	29
+	
+%(totalTableDecValue_r2_mostLeft)%	input, r2c2, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, input, r2c3, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	input, r3c2, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, input, r3c3, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, r3c3, input
+	
+%(name)%	
+%(total)%	2096
+%(noTradeValue_r2_mostLeft)%	2
+%(noTradeValue_r2_Center)%	0
+%(noTradeValue_r2_mostRight)%	6
+	
+%(noTradeValue_r3_mostLeft)%	2
+%(noTradeValue_r3_Center)%	0
+%(noTradeValue_r3_mostRight)%	6
+	
+%(column_1_type)%	tens
+%(column_2_type)%	ones
+%(column_3_type)%	tenths
+%(column_4_type)%	hundredths
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c1", 1)%> should you enter to get <%=fmtDecimal(2096/100,2)%>?
+%(hint_r2_mostLeft_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c1", 1)%> you can enter without going over <%=fmtDecimal(2096/100,2)%>?
+%(hint_r2_mostLeft_level_3)%	Try entering <%=round(floor((2096-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c1", 0)))%>
+	
+%(hint_r2_mostRight_level_1)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c4", 1)%> should you enter to get <%=fmtDecimal(2096/100,2)%>?
+%(hint_r2_mostRight_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c4", 1)%> you can enter without going over <%=fmtDecimal(2096/100,2)%>?
+%(hint_r2_mostRight_level_3)%	Try entering <%=round(floor((2096-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c4", 0)))%>
+	
+%(hint_r2_Center_level_1)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> should you enter to get <%=fmtDecimal(2096/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 1)%> you can have without going over <%=fmtDecimal(2096/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((2096-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r2c2", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	If you have already entered  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c1", 1)%> should you enter to get <%=fmtDecimal(2096/100,2)%>?
+%(hint_r3_mostLeft_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c1", 1)%> you can have without going over <%=fmtDecimal(2096/100,2)%>?
+%(hint_r3_mostLeft_level_3)%	Try entering <%=round(floor((2096-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c1", 0)))%>
+	
+%(hint_r3_mostRight_level_1)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 1)%> should you give  to get <%=fmtDecimal(2096/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 1)%> you can have without going over <%=fmtDecimal(2096/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((2096-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c4", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> should you give  to get <%=fmtDecimal(2096/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 1)%> you can enter without going over <%=fmtDecimal(2096/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((2096-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r3c2", 0)))%>
+	
+%(hint_r1c1_level_1)%	What number should go in the  <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c1", 1)%>  place ?
+%(hint_r1c1_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c1", 1)%> you can have without going over <%=fmtDecimal(2096/100,2)%>?
+%(hint_r1c1_level_3)%	Try entering <%=round(floor((2096-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c1", 0)))%>
+	
+%(hint_r1c2_level_1)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> should you enter to get <%=fmtDecimal(2096/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over <%=fmtDecimal(2096/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((2096-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)*floor(2096/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c1",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(2096/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over <%=fmtDecimal(2096/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((2096-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)*floor(2096/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c2",0)))/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c4", 1)%>  should you enter to get <%=fmtDecimal(2096/100,2)%>?
+%(hint_r1c4_level_2)%	What is the highest number of <%=columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over <%=fmtDecimal(2096/100,2)%>?
+%(hint_r1c4_level_3)%	Try entering <%=round(floor((2096-columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)*floor(2096/columnCell(tens, ones, tenths, hundredths, 1000, 100, 10, 1,"r1c3",0)))))%>
+	
+	
+%(r1c1_min)%	1
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	1
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	1
+%(link_r3_mostLeft_max)%	1
+%(r1c4_min)%	1
+%(r1c4_max)%	1
+%(link_r2_mostRight_min)%	1
+%(link_r2_mostRight_max)%	1
+%(link_r3_mostRight_min)%	1
+%(link_r3_mostRight_max)%	1
+	
+%(r1c1)%	
+%(r1c2)%	
+%(r1c3)%	
+%(r1c4)%	 
+%(4496962056300963153)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give  to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292769245166384709)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((2096-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350911774282051931)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-213056756848980930)%	If you have already  entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	If you have already entered  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-213054756852981056)%	Try entering <%=round(floor((2096-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(2096/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	Try entering <%=round(floor((2096-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)*floor(2096/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))))%>
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	Try entering <%=round(floor((2096-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 0)))%>
+%(1536371731755848561)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((2096-columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(2096/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	Try entering <%=round(floor((2096-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 0)))%>
+%(-3036209045161016917)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(4496964056296963183)%	Try entering <%=round(floor((2096-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350913774278051965)%	Try entering <%=round(floor((2096-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 0)))%>
+%(1536370731763848530)%	If you have already given  <%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give  to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	If you have already entered <%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%>  should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?
+%(-3036206045161016912)%	What number should go in the  <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%>  place ?
+%(7368804326215549730)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136516223160505835)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((2096-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	Try entering <%=round(floor((2096-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 0)))%>
+%(-5350914774282051954)%	What is the highest number of <%=columnCell(tens, ones, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> you can enter without going over <%=fmtDecimal(%(total)%/100,2)%>?
+%(-136515223168505802)%	If you have already entered  <%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(tens, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you enter to get <%=fmtDecimal(%(total)%/100,2)%>?

@@ -1,0 +1,95 @@
+Problem Name	1	2	3	4	5
+%(startStateNodeName)%	state28	state24	state3		
+%(1)%	1. Enter 0.921 to show the place value of each digit (standard form).	1. Enter 6.39 to show the place value of each digit (standard form).	1. Enter 6.20 to show the place value of each digit (standard form).	1. Enter .476 to show the place value of each digit (standard form).	1. Enter 0.065 to show the place value of each digit (standard form).
+%(2)%	2. What if the number of hundredths is 0?	2. What if the number of thousandths is 100?	2. What if the number of hundredths is 20?	2. What if the number of hundredths is 26?	2. What if the number of thousandths is 55?
+%(3)%	3. What if you only have 5 tenths?	3. What if you only have 19 hundredths?	3. What if you only have 19 hundredths?	3. What if you only have 0 tenths?	3. What if you only have 3 hundredths?
+		          	             	         	        
+%(r1c1-hint1)%		What number should go in the ones place?	What number should go in the ones place?		
+%(r1c1-hint2)%		"What is the highest number of ones you can have without going over <%=fmtDecimal(%(total)%/1000,3)%>?"	"What is the highest number of ones you can have without going over <%=fmtDecimal(%(total)%/1000,3)%>?"		
+%(r1c1-hint3)%		Try entering <%=round(floor(%(total)%/1000))%>	Try entering <%=round(floor(%(total)%/1000))%>		
+%(r2c1-hint1)%		"If you have already entered <%=fmtDecimal(sum(valueOrZero(r2c1*1)+valueOrZero(r2c2*.1)+valueOrZero(r2c3*.01)+valueOrZero(r2c4*.001)),3)%>. How many ones should you enter to get <%=fmtDecimal(%(total)%/1000,3)%>?"	"If you have already entered <%=fmtDecimal(sum(valueOrZero(r2c1*1)+valueOrZero(r2c2*.1)+valueOrZero(r2c3*.01)+valueOrZero(r2c4*.001)),3)%>. How many ones should you enter to get <%=fmtDecimal(%(total)%/1000,3)%>?"		
+%(r2c1-hint2)%		"What is the highest number of ones you can have without going over <%=fmtDecimal(%(total)%/1000,3)%>?"	"What is the highest number of ones you can have without going over <%=fmtDecimal(%(total)%/1000,3)%>?"		
+%(r2c1-hint3)%		Try entering <%=round(floor((%(total)%-sum(valueOrZero(r2c1*1000)+valueOrZero(r2c2*100)+valueOrZero(r2c3*10)+valueOrZero(r2c4*1)))/1000))%>	Try entering <%=round(floor((%(total)%-sum(valueOrZero(r2c1*1000)+valueOrZero(r2c2*100)+valueOrZero(r2c3*10)+valueOrZero(r2c4*1)))/1000))%>		
+%(r3c1-hint1)%		"If you have already given <%=fmtDecimal(sum(valueOrZero(r3c1*1)+valueOrZero(r3c2*.1)+valueOrZero(r3c3*.01)+valueOrZero(r3c4*.001)),3)%>. How many ones should you enter to get <%=fmtDecimal(%(total)%/1000,3)%>?"	"If you have already given <%=fmtDecimal(sum(valueOrZero(r3c1*1)+valueOrZero(r3c2*.1)+valueOrZero(r3c3*.01)+valueOrZero(r3c4*.001)),3)%>. How many ones should you enter to get <%=fmtDecimal(%(total)%/1000,3)%>?"		
+%(r3c1-hint2)%		"What is the highest number of ones you can have without going over <%=fmtDecimal(%(total)%/1000,3)%>?"	"What is the highest number of ones you can have without going over <%=fmtDecimal(%(total)%/1000,3)%>?"		
+%(r3c1-hint3)%		Try entering <%=round(floor((%(total)%-sum(valueOrZero(r3c1*1000)+valueOrZero(r3c2*100)+valueOrZero(r3c3*10)+valueOrZero(r3c4*1)))/1000))%>	Try entering <%=round(floor((%(total)%-sum(valueOrZero(r3c1*1000)+valueOrZero(r3c2*100)+valueOrZero(r3c3*10)+valueOrZero(r3c4*1)))/1000))%>		
+					
+	          	           	           	         	           
+%(given-1)%	r2c3	r2c4	r2c3	r2c3	r2c4
+%(given-2)%	r3c2	r3c3	r3c3	r3c2	r3c3
+%(given-val-1)%	0	100	20	26	55
+%(given-val-2)%	5	19	19	0	3
+%(total)%	921	6390	6200	476	65
+%(11trav)%	0	1	1	0	0
+%(12trav)%	1	1	1	1	0
+%(13trav)%	1	1	1	1	1
+%(14trav)%	1	1	1	1	1
+%(21trav)%	0	1	1	0	0
+%(22trav)%	1	1	1	1	0
+%(23trav)%	0	1	0	0	1
+%(24trav)%	1	0	1	1	0
+%(31trav)%	0	1	1	0	0
+%(32trav)%	0	1	1	0	0
+%(33trav)%	1	0	0	1	0
+%(34trav)%	1	1	1	1	1
+					
+%(11trav-max)%	1	1	1	1	1
+%(12trav-max)%	1	1	1	1	1
+%(13trav-max)%	1	1	1	1	1
+%(14trav-max)%	1	1	1	1	1
+%(21trav-max)%	1	1	1	1	1
+%(22trav-max)%	1	1	1	1	1
+%(23trav-max)%	0	1	0	0	1
+%(24trav-max)%	1	0	1	1	0
+%(31trav-max)%	1	1	1	1	1
+%(32trav-max)%	0	1	1	0	1
+%(33trav-max)%	1	0	0	1	0
+%(34trav-max)%	1	1	1	1	1
+					
+%(11hint-1)%					
+%(11hint-2)%					
+%(11hint-3)%					
+%(12hint-1)%					
+%(12hint-2)%					
+%(12hint-3)%					
+%(13hint-1)%					
+%(13hint-2)%					
+%(13hint-3)%					
+%(14hint-1)%					
+%(14hint-2)%					
+%(14hint-3)%					
+					
+%(21hint-1)%					
+%(21hint-2)%					
+%(21hint-3)%					
+%(22hint-1)%					
+%(22hint-2)%					
+%(22hint-3)%					
+%(23hint-1)%					
+%(23hint-2)%					
+%(23hint-3)%					
+%(24hint-1)%					
+%(24hint-2)%					
+%(24hint-3)%					
+					
+%(31hint-1)%					
+%(31hint-2)%					
+%(31hint-3)%					
+%(32hint-1)%					
+%(32hint-2)%					
+%(32hint-3)%					
+%(33hint-1)%					
+%(33hint-2)%					
+%(33hint-3)%					
+%(34hint-1)%					
+%(34hint-2)%					
+%(34hint-3)%					
+					
+%(r1c1-faded-value)%	0	6	6		
+%(r1c2-faded-value)%	9	3	2		
+%(r1c3-faded-value)%	2	9			
+%(r1c4-faded-value)%	1	0			
+%(r2c1-faded-value)%	0				
+%(r2c2-faded-value)%	9				
+%(r2c3-faded-value)%	0				
+%(r2c4-faded-value)%	21				

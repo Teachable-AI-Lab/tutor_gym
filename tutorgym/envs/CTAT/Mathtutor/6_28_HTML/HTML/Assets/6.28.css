@@ -1,0 +1,27 @@
+.CTATSolution {
+  display: grid;
+  grid: auto repeat(2, 1fr) repeat(2, 2fr) 1fr / 2fr repeat(2, 1fr);
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+.CTATTextInput {
+  width: 100%;
+}
+.CTATTextInput input[type="text"] {
+  width: 90%;
+}
+#optionone {
+  grid-column: 2;
+}
+#commonamt {
+  grid-column: 2 / span 2;
+  width: 50%;
+}
+.label {
+  justify-self: flex-end;
+  text-align: right;
+}
+.option {
+  align-self: flex-end;
+}

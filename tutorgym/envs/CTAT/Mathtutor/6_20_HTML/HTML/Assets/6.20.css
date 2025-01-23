@@ -1,0 +1,57 @@
+.CTATProblemSolving {
+  width: 100%;
+  flex-direction: column;
+}
+.CTATProblem, .CTATSolution {
+  flex: auto;
+}
+.CTATProblem {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 20px;
+}
+.CTATSolution {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#number_lines {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.line_block {
+  flex: 1;
+}
+.line_block > p, .line_block > .CTATTextField {
+  display: inline;
+}
+.line {
+  display: flex;
+  gap: 10px;
+}
+.line_controls {
+  width: 40px;
+  text-align: center;
+}
+.line_controls div {
+  width: inherit;
+}
+.line_controls .CTATNumericStepper {
+  margin-top: 20px;
+}
+.line_controls .CTATSubmitButton {
+  margin-top: 10px;
+}
+.CTATNumberLine {
+  flex: 1;
+  width: auto;
+  min-width: 264px;
+}
+#final {
+  text-align: center;
+}
+#question {
+  margin-bottom: 10px;
+}

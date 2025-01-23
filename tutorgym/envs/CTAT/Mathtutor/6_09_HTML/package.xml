@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="6.09 Decimal Addition and Subtraction II" description="Student must identify addition or subtraction, align addends or minuends and subtrahends, and complete the addition or subtraction." save_state="true">
+  <Problems>
+    <Problem name="applejuice" label="Apple juice" description="Tracy wants to make apple juice for the town picnic. She bought 2 containers of apples. One container weighed 23.81 pounds and the other weighed 40.6 pounds." tutor_flag="tutor" model_file="applejuice.brd" student_interface="6.09.html">
+      <Skills>
+        <Skill name="Choose-Operation" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+        <Skill name="Add-Column-No-Carry" category="Decimal-Addition-and-Subtraction" occurrences="2"/>
+        <Skill name="Enter-Decimal-Point" category="Decimal-Addition-and-Subtraction" occurrences="3"/>
+        <Skill name="Add-Column-With-Carry" category="Decimal-Addition-and-Subtraction" occurrences="3"/>
+        <Skill name="Enter-Addends" category="Decimal-Addition-and-Subtraction" occurrences="7"/>
+      </Skills>
+    </Problem>
+    <Problem name="comicstrip" label="Comic strip" description="The longest running primetime TV show, the Simpsons, has been running 9.334 years. The longest running comic strip, The Dandy, has been running for 61.597 years." tutor_flag="tutor" model_file="comicstrip.brd" student_interface="6.09.html">
+      <Skills>
+        <Skill name="Choose-Operation" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+        <Skill name="Enter-Decimal-Point" category="Decimal-Addition-and-Subtraction" occurrences="3"/>
+        <Skill name="Enter-Addends" category="Decimal-Addition-and-Subtraction" occurrences="9"/>
+        <Skill name="Sub-Column-With-No-Borrow" category="Decimal-Addition-and-Subtraction" occurrences="4"/>
+        <Skill name="Sub-Column-With-Borrow" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="groundhog" label="Groundhog" description="Pennsylvania's Punxsutawney Phil, the famous weather-predicting groundhog, accurately reports the end of winter 45.3 percent of the time. New Jersey's Woodrow K. Chuck accurately predicts 54.18 percent of the time." tutor_flag="tutor" model_file="groundhog.brd" student_interface="6.09.html">
+      <Skills>
+        <Skill name="Choose-Operation" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+        <Skill name="Enter-Decimal-Point" category="Decimal-Addition-and-Subtraction" occurrences="2"/>
+        <Skill name="Enter-Addends" category="Decimal-Addition-and-Subtraction" occurrences="7"/>
+        <Skill name="Sub-Column-With-No-Borrow" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+        <Skill name="Sub-Column-With-Borrow" category="Decimal-Addition-and-Subtraction" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="postoffice" label="Post office" description="Gail works at the post office. A customer has two packages to mail. One package weighs 2.381 pounds and the other package weighs 0.406 pounds." tutor_flag="tutor" model_file="postoffice.brd" student_interface="6.09.html">
+      <Skills>
+        <Skill name="Choose-Operation" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+        <Skill name="Add-Column-No-Carry" category="Decimal-Addition-and-Subtraction" occurrences="4"/>
+        <Skill name="Enter-Decimal-Point" category="Decimal-Addition-and-Subtraction" occurrences="3"/>
+        <Skill name="Enter-Addends" category="Decimal-Addition-and-Subtraction" occurrences="7"/>
+      </Skills>
+    </Problem>
+    <Problem name="roadtrip" label="Road trip" description="The distance from New Jersey to California is 2,925.17 miles. Lauren wants to take a roadtrip wit 2 of her other friends. They took a stop in Missouri, which is 1,056.429 miles from New Jersey." tutor_flag="tutor" model_file="roadtrip.brd" student_interface="6.09.html">
+      <Skills>
+        <Skill name="Choose-Operation" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+        <Skill name="Enter-Decimal-Point" category="Decimal-Addition-and-Subtraction" occurrences="3"/>
+        <Skill name="Enter-Addends" category="Decimal-Addition-and-Subtraction" occurrences="13"/>
+        <Skill name="Sub-Column-With-Borrow-and-Loan" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+        <Skill name="Sub-Column-With-No-Borrow" category="Decimal-Addition-and-Subtraction" occurrences="3"/>
+        <Skill name="Sub-Column-With-Borrow" category="Decimal-Addition-and-Subtraction" occurrences="4"/>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="6.09 HTML" label="6.09 Decimal Addition and Subtraction II" description="Student must identify addition or subtraction, align addends or minuends and subtrahends, and complete the addition or subtraction." status="active" picture="6.09.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="applejuice" position="1" role="0"/>
+        <Problem name="comicstrip" position="2" role="0"/>
+        <Problem name="postoffice" position="3" role="0"/>
+        <Problem name="groundhog" position="4" role="0"/>
+        <Problem name="roadtrip" position="5" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="Sub-Column-With-Borrow-and-Loan" category="Decimal-Addition-and-Subtraction" label="Sub Column With Borrow And Loan" description="Sub Column With Borrow And Loan" position="0"/>
+        <Skill name="Enter-Addends" category="Decimal-Addition-and-Subtraction" label="Enter Addends" description="Enter Addends" position="1"/>
+        <Skill name="Sub-Column-With-No-Borrow" category="Decimal-Addition-and-Subtraction" label="Sub Column With No Borrow" description="Sub Column With No Borrow" position="2"/>
+        <Skill name="Sub-Column-With-Borrow" category="Decimal-Addition-and-Subtraction" label="Sub Column With Borrow" description="Sub Column With Borrow" position="3"/>
+        <Skill name="Enter-Decimal-Point" category="Decimal-Addition-and-Subtraction" label="Enter Decimal Point" description="Enter Decimal Point" position="4"/>
+        <Skill name="Choose-Operation" category="Decimal-Addition-and-Subtraction" label="Choose Operation" description="Choose Operation" position="5"/>
+        <Skill name="Add-Column-No-Carry" category="Decimal-Addition-and-Subtraction" label="Add Column No Carry" description="Add Column No Carry" position="6"/>
+        <Skill name="Add-Column-With-Carry" category="Decimal-Addition-and-Subtraction" label="Add Column With Carry" description="Add Column With Carry" position="7"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.A.3" label="A.3. Computation and Estimation" description="A.3. Compute accurately and fluently and make reasonable estimates." standard_level="assessment_anchor" parent_name="PA.A" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="5th" label="5th Grade" description="5th Grade"/>
+        <Grade name="6th" label="6th Grade" description="6th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.WD" label="Working with Decimals" description="Working with Decimals" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.5" label="5th Grade" description="5th grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.5.NBT" label="5.NBT. Numbers and Operations in Base Ten" description="5.NBT. Numbers and Operations in Base Ten" standard_level="strand" parent_name="CommonCore.5" parent_level="grade_level"/>
+        <Standard name="CommonCore.6" label="6th Grade" description="6th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.6.NS" label="6.NS. The Number System" description="6.NS. The Number System" standard_level="strand" parent_name="CommonCore.6" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="6.09.png" path="Assets"/>
+    <Asset name="mathtutor_6.09_full.png" path="Assets"/>
+    <Asset name="applejuice.brd" path="FinalBRDs"/>
+    <Asset name="comicstrip.brd" path="FinalBRDs"/>
+    <Asset name="gail.brd" path="FinalBRDs"/>
+    <Asset name="groundhog.brd" path="FinalBRDs"/>
+    <Asset name="postoffice.brd" path="FinalBRDs"/>
+    <Asset name="roadtrip.brd" path="FinalBRDs"/>
+    <Asset name="6.09.html" path="HTML"/>
+    <Asset name="6.09.css" path="HTML/Assets"/>
+  </Assets>
+</Package>

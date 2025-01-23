@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>6.01 Patterns and Expressions</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/CTAT.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/Mathtutor.css">
+
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/jquery.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctat.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctatloader.js"></script>
+  </head>
+
+  <body>
+    <main class="CTATTutor">
+      <h1>Tutor</h1>
+
+      <section class="CTATProblemSolving">
+        <h2>Problem Solving</h2>
+
+        <section class="CTATProblem">
+          <h3>Problem</h3>
+
+          <div id="statement" class="CTATTextField"></div>
+          <div id="question1" class="CTATTextField"></div>
+          <div id="question2" class="CTATTextField"></div>
+          <div id="question3" class="CTATTextField"></div>
+          <div id="explanation" class="CTATTextField"></div>
+          <div id="instructions" class="CTATTextField"></div>
+        </section>
+
+        <section class="CTATSolution">
+          <h3>Solution</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th scope="row"></th>
+                <th scope="col"><div id="nameleft" class="CTATTextField"></div></th>
+                <th scope="col"><div id="namemid" class="CTATTextField"></div></th>
+                <th scope="col"><div class="CTATTextField">Show your work</div></th>
+              </tr>
+              <tr>
+                <th scope="row"><div class="CTATTextField">Unit</div></th>
+                <th scope="col"><div id="unitleft" class="CTATTextField"></div></th>
+                <th scope="col"><div id="unitmid" class="CTATTextField"></div></th>
+                <th scope="col"><div class="CTATTextField">N/A</div></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><div class="CTATTextField">1</div></th>
+                <td><div id="firstleft" class="CTATTextInput"></div></td>
+                <td><div id="firstmid" class="CTATTextInput"></div></td>
+                <td><div id="firstright" class="CTATTextInput"></div></td>
+              </tr>
+              <tr>
+                <th scope="row"><div class="CTATTextField">2</div></th>
+                <td><div id="secondleft" class="CTATTextInput"></div></td>
+                <td><div id="secondmid" class="CTATTextInput"></div></td>
+                <td><div id="secondright" class="CTATTextInput"></div></td>
+              </tr>
+              <tr>
+                <th scope="row"><div id="thirdname" class="CTATTextField"></div></th>
+                <td><div id="thirdleft" class="CTATTextInput"></div></td>
+                <td><div id="thirdmid" class="CTATTextInput"></div></td>
+                <td><div id="thirdright" class="CTATTextInput"></div></td>
+              </tr>
+              <tr id="fourthrow" class="CTATElement">
+                <th scope="row"><div id="fourthname" class="CTATTextField"></div></th>
+                <td><div id="fourthleft" class="CTATTextInput"></div></td>
+                <td><div id="fourthmid" class="CTATTextInput"></div></td>
+                <td><div id="fourthright" class="CTATTextInput"></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+
+      <section class="CTATTools">
+        <h2>Tools</h2>
+
+        <div class="CTATButtons">
+          <div class="CTATDoneButton"></div>
+          <div class="CTATHintButton"></div>
+        </div>
+
+        <section class="CTATHints">
+          <h3>Hints</h3>
+          <div class="CTATHintWindow"></div>
+        </section>
+
+        <section class="CTATSkills">
+          <h3>Skills</h3>
+          <div class="CTATSkillWindow"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

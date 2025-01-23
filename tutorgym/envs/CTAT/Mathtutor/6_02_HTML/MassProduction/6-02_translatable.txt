@@ -1,0 +1,1155 @@
+Problem Name	Intro_problem
+%(startStateNodeName)%	
+%(problem_statement)%	Wendy wants to host a barbeque in her backyard. To prepare for how many veggie burgers she will need to buy, she uses a formula depending on how many people are going to show up.
+%(formula1)%	Let g = the number of guests that show up
+%(formula2)%	The number of burgers she will need to buy = 2g + 4
+%(question1)%	(1) How many veggie burgers does she need to buy if 3 people come to her BBQ?
+%(question2)%	(2) How many does she need to buy if 5 people come to her BBQ?
+%(question3)%	(3) If 7 of her friends show up, how many does she need to buy?
+%(question4)%	(4) If 9 of her friends show up, how many does she need to buy?
+%(questions)%	(1) How many veggie burgers does she need to buy if 3 people come to her BBQ?<br><br>(2) How many veggie burgers does she need to buy if 5 people come to her BBQ?<br><br>(3) If 7 of her friends show up, how many does she need to buy?<br><br>(4) If 9 of her friends show up, how many does she need to buy?
+%(heading1)%	Number of guests
+%(heading2)%	Number of veggie burgers she will buy
+%(unit1)%	guests
+%(unit2)%	burgers
+%(expression1)%	g
+%(expression2)%	2g + 4
+%(Ans1_a)%	3
+%(Ans1_b)%	10
+%(Ans2_a)%	5
+%(Ans2_b)%	14
+%(Ans3_a)%	7
+%(Ans3_b)%	18
+%(Ans4_a)%	9
+%(Ans4_b)%	22
+	
+%(Ans1a_hint1)%	
+%(Ans1a_hint2)%	
+%(Ans1a_hint3)%	
+%(Ans1a_hint4)%	
+%(Ans1b_hint1)%	
+%(Ans1b_hint2)%	
+%(Ans1b_hint3)%	
+%(Ans1b_hint4)%	
+%(Ans2a_hint1)%	
+%(Ans2a_hint2)%	
+%(Ans2a_hint3)%	
+%(Ans2a_hint4)%	
+%(Ans2b_hint1)%	
+%(Ans2b_hint2)%	
+%(Ans2b_hint3)%	
+%(Ans2b_hint4)%	
+%(Ans3a_hint1)%	
+%(Ans3a_hint2)%	
+%(Ans3a_hint3)%	
+%(Ans3a_hint4)%	
+%(Ans3b_hint1)%	
+%(Ans3b_hint2)%	
+%(Ans3b_hint3)%	
+%(Ans3b_hint4)%	
+%(Ans4a_hint1)%	
+%(Ans4a_hint2)%	
+%(Ans4a_hint3)%	
+%(Ans4a_hint4)%	
+%(Ans4b_hint1)%	
+%(Ans4b_hint2)%	
+%(Ans4b_hint3)%	
+%(Ans4b_hint4)%	
+%(DONE_hint1)%	
+%(DONE_hint2)%	
+	
+%(bug1)%	
+%(bug2)%	
+%(bug3)%	
+%(bug4)%	
+%(error_messageb)%	
+%(-693712474793275334)%	
+%(-3741766123344482753)%	
+%(-6901952857503427095)%	
+%(5645093929203651144)%	
+%(7906032719770737336)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(-3741765123324482718)%	
+%(-3741763123312482704)%	
+%(-6701245271824411299)%	
+%(7906031719766737317)%	
+%(-7730308470554465238)%	
+%(-6901949857471427038)%	
+%(2866120199660265791)%	
+%(7906030719758737322)%	
+%(-7730309470642465495)%	
+%(-693713474781275369)%	
+%(5162537381742577495)%	Please enter '' in the highlighted field.
+%(-8865737956518473063)%	Please enter '' in the highlighted field.
+%(7137232941922575413)%	
+%(5645092929199651189)%	
+%(7906033719794737403)%	
+%(7137235941890575246)%	
+%(-693714474789275388)%	
+%(7137233941926575368)%	
+%(2866121199680265826)%	
+%(-693711474785275339)%	
+%(2866119199652265772)%	
+%(5645095929167651022)%	
+%(5645090929203651159)%	
+%(-6701243271828411277)%	
+%(2577276927472933268)%	Please enter '' in the highlighted field.
+%(2866122199688265853)%	
+%(-6701244271820411312)%	
+%(-1181211822711671689)%	
+%(-4496519548807638142)%	Please enter '' in the highlighted field.
+%(-6901950857491427073)%	
+%(7137230941926575383)%	
+%(-3741768123356482775)%	
+%(-6901947857459427024)%	
+%(-6701246271832411326)%	
+Problem Name	Problem1
+%(startStateNodeName)%	state4
+%(problem_statement)%	The website CDs-R-Us sells music CDs. You can buy as many CDs as you want each time you order for $8 a cd plus a $12 shipping and handling charge. The company uses the following formula to calculate the cost of an order:
+%(formula1)%	Let x = the number of CDs you order
+%(formula2)%	The cost of the order = 8x + 12
+%(question1)%	(1) How much does it cost to buy 1 CD?
+%(question2)%	(2) How much does it cost to buy 2 CDs?
+%(question3)%	(3) How much does it cost to buy 3 CDs?
+%(question4)%	(4) How much does it cost to buy 4 CDs?
+%(questions)%	(1) How much does it cost to buy 1 CD?<br><br>(2) How much does it cost to buy 2 CDs?<br><br>(3) How much does it cost to buy 3 CDs?<br><br>(4) How much does it cost to buy 4 CDs?
+%(heading1)%	Number of CDs
+%(heading2)%	Cost of the order
+%(unit1)%	CDs
+%(unit2)%	dollars
+%(expression1)%	x
+%(expression2)%	8x+12
+%(Ans1_a)%	1
+%(Ans1_b)%	20
+%(Ans2_a)%	2
+%(Ans2_b)%	28
+%(Ans3_a)%	3
+%(Ans3_b)%	36
+%(Ans4_a)%	4
+%(Ans4_b)%	44
+	
+%(Ans1a_hint1)%	What do you already know from reading the question?
+%(Ans1a_hint2)%	To work through question 1, you must first find the number of CDs purchased.
+%(Ans1a_hint3)%	Try reading through the question again to find the number of CDs bought.
+%(Ans1a_hint4)%	Try entering '1' in the highlighted field.
+%(Ans1b_hint1)%	If you buy 1 CD, what is the total cost of the order?
+%(Ans1b_hint2)%	The variable 'x' stands for the number of CDs. Please substitute 1 for the variable 'x' in the algebraic expression 8x+12.
+%(Ans1b_hint3)%	When you substitute 1 for 'x' in the algebraic equation 8x+12, you get the numerical expression 8(1)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans1b_hint4)%	Please type '20' in the highlighted field.
+%(Ans2a_hint1)%	What do you already know from reading the question?
+%(Ans2a_hint2)%	To work through question 2, you must first find the number of CDs purchased.
+%(Ans2a_hint3)%	Try reading through the question again to find the number of CDs bought.
+%(Ans2a_hint4)%	Try entering '2' in the highlighted field.
+%(Ans2b_hint1)%	If you buy 2 CDs, what is the total cost of the order?
+%(Ans2b_hint2)%	The variable 'x' stands for the number of CDs. Please substitute 2 for the variable 'x' in the algebraic expression 8x+12.
+%(Ans2b_hint3)%	When you substitute 2 for 'x' in the algebraic equation 8x+12, you get the numerical expression 8(2)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans2b_hint4)%	Try entering '28' in the highlighted field.
+%(Ans3a_hint1)%	What do you already know from reading the question?
+%(Ans3a_hint2)%	To work through question 3, you must first find the number of CDs purchased.
+%(Ans3a_hint3)%	Try reading through the question again to find the number of CDs bought.
+%(Ans3a_hint4)%	Try entering '3' in the highlighted field.
+%(Ans3b_hint1)%	If you buy 3 CDs, what is the total cost of the order?
+%(Ans3b_hint2)%	The variable 'x' stands for the number of CDs. Please substitute 3 for the variable 'x' in the algebraic expression 8x+12.
+%(Ans3b_hint3)%	When you substitute 3 for 'x' in the algebraic equation 8x+12, you get the numerical expression 8(3)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans3b_hint4)%	Try entering '36' in the highlighted field.
+%(Ans4a_hint1)%	What do you already know from reading the question?
+%(Ans4a_hint2)%	To work through question 4, you must first find the number of CDs purchased.
+%(Ans4a_hint3)%	Try reading through the question again to find the number of CDs bought.
+%(Ans4a_hint4)%	Try entering '4' in the highlighted field.
+%(Ans4b_hint1)%	If you buy 4 CDs, what is the total cost of the order?
+%(Ans4b_hint2)%	The variable 'x' stands for the number of CDs. Please substitute 4 for the variable 'x' in the algebraic expression 8x+12.
+%(Ans4b_hint3)%	When you substitute 4 for 'x' in the algebraic equation 8x+12, you get the numerical expression 8(4)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans4b_hint4)%	Try entering '44' in the highlighted field.
+%(DONE_hint1)%	Great job! You've successfully completed this problem!
+%(DONE_hint2)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	8
+%(bug2)%	16
+%(bug3)%	24
+%(bug4)%	32
+%(error_messageb)%	You forgot to add the original $12 charge to your calculations. Please try again.
+%(-693712474793275334)%	Try reading through the question again to find the number of CDs bought.
+%(-3741766123344482753)%	When you substitute 2 for 'x' in the algebraic equation 8x+12, you get the numerical expression 8(2)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-6901952857503427095)%	What do you already know from reading the question?
+%(5645093929203651144)%	Try reading through the question again to find the number of CDs bought.
+%(7906032719770737336)%	To work through question 1, you must first find the number of CDs purchased.
+%(-5166532556208710060)%	No, this is not correct.
+%(-3741765123324482718)%	The variable 'x' stands for the number of CDs. Please substitute 2 for the variable 'x' in the algebraic expression 8x+12.
+%(-3741763123312482704)%	Try entering '28' in the highlighted field.
+%(-6701245271824411299)%	When you substitute 4 for 'x' in the algebraic equation 8x+12, you get the numerical expression 8(4)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(7906031719766737317)%	Try reading through the question again to find the number of CDs bought.
+%(-7730308470554465238)%	Great job! You've successfully completed this problem!
+%(-6901949857471427038)%	To work through question 3, you must first find the number of CDs purchased.
+%(2866120199660265791)%	The variable 'x' stands for the number of CDs. Please substitute 1 for the variable 'x' in the algebraic expression 8x+12.
+%(7906030719758737322)%	Try entering '1' in the highlighted field.
+%(-7730309470642465495)%	Please proceed to the next problem by clicking the "Done" button.
+%(-693713474781275369)%	To work through question 4, you must first find the number of CDs purchased.
+%(5162537381742577495)%	Please enter '16' in the highlighted field.
+%(-8865737956518473063)%	Please enter '32' in the highlighted field.
+%(7137232941922575413)%	The variable 'x' stands for the number of CDs. Please substitute 3 for the variable 'x' in the algebraic expression 8x+12.
+%(5645092929199651189)%	To work through question 2, you must first find the number of CDs purchased.
+%(7906033719794737403)%	What do you already know from reading the question?
+%(7137235941890575246)%	If you buy 3 CDs, what is the total cost of the order?
+%(-693714474789275388)%	What do you already know from reading the question?
+%(7137233941926575368)%	When you substitute 3 for 'x' in the algebraic equation 8x+12, you get the numerical expression 8(3)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(2866121199680265826)%	When you substitute 1 for 'x' in the algebraic equation 8x+12, you get the numerical expression 8(1)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-693711474785275339)%	Try entering '4' in the highlighted field.
+%(2866119199652265772)%	If you buy 1 CD, what is the total cost of the order?
+%(5645095929167651022)%	What do you already know from reading the question?
+%(5645090929203651159)%	Try entering '2' in the highlighted field.
+%(-6701243271828411277)%	If you buy 4 CDs, what is the total cost of the order?
+%(2577276927472933268)%	Please enter '24' in the highlighted field.
+%(2866122199688265853)%	Please type '20' in the highlighted field.
+%(-6701244271820411312)%	The variable 'x' stands for the number of CDs. Please substitute 4 for the variable 'x' in the algebraic expression 8x+12.
+%(-1181211822711671689)%	You forgot to add the original $12 charge to your calculations. Please try again.
+%(-4496519548807638142)%	Please enter '8' in the highlighted field.
+%(-6901950857491427073)%	Try reading through the question again to find the number of CDs bought.
+%(7137230941926575383)%	Try entering '36' in the highlighted field.
+%(-3741768123356482775)%	If you buy 2 CDs, what is the total cost of the order?
+%(-6901947857459427024)%	Try entering '3' in the highlighted field.
+%(-6701246271832411326)%	Try entering '44' in the highlighted field.
+Problem Name	Problem2
+%(startStateNodeName)%	state2
+%(problem_statement)%	Andy borrowed $30 from his parents to buy the new Space Rider video game. To pay them back, Andy decides to walk dogs for his neighbors during the summer, charging them $15 per dog walked. He hopes the summer job will also give him some extra spending money. To keep track of how much money he has to spend on himself, Andy uses the following formula:
+%(formula1)%	Let d = the number of dogs Andy has walked
+%(formula2)%	The amount of spending money Andy has = 15d - 30
+%(question1)%	(1) If Andy has walked 2 dogs, how much spending money does he have?
+%(question2)%	(2) After walking 3 dogs, how much spending money does Andy have?
+%(question3)%	(3) If Andy has walked 4 dogs, how much money does he have to spend?
+%(question4)%	(4) How much spending money does Andy have if he has walked 5 dogs?
+%(questions)%	(1) If Andy has walked 2 dogs, how much spending money does he have?<br><br>(2) After walking 3 dogs, how much spending money does Andy have?<br><br>(3) If Andy has walked 4 dogs, how much money does he have to spend?<br><br>(4) How much spending money does Andy have if he has walked 5 dogs?
+%(heading1)%	Number of dogs Andy walked
+%(heading2)%	Amount of spending money Andy has
+%(unit1)%	dogs
+%(unit2)%	dollars
+%(expression1)%	d
+%(expression2)%	15d - 30
+%(Ans1_a)%	2
+%(Ans1_b)%	0
+%(Ans2_a)%	3
+%(Ans2_b)%	15
+%(Ans3_a)%	4
+%(Ans3_b)%	30
+%(Ans4_a)%	5
+%(Ans4_b)%	45
+	
+%(Ans1a_hint1)%	What do you already know from reading the question?
+%(Ans1a_hint2)%	To work through question 1, you must first find the number of dogs that Andy walked.
+%(Ans1a_hint3)%	Try reading through the question again to find the number of dogs Andy walked.
+%(Ans1a_hint4)%	Try entering '2' in the highlighted field.
+%(Ans1b_hint1)%	If Andy walked 2 dogs, how much spending money will he then have?
+%(Ans1b_hint2)%	The variable 'd' stands for the number of dogs walked. Please substitute 2 for the variable 'd' in the algebraic expression 15d - 30.
+%(Ans1b_hint3)%	When you substitute 2 for 'd' in the algebraic equation 15d - 30, you get the numerical expression 15(2)-30. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans1b_hint4)%	Please type '0' in the highlighted field.
+%(Ans2a_hint1)%	What do you already know from reading the question?
+%(Ans2a_hint2)%	To work through question 2, you must first find the number of dogs that Andy walked.
+%(Ans2a_hint3)%	Try reading through the question again to find the number of dogs Andy walked.
+%(Ans2a_hint4)%	Try entering '3' in the highlighted field.
+%(Ans2b_hint1)%	If Andy walked 3 dogs, how much spending money will he then have?
+%(Ans2b_hint2)%	The variable 'd' stands for the number of dogs walked. Please substitute 3 for the variable 'd' in the algebraic expression 15d - 30.
+%(Ans2b_hint3)%	When you substitute 3 for 'd' in the algebraic equation 15d - 30, you get the numerical expression 15(3)-30. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans2b_hint4)%	Try entering '15' in the highlighted field.
+%(Ans3a_hint1)%	What do you already know from reading the question?
+%(Ans3a_hint2)%	To work through question 3, you must first find the number of dogs that Andy walked.
+%(Ans3a_hint3)%	Try reading through the question again to find the number of dogs Andy walked.
+%(Ans3a_hint4)%	Try entering '4' in the highlighted field.
+%(Ans3b_hint1)%	If Andy walked 4 dogs, how much spending money will he then have?
+%(Ans3b_hint2)%	The variable 'd' stands for the number of dogs walked. Please substitute 4 for the variable 'd' in the algebraic expression 15d - 30.
+%(Ans3b_hint3)%	When you substitute 4 for 'd' in the algebraic equation 15d - 30, you get the numerical expression 15(4)-30. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans3b_hint4)%	Try entering '30' in the highlighted field.
+%(Ans4a_hint1)%	What do you already know from reading the question?
+%(Ans4a_hint2)%	To work through question 4, you must first find the number of dogs that Andy walked.
+%(Ans4a_hint3)%	Try reading through the question again to find the number of dogs Andy walked.
+%(Ans4a_hint4)%	Try entering '5' in the highlighted field.
+%(Ans4b_hint1)%	If Andy walked 5 dogs, how much spending money will he then have?
+%(Ans4b_hint2)%	The variable 'd' stands for the number of dogs walked. Please substitute 5 for the variable 'd' in the algebraic expression 15d - 30.
+%(Ans4b_hint3)%	When you substitute 5 for 'd' in the algebraic equation 15d - 30, you get the numerical expression 15(5)-30. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans4b_hint4)%	Try entering '45' in the highlighted field.
+%(DONE_hint1)%	Great job! You've successfully completed this problem!
+%(DONE_hint2)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	30
+%(bug2)%	45
+%(bug3)%	60
+%(bug4)%	75
+%(error_messageb)%	You forgot to subtract the original $30 that Andy needs to pay back to his parents to your calculations. Please try again.
+%(-693712474793275334)%	Try reading through the question again to find the number of dogs Andy walked.
+%(-3741766123344482753)%	When you substitute 3 for 'd' in the algebraic equation 15d - 30, you get the numerical expression 15(3)-30. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-6901952857503427095)%	What do you already know from reading the question?
+%(5645093929203651144)%	Try reading through the question again to find the number of dogs Andy walked.
+%(7906032719770737336)%	To work through question 1, you must first find the number of dogs that Andy walked.
+%(-5166532556208710060)%	No, this is not correct.
+%(-3741765123324482718)%	The variable 'd' stands for the number of dogs walked. Please substitute 3 for the variable 'd' in the algebraic expression 15d - 30.
+%(-3741763123312482704)%	Try entering '15' in the highlighted field.
+%(-6701245271824411299)%	When you substitute 5 for 'd' in the algebraic equation 15d - 30, you get the numerical expression 15(5)-30. Please do the arithmetic and enter the answer in the highlighted cell.
+%(7906031719766737317)%	Try reading through the question again to find the number of dogs Andy walked.
+%(-7730308470554465238)%	Great job! You've successfully completed this problem!
+%(-6901949857471427038)%	To work through question 3, you must first find the number of dogs that Andy walked.
+%(2866120199660265791)%	The variable 'd' stands for the number of dogs walked. Please substitute 2 for the variable 'd' in the algebraic expression 15d - 30.
+%(7906030719758737322)%	Try entering '2' in the highlighted field.
+%(-7730309470642465495)%	Please proceed to the next problem by clicking the "Done" button.
+%(-693713474781275369)%	To work through question 4, you must first find the number of dogs that Andy walked.
+%(5162537381742577495)%	Please enter '45' in the highlighted field.
+%(-8865737956518473063)%	Please enter '75' in the highlighted field.
+%(7137232941922575413)%	The variable 'd' stands for the number of dogs walked. Please substitute 4 for the variable 'd' in the algebraic expression 15d - 30.
+%(5645092929199651189)%	To work through question 2, you must first find the number of dogs that Andy walked.
+%(7906033719794737403)%	What do you already know from reading the question?
+%(7137235941890575246)%	If Andy walked 4 dogs, how much spending money will he then have?
+%(-693714474789275388)%	What do you already know from reading the question?
+%(7137233941926575368)%	When you substitute 4 for 'd' in the algebraic equation 15d - 30, you get the numerical expression 15(4)-30. Please do the arithmetic and enter the answer in the highlighted cell.
+%(2866121199680265826)%	When you substitute 2 for 'd' in the algebraic equation 15d - 30, you get the numerical expression 15(2)-30. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-693711474785275339)%	Try entering '5' in the highlighted field.
+%(2866119199652265772)%	If Andy walked 2 dogs, how much spending money will he then have?
+%(5645095929167651022)%	What do you already know from reading the question?
+%(5645090929203651159)%	Try entering '3' in the highlighted field.
+%(-6701243271828411277)%	If Andy walked 5 dogs, how much spending money will he then have?
+%(2577276927472933268)%	Please enter '60' in the highlighted field.
+%(2866122199688265853)%	Please type '0' in the highlighted field.
+%(-6701244271820411312)%	The variable 'd' stands for the number of dogs walked. Please substitute 5 for the variable 'd' in the algebraic expression 15d - 30.
+%(-1181211822711671689)%	You forgot to subtract the original $30 that Andy needs to pay back to his parents to your calculations. Please try again.
+%(-4496519548807638142)%	Please enter '30' in the highlighted field.
+%(-6901950857491427073)%	Try reading through the question again to find the number of dogs Andy walked.
+%(7137230941926575383)%	Try entering '30' in the highlighted field.
+%(-3741768123356482775)%	If Andy walked 3 dogs, how much spending money will he then have?
+%(-6901947857459427024)%	Try entering '4' in the highlighted field.
+%(-6701246271832411326)%	Try entering '45' in the highlighted field.
+Problem Name	Problem3
+%(startStateNodeName)%	state1
+%(problem_statement)%	The class end of semester celebration is coming up and Alice wants to bring in pumpkin cookies as gifts for her classmates and her teacher, Miss Bird. Alice and her mom bake enough cookies so that Alice can give six cookies to as many friends as she wants and twelve cookies to Miss Bird. The morning of the party, Alice decides how many cookies she needs to take by using the following formula:
+%(formula1)%	Let f = the number of friends receiving cookies
+%(formula2)%	The number of cookies Alice brings = 6f + 12
+%(question1)%	(1) If Alice wants to give cookies to 2 friends, how many cookies does she bring to school?
+%(question2)%	(2) If Alice plans to give cookies to 5 friends, how many cookies does she bring?
+%(question3)%	(3) How many cookies does Alice bring if she wants to give them to 8 friends?
+%(question4)%	(4) If Alice wants to give cookies to 10 friends, how many cookies does she need?
+%(questions)%	(1) If Alice wants to give cookies to 2 friends, how many cookies does she bring to school?<br><br>(2) If Alice plans to give cookies to 5 friends, how many cookies does she bring?<br><br>(3) How many cookies does Alice bring if she wants to give them to 8 friends?<br><br>(4) If Alice wants to give cookies to 10 friends, how many cookies does she need?
+%(heading1)%	Number of friends Alice brings cookies for
+%(heading2)%	Number of cookies Alice brings
+%(unit1)%	friends
+%(unit2)%	cookies
+%(expression1)%	f
+%(expression2)%	6f + 12
+%(Ans1_a)%	2
+%(Ans1_b)%	24
+%(Ans2_a)%	5
+%(Ans2_b)%	42
+%(Ans3_a)%	8
+%(Ans3_b)%	60
+%(Ans4_a)%	10
+%(Ans4_b)%	72
+	
+%(Ans1a_hint1)%	What do you already know from reading the question?
+%(Ans1a_hint2)%	To work through question 1, you must first find the number of friends that Alice is bringing cookies for.
+%(Ans1a_hint3)%	Try reading through the question again to find the number of friends Alice wants to give cookies.
+%(Ans1a_hint4)%	Try entering '2' in the highlighted field.
+%(Ans1b_hint1)%	If she brings cookies for 2 friends, what is the total number of cookies she will bring?
+%(Ans1b_hint2)%	The variable 'f' stands for the number of friends that Alice is bringing cookies for. Please substitute 2 for the variable 'f' in the algebraic expression 6f + 12.
+%(Ans1b_hint3)%	When you substitute 2 for 'f' in the algebraic equation 6f + 12, you get the numerical expression 6(2)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans1b_hint4)%	Please type '24' in the highlighted field.
+%(Ans2a_hint1)%	What do you already know from reading the question?
+%(Ans2a_hint2)%	To work through question 2, you must first find the number of friends that Alice is bringing cookies for.
+%(Ans2a_hint3)%	Try reading through the question again to find the number of friends.
+%(Ans2a_hint4)%	Try entering '5' in the highlighted field.
+%(Ans2b_hint1)%	If she brings cookies for 5 friends, what is the total number of cookies she will bring?
+%(Ans2b_hint2)%	The variable 'f' stands for the number of friends that Alice is bringing cookies for. Please substitute 5 for the variable 'f' in the algebraic expression 6f + 12.
+%(Ans2b_hint3)%	When you substitute 5 for 'f' in the algebraic equation 6f + 12, you get the numerical expression 6(5)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans2b_hint4)%	Try entering '42' in the highlighted field.
+%(Ans3a_hint1)%	What do you already know from reading the question?
+%(Ans3a_hint2)%	To work through question 3, you must first find the number of friends that Alice is bringing cookies for.
+%(Ans3a_hint3)%	Try reading through the question again to find the number of friends.
+%(Ans3a_hint4)%	Try entering '8' in the highlighted field.
+%(Ans3b_hint1)%	If she brings cookies for 8 friends, what is the total number of cookies she will bring?
+%(Ans3b_hint2)%	The variable 'f' stands for the number of friends that Alice is bringing cookies for. Please substitute 8 for the variable 'f' in the algebraic expression 6f + 12.
+%(Ans3b_hint3)%	When you substitute 8 for 'f' in the algebraic equation 6f + 12, you get the numerical expression 6(8)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans3b_hint4)%	Try entering '60' in the highlighted field.
+%(Ans4a_hint1)%	What do you already know from reading the question?
+%(Ans4a_hint2)%	To work through question 4, you must first find the number of friends that Alice is bringing cookies for.
+%(Ans4a_hint3)%	Try reading through the question again to find the number of friends.
+%(Ans4a_hint4)%	Try entering '10' in the highlighted field.
+%(Ans4b_hint1)%	If she brings cookies for 10 friends, what is the total number of cookies she will bring?
+%(Ans4b_hint2)%	The variable 'f' stands for the number of friends that Alice is bringing cookies for. Please substitute 10 for the variable 'f' in the algebraic expression 6f + 12.
+%(Ans4b_hint3)%	When you substitute 10 for 'f' in the algebraic equation 6f + 12, you get the numerical expression 6(10)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans4b_hint4)%	Try entering '72' in the highlighted field.
+%(DONE_hint1)%	Great job! You've successfully completed this problem!
+%(DONE_hint2)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	12
+%(bug2)%	30
+%(bug3)%	48
+%(bug4)%	60
+%(error_messageb)%	You forgot to add the original 12 cookies to your calculations. Please try again.
+%(-693712474793275334)%	Try reading through the question again to find the number of friends.
+%(-3741766123344482753)%	When you substitute 5 for 'f' in the algebraic equation 6f + 12, you get the numerical expression 6(5)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-6901952857503427095)%	What do you already know from reading the question?
+%(5645093929203651144)%	Try reading through the question again to find the number of friends.
+%(7906032719770737336)%	To work through question 1, you must first find the number of friends that Alice is bringing cookies for.
+%(-5166532556208710060)%	No, this is not correct.
+%(-3741765123324482718)%	The variable 'f' stands for the number of friends that Alice is bringing cookies for. Please substitute 5 for the variable 'f' in the algebraic expression 6f + 12.
+%(-3741763123312482704)%	Try entering '42' in the highlighted field.
+%(-6701245271824411299)%	When you substitute 10 for 'f' in the algebraic equation 6f + 12, you get the numerical expression 6(10)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(7906031719766737317)%	Try reading through the question again to find the number of friends Alice wants to give cookies.
+%(-7730308470554465238)%	Great job! You've successfully completed this problem!
+%(-6901949857471427038)%	To work through question 3, you must first find the number of friends that Alice is bringing cookies for.
+%(2866120199660265791)%	The variable 'f' stands for the number of friends that Alice is bringing cookies for. Please substitute 2 for the variable 'f' in the algebraic expression 6f + 12.
+%(7906030719758737322)%	Try entering '2' in the highlighted field.
+%(-7730309470642465495)%	Please proceed to the next problem by clicking the "Done" button.
+%(-693713474781275369)%	To work through question 4, you must first find the number of friends that Alice is bringing cookies for.
+%(5162537381742577495)%	Please enter '30' in the highlighted field.
+%(-8865737956518473063)%	Please enter '60' in the highlighted field.
+%(7137232941922575413)%	The variable 'f' stands for the number of friends that Alice is bringing cookies for. Please substitute 8 for the variable 'f' in the algebraic expression 6f + 12.
+%(5645092929199651189)%	To work through question 2, you must first find the number of friends that Alice is bringing cookies for.
+%(7906033719794737403)%	What do you already know from reading the question?
+%(7137235941890575246)%	If she brings cookies for 8 friends, what is the total number of cookies she will bring?
+%(-693714474789275388)%	What do you already know from reading the question?
+%(7137233941926575368)%	When you substitute 8 for 'f' in the algebraic equation 6f + 12, you get the numerical expression 6(8)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(2866121199680265826)%	When you substitute 2 for 'f' in the algebraic equation 6f + 12, you get the numerical expression 6(2)+12. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-693711474785275339)%	Try entering '10' in the highlighted field.
+%(2866119199652265772)%	If she brings cookies for 2 friends, what is the total number of cookies she will bring?
+%(5645095929167651022)%	What do you already know from reading the question?
+%(5645090929203651159)%	Try entering '5' in the highlighted field.
+%(-6701243271828411277)%	If she brings cookies for 10 friends, what is the total number of cookies she will bring?
+%(2577276927472933268)%	Please enter '48' in the highlighted field.
+%(2866122199688265853)%	Please type '24' in the highlighted field.
+%(-6701244271820411312)%	The variable 'f' stands for the number of friends that Alice is bringing cookies for. Please substitute 10 for the variable 'f' in the algebraic expression 6f + 12.
+%(-1181211822711671689)%	You forgot to add the original 12 cookies to your calculations. Please try again.
+%(-4496519548807638142)%	Please enter '12' in the highlighted field.
+%(-6901950857491427073)%	Try reading through the question again to find the number of friends.
+%(7137230941926575383)%	Try entering '60' in the highlighted field.
+%(-3741768123356482775)%	If she brings cookies for 5 friends, what is the total number of cookies she will bring?
+%(-6901947857459427024)%	Try entering '8' in the highlighted field.
+%(-6701246271832411326)%	Try entering '72' in the highlighted field.
+Problem Name	Problem4
+%(startStateNodeName)%	
+%(problem_statement)%	Danny wants to buy his mom a bottle of her favorite perfume for her birthday, but he only has $14 in his piggy bank. Danny's parents give him an allowance of $5 every week, so he decides to save money until he can afford to buy the expensive perfume. To calculate how much money he will have after saving, Danny uses the following formula:
+%(formula1)%	Let w = the number of weeks Danny has been saving
+%(formula2)%	The amount of money in Danny's piggy bank = 5w + 14
+%(question1)%	(1) How much money does Danny have after 1 week of saving?
+%(question2)%	(2) How much money will Danny have after 3 weeks of saving?
+%(question3)%	(3) After 4 weeks of saving, how much money will Danny have?
+%(question4)%	(4) How much money will Danny have after 6 weeks of saving?
+%(questions)%	(1) How much money does Danny have after 1 week of saving?<br><br>(2) How much money will Danny have after 3 weeks of saving?<br><br>(3) After 4 weeks of saving, how much money will Danny have?<br><br>(4) How much money will Danny have after 6 weeks of saving?
+%(heading1)%	Number of weeks Danny has been saving
+%(heading2)%	Amount of money in Danny's piggy bank.
+%(unit1)%	weeks
+%(unit2)%	dollars
+%(expression1)%	w
+%(expression2)%	5w + 14
+%(Ans1_a)%	1
+%(Ans1_b)%	19
+%(Ans2_a)%	3
+%(Ans2_b)%	29
+%(Ans3_a)%	4
+%(Ans3_b)%	34
+%(Ans4_a)%	6
+%(Ans4_b)%	44
+	
+%(Ans1a_hint1)%	What do you already know from reading the question?
+%(Ans1a_hint2)%	To work through question 1, you must first find the number of weeks that have passed since Danny began saving.
+%(Ans1a_hint3)%	Try reading through the question again to find the number of weeks that have gone by.
+%(Ans1a_hint4)%	Try entering '1' in the highlighted field.
+%(Ans1b_hint1)%	If Danny saved for 1 week, what is the total amount of money in his piggy bank?
+%(Ans1b_hint2)%	The variable 'w' stands for the number of weeks Danny saved up for. Please substitute 1 for the variable 'w' in the algebraic expression 5w + 14.
+%(Ans1b_hint3)%	When you substitute 1 for 'w' in the algebraic equation 5w + 14, you get the numerical expression 5(1)+14. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans1b_hint4)%	Please type '19' in the highlighted field.
+%(Ans2a_hint1)%	What do you already know from reading the question?
+%(Ans2a_hint2)%	To work through question 2, you must first find the number of weeks that have passed since Danny began saving.
+%(Ans2a_hint3)%	Try reading through the question again to find the weeks that have gone by.
+%(Ans2a_hint4)%	Try entering '3' in the highlighted field.
+%(Ans2b_hint1)%	If Danny saved for 3 weeks, what is the total amount of money in his piggy bank?
+%(Ans2b_hint2)%	The variable 'w' stands for the number of weeks Danny saved up for. Please substitute 3 for the variable 'w' in the algebraic expression 5w + 14.
+%(Ans2b_hint3)%	When you substitute 3 for 'w' in the algebraic equation 5w + 14, you get the numerical expression 5(3)+14. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans2b_hint4)%	Try entering '29' in the highlighted field.
+%(Ans3a_hint1)%	What do you already know from reading the question?
+%(Ans3a_hint2)%	To work through question 3, you must first find the number of weeks that have passed since Danny began saving.
+%(Ans3a_hint3)%	Try reading through the question again to find the weeks that have gone by.
+%(Ans3a_hint4)%	Try entering '4' in the highlighted field.
+%(Ans3b_hint1)%	If Danny saved for 4 weeks, what is the total amount of money in his piggy bank?
+%(Ans3b_hint2)%	The variable 'w' stands for the number of weeks Danny saved up for. Please substitute 4 for the variable 'w' in the algebraic expression 5w + 14.
+%(Ans3b_hint3)%	When you substitute 4 for 'w' in the algebraic equation 5w + 14, you get the numerical expression 5(4)+14. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans3b_hint4)%	Try entering '34' in the highlighted field.
+%(Ans4a_hint1)%	What do you already know from reading the question?
+%(Ans4a_hint2)%	To work through question 2, you must first find the number of weeks that have passed since Danny began saving.
+%(Ans4a_hint3)%	Try reading through the question again to find the weeks that have gone by.
+%(Ans4a_hint4)%	Try entering '6' in the highlighted field.
+%(Ans4b_hint1)%	If Danny saved for 6 weeks, what is the total amount of money in his piggy bank?
+%(Ans4b_hint2)%	The variable 'w' stands for the number of weeks Danny saved up for. Please substitute 6 for the variable 'w' in the algebraic expression 5w + 14.
+%(Ans4b_hint3)%	When you substitute 6 for 'w' in the algebraic equation 5w + 14, you get the numerical expression 5(6)+14. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans4b_hint4)%	Try entering '44' in the highlighted field.
+%(DONE_hint1)%	Great job! You've successfully completed this problem!
+%(DONE_hint2)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	5
+%(bug2)%	15
+%(bug3)%	20
+%(bug4)%	30
+%(error_messageb)%	You forgot to add the original $14 to your calculations. Please try again.
+%(-693712474793275334)%	Try reading through the question again to find the weeks that have gone by.
+%(-3741766123344482753)%	When you substitute 3 for 'w' in the algebraic equation 5w + 14, you get the numerical expression 5(3)+14. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-6901952857503427095)%	What do you already know from reading the question?
+%(5645093929203651144)%	Try reading through the question again to find the weeks that have gone by.
+%(7906032719770737336)%	To work through question 1, you must first find the number of weeks that have passed since Danny began saving.
+%(-5166532556208710060)%	No, this is not correct.
+%(-3741765123324482718)%	The variable 'w' stands for the number of weeks Danny saved up for. Please substitute 3 for the variable 'w' in the algebraic expression 5w + 14.
+%(-3741763123312482704)%	Try entering '29' in the highlighted field.
+%(-6701245271824411299)%	When you substitute 6 for 'w' in the algebraic equation 5w + 14, you get the numerical expression 5(6)+14. Please do the arithmetic and enter the answer in the highlighted cell.
+%(7906031719766737317)%	Try reading through the question again to find the number of weeks that have gone by.
+%(-7730308470554465238)%	Great job! You've successfully completed this problem!
+%(-6901949857471427038)%	To work through question 3, you must first find the number of weeks that have passed since Danny began saving.
+%(2866120199660265791)%	The variable 'w' stands for the number of weeks Danny saved up for. Please substitute 1 for the variable 'w' in the algebraic expression 5w + 14.
+%(7906030719758737322)%	Try entering '1' in the highlighted field.
+%(-7730309470642465495)%	Please proceed to the next problem by clicking the "Done" button.
+%(-693713474781275369)%	To work through question 2, you must first find the number of weeks that have passed since Danny began saving.
+%(5162537381742577495)%	Please enter '15' in the highlighted field.
+%(-8865737956518473063)%	Please enter '30' in the highlighted field.
+%(7137232941922575413)%	The variable 'w' stands for the number of weeks Danny saved up for. Please substitute 4 for the variable 'w' in the algebraic expression 5w + 14.
+%(5645092929199651189)%	To work through question 2, you must first find the number of weeks that have passed since Danny began saving.
+%(7906033719794737403)%	What do you already know from reading the question?
+%(7137235941890575246)%	If Danny saved for 4 weeks, what is the total amount of money in his piggy bank?
+%(-693714474789275388)%	What do you already know from reading the question?
+%(7137233941926575368)%	When you substitute 4 for 'w' in the algebraic equation 5w + 14, you get the numerical expression 5(4)+14. Please do the arithmetic and enter the answer in the highlighted cell.
+%(2866121199680265826)%	When you substitute 1 for 'w' in the algebraic equation 5w + 14, you get the numerical expression 5(1)+14. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-693711474785275339)%	Try entering '6' in the highlighted field.
+%(2866119199652265772)%	If Danny saved for 1 week, what is the total amount of money in his piggy bank?
+%(5645095929167651022)%	What do you already know from reading the question?
+%(5645090929203651159)%	Try entering '3' in the highlighted field.
+%(-6701243271828411277)%	If Danny saved for 6 weeks, what is the total amount of money in his piggy bank?
+%(2577276927472933268)%	Please enter '20' in the highlighted field.
+%(2866122199688265853)%	Please type '19' in the highlighted field.
+%(-6701244271820411312)%	The variable 'w' stands for the number of weeks Danny saved up for. Please substitute 6 for the variable 'w' in the algebraic expression 5w + 14.
+%(-1181211822711671689)%	You forgot to add the original $14 to your calculations. Please try again.
+%(-4496519548807638142)%	Please enter '5' in the highlighted field.
+%(-6901950857491427073)%	Try reading through the question again to find the weeks that have gone by.
+%(7137230941926575383)%	Try entering '34' in the highlighted field.
+%(-3741768123356482775)%	If Danny saved for 3 weeks, what is the total amount of money in his piggy bank?
+%(-6901947857459427024)%	Try entering '4' in the highlighted field.
+%(-6701246271832411326)%	Try entering '44' in the highlighted field.
+Problem Name	Problem5
+%(startStateNodeName)%	
+%(problem_statement)%	Wonder World, a local amusement park, just opened for the season and Emily's class is taking an all-day field trip there. Emily's parents buy her enough tickets in advance to give her best friend 20 tickets and go on as many rides as she wants. It takes 4 tickets to ride one ride. Emily keeps track of how many tickets she has used up at the park by using the following formula:
+%(formula1)%	Let r = the rides Emily has ridden
+%(formula2)%	The number of tickets Emily has used = 4r + 20
+%(question1)%	(1) After 1 ride, how many tickets has Emily used?
+%(question2)%	(2) How many tickets has Emily used after 2 rides?
+%(question3)%	(3) Before lunch Emily has already ridden 10 rides. How many tickets has she used?
+%(question4)%	(4) At the end of the day, she had ridden 25 rides. How many tickets has she used?
+%(questions)%	(1) After 1 ride, how many tickets has Emily used?<br><br>(2) How many tickets has Emily used after 2 rides?<br><br>(3) Before lunch Emily has already ridden 10 rides. How many tickets has she used?<br><br>(4) At the end of the day, she had ridden 25 rides. How many tickets has she used?
+%(heading1)%	Number of rides Emily has ridden
+%(heading2)%	Number of tickets Emily has used
+%(unit1)%	rides
+%(unit2)%	tickets
+%(expression1)%	r
+%(expression2)%	4r + 20
+%(Ans1_a)%	1
+%(Ans1_b)%	24
+%(Ans2_a)%	2
+%(Ans2_b)%	28
+%(Ans3_a)%	10
+%(Ans3_b)%	60
+%(Ans4_a)%	25
+%(Ans4_b)%	120
+	
+%(Ans1a_hint1)%	What do you already know from reading the question?
+%(Ans1a_hint2)%	To work through question 1, you must first find the number of rides Emily went on in Wonder World.
+%(Ans1a_hint3)%	Try reading through the question again to find the number of rides she went on.
+%(Ans1a_hint4)%	Try entering '1' in the highlighted field.
+%(Ans1b_hint1)%	If Emily rode 1 ride, what is the total number of tickets she used?
+%(Ans1b_hint2)%	The variable 'r' stands for the number of rides Emily went on. Please substitute 1 for the variable 'r' in the algebraic expression 4r + 20.
+%(Ans1b_hint3)%	When you substitute 1 for 'r' in the algebraic equation 4r + 20, you get the numerical expression 4(1)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans1b_hint4)%	Please type '24' in the highlighted field.
+%(Ans2a_hint1)%	What do you already know from reading the question?
+%(Ans2a_hint2)%	To work through question 2, you must first find the number of rides Emily went on in Wonder World.
+%(Ans2a_hint3)%	Try reading through the question again to find the number of rides she went on.
+%(Ans2a_hint4)%	Try entering '2' in the highlighted field.
+%(Ans2b_hint1)%	If Emily rode 2 rides, what is the total number of tickets she used?
+%(Ans2b_hint2)%	The variable 'r' stands for the number of rides Emily went on. Please substitute 2 for the variable 'r' in the algebraic expression 4r + 20.
+%(Ans2b_hint3)%	When you substitute 2 for 'r' in the algebraic equation 4r + 20, you get the numerical expression 4(2)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans2b_hint4)%	Try entering '28' in the highlighted field.
+%(Ans3a_hint1)%	What do you already know from reading the question?
+%(Ans3a_hint2)%	To work through question 3, you must first find the number of rides Emily went on in Wonder World.
+%(Ans3a_hint3)%	Try reading through the question again to find the number of rides she went on.
+%(Ans3a_hint4)%	Try entering '10' in the highlighted field.
+%(Ans3b_hint1)%	If Emily rode 10 rides, what is the total number of tickets she used?
+%(Ans3b_hint2)%	The variable 'r' stands for the number of rides Emily went on. Please substitute 10 for the variable 'r' in the algebraic expression 4r + 20.
+%(Ans3b_hint3)%	When you substitute 10 for 'r' in the algebraic equation 4r + 20, you get the numerical expression 4(10)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans3b_hint4)%	Try entering '60' in the highlighted field.
+%(Ans4a_hint1)%	What do you already know from reading the question?
+%(Ans4a_hint2)%	To work through question 4, you must first find the number of rides Emily went on in Wonder World.
+%(Ans4a_hint3)%	Try reading through the question again to find the number of rides she went on.
+%(Ans4a_hint4)%	Try entering '25' in the highlighted field.
+%(Ans4b_hint1)%	If Emily rode 25 rides, what is the total number of tickets she used?
+%(Ans4b_hint2)%	The variable 'r' stands for the number of rides Emily went on. Please substitute 25 for the variable 'r' in the algebraic expression 4r + 20.
+%(Ans4b_hint3)%	When you substitute 25 for 'r' in the algebraic equation 4r + 20, you get the numerical expression 4(25)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans4b_hint4)%	Try entering '120' in the highlighted field.
+%(DONE_hint1)%	Great job! You've successfully completed this problem!
+%(DONE_hint2)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	4
+%(bug2)%	8
+%(bug3)%	40
+%(bug4)%	100
+%(error_messageb)%	You forgot to add the original 20 tickets that Emily used to get into the park to your calculations. Please try again.
+%(-693712474793275334)%	Try reading through the question again to find the number of rides she went on.
+%(-3741766123344482753)%	When you substitute 2 for 'r' in the algebraic equation 4r + 20, you get the numerical expression 4(2)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-6901952857503427095)%	What do you already know from reading the question?
+%(5645093929203651144)%	Try reading through the question again to find the number of rides she went on.
+%(7906032719770737336)%	To work through question 1, you must first find the number of rides Emily went on in Wonder World.
+%(-5166532556208710060)%	No, this is not correct.
+%(-3741765123324482718)%	The variable 'r' stands for the number of rides Emily went on. Please substitute 2 for the variable 'r' in the algebraic expression 4r + 20.
+%(-3741763123312482704)%	Try entering '28' in the highlighted field.
+%(-6701245271824411299)%	When you substitute 25 for 'r' in the algebraic equation 4r + 20, you get the numerical expression 4(25)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(7906031719766737317)%	Try reading through the question again to find the number of rides she went on.
+%(-7730308470554465238)%	Great job! You've successfully completed this problem!
+%(-6901949857471427038)%	To work through question 3, you must first find the number of rides Emily went on in Wonder World.
+%(2866120199660265791)%	The variable 'r' stands for the number of rides Emily went on. Please substitute 1 for the variable 'r' in the algebraic expression 4r + 20.
+%(7906030719758737322)%	Try entering '1' in the highlighted field.
+%(-7730309470642465495)%	Please proceed to the next problem by clicking the "Done" button.
+%(-693713474781275369)%	To work through question 4, you must first find the number of rides Emily went on in Wonder World.
+%(5162537381742577495)%	Please enter '8' in the highlighted field.
+%(-8865737956518473063)%	Please enter '100' in the highlighted field.
+%(7137232941922575413)%	The variable 'r' stands for the number of rides Emily went on. Please substitute 10 for the variable 'r' in the algebraic expression 4r + 20.
+%(5645092929199651189)%	To work through question 2, you must first find the number of rides Emily went on in Wonder World.
+%(7906033719794737403)%	What do you already know from reading the question?
+%(7137235941890575246)%	If Emily rode 10 rides, what is the total number of tickets she used?
+%(-693714474789275388)%	What do you already know from reading the question?
+%(7137233941926575368)%	When you substitute 10 for 'r' in the algebraic equation 4r + 20, you get the numerical expression 4(10)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(2866121199680265826)%	When you substitute 1 for 'r' in the algebraic equation 4r + 20, you get the numerical expression 4(1)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-693711474785275339)%	Try entering '25' in the highlighted field.
+%(2866119199652265772)%	If Emily rode 1 ride, what is the total number of tickets she used?
+%(5645095929167651022)%	What do you already know from reading the question?
+%(5645090929203651159)%	Try entering '2' in the highlighted field.
+%(-6701243271828411277)%	If Emily rode 25 rides, what is the total number of tickets she used?
+%(2577276927472933268)%	Please enter '40' in the highlighted field.
+%(2866122199688265853)%	Please type '24' in the highlighted field.
+%(-6701244271820411312)%	The variable 'r' stands for the number of rides Emily went on. Please substitute 25 for the variable 'r' in the algebraic expression 4r + 20.
+%(-1181211822711671689)%	You forgot to add the original 20 tickets that Emily used to get into the park to your calculations. Please try again.
+%(-4496519548807638142)%	Please enter '4' in the highlighted field.
+%(-6901950857491427073)%	Try reading through the question again to find the number of rides she went on.
+%(7137230941926575383)%	Try entering '60' in the highlighted field.
+%(-3741768123356482775)%	If Emily rode 2 rides, what is the total number of tickets she used?
+%(-6901947857459427024)%	Try entering '10' in the highlighted field.
+%(-6701246271832411326)%	Try entering '120' in the highlighted field.
+Problem Name	Problem6
+%(startStateNodeName)%	
+%(problem_statement)%	There are 10 students in Mr. Whistler's advanced art class and they have decided to enter the city-wide art competition. Not only will it be fun to work together on a big project, but a big check goes to the winning group. Each student contributes $5 for supplies for the competition. The students use the following formula to determine how much they will individually receive from the winnings.
+%(formula1)%	Let p = the prize money for wining the art competition
+%(formula2)%	Share of the winnings for easels = p/10 - 5
+%(question1)%	(1) If the grand prize is $500, how much will each student receive?
+%(question2)%	(2) If the grand prize is $600, how much will each student receive?
+%(question3)%	(3) How much will each student receive if the grand prize is worth $800?
+%(question4)%	(4) How much will each student receive if the grand prize is $1000?
+%(questions)%	(1) If the grand prize is $500, how much will each student receive?<br><br>(2) If the grand prize is $600, how much will each student receive?<br><br>(3) How much will each student receive if the grand prize is worth $800?<br><br>(4) How much will each student receive if the grand prize is $1000?
+%(heading1)%	Prize for the art competition
+%(heading2)%	Amount of money each student receives
+%(unit1)%	dollars
+%(unit2)%	dollars
+%(expression1)%	p
+%(expression2)%	p/10 - 5
+%(Ans1_a)%	500
+%(Ans1_b)%	45
+%(Ans2_a)%	600
+%(Ans2_b)%	55
+%(Ans3_a)%	800
+%(Ans3_b)%	75
+%(Ans4_a)%	1000
+%(Ans4_b)%	95
+	
+%(Ans1a_hint1)%	What do you already know from reading the question?
+%(Ans1a_hint2)%	To work through question 1, you must first find the prize for the competition.
+%(Ans1a_hint3)%	Try reading through the question again to find the prize amount.
+%(Ans1a_hint4)%	Try entering '500' in the highlighted field.
+%(Ans1b_hint1)%	If the prize comes out to be $500, what is the total amount of money that each student receives?
+%(Ans1b_hint2)%	The variable 'p' stands for the prize money. Please substitute 500 for the variable 'p' in the algebraic expression p/10 - 5.
+%(Ans1b_hint3)%	When you substitute 500 for 'p' in the algebraic equation p/10 - 5, you get the numerical expression (500)/10-5. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans1b_hint4)%	Please type '45' in the highlighted field.
+%(Ans2a_hint1)%	What do you already know from reading the question?
+%(Ans2a_hint2)%	To work through question 2, you must first find the prize for the competition.
+%(Ans2a_hint3)%	Try reading through the question again to find the prize amount.
+%(Ans2a_hint4)%	Try entering '600' in the highlighted field.
+%(Ans2b_hint1)%	If the prize comes out to be $600, what is the total amount of money that each student receives?
+%(Ans2b_hint2)%	The variable 'p' stands for the prize money. Please substitute 600 for the variable 'p' in the algebraic expression p/10 - 5.
+%(Ans2b_hint3)%	When you substitute 600 for 'p' in the algebraic equation p/10 - 5, you get the numerical expression (600)/10-5. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans2b_hint4)%	Try entering '55' in the highlighted field.
+%(Ans3a_hint1)%	What do you already know from reading the question?
+%(Ans3a_hint2)%	To work through question 3, you must first find the prize for the competition.
+%(Ans3a_hint3)%	Try reading through the question again to find the prize amount.
+%(Ans3a_hint4)%	Try entering '800' in the highlighted field.
+%(Ans3b_hint1)%	If the prize comes out to be $800, what is the total amount of money that each student receives?
+%(Ans3b_hint2)%	The variable 'p' stands for the prize money. Please substitute 800 for the variable 'p' in the algebraic expression p/10 - 5.
+%(Ans3b_hint3)%	When you substitute 800 for 'p' in the algebraic equation p/10 - 5, you get the numerical expression (800)/10-5. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans3b_hint4)%	Try entering '75' in the highlighted field.
+%(Ans4a_hint1)%	What do you already know from reading the question?
+%(Ans4a_hint2)%	To work through question 4, you must first find the prize for the competition.
+%(Ans4a_hint3)%	Try reading through the question again to find the prize amount.
+%(Ans4a_hint4)%	Try entering '1000' in the highlighted field.
+%(Ans4b_hint1)%	If the prize comes out to be $1000, what is the total amount of money that each student receives?
+%(Ans4b_hint2)%	The variable 'p' stands for the prize money. Please substitute 1000 for the variable 'p' in the algebraic expression p/10 - 5.
+%(Ans4b_hint3)%	When you substitute 1000 for 'p' in the algebraic equation p/10 - 5, you get the numerical expression (1000)/10-5. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans4b_hint4)%	Try entering '95' in the highlighted field.
+%(DONE_hint1)%	Great job! You've successfully completed this problem!
+%(DONE_hint2)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	50
+%(bug2)%	60
+%(bug3)%	80
+%(bug4)%	100
+%(error_messageb)%	You forgot to subtract the original $5 each student contributed from your calculations. Please try again.
+%(-693712474793275334)%	Try reading through the question again to find the prize amount.
+%(-3741766123344482753)%	When you substitute 600 for 'p' in the algebraic equation p/10 - 5, you get the numerical expression (600)/10-5. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-6901952857503427095)%	What do you already know from reading the question?
+%(5645093929203651144)%	Try reading through the question again to find the prize amount.
+%(7906032719770737336)%	To work through question 1, you must first find the prize for the competition.
+%(-5166532556208710060)%	No, this is not correct.
+%(-3741765123324482718)%	The variable 'p' stands for the prize money. Please substitute 600 for the variable 'p' in the algebraic expression p/10 - 5.
+%(-3741763123312482704)%	Try entering '55' in the highlighted field.
+%(-6701245271824411299)%	When you substitute 1000 for 'p' in the algebraic equation p/10 - 5, you get the numerical expression (1000)/10-5. Please do the arithmetic and enter the answer in the highlighted cell.
+%(7906031719766737317)%	Try reading through the question again to find the prize amount.
+%(-7730308470554465238)%	Great job! You've successfully completed this problem!
+%(-6901949857471427038)%	To work through question 3, you must first find the prize for the competition.
+%(2866120199660265791)%	The variable 'p' stands for the prize money. Please substitute 500 for the variable 'p' in the algebraic expression p/10 - 5.
+%(7906030719758737322)%	Try entering '500' in the highlighted field.
+%(-7730309470642465495)%	Please proceed to the next problem by clicking the "Done" button.
+%(-693713474781275369)%	To work through question 4, you must first find the prize for the competition.
+%(5162537381742577495)%	Please enter '60' in the highlighted field.
+%(-8865737956518473063)%	Please enter '100' in the highlighted field.
+%(7137232941922575413)%	The variable 'p' stands for the prize money. Please substitute 800 for the variable 'p' in the algebraic expression p/10 - 5.
+%(5645092929199651189)%	To work through question 2, you must first find the prize for the competition.
+%(7906033719794737403)%	What do you already know from reading the question?
+%(7137235941890575246)%	If the prize comes out to be $800, what is the total amount of money that each student receives?
+%(-693714474789275388)%	What do you already know from reading the question?
+%(7137233941926575368)%	When you substitute 800 for 'p' in the algebraic equation p/10 - 5, you get the numerical expression (800)/10-5. Please do the arithmetic and enter the answer in the highlighted cell.
+%(2866121199680265826)%	When you substitute 500 for 'p' in the algebraic equation p/10 - 5, you get the numerical expression (500)/10-5. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-693711474785275339)%	Try entering '1000' in the highlighted field.
+%(2866119199652265772)%	If the prize comes out to be $500, what is the total amount of money that each student receives?
+%(5645095929167651022)%	What do you already know from reading the question?
+%(5645090929203651159)%	Try entering '600' in the highlighted field.
+%(-6701243271828411277)%	If the prize comes out to be $1000, what is the total amount of money that each student receives?
+%(2577276927472933268)%	Please enter '80' in the highlighted field.
+%(2866122199688265853)%	Please type '45' in the highlighted field.
+%(-6701244271820411312)%	The variable 'p' stands for the prize money. Please substitute 1000 for the variable 'p' in the algebraic expression p/10 - 5.
+%(-1181211822711671689)%	You forgot to subtract the original $5 each student contributed from your calculations. Please try again.
+%(-4496519548807638142)%	Please enter '50' in the highlighted field.
+%(-6901950857491427073)%	Try reading through the question again to find the prize amount.
+%(7137230941926575383)%	Try entering '75' in the highlighted field.
+%(-3741768123356482775)%	If the prize comes out to be $600, what is the total amount of money that each student receives?
+%(-6901947857459427024)%	Try entering '800' in the highlighted field.
+%(-6701246271832411326)%	Try entering '95' in the highlighted field.
+Problem Name	Problem7
+%(startStateNodeName)%	
+%(problem_statement)%	Susie has a bad habit of spending all of the money her parents give her for her allowance, and now she wants to try to save some of it. She gathers up all of the money she has, counts that it is $20, and puts it in a piggy bank. She decides to put 1/5 of her allowance into the bank over the next year, keeping the rest to spend on herself (old habits die hard!). Curious about how much money she will have to buy toys and candy at the end of the year, Susie uses the following formula to calculate how much she will have saved.
+%(formula1)%	Let a = the allowance Susie gets over the year
+%(formula2)%	The total amount of Susie's savings = a/5 + 20
+%(question1)%	(1) If Susie's parents give her $100 over the next year, how much will she have saved?
+%(question2)%	(2) If Susie's allowance for the next year is $150, how much will she have saved?
+%(question3)%	(3) If Susie's allowance for the next year is $200, how much will she have saved?
+%(question4)%	(4) If Susie's parents give her $300 over the next year, how much will she have saved?
+%(questions)%	(1) If Susie's parents give her $100 over the next year, how much will she have saved?<br>(2) If Susie's allowance for the next year is $150, how much will she have saved?<br>(3) If Susie's allowance for the next year is $200, how much will she have saved?<br>(4) If Susie's parents give her $300 over the next year, how much will she have saved?
+%(heading1)%	Amount of money Susie receives
+%(heading2)%	Amount of money Susie has saved
+%(unit1)%	dollars
+%(unit2)%	dollars
+%(expression1)%	a
+%(expression2)%	a/5 + 20
+%(Ans1_a)%	100
+%(Ans1_b)%	40
+%(Ans2_a)%	150
+%(Ans2_b)%	50
+%(Ans3_a)%	200
+%(Ans3_b)%	60
+%(Ans4_a)%	300
+%(Ans4_b)%	80
+	
+%(Ans1a_hint1)%	What do you already know from reading the question?
+%(Ans1a_hint2)%	To work through question 1, you must first find the amount of money that Susie received for her allowance.
+%(Ans1a_hint3)%	Try reading through the question again to find the amount of money Susie has been given.
+%(Ans1a_hint4)%	Try entering '100' in the highlighted field.
+%(Ans1b_hint1)%	If Susie is given $100 over the year, what is the total amount of money in her piggy bank?
+%(Ans1b_hint2)%	The variable 'a' stands for the allowance Susie is given. Please substitute 100 for the variable 'a' in the algebraic expression a/5 + 20.
+%(Ans1b_hint3)%	When you substitute 100 for 'a' in the algebraic equation a/5 + 20, you get the numerical expression (100)/5+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans1b_hint4)%	Please type '40' in the highlighted field.
+%(Ans2a_hint1)%	What do you already know from reading the question?
+%(Ans2a_hint2)%	To work through question 2, you must first find the amount of money that Susie received for her allowance.
+%(Ans2a_hint3)%	Try reading through the question again to find the amount of money Susie has been given.
+%(Ans2a_hint4)%	Try entering '150' in the highlighted field.
+%(Ans2b_hint1)%	If Susie is given $150 over the year, what is the total amount of money in her piggy bank?
+%(Ans2b_hint2)%	The variable 'a' stands for the allowance Susie is given. Please substitute 150 for the variable 'a' in the algebraic expression a/5 + 20.
+%(Ans2b_hint3)%	When you substitute 150 for 'a' in the algebraic equation a/5 + 20, you get the numerical expression (150)/5+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans2b_hint4)%	Try entering '50' in the highlighted field.
+%(Ans3a_hint1)%	What do you already know from reading the question?
+%(Ans3a_hint2)%	To work through question 3, you must first find the amount of money that Susie received for her allowance.
+%(Ans3a_hint3)%	Try reading through the question again to find the amount of money Susie has been given.
+%(Ans3a_hint4)%	Try entering '200' in the highlighted field.
+%(Ans3b_hint1)%	If Susie is given $200 over the year, what is the total amount of money in her piggy bank?
+%(Ans3b_hint2)%	The variable 'a' stands for the allowance Susie is given. Please substitute 200 for the variable 'a' in the algebraic expression a/5 + 20.
+%(Ans3b_hint3)%	When you substitute 200 for 'a' in the algebraic equation a/5 + 20, you get the numerical expression (200)/5+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans3b_hint4)%	Try entering '60' in the highlighted field.
+%(Ans4a_hint1)%	What do you already know from reading the question?
+%(Ans4a_hint2)%	To work through question 4, you must first find the amount of money that Susie received for her allowance.
+%(Ans4a_hint3)%	Try reading through the question again to find the amount of money Susie has been given.
+%(Ans4a_hint4)%	Try entering '300' in the highlighted field.
+%(Ans4b_hint1)%	If Susie is given $300 over the year, what is the total amount of money in her piggy bank?
+%(Ans4b_hint2)%	The variable 'a' stands for the allowance Susie is given. Please substitute 300 for the variable 'a' in the algebraic expression a/5 + 20.
+%(Ans4b_hint3)%	When you substitute 300 for 'a' in the algebraic equation a/5 + 20, you get the numerical expression (300)/5+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans4b_hint4)%	Try entering '80' in the highlighted field.
+%(DONE_hint1)%	Great job! You've successfully completed this problem!
+%(DONE_hint2)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	20
+%(bug2)%	30
+%(bug3)%	40
+%(bug4)%	60
+%(error_messageb)%	You forgot to add the original $20 Susie collected to your calculations. Please try again.
+%(-693712474793275334)%	Try reading through the question again to find the amount of money Susie has been given.
+%(-3741766123344482753)%	When you substitute 150 for 'a' in the algebraic equation a/5 + 20, you get the numerical expression (150)/5+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-6901952857503427095)%	What do you already know from reading the question?
+%(5645093929203651144)%	Try reading through the question again to find the amount of money Susie has been given.
+%(7906032719770737336)%	To work through question 1, you must first find the amount of money that Susie received for her allowance.
+%(-5166532556208710060)%	No, this is not correct.
+%(-3741765123324482718)%	The variable 'a' stands for the allowance Susie is given. Please substitute 150 for the variable 'a' in the algebraic expression a/5 + 20.
+%(-3741763123312482704)%	Try entering '50' in the highlighted field.
+%(-6701245271824411299)%	When you substitute 300 for 'a' in the algebraic equation a/5 + 20, you get the numerical expression (300)/5+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(7906031719766737317)%	Try reading through the question again to find the amount of money Susie has been given.
+%(-7730308470554465238)%	Great job! You've successfully completed this problem!
+%(-6901949857471427038)%	To work through question 3, you must first find the amount of money that Susie received for her allowance.
+%(2866120199660265791)%	The variable 'a' stands for the allowance Susie is given. Please substitute 100 for the variable 'a' in the algebraic expression a/5 + 20.
+%(7906030719758737322)%	Try entering '100' in the highlighted field.
+%(-7730309470642465495)%	Please proceed to the next problem by clicking the "Done" button.
+%(-693713474781275369)%	To work through question 4, you must first find the amount of money that Susie received for her allowance.
+%(5162537381742577495)%	Please enter '30' in the highlighted field.
+%(-8865737956518473063)%	Please enter '60' in the highlighted field.
+%(7137232941922575413)%	The variable 'a' stands for the allowance Susie is given. Please substitute 200 for the variable 'a' in the algebraic expression a/5 + 20.
+%(5645092929199651189)%	To work through question 2, you must first find the amount of money that Susie received for her allowance.
+%(7906033719794737403)%	What do you already know from reading the question?
+%(7137235941890575246)%	If Susie is given $200 over the year, what is the total amount of money in her piggy bank?
+%(-693714474789275388)%	What do you already know from reading the question?
+%(7137233941926575368)%	When you substitute 200 for 'a' in the algebraic equation a/5 + 20, you get the numerical expression (200)/5+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(2866121199680265826)%	When you substitute 100 for 'a' in the algebraic equation a/5 + 20, you get the numerical expression (100)/5+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-693711474785275339)%	Try entering '300' in the highlighted field.
+%(2866119199652265772)%	If Susie is given $100 over the year, what is the total amount of money in her piggy bank?
+%(5645095929167651022)%	What do you already know from reading the question?
+%(5645090929203651159)%	Try entering '150' in the highlighted field.
+%(-6701243271828411277)%	If Susie is given $300 over the year, what is the total amount of money in her piggy bank?
+%(2577276927472933268)%	Please enter '40' in the highlighted field.
+%(2866122199688265853)%	Please type '40' in the highlighted field.
+%(-6701244271820411312)%	The variable 'a' stands for the allowance Susie is given. Please substitute 300 for the variable 'a' in the algebraic expression a/5 + 20.
+%(-1181211822711671689)%	You forgot to add the original $20 Susie collected to your calculations. Please try again.
+%(-4496519548807638142)%	Please enter '20' in the highlighted field.
+%(-6901950857491427073)%	Try reading through the question again to find the amount of money Susie has been given.
+%(7137230941926575383)%	Try entering '60' in the highlighted field.
+%(-3741768123356482775)%	If Susie is given $150 over the year, what is the total amount of money in her piggy bank?
+%(-6901947857459427024)%	Try entering '200' in the highlighted field.
+%(-6701246271832411326)%	Try entering '80' in the highlighted field.
+Problem Name	Problem8
+%(startStateNodeName)%	
+%(problem_statement)%	Mark and his 3 friends go to a local baseball game. They each paid $25 for a ticket to the game. When they enter the ball park, they are randomly selected to participate in a trivia challenge in which they can win a grand prize. Mark uses the following formula to figure out how much money he can win if they split the grand prize.
+%(formula1)%	Let p = the grand prize for the trivia challenge
+%(formula2)%	The amount of money Mark would win = p/4 - 25
+%(question1)%	(1) If the grand prize is $200, how much would Mark win?
+%(question2)%	(2) If the grand prize is $400, how much would Mark win?
+%(question3)%	(3) How much would Mark win if the grand prize is $800?
+%(question4)%	(4) How much would Mark win if the grand prize is $1200?
+%(questions)%	(1) If the grand prize is $200, how much would Mark win?<br><br>(2) If the grand prize is $400, how much would Mark win?<br><br>(3) How much would Mark win if the grand prize is $800?<br><br>(4) How much would Mark win if the grand prize is $1200?
+%(heading1)%	Grand Prize for the trivia challenge
+%(heading2)%	Amount of money Mark wins
+%(unit1)%	dollars
+%(unit2)%	dollars
+%(expression1)%	p
+%(expression2)%	p/4 - 25
+%(Ans1_a)%	200
+%(Ans1_b)%	25
+%(Ans2_a)%	400
+%(Ans2_b)%	75
+%(Ans3_a)%	800
+%(Ans3_b)%	175
+%(Ans4_a)%	1200
+%(Ans4_b)%	275
+	
+%(Ans1a_hint1)%	What do you already know from reading the question?
+%(Ans1a_hint2)%	To work through question 1, you must first find the total grand prize for the trivia challenge.
+%(Ans1a_hint3)%	Try reading through the question again to find the amount of money being given as the grand prize.
+%(Ans1a_hint4)%	Try entering '200' in the highlighted field.
+%(Ans1b_hint1)%	If the grand prize is worth $200, what is the total amount of money Mark wins?
+%(Ans1b_hint2)%	The variable 'p' stands for the grand prize money. Please substitute 200 for the variable 'p' in the algebraic expression p/4 - 25.
+%(Ans1b_hint3)%	When you substitute 200 for 'p' in the algebraic equation p/4 - 25, you get the numerical expression (200)/4-25. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans1b_hint4)%	Please type '25' in the highlighted field.
+%(Ans2a_hint1)%	What do you already know from reading the question?
+%(Ans2a_hint2)%	To work through question 2, you must first find the total grand prize for the trivia challenge.
+%(Ans2a_hint3)%	Try reading through the question again to find the amount of money being given as the grand prize.
+%(Ans2a_hint4)%	Try entering '400' in the highlighted field.
+%(Ans2b_hint1)%	If the grand prize is worth $400, what is the total amount of money Mark wins?
+%(Ans2b_hint2)%	The variable 'p' stands for the grand prize money. Please substitute 400 for the variable 'p' in the algebraic expression p/4 - 25.
+%(Ans2b_hint3)%	When you substitute 400 for 'p' in the algebraic equation p/4 - 25, you get the numerical expression (400)/4-25. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans2b_hint4)%	Try entering '75' in the highlighted field.
+%(Ans3a_hint1)%	What do you already know from reading the question?
+%(Ans3a_hint2)%	To work through question 3, you must first find the total grand prize for the trivia challenge.
+%(Ans3a_hint3)%	Try reading through the question again to find the amount of money being given as the grand prize.
+%(Ans3a_hint4)%	Try entering '800' in the highlighted field.
+%(Ans3b_hint1)%	If the grand prize is worth $800, what is the total amount of money Mark wins?
+%(Ans3b_hint2)%	The variable 'p' stands for the grand prize money. Please substitute 800 for the variable 'p' in the algebraic expression p/4 - 25.
+%(Ans3b_hint3)%	When you substitute 800 for 'p' in the algebraic equation p/4 - 25, you get the numerical expression (800)/4-25. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans3b_hint4)%	Try entering '175' in the highlighted field.
+%(Ans4a_hint1)%	What do you already know from reading the question?
+%(Ans4a_hint2)%	To work through question 4, you must first find the total grand prize for the trivia challenge.
+%(Ans4a_hint3)%	Try reading through the question again to find the amount of money being given as the grand prize.
+%(Ans4a_hint4)%	Try entering '1200' in the highlighted field.
+%(Ans4b_hint1)%	If the grand prize is worth $1000, what is the total amount of money Mark wins?
+%(Ans4b_hint2)%	The variable 'p' stands for the grand prize money. Please substitute 1000 for the variable 'p' in the algebraic expression p/4 - 25.
+%(Ans4b_hint3)%	When you substitute 1000 for 'p' in the algebraic equation p/4 - 25, you get the numerical expression (1000)/4-25. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans4b_hint4)%	Try entering '275' in the highlighted field.
+%(DONE_hint1)%	Great job! You've successfully completed this problem!
+%(DONE_hint2)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	50
+%(bug2)%	100
+%(bug3)%	200
+%(bug4)%	300
+%(error_messageb)%	You forgot to subtract the original $25 for the ticket to the game from your calculations. Please try again.
+%(-693712474793275334)%	Try reading through the question again to find the amount of money being given as the grand prize.
+%(-3741766123344482753)%	When you substitute 400 for 'p' in the algebraic equation p/4 - 25, you get the numerical expression (400)/4-25. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-6901952857503427095)%	What do you already know from reading the question?
+%(5645093929203651144)%	Try reading through the question again to find the amount of money being given as the grand prize.
+%(7906032719770737336)%	To work through question 1, you must first find the total grand prize for the trivia challenge.
+%(-5166532556208710060)%	No, this is not correct.
+%(-3741765123324482718)%	The variable 'p' stands for the grand prize money. Please substitute 400 for the variable 'p' in the algebraic expression p/4 - 25.
+%(-3741763123312482704)%	Try entering '75' in the highlighted field.
+%(-6701245271824411299)%	When you substitute 1000 for 'p' in the algebraic equation p/4 - 25, you get the numerical expression (1000)/4-25. Please do the arithmetic and enter the answer in the highlighted cell.
+%(7906031719766737317)%	Try reading through the question again to find the amount of money being given as the grand prize.
+%(-7730308470554465238)%	Great job! You've successfully completed this problem!
+%(-6901949857471427038)%	To work through question 3, you must first find the total grand prize for the trivia challenge.
+%(2866120199660265791)%	The variable 'p' stands for the grand prize money. Please substitute 200 for the variable 'p' in the algebraic expression p/4 - 25.
+%(7906030719758737322)%	Try entering '200' in the highlighted field.
+%(-7730309470642465495)%	Please proceed to the next problem by clicking the "Done" button.
+%(-693713474781275369)%	To work through question 4, you must first find the total grand prize for the trivia challenge.
+%(5162537381742577495)%	Please enter '100' in the highlighted field.
+%(-8865737956518473063)%	Please enter '300' in the highlighted field.
+%(7137232941922575413)%	The variable 'p' stands for the grand prize money. Please substitute 800 for the variable 'p' in the algebraic expression p/4 - 25.
+%(5645092929199651189)%	To work through question 2, you must first find the total grand prize for the trivia challenge.
+%(7906033719794737403)%	What do you already know from reading the question?
+%(7137235941890575246)%	If the grand prize is worth $800, what is the total amount of money Mark wins?
+%(-693714474789275388)%	What do you already know from reading the question?
+%(7137233941926575368)%	When you substitute 800 for 'p' in the algebraic equation p/4 - 25, you get the numerical expression (800)/4-25. Please do the arithmetic and enter the answer in the highlighted cell.
+%(2866121199680265826)%	When you substitute 200 for 'p' in the algebraic equation p/4 - 25, you get the numerical expression (200)/4-25. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-693711474785275339)%	Try entering '1200' in the highlighted field.
+%(2866119199652265772)%	If the grand prize is worth $200, what is the total amount of money Mark wins?
+%(5645095929167651022)%	What do you already know from reading the question?
+%(5645090929203651159)%	Try entering '400' in the highlighted field.
+%(-6701243271828411277)%	If the grand prize is worth $1000, what is the total amount of money Mark wins?
+%(2577276927472933268)%	Please enter '200' in the highlighted field.
+%(2866122199688265853)%	Please type '25' in the highlighted field.
+%(-6701244271820411312)%	The variable 'p' stands for the grand prize money. Please substitute 1000 for the variable 'p' in the algebraic expression p/4 - 25.
+%(-1181211822711671689)%	You forgot to subtract the original $25 for the ticket to the game from your calculations. Please try again.
+%(-4496519548807638142)%	Please enter '50' in the highlighted field.
+%(-6901950857491427073)%	Try reading through the question again to find the amount of money being given as the grand prize.
+%(7137230941926575383)%	Try entering '175' in the highlighted field.
+%(-3741768123356482775)%	If the grand prize is worth $400, what is the total amount of money Mark wins?
+%(-6901947857459427024)%	Try entering '800' in the highlighted field.
+%(-6701246271832411326)%	Try entering '275' in the highlighted field.
+Problem Name	Problem9
+%(startStateNodeName)%	
+%(problem_statement)%	Beth's Sunshine Cadet troop is selling boxes of chocolate for $10 per box. The money raised from the sale will go into the troop's charity fund, which already contains $200, to be given to the local children's hospital. Beth offers to calculate how much money the troop has after the chocolate sale is over. She uses the following formula:
+%(formula1)%	Let b = the boxes of chocolates sold
+%(formula2)%	The money in the troop's charity fund = 10b + 200
+%(question1)%	(1) If the troop sells 10 boxes of chocolate, how much money will they have in the fund?
+%(question2)%	(2) If 15 boxes are sold, how much money will the troop have in its charity fund?
+%(question3)%	(3) How much money will be in the charity fund if the troop sells 20 boxes of chocolate?
+%(question4)%	(4) How much money will be in the charity fund if the troop sells 30 boxes of chocolate?
+%(questions)%	(1) If the troop sells 10 boxes of chocolate, how much money will they have in the fund?<br>(2) If 15 boxes are sold, how much money will the troop have in its charity fund?<br>(3) How much money will be in the charity fund if the troop sells 20 boxes of chocolate?<br>(4) How much money will be in the charity fund if the troop sells 30 boxes of chocolate?
+%(heading1)%	Number of boxes of chocolate sold
+%(heading2)%	Total amount in troop's charity fund
+%(unit1)%	boxes
+%(unit2)%	dollars
+%(expression1)%	b
+%(expression2)%	10b + 200
+%(Ans1_a)%	10
+%(Ans1_b)%	300
+%(Ans2_a)%	15
+%(Ans2_b)%	350
+%(Ans3_a)%	20
+%(Ans3_b)%	400
+%(Ans4_a)%	30
+%(Ans4_b)%	500
+	
+%(Ans1a_hint1)%	What do you already know from reading the question?
+%(Ans1a_hint2)%	To work through question 1, you must first find the number of boxes of chocolates sold by the troops.
+%(Ans1a_hint3)%	Try reading through the question again to find the number of boxes sold.
+%(Ans1a_hint4)%	Try entering '10' in the highlighted field.
+%(Ans1b_hint1)%	If the cadets sold 10 boxes, what is the total amount of money in the troop's charity fund?
+%(Ans1b_hint2)%	The variable 'b' stands for the number of boxes sold by the cadets. Please substitute 10 for the variable 'b' in the algebraic expression 10b + 200.
+%(Ans1b_hint3)%	When you substitute 10 for 'b' in the algebraic equation 10b + 200, you get the numerical expression10(10)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans1b_hint4)%	Please type '300' in the highlighted field.
+%(Ans2a_hint1)%	What do you already know from reading the question?
+%(Ans2a_hint2)%	To work through question 2, you must first find the number of boxes of chocolates sold by the troops.
+%(Ans2a_hint3)%	Try reading through the question again to find the number of boxes sold.
+%(Ans2a_hint4)%	Try entering '15' in the highlighted field.
+%(Ans2b_hint1)%	If the cadets sold 15 boxes, what is the total amount of money in the troop's charity fund?
+%(Ans2b_hint2)%	The variable 'b' stands for the number of boxes sold by the cadets. Please substitute 15 for the variable 'b' in the algebraic expression 10b + 200.
+%(Ans2b_hint3)%	When you substitute 15 for 'b' in the algebraic equation 10b + 200, you get the numerical expression10(15)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans2b_hint4)%	Try entering '350' in the highlighted field.
+%(Ans3a_hint1)%	What do you already know from reading the question?
+%(Ans3a_hint2)%	To work through question 3, you must first find the number of boxes of chocolates sold by the troops.
+%(Ans3a_hint3)%	Try reading through the question again to find the number of boxes sold.
+%(Ans3a_hint4)%	Try entering '20' in the highlighted field.
+%(Ans3b_hint1)%	If the cadets sold 20 boxes, what is the total amount of money in the troop's charity fund?
+%(Ans3b_hint2)%	The variable 'b' stands for the number of boxes sold by the cadets. Please substitute 20 for the variable 'b' in the algebraic expression 10b + 200.
+%(Ans3b_hint3)%	When you substitute 20 for 'b' in the algebraic equation 10b + 200, you get the numerical expression10(20)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans3b_hint4)%	Try entering '400' in the highlighted field.
+%(Ans4a_hint1)%	What do you already know from reading the question?
+%(Ans4a_hint2)%	To work through question 4, you must first find the number of boxes of chocolates sold by the troops.
+%(Ans4a_hint3)%	Try reading through the question again to find the number of boxes sold.
+%(Ans4a_hint4)%	Try entering '30' in the highlighted field.
+%(Ans4b_hint1)%	If the cadets sold 30 boxes, what is the total amount of money in the troop's charity fund?
+%(Ans4b_hint2)%	The variable 'b' stands for the number of boxes sold by the cadets. Please substitute 30 for the variable 'b' in the algebraic expression 10b + 200.
+%(Ans4b_hint3)%	When you substitute 30 for 'b' in the algebraic equation 10b + 200, you get the numerical expression10(30)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans4b_hint4)%	Try entering '500' in the highlighted field.
+%(DONE_hint1)%	Great job! You've successfully completed this problem!
+%(DONE_hint2)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	100
+%(bug2)%	150
+%(bug3)%	200
+%(bug4)%	300
+%(error_messageb)%	You forgot to add the original $200 that the cadets already had in their account to your calculations. Please try again.
+%(-693712474793275334)%	Try reading through the question again to find the number of boxes sold.
+%(-3741766123344482753)%	When you substitute 15 for 'b' in the algebraic equation 10b + 200, you get the numerical expression10(15)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-6901952857503427095)%	What do you already know from reading the question?
+%(5645093929203651144)%	Try reading through the question again to find the number of boxes sold.
+%(7906032719770737336)%	To work through question 1, you must first find the number of boxes of chocolates sold by the troops.
+%(-5166532556208710060)%	No, this is not correct.
+%(-3741765123324482718)%	The variable 'b' stands for the number of boxes sold by the cadets. Please substitute 15 for the variable 'b' in the algebraic expression 10b + 200.
+%(-3741763123312482704)%	Try entering '350' in the highlighted field.
+%(-6701245271824411299)%	When you substitute 30 for 'b' in the algebraic equation 10b + 200, you get the numerical expression10(30)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(7906031719766737317)%	Try reading through the question again to find the number of boxes sold.
+%(-7730308470554465238)%	Great job! You've successfully completed this problem!
+%(-6901949857471427038)%	To work through question 3, you must first find the number of boxes of chocolates sold by the troops.
+%(2866120199660265791)%	The variable 'b' stands for the number of boxes sold by the cadets. Please substitute 10 for the variable 'b' in the algebraic expression 10b + 200.
+%(7906030719758737322)%	Try entering '10' in the highlighted field.
+%(-7730309470642465495)%	Please proceed to the next problem by clicking the "Done" button.
+%(-693713474781275369)%	To work through question 4, you must first find the number of boxes of chocolates sold by the troops.
+%(5162537381742577495)%	Please enter '150' in the highlighted field.
+%(-8865737956518473063)%	Please enter '300' in the highlighted field.
+%(7137232941922575413)%	The variable 'b' stands for the number of boxes sold by the cadets. Please substitute 20 for the variable 'b' in the algebraic expression 10b + 200.
+%(5645092929199651189)%	To work through question 2, you must first find the number of boxes of chocolates sold by the troops.
+%(7906033719794737403)%	What do you already know from reading the question?
+%(7137235941890575246)%	If the cadets sold 20 boxes, what is the total amount of money in the troop's charity fund?
+%(-693714474789275388)%	What do you already know from reading the question?
+%(7137233941926575368)%	When you substitute 20 for 'b' in the algebraic equation 10b + 200, you get the numerical expression10(20)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(2866121199680265826)%	When you substitute 10 for 'b' in the algebraic equation 10b + 200, you get the numerical expression10(10)+20. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-693711474785275339)%	Try entering '30' in the highlighted field.
+%(2866119199652265772)%	If the cadets sold 10 boxes, what is the total amount of money in the troop's charity fund?
+%(5645095929167651022)%	What do you already know from reading the question?
+%(5645090929203651159)%	Try entering '15' in the highlighted field.
+%(-6701243271828411277)%	If the cadets sold 30 boxes, what is the total amount of money in the troop's charity fund?
+%(2577276927472933268)%	Please enter '200' in the highlighted field.
+%(2866122199688265853)%	Please type '300' in the highlighted field.
+%(-6701244271820411312)%	The variable 'b' stands for the number of boxes sold by the cadets. Please substitute 30 for the variable 'b' in the algebraic expression 10b + 200.
+%(-1181211822711671689)%	You forgot to add the original $200 that the cadets already had in their account to your calculations. Please try again.
+%(-4496519548807638142)%	Please enter '100' in the highlighted field.
+%(-6901950857491427073)%	Try reading through the question again to find the number of boxes sold.
+%(7137230941926575383)%	Try entering '400' in the highlighted field.
+%(-3741768123356482775)%	If the cadets sold 15 boxes, what is the total amount of money in the troop's charity fund?
+%(-6901947857459427024)%	Try entering '20' in the highlighted field.
+%(-6701246271832411326)%	Try entering '500' in the highlighted field.
+Problem Name	Problem10
+%(startStateNodeName)%	
+%(problem_statement)%	Bobby has been collecting baseball cards for as long as he can remember and now he has 500 cards. That's more than anyone he knows! Because his collection is so large, Bobby decides to share any cards he gets for his birthday with his two brothers. To keep a count of the number of cards in his ever-growing collection, Bobby uses the following formula:
+%(formula1)%	Let c = the cards Bobby receives for his birthday
+%(formula2)%	The total cards in Bobby's collection = c/3 + 500
+%(question1)%	(1) If Bobby's parents give him 9 cards, how many cards will he have?
+%(question2)%	(2) If Bobby receives 18 cards, how many total cards will be in his collection?
+%(question3)%	(3) How many cards will Bobby have if he receives 30 cards for his birthday?
+%(question4)%	(4) If Bobby receives 60 cards for his birthday, how many will he have in his collection?
+%(questions)%	(1) If Bobby's parents give him 9 cards, how many cards will he have?<br><br>(2) If Bobby receives 18 cards, how many total cards will be in his collection?<br><br>(3) How many cards will Bobby have if he receives 30 cards for his birthday?<br><br>(4) If Bobby receives 60 cards for his birthday, how many will he have in his collection?
+%(heading1)%	Number of cards Bobby receives for his birthday
+%(heading2)%	Number of cards in Bobby's collection
+%(unit1)%	cards
+%(unit2)%	cards
+%(expression1)%	c
+%(expression2)%	c/3 + 500
+%(Ans1_a)%	9
+%(Ans1_b)%	503
+%(Ans2_a)%	18
+%(Ans2_b)%	506
+%(Ans3_a)%	30
+%(Ans3_b)%	510
+%(Ans4_a)%	60
+%(Ans4_b)%	520
+	
+%(Ans1a_hint1)%	What do you already know from reading the question?
+%(Ans1a_hint2)%	To work through question 1, you must first find the number of cards Bobby receives for his birthday.
+%(Ans1a_hint3)%	Try reading through the question again to find the number of cards.
+%(Ans1a_hint4)%	Try entering '9' in the highlighted field.
+%(Ans1b_hint1)%	If Bobby gets 9 cards, what is the total number of cards he will now have in his collection?
+%(Ans1b_hint2)%	The variable 'c' stands for the number of cards Bobby gets. Please substitute 9 for the variable 'c' in the algebraic expression c/3 + 500.
+%(Ans1b_hint3)%	When you substitute 9 for 'c' in the algebraic equation c/3 + 500, you get the numerical expression (9)/3+500. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans1b_hint4)%	Please type '503' in the highlighted field.
+%(Ans2a_hint1)%	What do you already know from reading the question?
+%(Ans2a_hint2)%	To work through question 2, you must first find the number of cards Bobby receives for his birthday.
+%(Ans2a_hint3)%	Try reading through the question again to find the number of cards.
+%(Ans2a_hint4)%	Try entering '18' in the highlighted field.
+%(Ans2b_hint1)%	If Bobby gets 18 cards, what is the total number of cards he will now have in his collection?
+%(Ans2b_hint2)%	The variable 'c' stands for the number of cards Bobby gets. Please substitute 18 for the variable 'c' in the algebraic expression c/3 + 500.
+%(Ans2b_hint3)%	When you substitute 18 for 'c' in the algebraic equation c/3 + 500, you get the numerical expression (18)/3+500. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans2b_hint4)%	Try entering '506' in the highlighted field.
+%(Ans3a_hint1)%	What do you already know from reading the question?
+%(Ans3a_hint2)%	To work through question 3, you must first find the number of cards Bobby receives for his birthday.
+%(Ans3a_hint3)%	Try reading through the question again to find the number of cards.
+%(Ans3a_hint4)%	Try entering '30' in the highlighted field.
+%(Ans3b_hint1)%	If Bobby gets 30 cards, what is the total number of cards he will now have in his collection?
+%(Ans3b_hint2)%	The variable 'c' stands for the number of cards Bobby gets. Please substitute 30 for the variable 'c' in the algebraic expression c/3 + 500.
+%(Ans3b_hint3)%	When you substitute 30 for 'c' in the algebraic equation c/3 + 500, you get the numerical expression (30)/3+500. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans3b_hint4)%	Try entering '510' in the highlighted field.
+%(Ans4a_hint1)%	What do you already know from reading the question?
+%(Ans4a_hint2)%	To work through question 4, you must first find the number of cards Bobby receives for his birthday.
+%(Ans4a_hint3)%	Try reading through the question again to find the number of cards.
+%(Ans4a_hint4)%	Try entering '60' in the highlighted field.
+%(Ans4b_hint1)%	If Bobby gets 60 cards, what is the total number of cards he will now have in his collection?
+%(Ans4b_hint2)%	The variable 'c' stands for the number of cards Bobby gets. Please substitute 60 for the variable 'c' in the algebraic expression c/3 + 500.
+%(Ans4b_hint3)%	When you substitute 60 for 'c' in the algebraic equation c/3 + 500, you get the numerical expression (60)/3+500. Please do the arithmetic and enter the answer in the highlighted cell.
+%(Ans4b_hint4)%	Try entering '520' in the highlighted field.
+%(DONE_hint1)%	Great job! You've successfully completed this problem!
+%(DONE_hint2)%	Please proceed to the next problem by clicking the "Done" button.
+	
+%(bug1)%	3
+%(bug2)%	6
+%(bug3)%	10
+%(bug4)%	20
+%(error_messageb)%	You forgot to add the original 500 baseball cards that Bobby already has in his collection to your calculations. Please try again. 
+%(-693712474793275334)%	Try reading through the question again to find the number of cards.
+%(-3741766123344482753)%	When you substitute 18 for 'c' in the algebraic equation c/3 + 500, you get the numerical expression (18)/3+500. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-6901952857503427095)%	What do you already know from reading the question?
+%(5645093929203651144)%	Try reading through the question again to find the number of cards.
+%(7906032719770737336)%	To work through question 1, you must first find the number of cards Bobby receives for his birthday.
+%(-5166532556208710060)%	No, this is not correct.
+%(-3741765123324482718)%	The variable 'c' stands for the number of cards Bobby gets. Please substitute 18 for the variable 'c' in the algebraic expression c/3 + 500.
+%(-3741763123312482704)%	Try entering '506' in the highlighted field.
+%(-6701245271824411299)%	When you substitute 60 for 'c' in the algebraic equation c/3 + 500, you get the numerical expression (60)/3+500. Please do the arithmetic and enter the answer in the highlighted cell.
+%(7906031719766737317)%	Try reading through the question again to find the number of cards.
+%(-7730308470554465238)%	Great job! You've successfully completed this problem!
+%(-6901949857471427038)%	To work through question 3, you must first find the number of cards Bobby receives for his birthday.
+%(2866120199660265791)%	The variable 'c' stands for the number of cards Bobby gets. Please substitute 9 for the variable 'c' in the algebraic expression c/3 + 500.
+%(7906030719758737322)%	Try entering '9' in the highlighted field.
+%(-7730309470642465495)%	Please proceed to the next problem by clicking the "Done" button.
+%(-693713474781275369)%	To work through question 4, you must first find the number of cards Bobby receives for his birthday.
+%(5162537381742577495)%	Please enter '6' in the highlighted field.
+%(-8865737956518473063)%	Please enter '20' in the highlighted field.
+%(7137232941922575413)%	The variable 'c' stands for the number of cards Bobby gets. Please substitute 30 for the variable 'c' in the algebraic expression c/3 + 500.
+%(5645092929199651189)%	To work through question 2, you must first find the number of cards Bobby receives for his birthday.
+%(7906033719794737403)%	What do you already know from reading the question?
+%(7137235941890575246)%	If Bobby gets 30 cards, what is the total number of cards he will now have in his collection?
+%(-693714474789275388)%	What do you already know from reading the question?
+%(7137233941926575368)%	When you substitute 30 for 'c' in the algebraic equation c/3 + 500, you get the numerical expression (30)/3+500. Please do the arithmetic and enter the answer in the highlighted cell.
+%(2866121199680265826)%	When you substitute 9 for 'c' in the algebraic equation c/3 + 500, you get the numerical expression (9)/3+500. Please do the arithmetic and enter the answer in the highlighted cell.
+%(-693711474785275339)%	Try entering '60' in the highlighted field.
+%(2866119199652265772)%	If Bobby gets 9 cards, what is the total number of cards he will now have in his collection?
+%(5645095929167651022)%	What do you already know from reading the question?
+%(5645090929203651159)%	Try entering '18' in the highlighted field.
+%(-6701243271828411277)%	If Bobby gets 60 cards, what is the total number of cards he will now have in his collection?
+%(2577276927472933268)%	Please enter '10' in the highlighted field.
+%(2866122199688265853)%	Please type '503' in the highlighted field.
+%(-6701244271820411312)%	The variable 'c' stands for the number of cards Bobby gets. Please substitute 60 for the variable 'c' in the algebraic expression c/3 + 500.
+%(-1181211822711671689)%	You forgot to add the original 500 baseball cards that Bobby already has in his collection to your calculations. Please try again. 
+%(-4496519548807638142)%	Please enter '3' in the highlighted field.
+%(-6901950857491427073)%	Try reading through the question again to find the number of cards.
+%(7137230941926575383)%	Try entering '510' in the highlighted field.
+%(-3741768123356482775)%	If Bobby gets 18 cards, what is the total number of cards he will now have in his collection?
+%(-6901947857459427024)%	Try entering '30' in the highlighted field.
+%(-6701246271832411326)%	Try entering '520' in the highlighted field.

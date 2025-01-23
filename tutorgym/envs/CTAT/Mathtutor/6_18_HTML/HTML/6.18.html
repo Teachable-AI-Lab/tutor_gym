@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>6.18 Equivalent Fractions</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/CTAT.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/Mathtutor.css">
+    <link rel="stylesheet" type="text/css" href="Assets/6.18.css">
+
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/jquery.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctat.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctatloader.js"></script>
+  </head>
+
+  <body>
+    <main class="CTATTutor">
+      <h1>Tutor</h1>
+
+      <section class="CTATProblemSolving">
+        <h2>Problem Solving</h2>
+
+        <section class="CTATProblem">
+          <h3>Problem</h3>
+
+          <div id="statement" class="CTATTextField"></div>
+        </section>
+
+        <section class="CTATSolution">
+          <h3>Solution</h3>
+
+          <div id="number_lines">
+            <div class="line_block">
+              <div class="CTATTextField">Line 1</div>
+              <div class="line">
+                <div id="numline1" class="CTATNumberLine" data-ctat-snap="true" data-ctat-ctrl-denominator="numline1_denom" data-ctat-small-tick-step="1"></div>
+                <div class="line_controls">
+                  <div id="numline1_denom" class="CTATNumericStepper" data-ctat-tutor="false" value="1" min="1" max="20" step="1"></div>
+                  <div id="submit0" class="CTATSubmitButton" data-ctat-target="numline1_denom">OK</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="line_block">
+              <div class="CTATTextField">Line 2</div>
+              <div id="line2_1" class="line CTATElement">
+                <div id="numline2" class="CTATNumberLine" data-ctat-snap="true" data-ctat-ctrl-denominator="numline2_denom" data-ctat-small-tick-step="1"></div>
+                <div class="line_controls">
+                  <div id="numline2_denom" class="CTATNumericStepper" data-ctat-tutor="false" value="1" min="1" max="20" step="1"></div>
+                  <div id="submit1" class="CTATSubmitButton" data-ctat-target="numline2_denom">OK</div>
+                </div>
+              </div>
+              <div id="line2_2" class="line CTATElement">
+                <div id="numline2_noLabel" class="CTATNumberLine" data-ctat-snap="true" data-ctat-ctrl-denominator="numline2_noLabel_denom" data-ctat-small-tick-step="1"></div>
+                <div class="line_controls">
+                  <div id="numline2_noLabel_denom" class="CTATNumericStepper" data-ctat-tutor="false" value="1" min="1" max="20" step="1"></div>
+                  <div id="submit2" class="CTATSubmitButton" data-ctat-target="numline2_noLabel_denom">OK</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="compare">
+            <div id="statement2" class="CTATTextField"></div>
+            <div class="fraction">
+              <div id="L1" class="CTATTextField"></div>
+              <hr>
+              <div id="L2" class="CTATTextField"></div>
+            </div>
+            <div id="equals" class="CTATTextField">=</div>
+            <div id="equals_combo" class="CTATComboBox" data-ctat-labels="≟,=,≠"></div>
+            <div class="fraction">
+              <div id="R1" class="CTATTextField"></div>
+              <div id="R1_user" class="CTATTextInput"></div>
+              <hr>
+              <div id="R2" class="CTATTextField"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="CTATTools">
+        <h2>Tools</h2>
+
+        <div class="CTATButtons">
+          <div class="CTATDoneButton"></div>
+          <div class="CTATHintButton"></div>
+        </div>
+
+        <section class="CTATHints">
+          <h3>Hints</h3>
+          <div class="CTATHintWindow"></div>
+        </section>
+
+        <section class="CTATSkills">
+          <h3>Skills</h3>
+          <div class="CTATSkillWindow"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

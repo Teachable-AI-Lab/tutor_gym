@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="6.06 Decimal Place Value I" description="Asks student to interpret and represent monetary values using decimal place values." save_state="true">
+  <Problems>
+    <Problem name="1-amy" label="Amy wants $3.70" description="Amy wants $3.70" tutor_flag="tutor" model_file="1-amy.brd" student_interface="6.06.html">
+      <Skills>
+        <Skill name="TradeValue" category="PlaceValue" occurrences="0"/>
+        <Skill name="enterGivenValue" category="PlaceValue" occurrences="4"/>
+        <Skill name="NoTrade" category="PlaceValue" occurrences="6"/>
+      </Skills>
+    </Problem>
+    <Problem name="2-molly" label="Molly wants $6.05" description="Molly wants $6.05 but she wants a different number of dimes each time" tutor_flag="tutor" model_file="2-molly.brd" student_interface="6.06.html">
+      <Skills>
+        <Skill name="TradeValue" category="PlaceValue" occurrences="0"/>
+        <Skill name="enterGivenValue" category="PlaceValue" occurrences="4"/>
+        <Skill name="NoTrade" category="PlaceValue" occurrences="6"/>
+      </Skills>
+    </Problem>
+    <Problem name="3-sydney" label="Sydney wants $82.37" description="Sydney wants $82.37" tutor_flag="tutor" model_file="3-sydney.brd" student_interface="6.06.html">
+      <Skills>
+        <Skill name="TradeValue" category="PlaceValue" occurrences="0"/>
+        <Skill name="enterGivenValue" category="PlaceValue" occurrences="4"/>
+        <Skill name="NoTrade" category="PlaceValue" occurrences="6"/>
+      </Skills>
+    </Problem>
+    <Problem name="4-allison" label="Allison wants $37.23" description="Allison wants $37.23" tutor_flag="tutor" model_file="4-allison.brd" student_interface="6.06.html">
+      <Skills>
+        <Skill name="TradeValue" category="PlaceValue" occurrences="0"/>
+        <Skill name="enterGivenValue" category="PlaceValue" occurrences="4"/>
+        <Skill name="NoTrade" category="PlaceValue" occurrences="6"/>
+      </Skills>
+    </Problem>
+    <Problem name="5-charlie" label="Charlie wants $75.99" description="Charlie wants $75.99" tutor_flag="tutor" model_file="5-charlie.brd" student_interface="6.06.html">
+      <Skills>
+        <Skill name="TradeValue" category="PlaceValue" occurrences="0"/>
+        <Skill name="enterGivenValue" category="PlaceValue" occurrences="4"/>
+        <Skill name="NoTrade" category="PlaceValue" occurrences="6"/>
+      </Skills>
+    </Problem>
+    <Problem name="6-jordan" label="Jordan wants $35.26" description="Jordan wants $35.26" tutor_flag="tutor" model_file="6-jordan.brd" student_interface="6.06.html">
+      <Skills>
+        <Skill name="TradeValue" category="PlaceValue" occurrences="0"/>
+        <Skill name="enterGivenValue" category="PlaceValue" occurrences="4"/>
+        <Skill name="NoTrade" category="PlaceValue" occurrences="6"/>
+      </Skills>
+    </Problem>
+    <Problem name="7-martin" label="Martin wants $4.42" description="Martin wants $4.42" tutor_flag="tutor" model_file="7-martin.brd" student_interface="6.06.html">
+      <Skills>
+        <Skill name="TradeValue" category="PlaceValue" occurrences="0"/>
+        <Skill name="enterGivenValue" category="PlaceValue" occurrences="4"/>
+        <Skill name="NoTrade" category="PlaceValue" occurrences="6"/>
+      </Skills>
+    </Problem>
+    <Problem name="8-paul" label="Paul wants $18.94" description="Paul wants $18.94" tutor_flag="tutor" model_file="8-paul.brd" student_interface="6.06.html">
+      <Skills>
+        <Skill name="TradeValue" category="PlaceValue" occurrences="0"/>
+        <Skill name="enterGivenValue" category="PlaceValue" occurrences="4"/>
+        <Skill name="NoTrade" category="PlaceValue" occurrences="6"/>
+      </Skills>
+    </Problem>
+    <Problem name="9-lauren" label="Lauren wants $9.18" description="Lauren wants $9.18" tutor_flag="tutor" model_file="9-lauren.brd" student_interface="6.06.html">
+      <Skills>
+        <Skill name="TradeValue" category="PlaceValue" occurrences="0"/>
+        <Skill name="enterGivenValue" category="PlaceValue" occurrences="4"/>
+        <Skill name="NoTrade" category="PlaceValue" occurrences="6"/>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="6.06 HTML" label="6.06 Decimal Place Value I" description="Asks student to interpret and represent monetary values using decimal place values." status="active" picture="6.06.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="2-molly" position="1" role="0"/>
+        <Problem name="3-sydney" position="2" role="0"/>
+        <Problem name="4-allison" position="3" role="0"/>
+        <Problem name="5-charlie" position="4" role="0"/>
+        <Problem name="6-jordan" position="5" role="0"/>
+        <Problem name="7-martin" position="6" role="0"/>
+        <Problem name="8-paul" position="7" role="0"/>
+        <Problem name="9-lauren" position="8" role="0"/>
+        <Problem name="1-amy" position="9" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="TradeValue" category="PlaceValue" label="Enter values with borrowing" description="Trade Value" position="6"/>
+        <Skill name="NoTrade" category="PlaceValue" label="Enter values without borrowing" description="No Trade" position="6"/>
+        <Skill name="enterGivenValue" category="PlaceValue" label="Enter the given values" description="Enter Given Value" position="6"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.A.1" label="A.1. Numbers: Representations, Relationships and Systems" description="A.1. Demonstrate an understanding of numbers, ways of representing numbers, relationships among numbers, and number systems." standard_level="assessment_anchor" parent_name="PA.A" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="5th" label="5th Grade" description="5th Grade"/>
+        <Grade name="6th" label="6th Grade" description="6th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.WD" label="Working with Decimals" description="Working with Decimals" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.5" label="5th Grade" description="5th grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.5.NBT" label="5.NBT. Numbers and Operations in Base Ten" description="5.NBT. Numbers and Operations in Base Ten" standard_level="strand" parent_name="CommonCore.5" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="6.06.png" path="Assets"/>
+    <Asset name="1-amy.brd" path="FinalBRDs"/>
+    <Asset name="2-molly.brd" path="FinalBRDs"/>
+    <Asset name="3-sydney.brd" path="FinalBRDs"/>
+    <Asset name="4-allison.brd" path="FinalBRDs"/>
+    <Asset name="5-charlie.brd" path="FinalBRDs"/>
+    <Asset name="6-jordan.brd" path="FinalBRDs"/>
+    <Asset name="7-martin.brd" path="FinalBRDs"/>
+    <Asset name="8-paul.brd" path="FinalBRDs"/>
+    <Asset name="9-lauren.brd" path="FinalBRDs"/>
+    <Asset name="6.06.html" path="HTML"/>
+    <Asset name="6_06_table.txt" path="MassProduction"/>
+    <Asset name="6.06_new_table.txt" path="MassProduction"/>
+    <Asset name="finalMassProdtable.txt" path="MassProduction"/>
+    <Asset name="finalTemplate.brd" path="MassProduction"/>
+    <Asset name="finalTemplateNew.brd" path="MassProduction"/>
+    <Asset name="mass_pro.brd" path="MassProduction"/>
+    <Asset name="template_6_06_08_10.brd" path="MassProduction"/>
+    <Asset name="translatable.txt" path="MassProduction"/>
+  </Assets>
+</Package>

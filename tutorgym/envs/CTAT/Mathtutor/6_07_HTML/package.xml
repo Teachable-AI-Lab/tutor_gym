@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="6.07 Decimal Addition and Subtraction I" description="Student must identify addition or subtraction, align addends or minuends and subtrahends, and complete the addition or subtraction." save_state="true">
+  <Problems>
+    <Problem name="bank-account" label="Bank account" description="Jordan opened a new bank account. He made the following deposits into his account: $25 and $4.70." tutor_flag="tutor" model_file="bank-account.brd" student_interface="6.07.html">
+      <Skills>
+        <Skill name="Enter_addends" category="Decimal-Addition-and-Subtraction" occurrences="5"/>
+        <Skill name="Add_column_no_carry" category="Decimal-Addition-and-Subtraction" occurrences="4"/>
+        <Skill name="Enter_decimal_point" category="Decimal-Addition-and-Subtraction" occurrences="2"/>
+        <Skill name="Choose_operation" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="entertainment" label="Entertainment" description="In 1999, the average American spent $893.51 a year on entertainment. In 2000, the average American spent $955.29 a year on entertainment." tutor_flag="tutor" model_file="entertainment.brd" student_interface="6.07.html">
+      <Skills>
+        <Skill name="Sub_column_with_borrow" category="Decimal-Addition-and-Subtraction" occurrences="3"/>
+        <Skill name="Enter_addends" category="Decimal-Addition-and-Subtraction" occurrences="10"/>
+        <Skill name="Enter_decimal_point" category="Decimal-Addition-and-Subtraction" occurrences="3"/>
+        <Skill name="Sub_column_with_no_borrow" category="Decimal-Addition-and-Subtraction" occurrences="2"/>
+        <Skill name="Choose_operation" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="fleece" label="Fleece" description="James saved up $50.09 to buy a fleece. He finally found one he liked for $46.27." tutor_flag="tutor" model_file="fleece.brd" student_interface="6.07.html">
+      <Skills>
+        <Skill name="Sub_column_with_borrow" category="Decimal-Addition-and-Subtraction" occurrences="4"/>
+        <Skill name="Enter_addends" category="Decimal-Addition-and-Subtraction" occurrences="8"/>
+        <Skill name="Enter_decimal_point" category="Decimal-Addition-and-Subtraction" occurrences="3"/>
+        <Skill name="Choose_operation" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+        <Skill name="Sub_column_with_no_borrow" category="Decimal-Addition-and-Subtraction" occurrences="3"/>
+      </Skills>
+    </Problem>
+    <Problem name="gardening" label="Gardening" description="Kelly, the local gardener, wants to buy a small shovel and weed remover from Discount Gardening Supplies. When the cashier ran up her items, the prices showed up as $46.83 and $9.52." tutor_flag="tutor" model_file="gardening.brd" student_interface="6.07.html">
+      <Skills>
+        <Skill name="Add_column_with_carry_prev" category="Decimal-Addition-and-Subtraction" occurrences="2"/>
+        <Skill name="Enter_addends" category="Decimal-Addition-and-Subtraction" occurrences="7"/>
+        <Skill name="Add_column_no_carry" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+        <Skill name="Add_column_with_carry" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+        <Skill name="Enter_decimal_point" category="Decimal-Addition-and-Subtraction" occurrences="2"/>
+        <Skill name="Choose_operation" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="post-office" label="Post office" description="Lindsey works at the post office. A customer has two packages to mail. One package costs $28.14 to ship and the other package costs $57.73 to ship." tutor_flag="tutor" model_file="post-office.brd" student_interface="6.07.html">
+      <Skills>
+        <Skill name="Add_column_with_carry_prev" category="Decimal-Addition-and-Subtraction" occurrences="2"/>
+        <Skill name="Enter_addends" category="Decimal-Addition-and-Subtraction" occurrences="8"/>
+        <Skill name="Add_column_no_carry" category="Decimal-Addition-and-Subtraction" occurrences="2"/>
+        <Skill name="Add_column_with_carry" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+        <Skill name="Enter_decimal_point" category="Decimal-Addition-and-Subtraction" occurrences="3"/>
+        <Skill name="Choose_operation" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="softball" label="Softball" description="Roberto's softball team had to buy soap and brushes for their annual car wash. They spend $14.67 on brushes and clothes and $2.99 on soap." tutor_flag="tutor" model_file="softball.brd" student_interface="6.07.html">
+      <Skills>
+        <Skill name="Add_column_with_carry_prev" category="Decimal-Addition-and-Subtraction" occurrences="3"/>
+        <Skill name="Enter_addends" category="Decimal-Addition-and-Subtraction" occurrences="7"/>
+        <Skill name="Add_column_no_carry" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+        <Skill name="Add_column_with_carry" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+        <Skill name="Enter_decimal_point" category="Decimal-Addition-and-Subtraction" occurrences="3"/>
+        <Skill name="Choose_operation" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="vacation" label="Vacation" description="Amy and Shawna went on a vacation together and agreed to pay for certain expenses. Amy paid $180.26 for food and lodging. Shawna paid $79.43 for gas and entertainment." tutor_flag="tutor" model_file="vacation.brd" student_interface="6.07.html">
+      <Skills>
+        <Skill name="Sub_column_with_borrow" category="Decimal-Addition-and-Subtraction" occurrences="6"/>
+        <Skill name="Enter_addends" category="Decimal-Addition-and-Subtraction" occurrences="9"/>
+        <Skill name="Enter_decimal_point" category="Decimal-Addition-and-Subtraction" occurrences="3"/>
+        <Skill name="Choose_operation" category="Decimal-Addition-and-Subtraction" occurrences="1"/>
+        <Skill name="Sub_column_with_no_borrow" category="Decimal-Addition-and-Subtraction" occurrences="2"/>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="6.07 HTML" label="6.07 Decimal Addition and Subtraction I" description="Student must identify addition or subtraction, align addends or minuends and subtrahends, and complete the addition or subtraction." status="active" picture="6.07.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="bank-account" position="1" role="0"/>
+        <Problem name="entertainment" position="2" role="0"/>
+        <Problem name="fleece" position="3" role="0"/>
+        <Problem name="gardening" position="4" role="0"/>
+        <Problem name="post-office" position="5" role="0"/>
+        <Problem name="softball" position="6" role="0"/>
+        <Problem name="vacation" position="7" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="Enter_addends" category="Decimal-Addition-and-Subtraction" label="Enter addends" description="Enter addends" position="16"/>
+        <Skill name="Add_column_no_carry" category="Decimal-Addition-and-Subtraction" label="Add column no carry" description="Add column no carry" position="16"/>
+        <Skill name="Enter_decimal_point" category="Decimal-Addition-and-Subtraction" label="Enter decimal point" description="Enter decimal point" position="16"/>
+        <Skill name="Choose_operation" category="Decimal-Addition-and-Subtraction" label="Choose operation" description="Choose operation" position="16"/>
+        <Skill name="Sub_column_with_borrow" category="Decimal-Addition-and-Subtraction" label="Sub column with borrow" description="Sub column with borrow" position="16"/>
+        <Skill name="Sub_column_with_no_borrow" category="Decimal-Addition-and-Subtraction" label="Sub column with no borrow" description="Sub column with no borrow" position="16"/>
+        <Skill name="Add_column_with_carry_prev" category="Decimal-Addition-and-Subtraction" label="Add column with carry prev" description="Add column with carry prev" position="16"/>
+        <Skill name="Add_column_with_carry" category="Decimal-Addition-and-Subtraction" label="Add column with carry" description="Add column with carry" position="16"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.A.3" label="A.3. Computation and Estimation" description="A.3. Compute accurately and fluently and make reasonable estimates." standard_level="assessment_anchor" parent_name="PA.A" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="5th" label="5th Grade" description="5th Grade"/>
+        <Grade name="6th" label="6th Grade" description="6th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.WD" label="Working with Decimals" description="Working with Decimals" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.5" label="5th Grade" description="5th grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.5.NBT" label="5.NBT. Numbers and Operations in Base Ten" description="5.NBT. Numbers and Operations in Base Ten" standard_level="strand" parent_name="CommonCore.5" parent_level="grade_level"/>
+        <Standard name="CommonCore.6" label="6th Grade" description="6th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.6.NS" label="6.NS. The Number System" description="6.NS. The Number System" standard_level="strand" parent_name="CommonCore.6" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="6.07.png" path="Assets"/>
+    <Asset name="mathtutor_6.07_full.png" path="Assets"/>
+    <Asset name="bank-account.brd" path="FinalBRDs"/>
+    <Asset name="birthday.brd" path="FinalBRDs"/>
+    <Asset name="entertainment.brd" path="FinalBRDs"/>
+    <Asset name="fleece.brd" path="FinalBRDs"/>
+    <Asset name="gardening.brd" path="FinalBRDs"/>
+    <Asset name="post-office.brd" path="FinalBRDs"/>
+    <Asset name="softball.brd" path="FinalBRDs"/>
+    <Asset name="vacation.brd" path="FinalBRDs"/>
+    <Asset name="6.07.html" path="HTML"/>
+    <Asset name="6.07.css" path="HTML/Assets"/>
+    <Asset name="6_07_bank-account_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="6_07_bank-account_finalTemplate.brd" path="MassProduction"/>
+    <Asset name="6_07_birthday_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="6_07_birthday_finalTemplate.brd" path="MassProduction"/>
+    <Asset name="6_07_entertainment_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="6_07_entertainment_finalTemplate.brd" path="MassProduction"/>
+    <Asset name="6_07_fleece_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="6_07_fleece_finalTemplate.brd" path="MassProduction"/>
+    <Asset name="6_07_gardening_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="6_07_gardening_finalTemplate.brd" path="MassProduction"/>
+    <Asset name="6_07_post-office_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="6_07_post-office_finalTemplate.brd" path="MassProduction"/>
+    <Asset name="6_07_softball_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="6_07_softball_finalTemplate.brd" path="MassProduction"/>
+    <Asset name="6_07_vacation_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="6_07_vacation_finalTemplate.brd" path="MassProduction"/>
+  </Assets>
+</Package>

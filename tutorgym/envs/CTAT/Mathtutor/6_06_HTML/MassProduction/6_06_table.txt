@@ -1,0 +1,60 @@
+Problem Name	1-amy	2-molly	3-sydney	4-allison	5-charlie	6-jordan
+%(startStateNodeName)%	state28	state24	state3			
+%(1)%	Amy wants $3.70.	Molly wants $6.05 but she wants a different number of dimes each time.	Sydney wants $82.37.	Allison wants $37.23.	Charlie wants $75.99.	Jordan wants $35.26
+%(2)%	1. Use the fewest number of bills and coins.	1. Molly wants the fewest number of bills and coins without any dimes.	1. Sydney asks for the fewest number of bills and coins.	1. Use the fewest number of bills and coins as possible	1. Charlie wants the fewest number of bills and coins.	1. Use the fewest number of bills and coins.
+%(3)%	2. Amy needs extra dimes. How many bills and coins should you give her if she wants	"2. If Molly needs 10 dimes to pay for her parking meter, how many bills and coins should"	2. You only have 1 one-dollar bill available to give to Sydney. How many bills and coins	"2. Allison needs some extra dimes. If you give her 10 dimes, how many other bills and"	2. You only have 6 tens available to give to Charlie. How many other bills and coin	2. Jordan decides that he needs 15 ones. How many other bills and coins should yo
+%(4)%	17 dimes?	you give her?	should you give her to keep the number at a minimum?	coins should you give her?	should you give him?	give him?
+%(5)%	"3. If Amy wants 27 dimes, how many other bills and coins should you give her?"	3. Molly decides she only needs 9 dimes. How many bills and coins should she get?	"3. If you don't have any ones, how many dimes should you give to her instead?"	3. Allison asks for 33 pennies. How many other bills and coins should you give her?	3. Charlie trades in another ten-dollar bill. How many other bills and coins should he	"3. He then realizes that instead of 15 ones, he needs 12 dimes. How many other bills"
+%(6)%	you give her?	   	   	her?	receive?	and coins should Jordan receive?
+%(name)%	Amy	Molly	Sydney	Allison	Charlie	Jordan
+						
+%(r1c1-hint1)%			How many ten dollar bills would you give %(name)%?	How many ten dollar bills would you give %(name)%?	How many ten dollar bills would you give %(name)%?	How many ten dollar bills would you give %(name)%?
+%(r1c1-hint2)%			"What is the highest number of ten dollar bills you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?"	"What is the highest number of ten dollar bills you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?"	"What is the highest number of ten dollar bills you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?"	"What is the highest number of ten dollar bills you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?"
+%(r1c1-hint3)%			Try entering <%=round(floor(%(total)%/1000))%>	Try entering <%=round(floor(%(total)%/1000))%>	Try entering <%=round(floor(%(total)%/1000))%>	Try entering <%=round(floor(%(total)%/1000))%>
+%(r2c1-hint1)%			"If you have already given %(name)% $<%=fmtDecimal(sum(valueOrZero(r2c1*10)+valueOrZero(r2c2*1)+valueOrZero(r2c3*.1)+valueOrZero(r2c4*.01)),2)%>. How many ten dollar bills should you give %(name)% to get $<%=fmtDecimal(%(total)%/100,2)%>?"	"If you have already given %(name)% $<%=fmtDecimal(sum(valueOrZero(r2c1*10)+valueOrZero(r2c2*1)+valueOrZero(r2c3*.1)+valueOrZero(r2c4*.01)),2)%>. How many ten dollar bills should you give %(name)% to get $<%=fmtDecimal(%(total)%/100,2)%>?"	"If you have already given %(name)% $<%=fmtDecimal(sum(valueOrZero(r2c1*10)+valueOrZero(r2c2*1)+valueOrZero(r2c3*.1)+valueOrZero(r2c4*.01)),2)%>. How many ten dollar bills should you give %(name)% to get $<%=fmtDecimal(%(total)%/100,2)%>?"	"If you have already given %(name)% $<%=fmtDecimal(sum(valueOrZero(r2c1*10)+valueOrZero(r2c2*1)+valueOrZero(r2c3*.1)+valueOrZero(r2c4*.01)),2)%>. How many ten dollar bills should you give %(name)% to get $<%=fmtDecimal(%(total)%/100,2)%>?"
+%(r2c1-hint2)%			"What is the highest number of ten dollar bills you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?"	"What is the highest number of ten dollar bills you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?"	"What is the highest number of ten dollar bills you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?"	"What is the highest number of ten dollar bills you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?"
+%(r2c1-hint3)%			Try entering <%=round(floor((%(total)%-sum(valueOrZero(r2c1*1000)+valueOrZero(r2c2*100)+valueOrZero(r2c3*10)+valueOrZero(r2c4*1)))/1000))%>	Try entering <%=round(floor((%(total)%-sum(valueOrZero(r2c1*1000)+valueOrZero(r2c2*100)+valueOrZero(r2c3*10)+valueOrZero(r2c4*1)))/1000))%>	Try entering <%=round(floor((%(total)%-sum(valueOrZero(r2c1*1000)+valueOrZero(r2c2*100)+valueOrZero(r2c3*10)+valueOrZero(r2c4*1)))/1000))%>	Try entering <%=round(floor((%(total)%-sum(valueOrZero(r2c1*1000)+valueOrZero(r2c2*100)+valueOrZero(r2c3*10)+valueOrZero(r2c4*1)))/1000))%>
+%(r3c1-hint1)%			"If you have already given %(name)% $<%=fmtDecimal(sum(valueOrZero(r3c1*10)+valueOrZero(r3c2*1)+valueOrZero(r3c3*.1)+valueOrZero(r3c4*.01)),2)%>. How many ten dollar bills should you give %(name)% to get $<%=fmtDecimal(%(total)%/100,2)%>?"	"If you have already given %(name)% $<%=fmtDecimal(sum(valueOrZero(r3c1*10)+valueOrZero(r3c2*1)+valueOrZero(r3c3*.1)+valueOrZero(r3c4*.01)),2)%>. How many ten dollar bills should you give %(name)% to get $<%=fmtDecimal(%(total)%/100,2)%>?"	"If you have already given %(name)% $<%=fmtDecimal(sum(valueOrZero(r3c1*10)+valueOrZero(r3c2*1)+valueOrZero(r3c3*.1)+valueOrZero(r3c4*.01)),2)%>. How many ten dollar bills should you give %(name)% to get $<%=fmtDecimal(%(total)%/100,2)%>?"	"If you have already given %(name)% $<%=fmtDecimal(sum(valueOrZero(r3c1*10)+valueOrZero(r3c2*1)+valueOrZero(r3c3*.1)+valueOrZero(r3c4*.01)),2)%>. How many ten dollar bills should you give %(name)% to get $<%=fmtDecimal(%(total)%/100,2)%>?"
+%(r3c1-hint2)%			"What is the highest number of ten dollar bills you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?"	"What is the highest number of ten dollar bills you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?"	"What is the highest number of ten dollar bills you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?"	"What is the highest number of ten dollar bills you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?"
+%(r3c1-hint3)%			Try entering <%=round(floor((%(total)%-sum(valueOrZero(r3c1*1000)+valueOrZero(r3c2*100)+valueOrZero(r3c3*10)+valueOrZero(r3c4*1)))/1000))%>	Try entering <%=round(floor((%(total)%-sum(valueOrZero(r3c1*1000)+valueOrZero(r3c2*100)+valueOrZero(r3c3*10)+valueOrZero(r3c4*1)))/1000))%>	Try entering <%=round(floor((%(total)%-sum(valueOrZero(r3c1*1000)+valueOrZero(r3c2*100)+valueOrZero(r3c3*10)+valueOrZero(r3c4*1)))/1000))%>	Try entering <%=round(floor((%(total)%-sum(valueOrZero(r3c1*1000)+valueOrZero(r3c2*100)+valueOrZero(r3c3*10)+valueOrZero(r3c4*1)))/1000))%>
+						
+						
+%(given-1)%	r2c3	r2c3	r2c2	r2c3	r2c1	r2c2
+%(given-2)%	r3c3	r3c3	r3c2	r3c4	r3c1	r3c3
+%(total)%	370	605	8237	3723	7599	3526
+%(given-val-1)%	17	10	1	10	6	15
+%(given-val-2)%	27	9	0	33	5	12
+%(11trav)%	0	0	1	1	1	1
+%(12trav)%	1	1	1	1	1	1
+%(13trav)%	1	1	1	1	1	1
+%(14trav)%	1	1	1	1	1	1
+%(21trav)%	0	0	1	1	0	1
+%(22trav)%	1	1	0	1	1	0
+%(23trav)%	0	0	1	0	1	1
+%(24trav)%	1	1	1	1	1	1
+%(31trav)%	0	0	1	1	0	1
+%(32trav)%	1	1	0	1	1	1
+%(33trav)%	0	0	1	1	1	0
+%(34trav)%	1	1	1	0	1	1
+						
+%(11trav-max)%	1	1	1	1	1	1
+%(12trav-max)%	1	1	1	1	1	1
+%(13trav-max)%	1	1	1	1	1	1
+%(14trav-max)%	1	1	1	1	1	1
+%(21trav-max)%	1	1	1	1	0	1
+%(22trav-max)%	1	1	0	1	1	0
+%(23trav-max)%	0	0	1	0	1	1
+%(24trav-max)%	1	1	1	1	1	1
+%(31trav-max)%	1	1	1	1	0	1
+%(32trav-max)%	1	1	0	1	1	1
+%(33trav-max)%	0	0	1	1	1	0
+%(34trav-max)%	1	1	1	0	1	1
+						
+%(r1c1-faded-value)%			8			
+%(r1c2-faded-value)%	3	6	2			
+%(r1c3-faded-value)%	7	0				
+%(r1c4-faded-value)%	0	5				
+%(r2c1-faded-value)%	0					
+%(r2c2-faded-value)%	2					
+%(r2c3-faded-value)%						
+%(r2c4-faded-value)%	0					

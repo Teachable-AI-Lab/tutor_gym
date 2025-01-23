@@ -154,6 +154,13 @@ class Action:
 
         return self
 
+    def add_annotations(self, annos):
+        self.annotations = {**self.annotations, **annos}
+
+    def remove_annotations(self, anno_keys):
+        self.annotations = {k:v for k, v in self.annotations.items() if k not in annos}
+
+
     def is_equal(self, other, check_annotations=[]):        
         if(self.sai != other.sai):
             return False

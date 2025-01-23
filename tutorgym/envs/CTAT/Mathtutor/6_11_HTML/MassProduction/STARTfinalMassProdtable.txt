@@ -1,0 +1,219 @@
+Problem Name	p1	p2	p3	p4
+%(startStateNodeName)%	state39	state39	state39	state39
+%(problemstatement)%	Please add 24.59 and 4.66	Please subtract 6.49 from 18.37	Please subtract 10.7 from 15.5	Please add 9.24 and 13.25
+%(op)%	+	-	-	+
+%(decimalposition)%	n1d5	n1d6	n1d4	n1d4
+%(n1d1req)%	0	0	0	
+%(n1d1)%	0	0	0	
+%(n1d1hint1)%				
+%(n1d1hint2)%				
+%(n1d2req)%	0	0	1	
+%(n1d2)%	0	0	1	
+%(n1d2hint1)%				
+%(n1d2hint2)%				
+%(n1d3req)%	1	0	1	
+%(n1d3)%	2	0	0	
+%(n1d3hint1)%	Please enter the digit in the tens place of 24.59.			
+%(n1d3hint2)%	The digit in the tens place of 24.59 is 2. Please enter 2.			
+%(n1d4req)%	1	1	0	
+%(n1d4)%	4	1	.	
+%(n1d4hint1)%	Please enter the digit in the ones place of 24.59.			
+%(n1d4hint2)%	The digit in the ones place of 24.59 is 4. Please enter 4.			
+%(n1d5req)%	0	1	1	
+%(n1d5)%	.	8	7	
+%(n1d5hint1)%				
+%(n1d5hint2)%				
+%(n1d6req)%	1	0	0	
+%(n1d6)%	5	.	0	
+%(n1d6hint1)%	Please enter the digit in the tenths place of 24.59.			
+%(n1d6hint2)%	The digit in the tenths place of 24.59 is 5. Please enter 5.			
+%(n1d7req)%	1	1	0	
+%(n1d7)%	9	3	0	
+%(n1d7hint1)%	Please enter the digit in the hundredths place of 24.59.			
+%(n1d7hint2)%	The digit in the hundredths place of 24.59 is 9. Please enter 9.			
+%(n1d8req)%	0	1	0	
+%(n1d8)%	0	7	0	
+%(n1d8hint1)%				
+%(n1d8hint2)%				
+%(n1d9req)%	0	0	0	
+%(n1d9)%	0	0	0	
+%(n1d9hint1)%				
+%(n1d9hint2)%				
+%(n2d1req)%	0	0	0	
+%(n2d1)%	0	0	0	
+%(n2d1hint1)%				
+%(n2d1hint2)%				
+%(n2d2req)%	0	0	1	
+%(n2d2)%	0	0	1	
+%(n2d2hint1)%				
+%(n2d2hint2)%				
+%(n2d3req)%	0	0	1	
+%(n2d3)%	0	0	5	
+%(n2d3hint1)%				
+%(n2d3hint2)%				
+%(n2d4req)%	1	0	1	
+%(n2d4)%	4	0	.	
+%(n2d4hint1)%	Please enter the digit in the ones place of 4.66.			
+%(n2d4hint2)%	The digit in the ones place of 4.66 is 4. Please enter 4.			
+%(n2d5req)%	1	1	1	
+%(n2d5)%	.	6	5	
+%(n2d5hint1)%	Please enter a decimal point here.			
+%(n2d5hint2)%				
+%(n2d6req)%	1	1	0	
+%(n2d6)%	6	.	0	
+%(n2d6hint1)%	Please enter the digit in the tenths place of 4.66.			
+%(n2d6hint2)%	The digit in the tenths place of 4.66 is 6. Please enter 6.			
+%(n2d7req)%	1	1	0	
+%(n2d7)%	6	4	0	
+%(n2d7hint1)%	Please enter the digit in the hundredths place of 4.66.			
+%(n2d7hint2)%	The digit in the hundredths place of 4.66 is 6. Please enter 6.			
+%(n2d8req)%	0	1	0	
+%(n2d8)%	0	9	0	
+%(n2d8hint1)%				
+%(n2d8hint2)%				
+%(n2d9req)%	0	0	0	
+%(n2d9)%	0	0	0	
+%(n2d9hint1)%				
+%(n2d9hint2)%				
+%(carryBoxesToShow)%	"""c4,c6"""			
+%(c1)%	0	0	0	
+%(c1hint1)%				
+%(c1hint2)%				
+%(c2)%	0	0	0	
+%(c2hint1)%				
+%(c2hint2)%				
+%(c3)%	0	0	4	
+%(c3hint1)%				
+%(c3hint2)%				
+%(c4)%	1	0	0	
+%(c4hint1)%	If you carry a value over from adding the tenths values, please enter it here.			
+%(c4hint2)%	One unit was carried over from the addition of 5 tenths, 6 tenths, and a carried tenth. Please enter 1.			
+%(c5)%	0	7	15	
+%(c5hint1)%				
+%(c5hint2)%				
+%(c6)%	1	0	0	
+%(c6hint1)%	If you carry a value over from adding the hundredths values, please enter it here.			
+%(c6hint2)%	One tenth was carried over from the addition of 9 hundreths and 6 hundredths. Please enter 1.			
+%(c7)%	0	12	0	
+%(c7hint1)%				
+%(c7hint2)%				
+%(c8)%	0	17	0	
+%(c8hint1)%				
+%(c8hint2)%				
+%(c9)%	0	0	0	
+%(c9hint1)%				
+%(c9hint2)%				
+%(a1req)%	0	0	0	
+%(a1)%	0	0	0	
+%(a1hint1)%				
+%(a1hint2)%				
+%(a2req)%	0	0	0	
+%(a2)%	0	0	0	
+%(a2hint1)%				
+%(a2hint2)%				
+%(a3req)%	1	0	1	
+%(a3)%	2	0	4	
+%(a3hint1)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!			
+%(a3hint2)%	The digits in the tens places are 2 and 0, and 2+0=2, so please enter 2 here.			
+%(a4req)%	1	1	1	
+%(a4)%	9	1	.	
+%(a4hint1)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!			
+%(a4hint2)%	The digits in the ones places are 4 and 4, and 1 one was carried from the sum of the tenths column. 4+4+1=9, so please enter 9 here.			
+%(a5req)%	1	1	1	
+%(a5)%	.	1	8	
+%(a5hint1)%	Please enter a decimal point here.			
+%(a5hint2)%				
+%(a6req)%	1	1	0	
+%(a6)%	2	.	0	
+%(a6hint1)%	Add the digits in the tenths places and enter the sum here. Don't forget to add any values carried!			
+%(a6hint2)%	The digits in the tenths places are 5 and 6, and 1 tenth was carried from the sum of the hundreths column. 5+6+1=12, so please enter 2 here and carry a 1 over to the ones column (10 tenths = 1).			
+%(a7req)%	1	1	0	
+%(a7)%	5	8	0	
+%(a7hint1)%	Add the digits in the hundredths places and enter the sum here.			
+%(a7hint2)%	The digits in the hundreths places are 9 and 6. 9+6=15, so please enter 5 here and carry a 1 over to the tenths column (10 hundredths = 1 tenth).			
+%(a8req)%	0	1	0	
+%(a8)%	0	8	0	
+%(a8hint1)%				
+%(a8hint2)%				
+%(a9req)%	0	0	0	
+%(a9)%	0	0	0	
+%(a9hint1)%				
+%(a9hint2)%				 
+%(-6451121139349854999)%				
+%(-4782724080558351953)%				
+%(-4733341091933527816)%	The digit in the ones place of 24.59 is 4. Please enter 4.			
+%(-6058999401977538257)%				
+%(5939723124832416025)%				 
+%(-3680528304229549849)%				
+%(-7793444101545105188)%				
+%(267630474009556348)%				
+%(6382391196249600991)%				
+%(5939726124832416050)%				
+%(-6634761911781064156)%				
+%(1953684789227255040)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!			
+%(-6907535864945400357)%	Please enter the digit in the hundredths place of 4.66.			
+%(6793406834378098584)%				
+%(-7538229578606087202)%	Please click on the highlighted button.	Please click on the highlighted button.	Please click on the highlighted button.	Please click on the highlighted button.
+%(1270617690788562020)%	One unit was carried over from the addition of 5 tenths, 6 tenths, and a carried tenth. Please enter 1.			
+%(8676312691321844538)%				
+%(7703667018939561633)%				
+%(267627473977556263)%				
+%(3094705722605100522)%	Please enter the digit in the hundredths place of 24.59.			
+%(-9202524078429046708)%				
+%(641187239159714154)%				
+%(6213751517464455158)%				
+%(3982485621489137190)%	Please enter a decimal point here.			
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.	Please provide your answer 'No_Value' in the highlighted element.	Please provide your answer 'No_Value' in the highlighted element.	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%				
+%(-6907532864849400112)%	The digit in the hundredths place of 4.66 is 6. Please enter 6.			
+%(-7048402377707711960)%	Please enter the digit in the tenths place of 4.66.			
+%(3982482621457137133)%				
+%(1951833195040611473)%				
+%(-4644522401360927443)%	Please enter the digit in the tenths place of 24.59.			
+%(-103575905657380754)%	The digits in the ones places are 4 and 4, and 1 one was carried from the sum of the tenths column. 4+4+1=9, so please enter 9 here.			
+%(-7048405377707711949)%	The digit in the tenths place of 4.66 is 6. Please enter 6.			
+%(-9202527078397046537)%				
+%(-3956700436170408484)%	The easiest way to accomplish this is to just line up the decimal points of the two numbers. Please enter a decimal point in the second row in the box below where it has been entered for you in the first row.	The easiest way to accomplish this is to just line up the decimal points of the two numbers. Please enter a decimal point in the second row in the box below where it has been entered for you in the first row.	The easiest way to accomplish this is to just line up the decimal points of the two numbers. Please enter a decimal point in the second row in the box below where it has been entered for you in the first row.	The easiest way to accomplish this is to just line up the decimal points of the two numbers. Please enter a decimal point in the second row in the box below where it has been entered for you in the first row.
+%(-654681931127624440)%	The digits in the tenths places are 5 and 6, and 1 tenth was carried from the sum of the hundreths column. 5+6+1=12, so please enter 2 here and carry a 1 over to the ones column (10 tenths = 1).			
+%(163251407906615009)%	If you carry a value over from adding the hundredths values, please enter it here.			
+%(-5088807614313645509)%				
+%(-6724017093314192458)%				
+%(-6058996401977538364)%				
+%(641188239247714409)%				
+%(-3353315824230496612)%	Add the digits in the hundredths places and enter the sum here.			
+%(-5088804614345645648)%				
+%(-4644523401368927522)%	The digit in the tenths place of 24.59 is 5. Please enter 5.			
+%(6809645260764282625)%	The digit in the ones place of 4.66 is 4. Please enter 4.			
+%(7703666018947561602)%				
+%(-5166532556208710060)%	No, this is not correct.	No, this is not correct.	No, this is not correct.	No, this is not correct.
+%(-8618717357535436169)%	Think about where the second number needs to be placed in for you to be able to solve this problem.	Think about where the second number needs to be placed in for you to be able to solve this problem.	Think about where the second number needs to be placed in for you to be able to solve this problem.	Think about where the second number needs to be placed in for you to be able to solve this problem.
+%(163254407938615098)%	One tenth was carried over from the addition of 9 hundreths and 6 hundredths. Please enter 1.			
+%(4989873382540288005)%	Please enter a decimal point here.			
+%(-103578905657380747)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!			
+%(-6634764911781064177)%				
+%(9041503051529695589)%	The digit in the tens place of 24.59 is 2. Please enter 2.			
+%(-3353314824206496545)%	The digits in the hundreths places are 9 and 6. 9+6=15, so please enter 5 here and carry a 1 over to the tenths column (10 hundredths = 1 tenth).			
+%(1953685789235255059)%	The digits in the tens places are 2 and 0, and 2+0=2, so please enter 2 here.			
+%(4989872382532288054)%				
+%(-2825355576575072325)%				
+%(-654680931119624421)%	Add the digits in the tenths places and enter the sum here. Don't forget to add any values carried!			
+%(-7793447101577105273)%				
+%(-7364646240540616347)%	To add or subtract decimal numbers, you want to line up the ones place in the first number with the ones place in the second number, also the tenths place of the first number with the tenths place of the second number, and so on.	To add or subtract decimal numbers, you want to line up the ones place in the first number with the ones place in the second number, also the tenths place of the first number with the tenths place of the second number, and so on.	To add or subtract decimal numbers, you want to line up the ones place in the first number with the ones place in the second number, also the tenths place of the first number with the tenths place of the second number, and so on.	To add or subtract decimal numbers, you want to line up the ones place in the first number with the ones place in the second number, also the tenths place of the first number with the tenths place of the second number, and so on.
+%(9041502051521695510)%	Please enter the digit in the tens place of 24.59.			
+%(-4733344091933527869)%	Please enter the digit in the ones place of 24.59.			
+%(4122547966151021001)%				
+%(-6724020093282192323)%				
+%(6793407834386098667)%				
+%(-2825356576583072344)%				
+%(4122546966191021130)%				
+%(-6451118139349855102)%				
+%(-9117002631066219755)%				
+%(3094706722693100777)%	The digit in the hundredths place of 24.59 is 9. Please enter 9.			
+%(1270618690780561927)%	If you carry a value over from adding the tenths values, please enter it here.			
+%(6382390196225600924)%				
+%(-4782725080646352212)%				
+%(6213752517472455109)%				
+%(-3680529304221549884)%				
+%(1951836195136611818)%				
+%(6809644260772282722)%	Please enter the digit in the ones place of 4.66.			
+%(-9116999631066219762)%				

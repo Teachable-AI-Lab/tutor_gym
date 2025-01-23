@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="6.14 Decimal Division" description="Requires student to solve a division problem in context and write a variable expression to represent the problem." save_state="true">
+  <Problems>
+    <Problem name="s1p1" label="Spaghetti meatballs" description="Peter is helping his mom make spaghetti. He is in charge of making the meatballs for the sauce. Each meatball weighs 0.1 pounds." tutor_flag="tutor" model_file="s1p1.brd" selection_features="()" student_interface="6.14.html">
+      <Skills>
+        <Skill name="Enter-Variable" category="Decimal-Division" occurrences="1"/>
+        <Skill name="Enter-Given-Value" category="Decimal-Division" occurrences="2"/>
+        <Skill name="Calculate-New-Value" category="Decimal-Division" occurrences="2"/>
+        <Skill name="Show-Your-Work" category="Decimal-Division" occurrences="2"/>
+        <Skill name="Enter-Expression" category="Decimal-Division" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="s2p1" label="Peanut butter cookies" description="Suzie is making cookies for her girl-scout troop. Each peanut butter cookie needs 0.8 ounce of cookie dough to make." tutor_flag="tutor" model_file="s2p1.brd" selection_features="()" student_interface="6.14.html">
+      <Skills>
+        <Skill name="Enter-Variable" category="Decimal-Division" occurrences="1"/>
+        <Skill name="Enter-Given-Value" category="Decimal-Division" occurrences="2"/>
+        <Skill name="Calculate-New-Value" category="Decimal-Division" occurrences="2"/>
+        <Skill name="Show-Your-Work" category="Decimal-Division" occurrences="2"/>
+        <Skill name="Enter-Expression" category="Decimal-Division" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="s2p2" label="Relay swimming" description="Derek is a swimmer for his local swim team, the Frightening Sharks. At the next meet, Derek and his teammates are going to swim in a relay. It takes them 0.25 minutes to swim a lap." tutor_flag="tutor" model_file="s2p2.brd" selection_features="()" student_interface="6.14.html">
+      <Skills>
+        <Skill name="Enter-Variable" category="Decimal-Division" occurrences="1"/>
+        <Skill name="Enter-Given-Value" category="Decimal-Division" occurrences="2"/>
+        <Skill name="Calculate-New-Value" category="Decimal-Division" occurrences="2"/>
+        <Skill name="Show-Your-Work" category="Decimal-Division" occurrences="2"/>
+        <Skill name="Enter-Expression" category="Decimal-Division" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="s2p3" label="Candy bars" description="Angela is buying candy bars for Halloween. Each candy bar costs $0.45." tutor_flag="tutor" model_file="s2p3.brd" selection_features="()" student_interface="6.14.html">
+      <Skills>
+        <Skill name="Enter-Variable" category="Decimal-Division" occurrences="1"/>
+        <Skill name="Enter-Given-Value" category="Decimal-Division" occurrences="2"/>
+        <Skill name="Calculate-New-Value" category="Decimal-Division" occurrences="2"/>
+        <Skill name="Show-Your-Work" category="Decimal-Division" occurrences="2"/>
+        <Skill name="Enter-Expression" category="Decimal-Division" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="s2p4" label="Milk jugs" description="Leah milks cows on her grandpa's farm every summer. After she has milked the cows, she has to put the milk into separate jugs." tutor_flag="tutor" model_file="s2p4.brd" selection_features="()" student_interface="6.14.html">
+      <Skills>
+        <Skill name="Enter-Variable" category="Decimal-Division" occurrences="1"/>
+        <Skill name="Enter-Given-Value" category="Decimal-Division" occurrences="2"/>
+        <Skill name="Calculate-New-Value" category="Decimal-Division" occurrences="2"/>
+        <Skill name="Show-Your-Work" category="Decimal-Division" occurrences="2"/>
+        <Skill name="Enter-Expression" category="Decimal-Division" occurrences="1"/>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="6.14 HTML" label="6.14 Decimal Division" description="Requires student to solve a division problem in context and write a variable expression to represent the problem." status="active" picture="6.14.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="s1p1" position="1" role="0"/>
+        <Problem name="s2p1" position="2" role="0"/>
+        <Problem name="s2p2" position="3" role="0"/>
+        <Problem name="s2p3" position="4" role="0"/>
+        <Problem name="s2p4" position="5" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="Enter-Variable" category="Decimal-Division" label="Enter Variable" description="Enter Variable" position="0"/>
+        <Skill name="Enter-Given-Value" category="Decimal-Division" label="Enter Given Value" description="Enter Given Value" position="1"/>
+        <Skill name="Calculate-New-Value" category="Decimal-Division" label="Calculate New Value" description="Calculate New Value" position="2"/>
+        <Skill name="Show-Your-Work" category="Decimal-Division" label="Show Your Work" description="Show Your Work" position="3"/>
+        <Skill name="Enter-Expression" category="Decimal-Division" label="Enter Expression" description="Enter Expression" position="4"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.A.3" label="A.3. Computation and Estimation" description="A.3. Compute accurately and fluently and make reasonable estimates." standard_level="assessment_anchor" parent_name="PA.A" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="5th" label="5th Grade" description="5th Grade"/>
+        <Grade name="6th" label="6th Grade" description="6th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.WD" label="Working with Decimals" description="Working with Decimals" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.5" label="5th Grade" description="5th grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.5.NBT" label="5.NBT. Numbers and Operations in Base Ten" description="5.NBT. Numbers and Operations in Base Ten" standard_level="strand" parent_name="CommonCore.5" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="6.14.png" path="Assets"/>
+    <Asset name="mathtutor_6.14_full.png" path="Assets"/>
+    <Asset name="s1p1.brd" path="FinalBRDs"/>
+    <Asset name="s2p1.brd" path="FinalBRDs"/>
+    <Asset name="s2p2.brd" path="FinalBRDs"/>
+    <Asset name="s2p3.brd" path="FinalBRDs"/>
+    <Asset name="s2p4.brd" path="FinalBRDs"/>
+    <Asset name="6.14.html" path="HTML"/>
+    <Asset name="6.14.css" path="HTML/Assets"/>
+    <Asset name="6_14_start.brd" path="MassProduction"/>
+    <Asset name="6_14_start.txt" path="MassProduction"/>
+    <Asset name="6-14_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="6-14_finalTemplate.brd" path="MassProduction"/>
+    <Asset name="6-14_translatable.txt" path="MassProduction"/>
+    <Asset name="desktop.ini" path="MassProduction"/>
+  </Assets>
+</Package>

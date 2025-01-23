@@ -1,0 +1,819 @@
+Problem Name	Problem 8
+%(startStateNodeName)%	state2
+%(1)%	Amy rides 6 miles to school every day. Today, she stopped to rest 2/3 of the way there. How far had she ridden?
+%(2)%	How far did Amy ride her bike to school every day?
+%(3)%	What fraction of the distance did Amy ride before resting?
+%(4)%	How many miles is 1/3 of the total distance?
+%(5)%	How many miles did Amy ride before resting?
+%(6)%	How many more miles does Amy have left to ride?
+	
+%(given)%	6
+%(numer)%	2
+%(denom)%	3
+	
+%(hint11)%	This is a given number in the problem description
+%(hint12)%	What number in the problem description represents the value in question?
+%(hint13)%	Please enter '6' in the highlighted field.
+	
+%(hint21)%	This is a given number in the problem description
+%(hint22)%	What number in the problem description represents the value in question?
+%(hint23)%	Please enter '2/3' in the highlighted field.
+	
+%(hint31)%	What mathematical expression should you use to solve this problem?
+%(hint32)%	Try dividing one of the givens by 3.
+%(hint33)%	Please enter '6/3' in the highlighted field.
+	
+%(hint41)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint42)%	What number did the 'show your work' step give you?
+%(hint43)%	Please enter '2' in the highlighted field.
+	
+%(hint51)%	What mathematical expression should you use to solve this problem?
+%(hint52)%	Try multiplying your previous answer by the number of parts of the ride that Amy has completed.
+%(hint53)%	Please enter '2*2 in the highlighted field.
+	
+%(hint61)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint62)%	What number did the 'show your work' step give you?
+%(hint63)%	Please enter '4' in the highlighted field.
+	
+%(hint71)%	What mathematical expression should you use to solve this problem?
+%(hint72)%	Try subtracting your previous answer from one of the givens.
+%(hint73)%	Please enter '6-4' in the highlighted field.
+	
+%(hint81)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint82)%	What number did the 'show your work' step give you?
+%(hint83)%	Please enter '2' in the highlighted field.
+	
+%(show_work5)%	6-4
+%(answer5)%	2
+	
+%(given_skill1)%	Enter_given_total
+%(given_skill2)%	Enter_given_ratio
+%(show_work_skill1)%	Write_expression_for_one_part
+%(answer_skill1)%	Solve_for_one_part
+%(show_work_skill2)%	Write_expression_for_part
+%(answer_skill2)%	Solve_for_part
+%(show_work_skill3)%	Write_expression_for_remaining
+%(answer_skill3)%	Solve_for_remaining
+	
+%(given_skill1_shown)%	Enter given total
+%(given_skill2_shown)%	Enter given ratio
+%(show_work_skill1_shown)%	Show work for part
+%(answer_skill1_shown)%	Solve for part
+%(show_work_skill2_shown)%	Show work for given part
+%(answer_skill2_shown)%	Solve for given part
+%(show_work_skill3_shown)%	Show work for remaining part
+%(answer_skill3_shown)%	Solve for remaining part
+%(-8988572885511253389)%	Try subtracting your previous answer from one of the givens.
+%(4458155188253298405)%	Please enter '2/3' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(8458158188149298124)%	What number did the 'show your work' step give you?
+%(6458144188135298222)%	What number did the 'show your work' step give you?
+%(-5541900811812701631)%	What's the answer to the mathematical expression you used in the previous step?
+%(-8988573885515253386)%	Please enter '6-4' in the highlighted field.
+%(6458145188139298219)%	Please enter '2' in the highlighted field.
+%(8458161188181298183)%	What's the answer to the mathematical expression you used in the previous step?
+%(7458148188052297872)%	Please enter '2*2 in the highlighted field.
+%(7458149188056297965)%	Try multiplying your previous answer by the number of parts of the ride that Amy has completed.
+%(-5541898811816701569)%	Please enter '2' in the highlighted field.
+%(3458144188136298076)%	Please enter '6' in the highlighted field.
+%(6458143188047297965)%	What's the answer to the mathematical expression you used in the previous step?
+%(5458135188026297887)%	Try dividing one of the givens by 3.
+%(3458146188148298154)%	This is a given number in the problem description
+%(4458157188249298307)%	This is a given number in the problem description
+%(5458134188038297970)%	Please enter '6/3' in the highlighted field.
+%(5458132188026297956)%	What mathematical expression should you use to solve this problem?
+%(8458159188153298121)%	Please enter '4' in the highlighted field.
+%(-8988575885511253416)%	What mathematical expression should you use to solve this problem?
+%(3458145188140298073)%	What number in the problem description represents the value in question?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(4458154188249298408)%	What number in the problem description represents the value in question?
+%(-5541899811804701614)%	What number did the 'show your work' step give you?
+%(7458150188144298222)%	What mathematical expression should you use to solve this problem?
+Problem Name	Problem 9
+%(startStateNodeName)%	
+%(1)%	Sarah has been assigned 27 homework problems for tomorrow. She was able to finish 5/9 of them in class.
+%(2)%	How many math problems does Sarah have to do?
+%(3)%	What fraction of the problems has she already done?
+%(4)%	How many problems is 1/9 of the assignment?
+%(5)%	How many problems did Sarah finish in class?
+%(6)%	How many problems does she have left?
+	
+%(given)%	27
+%(numer)%	5
+%(denom)%	9
+	
+%(hint11)%	This is a given number in the problem description
+%(hint12)%	What number in the problem description represents the value in question?
+%(hint13)%	Please enter '27' in the highlighted field.
+	
+%(hint21)%	This is a given number in the problem description
+%(hint22)%	What number in the problem description represents the value in question?
+%(hint23)%	Please enter '5/9' in the highlighted field.
+	
+%(hint31)%	What mathematical expression should you use to solve this problem?
+%(hint32)%	Try dividing one of the givens by the total number of parts of the other given.
+%(hint33)%	Please enter '27/9' in the highlighted field.
+	
+%(hint41)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint42)%	What number did the 'show your work' step give you?
+%(hint43)%	Please enter '3' in the highlighted field.
+	
+%(hint51)%	What mathematical expression should you use to solve this problem?
+%(hint52)%	Try multiplying your previous answer by the number of parts of the problems completed.
+%(hint53)%	Please enter '5*3' in the highlighted field.
+	
+%(hint61)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint62)%	What number did the 'show your work' step give you?
+%(hint63)%	Please enter '15' in the highlighted field.
+	
+%(hint71)%	What mathematical expression should you use to solve this problem?
+%(hint72)%	Try subtracting your previous answer from one of the givens.
+%(hint73)%	Please enter '27-15' in the highlighted field.
+	
+%(hint81)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint82)%	What number did the 'show your work' step give you?
+%(hint83)%	Please enter '12' in the highlighted field.
+	
+%(show_work5)%	27-15
+%(answer5)%	12
+	
+%(given_skill1)%	Enter_given_total
+%(given_skill2)%	Enter_given_ratio
+%(show_work_skill1)%	Write_expression_for_one_part
+%(answer_skill1)%	Solve_for_one_part
+%(show_work_skill2)%	Write_expression_for_part
+%(answer_skill2)%	Solve_for_part
+%(show_work_skill3)%	Write_expression_for_remaining
+%(answer_skill3)%	Solve_for_remaining
+	
+%(given_skill1_shown)%	Enter given total
+%(given_skill2_shown)%	Enter given ratio
+%(show_work_skill1_shown)%	Show work for part
+%(answer_skill1_shown)%	Solve for part
+%(show_work_skill2_shown)%	Show work for given part
+%(answer_skill2_shown)%	Solve for given part
+%(show_work_skill3_shown)%	Show work for remaining part
+%(answer_skill3_shown)%	Solve for remaining part
+%(-8988572885511253389)%	Try subtracting your previous answer from one of the givens.
+%(4458155188253298405)%	Please enter '5/9' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(8458158188149298124)%	What number did the 'show your work' step give you?
+%(6458144188135298222)%	What number did the 'show your work' step give you?
+%(-5541900811812701631)%	What's the answer to the mathematical expression you used in the previous step?
+%(-8988573885515253386)%	Please enter '27-15' in the highlighted field.
+%(6458145188139298219)%	Please enter '3' in the highlighted field.
+%(8458161188181298183)%	What's the answer to the mathematical expression you used in the previous step?
+%(7458148188052297872)%	Please enter '5*3' in the highlighted field.
+%(7458149188056297965)%	Try multiplying your previous answer by the number of parts of the problems completed.
+%(-5541898811816701569)%	Please enter '12' in the highlighted field.
+%(3458144188136298076)%	Please enter '27' in the highlighted field.
+%(6458143188047297965)%	What's the answer to the mathematical expression you used in the previous step?
+%(5458135188026297887)%	Try dividing one of the givens by the total number of parts of the other given.
+%(3458146188148298154)%	This is a given number in the problem description
+%(4458157188249298307)%	This is a given number in the problem description
+%(5458134188038297970)%	Please enter '27/9' in the highlighted field.
+%(5458132188026297956)%	What mathematical expression should you use to solve this problem?
+%(8458159188153298121)%	Please enter '15' in the highlighted field.
+%(-8988575885511253416)%	What mathematical expression should you use to solve this problem?
+%(3458145188140298073)%	What number in the problem description represents the value in question?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(4458154188249298408)%	What number in the problem description represents the value in question?
+%(-5541899811804701614)%	What number did the 'show your work' step give you?
+%(7458150188144298222)%	What mathematical expression should you use to solve this problem?
+Problem Name	Problem 10
+%(startStateNodeName)%	
+%(1)%	Harold is filling a swimming pool that holds 720 cubic feet of water. He stops to answer the phone when the pool is 5/8 full.
+%(2)%	How many cubic feet of water does the pool hold?
+%(3)%	What fraction of the pool did Harold fill before stopping?
+%(4)%	How many cubic feet is 1/8 of the pool?
+%(5)%	How many cubic feet of water are in the pool when he goes to answer the phone?
+%(6)%	How many cubic feet of water are left to fill?
+	
+%(given)%	720
+%(numer)%	5
+%(denom)%	8
+	
+%(hint11)%	This is a given number in the problem description
+%(hint12)%	What number in the problem description represents the value in question?
+%(hint13)%	Please enter '720' in the highlighted field.
+	
+%(hint21)%	This is a given number in the problem description
+%(hint22)%	What number in the problem description represents the value in question?
+%(hint23)%	Please enter '5/8' in the highlighted field.
+	
+%(hint31)%	What mathematical expression should you use to solve this problem?
+%(hint32)%	Try dividing one of the givens by the total number of parts of the other given.
+%(hint33)%	Please enter '720/8' in the highlighted field.
+	
+%(hint41)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint42)%	What number did the 'show your work' step give you?
+%(hint43)%	Please enter '90' in the highlighted field.
+	
+%(hint51)%	What mathematical expression should you use to solve this problem?
+%(hint52)%	Try multiplying your previous answer by the number of parts of water already in the pool.
+%(hint53)%	Please enter '90*5' in the highlighted field.
+	
+%(hint61)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint62)%	What number did the 'show your work' step give you?
+%(hint63)%	Please enter '450' in the highlighted field.
+	
+%(hint71)%	What mathematical expression should you use to solve this problem?
+%(hint72)%	Try subtracting one of the givens and  your previous answer.
+%(hint73)%	Please enter '720-450' in the highlighted field.
+	
+%(hint81)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint82)%	What number did the 'show your work' step give you?
+%(hint83)%	Please enter '270' in the highlighted field.
+	
+%(show_work5)%	720-450
+%(answer5)%	270
+	
+%(given_skill1)%	Enter_given_total
+%(given_skill2)%	Enter_given_ratio
+%(show_work_skill1)%	Write_expression_for_one_part
+%(answer_skill1)%	Solve_for_one_part
+%(show_work_skill2)%	Write_expression_for_part
+%(answer_skill2)%	Solve_for_part
+%(show_work_skill3)%	Write_expression_for_remaining
+%(answer_skill3)%	Solve_for_remaining
+	
+%(given_skill1_shown)%	Enter given total
+%(given_skill2_shown)%	Enter given ratio
+%(show_work_skill1_shown)%	Show work for part
+%(answer_skill1_shown)%	Solve for part
+%(show_work_skill2_shown)%	Show work for given part
+%(answer_skill2_shown)%	Solve for given part
+%(show_work_skill3_shown)%	Show work for remaining part
+%(answer_skill3_shown)%	Solve for remaining part
+%(-8988572885511253389)%	Try subtracting one of the givens and  your previous answer.
+%(4458155188253298405)%	Please enter '5/8' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(8458158188149298124)%	What number did the 'show your work' step give you?
+%(6458144188135298222)%	What number did the 'show your work' step give you?
+%(-5541900811812701631)%	What's the answer to the mathematical expression you used in the previous step?
+%(-8988573885515253386)%	Please enter '720-450' in the highlighted field.
+%(6458145188139298219)%	Please enter '90' in the highlighted field.
+%(8458161188181298183)%	What's the answer to the mathematical expression you used in the previous step?
+%(7458148188052297872)%	Please enter '90*5' in the highlighted field.
+%(7458149188056297965)%	Try multiplying your previous answer by the number of parts of water already in the pool.
+%(-5541898811816701569)%	Please enter '270' in the highlighted field.
+%(3458144188136298076)%	Please enter '720' in the highlighted field.
+%(6458143188047297965)%	What's the answer to the mathematical expression you used in the previous step?
+%(5458135188026297887)%	Try dividing one of the givens by the total number of parts of the other given.
+%(3458146188148298154)%	This is a given number in the problem description
+%(4458157188249298307)%	This is a given number in the problem description
+%(5458134188038297970)%	Please enter '720/8' in the highlighted field.
+%(5458132188026297956)%	What mathematical expression should you use to solve this problem?
+%(8458159188153298121)%	Please enter '450' in the highlighted field.
+%(-8988575885511253416)%	What mathematical expression should you use to solve this problem?
+%(3458145188140298073)%	What number in the problem description represents the value in question?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(4458154188249298408)%	What number in the problem description represents the value in question?
+%(-5541899811804701614)%	What number did the 'show your work' step give you?
+%(7458150188144298222)%	What mathematical expression should you use to solve this problem?
+Problem Name	Problem 11
+%(startStateNodeName)%	
+%(1)%	Huck is painting a fence that is 45 feet long. He stopped to rest after painting 2/3 of the fence.
+%(2)%	How long is the fence in feet?
+%(3)%	What fraction of the fence did Huck paint before resting?
+%(4)%	How many feet is 1/3 of the total length of the fence?
+%(5)%	How many feet did Huck paint before resting?
+%(6)%	How many more feet does Huck have left to paint?
+	
+%(given)%	45
+%(numer)%	2
+%(denom)%	3
+	
+%(hint11)%	This is a given number in the problem description
+%(hint12)%	What number in the problem description represents the value in question?
+%(hint13)%	Please enter '45' in the highlighted field.
+	
+%(hint21)%	This is a given number in the problem description
+%(hint22)%	What number in the problem description represents the value in question?
+%(hint23)%	Please enter '2/3' in the highlighted field.
+	
+%(hint31)%	What mathematical expression should you use to solve this problem?
+%(hint32)%	Try dividing one of the givens by the total number of parts into which the fence has been divided.
+%(hint33)%	Please enter '45/3' in the highlighted field.
+	
+%(hint41)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint42)%	What number did the 'show your work' step give you?
+%(hint43)%	Please enter '15' in the highlighted field.
+	
+%(hint51)%	What mathematical expression should you use to solve this problem?
+%(hint52)%	Try multiplying your previous answer by the number of parts of the fence already painted.
+%(hint53)%	Please enter '15*2' in the highlighted field.
+	
+%(hint61)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint62)%	What number did the 'show your work' step give you?
+%(hint63)%	Please enter '30' in the highlighted field.
+	
+%(hint71)%	What mathematical expression should you use to solve this problem?
+%(hint72)%	Try subtracting your previous answer from one of the givens.
+%(hint73)%	Please enter '45-30' in the highlighted field.
+	
+%(hint81)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint82)%	What number did the 'show your work' step give you?
+%(hint83)%	Please enter '15' in the highlighted field.
+	
+%(show_work5)%	45-30
+%(answer5)%	15
+	
+%(given_skill1)%	Enter_given_total
+%(given_skill2)%	Enter_given_ratio
+%(show_work_skill1)%	Write_expression_for_one_part
+%(answer_skill1)%	Solve_for_one_part
+%(show_work_skill2)%	Write_expression_for_part
+%(answer_skill2)%	Solve_for_part
+%(show_work_skill3)%	Write_expression_for_remaining
+%(answer_skill3)%	Solve_for_remaining
+	
+%(given_skill1_shown)%	Enter given total
+%(given_skill2_shown)%	Enter given ratio
+%(show_work_skill1_shown)%	Show work for part
+%(answer_skill1_shown)%	Solve for part
+%(show_work_skill2_shown)%	Show work for given part
+%(answer_skill2_shown)%	Solve for given part
+%(show_work_skill3_shown)%	Show work for remaining part
+%(answer_skill3_shown)%	Solve for remaining part
+%(-8988572885511253389)%	Try subtracting your previous answer from one of the givens.
+%(4458155188253298405)%	Please enter '2/3' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(8458158188149298124)%	What number did the 'show your work' step give you?
+%(6458144188135298222)%	What number did the 'show your work' step give you?
+%(-5541900811812701631)%	What's the answer to the mathematical expression you used in the previous step?
+%(-8988573885515253386)%	Please enter '45-30' in the highlighted field.
+%(6458145188139298219)%	Please enter '15' in the highlighted field.
+%(8458161188181298183)%	What's the answer to the mathematical expression you used in the previous step?
+%(7458148188052297872)%	Please enter '15*2' in the highlighted field.
+%(7458149188056297965)%	Try multiplying your previous answer by the number of parts of the fence already painted.
+%(-5541898811816701569)%	Please enter '15' in the highlighted field.
+%(3458144188136298076)%	Please enter '45' in the highlighted field.
+%(6458143188047297965)%	What's the answer to the mathematical expression you used in the previous step?
+%(5458135188026297887)%	Try dividing one of the givens by the total number of parts into which the fence has been divided.
+%(3458146188148298154)%	This is a given number in the problem description
+%(4458157188249298307)%	This is a given number in the problem description
+%(5458134188038297970)%	Please enter '45/3' in the highlighted field.
+%(5458132188026297956)%	What mathematical expression should you use to solve this problem?
+%(8458159188153298121)%	Please enter '30' in the highlighted field.
+%(-8988575885511253416)%	What mathematical expression should you use to solve this problem?
+%(3458145188140298073)%	What number in the problem description represents the value in question?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(4458154188249298408)%	What number in the problem description represents the value in question?
+%(-5541899811804701614)%	What number did the 'show your work' step give you?
+%(7458150188144298222)%	What mathematical expression should you use to solve this problem?
+Problem Name	Problem 16
+%(startStateNodeName)%	
+%(1)%	Leah's volleyball team, the Bee's Knees, is playing its rival team, the Mavericks. The first team to score 25 points wins the game. Leah's team has scored 4/5 of the points they need.
+%(2)%	How many points does the team need to win?
+%(3)%	What fraction of points has the team already scored?
+%(4)%	How many points is 1/5 of the total?
+%(5)%	How many points has the team scored?
+%(6)%	How many more points does the team need to score?
+	
+%(given)%	25
+%(numer)%	4
+%(denom)%	5
+	
+%(hint11)%	This is a given number in the problem description
+%(hint12)%	What number in the problem description represents the value in question?
+%(hint13)%	Please enter '25' in the highlighted field.
+	
+%(hint21)%	This is a given number in the problem description
+%(hint22)%	What number in the problem description represents the value in question?
+%(hint23)%	Please enter '4/5' in the highlighted field.
+	
+%(hint31)%	What mathematical expression should you use to solve this problem?
+%(hint32)%	Try dividing one of the givens by the total number of parts into which the points have been divided.
+%(hint33)%	Please enter '25/5' in the highlighted field.
+	
+%(hint41)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint42)%	What number did the 'show your work' step give you?
+%(hint43)%	Please enter '5' in the highlighted field.
+	
+%(hint51)%	What mathematical expression should you use to solve this problem?
+%(hint52)%	Try multiplying your previous answer by the number of parts of points already scored.
+%(hint53)%	Please enter '5*4' in the highlighted field.
+	
+%(hint61)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint62)%	What number did the 'show your work' step give you?
+%(hint63)%	Please enter '20' in the highlighted field.
+	
+%(hint71)%	What mathematical expression should you use to solve this problem?
+%(hint72)%	Try subtracting your previous answer from one of the givens.
+%(hint73)%	Please enter '25-20' in the highlighted field.
+	
+%(hint81)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint82)%	What number did the 'show your work' step give you?
+%(hint83)%	Please enter '5' in the highlighted field.
+	
+%(show_work5)%	25-20
+%(answer5)%	5
+	
+%(given_skill1)%	Enter_given_total
+%(given_skill2)%	Enter_given_ratio
+%(show_work_skill1)%	Write_expression_for_one_part
+%(answer_skill1)%	Solve_for_one_part
+%(show_work_skill2)%	Write_expression_for_part
+%(answer_skill2)%	Solve_for_part
+%(show_work_skill3)%	Write_expression_for_remaining
+%(answer_skill3)%	Solve_for_remaining
+	
+%(given_skill1_shown)%	Enter given total
+%(given_skill2_shown)%	Enter given ratio
+%(show_work_skill1_shown)%	Show work for part
+%(answer_skill1_shown)%	Solve for part
+%(show_work_skill2_shown)%	Show work for given part
+%(answer_skill2_shown)%	Solve for given part
+%(show_work_skill3_shown)%	Show work for remaining part
+%(answer_skill3_shown)%	Solve for remaining part
+%(-8988572885511253389)%	Try subtracting your previous answer from one of the givens.
+%(4458155188253298405)%	Please enter '4/5' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(8458158188149298124)%	What number did the 'show your work' step give you?
+%(6458144188135298222)%	What number did the 'show your work' step give you?
+%(-5541900811812701631)%	What's the answer to the mathematical expression you used in the previous step?
+%(-8988573885515253386)%	Please enter '25-20' in the highlighted field.
+%(6458145188139298219)%	Please enter '5' in the highlighted field.
+%(8458161188181298183)%	What's the answer to the mathematical expression you used in the previous step?
+%(7458148188052297872)%	Please enter '5*4' in the highlighted field.
+%(7458149188056297965)%	Try multiplying your previous answer by the number of parts of points already scored.
+%(-5541898811816701569)%	Please enter '5' in the highlighted field.
+%(3458144188136298076)%	Please enter '25' in the highlighted field.
+%(6458143188047297965)%	What's the answer to the mathematical expression you used in the previous step?
+%(5458135188026297887)%	Try dividing one of the givens by the total number of parts into which the points have been divided.
+%(3458146188148298154)%	This is a given number in the problem description
+%(4458157188249298307)%	This is a given number in the problem description
+%(5458134188038297970)%	Please enter '25/5' in the highlighted field.
+%(5458132188026297956)%	What mathematical expression should you use to solve this problem?
+%(8458159188153298121)%	Please enter '20' in the highlighted field.
+%(-8988575885511253416)%	What mathematical expression should you use to solve this problem?
+%(3458145188140298073)%	What number in the problem description represents the value in question?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(4458154188249298408)%	What number in the problem description represents the value in question?
+%(-5541899811804701614)%	What number did the 'show your work' step give you?
+%(7458150188144298222)%	What mathematical expression should you use to solve this problem?
+Problem Name	Problem 17
+%(startStateNodeName)%	
+%(1)%	Joey the Zookeeper is in charge of buying elephant food in the San Diego Zoo. African elephants eat all types of vegetation, from grass and fruit to leaves and bark. In the zoo, each elephant eats 120 pounds of food each day. One of the elephants, Vince, had eaten 5/6 of his portion for the day.
+%(2)%	How many pounds of food does Vince eat each day?
+%(3)%	What fraction of food has he already eaten?
+%(4)%	How many pounds of food is 1/6 of the total?
+%(5)%	How many pounds of food has Vince already eaten?
+%(6)%	How many more pounds of food does Vince still have to eat?
+	
+%(given)%	120
+%(numer)%	5
+%(denom)%	6
+	
+%(hint11)%	This is a given number in the problem description
+%(hint12)%	What number in the problem description represents the value in question?
+%(hint13)%	Please enter '120' in the highlighted field.
+	
+%(hint21)%	This is a given number in the problem description
+%(hint22)%	What number in the problem description represents the value in question?
+%(hint23)%	Please enter '5/6' in the highlighted field.
+	
+%(hint31)%	What mathematical expression should you use to solve this problem?
+%(hint32)%	Try dividing one of the givens by the total number of parts into which the pounds of food have been divided.
+%(hint33)%	Please enter '120/6' in the highlighted field.
+	
+%(hint41)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint42)%	What number did the 'show your work' step give you?
+%(hint43)%	Please enter '20' in the highlighted field.
+	
+%(hint51)%	What mathematical expression should you use to solve this problem?
+%(hint52)%	Try multiplying your previous answer by the number of parts of pounds already eaten.
+%(hint53)%	Please enter '20*5' in the highlighted field.
+	
+%(hint61)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint62)%	What number did the 'show your work' step give you?
+%(hint63)%	Please enter '100' in the highlighted field.
+	
+%(hint71)%	What mathematical expression should you use to solve this problem?
+%(hint72)%	Try subtracting your previous answer from one of the givens.
+%(hint73)%	Please enter '120-100' in the highlighted field.
+	
+%(hint81)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint82)%	What number did the 'show your work' step give you?
+%(hint83)%	Please enter '20' in the highlighted field.
+	
+%(show_work5)%	120-100
+%(answer5)%	20
+	
+%(given_skill1)%	Enter_given_total
+%(given_skill2)%	Enter_given_ratio
+%(show_work_skill1)%	Write_expression_for_one_part
+%(answer_skill1)%	Solve_for_one_part
+%(show_work_skill2)%	Write_expression_for_part
+%(answer_skill2)%	Solve_for_part
+%(show_work_skill3)%	Write_expression_for_remaining
+%(answer_skill3)%	Solve_for_remaining
+	
+%(given_skill1_shown)%	Enter given total
+%(given_skill2_shown)%	Enter given ratio
+%(show_work_skill1_shown)%	Show work for part
+%(answer_skill1_shown)%	Solve for part
+%(show_work_skill2_shown)%	Show work for given part
+%(answer_skill2_shown)%	Solve for given part
+%(show_work_skill3_shown)%	Show work for remaining part
+%(answer_skill3_shown)%	Solve for remaining part
+%(-8988572885511253389)%	Try subtracting your previous answer from one of the givens.
+%(4458155188253298405)%	Please enter '5/6' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(8458158188149298124)%	What number did the 'show your work' step give you?
+%(6458144188135298222)%	What number did the 'show your work' step give you?
+%(-5541900811812701631)%	What's the answer to the mathematical expression you used in the previous step?
+%(-8988573885515253386)%	Please enter '120-100' in the highlighted field.
+%(6458145188139298219)%	Please enter '20' in the highlighted field.
+%(8458161188181298183)%	What's the answer to the mathematical expression you used in the previous step?
+%(7458148188052297872)%	Please enter '20*5' in the highlighted field.
+%(7458149188056297965)%	Try multiplying your previous answer by the number of parts of pounds already eaten.
+%(-5541898811816701569)%	Please enter '20' in the highlighted field.
+%(3458144188136298076)%	Please enter '120' in the highlighted field.
+%(6458143188047297965)%	What's the answer to the mathematical expression you used in the previous step?
+%(5458135188026297887)%	Try dividing one of the givens by the total number of parts into which the pounds of food have been divided.
+%(3458146188148298154)%	This is a given number in the problem description
+%(4458157188249298307)%	This is a given number in the problem description
+%(5458134188038297970)%	Please enter '120/6' in the highlighted field.
+%(5458132188026297956)%	What mathematical expression should you use to solve this problem?
+%(8458159188153298121)%	Please enter '100' in the highlighted field.
+%(-8988575885511253416)%	What mathematical expression should you use to solve this problem?
+%(3458145188140298073)%	What number in the problem description represents the value in question?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(4458154188249298408)%	What number in the problem description represents the value in question?
+%(-5541899811804701614)%	What number did the 'show your work' step give you?
+%(7458150188144298222)%	What mathematical expression should you use to solve this problem?
+Problem Name	Problem 18
+%(startStateNodeName)%	
+%(1)%	Kristopher is practicing hockey drills before a big game. He wants to do a shooting drill for 32 minutes, but he stops 5/8 of the way into the drill for water. How much longer does he need to do the drill?
+%(2)%	How long does Kristopher want to do the drill?
+%(3)%	What fraction of the drill has he done?
+%(4)%	How many minutes is 1/8 of the total?
+%(5)%	How many minutes has he already spent doing the drill?
+%(6)%	How many more minutes does he still have to do the drill?
+	
+%(given)%	32
+%(numer)%	5
+%(denom)%	8
+	
+%(hint11)%	This is a given number in the problem description
+%(hint12)%	What number in the problem description represents the value in question?
+%(hint13)%	Please enter '32' in the highlighted field.
+	
+%(hint21)%	This is a given number in the problem description
+%(hint22)%	What number in the problem description represents the value in question?
+%(hint23)%	Please enter '5/8' in the highlighted field.
+	
+%(hint31)%	What mathematical expression should you use to solve this problem?
+%(hint32)%	Try dividing one of the givens by the total number of parts into which the length of the drill has been divided.
+%(hint33)%	Please enter '32/8' in the highlighted field.
+	
+%(hint41)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint42)%	What number did the 'show your work' step give you?
+%(hint43)%	Please enter '4' in the highlighted field.
+	
+%(hint51)%	What mathematical expression should you use to solve this problem?
+%(hint52)%	Try multiplying your previous answer by the number of parts of minutes already completed.
+%(hint53)%	Please enter '4*5' in the highlighted field.
+	
+%(hint61)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint62)%	What number did the 'show your work' step give you?
+%(hint63)%	Please enter '20' in the highlighted field.
+	
+%(hint71)%	What mathematical expression should you use to solve this problem?
+%(hint72)%	Try subtracting your previous answer from one of the givens.
+%(hint73)%	Please enter '32-20' in the highlighted field.
+	
+%(hint81)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint82)%	What number did the 'show your work' step give you?
+%(hint83)%	Please enter '12' in the highlighted field.
+	
+%(show_work5)%	32-20
+%(answer5)%	12
+	
+%(given_skill1)%	Enter_given_total
+%(given_skill2)%	Enter_given_ratio
+%(show_work_skill1)%	Write_expression_for_one_part
+%(answer_skill1)%	Solve_for_one_part
+%(show_work_skill2)%	Write_expression_for_part
+%(answer_skill2)%	Solve_for_part
+%(show_work_skill3)%	Write_expression_for_remaining
+%(answer_skill3)%	Solve_for_remaining
+	
+%(given_skill1_shown)%	Enter given total
+%(given_skill2_shown)%	Enter given ratio
+%(show_work_skill1_shown)%	Show work for part
+%(answer_skill1_shown)%	Solve for part
+%(show_work_skill2_shown)%	Show work for given part
+%(answer_skill2_shown)%	Solve for given part
+%(show_work_skill3_shown)%	Show work for remaining part
+%(answer_skill3_shown)%	Solve for remaining part
+%(-8988572885511253389)%	Try subtracting your previous answer from one of the givens.
+%(4458155188253298405)%	Please enter '5/8' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(8458158188149298124)%	What number did the 'show your work' step give you?
+%(6458144188135298222)%	What number did the 'show your work' step give you?
+%(-5541900811812701631)%	What's the answer to the mathematical expression you used in the previous step?
+%(-8988573885515253386)%	Please enter '32-20' in the highlighted field.
+%(6458145188139298219)%	Please enter '4' in the highlighted field.
+%(8458161188181298183)%	What's the answer to the mathematical expression you used in the previous step?
+%(7458148188052297872)%	Please enter '4*5' in the highlighted field.
+%(7458149188056297965)%	Try multiplying your previous answer by the number of parts of minutes already completed.
+%(-5541898811816701569)%	Please enter '12' in the highlighted field.
+%(3458144188136298076)%	Please enter '32' in the highlighted field.
+%(6458143188047297965)%	What's the answer to the mathematical expression you used in the previous step?
+%(5458135188026297887)%	Try dividing one of the givens by the total number of parts into which the length of the drill has been divided.
+%(3458146188148298154)%	This is a given number in the problem description
+%(4458157188249298307)%	This is a given number in the problem description
+%(5458134188038297970)%	Please enter '32/8' in the highlighted field.
+%(5458132188026297956)%	What mathematical expression should you use to solve this problem?
+%(8458159188153298121)%	Please enter '20' in the highlighted field.
+%(-8988575885511253416)%	What mathematical expression should you use to solve this problem?
+%(3458145188140298073)%	What number in the problem description represents the value in question?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(4458154188249298408)%	What number in the problem description represents the value in question?
+%(-5541899811804701614)%	What number did the 'show your work' step give you?
+%(7458150188144298222)%	What mathematical expression should you use to solve this problem?
+Problem Name	Problem 19
+%(startStateNodeName)%	
+%(1)%	Tom needs to make 400 copies and has made 15/16 of the total before the printer runs out of paper.
+%(2)%	How many total copies is Tom going to make?
+%(3)%	What fraction of the total number of copies has Tom made?
+%(4)%	How many copies is 1/16 of the total.
+%(5)%	How many copies has Tom already made?
+%(6)%	How many more copies does Tom still need to make?
+	
+%(given)%	400
+%(numer)%	15
+%(denom)%	16
+	
+%(hint11)%	This is a given number in the problem description
+%(hint12)%	What number in the problem description represents the value in question?
+%(hint13)%	Please enter '400' in the highlighted field.
+	
+%(hint21)%	This is a given number in the problem description
+%(hint22)%	What number in the problem description represents the value in question?
+%(hint23)%	Please enter '15/16' in the highlighted field.
+	
+%(hint31)%	What mathematical expression should you use to solve this problem?
+%(hint32)%	Try dividing one of the givens by the total number of parts into which the copies have been divided.
+%(hint33)%	Please enter '400/16' in the highlighted field.
+	
+%(hint41)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint42)%	What number did the 'show your work' step give you?
+%(hint43)%	Please enter '25' in the highlighted field.
+	
+%(hint51)%	What mathematical expression should you use to solve this problem?
+%(hint52)%	Try multiplying your previous answer by the number of parts of copies already made.
+%(hint53)%	Please enter '25*15' in the highlighted field.
+	
+%(hint61)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint62)%	What number did the 'show your work' step give you?
+%(hint63)%	Please enter '375' in the highlighted field.
+	
+%(hint71)%	What mathematical expression should you use to solve this problem?
+%(hint72)%	Try subtracting your previous answer from one of the givens.
+%(hint73)%	Please enter '400-375' in the highlighted field.
+	
+%(hint81)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint82)%	What number did the 'show your work' step give you?
+%(hint83)%	Please enter '25' in the highlighted field.
+	
+%(show_work5)%	400-375
+%(answer5)%	25
+	
+%(given_skill1)%	Enter_given_total
+%(given_skill2)%	Enter_given_ratio
+%(show_work_skill1)%	Write_expression_for_one_part
+%(answer_skill1)%	Solve_for_one_part
+%(show_work_skill2)%	Write_expression_for_part
+%(answer_skill2)%	Solve_for_part
+%(show_work_skill3)%	Write_expression_for_remaining
+%(answer_skill3)%	Solve_for_remaining
+	
+%(given_skill1_shown)%	Enter given total
+%(given_skill2_shown)%	Enter given ratio
+%(show_work_skill1_shown)%	Show work for part
+%(answer_skill1_shown)%	Solve for part
+%(show_work_skill2_shown)%	Show work for given part
+%(answer_skill2_shown)%	Solve for given part
+%(show_work_skill3_shown)%	Show work for remaining part
+%(answer_skill3_shown)%	Solve for remaining part
+%(-8988572885511253389)%	Try subtracting your previous answer from one of the givens.
+%(4458155188253298405)%	Please enter '15/16' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(8458158188149298124)%	What number did the 'show your work' step give you?
+%(6458144188135298222)%	What number did the 'show your work' step give you?
+%(-5541900811812701631)%	What's the answer to the mathematical expression you used in the previous step?
+%(-8988573885515253386)%	Please enter '400-375' in the highlighted field.
+%(6458145188139298219)%	Please enter '25' in the highlighted field.
+%(8458161188181298183)%	What's the answer to the mathematical expression you used in the previous step?
+%(7458148188052297872)%	Please enter '25*15' in the highlighted field.
+%(7458149188056297965)%	Try multiplying your previous answer by the number of parts of copies already made.
+%(-5541898811816701569)%	Please enter '25' in the highlighted field.
+%(3458144188136298076)%	Please enter '400' in the highlighted field.
+%(6458143188047297965)%	What's the answer to the mathematical expression you used in the previous step?
+%(5458135188026297887)%	Try dividing one of the givens by the total number of parts into which the copies have been divided.
+%(3458146188148298154)%	This is a given number in the problem description
+%(4458157188249298307)%	This is a given number in the problem description
+%(5458134188038297970)%	Please enter '400/16' in the highlighted field.
+%(5458132188026297956)%	What mathematical expression should you use to solve this problem?
+%(8458159188153298121)%	Please enter '375' in the highlighted field.
+%(-8988575885511253416)%	What mathematical expression should you use to solve this problem?
+%(3458145188140298073)%	What number in the problem description represents the value in question?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(4458154188249298408)%	What number in the problem description represents the value in question?
+%(-5541899811804701614)%	What number did the 'show your work' step give you?
+%(7458150188144298222)%	What mathematical expression should you use to solve this problem?
+Problem Name	Problem 20
+%(startStateNodeName)%	
+%(1)%	Jerome is baking 60 brownies for his class party. He has finished 3/10 of them and needs to make more batter.
+%(2)%	How many total brownies is Jerome going to bake?
+%(3)%	What fraction of the total number has Jerome baked?
+%(4)%	How many brownies is 1/10 of the total?
+%(5)%	How many brownies has Jerome already made?
+%(6)%	How many more brownies does Jerome need to make with the new batter?
+	
+%(given)%	60
+%(numer)%	3
+%(denom)%	10
+	
+%(hint11)%	This is a given number in the problem description
+%(hint12)%	What number in the problem description represents the value in question?
+%(hint13)%	Please enter '60' in the highlighted field.
+	
+%(hint21)%	This is a given number in the problem description
+%(hint22)%	What number in the problem description represents the value in question?
+%(hint23)%	Please enter '3/10' in the highlighted field.
+	
+%(hint31)%	What mathematical expression should you use to solve this problem?
+%(hint32)%	Try dividing one of the givens by the total number of parts into which the brownies have been divided.
+%(hint33)%	Please enter '60/10' in the highlighted field.
+	
+%(hint41)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint42)%	What number did the 'show your work' step give you?
+%(hint43)%	Please enter '6' in the highlighted field.
+	
+%(hint51)%	What mathematical expression should you use to solve this problem?
+%(hint52)%	Try multiplying your previous answer by the number of parts of brownies already made.
+%(hint53)%	Please enter '6*3' in the highlighted field.
+	
+%(hint61)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint62)%	What number did the 'show your work' step give you?
+%(hint63)%	Please enter '18' in the highlighted field.
+	
+%(hint71)%	What mathematical expression should you use to solve this problem?
+%(hint72)%	Try subtracting your previous answer from one of the givens.
+%(hint73)%	Please enter '60-18' in the highlighted field.
+	
+%(hint81)%	What's the answer to the mathematical expression you used in the previous step?
+%(hint82)%	What number did the 'show your work' step give you?
+%(hint83)%	Please enter '42' in the highlighted field.
+	
+%(show_work5)%	60-18
+%(answer5)%	42
+	
+%(given_skill1)%	Enter_given_total
+%(given_skill2)%	Enter_given_ratio
+%(show_work_skill1)%	Write_expression_for_one_part
+%(answer_skill1)%	Solve_for_one_part
+%(show_work_skill2)%	Write_expression_for_part
+%(answer_skill2)%	Solve_for_part
+%(show_work_skill3)%	Write_expression_for_remaining
+%(answer_skill3)%	Solve_for_remaining
+	
+%(given_skill1_shown)%	Enter given total
+%(given_skill2_shown)%	Enter given ratio
+%(show_work_skill1_shown)%	Show work for part
+%(answer_skill1_shown)%	Solve for part
+%(show_work_skill2_shown)%	Show work for given part
+%(answer_skill2_shown)%	Solve for given part
+%(show_work_skill3_shown)%	Show work for remaining part
+%(answer_skill3_shown)%	Solve for remaining part 
+%(-8988572885511253389)%	Try subtracting your previous answer from one of the givens.
+%(4458155188253298405)%	Please enter '3/10' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(8458158188149298124)%	What number did the 'show your work' step give you?
+%(6458144188135298222)%	What number did the 'show your work' step give you?
+%(-5541900811812701631)%	What's the answer to the mathematical expression you used in the previous step?
+%(-8988573885515253386)%	Please enter '60-18' in the highlighted field.
+%(6458145188139298219)%	Please enter '6' in the highlighted field.
+%(8458161188181298183)%	What's the answer to the mathematical expression you used in the previous step?
+%(7458148188052297872)%	Please enter '6*3' in the highlighted field.
+%(7458149188056297965)%	Try multiplying your previous answer by the number of parts of brownies already made.
+%(-5541898811816701569)%	Please enter '42' in the highlighted field.
+%(3458144188136298076)%	Please enter '60' in the highlighted field.
+%(6458143188047297965)%	What's the answer to the mathematical expression you used in the previous step?
+%(5458135188026297887)%	Try dividing one of the givens by the total number of parts into which the brownies have been divided.
+%(3458146188148298154)%	This is a given number in the problem description
+%(4458157188249298307)%	This is a given number in the problem description
+%(5458134188038297970)%	Please enter '60/10' in the highlighted field.
+%(5458132188026297956)%	What mathematical expression should you use to solve this problem?
+%(8458159188153298121)%	Please enter '18' in the highlighted field.
+%(-8988575885511253416)%	What mathematical expression should you use to solve this problem?
+%(3458145188140298073)%	What number in the problem description represents the value in question?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(4458154188249298408)%	What number in the problem description represents the value in question?
+%(-5541899811804701614)%	What number did the 'show your work' step give you?
+%(7458150188144298222)%	What mathematical expression should you use to solve this problem?

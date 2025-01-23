@@ -1,0 +1,2495 @@
+<?xml version="1.0" standalone="yes"?>
+
+<stateGraph firstCheckAllStates="true" caseInsensitive="true" unordered="true" lockWidget="true" hintPolicy="Use Both Kinds of Bias" version="4.0" suppressStudentFeedback="Show All Feedback" highlightRightSelection="true" startStateNodeName="start" tutorType="Example-tracing Tutor">
+    <startNodeMessages>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartProblem</MessageType>
+                <ProblemName>23NEAT</ProblemName>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>3D9168F4C54991E7C892BD06C337CA92A4D78D0</transaction_id>
+                <Selection>
+                    <value>statement</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>NEAT is a parallelogram. Using the information provided, fill in the table below completely. </value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <Selection>
+                    <value>graphs</value>
+                </Selection>
+                <Action>
+                    <value>assignImage</value>
+                </Action>
+                <Input>
+                    <value>Assets/23NEAT.png</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>6BBBE8A65C3895340103D402669E546E58750DC</transaction_id>
+                <Selection>
+                    <value>question1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>(1) If segment NE is 9 cm long, segment EA is 5.5 cm long, and the segment MN is 6 cm long, find the perimeter and the area of the parallelogram.</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>31E56B26E8780988307A9052BF93EE8419269C7</transaction_id>
+                <Selection>
+                    <value>question2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>(2) If the area of the parallelogram is 50 sq. cm, NE = 12cm, and NT = 10cm, what is its height and perimeter?</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>2CA97B389C93526580EE7C82114C1DAE27F5326</transaction_id>
+                <Selection>
+                    <value>question3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>(3) Let's say the perimeter is known: P = 40cm, and lengths of two sides, NM = 6 cm, and AT = 7cm. Find the base and the area!</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00CE65C5-4872-F145-DDED-EE937C746992</transaction_id>
+                <Selection>
+                    <value>question2</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00CE65C5-4872-F145-DDED-EE937C746992</transaction_id>
+                <Selection>
+                    <value>question3</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>1FC1770BCF21A6626047B9481A280AAF6322387</transaction_id>
+                <Selection>
+                    <value>q1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>1</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>1FC1770BCF21A6626047B9481A280AAF6322387</transaction_id>
+                <Selection>
+                    <value>DLs</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Diagram Labels</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>1FC1770BCF21A6626047B9481A280AAF6322387</transaction_id>
+                <Selection>
+                    <value>q2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>2</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>1FC1770BCF21A6626047B9481A280AAF6322387</transaction_id>
+                <Selection>
+                    <value>q3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>3</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>1FC1770BCF21A6626047B9481A280AAF6322387</transaction_id>
+                <Selection>
+                    <value>unit1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>cm</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>07EEACA411423234F340EDE1255D1201CCF0368</transaction_id>
+                <Selection>
+                    <value>unit2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>cm</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>07EEACA411423234F340EDE1255D1201CCF0368</transaction_id>
+                <Selection>
+                    <value>unit3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>cm</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>A03216DCDE1DDF396A27EF27101391A4385A565</transaction_id>
+                <Selection>
+                    <value>unit4</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>cm</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>90CE5E43F0B0D5B10916E8041BA2A81F8492155</transaction_id>
+                <Selection>
+                    <value>unit5</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>sq. cm</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>35CF905CB0B62273D5E3848F8BE262FF88F6452</transaction_id>
+                <Selection>
+                    <value>heading1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Base</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>767752C448FEE84572987529BFC7E797C7FC63B</transaction_id>
+                <Selection>
+                    <value>heading2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Side adjacent to the base</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>2DA6688209C1F8DA2D396EEEC45ABC19B7317AC</transaction_id>
+                <Selection>
+                    <value>heading3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Height</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>435B05549B8A1ADCC47BFD511935F89089251C6</transaction_id>
+                <Selection>
+                    <value>heading4</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Perimeter</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>FB9495201EB341219574B31CF7508EDFDB87651</transaction_id>
+                <Selection>
+                    <value>heading5</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Area</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5D</transaction_id>
+                <Selection>
+                    <value>question0a</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>NT</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5D</transaction_id>
+                <Selection>
+                    <value>question0b</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>NE</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5D</transaction_id>
+                <Selection>
+                    <value>question0c</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>MN</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5D</transaction_id>
+                <Selection>
+                    <value>question0d</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>---</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5D</transaction_id>
+                <Selection>
+                    <value>question0e</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>---</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5</transaction_id>
+                <Selection>
+                    <value>r0c4</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5</transaction_id>
+                <Selection>
+                    <value>r1c4</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5</transaction_id>
+                <Selection>
+                    <value>r2c4</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5</transaction_id>
+                <Selection>
+                    <value>r3c4</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5</transaction_id>
+                <Selection>
+                    <value>r4c4</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5</transaction_id>
+                <Selection>
+                    <value>r5c4</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5</transaction_id>
+                <Selection>
+                    <value>r0c5</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5</transaction_id>
+                <Selection>
+                    <value>r1c5</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5</transaction_id>
+                <Selection>
+                    <value>r2c5</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5</transaction_id>
+                <Selection>
+                    <value>r3c5</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5</transaction_id>
+                <Selection>
+                    <value>r4c5</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5</transaction_id>
+                <Selection>
+                    <value>r5c5</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5</transaction_id>
+                <Selection>
+                    <value>row4</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7B58212CB14527BAD235D6C5D6666C6E610AA5</transaction_id>
+                <Selection>
+                    <value>row5</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartStateEnd</MessageType>
+            </properties>
+        </message>
+    </startNodeMessages>
+    <node locked="false" doneState="false">
+        <text>23NEAT</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>545</x>
+            <y>17</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state1</text>
+        <uniqueID>2</uniqueID>
+        <dimension>
+            <x>351</x>
+            <y>230</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state2</text>
+        <uniqueID>3</uniqueID>
+        <dimension>
+            <x>351</x>
+            <y>340</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state3</text>
+        <uniqueID>4</uniqueID>
+        <dimension>
+            <x>351</x>
+            <y>450</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>labelFill</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>519</x>
+            <y>550</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state6</text>
+        <uniqueID>7</uniqueID>
+        <dimension>
+            <x>519</x>
+            <y>660</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state7</text>
+        <uniqueID>8</uniqueID>
+        <dimension>
+            <x>519</x>
+            <y>770</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state8</text>
+        <uniqueID>9</uniqueID>
+        <dimension>
+            <x>519</x>
+            <y>880</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state12</text>
+        <uniqueID>13</uniqueID>
+        <dimension>
+            <x>528</x>
+            <y>1000</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state13</text>
+        <uniqueID>14</uniqueID>
+        <dimension>
+            <x>350</x>
+            <y>1099</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state14</text>
+        <uniqueID>15</uniqueID>
+        <dimension>
+            <x>350</x>
+            <y>1209</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state15</text>
+        <uniqueID>16</uniqueID>
+        <dimension>
+            <x>350</x>
+            <y>1319</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state16</text>
+        <uniqueID>17</uniqueID>
+        <dimension>
+            <x>350</x>
+            <y>1429</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state17</text>
+        <uniqueID>18</uniqueID>
+        <dimension>
+            <x>350</x>
+            <y>1539</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state18</text>
+        <uniqueID>19</uniqueID>
+        <dimension>
+            <x>523</x>
+            <y>1623</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state19</text>
+        <uniqueID>20</uniqueID>
+        <dimension>
+            <x>520</x>
+            <y>1740</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state20</text>
+        <uniqueID>21</uniqueID>
+        <dimension>
+            <x>523</x>
+            <y>1843</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state21</text>
+        <uniqueID>22</uniqueID>
+        <dimension>
+            <x>531</x>
+            <y>1963</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state22</text>
+        <uniqueID>23</uniqueID>
+        <dimension>
+            <x>531</x>
+            <y>2073</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state23</text>
+        <uniqueID>24</uniqueID>
+        <dimension>
+            <x>531</x>
+            <y>2183</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="true">
+        <text>Done</text>
+        <uniqueID>25</uniqueID>
+        <dimension>
+            <x>709</x>
+            <y>2284</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state26</text>
+        <uniqueID>27</uniqueID>
+        <dimension>
+            <x>69</x>
+            <y>201</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state27</text>
+        <uniqueID>28</uniqueID>
+        <dimension>
+            <x>623</x>
+            <y>213</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state29</text>
+        <uniqueID>30</uniqueID>
+        <dimension>
+            <x>570</x>
+            <y>308</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state33</text>
+        <uniqueID>34</uniqueID>
+        <dimension>
+            <x>80</x>
+            <y>322</y>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="0" maxTraversals="0">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>3</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>0379739F55ECEEB984F47F78C53959A36ADE273</transaction_id>
+                    <Selection>
+                        <value>question0b</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>-</hintMessage>
+            <hintMessage>-</hintMessage>
+            <hintMessage>-</hintMessage>
+            <hintMessage>-</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question0b</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>RegexMatcher</matcherType>
+                        <matcherParameter name="single">-</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>- 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="0" maxTraversals="0">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>5</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>D5E922BADBEAA52541102A4148BC3DB90A2B888</transaction_id>
+                    <Selection>
+                        <value>question0c</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>-</hintMessage>
+            <hintMessage>-</hintMessage>
+            <hintMessage>-</hintMessage>
+            <hintMessage>-</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question0c</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>RegexMatcher</matcherType>
+                        <matcherParameter name="single">-</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>- 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>3</sourceID>
+        <destID>4</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>11</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>370F62FB04D7BE89C78C1B42EE91FEDEBE8680D</transaction_id>
+                    <Selection>
+                        <value>question1a</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>5.5</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Enter the length of the parallelogram's base here. Not sure which segment is the base? What is the label of the base segment?</hintMessage>
+            <hintMessage>Take a look at the diagram label of this column, or under &quot;Base&quot;. The base segment label is displayed as NT. Enter the length of NT.</hintMessage>
+            <hintMessage>Re-read the question statement to find how long NT is. If you don't see it, remember that a parallel pair of segments on a parallelogram always has the SAME length!</hintMessage>
+            <hintMessage>&lt;%=ifThen(regExMatch(&quot;EA|AE&quot;,question0a),&quot;The base (NT) is 5.5 centimeters long. Enter 5.5 into the highlighted area.&quot;,concat(&quot;Question1 has given you EA = 5.5. Since &quot;,question0a,&quot; is parallel to EA, &quot;,question0a,&quot; = 5.5 as well.&quot;))%&gt;</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question1a</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">5.5</matcherParameter>
+                        <matcherParameter name="relation">=</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>- 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>6</sourceID>
+        <destID>7</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>13</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>5B4252AD292DEECF2825D39E82193D48DE19046</transaction_id>
+                    <Selection>
+                        <value>question1b</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>9</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Enter the length of the segment that is adjacent to the base. Not sure which segment this is? What is the label of the segment you are looking for?</hintMessage>
+            <hintMessage>Take a look at the diagram label of this column, or under &quot;Side adjacent to the base&quot;. The label for the segment adjacent to the base is displayed as NE. Enter the length of NE.</hintMessage>
+            <hintMessage>Re-read Question1 to find how long NE is. If you don't see it in the question statement, remember that a parallel pair of segments on a parallelogram always has the SAME length!</hintMessage>
+            <hintMessage>The side adjacent to the base (NE) is 9 centimeters long. Enter 9 into the highlighted area.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question1b</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">9</matcherParameter>
+                        <matcherParameter name="relation">=</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>- 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>7</sourceID>
+        <destID>8</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>15</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>10959DE7F61B34A4C70CAF6A48E8A38DFB3E100</transaction_id>
+                    <Selection>
+                        <value>question1c</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>6</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Enter the length of the parallelogram's height here. Not sure which segment that is? What is the label of the height segment?</hintMessage>
+            <hintMessage>Take a look at the diagram label of this column, or under &quot;Height&quot;. What is the name or the label of the segment that represents the height?</hintMessage>
+            <hintMessage>The label under &quot;Height&quot; is MN. Do you remember how long the segment MN is? Read the problem statement again if you forgot. </hintMessage>
+            <hintMessage>The height (MN) is 6 centimeters long.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question1c</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;6&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input,6)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>- 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>8</sourceID>
+        <destID>9</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>25</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>0CF1F1795E618E67F60F8052CD0D82E18C32666</transaction_id>
+                    <Selection>
+                        <value>question1e</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>33</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Do you know how to find an area of the parallelogram? If you are not sure, try finding the formula in the glossary. </hintMessage>
+            <hintMessage>Open the glossary and search for &quot;Area - Parallelogram&quot;. </hintMessage>
+            <hintMessage>The area (A) of the parallelogram NEAT can be found using the formula: A = b * h, which means Area = &quot;base&quot; * &quot;height&quot;. What is the length of the base? What is the length of the height?</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(question1a,question1c),concat(&quot;All you have to do is multiply the length of the base (&quot;,question0a,&quot; = 5.5) by the height (MN = 6). Therefore, A = 5.5 * 6!&quot;),&quot;Uh oh, you cannot figure out the area without the lengths of the base and the height! Come back to this field after you find their lengths!&quot;)%&gt;</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question1e</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;33&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input,33)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>FindAreaPara 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>13</sourceID>
+        <destID>14</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>27</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>EC1ACFB71CEB8F847B8315283A4685F5EB514B4</transaction_id>
+                    <Selection>
+                        <value>question2a</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>10</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Enter the length of the parallelogram's base here. Not sure which segment is the base? What is the label of the base segment?</hintMessage>
+            <hintMessage>Take a look at the diagram label of this column, or under &quot;Base&quot;. The base segment label is displayed as NT. Enter the length of NT.</hintMessage>
+            <hintMessage>Re-read the question statement to find how long NT is. If you don't see it, remember that a parallel pair of segments on a parallelogram always has the SAME length!</hintMessage>
+            <hintMessage>&lt;%=ifThen(regExMatch(&quot;NT|TN&quot;,question0a),&quot;The base (NT) is 10 centimeters long. Enter 10 into the highlighted area.&quot;,concat(&quot;Question2 has given you NT = 10. Since &quot;,question0a,&quot; is parallel to NT, &quot;,question0a,&quot; = 10 as well.&quot;))%&gt;</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question2a</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>RegexMatcher</matcherType>
+                        <matcherParameter name="single">10</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>- 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>14</sourceID>
+        <destID>15</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>29</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>514BF2C7918584B9942EF886903D8323F91D805</transaction_id>
+                    <Selection>
+                        <value>question2b</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>12</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Enter the length of the segment that is adjacent to the base. Not sure which segment this is? What is the label of the segment you are looking for?</hintMessage>
+            <hintMessage>Take a look at the diagram label of this column, or under &quot;Side adjacent to the base&quot;. The label for the segment adjacent to the base is displayed as NE. Enter the length of NE.</hintMessage>
+            <hintMessage>Re-read Question2 to find how long NE is. If you don't see it in the question statement, remember that a parallel pair of segments on a parallelogram always has the SAME length!</hintMessage>
+            <hintMessage>The side adjacent to the base (NE) is 12 centimeters long. Enter 12 into the highlighted area.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question2b</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>RegexMatcher</matcherType>
+                        <matcherParameter name="single">12</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>- 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>15</sourceID>
+        <destID>16</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>31</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>95E8E91D5F68DC65F6552E5499BA05C41886147</transaction_id>
+                    <Selection>
+                        <value>question2c</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>5</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>You can find the height if the base (b) and the area (A) are given! Remember that the area (A) of a parallelogram can be found by calculating &quot;base&quot; * &quot;height&quot;.</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(question2a,question2e),&quot;Your situation is 'Area' = 'base' * '?'. This means 10 times an number gives you 50. What do you have to multiply to 10 to turn it into 50?&quot;,&quot;Are you sure you are ready to answer this part?&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(question2a,question2e),&quot;Start thinking with very easy numbers. If 2 * '?' = 6, can you figure out what '?' is? You know that 2x3 is 6. You can also find '3' by diving 6 by 2! Division is an inverse operation of multiplication; think of division as 'undoing multiply'.&quot;,&quot;In order to solve for the height, you need to know the base(b) and the area(A) first. Have you filled out the length of the base and the value of the area yet?&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(question2a,question2e),&quot;Now do the same thing with 50(area) and 10(base); divide 50 by 10: 50/10 = 5.&quot;,&quot;Fill in the length of the base and the value of the area, then come back to this field!&quot;)%&gt;</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question2c</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;5&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input,"5")</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>SolvHeight 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>16</sourceID>
+        <destID>17</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>33</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>7454BE735C67481881168C97C1201F6BCDA6204</transaction_id>
+                    <Selection>
+                        <value>question2d</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>44</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>A perimeter is the sum of the lengths of all the sides of a geometry.</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(question2a,question2b),&quot;You are only given the lengths of 2 sides this time: NT and NE. But did you know that parallel sides on a parallelogram have the equal length? That means you already know the lengths of two other sides, EA and AT.&quot;,&quot;Are you sure you are ready to answer this part?&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(question2a,question2b),&quot;NT and EA are both 10, and EN and AT are both 12 cm. You can either do 10 + 12 + 10 + 12 or the faster way, (10 + 12) * 2.&quot;,&quot;In order to figure out the perimeter, you must know the lengths of at least 1 base and 1 side adjacent to the base.  Have you filled in lengths for NT and NE?&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(question2a,question2b),&quot;The perimeter of parallelogram NEAT is (10 + 12) * 2 = 44.&quot;,&quot;Fill in the lengths of NT and NE, then come back to this field!&quot;)%&gt;</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question2d</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;44&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input,"44")</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>FindPerimeterPara 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>17</sourceID>
+        <destID>18</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>35</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>32CD92D2E3A97CA9B0209D85A00737E955145F2</transaction_id>
+                    <Selection>
+                        <value>question2e</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>50</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Enter the value of the parallelogram's area here. It is given in the statement for Question2.</hintMessage>
+            <hintMessage>Here is a quick tip about recognizing a value of an area; look at the value's unit. If the unit is squared, like &quot;square centimeters&quot;, it is likely that it is describing an area. Do you see such value in the statement for Question2? </hintMessage>
+            <hintMessage>50 sq. cm is the value of the area. Note that it's unit is &quot;sq. cm&quot; instead of just &quot;cm&quot;.</hintMessage>
+            <hintMessage>Enter NEAT's area, 50.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question2e</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;50&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input,"50")</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>- 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>18</sourceID>
+        <destID>19</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>37</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>2149695F4676600B0C7805914B2E5A7888262CA</transaction_id>
+                    <Selection>
+                        <value>question3a</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>16.5</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>You are looking for the length of a base, which is labeled as NT. &lt;%=ifThen(hasValue(question3b,question3d),ifThen(regExMatch(&quot;NT|TN&quot;,question0a),&quot;You can find the base(b), if the height(h) and the area(A) is given! Just remember that area (A) = 'base' * 'height'.&quot;,concat(&quot;Don't worry that the base label under Base is different. &quot;,question0a,&quot; and NT are parallel, so they have the same length! You can find the base(b), if height(h) and the area(A) is given! Just remember that area (A) = 'base' * 'height'.&quot;)),&quot;What do you need to know in order to solve for the unknown base?&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(question3b,question3d),&quot;You can use the perimeter to find the base! A perimeter of a parallelogram is found by adding the lengths of all 4 sides. But, since a parallel pair of segments in a parallelogram has the same length, all you have to do is add 2 bases (NT), and 2 adjacent sides (NE) to get the perimeter.&quot;,&quot;Can you think of something else other than an area (A = base * height) that uses the base in its calculation? &quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(question3b,question3d),&quot;In the problem statement, lengths of the perimeter ( P = 40 cm) and the adjacent side (NE = 7 cm) are given! Try subtracting 2 adjacent sides from the perimeter. What will remain?&quot;,&quot;Perimeter also needs the base to be calculated! Perimeter = 2*(base + adjacent). But looks like you are missing either the length of the adjacent side or the perimeter on this row!&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(question3b,question3d),&quot;If you subtract 2 adjacent sides from the perimeter, you are left with 2 bases! 40 - 2*7 = 36. 36 cm is the length of 2 bases combined! Then just one base is...? 36 / 2 = 16.5 cm!&quot;,&quot;Are you sure you are ready to find the base? Make sure you have filled in the length of perimeter and the length of adjacent side, then come back to this highlighted field!&quot;)%&gt;</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question3a</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">16.5</matcherParameter>
+                        <matcherParameter name="relation">=</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>SolvBase 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>19</sourceID>
+        <destID>20</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>39</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>4B444BA1612C90162BD6FBA406AA82238BF58D4</transaction_id>
+                    <Selection>
+                        <value>question3b</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>7</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Enter the length of the segment that is adjacent to the base. Not sure which segment this is? What is the label of the segment you are looking for?</hintMessage>
+            <hintMessage>Take a look at the diagram label of this column, or under &quot;Side adjacent to the base&quot;. The label for the segment adjacent to the base is displayed as NE. Enter the length of NE.</hintMessage>
+            <hintMessage>Re-read Question3 to find how long NE is. If you don't see it in the question statement, remember that a parallel pair of segments on a parallelogram always has the SAME length!</hintMessage>
+            <hintMessage>The side adjacent to the base (NE) is 7 centimeters long. Enter 7 into the highlighted area.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question3b</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">7</matcherParameter>
+                        <matcherParameter name="relation">=</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>- 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>20</sourceID>
+        <destID>21</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>42</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>51F2F19854C034D2BC1D2F60DE84C7D649981BF</transaction_id>
+                    <Selection>
+                        <value>question3c</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>6</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Enter the length of the parallelogram's height here. Not sure which segment that is? What is the label of the height segment?</hintMessage>
+            <hintMessage>Take a look at the diagram label of this column, or under &quot;Height&quot;. What is the name or the label of the segment that represents the height?</hintMessage>
+            <hintMessage>The label under &quot;Height&quot; is MN. Do you remember how long the segment MN is? Read the problem statement again if you forgot. </hintMessage>
+            <hintMessage>The height (MN) is 6 centimeters long.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question3c</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;6&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input,6)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>- 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>21</sourceID>
+        <destID>22</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>44</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>6A207DBEF3B5C090EDC601831523290821A6991</transaction_id>
+                    <Selection>
+                        <value>question3d</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>40</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>The perimeter is the sum of the lengths of all the sides of a geometry. What is the perimeter of NEAT in Question3?</hintMessage>
+            <hintMessage>Read Question3 carefully. The length of the perimeter of the parallelogram NEAT is already given. </hintMessage>
+            <hintMessage>In Question3, the parallelogram's perimeter is given as 40 cm.</hintMessage>
+            <hintMessage>Enter the length of NEAT's perimeter, 40 into the highlighted area.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question3d</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;40&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input,40)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>- 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>22</sourceID>
+        <destID>23</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>46</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>BEC933C4B673B23F75536B8D97C6544EEBACEA7</transaction_id>
+                    <Selection>
+                        <value>question3e</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>99</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Do you know how to find an area of the parallelogram? If you are not sure, try finding the formula in the glossary. </hintMessage>
+            <hintMessage>Open the glossary and search for &quot;Area - Parallelogram&quot;. </hintMessage>
+            <hintMessage>The area (A) of the parallelogram NEAT can be found using the formula: A = b * h, which means Area = &quot;base&quot; * &quot;height&quot;. What is the length of the base? What is the length of the height?</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(question3a,question3c),concat(&quot;All you have to do is multiply the length of the base (&quot;,question0a,&quot; = 16.5) by the height (MN = 6). Therefore, A = 16.5 * 6!&quot;),&quot;Uh oh, you cannot figure out the area without the lengths of the base and the height! Come back to this field after you find their lengths!&quot;)%&gt;</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question3e</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;99&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input,99)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>FindAreaPara 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>23</sourceID>
+        <destID>24</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>48</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>03B8EEA95D9E33166F3547020115B5EBDA9A8EB</transaction_id>
+                    <Selection>
+                        <value>done</value>
+                    </Selection>
+                    <Action>
+                        <value>ButtonPressed</value>
+                    </Action>
+                    <Input>
+                        <value>-1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage>Neat! You did very well calculating the missing values for the parallelogram.</successMessage>
+            <hintMessage>You've done everything correctly. Please click on the 'done' button to move on.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">done</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">ButtonPressed</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">-1</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>24</sourceID>
+        <destID>25</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>23</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>1BE8002511AC3F5561F86B8C6A087C7DB476C35</transaction_id>
+                    <Selection>
+                        <value>question1d</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>29</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>A perimeter is the sum of the lengths of all the sides of a geometry.</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(question1a,question1b),&quot;You are only given the lengths of 2 sides this time: NT and NE. But did you know that parallel sides on a parallelogram have the equal length? That means you already know the lengths of two other sides, EA and AT.&quot;,&quot;Are you sure you are ready to answer this part?&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(question1a,question1b),&quot;NT and EA are both 5.5, and EN and AT are both 9 cm. You can either do 5.5 + 9 + 5.5 + 9 or the faster way, (5.5 + 9) * 2.&quot;,&quot;In order to figure out the perimeter, you must know the lengths of at least 1 base and 1 side adjacent to the base.  Have you filled in lengths for NT and NE?&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(question1a,question1b),&quot;The perimeter of parallelogram NEAT is (5.5 + 9) * 2 = 33.&quot;,&quot;Fill in the lengths of NT and NE, then come back to this field!&quot;)%&gt;</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question1d</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;29&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input,29)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>FindPerimeterPara 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>9</sourceID>
+        <destID>13</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="0" maxTraversals="0">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>7</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>FEBA4E1D477EE9BDEF1B12590F774338DD914C7</transaction_id>
+                    <Selection>
+                        <value>question0d</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>-</hintMessage>
+            <hintMessage>-</hintMessage>
+            <hintMessage>-</hintMessage>
+            <hintMessage>-</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question0d</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>RegexMatcher</matcherType>
+                        <matcherParameter name="single">-</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>- 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>4</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="false" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>91</uniqueID>
+            <message>
+                <verb>SendNoteProperty</verb>
+                <properties>
+                    <MessageType>CorrectAction</MessageType>
+                    <Selection>
+                        <value>question1a|question2a|question1b|question2b|question3b|question1c|question3c</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>*</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>Wrong! Having trouble? Try labeling the diagram by visualizing; &quot;write&quot; the given lengths onto the diagram, and then think about the length of the side you are looking for.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please provide your answer 'No_Value' in the highlighted element.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Buggy Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>RegexMatcher</matcherType>
+                        <matcherParameter name="single">question1a|question2a|question1b|question2b|question3b|question1c|question3c</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>AnyMatcher</matcherType>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>34</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="false" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>70</uniqueID>
+            <message>
+                <verb>SendNoteProperty</verb>
+                <properties>
+                    <MessageType>CorrectAction</MessageType>
+                    <Selection>
+                        <value>-</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>-</buggyMessage>
+            <successMessage></successMessage>
+            <callbackFn></callbackFn>
+            <actionType>Buggy Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>RegexMatcher</matcherType>
+                        <matcherParameter name="single">-</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>RegexMatcher</matcherType>
+                        <matcherParameter name="single">-</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>30</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="false" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>63</uniqueID>
+            <message>
+                <verb>SendNoteProperty</verb>
+                <properties>
+                    <MessageType>CorrectAction</MessageType>
+                    <Selection>
+                        <value>-</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>-</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please provide your answer 'No_Value' in the highlighted element.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Buggy Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>RegexMatcher</matcherType>
+                        <matcherParameter name="single">-</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>RegexMatcher</matcherType>
+                        <matcherParameter name="single">-</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>28</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="false" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>56</uniqueID>
+            <message>
+                <verb>SendNoteProperty</verb>
+                <properties>
+                    <MessageType>CorrectAction</MessageType>
+                    <Selection>
+                        <value>-</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>-</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please provide your answer 'No_Value' in the highlighted element.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Buggy Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>RegexMatcher</matcherType>
+                        <matcherParameter name="single">-</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>RegexMatcher</matcherType>
+                        <matcherParameter name="single">-</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>27</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="0" maxTraversals="0">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>1</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>C24126FC3E9A809D52256B9D8A7562B8F2D9BC2</transaction_id>
+                    <Selection>
+                        <value>question0a</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>-</hintMessage>
+            <hintMessage>-</hintMessage>
+            <hintMessage>-</hintMessage>
+            <hintMessage>-</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">question0a</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>RegexMatcher</matcherType>
+                        <matcherParameter name="single">-</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>- 6-16_area-of-polygons</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <productionRule opportunities="1">
+        <ruleName>-</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>-</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>-</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>-</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>-</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>-</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>-</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>-</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>-</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>-</label>
+        <hintMessage>Enter the length of the parallelogram's base here. Not sure which segment is the base? What is the label of the base segment?</hintMessage>
+        <hintMessage>Take a look at the diagram label of this column, or under &quot;Base&quot;. The base segment label is displayed as NT. Enter the length of NT.</hintMessage>
+        <hintMessage>Re-read the question statement to find how long NT is. If you don't see it, remember that a parallel pair of segments on a parallelogram always has the SAME length!</hintMessage>
+        <hintMessage>&lt;%=ifThen(regExMatch(&quot;NT|TN&quot;,question0a),&quot;The base (NT) is 10 centimeters long. Enter 10 into the highlighted area.&quot;,concat(&quot;Question2 has given you NT = 10. Since &quot;,question0a,&quot; is parallel to NT, &quot;,question0a,&quot; = 10 as well.&quot;))%&gt;</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>-</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>-</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>-</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>-</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>-</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>-</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>-</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>-</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>-</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>-</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>-</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>-</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>SolvBase</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>Solve for base</label>
+        <hintMessage>You are looking for the length of a base, which is labeled as NT. &lt;%=ifThen(hasValue(question3b,question3d),ifThen(regExMatch(&quot;NT|TN&quot;,question0a),&quot;You can find the base(b), if the height(h) and the area(A) is given! Just remember that area (A) = 'base' * 'height'.&quot;,concat(&quot;Don't worry that the base label under Base is different. &quot;,question0a,&quot; and NT are parallel, so they have the same length! You can find the base(b), if height(h) and the area(A) is given! Just remember that area (A) = 'base' * 'height'.&quot;)),&quot;What do you need to know in order to solve for the unknown base?&quot;)%&gt;</hintMessage>
+        <hintMessage>&lt;%=ifThen(hasValue(question3b,question3d),&quot;You can use the perimeter to find the base! A perimeter of a parallelogram is found by adding the lengths of all 4 sides. But, since a parallel pair of segments in a parallelogram has the same length, all you have to do is add 2 bases (NT), and 2 adjacent sides (NE) to get the perimeter.&quot;,&quot;Can you think of something else other than an area (A = base * height) that uses the base in its calculation? &quot;)%&gt;</hintMessage>
+        <hintMessage>&lt;%=ifThen(hasValue(question3b,question3d),&quot;In the problem statement, lengths of the perimeter ( P = 40 cm) and the adjacent side (NE = 7 cm) are given! Try subtracting 2 adjacent sides from the perimeter. What will remain?&quot;,&quot;Perimeter also needs the base to be calculated! Perimeter = 2*(base + adjacent). But looks like you are missing either the length of the adjacent side or the perimeter on this row!&quot;)%&gt;</hintMessage>
+        <hintMessage>&lt;%=ifThen(hasValue(question3b,question3d),&quot;If you subtract 2 adjacent sides from the perimeter, you are left with 2 bases! 40 - 2*7 = 36. 36 cm is the length of 2 bases combined! Then just one base is...? 36 / 2 = 16.5 cm!&quot;,&quot;Are you sure you are ready to find the base? Make sure you have filled in the length of perimeter and the length of adjacent side, then come back to this highlighted field!&quot;)%&gt;</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>FindPerimeterPara</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>Find perimeter of a parallelogram</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>-</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>-</label>
+        <hintMessage>Enter the length of the parallelogram's base here. Not sure which segment is the base? What is the label of the base segment?</hintMessage>
+        <hintMessage>Take a look at the diagram label of this column, or under &quot;Base&quot;. The base segment label is displayed as NT. Enter the length of NT.</hintMessage>
+        <hintMessage>Re-read the question statement to find how long NT is. If you don't see it, remember that a parallel pair of segments on a parallelogram always has the SAME length!</hintMessage>
+        <hintMessage>&lt;%=ifThen(regExMatch(&quot;EA|AE&quot;,question0a),&quot;The base (NT) is 5.5 centimeters long. Enter 5.5 into the highlighted area.&quot;,concat(&quot;Question1 has given you EA = 5.5. Since &quot;,question0a,&quot; is parallel to EA, &quot;,question0a,&quot; = 5.5 as well.&quot;))%&gt;</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>FindAreaPara</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>Find area of a parallelogram</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>FindPerimeterPara</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>Find perimeter of a parallelogram</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>FindAreaPara</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>Find area of a parallelogram</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>SolvHeight</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>Solve for height</label>
+        <hintMessage>You can find the height if the base (b) and the area (A) are given! Remember that the area (A) of a parallelogram can be found by calculating &quot;base&quot; * &quot;height&quot;.</hintMessage>
+        <hintMessage>&lt;%=ifThen(hasValue(question2a,question2e),&quot;Your situation is 'Area' = 'base' * '?'. This means 10 times an number gives you 50. What do you have to multiply to 10 to turn it into 50?&quot;,&quot;Are you sure you are ready to answer this part?&quot;)%&gt;</hintMessage>
+        <hintMessage>&lt;%=ifThen(hasValue(question2a,question2e),&quot;Start thinking with very easy numbers. If 2 * '?' = 6, can you figure out what '?' is? You know that 2x3 is 6. You can also find '3' by diving 6 by 2! Division is an inverse operation of multiplication; think of division as 'undoing multiply'.&quot;,&quot;In order to solve for the height, you need to know the base(b) and the area(A) first. Have you filled out the length of the base and the value of the area yet?&quot;)%&gt;</hintMessage>
+        <hintMessage>&lt;%=ifThen(hasValue(question2a,question2e),&quot;Now do the same thing with 50(area) and 10(base); divide 50 by 10: 50/10 = 5.&quot;,&quot;Fill in the length of the base and the value of the area, then come back to this field!&quot;)%&gt;</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>-</ruleName>
+        <productionSet>6-16_area-of-polygons</productionSet>
+        <label>-</label>
+    </productionRule>
+    <EdgesGroups ordered="false"></EdgesGroups>
+</stateGraph>
+

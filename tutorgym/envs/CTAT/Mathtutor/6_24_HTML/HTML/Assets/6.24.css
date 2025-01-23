@@ -1,0 +1,27 @@
+.table {
+  display: table;
+}
+.row {
+  display: table-row;
+  height: 40px;
+}
+.row:first-child .CTATTextField {
+  font-weight: bold;
+}
+.cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.cell:first-child {
+  width: 50%;
+}
+.cell:nth-child(2), .cell:nth-child(3) {
+  text-align: center;
+}
+.CTATTextInput {
+  width: initial;
+}
+.CTATTextInput input[type="text"] {
+  width: 75%;
+  min-width: 75px;
+}

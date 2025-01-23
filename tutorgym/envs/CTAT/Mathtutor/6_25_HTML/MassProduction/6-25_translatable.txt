@@ -1,0 +1,3564 @@
+Problem Name	GCF-16_24
+%(startStateNodeName)%	state24
+%(Var1)%	16
+%(Var2)%	24
+%(Var1-Factors)%	R[1-3]C[1-2]
+%(Var2-Factors)%	R[1-4]C[3-4]
+%(RangeLeft)%	R[4-5]C[1-2]
+%(RangeRight)%	R5C[3-4]
+%(Var1-NotFactorError)%	[^(1|16|2|8|4)]
+%(Var2-NotFactorError)%	[^(1|24|2|12|3|8|4|6)]
+%(Fac11)%	1
+%(Hint11-1)%	Enter a factor of 16. Start with the smallest one.
+%(Hint11-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint11-3)%	
+%(Hint11-4)%	Please enter '1' in the highlighted field.
+%(Fac11-ErrOrder)%	16|2|8|%(Fac31)%|%(Fac32)%
+%(Fac12)%	16
+%(Hint12-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint12-2)%	What number multiplied by 1 gives you 16?
+%(Hint12-3)%	
+%(Hint12-4)%	Please enter '16' in the highlighted field.
+%(Fac12-ErrOrder)%	1|2|8|%(Fac31)%|%(Fac32)%
+%(Fac21)%	2
+%(Hint21-1)%	Is 16 an even number?
+%(Hint21-2)%	Since 16 is an even number, what is the next smallest factor after 1?
+%(Hint21-3)%	
+%(Hint21-4)%	Please enter '2' in the highlighted field.
+%(R2C1-TRAVERSAL)%	1
+%(Fac21-ErrOrder)%	1|16|8|%(Fac31)%|%(Fac32)%
+%(Fac22)%	8
+%(Hint22-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint22-2)%	What number multiplied by 2 gives you 16?
+%(Hint22-3)%	
+%(Hint22-4)%	Please enter '8' in the highlighted field.
+%(R2C2-TRAVERSAL)%	1
+%(Fac22-ErrOrder)%	1|16|2|%(Fac31)%|%(Fac32)%
+%(Fac31)%	4
+%(Hint31-1)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(Hint31-2)%	
+%(Hint31-3)%	
+%(Hint31-4)%	Please enter '4' in the highlighted field.
+%(R3C1-TRAVERSAL)%	1
+%(Fac31-ErrOrder)%	1|16|2|%(Fac22)%|%(Fac32)%
+%(Fac32)%	4
+%(Hint32-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint32-2)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(Hint32-3)%	
+%(Hint32-4)%	Please enter '4' in the highlighted field.
+%(R3C2-TRAVERSAL)%	1
+%(Fac32-ErrOrder)%	1|16|2|%(Fac22)%|%(Fac31)%
+%(Fac41)%	 
+%(Hint41-1)%	
+%(Hint41-2)%	
+%(Hint41-3)%	
+%(Hint41-4)%	
+%(R4C1-TRAVERSAL)%	0
+%(Fac41-ErrOrder)%	
+%(Fac42)%	 
+%(Hint42-1)%	
+%(Hint42-2)%	
+%(Hint42-3)%	
+%(Hint42-4)%	
+%(R4C2-TRAVERSAL)%	0
+%(Fac42-ErrOrder)%	
+%(Fac51)%	
+%(Hint51-1)%	
+%(Hint51-2)%	
+%(Hint51-3)%	
+%(Hint51-4)%	
+%(R5C1-TRAVERSAL)%	0
+%(Fac51-ErrOrder)%	
+%(Fac52)%	
+%(Hint52-1)%	
+%(Hint52-2)%	
+%(Hint52-3)%	
+%(Hint52-4)%	
+%(R5C2-TRAVERSAL)%	0
+%(Fac52-ErrOrder)%	
+	
+%(Fac13)%	1
+%(Hint13-1)%	Enter a factor of 24. Start with the smallest one.
+%(Hint13-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint13-3)%	
+%(Hint13-4)%	Please enter '1' in the highlighted field.
+%(Fac13-ErrOrder)%	24|2|12|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac14)%	24
+%(Hint14-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint14-2)%	What number multiplied by 1 gives you 24?
+%(Hint14-3)%	
+%(Hint14-4)%	Please enter '24' in the highlighted field.
+%(Fac14-ErrOrder)%	1|2|12|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac23)%	2
+%(Hint23-1)%	Is the 24 an even number?
+%(Hint23-2)%	Since the 24 is even, what is a possible factor?
+%(Hint23-3)%	
+%(Hint23-4)%	Please enter '2' in the highlighted field.
+%(R2C3-TRAVERSAL)%	1
+%(Fac23-ErrOrder)%	1|24|12|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac24)%	12
+%(Hint24-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint24-2)%	
+%(Hint24-3)%	What number multiplied by 2 gives you 24?
+%(Hint24-4)%	Please enter '12' in the highlighted field.
+%(R2C4-TRAVERSAL)%	1
+%(Fac24-ErrOrder)%	1|24|2|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac33)%	3
+%(Hint33-1)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(Hint33-2)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(Hint33-3)%	
+%(Hint33-4)%	Please enter '3' in the highlighted field.
+%(R3C3-TRAVERSAL)%	1
+%(Fac33-ErrOrder)%	1|24|2|%(Fac24)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac34)%	8
+%(Hint34-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint34-2)%	
+%(Hint34-3)%	What number multiplied by 3 gives you 24?
+%(Hint34-4)%	Please enter '8' in the highlighted field.
+%(R3C4-TRAVERSAL)%	1
+%(Fac34-ErrOrder)%	1|24|2|%(Fac24)%|%(Fac33)%|%(Fac43)%|%(Fac44)%
+%(Fac43)%	4
+%(Hint43-1)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(Hint43-2)%	
+%(Hint43-3)%	
+%(Hint43-4)%	Please enter '4' in the highlighted field.
+%(R4C3-TRAVERSAL)%	1
+%(Fac43-ErrOrder)%	1|24|2|%(Fac24)%|%(Fac34)%|%(Fac33)%|%(Fac44)%
+%(Fac44)%	6
+%(Hint44-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint44-2)%	
+%(Hint44-3)%	What number multiplied by 4 gives you 24?
+%(Hint44-4)%	Please enter '6' in the highlighted field.
+%(R4C4-TRAVERSAL)%	1
+%(Fac44-ErrOrder)%	1|24|2|%(Fac24)%|%(Fac33)%|%(Fac34)%|%(Fac43)%|
+%(Fac53)%	
+%(Hint53-1)%	
+%(Hint53-2)%	
+%(Hint53-3)%	
+%(Hint53-4)%	
+%(R5C3-TRAVERSAL)%	0
+%(Fac53-ErrOrder)%	
+%(Fac54)%	
+%(Hint54-1)%	
+%(Hint54-2)%	
+%(Hint54-3)%	
+%(Hint54-4)%	
+%(R5C4-TRAVERSAL)%	0
+%(Fac54-ErrOrder)%	
+%(CF1)%	1
+%(HintCF1-1)%	Look at all of your factor pairs. What factors do the two numbers, 16 and 24 have in common?
+%(HintCF1-2)%	What is the smallest common factor?
+%(HintCF1-3)%	List the common factors in order from smallest to largest.
+%(HintCF1-4)%	Please enter '1' in the highlighted field.
+%(CF1-TRAVERSAL)%	1
+%(CF1-ErrOrder)%	2|4|8
+%(CF2)%	2
+%(HintCF2-1)%	Look at all of your factor pairs. What other factors do the two numbers, 16 and 24 have in common?
+%(HintCF2-2)%	What is the second largest common factor?
+%(HintCF2-3)%	List the common factors in order from smallest to largest.
+%(HintCF2-4)%	Please enter '2' in the highlighted field.
+%(CF2-TRAVERSAL)%	1
+%(CF2-ErrOrder)%	1|4|8
+%(CF3)%	4
+%(HintCF3-1)%	Look at all of your factor pairs. What other factors do the two numbers, 16 and 24 have in common?
+%(HintCF3-2)%	What is the third largest common factor?
+%(HintCF3-3)%	List the common factors in order from smallest to largest.
+%(HintCF3-4)%	Please enter '4' in the highlighted field.
+%(CF3-TRAVERSAL)%	1
+%(CF3-ErrOrder)%	1|2|8
+%(CF4)%	8
+%(HintCF4-1)%	Look at all of your factor pairs. What other factors do the two numbers, 16 and 24 have in common?
+%(HintCF4-2)%	What is the fourth largest common factor?
+%(HintCF4-3)%	List the common factors in order from smallest to largest.
+%(HintCF4-4)%	Please enter '8' in the highlighted field.
+%(CF4-TRAVERSAL)%	1
+%(CF4-ErrOrder)%	1|2|4
+%(A)%	8
+%(HintA-1)%	Look at the common factors you have found. Now what is the greatest common factor of 16 and 24?
+%(HintA-2)%	What is the greatest common factor? 1? 2? 4? 8?
+%(HintA-3)%	Enter '8' in the highlighted field.
+%(CF-ErrNotCommon)%	[^(1|2|4|8)]
+%(GCF-Err)%	1|2|4
+%(254303365388049584)%	
+%(-5977137150935564445)%	Please enter '1' in the highlighted field.
+%(-7537965487687806191)%	Please enter '1' in the highlighted field.
+%(-1958610125961082412)%	What number multiplied by 1 gives you 24?
+%(4258066570658946414)%	Please enter '4' in the highlighted field.
+%(-4868200884791373883)%	
+%(-3307382548147132355)%	
+%(3135564320319522621)%	
+%(-4868201884795373888)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(3349241659411110558)%	Look at all of your factor pairs. What other factors do the two numbers, 16 and 24 have in common?
+%(-1321319791251777704)%	Use your previous entry to figure out what this factor will be.
+%(-1321321791279777786)%	What number multiplied by 4 gives you 24?
+%(-8673086570870268165)%	What is the fourth largest common factor?
+%(3349244659511110895)%	Please enter '2' in the highlighted field.
+%(9128231315816371920)%	Enter '8' in the highlighted field.
+%(-5977140151031564692)%	
+%(-7537964487679806098)%	
+%(-4630892098344058834)%	Since the 24 is even, what is a possible factor?
+%(-5091951687139455837)%	Use your previous entry to figure out what this factor will be.
+%(-4630894098436059092)%	Please enter '2' in the highlighted field.
+%(7376638312065734454)%	Please enter '2' in the highlighted field.
+%(3358107287083252305)%	
+%(-7108511028899129805)%	List the common factors in order from smallest to largest.
+%(3349242659419110637)%	What is the second largest common factor?
+%(-7537962487683806208)%	Enter a factor of 24. Start with the smallest one.
+%(-4868202884787373789)%	
+%(-1958609125973082375)%	
+%(5804110087503602308)%	
+%(7287509800339955155)%	Yes, this is a common factor but is it the greatest common factor?
+%(254301365392049566)%	
+%(-8857199270322685297)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(7376637312057734457)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5091949687143455931)%	
+%(-9095745892578352942)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(-9095743892566352860)%	
+%(3448326454585640764)%	Seems like you are done!
+%(-1958611125969082425)%	Use your previous entry to figure out what this factor will be.
+%(4258064570566946156)%	
+%(-7537963487675806109)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(254304365392049589)%	
+%(6847577044345073627)%	Yes this is a factor but it is out of order. Start with the smallest factors first and work your way up in ascending order. Try asking for a hint.
+%(-7108510028895129802)%	What is the smallest common factor?
+%(3358104286987252058)%	Use your previous entry to figure out what this factor will be.
+%(-3307387548175132476)%	
+%(-5977142151043564774)%	Enter a factor of 16. Start with the smallest one.
+%(5804112087499602342)%	
+%(1812052770030595884)%	Use your previous entry to figure out what this factor will be.
+%(-8673085570866268162)%	List the common factors in order from smallest to largest.
+%(-5360709932947166162)%	Yes this is a factor but it is out of order. Try asking for a hint.
+%(-4630889098344058939)%	Is the 24 an even number?
+%(-3531133350527214469)%	What number multiplied by 3 gives you 24?
+%(-8857196270286685218)%	
+%(4258063570558946079)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(-4630891098340058845)%	
+%(-654517545755785932)%	What is the third largest common factor?
+%(7790176844402957019)%	
+%(1812057770122596037)%	Please enter '8' in the highlighted field.
+%(3135558320283522551)%	
+%(5686583805161676592)%	This is not a common factor of 16 and 24.
+%(3135559320291522500)%	
+%(-8673080570898268319)%	Please enter '8' in the highlighted field.
+%(-4560983255492772878)%	Please provide your answer 'NoInput' in the highlighted element.
+%(-5694662720625941828)%	This is not a factor of 16. Please double-check your answer.
+%(-654518545759785935)%	List the common factors in order from smallest to largest.
+%(-9095740892566352933)%	Please enter '3' in the highlighted field.
+%(-654523545791786034)%	Please enter '4' in the highlighted field.
+%(4258065570650946321)%	
+%(-3531136350527214524)%	Please enter '8' in the highlighted field.
+%(-8857194270290685200)%	
+%(-5091950687147455936)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(1812050770018595802)%	
+%(-3602696677446545224)%	Click on "Found all factors for both numbers." when you think you've entered all the factor pairs for 16 and 24.
+%(3349243659503110800)%	List the common factors in order from smallest to largest.
+%(1032905288316606034)%	Please enter '1' in the highlighted field.
+%(-3307385548179132442)%	
+%(4465810717431090344)%	Please enter '16' in the highlighted field.
+%(7376636312069734420)%	Since 16 is an even number, what is the next smallest factor after 1?
+%(254298365356049487)%	
+%(1812051770022595807)%	What number multiplied by 2 gives you 16?
+%(9128230315812371925)%	What is the greatest common factor? 1? 2? %(CF3)%? %(CF4)%?
+%(-1321322791287777783)%	Please enter '6' in the highlighted field.
+%(7790175844398956998)%	
+%(-1958608125965082378)%	Please enter '24' in the highlighted field.
+%(7790177844426957080)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(-5091956687247456166)%	Please enter '4' in the highlighted field.
+%(-9095742892578352951)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(-3531134350531214490)%	
+%(3135557320279522546)%	
+%(7790174844390957001)%	Please enter '4' in the highlighted field.
+%(-7108509028887129851)%	Look at all of your factor pairs. What factors do the two numbers, 16 and 24 have in common?
+%(9128233315812371918)%	Look at the common factors you have found. Now what is the greatest common factor of 16 and 24?
+%(-4868207884895374118)%	
+%(5804113087503602363)%	
+%(7376635312061734407)%	Is 16 an even number?
+%(3358109287095252387)%	Please enter '12' in the highlighted field.
+%(-4142943113116299797)%	Are you sure any more unique factors exist?
+%(-8857193270286685195)%	
+%(5804115087531602429)%	
+%(-5977139150947564527)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(3358106286999252140)%	What number multiplied by 2 gives you 24?
+%(4465805717335090087)%	
+%(4465804717331090082)%	What number multiplied by 1 gives you 16?
+%(-7108504028859129732)%	Please enter '1' in the highlighted field.
+%(-654520545755785953)%	Look at all of your factor pairs. What other factors do the two numbers, 16 and 24 have in common?
+%(-8068215192076385916)%	Yes, this is a common factor but please enter them in order, starting with the smallest factor.
+%(-3307384548175132421)%	
+%(-1331720242453165934)%	Please enter 'q' in the highlighted field.
+%(-8673083570902268304)%	Look at all of your factor pairs. What other factors do the two numbers, 16 and 24 have in common?
+%(4506789830436007175)%	Please enter 'f' in the highlighted field.
+%(-1321320791275777765)%	
+%(8359511761771144003)%	This is not a factor of 24. Please double-check your answer.
+%(4465807717331090009)%	Use your previous entry to figure out what this factor will be.
+%(-3531131350499214403)%	Use your previous entry to figure out what this factor will be.
+Problem Name	GCF-6_28
+%(startStateNodeName)%	state66
+%(Var1)%	6
+%(Var2)%	28
+%(Var1-Factors)%	R[1-2]C[1-2]
+%(Var2-Factors)%	R[1-3]C[3-4]
+%(RangeLeft)%	R[3-5]C[1-2]
+%(RangeRight)%	R[4-5]C[3-4]
+%(Var1-NotFactorError)%	[^(1|6|2|3)]
+%(Var2-NotFactorError)%	[^(1|28|2|14|4|7)]
+%(Fac11)%	1
+%(Hint11-1)%	Enter a factor of 6. Start with the smallest one.
+%(Hint11-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint11-3)%	
+%(Hint11-4)%	Please enter '1' in the highlighted field.
+%(Fac11-ErrOrder)%	6|2|3
+%(Fac12)%	6
+%(Hint12-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint12-2)%	What number multiplied by 1 gives you 6?
+%(Hint12-3)%	
+%(Hint12-4)%	Please enter '6' in the highlighted field.
+%(Fac12-ErrOrder)%	1|2|3
+%(Fac21)%	2
+%(Hint21-1)%	Is 6 an even number?
+%(Hint21-2)%	Since 6 is an even number, what is the next smallest factor after 1?
+%(Hint21-3)%	
+%(Hint21-4)%	Please enter '2' in the highlighted field.
+%(R2C1-TRAVERSAL)%	1
+%(Fac21-ErrOrder)%	1|6|3
+%(Fac22)%	3
+%(Hint22-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint22-2)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(Hint22-3)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(Hint22-4)%	Please enter '3' in the highlighted field.
+%(R2C2-TRAVERSAL)%	1
+%(Fac22-ErrOrder)%	1|6|2
+%(Fac31)%	 
+%(Hint31-1)%	
+%(Hint31-2)%	
+%(Hint31-3)%	
+%(Hint31-4)%	
+%(R3C1-TRAVERSAL)%	0
+%(Fac31-ErrOrder)%	
+%(Fac32)%	 
+%(Hint32-1)%	
+%(Hint32-2)%	
+%(Hint32-3)%	
+%(Hint32-4)%	
+%(R3C2-TRAVERSAL)%	0
+%(Fac32-ErrOrder)%	
+%(Fac41)%	 
+%(Hint41-1)%	
+%(Hint41-2)%	
+%(Hint41-3)%	
+%(Hint41-4)%	
+%(R4C1-TRAVERSAL)%	0
+%(Fac41-ErrOrder)%	
+%(Fac42)%	 
+%(Hint42-1)%	
+%(Hint42-2)%	
+%(Hint42-3)%	
+%(Hint42-4)%	
+%(R4C2-TRAVERSAL)%	0
+%(Fac42-ErrOrder)%	
+%(Fac51)%	
+%(Hint51-1)%	
+%(Hint51-2)%	
+%(Hint51-3)%	
+%(Hint51-4)%	
+%(R5C1-TRAVERSAL)%	0
+%(Fac51-ErrOrder)%	
+%(Fac52)%	
+%(Hint52-1)%	
+%(Hint52-2)%	
+%(Hint52-3)%	
+%(Hint52-4)%	
+%(R5C2-TRAVERSAL)%	0
+%(Fac52-ErrOrder)%	
+	
+%(Fac13)%	1
+%(Hint13-1)%	Enter a factor of 28. Start with the smallest one.
+%(Hint13-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint13-3)%	
+%(Hint13-4)%	Please enter '1' in the highlighted field.
+%(Fac13-ErrOrder)%	28|2|14|%(Fac33)%|%(Fac34)%
+%(Fac14)%	28
+%(Hint14-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint14-2)%	What number multiplied by 1 gives you 28?
+%(Hint14-3)%	
+%(Hint14-4)%	Please enter '28' in the highlighted field.
+%(Fac14-ErrOrder)%	1|2|14|%(Fac33)%|%(Fac34)%
+%(Fac23)%	2
+%(Hint23-1)%	Is the 28 an even number?
+%(Hint23-2)%	Since the 28 is even, what is a possible factor?
+%(Hint23-3)%	
+%(Hint23-4)%	Please enter '2' in the highlighted field.
+%(R2C3-TRAVERSAL)%	1
+%(Fac23-ErrOrder)%	1|28|14|%(Fac33)%|%(Fac34)%
+%(Fac24)%	14
+%(Hint24-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint24-2)%	
+%(Hint24-3)%	What number multiplied by 2 gives you 28?
+%(Hint24-4)%	Please enter '14' in the highlighted field.
+%(R2C4-TRAVERSAL)%	1
+%(Fac24-ErrOrder)%	1|28|2|%(Fac33)%|%(Fac34)%
+%(Fac33)%	4
+%(Hint33-1)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(Hint33-2)%	
+%(Hint33-3)%	
+%(Hint33-4)%	Please enter '4' in the highlighted field.
+%(R3C3-TRAVERSAL)%	1
+%(Fac33-ErrOrder)%	1|28|2|%(Fac24)%|%(Fac34)%
+%(Fac34)%	7
+%(Hint34-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint34-2)%	
+%(Hint34-3)%	What number multiplied by 4 gives you 28?
+%(Hint34-4)%	Please enter '7' in the highlighted field.
+%(R3C4-TRAVERSAL)%	1
+%(Fac34-ErrOrder)%	1|28|2|%(Fac24)%|%(Fac33)%
+%(Fac43)%	
+%(Hint43-1)%	
+%(Hint43-2)%	
+%(Hint43-3)%	
+%(Hint43-4)%	
+%(R4C3-TRAVERSAL)%	0
+%(Fac43-ErrOrder)%	
+%(Fac44)%	
+%(Hint44-1)%	
+%(Hint44-2)%	
+%(Hint44-3)%	
+%(Hint44-4)%	
+%(R4C4-TRAVERSAL)%	0
+%(Fac44-ErrOrder)%	
+%(Fac53)%	
+%(Hint53-1)%	
+%(Hint53-2)%	
+%(Hint53-3)%	
+%(Hint53-4)%	
+%(R5C3-TRAVERSAL)%	0
+%(Fac53-ErrOrder)%	
+%(Fac54)%	
+%(Hint54-1)%	
+%(Hint54-2)%	
+%(Hint54-3)%	
+%(Hint54-4)%	
+%(R5C4-TRAVERSAL)%	0
+%(Fac54-ErrOrder)%	
+%(CF1)%	1
+%(HintCF1-1)%	Look at all of your factor pairs. What factors do the two numbers, 6 and 28 have in common?
+%(HintCF1-2)%	What is the smallest common factor?
+%(HintCF1-3)%	List the common factors in order from smallest to largest.
+%(HintCF1-4)%	Please enter '1' in the highlighted field.
+%(CF1-TRAVERSAL)%	1
+%(CF1-ErrOrder)%	2
+%(CF2)%	2
+%(HintCF2-1)%	Look at all of your factor pairs. What other factors do the two numbers, 6 and 28 have in common?
+%(HintCF2-2)%	What is the second largest common factor?
+%(HintCF2-3)%	List the common factors in order from smallest to largest.
+%(HintCF2-4)%	Please enter '2' in the highlighted field.
+%(CF2-TRAVERSAL)%	1
+%(CF2-ErrOrder)%	1
+%(CF3)%	
+%(HintCF3-1)%	
+%(HintCF3-2)%	
+%(HintCF3-3)%	
+%(HintCF3-4)%	
+%(CF3-TRAVERSAL)%	0
+%(CF3-ErrOrder)%	
+%(CF4)%	
+%(HintCF4-1)%	
+%(HintCF4-2)%	
+%(HintCF4-3)%	
+%(HintCF4-4)%	
+%(CF4-TRAVERSAL)%	0
+%(CF4-ErrOrder)%	
+%(A)%	2
+%(HintA-1)%	Look at the common factors you have found. Now what is the greatest common factor of 6 and 28?
+%(HintA-2)%	What is the greatest common factor? 1? 2?
+%(HintA-3)%	Enter '2' in the highlighted field.
+%(CF-ErrNotCommon)%	[^(1|2)]
+%(GCF-Err)%	1
+%(254303365388049584)%	
+%(-5977137150935564445)%	Please enter '1' in the highlighted field.
+%(-7537965487687806191)%	Please enter '1' in the highlighted field.
+%(-1958610125961082412)%	What number multiplied by 1 gives you 28?
+%(4258066570658946414)%	
+%(-4868200884791373883)%	
+%(-3307382548147132355)%	
+%(3135564320319522621)%	
+%(-4868201884795373888)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(3349241659411110558)%	Look at all of your factor pairs. What other factors do the two numbers, 6 and 28 have in common?
+%(-1321319791251777704)%	
+%(-1321321791279777786)%	
+%(-8673086570870268165)%	
+%(3349244659511110895)%	Please enter '2' in the highlighted field.
+%(9128231315816371920)%	Enter '2' in the highlighted field.
+%(-5977140151031564692)%	
+%(-7537964487679806098)%	
+%(-4630892098344058834)%	Since the 28 is even, what is a possible factor?
+%(-5091951687139455837)%	
+%(-4630894098436059092)%	Please enter '2' in the highlighted field.
+%(7376638312065734454)%	Please enter '2' in the highlighted field.
+%(3358107287083252305)%	
+%(-7108511028899129805)%	List the common factors in order from smallest to largest.
+%(3349242659419110637)%	What is the second largest common factor?
+%(-7537962487683806208)%	Enter a factor of 28. Start with the smallest one.
+%(-4868202884787373789)%	
+%(-1958609125973082375)%	
+%(5804110087503602308)%	
+%(7287509800339955155)%	Yes, this is a common factor but is it the greatest common factor?
+%(254301365392049566)%	
+%(-8857199270322685297)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(7376637312057734457)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5091949687143455931)%	
+%(-9095745892578352942)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(-9095743892566352860)%	
+%(3448326454585640764)%	Seems like you are done!
+%(-1958611125969082425)%	Use your previous entry to figure out what this factor will be.
+%(4258064570566946156)%	
+%(-7537963487675806109)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(254304365392049589)%	
+%(6847577044345073627)%	Yes this is a factor but it is out of order. Start with the smallest factors first and work your way up in ascending order. Try asking for a hint.
+%(-7108510028895129802)%	What is the smallest common factor?
+%(3358104286987252058)%	Use your previous entry to figure out what this factor will be.
+%(-3307387548175132476)%	
+%(-5977142151043564774)%	Enter a factor of 6. Start with the smallest one.
+%(5804112087499602342)%	
+%(1812052770030595884)%	Use your previous entry to figure out what this factor will be.
+%(-8673085570866268162)%	
+%(-5360709932947166162)%	Yes this is a factor but it is out of order. Try asking for a hint.
+%(-4630889098344058939)%	Is the 28 an even number?
+%(-3531133350527214469)%	What number multiplied by 4 gives you 28?
+%(-8857196270286685218)%	
+%(4258063570558946079)%	
+%(-4630891098340058845)%	
+%(-654517545755785932)%	
+%(7790176844402957019)%	
+%(1812057770122596037)%	Please enter '3' in the highlighted field.
+%(3135558320283522551)%	
+%(5686583805161676592)%	This is not a common factor of 6 and 28.
+%(3135559320291522500)%	
+%(-8673080570898268319)%	
+%(-4560983255492772878)%	Please provide your answer 'NoInput' in the highlighted element.
+%(-5694662720625941828)%	This is not a factor of 6. Please double-check your answer.
+%(-654518545759785935)%	
+%(-9095740892566352933)%	Please enter '4' in the highlighted field.
+%(-654523545791786034)%	
+%(4258065570650946321)%	
+%(-3531136350527214524)%	Please enter '7' in the highlighted field.
+%(-8857194270290685200)%	
+%(-5091950687147455936)%	
+%(1812050770018595802)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(-3602696677446545224)%	Click on "Found all factors for both numbers." when you think you've entered all the factor pairs for 6 and 28.
+%(3349243659503110800)%	List the common factors in order from smallest to largest.
+%(1032905288316606034)%	Please enter '1' in the highlighted field.
+%(-3307385548179132442)%	
+%(4465810717431090344)%	Please enter '6' in the highlighted field.
+%(7376636312069734420)%	Since 6 is an even number, what is the next smallest factor after 1?
+%(254298365356049487)%	
+%(1812051770022595807)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(9128230315812371925)%	What is the greatest common factor? 1? 2?
+%(-1321322791287777783)%	
+%(7790175844398956998)%	
+%(-1958608125965082378)%	Please enter '28' in the highlighted field.
+%(7790177844426957080)%	
+%(-5091956687247456166)%	
+%(-9095742892578352951)%	
+%(-3531134350531214490)%	
+%(3135557320279522546)%	
+%(7790174844390957001)%	
+%(-7108509028887129851)%	Look at all of your factor pairs. What factors do the two numbers, 6 and 28 have in common?
+%(9128233315812371918)%	Look at the common factors you have found. Now what is the greatest common factor of 6 and 28?
+%(-4868207884895374118)%	
+%(5804113087503602363)%	
+%(7376635312061734407)%	Is 6 an even number?
+%(3358109287095252387)%	Please enter '14' in the highlighted field.
+%(-4142943113116299797)%	Are you sure any more unique factors exist?
+%(-8857193270286685195)%	
+%(5804115087531602429)%	
+%(-5977139150947564527)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(3358106286999252140)%	What number multiplied by 2 gives you 28?
+%(4465805717335090087)%	
+%(4465804717331090082)%	What number multiplied by 1 gives you 6?
+%(-7108504028859129732)%	Please enter '1' in the highlighted field.
+%(-654520545755785953)%	
+%(-8068215192076385916)%	Yes, this is a common factor but please enter them in order, starting with the smallest factor.
+%(-3307384548175132421)%	
+%(-1331720242453165934)%	Please enter 'q' in the highlighted field.
+%(-8673083570902268304)%	
+%(4506789830436007175)%	Please enter 'f' in the highlighted field.
+%(-1321320791275777765)%	
+%(8359511761771144003)%	This is not a factor of 28. Please double-check your answer.
+%(4465807717331090009)%	Use your previous entry to figure out what this factor will be.
+%(-3531131350499214403)%	Use your previous entry to figure out what this factor will be.
+Problem Name	GCF-8_44
+%(startStateNodeName)%	state10
+%(Var1)%	8
+%(Var2)%	44
+%(Var1-Factors)%	R[1-2]C[1-2]
+%(Var2-Factors)%	R[1-3]C[3-4]
+%(RangeLeft)%	R[3-5]C[1-2]
+%(RangeRight)%	R[4-5]C[3-4]
+%(Var1-NotFactorError)%	[^(1|8|2|4)]
+%(Var2-NotFactorError)%	[^(1|44|2|22|4|11)]
+%(Fac11)%	1
+%(Hint11-1)%	Enter a factor of 8. Start with the smallest one.
+%(Hint11-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint11-3)%	
+%(Hint11-4)%	Please enter '1' in the highlighted field.
+%(Fac11-ErrOrder)%	8|2|4
+%(Fac12)%	8
+%(Hint12-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint12-2)%	What number multiplied by 1 gives you 8?
+%(Hint12-3)%	
+%(Hint12-4)%	Please enter '8' in the highlighted field.
+%(Fac12-ErrOrder)%	1|2|4
+%(Fac21)%	2
+%(Hint21-1)%	Is 8 an even number?
+%(Hint21-2)%	Since 8 is an even number, what is the next smallest factor after 1?
+%(Hint21-3)%	
+%(Hint21-4)%	Please enter '2' in the highlighted field.
+%(R2C1-TRAVERSAL)%	1
+%(Fac21-ErrOrder)%	1|8|4
+%(Fac22)%	4
+%(Hint22-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint22-2)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(Hint22-3)%	
+%(Hint22-4)%	Please enter '4' in the highlighted field.
+%(R2C2-TRAVERSAL)%	1
+%(Fac22-ErrOrder)%	1|8|2
+%(Fac31)%	 
+%(Hint31-1)%	
+%(Hint31-2)%	
+%(Hint31-3)%	
+%(Hint31-4)%	
+%(R3C1-TRAVERSAL)%	0
+%(Fac31-ErrOrder)%	
+%(Fac32)%	 
+%(Hint32-1)%	
+%(Hint32-2)%	
+%(Hint32-3)%	
+%(Hint32-4)%	
+%(R3C2-TRAVERSAL)%	0
+%(Fac32-ErrOrder)%	
+%(Fac41)%	 
+%(Hint41-1)%	
+%(Hint41-2)%	
+%(Hint41-3)%	
+%(Hint41-4)%	
+%(R4C1-TRAVERSAL)%	0
+%(Fac41-ErrOrder)%	
+%(Fac42)%	 
+%(Hint42-1)%	
+%(Hint42-2)%	
+%(Hint42-3)%	
+%(Hint42-4)%	
+%(R4C2-TRAVERSAL)%	0
+%(Fac42-ErrOrder)%	
+%(Fac51)%	
+%(Hint51-1)%	
+%(Hint51-2)%	
+%(Hint51-3)%	
+%(Hint51-4)%	
+%(R5C1-TRAVERSAL)%	0
+%(Fac51-ErrOrder)%	
+%(Fac52)%	
+%(Hint52-1)%	
+%(Hint52-2)%	
+%(Hint52-3)%	
+%(Hint52-4)%	
+%(R5C2-TRAVERSAL)%	0
+%(Fac52-ErrOrder)%	
+	
+%(Fac13)%	1
+%(Hint13-1)%	Enter a factor of 44. Start with the smallest one.
+%(Hint13-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint13-3)%	
+%(Hint13-4)%	Please enter '1' in the highlighted field.
+%(Fac13-ErrOrder)%	44|2|22|%(Fac33)%|%(Fac34)%
+%(Fac14)%	44
+%(Hint14-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint14-2)%	What number multiplied by 1 gives you 44?
+%(Hint14-3)%	
+%(Hint14-4)%	Please enter '44' in the highlighted field.
+%(Fac14-ErrOrder)%	1|2|22|%(Fac33)%|%(Fac34)%
+%(Fac23)%	2
+%(Hint23-1)%	Is the 44 an even number?
+%(Hint23-2)%	Since the 44 is even, what is a possible factor?
+%(Hint23-3)%	
+%(Hint23-4)%	Please enter '2' in the highlighted field.
+%(R2C3-TRAVERSAL)%	1
+%(Fac23-ErrOrder)%	1|44|22|%(Fac33)%|%(Fac34)%
+%(Fac24)%	22
+%(Hint24-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint24-2)%	
+%(Hint24-3)%	What number multiplied by 2 gives you 44?
+%(Hint24-4)%	Please enter '22' in the highlighted field.
+%(R2C4-TRAVERSAL)%	1
+%(Fac24-ErrOrder)%	1|44|2|%(Fac33)%|%(Fac34)%
+%(Fac33)%	4
+%(Hint33-1)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(Hint33-2)%	
+%(Hint33-3)%	
+%(Hint33-4)%	Please enter '4' in the highlighted field.
+%(R3C3-TRAVERSAL)%	1
+%(Fac33-ErrOrder)%	1|44|2|%(Fac24)%|%(Fac34)%
+%(Fac34)%	11
+%(Hint34-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint34-2)%	
+%(Hint34-3)%	What number multiplied by 4 gives you 44?
+%(Hint34-4)%	Please enter '11' in the highlighted field.
+%(R3C4-TRAVERSAL)%	1
+%(Fac34-ErrOrder)%	1|44|2|%(Fac24)%|%(Fac33)%
+%(Fac43)%	
+%(Hint43-1)%	
+%(Hint43-2)%	
+%(Hint43-3)%	
+%(Hint43-4)%	
+%(R4C3-TRAVERSAL)%	0
+%(Fac43-ErrOrder)%	
+%(Fac44)%	
+%(Hint44-1)%	
+%(Hint44-2)%	
+%(Hint44-3)%	
+%(Hint44-4)%	
+%(R4C4-TRAVERSAL)%	0
+%(Fac44-ErrOrder)%	
+%(Fac53)%	
+%(Hint53-1)%	
+%(Hint53-2)%	
+%(Hint53-3)%	
+%(Hint53-4)%	
+%(R5C3-TRAVERSAL)%	0
+%(Fac53-ErrOrder)%	
+%(Fac54)%	
+%(Hint54-1)%	
+%(Hint54-2)%	
+%(Hint54-3)%	
+%(Hint54-4)%	
+%(R5C4-TRAVERSAL)%	0
+%(Fac54-ErrOrder)%	
+%(CF1)%	1
+%(HintCF1-1)%	Look at all of your factor pairs. What factors do the two numbers, 8 and 44 have in common?
+%(HintCF1-2)%	What is the smallest common factor?
+%(HintCF1-3)%	List the common factors in order from smallest to largest.
+%(HintCF1-4)%	Please enter '1' in the highlighted field.
+%(CF1-TRAVERSAL)%	1
+%(CF1-ErrOrder)%	2|4
+%(CF2)%	2
+%(HintCF2-1)%	Look at all of your factor pairs. What other factors do the two numbers, 8 and 44 have in common?
+%(HintCF2-2)%	What is the second largest common factor?
+%(HintCF2-3)%	List the common factors in order from smallest to largest.
+%(HintCF2-4)%	Please enter '2' in the highlighted field.
+%(CF2-TRAVERSAL)%	1
+%(CF2-ErrOrder)%	4
+%(CF3)%	4
+%(HintCF3-1)%	Look at all of your factor pairs. What other factors do the two numbers, 8 and 44 have in common?
+%(HintCF3-2)%	What is the third largest common factor?
+%(HintCF3-3)%	List the common factors in order from smallest to largest.
+%(HintCF3-4)%	Please enter '4' in the highlighted field.
+%(CF3-TRAVERSAL)%	1
+%(CF3-ErrOrder)%	1|2
+%(CF4)%	
+%(HintCF4-1)%	
+%(HintCF4-2)%	
+%(HintCF4-3)%	
+%(HintCF4-4)%	
+%(CF4-TRAVERSAL)%	0
+%(CF4-ErrOrder)%	
+%(A)%	4
+%(HintA-1)%	Look at the common factors you have found. Now what is the greatest common factor of 8 and 44?
+%(HintA-2)%	What is the greatest common factor? 1? 2? 4?
+%(HintA-3)%	Enter '4' in the highlighted field.
+%(CF-ErrNotCommon)%	[^(1|2|4)]
+%(GCF-Err)%	1|2
+%(254303365388049584)%	
+%(-5977137150935564445)%	Please enter '1' in the highlighted field.
+%(-7537965487687806191)%	Please enter '1' in the highlighted field.
+%(-1958610125961082412)%	What number multiplied by 1 gives you 44?
+%(4258066570658946414)%	
+%(-4868200884791373883)%	
+%(-3307382548147132355)%	
+%(3135564320319522621)%	
+%(-4868201884795373888)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(3349241659411110558)%	Look at all of your factor pairs. What other factors do the two numbers, 8 and 44 have in common?
+%(-1321319791251777704)%	
+%(-1321321791279777786)%	
+%(-8673086570870268165)%	
+%(3349244659511110895)%	Please enter '2' in the highlighted field.
+%(9128231315816371920)%	Enter '4' in the highlighted field.
+%(-5977140151031564692)%	
+%(-7537964487679806098)%	
+%(-4630892098344058834)%	Since the 44 is even, what is a possible factor?
+%(-5091951687139455837)%	
+%(-4630894098436059092)%	Please enter '2' in the highlighted field.
+%(7376638312065734454)%	Please enter '2' in the highlighted field.
+%(3358107287083252305)%	
+%(-7108511028899129805)%	List the common factors in order from smallest to largest.
+%(3349242659419110637)%	What is the second largest common factor?
+%(-7537962487683806208)%	Enter a factor of 44. Start with the smallest one.
+%(-4868202884787373789)%	
+%(-1958609125973082375)%	
+%(5804110087503602308)%	
+%(7287509800339955155)%	Yes, this is a common factor but is it the greatest common factor?
+%(254301365392049566)%	
+%(-8857199270322685297)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(7376637312057734457)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5091949687143455931)%	
+%(-9095745892578352942)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(-9095743892566352860)%	
+%(3448326454585640764)%	Seems like you are done!
+%(-1958611125969082425)%	Use your previous entry to figure out what this factor will be.
+%(4258064570566946156)%	
+%(-7537963487675806109)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(254304365392049589)%	
+%(6847577044345073627)%	Yes this is a factor but it is out of order. Start with the smallest factors first and work your way up in ascending order. Try asking for a hint.
+%(-7108510028895129802)%	What is the smallest common factor?
+%(3358104286987252058)%	Use your previous entry to figure out what this factor will be.
+%(-3307387548175132476)%	
+%(-5977142151043564774)%	Enter a factor of 8. Start with the smallest one.
+%(5804112087499602342)%	
+%(1812052770030595884)%	Use your previous entry to figure out what this factor will be.
+%(-8673085570866268162)%	
+%(-5360709932947166162)%	Yes this is a factor but it is out of order. Try asking for a hint.
+%(-4630889098344058939)%	Is the 44 an even number?
+%(-3531133350527214469)%	What number multiplied by 4 gives you 44?
+%(-8857196270286685218)%	
+%(4258063570558946079)%	
+%(-4630891098340058845)%	
+%(-654517545755785932)%	What is the third largest common factor?
+%(7790176844402957019)%	
+%(1812057770122596037)%	Please enter '4' in the highlighted field.
+%(3135558320283522551)%	
+%(5686583805161676592)%	This is not a common factor of 8 and 44.
+%(3135559320291522500)%	
+%(-8673080570898268319)%	
+%(-4560983255492772878)%	Please provide your answer 'NoInput' in the highlighted element.
+%(-5694662720625941828)%	This is not a factor of 8. Please double-check your answer.
+%(-654518545759785935)%	List the common factors in order from smallest to largest.
+%(-9095740892566352933)%	Please enter '4' in the highlighted field.
+%(-654523545791786034)%	Please enter '4' in the highlighted field.
+%(4258065570650946321)%	
+%(-3531136350527214524)%	Please enter '11' in the highlighted field.
+%(-8857194270290685200)%	
+%(-5091950687147455936)%	
+%(1812050770018595802)%	
+%(-3602696677446545224)%	Click on "Found all factors for both numbers." when you think you've entered all the factor pairs for 8 and 44.
+%(3349243659503110800)%	List the common factors in order from smallest to largest.
+%(1032905288316606034)%	Please enter '1' in the highlighted field.
+%(-3307385548179132442)%	
+%(4465810717431090344)%	Please enter '8' in the highlighted field.
+%(7376636312069734420)%	Since 8 is an even number, what is the next smallest factor after 1?
+%(254298365356049487)%	
+%(1812051770022595807)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(9128230315812371925)%	What is the greatest common factor? 1? 2? %(CF3)%?
+%(-1321322791287777783)%	
+%(7790175844398956998)%	
+%(-1958608125965082378)%	Please enter '44' in the highlighted field.
+%(7790177844426957080)%	
+%(-5091956687247456166)%	
+%(-9095742892578352951)%	
+%(-3531134350531214490)%	
+%(3135557320279522546)%	
+%(7790174844390957001)%	
+%(-7108509028887129851)%	Look at all of your factor pairs. What factors do the two numbers, 8 and 44 have in common?
+%(9128233315812371918)%	Look at the common factors you have found. Now what is the greatest common factor of 8 and 44?
+%(-4868207884895374118)%	
+%(5804113087503602363)%	
+%(7376635312061734407)%	Is 8 an even number?
+%(3358109287095252387)%	Please enter '22' in the highlighted field.
+%(-4142943113116299797)%	Are you sure any more unique factors exist?
+%(-8857193270286685195)%	
+%(5804115087531602429)%	
+%(-5977139150947564527)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(3358106286999252140)%	What number multiplied by 2 gives you 44?
+%(4465805717335090087)%	
+%(4465804717331090082)%	What number multiplied by 1 gives you 8?
+%(-7108504028859129732)%	Please enter '1' in the highlighted field.
+%(-654520545755785953)%	Look at all of your factor pairs. What other factors do the two numbers, 8 and 44 have in common?
+%(-8068215192076385916)%	Yes, this is a common factor but please enter them in order, starting with the smallest factor.
+%(-3307384548175132421)%	
+%(-1331720242453165934)%	Please enter 'q' in the highlighted field.
+%(-8673083570902268304)%	
+%(4506789830436007175)%	Please enter 'f' in the highlighted field.
+%(-1321320791275777765)%	
+%(8359511761771144003)%	This is not a factor of 44. Please double-check your answer.
+%(4465807717331090009)%	Use your previous entry to figure out what this factor will be.
+%(-3531131350499214403)%	Use your previous entry to figure out what this factor will be.
+Problem Name	GCF-9_21
+%(startStateNodeName)%	
+%(Var1)%	9
+%(Var2)%	21
+%(Var1-Factors)%	R[1-2]C[1-2]
+%(Var2-Factors)%	R[1-2]C[3-4]
+%(RangeLeft)%	R[3-5]C[1-2]
+%(RangeRight)%	R[3-5]C[3-4]
+%(Var1-NotFactorError)%	[^(1|9|3)]
+%(Var2-NotFactorError)%	[^(1|21|3|7)]
+%(Fac11)%	1
+%(Hint11-1)%	Enter a factor of 9. Start with the smallest one.
+%(Hint11-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint11-3)%	
+%(Hint11-4)%	Please enter '1' in the highlighted field.
+%(Fac11-ErrOrder)%	9|3|3
+%(Fac12)%	9
+%(Hint12-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint12-2)%	What number multiplied by 1 gives you 9?
+%(Hint12-3)%	
+%(Hint12-4)%	Please enter '9' in the highlighted field.
+%(Fac12-ErrOrder)%	1|3|3
+%(Fac21)%	3
+%(Hint21-1)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(Hint21-2)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(Hint21-3)%	
+%(Hint21-4)%	Please enter '3' in the highlighted field.
+%(R2C1-TRAVERSAL)%	1
+%(Fac21-ErrOrder)%	1|9|3
+%(Fac22)%	3
+%(Hint22-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint22-2)%	What number multiplied by 3 gives you 9?
+%(Hint22-3)%	
+%(Hint22-4)%	Please enter '3' in the highlighted field.
+%(R2C2-TRAVERSAL)%	1
+%(Fac22-ErrOrder)%	1|9|3
+%(Fac31)%	 
+%(Hint31-1)%	
+%(Hint31-2)%	
+%(Hint31-3)%	
+%(Hint31-4)%	
+%(R3C1-TRAVERSAL)%	0
+%(Fac31-ErrOrder)%	
+%(Fac32)%	 
+%(Hint32-1)%	
+%(Hint32-2)%	
+%(Hint32-3)%	
+%(Hint32-4)%	
+%(R3C2-TRAVERSAL)%	0
+%(Fac32-ErrOrder)%	
+%(Fac41)%	 
+%(Hint41-1)%	
+%(Hint41-2)%	
+%(Hint41-3)%	
+%(Hint41-4)%	
+%(R4C1-TRAVERSAL)%	0
+%(Fac41-ErrOrder)%	
+%(Fac42)%	 
+%(Hint42-1)%	
+%(Hint42-2)%	
+%(Hint42-3)%	
+%(Hint42-4)%	
+%(R4C2-TRAVERSAL)%	0
+%(Fac42-ErrOrder)%	
+%(Fac51)%	
+%(Hint51-1)%	
+%(Hint51-2)%	
+%(Hint51-3)%	
+%(Hint51-4)%	
+%(R5C1-TRAVERSAL)%	0
+%(Fac51-ErrOrder)%	
+%(Fac52)%	
+%(Hint52-1)%	
+%(Hint52-2)%	
+%(Hint52-3)%	
+%(Hint52-4)%	
+%(R5C2-TRAVERSAL)%	0
+%(Fac52-ErrOrder)%	
+	
+%(Fac13)%	1
+%(Hint13-1)%	Enter a factor of 21. Start with the smallest one.
+%(Hint13-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint13-3)%	
+%(Hint13-4)%	Please enter '1' in the highlighted field.
+%(Fac13-ErrOrder)%	21|3|7
+%(Fac14)%	21
+%(Hint14-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint14-2)%	What number multiplied by 1 gives you 21?
+%(Hint14-3)%	
+%(Hint14-4)%	Please enter '21' in the highlighted field.
+%(Fac14-ErrOrder)%	1|3|7
+%(Fac23)%	3
+%(Hint23-1)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(Hint23-2)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(Hint23-3)%	
+%(Hint23-4)%	Please enter '3' in the highlighted field.
+%(R2C3-TRAVERSAL)%	1
+%(Fac23-ErrOrder)%	1|21|7
+%(Fac24)%	7
+%(Hint24-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint24-2)%	
+%(Hint24-3)%	What number multiplied by 3 gives you 21?
+%(Hint24-4)%	Please enter '7' in the highlighted field.
+%(R2C4-TRAVERSAL)%	1
+%(Fac24-ErrOrder)%	1|21|3
+%(Fac33)%	
+%(Hint33-1)%	
+%(Hint33-2)%	
+%(Hint33-3)%	
+%(Hint33-4)%	
+%(R3C3-TRAVERSAL)%	0
+%(Fac33-ErrOrder)%	
+%(Fac34)%	
+%(Hint34-1)%	
+%(Hint34-2)%	
+%(Hint34-3)%	
+%(Hint34-4)%	
+%(R3C4-TRAVERSAL)%	0
+%(Fac34-ErrOrder)%	
+%(Fac43)%	
+%(Hint43-1)%	
+%(Hint43-2)%	
+%(Hint43-3)%	
+%(Hint43-4)%	
+%(R4C3-TRAVERSAL)%	0
+%(Fac43-ErrOrder)%	
+%(Fac44)%	
+%(Hint44-1)%	
+%(Hint44-2)%	
+%(Hint44-3)%	
+%(Hint44-4)%	
+%(R4C4-TRAVERSAL)%	0
+%(Fac44-ErrOrder)%	
+%(Fac53)%	
+%(Hint53-1)%	
+%(Hint53-2)%	
+%(Hint53-3)%	
+%(Hint53-4)%	
+%(R5C3-TRAVERSAL)%	0
+%(Fac53-ErrOrder)%	
+%(Fac54)%	
+%(Hint54-1)%	
+%(Hint54-2)%	
+%(Hint54-3)%	
+%(Hint54-4)%	
+%(R5C4-TRAVERSAL)%	0
+%(Fac54-ErrOrder)%	
+%(CF1)%	1
+%(HintCF1-1)%	Look at all of your factor pairs. What factors do the two numbers, 9 and 21 have in common?
+%(HintCF1-2)%	What is the smallest common factor?
+%(HintCF1-3)%	List the common factors in order from smallest to largest.
+%(HintCF1-4)%	Please enter '1' in the highlighted field.
+%(CF1-TRAVERSAL)%	1
+%(CF1-ErrOrder)%	3
+%(CF2)%	3
+%(HintCF2-1)%	Look at all of your factor pairs. What other factors do the two numbers, 9 and 21 have in common?
+%(HintCF2-2)%	What is the second largest common factor?
+%(HintCF2-3)%	List the common factors in order from smallest to largest.
+%(HintCF2-4)%	Please enter '3' in the highlighted field.
+%(CF2-TRAVERSAL)%	1
+%(CF2-ErrOrder)%	1
+%(CF3)%	
+%(HintCF3-1)%	
+%(HintCF3-2)%	
+%(HintCF3-3)%	
+%(HintCF3-4)%	
+%(CF3-TRAVERSAL)%	0
+%(CF3-ErrOrder)%	
+%(CF4)%	
+%(HintCF4-1)%	
+%(HintCF4-2)%	
+%(HintCF4-3)%	
+%(HintCF4-4)%	
+%(CF4-TRAVERSAL)%	0
+%(CF4-ErrOrder)%	
+%(A)%	3
+%(HintA-1)%	Look at the common factors you have found. Now what is the greatest common factor of 9 and 21?
+%(HintA-2)%	What is the greatest common factor? 1? 3?
+%(HintA-3)%	Enter '3' in the highlighted field.
+%(CF-ErrNotCommon)%	[^(1|3)]
+%(GCF-Err)%	1
+%(254303365388049584)%	
+%(-5977137150935564445)%	Please enter '1' in the highlighted field.
+%(-7537965487687806191)%	Please enter '1' in the highlighted field.
+%(-1958610125961082412)%	What number multiplied by 1 gives you 21?
+%(4258066570658946414)%	
+%(-4868200884791373883)%	
+%(-3307382548147132355)%	
+%(3135564320319522621)%	
+%(-4868201884795373888)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(3349241659411110558)%	Look at all of your factor pairs. What other factors do the two numbers, 9 and 21 have in common?
+%(-1321319791251777704)%	
+%(-1321321791279777786)%	
+%(-8673086570870268165)%	
+%(3349244659511110895)%	Please enter '3' in the highlighted field.
+%(9128231315816371920)%	Enter '3' in the highlighted field.
+%(-5977140151031564692)%	
+%(-7537964487679806098)%	
+%(-4630892098344058834)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(-5091951687139455837)%	
+%(-4630894098436059092)%	Please enter '3' in the highlighted field.
+%(7376638312065734454)%	Please enter '3' in the highlighted field.
+%(3358107287083252305)%	
+%(-7108511028899129805)%	List the common factors in order from smallest to largest.
+%(3349242659419110637)%	What is the second largest common factor?
+%(-7537962487683806208)%	Enter a factor of 21. Start with the smallest one.
+%(-4868202884787373789)%	
+%(-1958609125973082375)%	
+%(5804110087503602308)%	
+%(7287509800339955155)%	Yes, this is a common factor but is it the greatest common factor?
+%(254301365392049566)%	
+%(-8857199270322685297)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(7376637312057734457)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5091949687143455931)%	
+%(-9095745892578352942)%	
+%(-9095743892566352860)%	
+%(3448326454585640764)%	Seems like you are done!
+%(-1958611125969082425)%	Use your previous entry to figure out what this factor will be.
+%(4258064570566946156)%	
+%(-7537963487675806109)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(254304365392049589)%	
+%(6847577044345073627)%	Yes this is a factor but it is out of order. Start with the smallest factors first and work your way up in ascending order. Try asking for a hint.
+%(-7108510028895129802)%	What is the smallest common factor?
+%(3358104286987252058)%	Use your previous entry to figure out what this factor will be.
+%(-3307387548175132476)%	
+%(-5977142151043564774)%	Enter a factor of 9. Start with the smallest one.
+%(5804112087499602342)%	
+%(1812052770030595884)%	Use your previous entry to figure out what this factor will be.
+%(-8673085570866268162)%	
+%(-5360709932947166162)%	Yes this is a factor but it is out of order. Try asking for a hint.
+%(-4630889098344058939)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(-3531133350527214469)%	
+%(-8857196270286685218)%	
+%(4258063570558946079)%	
+%(-4630891098340058845)%	
+%(-654517545755785932)%	
+%(7790176844402957019)%	
+%(1812057770122596037)%	Please enter '3' in the highlighted field.
+%(3135558320283522551)%	
+%(5686583805161676592)%	This is not a common factor of 9 and 21.
+%(3135559320291522500)%	
+%(-8673080570898268319)%	
+%(-4560983255492772878)%	Please provide your answer 'NoInput' in the highlighted element.
+%(-5694662720625941828)%	This is not a factor of 9. Please double-check your answer.
+%(-654518545759785935)%	
+%(-9095740892566352933)%	
+%(-654523545791786034)%	
+%(4258065570650946321)%	
+%(-3531136350527214524)%	
+%(-8857194270290685200)%	
+%(-5091950687147455936)%	
+%(1812050770018595802)%	
+%(-3602696677446545224)%	Click on "Found all factors for both numbers." when you think you've entered all the factor pairs for 9 and 21.
+%(3349243659503110800)%	List the common factors in order from smallest to largest.
+%(1032905288316606034)%	Please enter '1' in the highlighted field.
+%(-3307385548179132442)%	
+%(4465810717431090344)%	Please enter '9' in the highlighted field.
+%(7376636312069734420)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(254298365356049487)%	
+%(1812051770022595807)%	What number multiplied by 3 gives you 9?
+%(9128230315812371925)%	What is the greatest common factor? 1? 3?
+%(-1321322791287777783)%	
+%(7790175844398956998)%	
+%(-1958608125965082378)%	Please enter '21' in the highlighted field.
+%(7790177844426957080)%	
+%(-5091956687247456166)%	
+%(-9095742892578352951)%	
+%(-3531134350531214490)%	
+%(3135557320279522546)%	
+%(7790174844390957001)%	
+%(-7108509028887129851)%	Look at all of your factor pairs. What factors do the two numbers, 9 and 21 have in common?
+%(9128233315812371918)%	Look at the common factors you have found. Now what is the greatest common factor of 9 and 21?
+%(-4868207884895374118)%	
+%(5804113087503602363)%	
+%(7376635312061734407)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(3358109287095252387)%	Please enter '7' in the highlighted field.
+%(-4142943113116299797)%	Are you sure any more unique factors exist?
+%(-8857193270286685195)%	
+%(5804115087531602429)%	
+%(-5977139150947564527)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(3358106286999252140)%	What number multiplied by 3 gives you 21?
+%(4465805717335090087)%	
+%(4465804717331090082)%	What number multiplied by 1 gives you 9?
+%(-7108504028859129732)%	Please enter '1' in the highlighted field.
+%(-654520545755785953)%	
+%(-8068215192076385916)%	Yes, this is a common factor but please enter them in order, starting with the smallest factor.
+%(-3307384548175132421)%	
+%(-1331720242453165934)%	Please enter 'q' in the highlighted field.
+%(-8673083570902268304)%	
+%(4506789830436007175)%	Please enter 'f' in the highlighted field.
+%(-1321320791275777765)%	
+%(8359511761771144003)%	This is not a factor of 21. Please double-check your answer.
+%(4465807717331090009)%	Use your previous entry to figure out what this factor will be.
+%(-3531131350499214403)%	
+Problem Name	GCF-13_26
+%(startStateNodeName)%	
+%(Var1)%	13
+%(Var2)%	26
+%(Var1-Factors)%	R1C[1-2]
+%(Var2-Factors)%	R[1-2]C[3-4]
+%(RangeLeft)%	R[2-5]C[1-2]
+%(RangeRight)%	R[3-5]C[3-4]
+%(Var1-NotFactorError)%	[^(1|13)]
+%(Var2-NotFactorError)%	[^(1|26|2|13)]
+%(Fac11)%	1
+%(Hint11-1)%	Enter a factor of 13. Start with the smallest one.
+%(Hint11-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint11-3)%	
+%(Hint11-4)%	Please enter '1' in the highlighted field.
+%(Fac11-ErrOrder)%	13
+%(Fac12)%	13
+%(Hint12-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint12-2)%	What number multiplied by 1 gives you 13?
+%(Hint12-3)%	
+%(Hint12-4)%	Please enter '13' in the highlighted field.
+%(Fac12-ErrOrder)%	1
+%(Fac21)%	
+%(Hint21-1)%	
+%(Hint21-2)%	
+%(Hint21-3)%	
+%(Hint21-4)%	
+%(R2C1-TRAVERSAL)%	0
+%(Fac21-ErrOrder)%	
+%(Fac22)%	
+%(Hint22-1)%	
+%(Hint22-2)%	
+%(Hint22-3)%	
+%(Hint22-4)%	
+%(R2C2-TRAVERSAL)%	0
+%(Fac22-ErrOrder)%	
+%(Fac31)%	 
+%(Hint31-1)%	
+%(Hint31-2)%	
+%(Hint31-3)%	
+%(Hint31-4)%	
+%(R3C1-TRAVERSAL)%	0
+%(Fac31-ErrOrder)%	
+%(Fac32)%	 
+%(Hint32-1)%	
+%(Hint32-2)%	
+%(Hint32-3)%	
+%(Hint32-4)%	
+%(R3C2-TRAVERSAL)%	0
+%(Fac32-ErrOrder)%	
+%(Fac41)%	 
+%(Hint41-1)%	
+%(Hint41-2)%	
+%(Hint41-3)%	
+%(Hint41-4)%	
+%(R4C1-TRAVERSAL)%	0
+%(Fac41-ErrOrder)%	
+%(Fac42)%	 
+%(Hint42-1)%	
+%(Hint42-2)%	
+%(Hint42-3)%	
+%(Hint42-4)%	
+%(R4C2-TRAVERSAL)%	0
+%(Fac42-ErrOrder)%	
+%(Fac51)%	
+%(Hint51-1)%	
+%(Hint51-2)%	
+%(Hint51-3)%	
+%(Hint51-4)%	
+%(R5C1-TRAVERSAL)%	0
+%(Fac51-ErrOrder)%	
+%(Fac52)%	
+%(Hint52-1)%	
+%(Hint52-2)%	
+%(Hint52-3)%	
+%(Hint52-4)%	
+%(R5C2-TRAVERSAL)%	0
+%(Fac52-ErrOrder)%	
+	
+%(Fac13)%	1
+%(Hint13-1)%	Enter a factor of 26. Start with the smallest one.
+%(Hint13-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint13-3)%	
+%(Hint13-4)%	Please enter '1' in the highlighted field.
+%(Fac13-ErrOrder)%	26|2|13
+%(Fac14)%	26
+%(Hint14-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint14-2)%	What number multiplied by 1 gives you 26?
+%(Hint14-3)%	
+%(Hint14-4)%	Please enter '26' in the highlighted field.
+%(Fac14-ErrOrder)%	1|2|13
+%(Fac23)%	2
+%(Hint23-1)%	Is the 26 an even number?
+%(Hint23-2)%	Since the 26 is even, what is a possible factor?
+%(Hint23-3)%	
+%(Hint23-4)%	Please enter '2' in the highlighted field.
+%(R2C3-TRAVERSAL)%	1
+%(Fac23-ErrOrder)%	1|26|13
+%(Fac24)%	13
+%(Hint24-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint24-2)%	
+%(Hint24-3)%	What number multiplied by 2 gives you 26?
+%(Hint24-4)%	Please enter '13' in the highlighted field.
+%(R2C4-TRAVERSAL)%	1
+%(Fac24-ErrOrder)%	1|26|2
+%(Fac33)%	
+%(Hint33-1)%	
+%(Hint33-2)%	
+%(Hint33-3)%	
+%(Hint33-4)%	
+%(R3C3-TRAVERSAL)%	0
+%(Fac33-ErrOrder)%	
+%(Fac34)%	
+%(Hint34-1)%	
+%(Hint34-2)%	
+%(Hint34-3)%	
+%(Hint34-4)%	
+%(R3C4-TRAVERSAL)%	0
+%(Fac34-ErrOrder)%	
+%(Fac43)%	
+%(Hint43-1)%	
+%(Hint43-2)%	
+%(Hint43-3)%	
+%(Hint43-4)%	
+%(R4C3-TRAVERSAL)%	0
+%(Fac43-ErrOrder)%	
+%(Fac44)%	
+%(Hint44-1)%	
+%(Hint44-2)%	
+%(Hint44-3)%	
+%(Hint44-4)%	
+%(R4C4-TRAVERSAL)%	0
+%(Fac44-ErrOrder)%	
+%(Fac53)%	
+%(Hint53-1)%	
+%(Hint53-2)%	
+%(Hint53-3)%	
+%(Hint53-4)%	
+%(R5C3-TRAVERSAL)%	0
+%(Fac53-ErrOrder)%	
+%(Fac54)%	
+%(Hint54-1)%	
+%(Hint54-2)%	
+%(Hint54-3)%	
+%(Hint54-4)%	
+%(R5C4-TRAVERSAL)%	0
+%(Fac54-ErrOrder)%	
+%(CF1)%	1
+%(HintCF1-1)%	Look at all of your factor pairs. What factors do the two numbers, 13 and 26 have in common?
+%(HintCF1-2)%	What is the smallest common factor?
+%(HintCF1-3)%	List the common factors in order from smallest to largest.
+%(HintCF1-4)%	Please enter '1' in the highlighted field.
+%(CF1-TRAVERSAL)%	1
+%(CF1-ErrOrder)%	13
+%(CF2)%	13
+%(HintCF2-1)%	Look at all of your factor pairs. What other factors do the two numbers, 13 and 26 have in common?
+%(HintCF2-2)%	What is the second largest common factor?
+%(HintCF2-3)%	List the common factors in order from smallest to largest.
+%(HintCF2-4)%	Please enter '13' in the highlighted field.
+%(CF2-TRAVERSAL)%	1
+%(CF2-ErrOrder)%	1
+%(CF3)%	
+%(HintCF3-1)%	
+%(HintCF3-2)%	
+%(HintCF3-3)%	
+%(HintCF3-4)%	
+%(CF3-TRAVERSAL)%	0
+%(CF3-ErrOrder)%	
+%(CF4)%	
+%(HintCF4-1)%	
+%(HintCF4-2)%	
+%(HintCF4-3)%	
+%(HintCF4-4)%	
+%(CF4-TRAVERSAL)%	0
+%(CF4-ErrOrder)%	
+%(A)%	13
+%(HintA-1)%	Look at the common factors you have found. Now what is the greatest common factor of 13 and 26?
+%(HintA-2)%	What is the greatest common factor? 1? 13?
+%(HintA-3)%	Enter '13' in the highlighted field.
+%(CF-ErrNotCommon)%	[^(1|13)]
+%(GCF-Err)%	1
+%(254303365388049584)%	
+%(-5977137150935564445)%	Please enter '1' in the highlighted field.
+%(-7537965487687806191)%	Please enter '1' in the highlighted field.
+%(-1958610125961082412)%	What number multiplied by 1 gives you 26?
+%(4258066570658946414)%	
+%(-4868200884791373883)%	
+%(-3307382548147132355)%	
+%(3135564320319522621)%	
+%(-4868201884795373888)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(3349241659411110558)%	Look at all of your factor pairs. What other factors do the two numbers, 13 and 26 have in common?
+%(-1321319791251777704)%	
+%(-1321321791279777786)%	
+%(-8673086570870268165)%	
+%(3349244659511110895)%	Please enter '13' in the highlighted field.
+%(9128231315816371920)%	Enter '13' in the highlighted field.
+%(-5977140151031564692)%	
+%(-7537964487679806098)%	
+%(-4630892098344058834)%	Since the 26 is even, what is a possible factor?
+%(-5091951687139455837)%	
+%(-4630894098436059092)%	Please enter '2' in the highlighted field.
+%(7376638312065734454)%	
+%(3358107287083252305)%	
+%(-7108511028899129805)%	List the common factors in order from smallest to largest.
+%(3349242659419110637)%	What is the second largest common factor?
+%(-7537962487683806208)%	Enter a factor of 26. Start with the smallest one.
+%(-4868202884787373789)%	
+%(-1958609125973082375)%	
+%(5804110087503602308)%	
+%(7287509800339955155)%	Yes, this is a common factor but is it the greatest common factor?
+%(254301365392049566)%	
+%(-8857199270322685297)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(7376637312057734457)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5091949687143455931)%	
+%(-9095745892578352942)%	
+%(-9095743892566352860)%	
+%(3448326454585640764)%	Seems like you are done!
+%(-1958611125969082425)%	Use your previous entry to figure out what this factor will be.
+%(4258064570566946156)%	
+%(-7537963487675806109)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(254304365392049589)%	
+%(6847577044345073627)%	Yes this is a factor but it is out of order. Start with the smallest factors first and work your way up in ascending order. Try asking for a hint.
+%(-7108510028895129802)%	What is the smallest common factor?
+%(3358104286987252058)%	Use your previous entry to figure out what this factor will be.
+%(-3307387548175132476)%	
+%(-5977142151043564774)%	Enter a factor of 13. Start with the smallest one.
+%(5804112087499602342)%	
+%(1812052770030595884)%	
+%(-8673085570866268162)%	
+%(-5360709932947166162)%	Yes this is a factor but it is out of order. Try asking for a hint.
+%(-4630889098344058939)%	Is the 26 an even number?
+%(-3531133350527214469)%	
+%(-8857196270286685218)%	
+%(4258063570558946079)%	
+%(-4630891098340058845)%	
+%(-654517545755785932)%	
+%(7790176844402957019)%	
+%(1812057770122596037)%	
+%(3135558320283522551)%	
+%(5686583805161676592)%	This is not a common factor of 13 and 26.
+%(3135559320291522500)%	
+%(-8673080570898268319)%	
+%(-4560983255492772878)%	Please provide your answer 'NoInput' in the highlighted element.
+%(-5694662720625941828)%	This is not a factor of 13. Please double-check your answer.
+%(-654518545759785935)%	
+%(-9095740892566352933)%	
+%(-654523545791786034)%	
+%(4258065570650946321)%	
+%(-3531136350527214524)%	
+%(-8857194270290685200)%	
+%(-5091950687147455936)%	
+%(1812050770018595802)%	
+%(-3602696677446545224)%	Click on "Found all factors for both numbers." when you think you've entered all the factor pairs for 13 and 26.
+%(3349243659503110800)%	List the common factors in order from smallest to largest.
+%(1032905288316606034)%	Please enter '1' in the highlighted field.
+%(-3307385548179132442)%	
+%(4465810717431090344)%	Please enter '13' in the highlighted field.
+%(7376636312069734420)%	
+%(254298365356049487)%	
+%(1812051770022595807)%	
+%(9128230315812371925)%	What is the greatest common factor? 1? 13?
+%(-1321322791287777783)%	
+%(7790175844398956998)%	
+%(-1958608125965082378)%	Please enter '26' in the highlighted field.
+%(7790177844426957080)%	
+%(-5091956687247456166)%	
+%(-9095742892578352951)%	
+%(-3531134350531214490)%	
+%(3135557320279522546)%	
+%(7790174844390957001)%	
+%(-7108509028887129851)%	Look at all of your factor pairs. What factors do the two numbers, 13 and 26 have in common?
+%(9128233315812371918)%	Look at the common factors you have found. Now what is the greatest common factor of 13 and 26?
+%(-4868207884895374118)%	
+%(5804113087503602363)%	
+%(7376635312061734407)%	
+%(3358109287095252387)%	Please enter '13' in the highlighted field.
+%(-4142943113116299797)%	Are you sure any more unique factors exist?
+%(-8857193270286685195)%	
+%(5804115087531602429)%	
+%(-5977139150947564527)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(3358106286999252140)%	What number multiplied by 2 gives you 26?
+%(4465805717335090087)%	
+%(4465804717331090082)%	What number multiplied by 1 gives you 13?
+%(-7108504028859129732)%	Please enter '1' in the highlighted field.
+%(-654520545755785953)%	
+%(-8068215192076385916)%	Yes, this is a common factor but please enter them in order, starting with the smallest factor.
+%(-3307384548175132421)%	
+%(-1331720242453165934)%	Please enter 'q' in the highlighted field.
+%(-8673083570902268304)%	
+%(4506789830436007175)%	Please enter 'f' in the highlighted field.
+%(-1321320791275777765)%	
+%(8359511761771144003)%	This is not a factor of 26. Please double-check your answer.
+%(4465807717331090009)%	Use your previous entry to figure out what this factor will be.
+%(-3531131350499214403)%	
+Problem Name	GCF-15_45
+%(startStateNodeName)%	
+%(Var1)%	15
+%(Var2)%	45
+%(Var1-Factors)%	R[1-2]C[1-2]
+%(Var2-Factors)%	R[1-3]C[3-4]
+%(RangeLeft)%	R[3-5]C[1-2]
+%(RangeRight)%	R[4-5]C[3-4]
+%(Var1-NotFactorError)%	[^(1|15|3|5)]
+%(Var2-NotFactorError)%	[^(1|45|3|15|5|9)]
+%(Fac11)%	1
+%(Hint11-1)%	Enter a factor of 15. Start with the smallest one.
+%(Hint11-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint11-3)%	
+%(Hint11-4)%	Please enter '1' in the highlighted field.
+%(Fac11-ErrOrder)%	15|3|5
+%(Fac12)%	15
+%(Hint12-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint12-2)%	What number multiplied by 1 gives you 15?
+%(Hint12-3)%	
+%(Hint12-4)%	Please enter '15' in the highlighted field.
+%(Fac12-ErrOrder)%	1|3|5
+%(Fac21)%	3
+%(Hint21-1)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(Hint21-2)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(Hint21-3)%	
+%(Hint21-4)%	Please enter '3' in the highlighted field.
+%(R2C1-TRAVERSAL)%	1
+%(Fac21-ErrOrder)%	1|15|5
+%(Fac22)%	5
+%(Hint22-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint22-2)%	What number multiplied by 3 gives you 15?
+%(Hint22-3)%	
+%(Hint22-4)%	Please enter '5' in the highlighted field.
+%(R2C2-TRAVERSAL)%	1
+%(Fac22-ErrOrder)%	1|15|3
+%(Fac31)%	 
+%(Hint31-1)%	
+%(Hint31-2)%	
+%(Hint31-3)%	
+%(Hint31-4)%	
+%(R3C1-TRAVERSAL)%	0
+%(Fac31-ErrOrder)%	
+%(Fac32)%	 
+%(Hint32-1)%	
+%(Hint32-2)%	
+%(Hint32-3)%	
+%(Hint32-4)%	
+%(R3C2-TRAVERSAL)%	0
+%(Fac32-ErrOrder)%	
+%(Fac41)%	 
+%(Hint41-1)%	
+%(Hint41-2)%	
+%(Hint41-3)%	
+%(Hint41-4)%	
+%(R4C1-TRAVERSAL)%	0
+%(Fac41-ErrOrder)%	
+%(Fac42)%	 
+%(Hint42-1)%	
+%(Hint42-2)%	
+%(Hint42-3)%	
+%(Hint42-4)%	
+%(R4C2-TRAVERSAL)%	0
+%(Fac42-ErrOrder)%	
+%(Fac51)%	
+%(Hint51-1)%	
+%(Hint51-2)%	
+%(Hint51-3)%	
+%(Hint51-4)%	
+%(R5C1-TRAVERSAL)%	0
+%(Fac51-ErrOrder)%	
+%(Fac52)%	
+%(Hint52-1)%	
+%(Hint52-2)%	
+%(Hint52-3)%	
+%(Hint52-4)%	
+%(R5C2-TRAVERSAL)%	0
+%(Fac52-ErrOrder)%	
+	
+%(Fac13)%	1
+%(Hint13-1)%	Enter a factor of 45. Start with the smallest one.
+%(Hint13-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint13-3)%	
+%(Hint13-4)%	Please enter '1' in the highlighted field.
+%(Fac13-ErrOrder)%	45|3|15|%(Fac33)%|%(Fac34)%
+%(Fac14)%	45
+%(Hint14-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint14-2)%	What number multiplied by 1 gives you 45?
+%(Hint14-3)%	
+%(Hint14-4)%	Please enter '45' in the highlighted field.
+%(Fac14-ErrOrder)%	1|3|15|%(Fac33)%|%(Fac34)%
+%(Fac23)%	3
+%(Hint23-1)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(Hint23-2)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(Hint23-3)%	
+%(Hint23-4)%	Please enter '3' in the highlighted field.
+%(R2C3-TRAVERSAL)%	1
+%(Fac23-ErrOrder)%	1|45|15|%(Fac33)%|%(Fac34)%
+%(Fac24)%	15
+%(Hint24-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint24-2)%	
+%(Hint24-3)%	What number multiplied by 3 gives you 45?
+%(Hint24-4)%	Please enter '15' in the highlighted field.
+%(R2C4-TRAVERSAL)%	1
+%(Fac24-ErrOrder)%	1|45|3|%(Fac33)%|%(Fac34)%
+%(Fac33)%	5
+%(Hint33-1)%	If a number ends in 5, it is divisible by 5. Does 45 end in 5?
+%(Hint33-2)%	Since 45 ends in 5, what is a possible factor?
+%(Hint33-3)%	
+%(Hint33-4)%	Please enter '5' in the highlighted field.
+%(R3C3-TRAVERSAL)%	1
+%(Fac33-ErrOrder)%	1|45|3|%(Fac24)%|%(Fac34)%
+%(Fac34)%	9
+%(Hint34-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint34-2)%	
+%(Hint34-3)%	What number multiplied by 5 gives you 45?
+%(Hint34-4)%	Please enter '9' in the highlighted field.
+%(R3C4-TRAVERSAL)%	1
+%(Fac34-ErrOrder)%	1|45|3|%(Fac24)%|%(Fac33)%
+%(Fac43)%	
+%(Hint43-1)%	
+%(Hint43-2)%	
+%(Hint43-3)%	
+%(Hint43-4)%	
+%(R4C3-TRAVERSAL)%	0
+%(Fac43-ErrOrder)%	
+%(Fac44)%	
+%(Hint44-1)%	
+%(Hint44-2)%	
+%(Hint44-3)%	
+%(Hint44-4)%	
+%(R4C4-TRAVERSAL)%	0
+%(Fac44-ErrOrder)%	
+%(Fac53)%	
+%(Hint53-1)%	
+%(Hint53-2)%	
+%(Hint53-3)%	
+%(Hint53-4)%	
+%(R5C3-TRAVERSAL)%	0
+%(Fac53-ErrOrder)%	
+%(Fac54)%	
+%(Hint54-1)%	
+%(Hint54-2)%	
+%(Hint54-3)%	
+%(Hint54-4)%	
+%(R5C4-TRAVERSAL)%	0
+%(Fac54-ErrOrder)%	
+%(CF1)%	1
+%(HintCF1-1)%	Look at all of your factor pairs. What factors do the two numbers, 15 and 45 have in common?
+%(HintCF1-2)%	What is the smallest common factor?
+%(HintCF1-3)%	List the common factors in order from smallest to largest.
+%(HintCF1-4)%	Please enter '1' in the highlighted field.
+%(CF1-TRAVERSAL)%	1
+%(CF1-ErrOrder)%	3|5|15
+%(CF2)%	3
+%(HintCF2-1)%	Look at all of your factor pairs. What other factors do the two numbers, 15 and 45 have in common?
+%(HintCF2-2)%	What is the second largest common factor?
+%(HintCF2-3)%	List the common factors in order from smallest to largest.
+%(HintCF2-4)%	Please enter '3' in the highlighted field.
+%(CF2-TRAVERSAL)%	1
+%(CF2-ErrOrder)%	1|5|15
+%(CF3)%	5
+%(HintCF3-1)%	Look at all of your factor pairs. What other factors do the two numbers, 15 and 45 have in common?
+%(HintCF3-2)%	What is the third largest common factor?
+%(HintCF3-3)%	List the common factors in order from smallest to largest.
+%(HintCF3-4)%	Please enter '5' in the highlighted field.
+%(CF3-TRAVERSAL)%	1
+%(CF3-ErrOrder)%	1|3|15
+%(CF4)%	15
+%(HintCF4-1)%	Look at all of your factor pairs. What other factors do the two numbers, 15 and 45 have in common?
+%(HintCF4-2)%	What is the fourth largest common factor?
+%(HintCF4-3)%	List the common factors in order from smallest to largest.
+%(HintCF4-4)%	Please enter '15' in the highlighted field.
+%(CF4-TRAVERSAL)%	1
+%(CF4-ErrOrder)%	1|3|5
+%(A)%	15
+%(HintA-1)%	Look at the common factors you have found. Now what is the greatest common factor of 15 and 45?
+%(HintA-2)%	What is the greatest common factor? 1? 3? 5? 15?
+%(HintA-3)%	Enter '15' in the highlighted field.
+%(CF-ErrNotCommon)%	[^(1|3|5|15)]
+%(GCF-Err)%	1|3|5
+%(254303365388049584)%	
+%(-5977137150935564445)%	Please enter '1' in the highlighted field.
+%(-7537965487687806191)%	Please enter '1' in the highlighted field.
+%(-1958610125961082412)%	What number multiplied by 1 gives you 45?
+%(4258066570658946414)%	
+%(-4868200884791373883)%	
+%(-3307382548147132355)%	
+%(3135564320319522621)%	
+%(-4868201884795373888)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(3349241659411110558)%	Look at all of your factor pairs. What other factors do the two numbers, 15 and 45 have in common?
+%(-1321319791251777704)%	
+%(-1321321791279777786)%	
+%(-8673086570870268165)%	What is the fourth largest common factor?
+%(3349244659511110895)%	Please enter '3' in the highlighted field.
+%(9128231315816371920)%	Enter '15' in the highlighted field.
+%(-5977140151031564692)%	
+%(-7537964487679806098)%	
+%(-4630892098344058834)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(-5091951687139455837)%	
+%(-4630894098436059092)%	Please enter '3' in the highlighted field.
+%(7376638312065734454)%	Please enter '3' in the highlighted field.
+%(3358107287083252305)%	
+%(-7108511028899129805)%	List the common factors in order from smallest to largest.
+%(3349242659419110637)%	What is the second largest common factor?
+%(-7537962487683806208)%	Enter a factor of 45. Start with the smallest one.
+%(-4868202884787373789)%	
+%(-1958609125973082375)%	
+%(5804110087503602308)%	
+%(7287509800339955155)%	Yes, this is a common factor but is it the greatest common factor?
+%(254301365392049566)%	
+%(-8857199270322685297)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(7376637312057734457)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5091949687143455931)%	
+%(-9095745892578352942)%	If a number ends in 5, it is divisible by 5. Does 45 end in 5?
+%(-9095743892566352860)%	
+%(3448326454585640764)%	Seems like you are done!
+%(-1958611125969082425)%	Use your previous entry to figure out what this factor will be.
+%(4258064570566946156)%	
+%(-7537963487675806109)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(254304365392049589)%	
+%(6847577044345073627)%	Yes this is a factor but it is out of order. Start with the smallest factors first and work your way up in ascending order. Try asking for a hint.
+%(-7108510028895129802)%	What is the smallest common factor?
+%(3358104286987252058)%	Use your previous entry to figure out what this factor will be.
+%(-3307387548175132476)%	
+%(-5977142151043564774)%	Enter a factor of 15. Start with the smallest one.
+%(5804112087499602342)%	
+%(1812052770030595884)%	Use your previous entry to figure out what this factor will be.
+%(-8673085570866268162)%	List the common factors in order from smallest to largest.
+%(-5360709932947166162)%	Yes this is a factor but it is out of order. Try asking for a hint.
+%(-4630889098344058939)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(-3531133350527214469)%	What number multiplied by 5 gives you 45?
+%(-8857196270286685218)%	
+%(4258063570558946079)%	
+%(-4630891098340058845)%	
+%(-654517545755785932)%	What is the third largest common factor?
+%(7790176844402957019)%	
+%(1812057770122596037)%	Please enter '5' in the highlighted field.
+%(3135558320283522551)%	
+%(5686583805161676592)%	This is not a common factor of 15 and 45.
+%(3135559320291522500)%	
+%(-8673080570898268319)%	Please enter '15' in the highlighted field.
+%(-4560983255492772878)%	Please provide your answer 'NoInput' in the highlighted element.
+%(-5694662720625941828)%	This is not a factor of 15. Please double-check your answer.
+%(-654518545759785935)%	List the common factors in order from smallest to largest.
+%(-9095740892566352933)%	Please enter '5' in the highlighted field.
+%(-654523545791786034)%	Please enter '5' in the highlighted field.
+%(4258065570650946321)%	
+%(-3531136350527214524)%	Please enter '9' in the highlighted field.
+%(-8857194270290685200)%	
+%(-5091950687147455936)%	
+%(1812050770018595802)%	
+%(-3602696677446545224)%	Click on "Found all factors for both numbers." when you think you've entered all the factor pairs for 15 and 45.
+%(3349243659503110800)%	List the common factors in order from smallest to largest.
+%(1032905288316606034)%	Please enter '1' in the highlighted field.
+%(-3307385548179132442)%	
+%(4465810717431090344)%	Please enter '15' in the highlighted field.
+%(7376636312069734420)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(254298365356049487)%	
+%(1812051770022595807)%	What number multiplied by 3 gives you 15?
+%(9128230315812371925)%	What is the greatest common factor? 1? 3? %(CF3)%? %(CF4)%?
+%(-1321322791287777783)%	
+%(7790175844398956998)%	
+%(-1958608125965082378)%	Please enter '45' in the highlighted field.
+%(7790177844426957080)%	
+%(-5091956687247456166)%	
+%(-9095742892578352951)%	Since 45 ends in 5, what is a possible factor?
+%(-3531134350531214490)%	
+%(3135557320279522546)%	
+%(7790174844390957001)%	
+%(-7108509028887129851)%	Look at all of your factor pairs. What factors do the two numbers, 15 and 45 have in common?
+%(9128233315812371918)%	Look at the common factors you have found. Now what is the greatest common factor of 15 and 45?
+%(-4868207884895374118)%	
+%(5804113087503602363)%	
+%(7376635312061734407)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(3358109287095252387)%	Please enter '15' in the highlighted field.
+%(-4142943113116299797)%	Are you sure any more unique factors exist?
+%(-8857193270286685195)%	
+%(5804115087531602429)%	
+%(-5977139150947564527)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(3358106286999252140)%	What number multiplied by 3 gives you 45?
+%(4465805717335090087)%	
+%(4465804717331090082)%	What number multiplied by 1 gives you 15?
+%(-7108504028859129732)%	Please enter '1' in the highlighted field.
+%(-654520545755785953)%	Look at all of your factor pairs. What other factors do the two numbers, 15 and 45 have in common?
+%(-8068215192076385916)%	Yes, this is a common factor but please enter them in order, starting with the smallest factor.
+%(-3307384548175132421)%	
+%(-1331720242453165934)%	Please enter 'q' in the highlighted field.
+%(-8673083570902268304)%	Look at all of your factor pairs. What other factors do the two numbers, 15 and 45 have in common?
+%(4506789830436007175)%	Please enter 'f' in the highlighted field.
+%(-1321320791275777765)%	
+%(8359511761771144003)%	This is not a factor of 45. Please double-check your answer.
+%(4465807717331090009)%	Use your previous entry to figure out what this factor will be.
+%(-3531131350499214403)%	Use your previous entry to figure out what this factor will be.
+Problem Name	GCF-18_24
+%(startStateNodeName)%	
+%(Var1)%	18
+%(Var2)%	24
+%(Var1-Factors)%	R[1-3]C[1-2]
+%(Var2-Factors)%	R[1-4]C[3-4]
+%(RangeLeft)%	R[4-5]C[1-2]
+%(RangeRight)%	R5C[3-4]
+%(Var1-NotFactorError)%	[^(1|18|2|9|3|6)]
+%(Var2-NotFactorError)%	[^(1|24|2|12|3|8|4|6)]
+%(Fac11)%	1
+%(Hint11-1)%	Enter a factor of 18. Start with the smallest one.
+%(Hint11-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint11-3)%	
+%(Hint11-4)%	Please enter '1' in the highlighted field.
+%(Fac11-ErrOrder)%	18|2|9|%(Fac31)%|%(Fac32)%
+%(Fac12)%	18
+%(Hint12-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint12-2)%	What number multiplied by 1 gives you 18?
+%(Hint12-3)%	
+%(Hint12-4)%	Please enter '18' in the highlighted field.
+%(Fac12-ErrOrder)%	1|2|9|%(Fac31)%|%(Fac32)%
+%(Fac21)%	2
+%(Hint21-1)%	Is 18 an even number?
+%(Hint21-2)%	Since 18 is an even number, what is the next smallest factor after 1?
+%(Hint21-3)%	
+%(Hint21-4)%	Please enter '2' in the highlighted field.
+%(R2C1-TRAVERSAL)%	1
+%(Fac21-ErrOrder)%	1|18|9|%(Fac31)%|%(Fac32)%
+%(Fac22)%	9
+%(Hint22-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint22-2)%	What number multiplied by 2 gives you 18?
+%(Hint22-3)%	
+%(Hint22-4)%	Please enter '9' in the highlighted field.
+%(R2C2-TRAVERSAL)%	1
+%(Fac22-ErrOrder)%	1|18|2|%(Fac31)%|%(Fac32)%
+%(Fac31)%	3
+%(Hint31-1)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(Hint31-2)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(Hint31-3)%	
+%(Hint31-4)%	Please enter '3' in the highlighted field.
+%(R3C1-TRAVERSAL)%	1
+%(Fac31-ErrOrder)%	1|18|2|%(Fac22)%|%(Fac32)%
+%(Fac32)%	6
+%(Hint32-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint32-2)%	What number multiplied by 3 gives you 18?
+%(Hint32-3)%	
+%(Hint32-4)%	Please enter '6' in the highlighted field.
+%(R3C2-TRAVERSAL)%	1
+%(Fac32-ErrOrder)%	1|18|2|%(Fac22)%|%(Fac31)%
+%(Fac41)%	 
+%(Hint41-1)%	
+%(Hint41-2)%	
+%(Hint41-3)%	
+%(Hint41-4)%	
+%(R4C1-TRAVERSAL)%	0
+%(Fac41-ErrOrder)%	
+%(Fac42)%	 
+%(Hint42-1)%	
+%(Hint42-2)%	
+%(Hint42-3)%	
+%(Hint42-4)%	
+%(R4C2-TRAVERSAL)%	0
+%(Fac42-ErrOrder)%	
+%(Fac51)%	
+%(Hint51-1)%	
+%(Hint51-2)%	
+%(Hint51-3)%	
+%(Hint51-4)%	
+%(R5C1-TRAVERSAL)%	0
+%(Fac51-ErrOrder)%	
+%(Fac52)%	
+%(Hint52-1)%	
+%(Hint52-2)%	
+%(Hint52-3)%	
+%(Hint52-4)%	
+%(R5C2-TRAVERSAL)%	0
+%(Fac52-ErrOrder)%	
+	
+%(Fac13)%	1
+%(Hint13-1)%	Enter a factor of 24. Start with the smallest one.
+%(Hint13-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint13-3)%	
+%(Hint13-4)%	Please enter '1' in the highlighted field.
+%(Fac13-ErrOrder)%	24|2|12|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac14)%	24
+%(Hint14-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint14-2)%	What number multiplied by 1 gives you 24?
+%(Hint14-3)%	
+%(Hint14-4)%	Please enter '24' in the highlighted field.
+%(Fac14-ErrOrder)%	1|2|12|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac23)%	2
+%(Hint23-1)%	Is the 24 an even number?
+%(Hint23-2)%	Since the 24 is even, what is a possible factor?
+%(Hint23-3)%	
+%(Hint23-4)%	Please enter '2' in the highlighted field.
+%(R2C3-TRAVERSAL)%	1
+%(Fac23-ErrOrder)%	1|24|12|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac24)%	12
+%(Hint24-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint24-2)%	
+%(Hint24-3)%	What number multiplied by 2 gives you 24?
+%(Hint24-4)%	Please enter '12' in the highlighted field.
+%(R2C4-TRAVERSAL)%	1
+%(Fac24-ErrOrder)%	1|24|2|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac33)%	3
+%(Hint33-1)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(Hint33-2)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(Hint33-3)%	
+%(Hint33-4)%	Please enter '3' in the highlighted field.
+%(R3C3-TRAVERSAL)%	1
+%(Fac33-ErrOrder)%	1|24|2|%(Fac24)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac34)%	8
+%(Hint34-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint34-2)%	
+%(Hint34-3)%	What number multiplied by 3 gives you 24?
+%(Hint34-4)%	Please enter '8' in the highlighted field.
+%(R3C4-TRAVERSAL)%	1
+%(Fac34-ErrOrder)%	1|24|2|%(Fac24)%|%(Fac33)%|%(Fac43)%|%(Fac44)%
+%(Fac43)%	4
+%(Hint43-1)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(Hint43-2)%	
+%(Hint43-3)%	
+%(Hint43-4)%	Please enter '4' in the highlighted field.
+%(R4C3-TRAVERSAL)%	1
+%(Fac43-ErrOrder)%	1|24|2|%(Fac24)%|%(Fac33)%|%(Fac34)%|%(Fac44)%
+%(Fac44)%	6
+%(Hint44-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint44-2)%	
+%(Hint44-3)%	What number multiplied by 4 gives you 24?
+%(Hint44-4)%	Please enter '6' in the highlighted field.
+%(R4C4-TRAVERSAL)%	1
+%(Fac44-ErrOrder)%	1|24|2|%(Fac24)%|%(Fac33)%|%(Fac34)%|%(Fac43)%
+%(Fac53)%	
+%(Hint53-1)%	
+%(Hint53-2)%	
+%(Hint53-3)%	
+%(Hint53-4)%	
+%(R5C3-TRAVERSAL)%	0
+%(Fac53-ErrOrder)%	
+%(Fac54)%	
+%(Hint54-1)%	
+%(Hint54-2)%	
+%(Hint54-3)%	
+%(Hint54-4)%	
+%(R5C4-TRAVERSAL)%	0
+%(Fac54-ErrOrder)%	
+%(CF1)%	1
+%(HintCF1-1)%	Look at all of your factor pairs. What factors do the two numbers, 18 and 24 have in common?
+%(HintCF1-2)%	What is the smallest common factor?
+%(HintCF1-3)%	List the common factors in order from smallest to largest.
+%(HintCF1-4)%	Please enter '1' in the highlighted field.
+%(CF1-TRAVERSAL)%	1
+%(CF1-ErrOrder)%	2|3|6
+%(CF2)%	2
+%(HintCF2-1)%	Look at all of your factor pairs. What other factors do the two numbers, 18 and 24 have in common?
+%(HintCF2-2)%	What is the second largest common factor?
+%(HintCF2-3)%	List the common factors in order from smallest to largest.
+%(HintCF2-4)%	Please enter '2' in the highlighted field.
+%(CF2-TRAVERSAL)%	1
+%(CF2-ErrOrder)%	1|3|6
+%(CF3)%	3
+%(HintCF3-1)%	Look at all of your factor pairs. What other factors do the two numbers, 18 and 24 have in common?
+%(HintCF3-2)%	What is the third largest common factor?
+%(HintCF3-3)%	List the common factors in order from smallest to largest.
+%(HintCF3-4)%	Please enter '3' in the highlighted field.
+%(CF3-TRAVERSAL)%	1
+%(CF3-ErrOrder)%	1|2|6
+%(CF4)%	6
+%(HintCF4-1)%	Look at all of your factor pairs. What other factors do the two numbers, 18 and 24 have in common?
+%(HintCF4-2)%	What is the fourth largest common factor?
+%(HintCF4-3)%	List the common factors in order from smallest to largest.
+%(HintCF4-4)%	Please enter '6' in the highlighted field.
+%(CF4-TRAVERSAL)%	1
+%(CF4-ErrOrder)%	1|2|3
+%(A)%	6
+%(HintA-1)%	Look at the common factors you have found. Now what is the greatest common factor of 18 and 24?
+%(HintA-2)%	What is the greatest common factor? 1? 2? 3? 6?
+%(HintA-3)%	Enter '6' in the highlighted field.
+%(CF-ErrNotCommon)%	[^(1|2|3|6)]
+%(GCF-Err)%	1|2|3
+%(254303365388049584)%	
+%(-5977137150935564445)%	Please enter '1' in the highlighted field.
+%(-7537965487687806191)%	Please enter '1' in the highlighted field.
+%(-1958610125961082412)%	What number multiplied by 1 gives you 24?
+%(4258066570658946414)%	Please enter '4' in the highlighted field.
+%(-4868200884791373883)%	
+%(-3307382548147132355)%	
+%(3135564320319522621)%	
+%(-4868201884795373888)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(3349241659411110558)%	Look at all of your factor pairs. What other factors do the two numbers, 18 and 24 have in common?
+%(-1321319791251777704)%	Use your previous entry to figure out what this factor will be.
+%(-1321321791279777786)%	What number multiplied by 4 gives you 24?
+%(-8673086570870268165)%	What is the fourth largest common factor?
+%(3349244659511110895)%	Please enter '2' in the highlighted field.
+%(9128231315816371920)%	Enter '6' in the highlighted field.
+%(-5977140151031564692)%	
+%(-7537964487679806098)%	
+%(-4630892098344058834)%	Since the 24 is even, what is a possible factor?
+%(-5091951687139455837)%	Use your previous entry to figure out what this factor will be.
+%(-4630894098436059092)%	Please enter '2' in the highlighted field.
+%(7376638312065734454)%	Please enter '2' in the highlighted field.
+%(3358107287083252305)%	
+%(-7108511028899129805)%	List the common factors in order from smallest to largest.
+%(3349242659419110637)%	What is the second largest common factor?
+%(-7537962487683806208)%	Enter a factor of 24. Start with the smallest one.
+%(-4868202884787373789)%	
+%(-1958609125973082375)%	
+%(5804110087503602308)%	
+%(7287509800339955155)%	Yes, this is a common factor but is it the greatest common factor?
+%(254301365392049566)%	
+%(-8857199270322685297)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(7376637312057734457)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5091949687143455931)%	
+%(-9095745892578352942)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(-9095743892566352860)%	
+%(3448326454585640764)%	Seems like you are done!
+%(-1958611125969082425)%	Use your previous entry to figure out what this factor will be.
+%(4258064570566946156)%	
+%(-7537963487675806109)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(254304365392049589)%	
+%(6847577044345073627)%	Yes this is a factor but it is out of order. Start with the smallest factors first and work your way up in ascending order. Try asking for a hint.
+%(-7108510028895129802)%	What is the smallest common factor?
+%(3358104286987252058)%	Use your previous entry to figure out what this factor will be.
+%(-3307387548175132476)%	
+%(-5977142151043564774)%	Enter a factor of 18. Start with the smallest one.
+%(5804112087499602342)%	
+%(1812052770030595884)%	Use your previous entry to figure out what this factor will be.
+%(-8673085570866268162)%	List the common factors in order from smallest to largest.
+%(-5360709932947166162)%	Yes this is a factor but it is out of order. Try asking for a hint.
+%(-4630889098344058939)%	Is the 24 an even number?
+%(-3531133350527214469)%	What number multiplied by 3 gives you 24?
+%(-8857196270286685218)%	
+%(4258063570558946079)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(-4630891098340058845)%	
+%(-654517545755785932)%	What is the third largest common factor?
+%(7790176844402957019)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(1812057770122596037)%	Please enter '9' in the highlighted field.
+%(3135558320283522551)%	
+%(5686583805161676592)%	This is not a common factor of 18 and 24.
+%(3135559320291522500)%	
+%(-8673080570898268319)%	Please enter '6' in the highlighted field.
+%(-4560983255492772878)%	Please provide your answer 'NoInput' in the highlighted element.
+%(-5694662720625941828)%	This is not a factor of 18. Please double-check your answer.
+%(-654518545759785935)%	List the common factors in order from smallest to largest.
+%(-9095740892566352933)%	Please enter '3' in the highlighted field.
+%(-654523545791786034)%	Please enter '3' in the highlighted field.
+%(4258065570650946321)%	
+%(-3531136350527214524)%	Please enter '8' in the highlighted field.
+%(-8857194270290685200)%	
+%(-5091950687147455936)%	What number multiplied by 3 gives you 18?
+%(1812050770018595802)%	
+%(-3602696677446545224)%	Click on "Found all factors for both numbers." when you think you've entered all the factor pairs for 18 and 24.
+%(3349243659503110800)%	List the common factors in order from smallest to largest.
+%(1032905288316606034)%	Please enter '1' in the highlighted field.
+%(-3307385548179132442)%	
+%(4465810717431090344)%	Please enter '18' in the highlighted field.
+%(7376636312069734420)%	Since 18 is an even number, what is the next smallest factor after 1?
+%(254298365356049487)%	
+%(1812051770022595807)%	What number multiplied by 2 gives you 18?
+%(9128230315812371925)%	What is the greatest common factor? 1? 2? %(CF3)%? %(CF4)%?
+%(-1321322791287777783)%	Please enter '6' in the highlighted field.
+%(7790175844398956998)%	
+%(-1958608125965082378)%	Please enter '24' in the highlighted field.
+%(7790177844426957080)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(-5091956687247456166)%	Please enter '6' in the highlighted field.
+%(-9095742892578352951)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(-3531134350531214490)%	
+%(3135557320279522546)%	
+%(7790174844390957001)%	Please enter '3' in the highlighted field.
+%(-7108509028887129851)%	Look at all of your factor pairs. What factors do the two numbers, 18 and 24 have in common?
+%(9128233315812371918)%	Look at the common factors you have found. Now what is the greatest common factor of 18 and 24?
+%(-4868207884895374118)%	
+%(5804113087503602363)%	
+%(7376635312061734407)%	Is 18 an even number?
+%(3358109287095252387)%	Please enter '12' in the highlighted field.
+%(-4142943113116299797)%	Are you sure any more unique factors exist?
+%(-8857193270286685195)%	
+%(5804115087531602429)%	
+%(-5977139150947564527)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(3358106286999252140)%	What number multiplied by 2 gives you 24?
+%(4465805717335090087)%	
+%(4465804717331090082)%	What number multiplied by 1 gives you 18?
+%(-7108504028859129732)%	Please enter '1' in the highlighted field.
+%(-654520545755785953)%	Look at all of your factor pairs. What other factors do the two numbers, 18 and 24 have in common?
+%(-8068215192076385916)%	Yes, this is a common factor but please enter them in order, starting with the smallest factor.
+%(-3307384548175132421)%	
+%(-1331720242453165934)%	Please enter 'q' in the highlighted field.
+%(-8673083570902268304)%	Look at all of your factor pairs. What other factors do the two numbers, 18 and 24 have in common?
+%(4506789830436007175)%	Please enter 'f' in the highlighted field.
+%(-1321320791275777765)%	
+%(8359511761771144003)%	This is not a factor of 24. Please double-check your answer.
+%(4465807717331090009)%	Use your previous entry to figure out what this factor will be.
+%(-3531131350499214403)%	Use your previous entry to figure out what this factor will be.
+Problem Name	GCF-20_30
+%(startStateNodeName)%	
+%(Var1)%	20
+%(Var2)%	30
+%(Var1-Factors)%	R[1-3]C[1-2]
+%(Var2-Factors)%	R[1-4]C[3-4]
+%(RangeLeft)%	R[4-5]C[1-2]
+%(RangeRight)%	R5C[3-4]
+%(Var1-NotFactorError)%	[^(1|20|2|10|4|5)]
+%(Var2-NotFactorError)%	[^(1|30|2|15|3|10|5|6)]
+%(Fac11)%	1
+%(Hint11-1)%	Enter a factor of 20. Start with the smallest one.
+%(Hint11-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint11-3)%	
+%(Hint11-4)%	Please enter '1' in the highlighted field.
+%(Fac11-ErrOrder)%	20|2|10|%(Fac31)%|%(Fac32)%
+%(Fac12)%	20
+%(Hint12-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint12-2)%	What number multiplied by 1 gives you 20?
+%(Hint12-3)%	
+%(Hint12-4)%	Please enter '20' in the highlighted field.
+%(Fac12-ErrOrder)%	1|2|10|%(Fac31)%|%(Fac32)%
+%(Fac21)%	2
+%(Hint21-1)%	Is 20 an even number?
+%(Hint21-2)%	Since 20 is an even number, what is the next smallest factor after 1?
+%(Hint21-3)%	
+%(Hint21-4)%	Please enter '2' in the highlighted field.
+%(R2C1-TRAVERSAL)%	1
+%(Fac21-ErrOrder)%	1|20|10|%(Fac31)%|%(Fac32)%
+%(Fac22)%	10
+%(Hint22-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint22-2)%	What number multiplied by 2 gives you 20?
+%(Hint22-3)%	
+%(Hint22-4)%	Please enter '10' in the highlighted field.
+%(R2C2-TRAVERSAL)%	1
+%(Fac22-ErrOrder)%	1|20|2|%(Fac31)%|%(Fac32)%
+%(Fac31)%	4
+%(Hint31-1)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(Hint31-2)%	
+%(Hint31-3)%	
+%(Hint31-4)%	Please enter '4' in the highlighted field.
+%(R3C1-TRAVERSAL)%	1
+%(Fac31-ErrOrder)%	1|20|2|%(Fac22)%|%(Fac32)%
+%(Fac32)%	5
+%(Hint32-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint32-2)%	What number multiplied by 4 gives you 20?
+%(Hint32-3)%	
+%(Hint32-4)%	Please enter '5' in the highlighted field.
+%(R3C2-TRAVERSAL)%	1
+%(Fac32-ErrOrder)%	1|20|2|%(Fac22)%|%(Fac31)%
+%(Fac41)%	 
+%(Hint41-1)%	
+%(Hint41-2)%	
+%(Hint41-3)%	
+%(Hint41-4)%	
+%(R4C1-TRAVERSAL)%	0
+%(Fac41-ErrOrder)%	
+%(Fac42)%	 
+%(Hint42-1)%	
+%(Hint42-2)%	
+%(Hint42-3)%	
+%(Hint42-4)%	
+%(R4C2-TRAVERSAL)%	0
+%(Fac42-ErrOrder)%	
+%(Fac51)%	
+%(Hint51-1)%	
+%(Hint51-2)%	
+%(Hint51-3)%	
+%(Hint51-4)%	
+%(R5C1-TRAVERSAL)%	0
+%(Fac51-ErrOrder)%	
+%(Fac52)%	
+%(Hint52-1)%	
+%(Hint52-2)%	
+%(Hint52-3)%	
+%(Hint52-4)%	
+%(R5C2-TRAVERSAL)%	0
+%(Fac52-ErrOrder)%	
+	
+%(Fac13)%	1
+%(Hint13-1)%	Enter a factor of 30. Start with the smallest one.
+%(Hint13-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint13-3)%	
+%(Hint13-4)%	Please enter '1' in the highlighted field.
+%(Fac13-ErrOrder)%	30|2|15|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac14)%	30
+%(Hint14-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint14-2)%	What number multiplied by 1 gives you 30?
+%(Hint14-3)%	
+%(Hint14-4)%	Please enter '30' in the highlighted field.
+%(Fac14-ErrOrder)%	1|2|15|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac23)%	2
+%(Hint23-1)%	Is the 30 an even number?
+%(Hint23-2)%	Since the 30 is even, what is a possible factor?
+%(Hint23-3)%	
+%(Hint23-4)%	Please enter '2' in the highlighted field.
+%(R2C3-TRAVERSAL)%	1
+%(Fac23-ErrOrder)%	1|30|15|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac24)%	15
+%(Hint24-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint24-2)%	
+%(Hint24-3)%	What number multiplied by 2 gives you 30?
+%(Hint24-4)%	Please enter '15' in the highlighted field.
+%(R2C4-TRAVERSAL)%	1
+%(Fac24-ErrOrder)%	1|30|2|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac33)%	3
+%(Hint33-1)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(Hint33-2)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(Hint33-3)%	
+%(Hint33-4)%	Please enter '3' in the highlighted field.
+%(R3C3-TRAVERSAL)%	1
+%(Fac33-ErrOrder)%	1|30|2|%(Fac24)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac34)%	10
+%(Hint34-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint34-2)%	
+%(Hint34-3)%	What number multiplied by 3 gives you 30?
+%(Hint34-4)%	Please enter '10' in the highlighted field.
+%(R3C4-TRAVERSAL)%	1
+%(Fac34-ErrOrder)%	1|30|2|%(Fac24)%|%(Fac33)%|%(Fac43)%|%(Fac44)%
+%(Fac43)%	5
+%(Hint43-1)%	If a number ends in 5 or a 0, it is divisible by 5. Does 30 end in 5 or 0?
+%(Hint43-2)%	Since 30 ends in 0, what is a possible factor?
+%(Hint43-3)%	
+%(Hint43-4)%	Please enter '5' in the highlighted field.
+%(R4C3-TRAVERSAL)%	1
+%(Fac43-ErrOrder)%	1|30|2|%(Fac24)%|%(Fac33)%|%(Fac34)%|%(Fac44)%
+%(Fac44)%	6
+%(Hint44-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint44-2)%	
+%(Hint44-3)%	What number multiplied by 5 gives you 30?
+%(Hint44-4)%	Please enter '6' in the highlighted field.
+%(R4C4-TRAVERSAL)%	1
+%(Fac44-ErrOrder)%	1|30|2|%(Fac24)%|%(Fac33)%|%(Fac34)%|%(Fac43)%
+%(Fac53)%	
+%(Hint53-1)%	
+%(Hint53-2)%	
+%(Hint53-3)%	
+%(Hint53-4)%	
+%(R5C3-TRAVERSAL)%	0
+%(Fac53-ErrOrder)%	
+%(Fac54)%	
+%(Hint54-1)%	
+%(Hint54-2)%	
+%(Hint54-3)%	
+%(Hint54-4)%	
+%(R5C4-TRAVERSAL)%	0
+%(Fac54-ErrOrder)%	
+%(CF1)%	1
+%(HintCF1-1)%	Look at all of your factor pairs. What factors do the two numbers, 20 and 30 have in common?
+%(HintCF1-2)%	What is the smallest common factor?
+%(HintCF1-3)%	List the common factors in order from smallest to largest.
+%(HintCF1-4)%	Please enter '1' in the highlighted field.
+%(CF1-TRAVERSAL)%	1
+%(CF1-ErrOrder)%	2|5|10
+%(CF2)%	2
+%(HintCF2-1)%	Look at all of your factor pairs. What other factors do the two numbers, 20 and 30 have in common?
+%(HintCF2-2)%	What is the second largest common factor?
+%(HintCF2-3)%	List the common factors in order from smallest to largest.
+%(HintCF2-4)%	Please enter '2' in the highlighted field.
+%(CF2-TRAVERSAL)%	1
+%(CF2-ErrOrder)%	1|5|10
+%(CF3)%	5
+%(HintCF3-1)%	Look at all of your factor pairs. What other factors do the two numbers, 20 and 30 have in common?
+%(HintCF3-2)%	What is the third largest common factor?
+%(HintCF3-3)%	List the common factors in order from smallest to largest.
+%(HintCF3-4)%	Please enter '5' in the highlighted field.
+%(CF3-TRAVERSAL)%	1
+%(CF3-ErrOrder)%	1|2|10
+%(CF4)%	10
+%(HintCF4-1)%	Look at all of your factor pairs. What other factors do the two numbers, 20 and 30 have in common?
+%(HintCF4-2)%	What is the fourth largest common factor?
+%(HintCF4-3)%	List the common factors in order from smallest to largest.
+%(HintCF4-4)%	Please enter '10' in the highlighted field.
+%(CF4-TRAVERSAL)%	1
+%(CF4-ErrOrder)%	1|2|5
+%(A)%	10
+%(HintA-1)%	Look at the common factors you have found. Now what is the greatest common factor of 20 and 30?
+%(HintA-2)%	What is the greatest common factor? 1? 2? 5?
+%(HintA-3)%	Enter '10' in the highlighted field.
+%(CF-ErrNotCommon)%	[^(1|2|5|10)]
+%(GCF-Err)%	1|2|5
+%(254303365388049584)%	
+%(-5977137150935564445)%	Please enter '1' in the highlighted field.
+%(-7537965487687806191)%	Please enter '1' in the highlighted field.
+%(-1958610125961082412)%	What number multiplied by 1 gives you 30?
+%(4258066570658946414)%	Please enter '5' in the highlighted field.
+%(-4868200884791373883)%	
+%(-3307382548147132355)%	
+%(3135564320319522621)%	
+%(-4868201884795373888)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(3349241659411110558)%	Look at all of your factor pairs. What other factors do the two numbers, 20 and 30 have in common?
+%(-1321319791251777704)%	Use your previous entry to figure out what this factor will be.
+%(-1321321791279777786)%	What number multiplied by 5 gives you 30?
+%(-8673086570870268165)%	What is the fourth largest common factor?
+%(3349244659511110895)%	Please enter '2' in the highlighted field.
+%(9128231315816371920)%	Enter '10' in the highlighted field.
+%(-5977140151031564692)%	
+%(-7537964487679806098)%	
+%(-4630892098344058834)%	Since the 30 is even, what is a possible factor?
+%(-5091951687139455837)%	Use your previous entry to figure out what this factor will be.
+%(-4630894098436059092)%	Please enter '2' in the highlighted field.
+%(7376638312065734454)%	Please enter '2' in the highlighted field.
+%(3358107287083252305)%	
+%(-7108511028899129805)%	List the common factors in order from smallest to largest.
+%(3349242659419110637)%	What is the second largest common factor?
+%(-7537962487683806208)%	Enter a factor of 30. Start with the smallest one.
+%(-4868202884787373789)%	
+%(-1958609125973082375)%	
+%(5804110087503602308)%	
+%(7287509800339955155)%	Yes, this is a common factor but is it the greatest common factor?
+%(254301365392049566)%	
+%(-8857199270322685297)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(7376637312057734457)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5091949687143455931)%	
+%(-9095745892578352942)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(-9095743892566352860)%	
+%(3448326454585640764)%	Seems like you are done!
+%(-1958611125969082425)%	Use your previous entry to figure out what this factor will be.
+%(4258064570566946156)%	Since 30 ends in 0, what is a possible factor?
+%(-7537963487675806109)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(254304365392049589)%	
+%(6847577044345073627)%	Yes this is a factor but it is out of order. Start with the smallest factors first and work your way up in ascending order. Try asking for a hint.
+%(-7108510028895129802)%	What is the smallest common factor?
+%(3358104286987252058)%	Use your previous entry to figure out what this factor will be.
+%(-3307387548175132476)%	
+%(-5977142151043564774)%	Enter a factor of 20. Start with the smallest one.
+%(5804112087499602342)%	
+%(1812052770030595884)%	Use your previous entry to figure out what this factor will be.
+%(-8673085570866268162)%	List the common factors in order from smallest to largest.
+%(-5360709932947166162)%	Yes this is a factor but it is out of order. Try asking for a hint.
+%(-4630889098344058939)%	Is the 30 an even number?
+%(-3531133350527214469)%	What number multiplied by 3 gives you 30?
+%(-8857196270286685218)%	
+%(4258063570558946079)%	If a number ends in 5 or a 0, it is divisible by 5. Does 30 end in 5 or 0?
+%(-4630891098340058845)%	
+%(-654517545755785932)%	What is the third largest common factor?
+%(7790176844402957019)%	
+%(1812057770122596037)%	Please enter '10' in the highlighted field.
+%(3135558320283522551)%	
+%(5686583805161676592)%	This is not a common factor of 20 and 30.
+%(3135559320291522500)%	
+%(-8673080570898268319)%	Please enter '10' in the highlighted field.
+%(-4560983255492772878)%	Please provide your answer 'NoInput' in the highlighted element.
+%(-5694662720625941828)%	This is not a factor of 20. Please double-check your answer.
+%(-654518545759785935)%	List the common factors in order from smallest to largest.
+%(-9095740892566352933)%	Please enter '3' in the highlighted field.
+%(-654523545791786034)%	Please enter '5' in the highlighted field.
+%(4258065570650946321)%	
+%(-3531136350527214524)%	Please enter '10' in the highlighted field.
+%(-8857194270290685200)%	
+%(-5091950687147455936)%	What number multiplied by 4 gives you 20?
+%(1812050770018595802)%	
+%(-3602696677446545224)%	Click on "Found all factors for both numbers." when you think you've entered all the factor pairs for 20 and 30.
+%(3349243659503110800)%	List the common factors in order from smallest to largest.
+%(1032905288316606034)%	Please enter '1' in the highlighted field.
+%(-3307385548179132442)%	
+%(4465810717431090344)%	Please enter '20' in the highlighted field.
+%(7376636312069734420)%	Since 20 is an even number, what is the next smallest factor after 1?
+%(254298365356049487)%	
+%(1812051770022595807)%	What number multiplied by 2 gives you 20?
+%(9128230315812371925)%	What is the greatest common factor? 1? 2? %(CF3)%?
+%(-1321322791287777783)%	Please enter '6' in the highlighted field.
+%(7790175844398956998)%	
+%(-1958608125965082378)%	Please enter '30' in the highlighted field.
+%(7790177844426957080)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(-5091956687247456166)%	Please enter '5' in the highlighted field.
+%(-9095742892578352951)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(-3531134350531214490)%	
+%(3135557320279522546)%	
+%(7790174844390957001)%	Please enter '4' in the highlighted field.
+%(-7108509028887129851)%	Look at all of your factor pairs. What factors do the two numbers, 20 and 30 have in common?
+%(9128233315812371918)%	Look at the common factors you have found. Now what is the greatest common factor of 20 and 30?
+%(-4868207884895374118)%	
+%(5804113087503602363)%	
+%(7376635312061734407)%	Is 20 an even number?
+%(3358109287095252387)%	Please enter '15' in the highlighted field.
+%(-4142943113116299797)%	Are you sure any more unique factors exist?
+%(-8857193270286685195)%	
+%(5804115087531602429)%	
+%(-5977139150947564527)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(3358106286999252140)%	What number multiplied by 2 gives you 30?
+%(4465805717335090087)%	
+%(4465804717331090082)%	What number multiplied by 1 gives you 20?
+%(-7108504028859129732)%	Please enter '1' in the highlighted field.
+%(-654520545755785953)%	Look at all of your factor pairs. What other factors do the two numbers, 20 and 30 have in common?
+%(-8068215192076385916)%	Yes, this is a common factor but please enter them in order, starting with the smallest factor.
+%(-3307384548175132421)%	
+%(-1331720242453165934)%	Please enter 'q' in the highlighted field.
+%(-8673083570902268304)%	Look at all of your factor pairs. What other factors do the two numbers, 20 and 30 have in common?
+%(4506789830436007175)%	Please enter 'f' in the highlighted field.
+%(-1321320791275777765)%	
+%(8359511761771144003)%	This is not a factor of 30. Please double-check your answer.
+%(4465807717331090009)%	Use your previous entry to figure out what this factor will be.
+%(-3531131350499214403)%	Use your previous entry to figure out what this factor will be.
+Problem Name	GCF-25_75
+%(startStateNodeName)%	
+%(Var1)%	25
+%(Var2)%	75
+%(Var1-Factors)%	R[1-2]C[1-2]
+%(Var2-Factors)%	R[1-3]C[3-4]
+%(RangeLeft)%	R[3-5]C[1-2]
+%(RangeRight)%	R[4-5]C[3-4]
+%(Var1-NotFactorError)%	[^(1|25|5|5)]
+%(Var2-NotFactorError)%	[^(1|75|3|25|5|15)]
+%(Fac11)%	1
+%(Hint11-1)%	Enter a factor of 25. Start with the smallest one.
+%(Hint11-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint11-3)%	
+%(Hint11-4)%	Please enter '1' in the highlighted field.
+%(Fac11-ErrOrder)%	25|5|5
+%(Fac12)%	25
+%(Hint12-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint12-2)%	What number multiplied by 1 gives you 25?
+%(Hint12-3)%	
+%(Hint12-4)%	Please enter '25' in the highlighted field.
+%(Fac12-ErrOrder)%	1|5|5
+%(Fac21)%	5
+%(Hint21-1)%	If a number ends in 5, it is divisible by 5. Does 25 end in 5?
+%(Hint21-2)%	Since 25 ends in 5, what is a possible factor?
+%(Hint21-3)%	
+%(Hint21-4)%	Please enter '5' in the highlighted field.
+%(R2C1-TRAVERSAL)%	1
+%(Fac21-ErrOrder)%	1|25|5
+%(Fac22)%	5
+%(Hint22-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint22-2)%	What number multiplied by 5 gives you 25?
+%(Hint22-3)%	
+%(Hint22-4)%	Please enter '5' in the highlighted field.
+%(R2C2-TRAVERSAL)%	1
+%(Fac22-ErrOrder)%	1|25|5
+%(Fac31)%	 
+%(Hint31-1)%	
+%(Hint31-2)%	
+%(Hint31-3)%	
+%(Hint31-4)%	
+%(R3C1-TRAVERSAL)%	0
+%(Fac31-ErrOrder)%	
+%(Fac32)%	 
+%(Hint32-1)%	
+%(Hint32-2)%	
+%(Hint32-3)%	
+%(Hint32-4)%	
+%(R3C2-TRAVERSAL)%	0
+%(Fac32-ErrOrder)%	
+%(Fac41)%	 
+%(Hint41-1)%	
+%(Hint41-2)%	
+%(Hint41-3)%	
+%(Hint41-4)%	
+%(R4C1-TRAVERSAL)%	0
+%(Fac41-ErrOrder)%	
+%(Fac42)%	 
+%(Hint42-1)%	
+%(Hint42-2)%	
+%(Hint42-3)%	
+%(Hint42-4)%	
+%(R4C2-TRAVERSAL)%	0
+%(Fac42-ErrOrder)%	
+%(Fac51)%	
+%(Hint51-1)%	
+%(Hint51-2)%	
+%(Hint51-3)%	
+%(Hint51-4)%	
+%(R5C1-TRAVERSAL)%	0
+%(Fac51-ErrOrder)%	
+%(Fac52)%	
+%(Hint52-1)%	
+%(Hint52-2)%	
+%(Hint52-3)%	
+%(Hint52-4)%	
+%(R5C2-TRAVERSAL)%	0
+%(Fac52-ErrOrder)%	
+	
+%(Fac13)%	1
+%(Hint13-1)%	Enter a factor of 75. Start with the smallest one.
+%(Hint13-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint13-3)%	
+%(Hint13-4)%	Please enter '1' in the highlighted field.
+%(Fac13-ErrOrder)%	75|3|25|%(Fac33)%|%(Fac34)%
+%(Fac14)%	75
+%(Hint14-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint14-2)%	What number multiplied by 1 gives you 75?
+%(Hint14-3)%	
+%(Hint14-4)%	Please enter '75' in the highlighted field.
+%(Fac14-ErrOrder)%	1|3|25|%(Fac33)%|%(Fac34)%
+%(Fac23)%	3
+%(Hint23-1)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(Hint23-2)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(Hint23-3)%	
+%(Hint23-4)%	Please enter '3' in the highlighted field.
+%(R2C3-TRAVERSAL)%	1
+%(Fac23-ErrOrder)%	1|75|25|%(Fac33)%|%(Fac34)%
+%(Fac24)%	25
+%(Hint24-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint24-2)%	
+%(Hint24-3)%	What number multiplied by 3 gives you 75?
+%(Hint24-4)%	Please enter '25' in the highlighted field.
+%(R2C4-TRAVERSAL)%	1
+%(Fac24-ErrOrder)%	1|75|3|%(Fac33)%|%(Fac34)%
+%(Fac33)%	5
+%(Hint33-1)%	If a number ends in 5, it is divisible by 5. Does 75 end in 5?
+%(Hint33-2)%	Since 75 ends in 5, what is a possible factor?
+%(Hint33-3)%	
+%(Hint33-4)%	Please enter '5' in the highlighted field.
+%(R3C3-TRAVERSAL)%	1
+%(Fac33-ErrOrder)%	1|75|3|%(Fac24)%|%(Fac34)%
+%(Fac34)%	15
+%(Hint34-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint34-2)%	
+%(Hint34-3)%	What number multiplied by 5 gives you 75?
+%(Hint34-4)%	Please enter '15' in the highlighted field.
+%(R3C4-TRAVERSAL)%	1
+%(Fac34-ErrOrder)%	1|75|3|%(Fac24)%|%(Fac33)%
+%(Fac43)%	
+%(Hint43-1)%	
+%(Hint43-2)%	
+%(Hint43-3)%	
+%(Hint43-4)%	
+%(R4C3-TRAVERSAL)%	0
+%(Fac43-ErrOrder)%	
+%(Fac44)%	
+%(Hint44-1)%	
+%(Hint44-2)%	
+%(Hint44-3)%	
+%(Hint44-4)%	
+%(R4C4-TRAVERSAL)%	0
+%(Fac44-ErrOrder)%	
+%(Fac53)%	
+%(Hint53-1)%	
+%(Hint53-2)%	
+%(Hint53-3)%	
+%(Hint53-4)%	
+%(R5C3-TRAVERSAL)%	0
+%(Fac53-ErrOrder)%	
+%(Fac54)%	
+%(Hint54-1)%	
+%(Hint54-2)%	
+%(Hint54-3)%	
+%(Hint54-4)%	
+%(R5C4-TRAVERSAL)%	0
+%(Fac54-ErrOrder)%	
+%(CF1)%	1
+%(HintCF1-1)%	Look at all of your factor pairs. What factors do the two numbers, 25 and 75 have in common?
+%(HintCF1-2)%	What is the smallest common factor?
+%(HintCF1-3)%	List the common factors in order from smallest to largest.
+%(HintCF1-4)%	Please enter '1' in the highlighted field.
+%(CF1-TRAVERSAL)%	1
+%(CF1-ErrOrder)%	5|25
+%(CF2)%	5
+%(HintCF2-1)%	Look at all of your factor pairs. What other factors do the two numbers, 25 and 75 have in common?
+%(HintCF2-2)%	What is the second largest common factor?
+%(HintCF2-3)%	List the common factors in order from smallest to largest.
+%(HintCF2-4)%	Please enter '5' in the highlighted field.
+%(CF2-TRAVERSAL)%	1
+%(CF2-ErrOrder)%	1|25
+%(CF3)%	25
+%(HintCF3-1)%	Look at all of your factor pairs. What other factors do the two numbers, 25 and 75 have in common?
+%(HintCF3-2)%	What is the third largest common factor?
+%(HintCF3-3)%	List the common factors in order from smallest to largest.
+%(HintCF3-4)%	Please enter '25' in the highlighted field.
+%(CF3-TRAVERSAL)%	1
+%(CF3-ErrOrder)%	1|5
+%(CF4)%	
+%(HintCF4-1)%	
+%(HintCF4-2)%	
+%(HintCF4-3)%	
+%(HintCF4-4)%	
+%(CF4-TRAVERSAL)%	0
+%(CF4-ErrOrder)%	
+%(A)%	25
+%(HintA-1)%	Look at the common factors you have found. Now what is the greatest common factor of 25 and 75?
+%(HintA-2)%	What is the greatest common factor? 1? 5? 25?
+%(HintA-3)%	Enter '25' in the highlighted field.
+%(CF-ErrNotCommon)%	[^(1|5|25)]
+%(GCF-Err)%	1|5
+%(254303365388049584)%	
+%(-5977137150935564445)%	Please enter '1' in the highlighted field.
+%(-7537965487687806191)%	Please enter '1' in the highlighted field.
+%(-1958610125961082412)%	What number multiplied by 1 gives you 75?
+%(4258066570658946414)%	
+%(-4868200884791373883)%	
+%(-3307382548147132355)%	
+%(3135564320319522621)%	
+%(-4868201884795373888)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(3349241659411110558)%	Look at all of your factor pairs. What other factors do the two numbers, 25 and 75 have in common?
+%(-1321319791251777704)%	
+%(-1321321791279777786)%	
+%(-8673086570870268165)%	
+%(3349244659511110895)%	Please enter '5' in the highlighted field.
+%(9128231315816371920)%	Enter '25' in the highlighted field.
+%(-5977140151031564692)%	
+%(-7537964487679806098)%	
+%(-4630892098344058834)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(-5091951687139455837)%	
+%(-4630894098436059092)%	Please enter '3' in the highlighted field.
+%(7376638312065734454)%	Please enter '5' in the highlighted field.
+%(3358107287083252305)%	
+%(-7108511028899129805)%	List the common factors in order from smallest to largest.
+%(3349242659419110637)%	What is the second largest common factor?
+%(-7537962487683806208)%	Enter a factor of 75. Start with the smallest one.
+%(-4868202884787373789)%	
+%(-1958609125973082375)%	
+%(5804110087503602308)%	
+%(7287509800339955155)%	Yes, this is a common factor but is it the greatest common factor?
+%(254301365392049566)%	
+%(-8857199270322685297)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(7376637312057734457)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5091949687143455931)%	
+%(-9095745892578352942)%	If a number ends in 5, it is divisible by 5. Does 75 end in 5?
+%(-9095743892566352860)%	
+%(3448326454585640764)%	Seems like you are done!
+%(-1958611125969082425)%	Use your previous entry to figure out what this factor will be.
+%(4258064570566946156)%	
+%(-7537963487675806109)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(254304365392049589)%	
+%(6847577044345073627)%	Yes this is a factor but it is out of order. Start with the smallest factors first and work your way up in ascending order. Try asking for a hint.
+%(-7108510028895129802)%	What is the smallest common factor?
+%(3358104286987252058)%	Use your previous entry to figure out what this factor will be.
+%(-3307387548175132476)%	
+%(-5977142151043564774)%	Enter a factor of 25. Start with the smallest one.
+%(5804112087499602342)%	
+%(1812052770030595884)%	Use your previous entry to figure out what this factor will be.
+%(-8673085570866268162)%	
+%(-5360709932947166162)%	Yes this is a factor but it is out of order. Try asking for a hint.
+%(-4630889098344058939)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(-3531133350527214469)%	What number multiplied by 5 gives you 75?
+%(-8857196270286685218)%	
+%(4258063570558946079)%	
+%(-4630891098340058845)%	
+%(-654517545755785932)%	What is the third largest common factor?
+%(7790176844402957019)%	
+%(1812057770122596037)%	Please enter '5' in the highlighted field.
+%(3135558320283522551)%	
+%(5686583805161676592)%	This is not a common factor of 25 and 75.
+%(3135559320291522500)%	
+%(-8673080570898268319)%	
+%(-4560983255492772878)%	Please provide your answer 'NoInput' in the highlighted element.
+%(-5694662720625941828)%	This is not a factor of 25. Please double-check your answer.
+%(-654518545759785935)%	List the common factors in order from smallest to largest.
+%(-9095740892566352933)%	Please enter '5' in the highlighted field.
+%(-654523545791786034)%	Please enter '25' in the highlighted field.
+%(4258065570650946321)%	
+%(-3531136350527214524)%	Please enter '15' in the highlighted field.
+%(-8857194270290685200)%	
+%(-5091950687147455936)%	
+%(1812050770018595802)%	
+%(-3602696677446545224)%	Click on "Found all factors for both numbers." when you think you've entered all the factor pairs for 25 and 75.
+%(3349243659503110800)%	List the common factors in order from smallest to largest.
+%(1032905288316606034)%	Please enter '1' in the highlighted field.
+%(-3307385548179132442)%	
+%(4465810717431090344)%	Please enter '25' in the highlighted field.
+%(7376636312069734420)%	Since 25 ends in 5, what is a possible factor?
+%(254298365356049487)%	
+%(1812051770022595807)%	What number multiplied by 5 gives you 25?
+%(9128230315812371925)%	What is the greatest common factor? 1? 5? %(CF3)%?
+%(-1321322791287777783)%	
+%(7790175844398956998)%	
+%(-1958608125965082378)%	Please enter '75' in the highlighted field.
+%(7790177844426957080)%	
+%(-5091956687247456166)%	
+%(-9095742892578352951)%	Since 75 ends in 5, what is a possible factor?
+%(-3531134350531214490)%	
+%(3135557320279522546)%	
+%(7790174844390957001)%	
+%(-7108509028887129851)%	Look at all of your factor pairs. What factors do the two numbers, 25 and 75 have in common?
+%(9128233315812371918)%	Look at the common factors you have found. Now what is the greatest common factor of 25 and 75?
+%(-4868207884895374118)%	
+%(5804113087503602363)%	
+%(7376635312061734407)%	If a number ends in 5, it is divisible by 5. Does 25 end in 5?
+%(3358109287095252387)%	Please enter '25' in the highlighted field.
+%(-4142943113116299797)%	Are you sure any more unique factors exist?
+%(-8857193270286685195)%	
+%(5804115087531602429)%	
+%(-5977139150947564527)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(3358106286999252140)%	What number multiplied by 3 gives you 75?
+%(4465805717335090087)%	
+%(4465804717331090082)%	What number multiplied by 1 gives you 25?
+%(-7108504028859129732)%	Please enter '1' in the highlighted field.
+%(-654520545755785953)%	Look at all of your factor pairs. What other factors do the two numbers, 25 and 75 have in common?
+%(-8068215192076385916)%	Yes, this is a common factor but please enter them in order, starting with the smallest factor.
+%(-3307384548175132421)%	
+%(-1331720242453165934)%	Please enter 'q' in the highlighted field.
+%(-8673083570902268304)%	
+%(4506789830436007175)%	Please enter 'f' in the highlighted field.
+%(-1321320791275777765)%	
+%(8359511761771144003)%	This is not a factor of 75. Please double-check your answer.
+%(4465807717331090009)%	Use your previous entry to figure out what this factor will be.
+%(-3531131350499214403)%	Use your previous entry to figure out what this factor will be.
+Problem Name	GCF-27_45
+%(startStateNodeName)%	
+%(Var1)%	27
+%(Var2)%	45
+%(Var1-Factors)%	R[1-2]C[1-2]
+%(Var2-Factors)%	R[1-3]C[3-4]
+%(RangeLeft)%	R[3-5]C[1-2]
+%(RangeRight)%	R[4-5]C[3-4]
+%(Var1-NotFactorError)%	[^(1|27|3|9)]
+%(Var2-NotFactorError)%	[^(1|45|3|15|5|9)]
+%(Fac11)%	1
+%(Hint11-1)%	Enter a factor of 27. Start with the smallest one.
+%(Hint11-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint11-3)%	
+%(Hint11-4)%	Please enter '1' in the highlighted field.
+%(Fac11-ErrOrder)%	27|3|9
+%(Fac12)%	27
+%(Hint12-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint12-2)%	What number multiplied by 1 gives you 27?
+%(Hint12-3)%	
+%(Hint12-4)%	Please enter '27' in the highlighted field.
+%(Fac12-ErrOrder)%	1|3|9
+%(Fac21)%	3
+%(Hint21-1)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(Hint21-2)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(Hint21-3)%	
+%(Hint21-4)%	Please enter '3' in the highlighted field.
+%(R2C1-TRAVERSAL)%	1
+%(Fac21-ErrOrder)%	1|27|9
+%(Fac22)%	9
+%(Hint22-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint22-2)%	What number multiplied by 3 gives you 27?
+%(Hint22-3)%	
+%(Hint22-4)%	Please enter '9' in the highlighted field.
+%(R2C2-TRAVERSAL)%	1
+%(Fac22-ErrOrder)%	1|27|3
+%(Fac31)%	 
+%(Hint31-1)%	
+%(Hint31-2)%	
+%(Hint31-3)%	
+%(Hint31-4)%	
+%(R3C1-TRAVERSAL)%	0
+%(Fac31-ErrOrder)%	
+%(Fac32)%	 
+%(Hint32-1)%	
+%(Hint32-2)%	
+%(Hint32-3)%	
+%(Hint32-4)%	
+%(R3C2-TRAVERSAL)%	0
+%(Fac32-ErrOrder)%	
+%(Fac41)%	 
+%(Hint41-1)%	
+%(Hint41-2)%	
+%(Hint41-3)%	
+%(Hint41-4)%	
+%(R4C1-TRAVERSAL)%	0
+%(Fac41-ErrOrder)%	
+%(Fac42)%	 
+%(Hint42-1)%	
+%(Hint42-2)%	
+%(Hint42-3)%	
+%(Hint42-4)%	
+%(R4C2-TRAVERSAL)%	0
+%(Fac42-ErrOrder)%	
+%(Fac51)%	
+%(Hint51-1)%	
+%(Hint51-2)%	
+%(Hint51-3)%	
+%(Hint51-4)%	
+%(R5C1-TRAVERSAL)%	0
+%(Fac51-ErrOrder)%	
+%(Fac52)%	
+%(Hint52-1)%	
+%(Hint52-2)%	
+%(Hint52-3)%	
+%(Hint52-4)%	
+%(R5C2-TRAVERSAL)%	0
+%(Fac52-ErrOrder)%	
+	
+%(Fac13)%	1
+%(Hint13-1)%	Enter a factor of 45. Start with the smallest one.
+%(Hint13-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint13-3)%	
+%(Hint13-4)%	Please enter '1' in the highlighted field.
+%(Fac13-ErrOrder)%	45|3|15|%(Fac33)%|%(Fac34)%
+%(Fac14)%	45
+%(Hint14-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint14-2)%	What number multiplied by 1 gives you 45?
+%(Hint14-3)%	
+%(Hint14-4)%	Please enter '45' in the highlighted field.
+%(Fac14-ErrOrder)%	1|3|15|%(Fac33)%|%(Fac34)%
+%(Fac23)%	3
+%(Hint23-1)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(Hint23-2)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(Hint23-3)%	
+%(Hint23-4)%	Please enter '3' in the highlighted field.
+%(R2C3-TRAVERSAL)%	1
+%(Fac23-ErrOrder)%	1|45|15|%(Fac33)%|%(Fac34)%
+%(Fac24)%	15
+%(Hint24-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint24-2)%	
+%(Hint24-3)%	What number multiplied by 3 gives you 45?
+%(Hint24-4)%	Please enter '15' in the highlighted field.
+%(R2C4-TRAVERSAL)%	1
+%(Fac24-ErrOrder)%	1|45|3|%(Fac33)%|%(Fac34)%
+%(Fac33)%	5
+%(Hint33-1)%	If a number ends in 5, it is divisible by 5. Does 45 end in 5?
+%(Hint33-2)%	Since 45 ends in 5, what is a possible factor?
+%(Hint33-3)%	
+%(Hint33-4)%	Please enter '5' in the highlighted field.
+%(R3C3-TRAVERSAL)%	1
+%(Fac33-ErrOrder)%	1|45|3|%(Fac24)%|%(Fac34)%
+%(Fac34)%	9
+%(Hint34-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint34-2)%	
+%(Hint34-3)%	What number multiplied by 5 gives you 45?
+%(Hint34-4)%	Please enter '9' in the highlighted field.
+%(R3C4-TRAVERSAL)%	1
+%(Fac34-ErrOrder)%	1|45|3|%(Fac24)%|%(Fac33)%
+%(Fac43)%	
+%(Hint43-1)%	
+%(Hint43-2)%	
+%(Hint43-3)%	
+%(Hint43-4)%	
+%(R4C3-TRAVERSAL)%	0
+%(Fac43-ErrOrder)%	
+%(Fac44)%	
+%(Hint44-1)%	
+%(Hint44-2)%	
+%(Hint44-3)%	
+%(Hint44-4)%	
+%(R4C4-TRAVERSAL)%	0
+%(Fac44-ErrOrder)%	
+%(Fac53)%	
+%(Hint53-1)%	
+%(Hint53-2)%	
+%(Hint53-3)%	
+%(Hint53-4)%	
+%(R5C3-TRAVERSAL)%	0
+%(Fac53-ErrOrder)%	
+%(Fac54)%	
+%(Hint54-1)%	
+%(Hint54-2)%	
+%(Hint54-3)%	
+%(Hint54-4)%	
+%(R5C4-TRAVERSAL)%	0
+%(Fac54-ErrOrder)%	
+%(CF1)%	1
+%(HintCF1-1)%	Look at all of your factor pairs. What factors do the two numbers, 27 and 45 have in common?
+%(HintCF1-2)%	What is the smallest common factor?
+%(HintCF1-3)%	List the common factors in order from smallest to largest.
+%(HintCF1-4)%	Please enter '1' in the highlighted field.
+%(CF1-TRAVERSAL)%	1
+%(CF1-ErrOrder)%	3|9
+%(CF2)%	3
+%(HintCF2-1)%	Look at all of your factor pairs. What other factors do the two numbers, 27 and 45 have in common?
+%(HintCF2-2)%	What is the second largest common factor?
+%(HintCF2-3)%	List the common factors in order from smallest to largest.
+%(HintCF2-4)%	Please enter '3' in the highlighted field.
+%(CF2-TRAVERSAL)%	1
+%(CF2-ErrOrder)%	1|9
+%(CF3)%	9
+%(HintCF3-1)%	Look at all of your factor pairs. What other factors do the two numbers, 27 and 45 have in common?
+%(HintCF3-2)%	What is the third largest common factor?
+%(HintCF3-3)%	List the common factors in order from smallest to largest.
+%(HintCF3-4)%	Please enter '9' in the highlighted field.
+%(CF3-TRAVERSAL)%	1
+%(CF3-ErrOrder)%	1|3
+%(CF4)%	
+%(HintCF4-1)%	
+%(HintCF4-2)%	
+%(HintCF4-3)%	
+%(HintCF4-4)%	
+%(CF4-TRAVERSAL)%	0
+%(CF4-ErrOrder)%	
+%(A)%	9
+%(HintA-1)%	Look at the common factors you have found. Now what is the greatest common factor of 27 and 45?
+%(HintA-2)%	What is the greatest common factor? 1? 3? 9?
+%(HintA-3)%	Enter '9' in the highlighted field.
+%(CF-ErrNotCommon)%	[^(1|3|9)]
+%(GCF-Err)%	1|3
+%(254303365388049584)%	
+%(-5977137150935564445)%	Please enter '1' in the highlighted field.
+%(-7537965487687806191)%	Please enter '1' in the highlighted field.
+%(-1958610125961082412)%	What number multiplied by 1 gives you 45?
+%(4258066570658946414)%	
+%(-4868200884791373883)%	
+%(-3307382548147132355)%	
+%(3135564320319522621)%	
+%(-4868201884795373888)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(3349241659411110558)%	Look at all of your factor pairs. What other factors do the two numbers, 27 and 45 have in common?
+%(-1321319791251777704)%	
+%(-1321321791279777786)%	
+%(-8673086570870268165)%	
+%(3349244659511110895)%	Please enter '3' in the highlighted field.
+%(9128231315816371920)%	Enter '9' in the highlighted field.
+%(-5977140151031564692)%	
+%(-7537964487679806098)%	
+%(-4630892098344058834)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(-5091951687139455837)%	
+%(-4630894098436059092)%	Please enter '3' in the highlighted field.
+%(7376638312065734454)%	Please enter '3' in the highlighted field.
+%(3358107287083252305)%	
+%(-7108511028899129805)%	List the common factors in order from smallest to largest.
+%(3349242659419110637)%	What is the second largest common factor?
+%(-7537962487683806208)%	Enter a factor of 45. Start with the smallest one.
+%(-4868202884787373789)%	
+%(-1958609125973082375)%	
+%(5804110087503602308)%	
+%(7287509800339955155)%	Yes, this is a common factor but is it the greatest common factor?
+%(254301365392049566)%	
+%(-8857199270322685297)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(7376637312057734457)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5091949687143455931)%	
+%(-9095745892578352942)%	If a number ends in 5, it is divisible by 5. Does 45 end in 5?
+%(-9095743892566352860)%	
+%(3448326454585640764)%	Seems like you are done!
+%(-1958611125969082425)%	Use your previous entry to figure out what this factor will be.
+%(4258064570566946156)%	
+%(-7537963487675806109)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(254304365392049589)%	
+%(6847577044345073627)%	Yes this is a factor but it is out of order. Start with the smallest factors first and work your way up in ascending order. Try asking for a hint.
+%(-7108510028895129802)%	What is the smallest common factor?
+%(3358104286987252058)%	Use your previous entry to figure out what this factor will be.
+%(-3307387548175132476)%	
+%(-5977142151043564774)%	Enter a factor of 27. Start with the smallest one.
+%(5804112087499602342)%	
+%(1812052770030595884)%	Use your previous entry to figure out what this factor will be.
+%(-8673085570866268162)%	
+%(-5360709932947166162)%	Yes this is a factor but it is out of order. Try asking for a hint.
+%(-4630889098344058939)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(-3531133350527214469)%	What number multiplied by 5 gives you 45?
+%(-8857196270286685218)%	
+%(4258063570558946079)%	
+%(-4630891098340058845)%	
+%(-654517545755785932)%	What is the third largest common factor?
+%(7790176844402957019)%	
+%(1812057770122596037)%	Please enter '9' in the highlighted field.
+%(3135558320283522551)%	
+%(5686583805161676592)%	This is not a common factor of 27 and 45.
+%(3135559320291522500)%	
+%(-8673080570898268319)%	
+%(-4560983255492772878)%	Please provide your answer 'NoInput' in the highlighted element.
+%(-5694662720625941828)%	This is not a factor of 27. Please double-check your answer.
+%(-654518545759785935)%	List the common factors in order from smallest to largest.
+%(-9095740892566352933)%	Please enter '5' in the highlighted field.
+%(-654523545791786034)%	Please enter '9' in the highlighted field.
+%(4258065570650946321)%	
+%(-3531136350527214524)%	Please enter '9' in the highlighted field.
+%(-8857194270290685200)%	
+%(-5091950687147455936)%	
+%(1812050770018595802)%	
+%(-3602696677446545224)%	Click on "Found all factors for both numbers." when you think you've entered all the factor pairs for 27 and 45.
+%(3349243659503110800)%	List the common factors in order from smallest to largest.
+%(1032905288316606034)%	Please enter '1' in the highlighted field.
+%(-3307385548179132442)%	
+%(4465810717431090344)%	Please enter '27' in the highlighted field.
+%(7376636312069734420)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(254298365356049487)%	
+%(1812051770022595807)%	What number multiplied by 3 gives you 27?
+%(9128230315812371925)%	What is the greatest common factor? 1? 3? %(CF3)%?
+%(-1321322791287777783)%	
+%(7790175844398956998)%	
+%(-1958608125965082378)%	Please enter '45' in the highlighted field.
+%(7790177844426957080)%	
+%(-5091956687247456166)%	
+%(-9095742892578352951)%	Since 45 ends in 5, what is a possible factor?
+%(-3531134350531214490)%	
+%(3135557320279522546)%	
+%(7790174844390957001)%	
+%(-7108509028887129851)%	Look at all of your factor pairs. What factors do the two numbers, 27 and 45 have in common?
+%(9128233315812371918)%	Look at the common factors you have found. Now what is the greatest common factor of 27 and 45?
+%(-4868207884895374118)%	
+%(5804113087503602363)%	
+%(7376635312061734407)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(3358109287095252387)%	Please enter '15' in the highlighted field.
+%(-4142943113116299797)%	Are you sure any more unique factors exist?
+%(-8857193270286685195)%	
+%(5804115087531602429)%	
+%(-5977139150947564527)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(3358106286999252140)%	What number multiplied by 3 gives you 45?
+%(4465805717335090087)%	
+%(4465804717331090082)%	What number multiplied by 1 gives you 27?
+%(-7108504028859129732)%	Please enter '1' in the highlighted field.
+%(-654520545755785953)%	Look at all of your factor pairs. What other factors do the two numbers, 27 and 45 have in common?
+%(-8068215192076385916)%	Yes, this is a common factor but please enter them in order, starting with the smallest factor.
+%(-3307384548175132421)%	
+%(-1331720242453165934)%	Please enter 'q' in the highlighted field.
+%(-8673083570902268304)%	
+%(4506789830436007175)%	Please enter 'f' in the highlighted field.
+%(-1321320791275777765)%	
+%(8359511761771144003)%	This is not a factor of 45. Please double-check your answer.
+%(4465807717331090009)%	Use your previous entry to figure out what this factor will be.
+%(-3531131350499214403)%	Use your previous entry to figure out what this factor will be.
+Problem Name	GCF-30_56
+%(startStateNodeName)%	
+%(Var1)%	30
+%(Var2)%	56
+%(Var1-Factors)%	R[1-4]C[1-2]
+%(Var2-Factors)%	R[1-4]C[3-4]
+%(RangeLeft)%	R5C[1-2]
+%(RangeRight)%	R5C[3-4]
+%(Var1-NotFactorError)%	[^(1|30|2|15|3|10|5|6)]
+%(Var2-NotFactorError)%	[^(1|56|2|28|4|14|7|8)]
+%(Fac11)%	1
+%(Hint11-1)%	Enter a factor of 30. Start with the smallest one.
+%(Hint11-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint11-3)%	
+%(Hint11-4)%	Please enter '1' in the highlighted field.
+%(Fac11-ErrOrder)%	30|2|15|%(Fac31)%|%(Fac32)%|%(Fac41)%|%(Fac42)%
+%(Fac12)%	30
+%(Hint12-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint12-2)%	What number multiplied by 1 gives you 30?
+%(Hint12-3)%	
+%(Hint12-4)%	Please enter '30' in the highlighted field.
+%(Fac12-ErrOrder)%	1|2|15|%(Fac31)%|%(Fac32)%|%(Fac41)%|%(Fac42)%
+%(Fac21)%	2
+%(Hint21-1)%	Is 30 an even number?
+%(Hint21-2)%	Since 30 is an even number, what is the next smallest factor after 1?
+%(Hint21-3)%	
+%(Hint21-4)%	Please enter '2' in the highlighted field.
+%(R2C1-TRAVERSAL)%	1
+%(Fac21-ErrOrder)%	1|30|15|%(Fac31)%|%(Fac32)%|%(Fac41)%|%(Fac42)%
+%(Fac22)%	15
+%(Hint22-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint22-2)%	What number multiplied by 2 gives you 30?
+%(Hint22-3)%	
+%(Hint22-4)%	Please enter '15' in the highlighted field.
+%(R2C2-TRAVERSAL)%	1
+%(Fac22-ErrOrder)%	1|30|2|%(Fac31)%|%(Fac32)%|%(Fac41)%|%(Fac42)%
+%(Fac31)%	3
+%(Hint31-1)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(Hint31-2)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(Hint31-3)%	
+%(Hint31-4)%	Please enter '3' in the highlighted field.
+%(R3C1-TRAVERSAL)%	1
+%(Fac31-ErrOrder)%	1|30|2|%(Fac22)%|%(Fac32)%|%(Fac41)%|%(Fac42)%
+%(Fac32)%	10
+%(Hint32-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint32-2)%	What number multiplied by 3 gives you 30?
+%(Hint32-3)%	
+%(Hint32-4)%	Please enter '10' in the highlighted field.
+%(R3C2-TRAVERSAL)%	1
+%(Fac32-ErrOrder)%	1|30|2|%(Fac22)%|%(Fac31)%|%(Fac41)%|%(Fac42)%
+%(Fac41)%	5
+%(Hint41-1)%	If a number ends in 5, it is divisible by 5. Does 30 end in 5?
+%(Hint41-2)%	Since 30 ends in 5, what is a possible factor?
+%(Hint41-3)%	
+%(Hint41-4)%	Please enter '5' in the highlighted field.
+%(R4C1-TRAVERSAL)%	1
+%(Fac41-ErrOrder)%	1|30|2|%(Fac22)%|%(Fac31)%|%(Fac32)%|%(Fac42)%
+%(Fac42)%	6
+%(Hint42-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint42-2)%	What number multiplied by 5 gives you 30?
+%(Hint42-3)%	
+%(Hint42-4)%	Please enter '6' in the highlighted field.
+%(R4C2-TRAVERSAL)%	1
+%(Fac42-ErrOrder)%	1|30|2|%(Fac22)%|%(Fac31)%|%(Fac32)%|%(Fac41)%
+%(Fac51)%	
+%(Hint51-1)%	
+%(Hint51-2)%	
+%(Hint51-3)%	
+%(Hint51-4)%	
+%(R5C1-TRAVERSAL)%	0
+%(Fac51-ErrOrder)%	
+%(Fac52)%	
+%(Hint52-1)%	
+%(Hint52-2)%	
+%(Hint52-3)%	
+%(Hint52-4)%	
+%(R5C2-TRAVERSAL)%	0
+%(Fac52-ErrOrder)%	
+	
+%(Fac13)%	1
+%(Hint13-1)%	Enter a factor of 56. Start with the smallest one.
+%(Hint13-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint13-3)%	
+%(Hint13-4)%	Please enter '1' in the highlighted field.
+%(Fac13-ErrOrder)%	56|2|28|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac14)%	56
+%(Hint14-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint14-2)%	What number multiplied by 1 gives you 56?
+%(Hint14-3)%	
+%(Hint14-4)%	Please enter '56' in the highlighted field.
+%(Fac14-ErrOrder)%	1|2|28|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac23)%	2
+%(Hint23-1)%	Is the 56 an even number?
+%(Hint23-2)%	Since the 56 is even, what is a possible factor?
+%(Hint23-3)%	
+%(Hint23-4)%	Please enter '2' in the highlighted field.
+%(R2C3-TRAVERSAL)%	1
+%(Fac23-ErrOrder)%	1|56|28|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac24)%	28
+%(Hint24-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint24-2)%	
+%(Hint24-3)%	What number multiplied by 2 gives you 56?
+%(Hint24-4)%	Please enter '28' in the highlighted field.
+%(R2C4-TRAVERSAL)%	1
+%(Fac24-ErrOrder)%	1|56|2|%(Fac33)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac33)%	4
+%(Hint33-1)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(Hint33-2)%	
+%(Hint33-3)%	
+%(Hint33-4)%	Please enter '4' in the highlighted field.
+%(R3C3-TRAVERSAL)%	1
+%(Fac33-ErrOrder)%	1|56|2|%(Fac24)%|%(Fac34)%|%(Fac43)%|%(Fac44)%
+%(Fac34)%	14
+%(Hint34-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint34-2)%	
+%(Hint34-3)%	What number multiplied by 4 gives you 56?
+%(Hint34-4)%	Please enter '14' in the highlighted field.
+%(R3C4-TRAVERSAL)%	1
+%(Fac34-ErrOrder)%	1|56|2|%(Fac24)%|%(Fac33)%|%(Fac43)%|%(Fac44)%
+%(Fac43)%	7
+%(Hint43-1)%	Does 56 appear in the 5 times table? What about the 6 times table? 
+%(Hint43-2)%	Does 56 appear in the 7 times table?
+%(Hint43-3)%	
+%(Hint43-4)%	Please enter '7' in the highlighted field.
+%(R4C3-TRAVERSAL)%	1
+%(Fac43-ErrOrder)%	1|56|2|%(Fac24)%|%(Fac33)%|%(Fac34)%|%(Fac44)%
+%(Fac44)%	8
+%(Hint44-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint44-2)%	
+%(Hint44-3)%	What number multiplied by 7 gives you 56?
+%(Hint44-4)%	Please enter '8' in the highlighted field.
+%(R4C4-TRAVERSAL)%	1
+%(Fac44-ErrOrder)%	1|56|2|%(Fac24)%|%(Fac33)%|%(Fac34)%|%(Fac43)%
+%(Fac53)%	
+%(Hint53-1)%	
+%(Hint53-2)%	
+%(Hint53-3)%	
+%(Hint53-4)%	
+%(R5C3-TRAVERSAL)%	0
+%(Fac53-ErrOrder)%	
+%(Fac54)%	
+%(Hint54-1)%	
+%(Hint54-2)%	
+%(Hint54-3)%	
+%(Hint54-4)%	
+%(R5C4-TRAVERSAL)%	0
+%(Fac54-ErrOrder)%	
+%(CF1)%	1
+%(HintCF1-1)%	Look at all of your factor pairs. What factors do the two numbers, 30 and 56 have in common?
+%(HintCF1-2)%	What is the smallest common factor?
+%(HintCF1-3)%	List the common factors in order from smallest to largest.
+%(HintCF1-4)%	Please enter '1' in the highlighted field.
+%(CF1-TRAVERSAL)%	1
+%(CF1-ErrOrder)%	2
+%(CF2)%	2
+%(HintCF2-1)%	Look at all of your factor pairs. What other factors do the two numbers, 30 and 56 have in common?
+%(HintCF2-2)%	What is the second largest common factor?
+%(HintCF2-3)%	List the common factors in order from smallest to largest.
+%(HintCF2-4)%	Please enter '2' in the highlighted field.
+%(CF2-TRAVERSAL)%	1
+%(CF2-ErrOrder)%	1
+%(CF3)%	
+%(HintCF3-1)%	
+%(HintCF3-2)%	
+%(HintCF3-3)%	
+%(HintCF3-4)%	
+%(CF3-TRAVERSAL)%	0
+%(CF3-ErrOrder)%	
+%(CF4)%	
+%(HintCF4-1)%	
+%(HintCF4-2)%	
+%(HintCF4-3)%	
+%(HintCF4-4)%	
+%(CF4-TRAVERSAL)%	0
+%(CF4-ErrOrder)%	
+%(A)%	2
+%(HintA-1)%	Look at the common factors you have found. Now what is the greatest common factor of 30 and 56?
+%(HintA-2)%	What is the greatest common factor? 1? 2?
+%(HintA-3)%	Enter '2' in the highlighted field.
+%(CF-ErrNotCommon)%	[^(1|2)]
+%(GCF-Err)%	1
+%(254303365388049584)%	
+%(-5977137150935564445)%	Please enter '1' in the highlighted field.
+%(-7537965487687806191)%	Please enter '1' in the highlighted field.
+%(-1958610125961082412)%	What number multiplied by 1 gives you 56?
+%(4258066570658946414)%	Please enter '7' in the highlighted field.
+%(-4868200884791373883)%	
+%(-3307382548147132355)%	
+%(3135564320319522621)%	
+%(-4868201884795373888)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(3349241659411110558)%	Look at all of your factor pairs. What other factors do the two numbers, 30 and 56 have in common?
+%(-1321319791251777704)%	Use your previous entry to figure out what this factor will be.
+%(-1321321791279777786)%	What number multiplied by 7 gives you 56?
+%(-8673086570870268165)%	
+%(3349244659511110895)%	Please enter '2' in the highlighted field.
+%(9128231315816371920)%	Enter '2' in the highlighted field.
+%(-5977140151031564692)%	
+%(-7537964487679806098)%	
+%(-4630892098344058834)%	Since the 56 is even, what is a possible factor?
+%(-5091951687139455837)%	Use your previous entry to figure out what this factor will be.
+%(-4630894098436059092)%	Please enter '2' in the highlighted field.
+%(7376638312065734454)%	Please enter '2' in the highlighted field.
+%(3358107287083252305)%	
+%(-7108511028899129805)%	List the common factors in order from smallest to largest.
+%(3349242659419110637)%	What is the second largest common factor?
+%(-7537962487683806208)%	Enter a factor of 56. Start with the smallest one.
+%(-4868202884787373789)%	
+%(-1958609125973082375)%	
+%(5804110087503602308)%	Please enter '5' in the highlighted field.
+%(7287509800339955155)%	Yes, this is a common factor but is it the greatest common factor?
+%(254301365392049566)%	Use your previous entry to figure out what this factor will be.
+%(-8857199270322685297)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(7376637312057734457)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5091949687143455931)%	
+%(-9095745892578352942)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(-9095743892566352860)%	
+%(3448326454585640764)%	Seems like you are done!
+%(-1958611125969082425)%	Use your previous entry to figure out what this factor will be.
+%(4258064570566946156)%	Does 56 appear in the 7 times table?
+%(-7537963487675806109)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(254304365392049589)%	What number multiplied by 5 gives you 30?
+%(6847577044345073627)%	Yes this is a factor but it is out of order. Start with the smallest factors first and work your way up in ascending order. Try asking for a hint.
+%(-7108510028895129802)%	What is the smallest common factor?
+%(3358104286987252058)%	Use your previous entry to figure out what this factor will be.
+%(-3307387548175132476)%	
+%(-5977142151043564774)%	Enter a factor of 30. Start with the smallest one.
+%(5804112087499602342)%	Since 30 ends in 5, what is a possible factor?
+%(1812052770030595884)%	Use your previous entry to figure out what this factor will be.
+%(-8673085570866268162)%	
+%(-5360709932947166162)%	Yes this is a factor but it is out of order. Try asking for a hint.
+%(-4630889098344058939)%	Is the 56 an even number?
+%(-3531133350527214469)%	What number multiplied by 4 gives you 56?
+%(-8857196270286685218)%	
+%(4258063570558946079)%	Does 56 appear in the 5 times table? What about the 6 times table? 
+%(-4630891098340058845)%	
+%(-654517545755785932)%	
+%(7790176844402957019)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(1812057770122596037)%	Please enter '15' in the highlighted field.
+%(3135558320283522551)%	
+%(5686583805161676592)%	This is not a common factor of 30 and 56.
+%(3135559320291522500)%	
+%(-8673080570898268319)%	
+%(-4560983255492772878)%	Please provide your answer 'NoInput' in the highlighted element.
+%(-5694662720625941828)%	This is not a factor of 30. Please double-check your answer.
+%(-654518545759785935)%	
+%(-9095740892566352933)%	Please enter '4' in the highlighted field.
+%(-654523545791786034)%	
+%(4258065570650946321)%	
+%(-3531136350527214524)%	Please enter '14' in the highlighted field.
+%(-8857194270290685200)%	
+%(-5091950687147455936)%	What number multiplied by 3 gives you 30?
+%(1812050770018595802)%	
+%(-3602696677446545224)%	Click on "Found all factors for both numbers." when you think you've entered all the factor pairs for 30 and 56.
+%(3349243659503110800)%	List the common factors in order from smallest to largest.
+%(1032905288316606034)%	Please enter '1' in the highlighted field.
+%(-3307385548179132442)%	
+%(4465810717431090344)%	Please enter '30' in the highlighted field.
+%(7376636312069734420)%	Since 30 is an even number, what is the next smallest factor after 1?
+%(254298365356049487)%	Please enter '6' in the highlighted field.
+%(1812051770022595807)%	What number multiplied by 2 gives you 30?
+%(9128230315812371925)%	What is the greatest common factor? 1? 2?
+%(-1321322791287777783)%	Please enter '8' in the highlighted field.
+%(7790175844398956998)%	
+%(-1958608125965082378)%	Please enter '56' in the highlighted field.
+%(7790177844426957080)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(-5091956687247456166)%	Please enter '10' in the highlighted field.
+%(-9095742892578352951)%	
+%(-3531134350531214490)%	
+%(3135557320279522546)%	
+%(7790174844390957001)%	Please enter '3' in the highlighted field.
+%(-7108509028887129851)%	Look at all of your factor pairs. What factors do the two numbers, 30 and 56 have in common?
+%(9128233315812371918)%	Look at the common factors you have found. Now what is the greatest common factor of 30 and 56?
+%(-4868207884895374118)%	
+%(5804113087503602363)%	
+%(7376635312061734407)%	Is 30 an even number?
+%(3358109287095252387)%	Please enter '28' in the highlighted field.
+%(-4142943113116299797)%	Are you sure any more unique factors exist?
+%(-8857193270286685195)%	
+%(5804115087531602429)%	If a number ends in 5, it is divisible by 5. Does 30 end in 5?
+%(-5977139150947564527)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(3358106286999252140)%	What number multiplied by 2 gives you 56?
+%(4465805717335090087)%	
+%(4465804717331090082)%	What number multiplied by 1 gives you 30?
+%(-7108504028859129732)%	Please enter '1' in the highlighted field.
+%(-654520545755785953)%	
+%(-8068215192076385916)%	Yes, this is a common factor but please enter them in order, starting with the smallest factor.
+%(-3307384548175132421)%	
+%(-1331720242453165934)%	Please enter 'q' in the highlighted field.
+%(-8673083570902268304)%	
+%(4506789830436007175)%	Please enter 'f' in the highlighted field.
+%(-1321320791275777765)%	
+%(8359511761771144003)%	This is not a factor of 56. Please double-check your answer.
+%(4465807717331090009)%	Use your previous entry to figure out what this factor will be.
+%(-3531131350499214403)%	Use your previous entry to figure out what this factor will be.
+Problem Name	GCF-36_39
+%(startStateNodeName)%	
+%(Var1)%	36
+%(Var2)%	39
+%(Var1-Factors)%	R[1-5]C[1-2]
+%(Var2-Factors)%	R[1-2]C[3-4]
+%(RangeLeft)%	
+%(RangeRight)%	R[3-5]C[3-4]
+%(Var1-NotFactorError)%	[^(1|36|2|18|3|12|4|9|6)]
+%(Var2-NotFactorError)%	[^(1|39|3|13)]
+%(Fac11)%	1
+%(Hint11-1)%	Enter a factor of 36. Start with the smallest one.
+%(Hint11-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint11-3)%	
+%(Hint11-4)%	Please enter '1' in the highlighted field.
+%(Fac11-ErrOrder)%	36|2|18|%(Fac31)%|%(Fac32)%|%(Fac41)%|%(Fac42)%|%(Fac51)%|%(Fac52)%
+%(Fac12)%	36
+%(Hint12-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint12-2)%	What number multiplied by 1 gives you 36?
+%(Hint12-3)%	
+%(Hint12-4)%	Please enter '36' in the highlighted field.
+%(Fac12-ErrOrder)%	1|2|18|%(Fac31)%|%(Fac32)%|%(Fac41)%|%(Fac42)%|%(Fac51)%|%(Fac52)%
+%(Fac21)%	2
+%(Hint21-1)%	Is the 36 an even number?
+%(Hint21-2)%	Since 36 is an even number, what is the next smallest factor after 1?
+%(Hint21-3)%	
+%(Hint21-4)%	Please enter '2' in the highlighted field.
+%(R2C1-TRAVERSAL)%	1
+%(Fac21-ErrOrder)%	1|36|18|%(Fac31)%|%(Fac32)%|%(Fac41)%|%(Fac42)%|%(Fac51)%|%(Fac52)%
+%(Fac22)%	18
+%(Hint22-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint22-2)%	What number multiplied by 2 gives you 36?
+%(Hint22-3)%	
+%(Hint22-4)%	Please enter '18' in the highlighted field.
+%(R2C2-TRAVERSAL)%	1
+%(Fac22-ErrOrder)%	1|36|2|%(Fac31)%|%(Fac32)%|%(Fac41)%|%(Fac42)%|%(Fac51)%|%(Fac52)%
+%(Fac31)%	3
+%(Hint31-1)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(Hint31-2)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(Hint31-3)%	
+%(Hint31-4)%	Please enter '3' in the highlighted field.
+%(R3C1-TRAVERSAL)%	1
+%(Fac31-ErrOrder)%	1|36|2|%(Fac22)%|%(Fac32)%|%(Fac41)%|%(Fac42)%|%(Fac51)%|%(Fac52)%
+%(Fac32)%	12
+%(Hint32-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint32-2)%	What number multiplied by 3 gives you 36?
+%(Hint32-3)%	
+%(Hint32-4)%	Please enter '12' in the highlighted field.
+%(R3C2-TRAVERSAL)%	1
+%(Fac32-ErrOrder)%	1|36|2|%(Fac22)%|%(Fac31)%|%(Fac41)%|%(Fac42)%|%(Fac51)%|%(Fac52)%
+%(Fac41)%	4
+%(Hint41-1)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(Hint41-2)%	
+%(Hint41-3)%	
+%(Hint41-4)%	Please enter '4' in the highlighted field.
+%(R4C1-TRAVERSAL)%	1
+%(Fac41-ErrOrder)%	1|36|2|%(Fac22)%|%(Fac31)%|%(Fac32)%|%(Fac42)%|%(Fac51)%|%(Fac52)%
+%(Fac42)%	9
+%(Hint42-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint42-2)%	What number multiplied by 4 gives you 36?
+%(Hint42-3)%	
+%(Hint42-4)%	Please enter '9' in the highlighted field.
+%(R4C2-TRAVERSAL)%	1
+%(Fac42-ErrOrder)%	1|36|2|%(Fac22)%|%(Fac31)%|%(Fac32)%|%(Fac41)%|%(Fac51)%|%(Fac52)%
+%(Fac51)%	6
+%(Hint51-1)%	Since this number is divisible by 2 and 3, then what could be another possible factor?
+%(Hint51-2)%	Multiply 2 and 3 and check if that number is a possible factor of 36.
+%(Hint51-3)%	
+%(Hint51-4)%	Please enter '6' in the highlighted field.
+%(R5C1-TRAVERSAL)%	1
+%(Fac51-ErrOrder)%	1|36|2|%(Fac22)%|%(Fac31)%|%(Fac32)%|%(Fac41)%|%(Fac42)%|%(Fac52)%
+%(Fac52)%	6
+%(Hint52-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint52-2)%	What number multiplied by 6 gives you 36?
+%(Hint52-3)%	
+%(Hint52-4)%	Please enter '6' in the highlighted field.
+%(R5C2-TRAVERSAL)%	1
+%(Fac52-ErrOrder)%	1|36|2|%(Fac22)%|%(Fac31)%|%(Fac32)%|%(Fac41)%|%(Fac42)%|%(Fac51)%
+	
+%(Fac13)%	1
+%(Hint13-1)%	Enter a factor of 39. Start with the smallest one.
+%(Hint13-2)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(Hint13-3)%	
+%(Hint13-4)%	Please enter '1' in the highlighted field.
+%(Fac13-ErrOrder)%	39|3|13
+%(Fac14)%	39
+%(Hint14-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint14-2)%	What number multiplied by 1 gives you 39?
+%(Hint14-3)%	
+%(Hint14-4)%	Please enter '39' in the highlighted field.
+%(Fac14-ErrOrder)%	1|3|13
+%(Fac23)%	3
+%(Hint23-1)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(Hint23-2)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(Hint23-3)%	
+%(Hint23-4)%	Please enter '3' in the highlighted field.
+%(R2C3-TRAVERSAL)%	1
+%(Fac23-ErrOrder)%	1|39|13
+%(Fac24)%	13
+%(Hint24-1)%	Use your previous entry to figure out what this factor will be.
+%(Hint24-2)%	
+%(Hint24-3)%	What number multiplied by 3 gives you 39?
+%(Hint24-4)%	Please enter '13' in the highlighted field.
+%(R2C4-TRAVERSAL)%	1
+%(Fac24-ErrOrder)%	1|39|3
+%(Fac33)%	
+%(Hint33-1)%	
+%(Hint33-2)%	
+%(Hint33-3)%	
+%(Hint33-4)%	
+%(R3C3-TRAVERSAL)%	0
+%(Fac33-ErrOrder)%	
+%(Fac34)%	
+%(Hint34-1)%	
+%(Hint34-2)%	
+%(Hint34-3)%	
+%(Hint34-4)%	
+%(R3C4-TRAVERSAL)%	0
+%(Fac34-ErrOrder)%	
+%(Fac43)%	
+%(Hint43-1)%	
+%(Hint43-2)%	
+%(Hint43-3)%	
+%(Hint43-4)%	
+%(R4C3-TRAVERSAL)%	0
+%(Fac43-ErrOrder)%	
+%(Fac44)%	
+%(Hint44-1)%	
+%(Hint44-2)%	
+%(Hint44-3)%	
+%(Hint44-4)%	
+%(R4C4-TRAVERSAL)%	0
+%(Fac44-ErrOrder)%	
+%(Fac53)%	
+%(Hint53-1)%	
+%(Hint53-2)%	
+%(Hint53-3)%	
+%(Hint53-4)%	
+%(R5C3-TRAVERSAL)%	0
+%(Fac53-ErrOrder)%	
+%(Fac54)%	
+%(Hint54-1)%	
+%(Hint54-2)%	
+%(Hint54-3)%	
+%(Hint54-4)%	
+%(R5C4-TRAVERSAL)%	0
+%(Fac54-ErrOrder)%	
+%(CF1)%	1
+%(HintCF1-1)%	Look at all of your factor pairs. What factors do the two numbers, 36 and 39 have in common?
+%(HintCF1-2)%	What is the smallest common factor?
+%(HintCF1-3)%	List the common factors in order from smallest to largest.
+%(HintCF1-4)%	Please enter '1' in the highlighted field.
+%(CF1-TRAVERSAL)%	1
+%(CF1-ErrOrder)%	3
+%(CF2)%	3
+%(HintCF2-1)%	Look at all of your factor pairs. What other factors do the two numbers, 36 and 39 have in common?
+%(HintCF2-2)%	What is the second largest common factor?
+%(HintCF2-3)%	List the common factors in order from smallest to largest.
+%(HintCF2-4)%	Please enter '3' in the highlighted field.
+%(CF2-TRAVERSAL)%	1
+%(CF2-ErrOrder)%	1
+%(CF3)%	
+%(HintCF3-1)%	
+%(HintCF3-2)%	
+%(HintCF3-3)%	
+%(HintCF3-4)%	
+%(CF3-TRAVERSAL)%	0
+%(CF3-ErrOrder)%	
+%(CF4)%	
+%(HintCF4-1)%	
+%(HintCF4-2)%	
+%(HintCF4-3)%	
+%(HintCF4-4)%	
+%(CF4-TRAVERSAL)%	0
+%(CF4-ErrOrder)%	
+%(A)%	3
+%(HintA-1)%	Look at the common factors you have found. Now what is the greatest common factor of 36 and 39?
+%(HintA-2)%	What is the greatest common factor? 1? 3?
+%(HintA-3)%	Enter '3' in the highlighted field.
+%(CF-ErrNotCommon)%	[^(1|3)]
+%(GCF-Err)%	1 
+%(254303365388049584)%	
+%(-5977137150935564445)%	Please enter '1' in the highlighted field.
+%(-7537965487687806191)%	Please enter '1' in the highlighted field.
+%(-1958610125961082412)%	What number multiplied by 1 gives you 39?
+%(4258066570658946414)%	
+%(-4868200884791373883)%	
+%(-3307382548147132355)%	Use your previous entry to figure out what this factor will be.
+%(3135564320319522621)%	
+%(-4868201884795373888)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(3349241659411110558)%	Look at all of your factor pairs. What other factors do the two numbers, 36 and 39 have in common?
+%(-1321319791251777704)%	
+%(-1321321791279777786)%	
+%(-8673086570870268165)%	
+%(3349244659511110895)%	Please enter '3' in the highlighted field.
+%(9128231315816371920)%	Enter '3' in the highlighted field.
+%(-5977140151031564692)%	
+%(-7537964487679806098)%	
+%(-4630892098344058834)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(-5091951687139455837)%	Use your previous entry to figure out what this factor will be.
+%(-4630894098436059092)%	Please enter '3' in the highlighted field.
+%(7376638312065734454)%	Please enter '2' in the highlighted field.
+%(3358107287083252305)%	
+%(-7108511028899129805)%	List the common factors in order from smallest to largest.
+%(3349242659419110637)%	What is the second largest common factor?
+%(-7537962487683806208)%	Enter a factor of 39. Start with the smallest one.
+%(-4868202884787373789)%	
+%(-1958609125973082375)%	
+%(5804110087503602308)%	Please enter '4' in the highlighted field.
+%(7287509800339955155)%	Yes, this is a common factor but is it the greatest common factor?
+%(254301365392049566)%	Use your previous entry to figure out what this factor will be.
+%(-8857199270322685297)%	Please enter '6' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(7376637312057734457)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5091949687143455931)%	
+%(-9095745892578352942)%	
+%(-9095743892566352860)%	
+%(3448326454585640764)%	Seems like you are done!
+%(-1958611125969082425)%	Use your previous entry to figure out what this factor will be.
+%(4258064570566946156)%	
+%(-7537963487675806109)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(254304365392049589)%	What number multiplied by 4 gives you 36?
+%(6847577044345073627)%	Yes this is a factor but it is out of order. Start with the smallest factors first and work your way up in ascending order. Try asking for a hint.
+%(-7108510028895129802)%	What is the smallest common factor?
+%(3358104286987252058)%	Use your previous entry to figure out what this factor will be.
+%(-3307387548175132476)%	Please enter '6' in the highlighted field.
+%(-5977142151043564774)%	Enter a factor of 36. Start with the smallest one.
+%(5804112087499602342)%	
+%(1812052770030595884)%	Use your previous entry to figure out what this factor will be.
+%(-8673085570866268162)%	
+%(-5360709932947166162)%	Yes this is a factor but it is out of order. Try asking for a hint.
+%(-4630889098344058939)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(-3531133350527214469)%	
+%(-8857196270286685218)%	Since this number is divisible by 2 and 3, then what could be another possible factor?
+%(4258063570558946079)%	
+%(-4630891098340058845)%	
+%(-654517545755785932)%	
+%(7790176844402957019)%	Since the digits add up to a multiple of 3, what is a possible factor?
+%(1812057770122596037)%	Please enter '18' in the highlighted field.
+%(3135558320283522551)%	
+%(5686583805161676592)%	This is not a common factor of 36 and 39.
+%(3135559320291522500)%	
+%(-8673080570898268319)%	
+%(-4560983255492772878)%	Please provide your answer 'NoInput' in the highlighted element.
+%(-5694662720625941828)%	This is not a factor of 36. Please double-check your answer.
+%(-654518545759785935)%	
+%(-9095740892566352933)%	
+%(-654523545791786034)%	
+%(4258065570650946321)%	
+%(-3531136350527214524)%	
+%(-8857194270290685200)%	
+%(-5091950687147455936)%	What number multiplied by 3 gives you 36?
+%(1812050770018595802)%	
+%(-3602696677446545224)%	Click on "Found all factors for both numbers." when you think you've entered all the factor pairs for 36 and 39.
+%(3349243659503110800)%	List the common factors in order from smallest to largest.
+%(1032905288316606034)%	Please enter '1' in the highlighted field.
+%(-3307385548179132442)%	What number multiplied by 6 gives you 36?
+%(4465810717431090344)%	Please enter '36' in the highlighted field.
+%(7376636312069734420)%	Since 36 is an even number, what is the next smallest factor after 1?
+%(254298365356049487)%	Please enter '9' in the highlighted field.
+%(1812051770022595807)%	What number multiplied by 2 gives you 36?
+%(9128230315812371925)%	What is the greatest common factor? 1? 3?
+%(-1321322791287777783)%	
+%(7790175844398956998)%	
+%(-1958608125965082378)%	Please enter '39' in the highlighted field.
+%(7790177844426957080)%	When you add up the digits of a number and it adds up to a multiple of 3, it is divisible by 3.
+%(-5091956687247456166)%	Please enter '12' in the highlighted field.
+%(-9095742892578352951)%	
+%(-3531134350531214490)%	
+%(3135557320279522546)%	
+%(7790174844390957001)%	Please enter '3' in the highlighted field.
+%(-7108509028887129851)%	Look at all of your factor pairs. What factors do the two numbers, 36 and 39 have in common?
+%(9128233315812371918)%	Look at the common factors you have found. Now what is the greatest common factor of 36 and 39?
+%(-4868207884895374118)%	
+%(5804113087503602363)%	
+%(7376635312061734407)%	Is the 36 an even number?
+%(3358109287095252387)%	Please enter '13' in the highlighted field.
+%(-4142943113116299797)%	Are you sure any more unique factors exist?
+%(-8857193270286685195)%	Multiply 2 and 3 and check if that number is a possible factor of 36.
+%(5804115087531602429)%	Since you already decided that this number is even, divide the number by 2, then divide that result by 2.  Did you get a whole number?  Then this number is divisible by 4.
+%(-5977139150947564527)%	What is the smallest possible factor and is also a common factor for all numbers?
+%(3358106286999252140)%	What number multiplied by 3 gives you 39?
+%(4465805717335090087)%	
+%(4465804717331090082)%	What number multiplied by 1 gives you 36?
+%(-7108504028859129732)%	Please enter '1' in the highlighted field.
+%(-654520545755785953)%	
+%(-8068215192076385916)%	Yes, this is a common factor but please enter them in order, starting with the smallest factor.
+%(-3307384548175132421)%	
+%(-1331720242453165934)%	Please enter 'q' in the highlighted field.
+%(-8673083570902268304)%	
+%(4506789830436007175)%	Please enter 'f' in the highlighted field.
+%(-1321320791275777765)%	
+%(8359511761771144003)%	This is not a factor of 39. Please double-check your answer.
+%(4465807717331090009)%	Use your previous entry to figure out what this factor will be.
+%(-3531131350499214403)%	

@@ -1,0 +1,41 @@
+.CTATProblemSolving {
+  width: 100%;
+  flex-direction: column;
+}
+.CTATProblemSolving > div, .CTATSolution {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+#fractionStep {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+#fractions, #rightFraction {
+  display: flex;
+  align-items: center;
+}
+.fraction {
+  padding: 5px;
+  display: flex;
+  flex-flow: column;
+}
+.fractionBar {
+  width: 100%;
+}
+#f1, #f2, #m1, #m2, #m3 {
+  margin: 2px 5px;
+  width: 34px;
+  height: 30px;
+  font-size: 20px;
+}
+#equal {
+  font-size: 20px;
+}
+.CTATTextInput > input[type="text"] {
+  text-align: center;
+}
+.CTATNumberLine {
+  width: auto;
+}

@@ -1,0 +1,13 @@
+/**
+ * Size the CTATImageButton instance for the largest image in the problem set.
+ * The background-size property here is overridden by the component's runtime,
+ * so we set it from a listener on the "tutorready" message event in 6.34.js.
+ */
+#problempicture {
+  min-height: 260px;
+}
+.operator {
+  border: none;
+  padding: 0 5px;
+  background: white;
+}

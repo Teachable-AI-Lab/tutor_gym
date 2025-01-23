@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="6.30 GCF/LCM" description="Asks student to identify if the problem is a GCF or LCM problem, then solve the word problem using the appropriate method." save_state="true">
+  <Problems>
+    <Problem name="Problem 1" label="Hot Dogs" description="Hot Dogs are sold in packages of 10. Hot dog Buns are sold in packages of 8." tutor_flag="tutor" model_file="1.brd" student_interface="6.30.html">
+      <Skills>
+        <Skill name="Enter_resulting_lcm" category="GCF" occurrences="1"/>
+        <Skill name="Identify_lcm" category="GCF" occurrences="2"/>
+        <Skill name="Identify_problem_type" category="GCF" occurrences="1"/>
+        <Skill name="Enter_factor" category="GCF" occurrences="1"/>
+        <Skill name="Choose_operation" category="GCF" occurrences="2"/>
+        <Skill name="Enter_given" category="GCF" occurrences="2"/>
+        <Skill name="Identify_factor" category="GCF" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 10" label="Back-to-School Kits" description="Sherri has 20 notebooks and 35 pencils. She is making back-to-school kits for her friends and she wants them all to be the same." tutor_flag="tutor" model_file="10.brd" student_interface="6.30.html">
+      <Skills>
+        <Skill name="Enter_gcf" category="GCF" occurrences="1"/>
+        <Skill name="Identify_factor" category="GCF" occurrences="2"/>
+        <Skill name="Identify_problem_type" category="GCF" occurrences="1"/>
+        <Skill name="Enter_resulting_multiple" category="GCF" occurrences="1"/>
+        <Skill name="Choose_operation" category="GCF" occurrences="2"/>
+        <Skill name="Enter_given" category="GCF" occurrences="2"/>
+        <Skill name="Identify_gcf" category="GCF" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 11" label="Flowers" description="Sidney works for a nursery. She waters all of the flowers every 4 days and waters the cactus plants every 10 days. Sidney watered the flowers and the cactus plants today." tutor_flag="tutor" model_file="11.brd" student_interface="6.30.html">
+      <Skills>
+        <Skill name="Enter_resulting_lcm" category="GCF" occurrences="1"/>
+        <Skill name="Identify_lcm" category="GCF" occurrences="2"/>
+        <Skill name="Identify_problem_type" category="GCF" occurrences="1"/>
+        <Skill name="Enter_factor" category="GCF" occurrences="1"/>
+        <Skill name="Choose_operation" category="GCF" occurrences="2"/>
+        <Skill name="Enter_given" category="GCF" occurrences="2"/>
+        <Skill name="Identify_factor" category="GCF" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 2" label="Stickers" description="Tony wants to send out some invitations with stickers on the envelopes. He has 12 star stickers and 15 bird stickers. He wants to divide the stickers evenly so that each envelope has the same number of stickers." tutor_flag="tutor" model_file="2.brd" student_interface="6.30.html">
+      <Skills>
+        <Skill name="Enter_gcf" category="GCF" occurrences="1"/>
+        <Skill name="Identify_factor" category="GCF" occurrences="2"/>
+        <Skill name="Identify_problem_type" category="GCF" occurrences="1"/>
+        <Skill name="Enter_resulting_multiple" category="GCF" occurrences="1"/>
+        <Skill name="Choose_operation" category="GCF" occurrences="2"/>
+        <Skill name="Enter_given" category="GCF" occurrences="2"/>
+        <Skill name="Identify_gcf" category="GCF" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 3" label="Candy Bags" description="Lisa is making favor baskets for her sister's wedding. She is putting one mint and one chocolate into each basket. The mints come in bags of 9. The chocolates come in bags of 12." tutor_flag="tutor" model_file="3.brd" student_interface="6.30.html">
+      <Skills>
+        <Skill name="Enter_resulting_lcm" category="GCF" occurrences="1"/>
+        <Skill name="Identify_lcm" category="GCF" occurrences="2"/>
+        <Skill name="Identify_problem_type" category="GCF" occurrences="1"/>
+        <Skill name="Enter_factor" category="GCF" occurrences="1"/>
+        <Skill name="Choose_operation" category="GCF" occurrences="2"/>
+        <Skill name="Enter_given" category="GCF" occurrences="2"/>
+        <Skill name="Identify_factor" category="GCF" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 4" label="Candy baskets" description="Tia is making favor baskets for her sister's wedding. She has 28 chocolates and 35 mints. She wants to divide the chocolates and mints into the baskets so that each basket has the same number of candies." tutor_flag="tutor" model_file="4.brd" student_interface="6.30.html">
+      <Skills>
+        <Skill name="Enter_gcf" category="GCF" occurrences="1"/>
+        <Skill name="Identify_factor" category="GCF" occurrences="2"/>
+        <Skill name="Identify_problem_type" category="GCF" occurrences="1"/>
+        <Skill name="Enter_resulting_multiple" category="GCF" occurrences="1"/>
+        <Skill name="Choose_operation" category="GCF" occurrences="2"/>
+        <Skill name="Enter_given" category="GCF" occurrences="2"/>
+        <Skill name="Identify_gcf" category="GCF" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 5" label="Hardware Store" description="The new hardware store is having a grand opening. Every 10th customer gets a free hammer. Every 15th customer gets a free screwdriver." tutor_flag="tutor" model_file="5.brd" student_interface="6.30.html">
+      <Skills>
+        <Skill name="Enter_resulting_lcm" category="GCF" occurrences="1"/>
+        <Skill name="Identify_lcm" category="GCF" occurrences="2"/>
+        <Skill name="Identify_problem_type" category="GCF" occurrences="1"/>
+        <Skill name="Enter_factor" category="GCF" occurrences="1"/>
+        <Skill name="Choose_operation" category="GCF" occurrences="2"/>
+        <Skill name="Enter_given" category="GCF" occurrences="2"/>
+        <Skill name="Identify_factor" category="GCF" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 6" label="Refreshments" description="Elise has 18 bags of trail mix and 12 juice boxes. She wants to share them so each of her friends gets the same amount of trail mix and the same number of juice boxes." tutor_flag="tutor" model_file="6.brd" student_interface="6.30.html">
+      <Skills>
+        <Skill name="Enter_resulting_multiple" category="GCF" occurrences="1"/>
+        <Skill name="Identify_factor" category="GCF" occurrences="2"/>
+        <Skill name="Identify_problem_type" category="GCF" occurrences="1"/>
+        <Skill name="Enter_gcf" category="GCF" occurrences="1"/>
+        <Skill name="Choose_operation" category="GCF" occurrences="2"/>
+        <Skill name="Enter_given" category="GCF" occurrences="2"/>
+        <Skill name="Identify_gcf" category="GCF" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 7" label="Bouquets" description="A florist is using daisies and roses to make bouquets. He wants each bouquet to be identical. He has 18 daisies and 45 roses." tutor_flag="tutor" model_file="7.brd" student_interface="6.30.html">
+      <Skills>
+        <Skill name="Enter_gcf" category="GCF" occurrences="1"/>
+        <Skill name="Identify_factor" category="GCF" occurrences="2"/>
+        <Skill name="Identify_problem_type" category="GCF" occurrences="1"/>
+        <Skill name="Enter_resulting_multiple" category="GCF" occurrences="1"/>
+        <Skill name="Choose_operation" category="GCF" occurrences="2"/>
+        <Skill name="Enter_given" category="GCF" occurrences="2"/>
+        <Skill name="Identify_gcf" category="GCF" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 8" label="Tacos" description="Tim and three friends found a great deal on tacos. The deal has packages of 6 tacos." tutor_flag="tutor" model_file="8.brd" student_interface="6.30.html">
+      <Skills>
+        <Skill name="Enter_resulting_lcm" category="GCF" occurrences="1"/>
+        <Skill name="Identify_lcm" category="GCF" occurrences="2"/>
+        <Skill name="Identify_problem_type" category="GCF" occurrences="1"/>
+        <Skill name="Enter_factor" category="GCF" occurrences="1"/>
+        <Skill name="Choose_operation" category="GCF" occurrences="2"/>
+        <Skill name="Enter_given" category="GCF" occurrences="2"/>
+        <Skill name="Identify_factor" category="GCF" occurrences="2"/>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 9" label="Parking Lot" description="Bob and Jackie are running around the mall parking lot. They both start at the same place and at the same time. Bob can complete one lap in 8 minutes and Jackie can complete one lap in 10 minutes." tutor_flag="tutor" model_file="9.brd" student_interface="6.30.html">
+      <Skills>
+        <Skill name="Enter_resulting_lcm" category="GCF" occurrences="1"/>
+        <Skill name="Identify_lcm" category="GCF" occurrences="2"/>
+        <Skill name="Identify_problem_type" category="GCF" occurrences="1"/>
+        <Skill name="Enter_factor" category="GCF" occurrences="1"/>
+        <Skill name="Choose_operation" category="GCF" occurrences="2"/>
+        <Skill name="Enter_given" category="GCF" occurrences="2"/>
+        <Skill name="Identify_factor" category="GCF" occurrences="2"/>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="6.30 HTML" label="6.30 GCF/LCM" description="Asks student to identify if the problem is a GCF or LCM problem, then solve the word problem using the appropriate method." status="active" picture="6.30.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="Problem 1" position="1" role="0"/>
+        <Problem name="Problem 2" position="2" role="0"/>
+        <Problem name="Problem 3" position="3" role="0"/>
+        <Problem name="Problem 4" position="4" role="0"/>
+        <Problem name="Problem 5" position="5" role="0"/>
+        <Problem name="Problem 6" position="6" role="0"/>
+        <Problem name="Problem 7" position="7" role="0"/>
+        <Problem name="Problem 8" position="8" role="0"/>
+        <Problem name="Problem 9" position="9" role="0"/>
+        <Problem name="Problem 10" position="10" role="0"/>
+        <Problem name="Problem 11" position="11" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="Identify_factor" category="GCF" label="Identify factor" description="Identify factor" position="10" pKnown="0.2" pLearn="0.15" pGuess="0.2" pSlip="0.1"/>
+        <Skill name="Identify_problem_type" category="GCF" label="Identify problem type" description="Identify if the problem is asking about least common multiple or greatest common factor." position="11" pKnown="0.2" pLearn="0.15" pGuess="0.2" pSlip="0.1"/>
+        <Skill name="Enter_resulting_multiple" category="GCF" label="Enter resulting multiple" description="Enter resulting multiple" position="12" pKnown="0.2" pLearn="0.15" pGuess="0.2" pSlip="0.1"/>
+        <Skill name="Choose_operation" category="GCF" label="Choose operation" description="Choose the operation needed to solve the problem type." position="13" pKnown="0.2" pLearn="0.15" pGuess="0.2" pSlip="0.1"/>
+        <Skill name="Enter_given" category="GCF" label="Enter given" description="Enter given" position="14" pKnown="0.25" pLearn="0.2" pGuess="0.2" pSlip="0.1"/>
+        <Skill name="Identify_gcf" category="GCF" label="Identify gcf" description="Identify gcf" position="15" pKnown="0.2" pLearn="0.15" pGuess="0.2" pSlip="0.1"/>
+        <Skill name="Enter_resulting_lcm" category="GCF" label="Enter resulting lcm" description="Enter resulting lcm" position="16" pKnown="0.2" pLearn="0.15" pGuess="0.2" pSlip="0.1"/>
+        <Skill name="Identify_lcm" category="GCF" label="Identify lcm" description="Identify lcm" position="17" pKnown="0.2" pLearn="0.15" pGuess="0.2" pSlip="0.1"/>
+        <Skill name="Enter_gcf" category="GCF" label="Enter gcf" description="Enter gcf" position="18" pKnown="0.2" pLearn="0.15" pGuess="0.2" pSlip="0.1"/>
+        <Skill name="Enter_factor" category="GCF" label="Enter factor" description="Enter factor" position="19" pKnown="0.2" pLearn="0.15" pGuess="0.2" pSlip="0.1"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.A.1" label="A.1. Numbers: Representations, Relationships and Systems" description="A.1. Demonstrate an understanding of numbers, ways of representing numbers, relationships among numbers, and number systems." standard_level="assessment_anchor" parent_name="PA.A" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="6th" label="6th Grade" description="6th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.WF" label="Working with Fractions" description="Working with Fractions" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.6" label="6th Grade" description="6th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.6.NS" label="6.NS. The Number System" description="6.NS. The Number System" standard_level="strand" parent_name="CommonCore.6" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="6.30.png" path="Assets"/>
+    <Asset name="mathtutor_6.30_full.png" path="Assets"/>
+    <Asset name="1.brd" path="FinalBRDs"/>
+    <Asset name="10.brd" path="FinalBRDs"/>
+    <Asset name="11.brd" path="FinalBRDs"/>
+    <Asset name="2.brd" path="FinalBRDs"/>
+    <Asset name="3.brd" path="FinalBRDs"/>
+    <Asset name="4.brd" path="FinalBRDs"/>
+    <Asset name="5.brd" path="FinalBRDs"/>
+    <Asset name="6.brd" path="FinalBRDs"/>
+    <Asset name="7.brd" path="FinalBRDs"/>
+    <Asset name="8.brd" path="FinalBRDs"/>
+    <Asset name="9.brd" path="FinalBRDs"/>
+    <Asset name="6.30.html" path="HTML"/>
+    <Asset name="6.30.css" path="HTML/Assets"/>
+    <Asset name="masspro.brd" path="MassProduction"/>
+    <Asset name="masspro.txt" path="MassProduction"/>
+  </Assets>
+</Package>

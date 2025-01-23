@@ -1,0 +1,1312 @@
+Problem Name	01vitamin
+%(startStateNodeName)%	Given Finished
+%(statement)%	Larz and Joey are going to the local store to buy vitamins. Joey likes to buy his vitamins in 9 oz. containers. Larz doesn't like to go to the store that often so he buys a 36 oz. container. If the 36 oz. container costs $8.80, what should the 9 oz. container cost?
+%(final_statement)%	It should cost ____ dollars per 9 oz. container.
+%(final_unit)%	dollars.
+%(inverseProb)%	0
+%(from)%	Larz
+%(to)%	Joey
+%(item1)%	Container
+%(item2)%	Cost ($)
+%(gvn1)%	36
+%(gvn1-h1)%	Do you remember what Larz bought? What was the size of the container he bought?
+%(gvn1-h2)%	Read this part of the statement carefully: "Larz doesn't like to go to the store that often so he buys a 36 oz. container."
+%(gvn2)%	8.80
+%(gvn2-h1)%	Do you remember what Larz bought? What was the cost of the container he bought?
+%(gvn2-h2)%	Read this part of the statement carefully: "If the 36 oz. container costs $8.80 ..."
+	
+%(item1_word)%	weight of the container
+%(item2_word)%	cost
+	
+%(oper-on)%	0
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>  
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the size of the container. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>  
+%(oper-h2)%	How do you get from 36 oz. to 9 oz.?
+%(fac)%	1/4
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>    
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the container size. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>  
+%(fac-h2)%	What do you have to divide 36 by to get 9? How would you express this division as a multiplication of a fraction?
+	
+%(gvn3)%	9
+%(gvn3-h1)%	You want to know the cost of Joey's container, but first, you need to know the size of Joey's container.
+%(gvn3-h2)%	What is the last thing that is known? Do you remember the size of Joey's container?
+%(gvn3-h3)%	Read this part of the statement carefully: "Larz doesn't like to go to the store that often so he buys a 36 oz. container."
+	
+%(ans)%	2.20
+%(ans-h1)%	Use the scaling operation and scaling factor to scale down the original cost of the vitamin container to the cost of the 9 oz. container Joey wanted.
+%(ans-h2)%	The cost of the 9 oz. container is the cost of the container that Larz bought multiplied by the scaling factor you found.
+%(ans-h3)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/4"? Think of it this way; you are scaling DOWN 8.80 by factor of "4"! To do this divide 8.80 by the factor, like this: 8.80 / 4.
+%(ansF-h)%	How much a does 9 oz. container of vitamins cost?
+%(good_job)%	Good job! You helped Larz and Joey figure out how much the 9 oz. container would cost.
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: "Larz doesn't like to go to the store that often so he buys a 36 oz. container."
+%(-6411276830810430815)%	Do you remember what Larz bought? What was the cost of the container he bought?
+%(-2130351708502667082)%	Good job! You helped Larz and Joey figure out how much the 9 oz. container would cost.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>  
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Larz" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale down the original cost of the vitamin container to the cost of the 9 oz. container Joey wanted.
+%(77047411939768651)%	How do you get from 36 oz. to 9 oz.?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>    
+%(5796526918932587988)%	Incorrect! This number belongs to "Joey" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '9' for the highlighted field.
+%(4071995692167234857)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/4"? Think of it this way; you are scaling DOWN 8.80 by factor of "4"! To do this divide 8.80 by the factor, like this: 8.80 / 4.
+%(-4961902392298573881)%	Try typing '8.80' for the highlighted field.
+%(153812049528734435)%	Please enter '36' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the container size. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>  
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the size of the container. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>  
+%(8384133930955196225)%	Please enter '9' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 36 by to get 9? How would you express this division as a multiplication of a fraction?
+%(-4034242170371889659)%	Try typing '36' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the cost? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '8.80' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: "If the 36 oz. container costs $8.80 ..."
+%(4071994692163234860)%	The cost of the 9 oz. container is the cost of the container that Larz bought multiplied by the scaling factor you found.
+%(-3965525334249819719)%	What is the last thing that is known? Do you remember the size of Joey's container?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the weight of the container? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '2.20' in the highlighted field.
+%(-3965522334249819822)%	You want to know the cost of Joey's container, but first, you need to know the size of Joey's container.
+%(-8126397755713529732)%	Do you remember what Larz bought? What was the size of the container he bought?
+%(4788299410304215500)%	Try typing in '1/4' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: "Larz doesn't like to go to the store that often so he buys a 36 oz. container."
+%(-4254770397239570902)%	How much a does 9 oz. container of vitamins cost?
+Problem Name	02marble
+%(startStateNodeName)%	Half Done
+%(statement)%	In a store, marbles are 20 for $5. How much would 10 marbles cost?
+%(final_statement)%	10 marbles would cost ____ dollars.
+%(final_unit)%	dollars.
+%(inverseProb)%	0
+%(from)%	They sell
+%(to)%	You want
+%(item1)%	Marbles
+%(item2)%	Cost ($)
+%(gvn1)%	20
+%(gvn1-h1)%	Do you remember what the store sells? What was the number of marbles they sell?
+%(gvn1-h2)%	Read this part of the statement carefully: "In a store, marbles are 20 for $5."
+%(gvn2)%	5
+%(gvn2-h1)%	Do you remember what the store sells? What was the cost of marbles they sell?
+%(gvn2-h2)%	Read this part of the statement carefully: "In a store, marbles are 20 for $5."
+	
+%(item1_word)%	number of marbles
+%(item2_word)%	cost
+	
+%(oper-on)%	0
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%> 
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of marbles. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%> 
+%(oper-h2)%	How do you get from 20 marbles to 10 marbles?
+%(fac)%	1/2
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of marbles. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-h2)%	What do you have to divide 20 by to get 10? How would you express this division as a multiplication of a fraction?
+	
+%(gvn3)%	10
+%(gvn3-h1)%	You want to pay for the marbles you are buying, but first, you need to know how many marbles you are buying.
+%(gvn3-h2)%	What is the last thing that is known? Do you remember how many marbles the problem is asking for?
+%(gvn3-h3)%	Read this part of the statement carefully: "How much would 10 marbles cost?"
+	
+%(ans)%	2.50
+%(ans-h1)%	Use the scaling operation and scaling factor to scale down the original cost of the marbles.
+%(ans-h2)%	The cost of the marbles you want to buy is the selling cost of marbles multiplied by the scaling factor you found.
+%(ans-h3)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/2"? Think of it this way; you are scaling DOWN 5 by factor of "2"! To do this divide 5 by the factor, like this: 5 / 2.
+%(ansF-h)%	How much would 10 marbles cost?
+%(good_job)%	Great job! You figured out how much 10 marbles would cost. 
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: "In a store, marbles are 20 for $5."
+%(-6411276830810430815)%	Do you remember what the store sells? What was the cost of marbles they sell?
+%(-2130351708502667082)%	Great job! You figured out how much 10 marbles would cost. 
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%> 
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "They sell" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale down the original cost of the marbles.
+%(77047411939768651)%	How do you get from 20 marbles to 10 marbles?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(5796526918932587988)%	Incorrect! This number belongs to "You want" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '10' for the highlighted field.
+%(4071995692167234857)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/2"? Think of it this way; you are scaling DOWN 5 by factor of "2"! To do this divide 5 by the factor, like this: 5 / 2.
+%(-4961902392298573881)%	Try typing '5' for the highlighted field.
+%(153812049528734435)%	Please enter '20' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of marbles. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of marbles. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%> 
+%(8384133930955196225)%	Please enter '10' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 20 by to get 10? How would you express this division as a multiplication of a fraction?
+%(-4034242170371889659)%	Try typing '20' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the cost? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '5' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: "In a store, marbles are 20 for $5."
+%(4071994692163234860)%	The cost of the marbles you want to buy is the selling cost of marbles multiplied by the scaling factor you found.
+%(-3965525334249819719)%	What is the last thing that is known? Do you remember how many marbles the problem is asking for?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of marbles? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '2.50' in the highlighted field.
+%(-3965522334249819822)%	You want to pay for the marbles you are buying, but first, you need to know how many marbles you are buying.
+%(-8126397755713529732)%	Do you remember what the store sells? What was the number of marbles they sell?
+%(4788299410304215500)%	Try typing in '1/2' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: "How much would 10 marbles cost?"
+%(-4254770397239570902)%	How much would 10 marbles cost?
+Problem Name	03sailfish
+%(startStateNodeName)%	Given Entered
+%(statement)%	The world's fastest fish, the cosmopolitan sailfish, can travel 300.5 feet in 3 seconds. How far could this fish go in 60 seconds?
+%(final_statement)%	Cosmopolitan sailfish can travel ____ feet in 60 seconds.
+%(final_unit)%	feet.
+%(inverseProb)%	1
+%(from)%	Record
+%(to)%	Travel
+%(item1)%	Feet
+%(item2)%	Seconds
+%(gvn1)%	300.5
+%(gvn1-h1)%	Do you remember what they said about how fast cosmopolitan sailfish can travel? How far can they travel in 3 seconds?  
+%(gvn1-h2)%	Read this part of the statement carefully: "The world's fastest fish, the cosmopolitan sailfish, can travel 300.5 feet in 3 seconds."
+%(gvn2)%	3
+%(gvn2-h1)%	Do you remember what they said about how fast cosmopolitan sailfish can travel? How much time does it take for them to travel 300.5 feet?
+%(gvn2-h2)%	Read this part of the statement carefully: "The world's fastest fish, the cosmopolitan sailfish, can travel 300.5 feet in 3 seconds."
+	
+%(item1_word)%	distance of travel in feet
+%(item2_word)%	number of seconds
+	
+%(oper-on)%	0
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the time in seconds. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for distance traveled. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h2)%	How do you get from 3 seconds to 60 seconds?
+%(fac)%	20
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the seconds. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the distance traveled. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-h2)%	What do you have to multiply 3 by to get 60?
+	
+%(gvn3)%	60
+%(gvn3-h1)%	You want to know how far the sailfish can swim, but first, you need to know for how many seconds the sailfish has already swum.
+%(gvn3-h2)%	What is the last thing that is known? You are wondering how far the sailfish can swim in how many seconds?
+%(gvn3-h3)%	Read this part of the statement carefully: "How far could this fish go in 60 seconds?"
+	
+%(ans)%	6010
+%(ans-h1)%	Use the scaling operation and scaling factor to scale up the original distance traveled by the sailfish.
+%(ans-h2)%	The distance of travel for 60 seconds is the recorded distance of the sailfish multiplied by the scaling factor you found.
+%(ans-h3)%	Scaling UP using factor of "20" is simple; just multiply 300.5 by the factor like this: 300.5 * 20.
+%(ansF-h)%	How far can Mosmopolitan sailfish travel in 60 seconds?
+%(good_job)%	Good job! You found out how far a cosmopolitan fish can travel in 60 seconds.
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: "The world's fastest fish, the cosmopolitan sailfish, can travel 300.5 feet in 3 seconds."
+%(-6411276830810430815)%	Do you remember what they said about how fast cosmopolitan sailfish can travel? How much time does it take for them to travel 300.5 feet?
+%(-2130351708502667082)%	Good job! You found out how far a cosmopolitan fish can travel in 60 seconds.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the time in seconds. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Record" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale up the original distance traveled by the sailfish.
+%(77047411939768651)%	How do you get from 3 seconds to 60 seconds?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the seconds. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(5796526918932587988)%	Incorrect! This number belongs to "Travel" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '60' for the highlighted field.
+%(4071995692167234857)%	Scaling UP using factor of "20" is simple; just multiply 300.5 by the factor like this: 300.5 * 20.
+%(-4961902392298573881)%	Try typing '3' for the highlighted field.
+%(153812049528734435)%	Please enter '300.5' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the distance traveled. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for distance traveled. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(8384133930955196225)%	Please enter '60' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 3 by to get 60?
+%(-4034242170371889659)%	Try typing '300.5' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of seconds? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '3' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: "The world's fastest fish, the cosmopolitan sailfish, can travel 300.5 feet in 3 seconds."
+%(4071994692163234860)%	The distance of travel for 60 seconds is the recorded distance of the sailfish multiplied by the scaling factor you found.
+%(-3965525334249819719)%	What is the last thing that is known? You are wondering how far the sailfish can swim in how many seconds?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the distance of travel in feet? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '6010' in the highlighted field.
+%(-3965522334249819822)%	You want to know how far the sailfish can swim, but first, you need to know for how many seconds the sailfish has already swum.
+%(-8126397755713529732)%	Do you remember what they said about how fast cosmopolitan sailfish can travel? How far can they travel in 3 seconds?  
+%(4788299410304215500)%	Try typing in '20' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: "How far could this fish go in 60 seconds?"
+%(-4254770397239570902)%	How far can Mosmopolitan sailfish travel in 60 seconds?
+Problem Name	04pizza
+%(startStateNodeName)%	start
+%(statement)%	In a store, frozen pizzas are 8 for $6. How much will 2 pizzas cost?
+%(final_statement)%	2 pizzas will cost ____ dollars.
+%(final_unit)%	dollars.
+%(inverseProb)%	0
+%(from)%	They sell
+%(to)%	You want
+%(item1)%	Pizzas
+%(item2)%	Cost ($)
+%(gvn1)%	8
+%(gvn1-h1)%	Do you remember what the store sells? What was the number of pizzas they sell?
+%(gvn1-h2)%	Read this part of the statement carefully: "In a store, frozen pizzas are 8 for $6."
+%(gvn2)%	6
+%(gvn2-h1)%	Do you remember what the store sells? What was the cost of the pizzas they sell?
+%(gvn2-h2)%	Read this part of the statement carefully: "In a store, frozen pizzas are 8 for $6."
+	
+%(item1_word)%	number of pizzas
+%(item2_word)%	cost
+	
+%(oper-on)%	0
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost of pizza. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of pizzas. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h2)%	How do you get from 8 pizzas to 2 pizzas?
+%(fac)%	1/4
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of pizzas. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-h2)%	What do you have to divide 8 by to get 2? How would you express this division as a multiplication of a fraction?
+	
+%(gvn3)%	2
+%(gvn3-h1)%	You want to know how much the pizzas will cost, but first, you need to know how many pizzas you are buying.
+%(gvn3-h2)%	What is the last thing that is known? Do you remember how many pizzas the problem is asking for?
+%(gvn3-h3)%	Read this part of the statement carefully: "How much will 2 pizzas cost?"
+	
+%(ans)%	1.50
+%(ans-h1)%	Use the scaling operation and scaling factor to scale down the original cost of the pizza.
+%(ans-h2)%	The cost of pizzas you want to buy is the selling cost of the pizzas multiplied by the scaling factor you found.
+%(ans-h3)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/4"? Think of it this way; you are scaling DOWN 6 by factor of "4"! To do this divide 6 by the factor, like this: 6 / 4.
+%(ansF-h)%	How much will 2 pizzas cost?
+%(good_job)%	Good work! You figured out how much 2 pizzas would cost.
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: "In a store, frozen pizzas are 8 for $6."
+%(-6411276830810430815)%	Do you remember what the store sells? What was the cost of the pizzas they sell?
+%(-2130351708502667082)%	Good work! You figured out how much 2 pizzas would cost.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost of pizza. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "They sell" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale down the original cost of the pizza.
+%(77047411939768651)%	How do you get from 8 pizzas to 2 pizzas?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(5796526918932587988)%	Incorrect! This number belongs to "You want" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '2' for the highlighted field.
+%(4071995692167234857)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/4"? Think of it this way; you are scaling DOWN 6 by factor of "4"! To do this divide 6 by the factor, like this: 6 / 4.
+%(-4961902392298573881)%	Try typing '6' for the highlighted field.
+%(153812049528734435)%	Please enter '8' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of pizzas. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of pizzas. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(8384133930955196225)%	Please enter '2' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 8 by to get 2? How would you express this division as a multiplication of a fraction?
+%(-4034242170371889659)%	Try typing '8' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the cost? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '6' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: "In a store, frozen pizzas are 8 for $6."
+%(4071994692163234860)%	The cost of pizzas you want to buy is the selling cost of the pizzas multiplied by the scaling factor you found.
+%(-3965525334249819719)%	What is the last thing that is known? Do you remember how many pizzas the problem is asking for?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of pizzas? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '1.50' in the highlighted field.
+%(-3965522334249819822)%	You want to know how much the pizzas will cost, but first, you need to know how many pizzas you are buying.
+%(-8126397755713529732)%	Do you remember what the store sells? What was the number of pizzas they sell?
+%(4788299410304215500)%	Try typing in '1/4' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: "How much will 2 pizzas cost?"
+%(-4254770397239570902)%	How much will 2 pizzas cost?
+Problem Name	05notebook
+%(startStateNodeName)%	start
+%(statement)%	At Cheap-Supplies.com, you can buy 20 notebooks for $30. You only need 4 notebooks. How much will they cost?
+%(final_statement)%	4 notebooks will cost ____ dollars.
+%(final_unit)%	dollars.
+%(inverseProb)%	0
+%(from)%	They sell
+%(to)%	You want
+%(item1)%	Notebooks
+%(item2)%	Cost ($)
+%(gvn1)%	20
+%(gvn1-h1)%	Do you remember what Cheap-Supplies.com sells? What was the number of notebooks they sell?
+%(gvn1-h2)%	Read this part of the statement carefully: "At Cheap-Supplies.com, you can buy 20 notebooks for $30."
+%(gvn2)%	30
+%(gvn2-h1)%	Do you remember what Cheap-Supplies.com sells? What was the cost of notebooks they sell?
+%(gvn2-h2)%	Read this part of the statement carefully: "At Cheap-Supplies.com, you can buy 20 notebooks for $30."
+	
+%(item1_word)%	number of notebooks
+%(item2_word)%	cost
+	
+%(oper-on)%	0
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost of notebooks. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of notebooks. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h2)%	How do you get from 20 notebooks to 4 notebooks?
+%(fac)%	1/5
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of notebooks. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-h2)%	What do you have to divide 20 by to get 4? How would you express this division as a multiplication of a fraction?
+	
+%(gvn3)%	4
+%(gvn3-h1)%	You want to pay for the notebooks, but first, you need to know how many notebooks you are buying.
+%(gvn3-h2)%	What is the last thing that is known? Do you remember how many notesbooks you need?
+%(gvn3-h3)%	Read this part of the statement carefully: "You only need 4 notebooks."
+	
+%(ans)%	6
+%(ans-h1)%	Use the scaling operation and scaling factor to scale down the original cost of the notebooks.
+%(ans-h2)%	The cost of notebooks you want to buy is the selling cost of the notebooks multiplied by the scaling factor you found.
+%(ans-h3)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/5"? Think of it this way; you are scaling DOWN 30 by factor of "5"! To do this divide 30 by the factor, like this: 30 / 5.
+%(ansF-h)%	How much will 4 notebooks cost?
+%(good_job)%	Great work! Now you can buy just 4 notebooks instead of 20 notebooks.
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: "At Cheap-Supplies.com, you can buy 20 notebooks for $30."
+%(-6411276830810430815)%	Do you remember what Cheap-Supplies.com sells? What was the cost of notebooks they sell?
+%(-2130351708502667082)%	Great work! Now you can buy just 4 notebooks instead of 20 notebooks.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost of notebooks. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "They sell" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale down the original cost of the notebooks.
+%(77047411939768651)%	How do you get from 20 notebooks to 4 notebooks?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(5796526918932587988)%	Incorrect! This number belongs to "You want" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '4' for the highlighted field.
+%(4071995692167234857)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/5"? Think of it this way; you are scaling DOWN 30 by factor of "5"! To do this divide 30 by the factor, like this: 30 / 5.
+%(-4961902392298573881)%	Try typing '30' for the highlighted field.
+%(153812049528734435)%	Please enter '20' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of notebooks. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of notebooks. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(8384133930955196225)%	Please enter '4' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 20 by to get 4? How would you express this division as a multiplication of a fraction?
+%(-4034242170371889659)%	Try typing '20' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the cost? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '30' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: "At Cheap-Supplies.com, you can buy 20 notebooks for $30."
+%(4071994692163234860)%	The cost of notebooks you want to buy is the selling cost of the notebooks multiplied by the scaling factor you found.
+%(-3965525334249819719)%	What is the last thing that is known? Do you remember how many notesbooks you need?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of notebooks? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '6' in the highlighted field.
+%(-3965522334249819822)%	You want to pay for the notebooks, but first, you need to know how many notebooks you are buying.
+%(-8126397755713529732)%	Do you remember what Cheap-Supplies.com sells? What was the number of notebooks they sell?
+%(4788299410304215500)%	Try typing in '1/5' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: "You only need 4 notebooks."
+%(-4254770397239570902)%	How much will 4 notebooks cost?
+Problem Name	06car_trip
+%(startStateNodeName)%	start
+%(statement)%	Bill is driving 400 miles from Pittsburgh to New York City. If he drives 50 mph (50 miles per hour), how many hours will the trip take?
+%(final_statement)%	The trip from Pittsburgh to New York City will take ____ hours.
+%(final_unit)%	hours.
+%(inverseProb)%	0
+%(from)%	Speed
+%(to)%	Trip
+%(item1)%	Miles
+%(item2)%	Hours
+%(gvn1)%	50
+%(gvn1-h1)%	Can you write the speed (miles per hour) as  the distance traveled in a given amount of time? Think about what 'per hour' means.
+%(gvn1-h2)%	50 miles per hour means Bill can travel 50 miles in one hour. 
+%(gvn2)%	1
+%(gvn2-h1)%	Can you write the speed (miles per hour) as  the distance traveled in a given amount of time? Think about what 'per hour' means.
+%(gvn2-h2)%	50 miles per hour means Bill can travel 50 miles in one hour. 
+	
+%(item1_word)%	distance in miles
+%(item2_word)%	number of hours
+	
+%(oper-on)%	0
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the hours of the trip. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the distance in miles. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h2)%	How do you get from 50 miles to 400 miles?
+%(fac)%	8
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the hours of the trip. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the distance in miles. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-h2)%	What do you have to multiply 50 by to get 400?
+	
+%(gvn3)%	400
+%(gvn3-h1)%	You want to know how long the trip will take, but first, you need to know how far New York City is from Pittsburgh.
+%(gvn3-h2)%	What is the last thing that is known? Do you remember how far New York City is from Pittsburgh?
+%(gvn3-h3)%	Read this part of the statement carefully: "Bill is driving 400 miles from Pittsburgh to New York City."
+	
+%(ans)%	8
+%(ans-h1)%	Use the scaling operation and scaling factor to scale up the original time. 
+%(ans-h2)%	The time of the trip from Pittsburgh to New York City is the speed of the trip multiplied by the scaling factor you found.
+%(ans-h3)%	Scaling UP using factor of "8" is simple; just multiply 1 by the factor like this: 1 * 8.
+%(ansF-h)%	How much time will the trip from Pittsburgh to New York City take?
+%(good_job)%	Great job! Now you know how long the trip will take from Pittsburgh to New York City.
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-per1
+%(gvn2-skill-label)%	Recognize unit rate
+%(-8126396755689529665)%	50 miles per hour means Bill can travel 50 miles in one hour. 
+%(-6411276830810430815)%	Can you write the speed (miles per hour) as  the distance traveled in a given amount of time? Think about what 'per hour' means.
+%(-2130351708502667082)%	Great job! Now you know how long the trip will take from Pittsburgh to New York City.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the hours of the trip. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Speed" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale up the original time. 
+%(77047411939768651)%	How do you get from 50 miles to 400 miles?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the hours of the trip. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(5796526918932587988)%	Incorrect! This number belongs to "Trip" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '400' for the highlighted field.
+%(4071995692167234857)%	Scaling UP using factor of "8" is simple; just multiply 1 by the factor like this: 1 * 8.
+%(-4961902392298573881)%	Try typing '1' for the highlighted field.
+%(153812049528734435)%	Please enter '50' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the distance in miles. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the distance in miles. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(8384133930955196225)%	Please enter '400' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 50 by to get 400?
+%(-4034242170371889659)%	Try typing '50' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of hours? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '1' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	50 miles per hour means Bill can travel 50 miles in one hour. 
+%(4071994692163234860)%	The time of the trip from Pittsburgh to New York City is the speed of the trip multiplied by the scaling factor you found.
+%(-3965525334249819719)%	What is the last thing that is known? Do you remember how far New York City is from Pittsburgh?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the distance in miles? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '8' in the highlighted field.
+%(-3965522334249819822)%	You want to know how long the trip will take, but first, you need to know how far New York City is from Pittsburgh.
+%(-8126397755713529732)%	Can you write the speed (miles per hour) as  the distance traveled in a given amount of time? Think about what 'per hour' means.
+%(4788299410304215500)%	Try typing in '8' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: "Bill is driving 400 miles from Pittsburgh to New York City."
+%(-4254770397239570902)%	How much time will the trip from Pittsburgh to New York City take?
+Problem Name	07defective
+%(startStateNodeName)%	start
+%(statement)%	A manufacturing company makes widgets. For every 100 widgets, about 5 of them are defective. How many defective widgets are likely to be made if 20 widgets are produced?
+%(final_statement)%	____ defective widgets are likely to be made.
+%(final_unit)%	widgets.
+%(inverseProb)%	0
+%(from)%	Record
+%(to)%	Produce
+%(item1)%	Widgets
+%(item2)%	Defective
+%(gvn1)%	100
+%(gvn1-h1)%	Do you remember how many widgets the company produces and how many of them are defective? 
+%(gvn1-h2)%	Read this part of the statement carefully: "For every 100 widgets, about 5 of them are defective."
+%(gvn2)%	5
+%(gvn2-h1)%	Do you remember how many widgets the company produces and how many of them are defective? 
+%(gvn2-h2)%	Read this part of the statement carefully: "For every 100 widgets, about 5 of them are defective."
+	
+%(item1_word)%	number of widgets
+%(item2_word)%	number of defective widgets
+	
+%(oper-on)%	0
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the number of defective widgets. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of widgets produced. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h2)%	How do you get from 100 widgets to 20 widgets?
+%(fac)%	1/5
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the number of defective widgets. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of widgets produced. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-h2)%	What do you have to divide 100 by to get 20? How would you express this division as a multiplication of a fraction?
+	
+%(gvn3)%	20
+%(gvn3-h1)%	You want to know how many defective widgets will be made this time, but first, you need to know how many widgets the company will be producing this time.
+%(gvn3-h2)%	What is the last thing that is known? Do you remember how many widgets the company is going to produce this time?
+%(gvn3-h3)%	Read this part of the statement carefully: "How many defective widgets are likely to be made if 20 widgets are produced?"
+	
+%(ans)%	1
+%(ans-h1)%	Use the scaling operation and scaling factor to scale down the original number of defects. 
+%(ans-h2)%	You can determine the number of defective widgets produced by multiplying the original number of defective widgets by the scaling factor you found.
+%(ans-h3)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/5"? Think of it this way; you are scaling DOWN 5 by factor of "5"! To do this divide 5 by the factor, like this: 5 / 5.
+%(ansF-h)%	How many defective widgets are likely to be produced?
+%(good_job)%	Good job! You figured out how many widgets will be defective if the company makes 20 widgets.
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: "For every 100 widgets, about 5 of them are defective."
+%(-6411276830810430815)%	Do you remember how many widgets the company produces and how many of them are defective? 
+%(-2130351708502667082)%	Good job! You figured out how many widgets will be defective if the company makes 20 widgets.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the number of defective widgets. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Record" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale down the original number of defects. 
+%(77047411939768651)%	How do you get from 100 widgets to 20 widgets?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the number of defective widgets. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(5796526918932587988)%	Incorrect! This number belongs to "Produce" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '20' for the highlighted field.
+%(4071995692167234857)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/5"? Think of it this way; you are scaling DOWN 5 by factor of "5"! To do this divide 5 by the factor, like this: 5 / 5.
+%(-4961902392298573881)%	Try typing '5' for the highlighted field.
+%(153812049528734435)%	Please enter '100' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of widgets produced. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of widgets produced. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(8384133930955196225)%	Please enter '20' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 100 by to get 20? How would you express this division as a multiplication of a fraction?
+%(-4034242170371889659)%	Try typing '100' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of defective widgets? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '5' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: "For every 100 widgets, about 5 of them are defective."
+%(4071994692163234860)%	You can determine the number of defective widgets produced by multiplying the original number of defective widgets by the scaling factor you found.
+%(-3965525334249819719)%	What is the last thing that is known? Do you remember how many widgets the company is going to produce this time?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of widgets? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '1' in the highlighted field.
+%(-3965522334249819822)%	You want to know how many defective widgets will be made this time, but first, you need to know how many widgets the company will be producing this time.
+%(-8126397755713529732)%	Do you remember how many widgets the company produces and how many of them are defective? 
+%(4788299410304215500)%	Try typing in '1/5' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: "How many defective widgets are likely to be made if 20 widgets are produced?"
+%(-4254770397239570902)%	How many defective widgets are likely to be produced?
+Problem Name	08bounce
+%(startStateNodeName)%	start
+%(statement)%	I know that if the Super-Bouncing-Ball is dropped from a height of 100m, it will bounce 35m high. If the ball bounced 3.5m high, from how high did I drop the ball?
+%(final_statement)%	If the ball bonced 3.5m high, I dropped it from height of ____ m.
+%(final_unit)%	m.
+%(inverseProb)%	1
+%(from)%	I know
+%(to)%	I dropped
+%(item1)%	Dropped
+%(item2)%	Bounced
+%(gvn1)%	100
+%(gvn1-h1)%	Do you remember what you already know about the ball? Try to find the information where both the dropped height and the bounced height are already known. 
+%(gvn1-h2)%	Read this part of the statement carefully: "I know that if the Super-Bouncing-Ball is dropped from a height of 100m, it will bounce 35m high."
+%(gvn2)%	35
+%(gvn2-h1)%	Do you remember what you already know about the ball? Try to find the information where both the dropped height and the bounced height are already known. 
+%(gvn2-h2)%	Read this part of the statement carefully: "I know that if the Super-Bouncing-Ball is dropped from a height of 100m, it will bounce 35m high."
+	
+%(item1_word)%	distance of dropped height
+%(item2_word)%	distance of bounced height
+	
+%(oper-on)%	0
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the bounced height of the ball. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the dropped height of the ball. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h2)%	How do you get from 35m to 3.5m?
+%(fac)%	1/10
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the bounced height of the ball. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the dropped height of the ball. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-h2)%	What do you have to divide 35 by to get 3.5? How would you express this division as a multiplication of a fraction?
+	
+%(gvn3)%	3.5
+%(gvn3-h1)%	You want to know the height from which you dropped the ball, but first, you need to know how much the ball has bounced.
+%(gvn3-h2)%	What is the last thing that is known? Do you remember how high the ball bounced when you dropped it?
+%(gvn3-h3)%	Read this part of the statement carefully: "If the ball bounces 3.5m high ..."
+	
+%(ans)%	10
+%(ans-h1)%	Use the scaling operation and scaling factor to scale down the original height from where the ball was dropped. 
+%(ans-h2)%	The dropped height is the first, original dropped height multiplied by the scaling factor you found.
+%(ans-h3)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/10"? Think of it this way; you are scaling DOWN 100 by factor of "10"! To do this divide 100 by the factor, like this: 100 / 10.
+%(ansF-h)%	From what height did you drop the ball if it bounced back 3.5m?
+%(good_job)%	Great work! You figured out the dropped height of the ball that bounced 3.5m.
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: "I know that if the Super-Bouncing-Ball is dropped from a height of 100m, it will bounce 35m high."
+%(-6411276830810430815)%	Do you remember what you already know about the ball? Try to find the information where both the dropped height and the bounced height are already known. 
+%(-2130351708502667082)%	Great work! You figured out the dropped height of the ball that bounced 3.5m.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the bounced height of the ball. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "I know" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale down the original height from where the ball was dropped. 
+%(77047411939768651)%	How do you get from 35m to 3.5m?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the bounced height of the ball. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(5796526918932587988)%	Incorrect! This number belongs to "I dropped" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '3.5' for the highlighted field.
+%(4071995692167234857)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/10"? Think of it this way; you are scaling DOWN 100 by factor of "10"! To do this divide 100 by the factor, like this: 100 / 10.
+%(-4961902392298573881)%	Try typing '35' for the highlighted field.
+%(153812049528734435)%	Please enter '100' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the dropped height of the ball. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the dropped height of the ball. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(8384133930955196225)%	Please enter '3.5' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 35 by to get 3.5? How would you express this division as a multiplication of a fraction?
+%(-4034242170371889659)%	Try typing '100' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the distance of bounced height? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '35' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: "I know that if the Super-Bouncing-Ball is dropped from a height of 100m, it will bounce 35m high."
+%(4071994692163234860)%	The dropped height is the first, original dropped height multiplied by the scaling factor you found.
+%(-3965525334249819719)%	What is the last thing that is known? Do you remember how high the ball bounced when you dropped it?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the distance of dropped height? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '10' in the highlighted field.
+%(-3965522334249819822)%	You want to know the height from which you dropped the ball, but first, you need to know how much the ball has bounced.
+%(-8126397755713529732)%	Do you remember what you already know about the ball? Try to find the information where both the dropped height and the bounced height are already known. 
+%(4788299410304215500)%	Try typing in '1/10' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: "If the ball bounces 3.5m high ..."
+%(-4254770397239570902)%	From what height did you drop the ball if it bounced back 3.5m?
+Problem Name	09cookie
+%(startStateNodeName)%	start
+%(statement)%	The school cafeteria bought 90 bags of chocolate chip cookies. Each bag has an equal number of cookies. After two weeks, they have 30 bags of cookies left, and inside, there are a total of 120 cookies left. How many cookies were in all the bags two weeks ago?
+%(final_statement)%	Two weeks ago, ____ cookies were in the bags.
+%(final_unit)%	cookies.
+%(inverseProb)%	0
+%(from)%	Now
+%(to)%	2 weeks ago
+%(item1)%	Bags
+%(item2)%	Cookies
+%(gvn1)%	30
+%(gvn1-h1)%	Do you remember what was left in the school cafeteria after 2 weeks? What was the number of bags of cookies left?
+%(gvn1-h2)%	Read this part of the statement carefully: "After two weeks, they have 30 bags of cookies left ..."
+%(gvn2)%	120
+%(gvn2-h1)%	Do you remember what was left in the school cafeteria after 2 weeks? What was the number of cookies left?
+%(gvn2-h2)%	Read this part of the statement carefully: "... and inside, there are a total of 120 cookies left."
+	
+%(item1_word)%	number of bags of cookies
+%(item2_word)%	number of cookies
+	
+%(oper-on)%	0
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the number of cookies. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of bags of cookies. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h2)%	How do you get from 30 bags to 90 bags?
+%(fac)%	3
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the number of cookies. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number bags of cookies. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-h2)%	What do you have to multiply 30 by to get 90?
+	
+%(gvn3)%	90
+%(gvn3-h1)%	You want to know how many cookies were there 2 weeks ago, but first, you need to know how many bags were there 2 weeks ago.
+%(gvn3-h2)%	What is the last thing that is known? Do you remember how many bags of cookies were there 2 weeks ago?
+%(gvn3-h3)%	Read this part of the statement carefully: "The school cafeteria bought 90 bags of chocolate chip cookies."
+	
+%(ans)%	360
+%(ans-h1)%	Use the scaling operation and scaling factor to scale up the original number of cookies.
+%(ans-h2)%	The number of cookies 2 weeks ago is the number of cookies left now multiplied by the scaling factor you found.
+%(ans-h3)%	Scaling UP using factor of "3" is simple; just multiply 120 by the factor like this: 120 * 3.
+%(ansF-h)%	How many cookies were in the bag two weeks ago?
+%(good_job)%	Great job! You figured out how many cookies there were in the cafeteria 2 weeks ago.
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: "After two weeks, they have 30 bags of cookies left ..."
+%(-6411276830810430815)%	Do you remember what was left in the school cafeteria after 2 weeks? What was the number of cookies left?
+%(-2130351708502667082)%	Great job! You figured out how many cookies there were in the cafeteria 2 weeks ago.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the number of cookies. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Now" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale up the original number of cookies.
+%(77047411939768651)%	How do you get from 30 bags to 90 bags?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the number of cookies. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(5796526918932587988)%	Incorrect! This number belongs to "2 weeks ago" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '90' for the highlighted field.
+%(4071995692167234857)%	Scaling UP using factor of "3" is simple; just multiply 120 by the factor like this: 120 * 3.
+%(-4961902392298573881)%	Try typing '120' for the highlighted field.
+%(153812049528734435)%	Please enter '30' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number bags of cookies. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of bags of cookies. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(8384133930955196225)%	Please enter '90' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 30 by to get 90?
+%(-4034242170371889659)%	Try typing '30' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of cookies? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '120' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: "... and inside, there are a total of 120 cookies left."
+%(4071994692163234860)%	The number of cookies 2 weeks ago is the number of cookies left now multiplied by the scaling factor you found.
+%(-3965525334249819719)%	What is the last thing that is known? Do you remember how many bags of cookies were there 2 weeks ago?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of bags of cookies? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '360' in the highlighted field.
+%(-3965522334249819822)%	You want to know how many cookies were there 2 weeks ago, but first, you need to know how many bags were there 2 weeks ago.
+%(-8126397755713529732)%	Do you remember what was left in the school cafeteria after 2 weeks? What was the number of bags of cookies left?
+%(4788299410304215500)%	Try typing in '3' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: "The school cafeteria bought 90 bags of chocolate chip cookies."
+%(-4254770397239570902)%	How many cookies were in the bag two weeks ago?
+Problem Name	10sandwich
+%(startStateNodeName)%	start
+%(statement)%	A math student interviewed 60 fifth graders. 33 said they like peanut butter & jelly sandwiches. If he interviewered 20 new fifth graders, how many of them would be expected to like peanut butter & jelly sandwiches?
+%(final_statement)%	____ fifth graders are expected to like peanut butter & jelly sandwiches.
+%(final_unit)%	fifth graders.
+%(inverseProb)%	0
+%(from)%	Old interview
+%(to)%	New interview
+%(item1)%	5th Graders
+%(item2)%	Sandwiches
+%(gvn1)%	60
+%(gvn1-h1)%	Do you remember what the first, old interview results were? What was the number of 5th graders that were interviewed in the old interview?
+%(gvn1-h2)%	Read this part of the statement carefully: "A math student interviewed 60 fifth graders."
+%(gvn2)%	33
+%(gvn2-h1)%	Do you remember what the first interview results were? What was the number of students who said they like peanut butter and jelly sandwiches in the old interview?
+%(gvn2-h2)%	Read this part of the statement carefully: "33 said they like peanut butter & jelly sandwiches."
+	
+%(item1_word)%	number of 5th graders
+%(item2_word)%	number of students who like peanut butter and jelly sandwiches
+	
+%(oper-on)%	0
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the number of fifth graders that liked the PB&J sandwiches. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of  fifth graders interviewed. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h2)%	How do you get from 60 students to 20 students?
+%(fac)%	1/3 
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the number of fifth graders that liked the PB&J sandwiches. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of fifth graders interviewed. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-h2)%	What do you have to divide 60 by to get 20? How would you express this division as a multiplication of a fraction?
+	
+%(gvn3)%	20
+%(gvn3-h1)%	You want to know how many new 5th graders like peanut butter and jelly sandwiches, but first, you need to know how many new students were interviewed.
+%(gvn3-h2)%	What is the last thing that is known? Do you remember how many new 5th grades were interviewed?
+%(gvn3-h3)%	Read this part of the statement carefully: "If he interviewed 20 new fifth graders..."
+	
+%(ans)%	11
+%(ans-h1)%	Use the scaling operation and scaling factor to scale down the original number of students who like peanut butter and jelly sandwich.
+%(ans-h2)%	The new number of students expected to like the sandwich equals to 5th grade students who liked the sandwich in the old interview multiplied by the scaling factor you found.
+%(ans-h3)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/3 "? Think of it this way; you are scaling DOWN 33 by factor of "3"! To do this divide 33 by the factor, like this: 33 / 3.
+%(ansF-h)%	How many fifth graders are expected to like peanut butter & jelly sandwiches?
+%(good_job)%	Good job! You predicted how many students will say they like peanut butter & jelly sandwiches.
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: "A math student interviewed 60 fifth graders."
+%(-6411276830810430815)%	Do you remember what the first interview results were? What was the number of students who said they like peanut butter and jelly sandwiches in the old interview?
+%(-2130351708502667082)%	Good job! You predicted how many students will say they like peanut butter & jelly sandwiches.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the number of fifth graders that liked the PB&J sandwiches. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Old interview" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale down the original number of students who like peanut butter and jelly sandwich.
+%(77047411939768651)%	How do you get from 60 students to 20 students?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the number of fifth graders that liked the PB&J sandwiches. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(5796526918932587988)%	Incorrect! This number belongs to "New interview" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '20' for the highlighted field.
+%(4071995692167234857)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/3 "? Think of it this way; you are scaling DOWN 33 by factor of "3"! To do this divide 33 by the factor, like this: 33 / 3.
+%(-4961902392298573881)%	Try typing '33' for the highlighted field.
+%(153812049528734435)%	Please enter '60' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of fifth graders interviewed. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of  fifth graders interviewed. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(8384133930955196225)%	Please enter '20' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 60 by to get 20? How would you express this division as a multiplication of a fraction?
+%(-4034242170371889659)%	Try typing '60' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of students who like peanut butter and jelly sandwiches? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '33' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: "33 said they like peanut butter & jelly sandwiches."
+%(4071994692163234860)%	The new number of students expected to like the sandwich equals to 5th grade students who liked the sandwich in the old interview multiplied by the scaling factor you found.
+%(-3965525334249819719)%	What is the last thing that is known? Do you remember how many new 5th grades were interviewed?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of 5th graders? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '11' in the highlighted field.
+%(-3965522334249819822)%	You want to know how many new 5th graders like peanut butter and jelly sandwiches, but first, you need to know how many new students were interviewed.
+%(-8126397755713529732)%	Do you remember what the first, old interview results were? What was the number of 5th graders that were interviewed in the old interview?
+%(4788299410304215500)%	Try typing in '1/3 ' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: "If he interviewed 20 new fifth graders..."
+%(-4254770397239570902)%	How many fifth graders are expected to like peanut butter & jelly sandwiches?
+Problem Name	11basketball
+%(startStateNodeName)%	start
+%(statement)%	Your school needs to order basketballs for gym class. Gym-Supplies INC sells 75 basketballs for $450. How much will it cost your school to buy 15 basketballs?
+%(final_statement)%	It will cost your school ____ dollars to buy 15 basketballs.
+%(final_unit)%	basketballs.
+%(inverseProb)%	0
+%(from)%	They sell
+%(to)%	You want
+%(item1)%	Basketballs
+%(item2)%	Cost ($)
+%(gvn1)%	75
+%(gvn1-h1)%	Do you remember what Gym-Supplies INC sells? What was the number of basketballs they sell?
+%(gvn1-h2)%	Read this part of the statement carefully: "Gym-Supplies INC sells 75 basketballs for $450."
+%(gvn2)%	450
+%(gvn2-h1)%	Do you remember what Gym-Supplies INC sells? What was the cost of basketballs they sell?
+%(gvn2-h2)%	Read this part of the statement carefully: "Gym-Supplies INC sells 75 basketballs for $450."
+	
+%(item1_word)%	number of basketballs
+%(item2_word)%	cost
+	
+%(oper-on)%	0
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost of basketballs. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of backetballs. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h2)%	How do you get from 75 basketballs to 15 basketballs?
+%(fac)%	1/5 
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of basketballs. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-h2)%	What do you have to divide 75 by to get 15? How would you express this division as a multiplication of a fraction?
+	
+%(gvn3)%	15
+%(gvn3-h1)%	You want to know how much the school is going to pay for the basketballs, but first, you need to know how many basketballs the school wants to buy.
+%(gvn3-h2)%	What is the last thing that is known? Do you remember how many basketballs your school is going to buy?
+%(gvn3-h3)%	Read this part of the statement carefully: "How much will it cost your school to buy 15 basketballs?"
+	
+%(ans)%	90
+%(ans-h1)%	Use the scaling operation and scaling factor to scale down the original cost of the basketballs.
+%(ans-h2)%	The cost of the basketballs your school wants equals the selling cost of basketballs multiplied by the scaling factor you found.
+%(ans-h3)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/5 "? Think of it this way; you are scaling DOWN 450 by factor of "5"! To do this divide 450 by the factor, like this: 450 / 5.
+%(ansF-h)%	How much will your school have to pay for 15 basketballs?
+%(good_job)%	Great job! You helped your school figure out how much 15 basketballs would cost.
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: "Gym-Supplies INC sells 75 basketballs for $450."
+%(-6411276830810430815)%	Do you remember what Gym-Supplies INC sells? What was the cost of basketballs they sell?
+%(-2130351708502667082)%	Great job! You helped your school figure out how much 15 basketballs would cost.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost of basketballs. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "They sell" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale down the original cost of the basketballs.
+%(77047411939768651)%	How do you get from 75 basketballs to 15 basketballs?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(5796526918932587988)%	Incorrect! This number belongs to "You want" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '15' for the highlighted field.
+%(4071995692167234857)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/5 "? Think of it this way; you are scaling DOWN 450 by factor of "5"! To do this divide 450 by the factor, like this: 450 / 5.
+%(-4961902392298573881)%	Try typing '450' for the highlighted field.
+%(153812049528734435)%	Please enter '75' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of basketballs. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of backetballs. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(8384133930955196225)%	Please enter '15' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 75 by to get 15? How would you express this division as a multiplication of a fraction?
+%(-4034242170371889659)%	Try typing '75' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the cost? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '450' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: "Gym-Supplies INC sells 75 basketballs for $450."
+%(4071994692163234860)%	The cost of the basketballs your school wants equals the selling cost of basketballs multiplied by the scaling factor you found.
+%(-3965525334249819719)%	What is the last thing that is known? Do you remember how many basketballs your school is going to buy?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of basketballs? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '90' in the highlighted field.
+%(-3965522334249819822)%	You want to know how much the school is going to pay for the basketballs, but first, you need to know how many basketballs the school wants to buy.
+%(-8126397755713529732)%	Do you remember what Gym-Supplies INC sells? What was the number of basketballs they sell?
+%(4788299410304215500)%	Try typing in '1/5 ' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: "How much will it cost your school to buy 15 basketballs?"
+%(-4254770397239570902)%	How much will your school have to pay for 15 basketballs?
+Problem Name	12spring_carnival
+%(startStateNodeName)%	start
+%(statement)%	You are buying prizes for the spring carnival, and 30 prizes cost $40. How much will it cost you to buy 90 prizes?
+%(final_statement)%	It will cost you ____ dollars to buy 30 prizes.
+%(final_unit)%	dollars.
+%(inverseProb)%	0
+%(from)%	They sell
+%(to)%	You want
+%(item1)%	Prizes
+%(item2)%	Cost ($)
+%(gvn1)%	30
+%(gvn1-h1)%	Do you remember what they originally cost? What was the number of prizes they sell? 
+%(gvn1-h2)%	Read this part of the statement carefully: "You are buying prizes for the spring carnival, and 30 prizes cost $40."
+%(gvn2)%	40
+%(gvn2-h1)%	Do you remember what they originally cost? What was the cost of prizes they sell?
+%(gvn2-h2)%	Read this part of the statement carefully: "You are buying prizes for the spring carnival, and 30 prizes cost $40."
+	
+%(item1_word)%	number of prizes
+%(item2_word)%	cost
+	
+%(oper-on)%	0
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost of prizes. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of prizes. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h2)%	How do you get from 90 prizes to 30 prizes?
+%(fac)%	3
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of prizes. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-h2)%	What do you have to multiply 30 by to get 90?
+	
+%(gvn3)%	90
+%(gvn3-h1)%	You want to know the cost of the prizes you will be buying, but first, you need to know how many prizes you are buying.
+%(gvn3-h2)%	What is the last thing that is known? Do you remember how many prizes the problem is asking for?
+%(gvn3-h3)%	Read this part of the statement carefully: "How much will it cost you to buy 90 prizes?"
+	
+%(ans)%	120
+%(ans-h1)%	Use the scaling operation and scaling factor to scale up the original cost of the spring carnival prizes.
+%(ans-h2)%	The cost of prizes you want is the selling cost of prizes multiplied by the scaling factor you found.
+%(ans-h3)%	Scaling UP using factor of "3" is simple; just multiply 40 by the factor like this: 40 * 3.
+%(ansF-h)%	How much will it cost you to buy 90 prizes?
+%(good_job)%	Good job! You figured out how much 90 prizes will cost you. 
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: "You are buying prizes for the spring carnival, and 30 prizes cost $40."
+%(-6411276830810430815)%	Do you remember what they originally cost? What was the cost of prizes they sell?
+%(-2130351708502667082)%	Good job! You figured out how much 90 prizes will cost you. 
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost of prizes. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "They sell" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale up the original cost of the spring carnival prizes.
+%(77047411939768651)%	How do you get from 90 prizes to 30 prizes?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(5796526918932587988)%	Incorrect! This number belongs to "You want" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '90' for the highlighted field.
+%(4071995692167234857)%	Scaling UP using factor of "3" is simple; just multiply 40 by the factor like this: 40 * 3.
+%(-4961902392298573881)%	Try typing '40' for the highlighted field.
+%(153812049528734435)%	Please enter '30' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of prizes. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of prizes. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(8384133930955196225)%	Please enter '90' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 30 by to get 90?
+%(-4034242170371889659)%	Try typing '30' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the cost? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '40' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: "You are buying prizes for the spring carnival, and 30 prizes cost $40."
+%(4071994692163234860)%	The cost of prizes you want is the selling cost of prizes multiplied by the scaling factor you found.
+%(-3965525334249819719)%	What is the last thing that is known? Do you remember how many prizes the problem is asking for?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of prizes? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '120' in the highlighted field.
+%(-3965522334249819822)%	You want to know the cost of the prizes you will be buying, but first, you need to know how many prizes you are buying.
+%(-8126397755713529732)%	Do you remember what they originally cost? What was the number of prizes they sell? 
+%(4788299410304215500)%	Try typing in '3' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: "How much will it cost you to buy 90 prizes?"
+%(-4254770397239570902)%	How much will it cost you to buy 90 prizes?
+Problem Name	13token
+%(startStateNodeName)%	start
+%(statement)%	Your family goes to Cool-Video-Games for an evening for fun. $30 will buy you 20 tokens. How much does each token cost?
+%(final_statement)%	Each token costs ____ dollars.
+%(final_unit)%	dollars.
+%(inverseProb)%	0
+%(from)%	They sell
+%(to)%	Each Token
+%(item1)%	Tokens
+%(item2)%	Cost ($)
+%(gvn1)%	20
+%(gvn1-h1)%	Do you remember what Cool-Video-Games sell? What was the number of tokens they sell?
+%(gvn1-h2)%	Read this part of the statement carefully: "$30 will buy you 20 tokens."
+%(gvn2)%	30
+%(gvn2-h1)%	Do you remember what Cool-Video-Games sell? What was the cost of tokens they sell?
+%(gvn2-h2)%	Read this part of the statement carefully: "$30 will buy you 20 tokens."
+	
+%(item1_word)%	number of tokens
+%(item2_word)%	cost
+	
+%(oper-on)%	0
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost of tokens. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of tokens. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h2)%	How do you get from 20 tokens to 1(each) token?
+%(fac)%	1/20
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of tokens. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-h2)%	What do you have to divide 20 by to get 1? How would you express this division as a multiplication of a fraction?
+	
+%(gvn3)%	1
+%(gvn3-h1)%	You want to know how much each token costs. How would you express 'each' as a number?
+%(gvn3-h2)%	Think about what "each" means.
+%(gvn3-h3)%	You are looking for cost of EACH token. This means you are looking for the cost of 1 token.
+	
+%(ans)%	1.50
+%(ans-h1)%	Use the scaling operation and scaling factor to scale down the original cost of the tokens.
+%(ans-h2)%	The cost of 1 token is the selling cost of 20 tokens multiplied by the scaling factor you found.
+%(ans-h3)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/20"? Think of it this way; you are scaling DOWN 30 by factor of "20"! To do this divide 30 by the factor, like this: 30 / 20.
+%(ansF-h)%	How much is each token?
+%(good_job)%	Great work! Now you know how much each of the tokens costs. 
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: "$30 will buy you 20 tokens."
+%(-6411276830810430815)%	Do you remember what Cool-Video-Games sell? What was the cost of tokens they sell?
+%(-2130351708502667082)%	Great work! Now you know how much each of the tokens costs. 
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost of tokens. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "They sell" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale down the original cost of the tokens.
+%(77047411939768651)%	How do you get from 20 tokens to 1(each) token?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(5796526918932587988)%	Incorrect! This number belongs to "Each Token" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '1' for the highlighted field.
+%(4071995692167234857)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/20"? Think of it this way; you are scaling DOWN 30 by factor of "20"! To do this divide 30 by the factor, like this: 30 / 20.
+%(-4961902392298573881)%	Try typing '30' for the highlighted field.
+%(153812049528734435)%	Please enter '20' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of tokens. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of tokens. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(8384133930955196225)%	Please enter '1' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 20 by to get 1? How would you express this division as a multiplication of a fraction?
+%(-4034242170371889659)%	Try typing '20' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the cost? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '30' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: "$30 will buy you 20 tokens."
+%(4071994692163234860)%	The cost of 1 token is the selling cost of 20 tokens multiplied by the scaling factor you found.
+%(-3965525334249819719)%	Think about what "each" means.
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of tokens? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '1.50' in the highlighted field.
+%(-3965522334249819822)%	You want to know how much each token costs. How would you express 'each' as a number?
+%(-8126397755713529732)%	Do you remember what Cool-Video-Games sell? What was the number of tokens they sell?
+%(4788299410304215500)%	Try typing in '1/20' in the highlighted field.
+%(-3965524334245819724)%	You are looking for cost of EACH token. This means you are looking for the cost of 1 token.
+%(-4254770397239570902)%	How much is each token?
+Problem Name	14widget
+%(startStateNodeName)%	start
+%(statement)%	The Widget Manufacturing company works 24 hours a day. In a typical 24-hour day, the Widget company can produce 300 widgets. If the typical work shift consist of 8 hours, how many widgets are produced during the shift?
+%(final_statement)%	____ widgets are produced during the shift.
+%(final_unit)%	widgets.
+%(inverseProb)%	1
+%(from)%	By day
+%(to)%	By work shift
+%(item1)%	Widgets
+%(item2)%	Hours
+%(gvn1)%	300
+%(gvn1-h1)%	Do you remember how many widgets the company produces in 24 hours? 
+%(gvn1-h2)%	Read this part of the statement carefully: "In a typical 24-hour day, the Widget company can produce 300 widgets."
+%(gvn2)%	24
+%(gvn2-h1)%	Do you remember how long the company takes to make 300 widgets? 
+%(gvn2-h2)%	Read this part of the statement carefully: "In a typical 24-hour day, the Widget company can produce 300 widgets."
+	
+%(item1_word)%	number of widgets produced
+%(item2_word)%	number hours
+	
+%(oper-on)%	0
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the hours of work. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of widgets produced. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h2)%	How do you get from 24 hours to 8 hours?
+%(fac)%	1/3 
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the hours of work. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of widgets produced. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-h2)%	What do you have to divide 24 by to get 8? How would you express this division as a multiplication of a fraction?
+	
+%(gvn3)%	8
+%(gvn3-h1)%	You want to know how many widgets will be produced in a regular work shift, but first, you need to know how long a regular work shift is.
+%(gvn3-h2)%	What is the last thing that is known? How manys are in a regular work shift?
+%(gvn3-h3)%	Read this part of the statement carefully: "If the typical work shift consist of 8 hours ..."
+	
+%(ans)%	100
+%(ans-h1)%	Use the scaling operation and scaling factor to scale down the original number of widgets produced.
+%(ans-h2)%	The number of widgets produced during 8-hour shift equals number of widgets produced during 24-hour day multiplied by the scaling factor you found.
+%(ans-h3)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/3 "? Think of it this way; you are scaling DOWN 300 by factor of "3"! To do this divide 300 by the factor, like this: 300 / 3.
+%(ansF-h)%	How many widgets are produced during the 8 hour shift?
+%(good_job)%	Good job! You figured out how many widgets are produced during an 8-hour shift.
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: "In a typical 24-hour day, the Widget company can produce 300 widgets."
+%(-6411276830810430815)%	Do you remember how long the company takes to make 300 widgets? 
+%(-2130351708502667082)%	Good job! You figured out how many widgets are produced during an 8-hour shift.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the hours of work. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "By day" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale down the original number of widgets produced.
+%(77047411939768651)%	How do you get from 24 hours to 8 hours?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the hours of work. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(5796526918932587988)%	Incorrect! This number belongs to "By work shift" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '8' for the highlighted field.
+%(4071995692167234857)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/3 "? Think of it this way; you are scaling DOWN 300 by factor of "3"! To do this divide 300 by the factor, like this: 300 / 3.
+%(-4961902392298573881)%	Try typing '24' for the highlighted field.
+%(153812049528734435)%	Please enter '300' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of widgets produced. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of widgets produced. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(8384133930955196225)%	Please enter '8' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 24 by to get 8? How would you express this division as a multiplication of a fraction?
+%(-4034242170371889659)%	Try typing '300' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number hours? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '24' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: "In a typical 24-hour day, the Widget company can produce 300 widgets."
+%(4071994692163234860)%	The number of widgets produced during 8-hour shift equals number of widgets produced during 24-hour day multiplied by the scaling factor you found.
+%(-3965525334249819719)%	What is the last thing that is known? How manys are in a regular work shift?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of widgets produced? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '100' in the highlighted field.
+%(-3965522334249819822)%	You want to know how many widgets will be produced in a regular work shift, but first, you need to know how long a regular work shift is.
+%(-8126397755713529732)%	Do you remember how many widgets the company produces in 24 hours? 
+%(4788299410304215500)%	Try typing in '1/3 ' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: "If the typical work shift consist of 8 hours ..."
+%(-4254770397239570902)%	How many widgets are produced during the 8 hour shift?
+Problem Name	15nugget
+%(startStateNodeName)%	start
+%(statement)%	You have 12 gold nuggets, and they weigh 36 lbs. If each nugget is the same, how much does each nugget weigh?
+%(final_statement)%	Each nugget weighs ____ lbs.
+%(final_unit)%	lbs.
+%(inverseProb)%	0
+%(from)%	Total nuggets
+%(to)%	Each nugget
+%(item1)%	Nuggets
+%(item2)%	Weight
+%(gvn1)%	12
+%(gvn1-h1)%	Do you remember what you already know about the nuggets? Try to find the information where both the number of nuggets and their total weight is already known.  
+%(gvn1-h2)%	Read this part of the statement carefully: "You have 12 gold nuggets, and they weigh 36 lbs."
+%(gvn2)%	36
+%(gvn2-h1)%	Do you remember what you already know about the nuggets? Try to find the information where both the number of nuggets and their total  weight is already known.  
+%(gvn2-h2)%	Read this part of the statement carefully: "You have 12 gold nuggets, and they weigh 36 lbs."
+	
+%(item1_word)%	number of nuggets
+%(item2_word)%	amount of weight
+	
+%(oper-on)%	0
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the weight of nuggets. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of nuggets. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(oper-h2)%	How do you get from total number of nuggets to "each" nugget?
+%(fac)%	1/12
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the weight of the nuggets. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of nuggets. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-h2)%	What do you have to divide 12 by to get 1? How would you express this division as a multiplication of a fraction?
+	
+%(gvn3)%	1
+%(gvn3-h1)%	You want to know how much each gold nugget costs. How would you express 'each' as a number?
+%(gvn3-h2)%	Think about what "each" means.
+%(gvn3-h3)%	You are looking for cost of EACH nugget. This means you are looking for the cost of 1 nugget.
+	
+%(ans)%	3
+%(ans-h1)%	Use the scaling operation and scaling factor to scale down the original weight of the nuggets.
+%(ans-h2)%	The weight of each nugget is the weight of total nuggets multiplied by the scaling factor you found.
+%(ans-h3)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/12"? Think of it this way; you are scaling DOWN 36 by factor of "12"! To do this divide 36 by the factor, like this: 36 / 12.
+%(ansF-h)%	How heavy are each of the gold nuggets?
+%(good_job)%	Great job! Now you know how heavy each gold nugget is.
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: "You have 12 gold nuggets, and they weigh 36 lbs."
+%(-6411276830810430815)%	Do you remember what you already know about the nuggets? Try to find the information where both the number of nuggets and their total  weight is already known.  
+%(-2130351708502667082)%	Great job! Now you know how heavy each gold nugget is.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the weight of nuggets. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Total nuggets" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale down the original weight of the nuggets.
+%(77047411939768651)%	How do you get from total number of nuggets to "each" nugget?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the weight of the nuggets. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(5796526918932587988)%	Incorrect! This number belongs to "Each nugget" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '1' for the highlighted field.
+%(4071995692167234857)%	Not sure how to multiply a scaling factor that looks like a fraction, "1/12"? Think of it this way; you are scaling DOWN 36 by factor of "12"! To do this divide 36 by the factor, like this: 36 / 12.
+%(-4961902392298573881)%	Try typing '36' for the highlighted field.
+%(153812049528734435)%	Please enter '12' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of nuggets. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of nuggets. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%>
+%(8384133930955196225)%	Please enter '1' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 12 by to get 1? How would you express this division as a multiplication of a fraction?
+%(-4034242170371889659)%	Try typing '12' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the amount of weight? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '36' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: "You have 12 gold nuggets, and they weigh 36 lbs."
+%(4071994692163234860)%	The weight of each nugget is the weight of total nuggets multiplied by the scaling factor you found.
+%(-3965525334249819719)%	Think about what "each" means.
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of nuggets? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '3' in the highlighted field.
+%(-3965522334249819822)%	You want to know how much each gold nugget costs. How would you express 'each' as a number?
+%(-8126397755713529732)%	Do you remember what you already know about the nuggets? Try to find the information where both the number of nuggets and their total weight is already known.  
+%(4788299410304215500)%	Try typing in '1/12' in the highlighted field.
+%(-3965524334245819724)%	You are looking for cost of EACH nugget. This means you are looking for the cost of 1 nugget.
+%(-4254770397239570902)%	How heavy are each of the gold nuggets?
+Problem Name	00Bubble
+%(startStateNodeName)%	Actual Completion
+%(statement)%	In a store, marbles are 39 for $10.50. How much would 13 marbles cost?
+%(final_statement)%	13 marbles would cost ____ dollars.
+%(final_unit)%	dollars.
+%(inverseProb)%	0
+%(from)%	They sell
+%(to)%	You want
+%(item1)%	Marbles
+%(item2)%	Cost ($)
+%(gvn1)%	39
+%(gvn1-h1)%	Do you remember what the store sells? What was the number of marbles they sell?
+%(gvn1-h2)%	-
+%(gvn2)%	10.50
+%(gvn2-h1)%	Do you remember what the store sells? What was the cost of marbles they sell?
+%(gvn2-h2)%	-
+	
+%(item1_word)%	-
+%(item2_word)%	-
+	
+%(oper-on)%	0
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%> 
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of marbles. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%> 
+%(oper-h2)%	How do you get from 20 marbles to 10 marbles?
+%(fac)%	1/3 
+%(fac-top)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of marbles. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number?Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(fac-h2)%	What do you have to divide 39 by to get 13? How would you express this division as a multiplication of a fraction?
+	
+%(gvn3)%	13
+%(gvn3-h1)%	-
+%(gvn3-h2)%	-
+%(gvn3-h3)%	-
+	
+%(ans)%	3.50
+%(ans-h1)%	Use the scaling operation and scaling factor to scale down the original cost of the marbles.
+%(ans-h2)%	The cost of the marbles you want to buy is the selling cost of marbles multiplied by the scaling factor you found.
+%(ans-h3)%	Not sure how to multiple a scaling factor that looks like a fraction, "1/3 "? Think of it this way; you are scaling DOWN 10.50 by factor of "3"! To do this divide 10.50 by the factor, like this: 10.50 / 3.
+%(ansF-h)%	How much are 13 marbles?
+%(good_job)%	Great job! You figured out how much 10 marbles would cost. 
+	
+%(operation)%	nothing
+%(factor)%	Scaling Factor
+%(skillset)%	6-27-factors-and-scaling
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from) 
+%(-8126396755689529665)%	-
+%(-6411276830810430815)%	Do you remember what the store sells? What was the cost of marbles they sell?
+%(-2130351708502667082)%	Great job! You figured out how much 10 marbles would cost. 
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),"You've already chosen a correct scaling operation for the cost. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%> 
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "They sell" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale down the original cost of the marbles.
+%(77047411939768651)%	How do you get from 20 marbles to 10 marbles?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),"You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number? Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(5796526918932587988)%	Incorrect! This number belongs to "You want" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '13' for the highlighted field.
+%(4071995692167234857)%	Not sure how to multiple a scaling factor that looks like a fraction, "1/3 "? Think of it this way; you are scaling DOWN 10.50 by factor of "3"! To do this divide 10.50 by the factor, like this: 10.50 / 3.
+%(-4961902392298573881)%	Try typing '10.50' for the highlighted field.
+%(153812049528734435)%	Please enter '39' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),"You've already found the correct scaling factor for the number of marbles. Since you need to scale both numbers equally, you should use the same scaling factor here.","Are you trying to scale to a bigger or a smaller number?Remember, multiplying by an integer will increase the original number while multiplying by a fraction will decrease the original number.")%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),"You've already chosen a correct scaling operation for the number of marbles. Since you need to scale both numbers equally, you should use the same operation here.","Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.")%> 
+%(8384133930955196225)%	Please enter '13' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 39 by to get 13? How would you express this division as a multiplication of a fraction?
+%(-4034242170371889659)%	Try typing '39' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the -? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '10.50' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	-
+%(4071994692163234860)%	The cost of the marbles you want to buy is the selling cost of marbles multiplied by the scaling factor you found.
+%(-3965525334249819719)%	-
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the -? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '3.50' in the highlighted field.
+%(-3965522334249819822)%	-
+%(-8126397755713529732)%	Do you remember what the store sells? What was the number of marbles they sell?
+%(4788299410304215500)%	Try typing in '1/3 ' in the highlighted field.
+%(-3965524334245819724)%	-
+%(-4254770397239570902)%	How much are 13 marbles?

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>6.25 Greatest Common Factor</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/CTAT.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/Mathtutor.css">
+    <link rel="stylesheet" type="text/css" href="Assets/6.25.css">
+
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/jquery.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctat.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctatloader.js"></script>
+  </head>
+
+  <body>
+    <main class="CTATTutor">
+      <h1>Tutor</h1>
+
+      <section class="CTATProblemSolving">
+        <h2>Problem Solving</h2>
+
+        <section class="CTATProblem">
+          <h3>Problem</h3>
+
+          <div id="D" class="CTATTextField"></div>
+        </section>
+
+        <section class="CTATSolution">
+          <h3>Solution</h3>
+
+          <div class="factors">
+            <div class="lists">
+              <div class="list">
+                <div id="f1" class="CTATTextField"></div>
+                <ul>
+                  <li>
+                    <div id="R1C1" class="CTATTextInput"></div>
+                    <span class="operator">*</span>
+                    <div id="R1C2" class="CTATTextInput"></div>
+                    <span class="operator">=</span>
+                    <div id="num1r1" class="CTATTextField"></div>
+                  </li>
+                  <li>
+                    <div id="R2C1" class="CTATTextInput"></div>
+                    <span class="operator">*</span>
+                    <div id="R2C2" class="CTATTextInput"></div>
+                    <span class="operator">=</span>
+                    <div id="num1r2" class="CTATTextField"></div>
+                  </li>
+                  <li>
+                    <div id="R3C1" class="CTATTextInput"></div>
+                    <span class="operator">*</span>
+                    <div id="R3C2" class="CTATTextInput"></div>
+                    <span class="operator">=</span>
+                    <div id="num1r3" class="CTATTextField"></div>
+                  </li>
+                  <li>
+                    <div id="R4C1" class="CTATTextInput"></div>
+                    <span class="operator">*</span>
+                    <div id="R4C2" class="CTATTextInput"></div>
+                    <span class="operator">=</span>
+                    <div id="num1r4" class="CTATTextField"></div>
+                  </li>
+                  <li>
+                    <div id="R5C1" class="CTATTextInput"></div>
+                    <span class="operator">*</span>
+                    <div id="R5C2" class="CTATTextInput"></div>
+                    <span class="operator">=</span>
+                    <div id="num1r5" class="CTATTextField"></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="list">
+                <div id="f2" class="CTATTextField"></div>
+                <ul>
+                  <li>
+                    <div id="R1C3" class="CTATTextInput"></div>
+                    <span class="operator">*</span>
+                    <div id="R1C4" class="CTATTextInput"></div>
+                    <span class="operator">=</span>
+                    <div id="num2r1" class="CTATTextField"></div>
+                  </li>
+                  <li>
+                    <div id="R2C3" class="CTATTextInput"></div>
+                    <span class="operator">*</span>
+                    <div id="R2C4" class="CTATTextInput"></div>
+                    <span class="operator">=</span>
+                    <div id="num2r2" class="CTATTextField"></div>
+                  </li>
+                  <li>
+                    <div id="R3C3" class="CTATTextInput"></div>
+                    <span class="operator">*</span>
+                    <div id="R3C4" class="CTATTextInput"></div>
+                    <span class="operator">=</span>
+                    <div id="num2r3" class="CTATTextField"></div>
+                  </li>
+                  <li>
+                    <div id="R4C3" class="CTATTextInput"></div>
+                    <span class="operator">*</span>
+                    <div id="R4C4" class="CTATTextInput"></div>
+                    <span class="operator">=</span>
+                    <div id="num2r4" class="CTATTextField"></div>
+                  </li>
+                  <li>
+                    <div id="R5C3" class="CTATTextInput"></div>
+                    <span class="operator">*</span>
+                    <div id="R5C4" class="CTATTextInput"></div>
+                    <span class="operator">=</span>
+                    <div id="num2r5" class="CTATTextField"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="DoneWithFactorPairs" class="CTATButton">Found all factors for both numbers</div>
+          </div>
+
+          <div class="common_factors">
+            <div class="box">
+              <div class="CTATTextField">Common Factors</div>
+              <div id="CFs" class="CTATElement">
+                <div id="CF1" class="CTATTextInput"></div>
+                <div id="CF2" class="CTATTextInput"></div>
+                <div id="CF3" class="CTATTextInput"></div>
+                <div id="CF4" class="CTATTextInput"></div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="CTATTextField">Greatest Common Factor</div>
+              <div id="GCFs" class="CTATElement">
+                <div id="GCF" class="CTATTextInput"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="CTATTools">
+        <h2>Tools</h2>
+
+        <div class="CTATButtons">
+          <div class="CTATDoneButton"></div>
+          <div class="CTATHintButton"></div>
+        </div>
+
+        <section class="CTATHints">
+          <h3>Hints</h3>
+          <div class="CTATHintWindow"></div>
+        </section>
+
+        <section class="CTATSkills">
+          <h3>Skills</h3>
+          <div class="CTATSkillWindow"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

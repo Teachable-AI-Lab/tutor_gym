@@ -1,0 +1,1206 @@
+Problem Name	1-amy
+%(startStateNodeName)%	
+%(Problem_intro1)%	Amy wants $3.70.
+%(Problem_intro2)%	1. Use the fewest number of bills and coins.
+%(Problem_intro3)%	2. Amy needs extra dimes. How many bills and coins should you give her if she wants 17 dimes?
+%(Problem_intro4)%	3. If Amy wants 27 dimes, how many other bills and coins should you give her?
+	
+%(link_r2_mostLeft)%	r2c1
+%(link_r2_Center)%	r2c2
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c3
+%(value_r2)%	17
+	
+%(link_r3_mostLeft)%	r3c1
+%(link_r3_Center)%	r3c2
+%(link_r3_mostRight)%	r3c4
+%(given_value_r3)%	r3c3
+%(value_r3)%	27
+	
+%(totalTableDecValue_r2_mostLeft)%	input, r2c2, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, input, r2c3, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	input, r3c2, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, input, r3c3, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, r3c3, input
+	
+%(name)%	Amy 
+%(total)%	370
+%(noTradeValue_r2_mostLeft)%	0
+%(noTradeValue_r2_Center)%	3
+%(noTradeValue_r2_mostRight)%	0
+	
+%(noTradeValue_r3_mostLeft)%	0
+%(noTradeValue_r3_Center)%	3
+%(noTradeValue_r3_mostRight)%	0
+	
+%(column_1_type)%	ten dollar bills
+%(column_2_type)%	one dollar bills
+%(column_3_type)%	dimes
+%(column_4_type)%	pennies
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	
+%(hint_r2_mostLeft_level_2)%	
+%(hint_r2_mostLeft_level_3)%	
+	
+%(hint_r2_mostRight_level_1)%	If you have already given Amy  $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> should you give Amy  to get $<%=fmtDecimal(370/100,2)%>?
+%(hint_r2_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> you can have without going over $<%=fmtDecimal(370/100,2)%>?
+%(hint_r2_mostRight_level_3)%	Try entering <%=round(floor((370-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 0)))%>
+	
+%(hint_r2_Center_level_1)%	If you have already given Amy  $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 1)%> should you give Amy  to get $<%=fmtDecimal(370/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 1)%> you can have without going over $<%=fmtDecimal(370/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((370-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	
+%(hint_r3_mostLeft_level_2)%	
+%(hint_r3_mostLeft_level_3)%	
+	
+%(hint_r3_mostRight_level_1)%	If you have already given Amy  $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> should you give Amy  to get $<%=fmtDecimal(370/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> you can have without going over $<%=fmtDecimal(370/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((370-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given Amy  $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 1)%> should you give Amy  to get $<%=fmtDecimal(370/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 1)%> you can have without going over $<%=fmtDecimal(370/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((370-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 0)))%>
+	
+%(hint_r1c1_level_1)%	
+%(hint_r1c1_level_2)%	
+%(hint_r1c1_level_3)%	
+	
+%(hint_r1c2_level_1)%	If you have already given Amy  $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> would you give Amy  to get $<%=fmtDecimal(370/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(370/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((370-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)*floor(370/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already given Amy  $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%>  would you give Amy  to get $<%=fmtDecimal(370/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(370/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((370-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)*floor(370/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	If you have already given Amy  $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> would you give Amy  to get $<%=fmtDecimal(370/100,2)%>?
+%(hint_r1c4_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(370/100,2)%>?
+%(hint_r1c4_level_3)%	Try entering <%=round(floor((370-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)*floor(370/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))))%>
+	
+%(r1c1_min)%	0
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	0
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	0
+%(link_r3_mostLeft_max)%	1
+	
+%(faded_r1c1)%	
+%(faded_r1c2)%	
+%(faded_r1c3)%	
+%(faded_r1c4)%	
+%(4496962056300963153)%	If you have already given Amy  $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give Amy  to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	
+%(-6292769245166384709)%	If you have already given Amy  $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> would you give Amy  to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((370-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	If you have already given Amy  $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> should you give Amy  to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350911774282051931)%	
+%(-213056756848980930)%	If you have already given Amy  $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  would you give Amy  to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	
+%(-213054756852981056)%	Try entering <%=round(floor((370-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(370/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	Try entering <%=round(floor((370-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)*floor(370/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))))%>
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	
+%(1536371731755848561)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((370-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(370/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	
+%(-3036209045161016917)%	
+%(4496964056296963183)%	Try entering <%=round(floor((370-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350913774278051965)%	
+%(-9116211478850640512)%	Please enter '7' in the highlighted field.
+%(1536370731763848530)%	If you have already given Amy  $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give Amy  to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	If you have already given Amy  $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> would you give Amy  to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-3036206045161016912)%	
+%(7368804326215549730)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136516223160505835)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((370-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	Try entering <%=round(floor((370-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 0)))%>
+%(-5350914774282051954)%	
+%(-1575903042278205918)%	Please enter '13' in the highlighted field.
+%(-136515223168505802)%	If you have already given Amy  $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you give Amy  to get $<%=fmtDecimal(%(total)%/100,2)%>?
+Problem Name	2-molly
+%(startStateNodeName)%	state54
+%(Problem_intro1)%	Molly wants $6.05 but she wants a different number of dimes each time.
+%(Problem_intro2)%	1. Molly wants the fewest number of bills and coins without any dimes.
+%(Problem_intro3)%	2. If Molly needs 10 dimes to pay for her parking meter, how many bills and coins should you give her?
+%(Problem_intro4)%	3. Molly decides she only needs 9 dimes. How many bills and coins should she get?
+	
+%(link_r2_mostLeft)%	r2c1
+%(link_r2_Center)%	r2c2
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c3
+%(value_r2)%	10
+	
+%(link_r3_mostLeft)%	r3c1
+%(link_r3_Center)%	r3c2
+%(link_r3_mostRight)%	r3c4
+%(given_value_r3)%	r3c3
+%(value_r3)%	9
+	
+%(totalTableDecValue_r2_mostLeft)%	input, r2c2, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, input, r2c3, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	input, r3c2, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, input, r3c3, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, r3c3, input
+	
+%(name)%	Molly
+%(total)%	605
+%(noTradeValue_r2_mostLeft)%	0
+%(noTradeValue_r2_Center)%	5
+%(noTradeValue_r2_mostRight)%	5
+	
+%(noTradeValue_r3_mostLeft)%	0
+%(noTradeValue_r3_Center)%	5
+%(noTradeValue_r3_mostRight)%	15
+	
+%(column_1_type)%	ten dollar bills
+%(column_2_type)%	one dollar bills
+%(column_3_type)%	dimes
+%(column_4_type)%	pennies
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	
+%(hint_r2_mostLeft_level_2)%	
+%(hint_r2_mostLeft_level_3)%	
+	
+%(hint_r2_mostRight_level_1)%	If you have already given Molly $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> should you give Molly to get $<%=fmtDecimal(605/100,2)%>?
+%(hint_r2_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> you can have without going over $<%=fmtDecimal(605/100,2)%>?
+%(hint_r2_mostRight_level_3)%	Try entering <%=round(floor((605-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 0)))%>
+	
+%(hint_r2_Center_level_1)%	If you have already given Molly $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 1)%> should you give Molly to get $<%=fmtDecimal(605/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 1)%> you can have without going over $<%=fmtDecimal(605/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((605-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	
+%(hint_r3_mostLeft_level_2)%	
+%(hint_r3_mostLeft_level_3)%	
+	
+%(hint_r3_mostRight_level_1)%	If you have already given Molly $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> should you give Molly to get $<%=fmtDecimal(605/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> you can have without going over $<%=fmtDecimal(605/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((605-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given Molly $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 1)%> should you give Molly to get $<%=fmtDecimal(605/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 1)%> you can have without going over $<%=fmtDecimal(605/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((605-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 0)))%>
+	
+%(hint_r1c1_level_1)%	
+%(hint_r1c1_level_2)%	
+%(hint_r1c1_level_3)%	
+	
+%(hint_r1c2_level_1)%	If you have already given Molly $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> would you give Molly to get $<%=fmtDecimal(605/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(605/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((605-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)*floor(605/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already given Molly $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%>  would you give Molly to get $<%=fmtDecimal(605/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(605/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((605-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)*floor(605/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	If you have already given Molly $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> would you give Molly to get $<%=fmtDecimal(605/100,2)%>?
+%(hint_r1c4_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(605/100,2)%>?
+%(hint_r1c4_level_3)%	Try entering <%=round(floor((605-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)*floor(605/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))))%>
+	
+%(r1c1_min)%	0
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	0
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	0
+%(link_r3_mostLeft_max)%	1
+	
+%(faded_r1c1)%	0
+%(faded_r1c2)%	6
+%(faded_r1c3)%	0
+%(faded_r1c4)%	5
+%(4496962056300963153)%	If you have already given Molly $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give Molly to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	
+%(-6292769245166384709)%	If you have already given Molly $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> would you give Molly to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((605-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	If you have already given Molly $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> should you give Molly to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350911774282051931)%	
+%(-213056756848980930)%	If you have already given Molly $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  would you give Molly to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	
+%(-213054756852981056)%	Try entering <%=round(floor((605-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(605/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	Try entering <%=round(floor((605-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)*floor(605/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))))%>
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	
+%(1536371731755848561)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((605-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(605/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	
+%(-3036209045161016917)%	
+%(4496964056296963183)%	Try entering <%=round(floor((605-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350913774278051965)%	
+%(-9116211478850640512)%	Please enter '7' in the highlighted field.
+%(1536370731763848530)%	If you have already given Molly $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give Molly to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	If you have already given Molly $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> would you give Molly to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-3036206045161016912)%	
+%(7368804326215549730)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136516223160505835)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((605-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	Try entering <%=round(floor((605-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 0)))%>
+%(-5350914774282051954)%	
+%(-1575903042278205918)%	Please enter '13' in the highlighted field.
+%(-136515223168505802)%	If you have already given Molly $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you give Molly to get $<%=fmtDecimal(%(total)%/100,2)%>?
+Problem Name	3-Sydney
+%(startStateNodeName)%	state12
+%(Problem_intro1)%	Sydney wants $82.37.
+%(Problem_intro2)%	1. Sydney asks for the fewest number of bills and coins.
+%(Problem_intro3)%	2. You only have 1 one-dollar bill available to give to Sydney. How many bills and coins should you give him?
+%(Problem_intro4)%	3. If you don't have any one-dollar bills, how many ten dollar bills and coins should you give to him instead?
+	
+%(link_r2_mostLeft)%	r2c1
+%(link_r2_Center)%	r2c3
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c2
+%(value_r2)%	1
+	
+%(link_r3_mostLeft)%	r3c1
+%(link_r3_Center)%	r3c3
+%(link_r3_mostRight)%	r3c4
+%(given_value_r3)%	r3c2
+%(value_r3)%	0
+	
+%(totalTableDecValue_r2_mostLeft)%	input, r2c2, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, r2c2, input, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	input, r3c2, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, r3c2, input, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, r3c3, input
+	
+%(name)%	Sydney
+%(total)%	8237
+%(noTradeValue_r2_mostLeft)%	8
+%(noTradeValue_r2_Center)%	13
+%(noTradeValue_r2_mostRight)%	7
+	
+%(noTradeValue_r3_mostLeft)%	8
+%(noTradeValue_r3_Center)%	23
+%(noTradeValue_r3_mostRight)%	7
+	
+%(column_1_type)%	ten dollar bills
+%(column_2_type)%	one dollar bills
+%(column_3_type)%	dimes
+%(column_4_type)%	pennies
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c1", 1)%> should you give Sydney to get $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r2_mostLeft_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c1", 1)%> you can have without going over $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r2_mostLeft_level_3)%	Try entering <%=round(floor((8237-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c1", 0)))%>
+	
+%(hint_r2_mostRight_level_1)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> should you give Sydney to get $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r2_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> you can have without going over $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r2_mostRight_level_3)%	Try entering <%=round(floor((8237-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 0)))%>
+	
+%(hint_r2_Center_level_1)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c3", 1)%> should you give Sydney to get $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c3", 1)%> you can have without going over $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((8237-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c3", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c1", 1)%> should you give Sydney to get $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r3_mostLeft_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c1", 1)%> you can have without going over $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r3_mostLeft_level_3)%	Try entering <%=round(floor((8237-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c1", 0)))%>
+	
+%(hint_r3_mostRight_level_1)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> should you give Sydney to get $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> you can have without going over $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((8237-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c3", 1)%> should you give Sydney to get $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c3", 1)%> you can have without going over $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((8237-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c3", 0)))%>
+	
+%(hint_r1c1_level_1)%	How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c1", 1)%>  would you give Sydney ?
+%(hint_r1c1_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c1", 1)%> you can have without going over $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r1c1_level_3)%	Try entering <%=round(floor((8237-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c1", 0)))%>
+	
+%(hint_r1c2_level_1)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> would you give Sydney to get $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((8237-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)*floor(8237/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%>  would you give Sydney to get $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((8237-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)*floor(8237/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> would you give Sydney to get $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r1c4_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(8237/100,2)%>?
+%(hint_r1c4_level_3)%	Try entering <%=round(floor((8237-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)*floor(8237/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))))%>
+	
+%(r1c1_min)%	1
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	1
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	1
+%(link_r3_mostLeft_max)%	1
+	
+%(faded_r1c1)%	8
+%(faded_r1c2)%	2
+%(faded_r1c3)%	3
+%(faded_r1c4)%	7
+%(4496962056300963153)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give Sydney to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292769245166384709)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> would you give Sydney to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((8237-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> should you give Sydney to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350911774282051931)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> should you give Sydney to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213056756848980930)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  would you give Sydney to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> should you give Sydney to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213054756852981056)%	Try entering <%=round(floor((8237-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(8237/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	Try entering <%=round(floor((8237-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)*floor(8237/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))))%>
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	Try entering <%=round(floor((8237-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 0)))%>
+%(1536371731755848561)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((8237-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(8237/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	Try entering <%=round(floor((8237-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 0)))%>
+%(-3036209045161016917)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(4496964056296963183)%	Try entering <%=round(floor((8237-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350913774278051965)%	Try entering <%=round(floor((8237-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 0)))%>
+%(-9116211478850640512)%	Please enter '7' in the highlighted field.
+%(1536370731763848530)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give Sydney to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> would you give Sydney to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-3036206045161016912)%	How many <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%>  would you give %(name)% ?
+%(7368804326215549730)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136516223160505835)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((8237-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	Try entering <%=round(floor((8237-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 0)))%>
+%(-5350914774282051954)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-1575903042278205918)%	Please enter '13' in the highlighted field.
+%(-136515223168505802)%	If you have already given Sydney $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you give Sydney to get $<%=fmtDecimal(%(total)%/100,2)%>?
+Problem Name	4-allison
+%(startStateNodeName)%	state2
+%(Problem_intro1)%	Allison wants $37.23.
+%(Problem_intro2)%	1. Use the fewest number of bills and coins as possible.
+%(Problem_intro3)%	2. Allison needs some extra dimes. If you give her 10 dimes, how many other bills and coins should you give her?
+%(Problem_intro4)%	3. Allison asks for 33 pennies. How many other bills and coins should you give her?
+	
+%(link_r2_mostLeft)%	r2c1
+%(link_r2_Center)%	r2c2
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c3
+%(value_r2)%	10
+	
+%(link_r3_mostLeft)%	r3c1
+%(link_r3_Center)%	r3c2
+%(link_r3_mostRight)%	r3c3
+%(given_value_r3)%	r3c4
+%(value_r3)%	33
+	
+%(totalTableDecValue_r2_mostLeft)%	input, r2c2, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, input, r2c3, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	input, r3c2, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, input, r3c3, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, input, r3c4
+	
+%(name)%	Allison
+%(total)%	3723
+%(noTradeValue_r2_mostLeft)%	3
+%(noTradeValue_r2_Center)%	6
+%(noTradeValue_r2_mostRight)%	23
+	
+%(noTradeValue_r3_mostLeft)%	3
+%(noTradeValue_r3_Center)%	7
+%(noTradeValue_r3_mostRight)%	1
+	
+%(column_1_type)%	ten dollar bills
+%(column_2_type)%	one dollar bills
+%(column_3_type)%	dimes
+%(column_4_type)%	pennies
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c1", 1)%> should you give Allison to get $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r2_mostLeft_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c1", 1)%> you can have without going over $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r2_mostLeft_level_3)%	Try entering <%=round(floor((3723-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c1", 0)))%>
+	
+%(hint_r2_mostRight_level_1)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> should you give Allison to get $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r2_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> you can have without going over $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r2_mostRight_level_3)%	Try entering <%=round(floor((3723-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 0)))%>
+	
+%(hint_r2_Center_level_1)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 1)%> should you give Allison to get $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 1)%> you can have without going over $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((3723-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c1", 1)%> should you give Allison to get $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r3_mostLeft_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c1", 1)%> you can have without going over $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r3_mostLeft_level_3)%	Try entering <%=round(floor((3723-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c1", 0)))%>
+	
+%(hint_r3_mostRight_level_1)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c3", 1)%> should you give Allison to get $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c3", 1)%> you can have without going over $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((3723-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c3", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 1)%> should you give Allison to get $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 1)%> you can have without going over $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((3723-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 0)))%>
+	
+%(hint_r1c1_level_1)%	How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c1", 1)%>  would you give Allison ?
+%(hint_r1c1_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c1", 1)%> you can have without going over $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r1c1_level_3)%	Try entering <%=round(floor((3723-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c1", 0)))%>
+	
+%(hint_r1c2_level_1)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> would you give Allison to get $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((3723-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)*floor(3723/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%>  would you give Allison to get $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((3723-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)*floor(3723/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> would you give Allison to get $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r1c4_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(3723/100,2)%>?
+%(hint_r1c4_level_3)%	Try entering <%=round(floor((3723-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)*floor(3723/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))))%>
+	
+%(r1c1_min)%	1
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	1
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	1
+%(link_r3_mostLeft_max)%	1
+	
+%(faded_r1c1)%	3
+%(faded_r1c2)%	7
+%(faded_r1c3)%	2
+%(faded_r1c4)%	3
+%(4496962056300963153)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give Allison to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292769245166384709)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> would you give Allison to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((3723-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> should you give Allison to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350911774282051931)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> should you give Allison to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213056756848980930)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  would you give Allison to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> should you give Allison to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213054756852981056)%	Try entering <%=round(floor((3723-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(3723/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	Try entering <%=round(floor((3723-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)*floor(3723/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))))%>
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	Try entering <%=round(floor((3723-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 0)))%>
+%(1536371731755848561)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((3723-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(3723/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	Try entering <%=round(floor((3723-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 0)))%>
+%(-3036209045161016917)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(4496964056296963183)%	Try entering <%=round(floor((3723-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350913774278051965)%	Try entering <%=round(floor((3723-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 0)))%>
+%(-9116211478850640512)%	Please enter '7' in the highlighted field.
+%(1536370731763848530)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give Allison to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> would you give Allison to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-3036206045161016912)%	How many <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%>  would you give %(name)% ?
+%(7368804326215549730)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136516223160505835)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((3723-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	Try entering <%=round(floor((3723-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 0)))%>
+%(-5350914774282051954)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-1575903042278205918)%	Please enter '13' in the highlighted field.
+%(-136515223168505802)%	If you have already given Allison $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you give Allison to get $<%=fmtDecimal(%(total)%/100,2)%>?
+Problem Name	5-charlie
+%(startStateNodeName)%	
+%(Problem_intro1)%	Charlie wants $75.99.
+%(Problem_intro2)%	1. Charlie wants the fewest number of bills and coins.
+%(Problem_intro3)%	2. You only have 6 tens available to give to Charlie. How many other bills and coin should you give him?
+%(Problem_intro4)%	3. Charlie trades in another ten-dollar bill. How many other bills and coins should he receive?
+	
+%(link_r2_mostLeft)%	r2c2
+%(link_r2_Center)%	r2c3
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c1
+%(value_r2)%	6
+	
+%(link_r3_mostLeft)%	r3c2
+%(link_r3_Center)%	r3c3
+%(link_r3_mostRight)%	r3c4
+%(given_value_r3)%	r3c1
+%(value_r3)%	5
+	
+%(totalTableDecValue_r2_mostLeft)%	r2c1, input, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, r2c2, input, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	r3c1, input, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, r3c2, input, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, r3c3, input
+	
+%(name)%	Charlie
+%(total)%	7599
+%(noTradeValue_r2_mostLeft)%	5
+%(noTradeValue_r2_Center)%	9
+%(noTradeValue_r2_mostRight)%	9
+	
+%(noTradeValue_r3_mostLeft)%	5
+%(noTradeValue_r3_Center)%	9
+%(noTradeValue_r3_mostRight)%	9
+	
+%(column_1_type)%	ten dollar bills
+%(column_2_type)%	one dollar bills
+%(column_3_type)%	dimes
+%(column_4_type)%	pennies
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 1)%> should you give Charlie to get $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r2_mostLeft_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 1)%> you can have without going over $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r2_mostLeft_level_3)%	Try entering <%=round(floor((7599-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 0)))%>
+	
+%(hint_r2_mostRight_level_1)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> should you give Charlie to get $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r2_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> you can have without going over $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r2_mostRight_level_3)%	Try entering <%=round(floor((7599-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 0)))%>
+	
+%(hint_r2_Center_level_1)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c3", 1)%> should you give Charlie to get $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c3", 1)%> you can have without going over $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((7599-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c3", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 1)%> should you give Charlie to get $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r3_mostLeft_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 1)%> you can have without going over $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r3_mostLeft_level_3)%	Try entering <%=round(floor((7599-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 0)))%>
+	
+%(hint_r3_mostRight_level_1)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> should you give Charlie to get $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> you can have without going over $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((7599-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c3", 1)%> should you give Charlie to get $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c3", 1)%> you can have without going over $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((7599-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c3", 0)))%>
+	
+%(hint_r1c1_level_1)%	How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c1", 1)%>  would you give Charlie ?
+%(hint_r1c1_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c1", 1)%> you can have without going over $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r1c1_level_3)%	Try entering <%=round(floor((7599-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c1", 0)))%>
+	
+%(hint_r1c2_level_1)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> would you give Charlie to get $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((7599-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)*floor(7599/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%>  would you give Charlie to get $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((7599-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)*floor(7599/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> would you give Charlie to get $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r1c4_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(7599/100,2)%>?
+%(hint_r1c4_level_3)%	Try entering <%=round(floor((7599-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)*floor(7599/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))))%>
+	
+%(r1c1_min)%	1
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	1
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	1
+%(link_r3_mostLeft_max)%	1
+	
+%(faded_r1c1)%	
+%(faded_r1c2)%	
+%(faded_r1c3)%	
+%(faded_r1c4)%	
+%(4496962056300963153)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give Charlie to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292769245166384709)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> would you give Charlie to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((7599-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> should you give Charlie to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350911774282051931)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> should you give Charlie to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213056756848980930)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  would you give Charlie to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> should you give Charlie to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213054756852981056)%	Try entering <%=round(floor((7599-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(7599/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	Try entering <%=round(floor((7599-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)*floor(7599/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))))%>
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	Try entering <%=round(floor((7599-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 0)))%>
+%(1536371731755848561)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((7599-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(7599/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	Try entering <%=round(floor((7599-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 0)))%>
+%(-3036209045161016917)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(4496964056296963183)%	Try entering <%=round(floor((7599-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350913774278051965)%	Try entering <%=round(floor((7599-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 0)))%>
+%(-9116211478850640512)%	Please enter '7' in the highlighted field.
+%(1536370731763848530)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give Charlie to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> would you give Charlie to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-3036206045161016912)%	How many <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%>  would you give %(name)% ?
+%(7368804326215549730)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136516223160505835)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((7599-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	Try entering <%=round(floor((7599-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 0)))%>
+%(-5350914774282051954)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-1575903042278205918)%	Please enter '13' in the highlighted field.
+%(-136515223168505802)%	If you have already given Charlie $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you give Charlie to get $<%=fmtDecimal(%(total)%/100,2)%>?
+Problem Name	6-jordan
+%(startStateNodeName)%	
+%(Problem_intro1)%	Jordan wants $35.26.
+%(Problem_intro2)%	1. Use the fewest number of bills and coins.
+%(Problem_intro3)%	2. Jordan decides that he needs 15 ones. How many other bills and coins should you give him?
+%(Problem_intro4)%	3. He then realizes that instead of 15 ones, he needs 12 dimes. How many other bills and coins should Jordan receive?
+	
+%(link_r2_mostLeft)%	r2c1
+%(link_r2_Center)%	r2c3
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c2
+%(value_r2)%	15
+	
+%(link_r3_mostLeft)%	r3c1
+%(link_r3_Center)%	r3c2
+%(link_r3_mostRight)%	r3c4
+%(given_value_r3)%	r3c3
+%(value_r3)%	12
+	
+%(totalTableDecValue_r2_mostLeft)%	input, r2c2, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, r2c2, input, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	input, r3c2, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, input, r3c3, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, r3c3, input
+	
+%(name)%	Jordan
+%(total)%	3526
+%(noTradeValue_r2_mostLeft)%	3
+%(noTradeValue_r2_Center)%	2
+%(noTradeValue_r2_mostRight)%	6
+	
+%(noTradeValue_r3_mostLeft)%	3
+%(noTradeValue_r3_Center)%	5
+%(noTradeValue_r3_mostRight)%	6
+	
+%(column_1_type)%	ten dollar bills
+%(column_2_type)%	one dollar bills
+%(column_3_type)%	dimes
+%(column_4_type)%	pennies
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c1", 1)%> should you give Jordan to get $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r2_mostLeft_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c1", 1)%> you can have without going over $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r2_mostLeft_level_3)%	Try entering <%=round(floor((3526-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c1", 0)))%>
+	
+%(hint_r2_mostRight_level_1)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> should you give Jordan to get $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r2_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> you can have without going over $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r2_mostRight_level_3)%	Try entering <%=round(floor((3526-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 0)))%>
+	
+%(hint_r2_Center_level_1)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c3", 1)%> should you give Jordan to get $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c3", 1)%> you can have without going over $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((3526-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c3", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c1", 1)%> should you give Jordan to get $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r3_mostLeft_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c1", 1)%> you can have without going over $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r3_mostLeft_level_3)%	Try entering <%=round(floor((3526-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c1", 0)))%>
+	
+%(hint_r3_mostRight_level_1)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> should you give Jordan to get $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> you can have without going over $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((3526-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 1)%> should you give Jordan to get $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 1)%> you can have without going over $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((3526-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 0)))%>
+	
+%(hint_r1c1_level_1)%	How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c1", 1)%>  would you give Jordan ?
+%(hint_r1c1_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c1", 1)%> you can have without going over $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r1c1_level_3)%	Try entering <%=round(floor((3526-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c1", 0)))%>
+	
+%(hint_r1c2_level_1)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> would you give Jordan to get $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((3526-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)*floor(3526/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%>  would you give Jordan to get $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((3526-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)*floor(3526/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> would you give Jordan to get $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r1c4_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(3526/100,2)%>?
+%(hint_r1c4_level_3)%	Try entering <%=round(floor((3526-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)*floor(3526/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))))%>
+	
+%(r1c1_min)%	1
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	1
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	1
+%(link_r3_mostLeft_max)%	1
+	
+%(faded_r1c1)%	
+%(faded_r1c2)%	
+%(faded_r1c3)%	
+%(faded_r1c4)%	
+%(4496962056300963153)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give Jordan to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292769245166384709)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> would you give Jordan to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((3526-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> should you give Jordan to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350911774282051931)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> should you give Jordan to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213056756848980930)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  would you give Jordan to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> should you give Jordan to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213054756852981056)%	Try entering <%=round(floor((3526-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(3526/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	Try entering <%=round(floor((3526-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)*floor(3526/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))))%>
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	Try entering <%=round(floor((3526-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 0)))%>
+%(1536371731755848561)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((3526-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(3526/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	Try entering <%=round(floor((3526-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 0)))%>
+%(-3036209045161016917)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(4496964056296963183)%	Try entering <%=round(floor((3526-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350913774278051965)%	Try entering <%=round(floor((3526-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 0)))%>
+%(-9116211478850640512)%	Please enter '7' in the highlighted field.
+%(1536370731763848530)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give Jordan to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> would you give Jordan to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-3036206045161016912)%	How many <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%>  would you give %(name)% ?
+%(7368804326215549730)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136516223160505835)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((3526-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	Try entering <%=round(floor((3526-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 0)))%>
+%(-5350914774282051954)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-1575903042278205918)%	Please enter '13' in the highlighted field.
+%(-136515223168505802)%	If you have already given Jordan $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you give Jordan to get $<%=fmtDecimal(%(total)%/100,2)%>?
+Problem Name	7-martin
+%(startStateNodeName)%	
+%(Problem_intro1)%	Martin wants $4.42.
+%(Problem_intro2)%	1. Use the fewest number of bills and coins.
+%(Problem_intro3)%	2. You only have 3 ones to give Martin. How many other bills and coins should Martin receive?
+%(Problem_intro4)%	3. Martin asks for 24 dimes. How many other bills and coins should you give him?
+	
+%(link_r2_mostLeft)%	r2c1
+%(link_r2_Center)%	r2c3
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c2
+%(value_r2)%	3
+	
+%(link_r3_mostLeft)%	r3c1
+%(link_r3_Center)%	r3c2
+%(link_r3_mostRight)%	r3c4
+%(given_value_r3)%	r3c3
+%(value_r3)%	24
+	
+%(totalTableDecValue_r2_mostLeft)%	input, r2c2, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, r2c2, input, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	input, r3c2, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, input, r3c3, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, r3c3, input
+	
+%(name)%	Martin
+%(total)%	442
+%(noTradeValue_r2_mostLeft)%	0
+%(noTradeValue_r2_Center)%	4
+%(noTradeValue_r2_mostRight)%	2
+	
+%(noTradeValue_r3_mostLeft)%	0
+%(noTradeValue_r3_Center)%	4
+%(noTradeValue_r3_mostRight)%	2
+	
+%(column_1_type)%	ten dollar bills
+%(column_2_type)%	one dollar bills
+%(column_3_type)%	dimes
+%(column_4_type)%	pennies
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	
+%(hint_r2_mostLeft_level_2)%	
+%(hint_r2_mostLeft_level_3)%	
+	
+%(hint_r2_mostRight_level_1)%	If you have already given Martin $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> should you give Martin to get $<%=fmtDecimal(442/100,2)%>?
+%(hint_r2_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> you can have without going over $<%=fmtDecimal(442/100,2)%>?
+%(hint_r2_mostRight_level_3)%	Try entering <%=round(floor((442-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 0)))%>
+	
+%(hint_r2_Center_level_1)%	If you have already given Martin $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c3", 1)%> should you give Martin to get $<%=fmtDecimal(442/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c3", 1)%> you can have without going over $<%=fmtDecimal(442/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((442-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c3", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	
+%(hint_r3_mostLeft_level_2)%	
+%(hint_r3_mostLeft_level_3)%	
+	
+%(hint_r3_mostRight_level_1)%	If you have already given Martin $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> should you give Martin to get $<%=fmtDecimal(442/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> you can have without going over $<%=fmtDecimal(442/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((442-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given Martin $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 1)%> should you give Martin to get $<%=fmtDecimal(442/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 1)%> you can have without going over $<%=fmtDecimal(442/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((442-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 0)))%>
+	
+%(hint_r1c1_level_1)%	
+%(hint_r1c1_level_2)%	
+%(hint_r1c1_level_3)%	
+	
+%(hint_r1c2_level_1)%	If you have already given Martin $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> would you give Martin to get $<%=fmtDecimal(442/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(442/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((442-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)*floor(442/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already given Martin $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%>  would you give Martin to get $<%=fmtDecimal(442/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(442/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((442-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)*floor(442/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	If you have already given Martin $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> would you give Martin to get $<%=fmtDecimal(442/100,2)%>?
+%(hint_r1c4_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(442/100,2)%>?
+%(hint_r1c4_level_3)%	Try entering <%=round(floor((442-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)*floor(442/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))))%>
+	
+%(r1c1_min)%	0
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	0
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	0
+%(link_r3_mostLeft_max)%	1
+	
+%(faded_r1c1)%	
+%(faded_r1c2)%	
+%(faded_r1c3)%	
+%(faded_r1c4)%	
+%(4496962056300963153)%	If you have already given Martin $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give Martin to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	
+%(-6292769245166384709)%	If you have already given Martin $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> would you give Martin to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((442-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	If you have already given Martin $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> should you give Martin to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350911774282051931)%	
+%(-213056756848980930)%	If you have already given Martin $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  would you give Martin to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	
+%(-213054756852981056)%	Try entering <%=round(floor((442-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(442/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	Try entering <%=round(floor((442-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)*floor(442/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))))%>
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	
+%(1536371731755848561)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((442-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(442/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	
+%(-3036209045161016917)%	
+%(4496964056296963183)%	Try entering <%=round(floor((442-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350913774278051965)%	
+%(-9116211478850640512)%	Please enter '7' in the highlighted field.
+%(1536370731763848530)%	If you have already given Martin $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give Martin to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	If you have already given Martin $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> would you give Martin to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-3036206045161016912)%	
+%(7368804326215549730)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136516223160505835)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((442-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	Try entering <%=round(floor((442-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 0)))%>
+%(-5350914774282051954)%	
+%(-1575903042278205918)%	Please enter '13' in the highlighted field.
+%(-136515223168505802)%	If you have already given Martin $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you give Martin to get $<%=fmtDecimal(%(total)%/100,2)%>?
+Problem Name	8-paul
+%(startStateNodeName)%	
+%(Problem_intro1)%	Paul wants $18.94.
+%(Problem_intro2)%	1. Use the fewest number of bills and coins.
+%(Problem_intro3)%	2. You only have 7 dimes to give Paul. How many other bills and coins should Paul receive?
+%(Problem_intro4)%	3. Paul decides he wants 5 ones. How many other bills and coins should you give him?
+	
+%(link_r2_mostLeft)%	r2c1
+%(link_r2_Center)%	r2c2
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c3
+%(value_r2)%	7
+	
+%(link_r3_mostLeft)%	r3c1
+%(link_r3_Center)%	r3c3
+%(link_r3_mostRight)%	r3c4
+%(given_value_r3)%	r3c2
+%(value_r3)%	5
+	
+%(totalTableDecValue_r2_mostLeft)%	input, r2c2, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, input, r2c3, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	input, r3c2, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, r3c2, input, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, r3c3, input
+	
+%(name)%	Paul
+%(total)%	1894
+%(noTradeValue_r2_mostLeft)%	1
+%(noTradeValue_r2_Center)%	8
+%(noTradeValue_r2_mostRight)%	4
+	
+%(noTradeValue_r3_mostLeft)%	1
+%(noTradeValue_r3_Center)%	9
+%(noTradeValue_r3_mostRight)%	4
+	
+%(column_1_type)%	ten dollar bills
+%(column_2_type)%	one dollar bills
+%(column_3_type)%	dimes
+%(column_4_type)%	pennies
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c1", 1)%> should you give Paul to get $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r2_mostLeft_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c1", 1)%> you can have without going over $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r2_mostLeft_level_3)%	Try entering <%=round(floor((1894-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c1", 0)))%>
+	
+%(hint_r2_mostRight_level_1)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> should you give Paul to get $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r2_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> you can have without going over $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r2_mostRight_level_3)%	Try entering <%=round(floor((1894-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 0)))%>
+	
+%(hint_r2_Center_level_1)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 1)%> should you give Paul to get $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 1)%> you can have without going over $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((1894-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c1", 1)%> should you give Paul to get $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r3_mostLeft_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c1", 1)%> you can have without going over $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r3_mostLeft_level_3)%	Try entering <%=round(floor((1894-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c1", 0)))%>
+	
+%(hint_r3_mostRight_level_1)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> should you give Paul to get $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> you can have without going over $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((1894-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c3", 1)%> should you give Paul to get $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c3", 1)%> you can have without going over $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((1894-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c3", 0)))%>
+	
+%(hint_r1c1_level_1)%	How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c1", 1)%>  would you give Paul ?
+%(hint_r1c1_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c1", 1)%> you can have without going over $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r1c1_level_3)%	Try entering <%=round(floor((1894-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c1", 0)))%>
+	
+%(hint_r1c2_level_1)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> would you give Paul to get $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((1894-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)*floor(1894/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%>  would you give Paul to get $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((1894-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)*floor(1894/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> would you give Paul to get $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r1c4_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(1894/100,2)%>?
+%(hint_r1c4_level_3)%	Try entering <%=round(floor((1894-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)*floor(1894/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))))%>
+	
+%(r1c1_min)%	1
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	1
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	1
+%(link_r3_mostLeft_max)%	1
+	
+%(faded_r1c1)%	
+%(faded_r1c2)%	
+%(faded_r1c3)%	
+%(faded_r1c4)%	
+%(4496962056300963153)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give Paul to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292769245166384709)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> would you give Paul to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((1894-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> should you give Paul to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350911774282051931)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> should you give Paul to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213056756848980930)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  would you give Paul to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 1)%> should you give Paul to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213054756852981056)%	Try entering <%=round(floor((1894-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(1894/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	Try entering <%=round(floor((1894-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)*floor(1894/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))))%>
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	Try entering <%=round(floor((1894-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostLeft)%", 0)))%>
+%(1536371731755848561)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((1894-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(1894/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	Try entering <%=round(floor((1894-totalTableDec(r1c1, r1c2, r1c3, r1c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 0)))%>
+%(-3036209045161016917)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(4496964056296963183)%	Try entering <%=round(floor((1894-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350913774278051965)%	Try entering <%=round(floor((1894-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 0)))%>
+%(-9116211478850640512)%	Please enter '7' in the highlighted field.
+%(1536370731763848530)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give Paul to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> would you give Paul to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-3036206045161016912)%	How many <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c1", 1)%>  would you give %(name)% ?
+%(7368804326215549730)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136516223160505835)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((1894-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	Try entering <%=round(floor((1894-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 0)))%>
+%(-5350914774282051954)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostLeft)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-1575903042278205918)%	Please enter '13' in the highlighted field.
+%(-136515223168505802)%	If you have already given Paul $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you give Paul to get $<%=fmtDecimal(%(total)%/100,2)%>?
+Problem Name	9-lauren
+%(startStateNodeName)%	
+%(Problem_intro1)%	Lauren wants $9.18.
+%(Problem_intro2)%	1. Use the fewest number of bills and coins.
+%(Problem_intro3)%	2. Lauren does not want any dimes. How many other bills and coins should you give her?
+%(Problem_intro4)%	3. She then decides she wants 31 dimes. How many other bills and coins should you give her?
+	
+%(link_r2_mostLeft)%	r2c1
+%(link_r2_Center)%	r2c2
+%(link_r2_mostRight)%	r2c4
+%(given_value_r2)%	r2c3
+%(value_r2)%	0
+	
+%(link_r3_mostLeft)%	r3c1
+%(link_r3_Center)%	r3c2
+%(link_r3_mostRight)%	r3c4
+%(given_value_r3)%	r3c3
+%(value_r3)%	31
+	
+%(totalTableDecValue_r2_mostLeft)%	input, r2c2, r2c3, r2c4
+%(totalTableDecValue_r2_Center)%	r2c1, input, r2c3, r2c4
+%(totalTableDecValue_r2_mostRight)%	r2c1, r2c2, r2c3, input
+	
+%(totalTableDecValue_r3_mostLeft)%	input, r3c2, r3c3, r3c4
+%(totalTableDecValue_r3_Center)%	r3c1, input, r3c3, r3c4
+%(totalTableDecValue_r3_mostRight)%	r3c1, r3c2, r3c3, input
+	
+%(name)%	Lauren
+%(total)%	918
+%(noTradeValue_r2_mostLeft)%	0
+%(noTradeValue_r2_Center)%	9
+%(noTradeValue_r2_mostRight)%	8
+	
+%(noTradeValue_r3_mostLeft)%	0
+%(noTradeValue_r3_Center)%	9
+%(noTradeValue_r3_mostRight)%	8
+	
+%(column_1_type)%	ten dollar bills
+%(column_2_type)%	one dollar bills
+%(column_3_type)%	dimes
+%(column_4_type)%	pennies
+	
+%(column_1_value)%	1000
+%(column_2_value)%	100
+%(column_3_value)%	10
+%(column_4_value)%	1
+	
+	
+%(hint_r2_mostLeft_level_1)%	
+%(hint_r2_mostLeft_level_2)%	
+%(hint_r2_mostLeft_level_3)%	
+	
+%(hint_r2_mostRight_level_1)%	If you have already given Lauren $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> should you give Lauren to get $<%=fmtDecimal(918/100,2)%>?
+%(hint_r2_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 1)%> you can have without going over $<%=fmtDecimal(918/100,2)%>?
+%(hint_r2_mostRight_level_3)%	Try entering <%=round(floor((918-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c4", 0)))%>
+	
+%(hint_r2_Center_level_1)%	If you have already given Lauren $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 1)%> should you give Lauren to get $<%=fmtDecimal(918/100,2)%>?
+%(hint_r2_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 1)%> you can have without going over $<%=fmtDecimal(918/100,2)%>?
+%(hint_r2_Center_level_3)%	Try entering <%=round(floor((918-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r2c2", 0)))%>
+	
+%(hint_r3_mostLeft_level_1)%	
+%(hint_r3_mostLeft_level_2)%	
+%(hint_r3_mostLeft_level_3)%	
+	
+%(hint_r3_mostRight_level_1)%	If you have already given Lauren $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> should you give Lauren to get $<%=fmtDecimal(918/100,2)%>?
+%(hint_r3_mostRight_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 1)%> you can have without going over $<%=fmtDecimal(918/100,2)%>?
+%(hint_r3_mostRight_level_3)%	Try entering <%=round(floor((918-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c4", 0)))%>
+	
+%(hint_r3_Center_level_1)%	If you have already given Lauren $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 1)%> should you give Lauren to get $<%=fmtDecimal(918/100,2)%>?
+%(hint_r3_Center_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 1)%> you can have without going over $<%=fmtDecimal(918/100,2)%>?
+%(hint_r3_Center_level_3)%	Try entering <%=round(floor((918-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r3c2", 0)))%>
+	
+%(hint_r1c1_level_1)%	
+%(hint_r1c1_level_2)%	
+%(hint_r1c1_level_3)%	
+	
+%(hint_r1c2_level_1)%	If you have already given Lauren $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> would you give Lauren to get $<%=fmtDecimal(918/100,2)%>?
+%(hint_r1c2_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(918/100,2)%>?
+%(hint_r1c2_level_3)%	Try entering <%=round(floor((918-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)*floor(918/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c1",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))%>
+	
+%(hint_r1c3_level_1)%	If you have already given Lauren $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%>  would you give Lauren to get $<%=fmtDecimal(918/100,2)%>?
+%(hint_r1c3_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(918/100,2)%>?
+%(hint_r1c3_level_3)%	Try entering <%=round(floor((918-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)*floor(918/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c2",0)))/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))%>
+	
+%(hint_r1c4_level_1)%	If you have already given Lauren $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> would you give Lauren to get $<%=fmtDecimal(918/100,2)%>?
+%(hint_r1c4_level_2)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(918/100,2)%>?
+%(hint_r1c4_level_3)%	Try entering <%=round(floor((918-columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)*floor(918/columnCell(ten dollar bills, one dollar bills, dimes, pennies, 1000, 100, 10, 1,"r1c3",0)))))%>
+	
+%(r1c1_min)%	0
+%(r1c1_max)%	1
+%(link_r2_mostLeft_min)%	0
+%(link_r2_mostLeft_max)%	1
+%(link_r3_mostLeft_min)%	0
+%(link_r3_mostLeft_max)%	1
+	
+%(faded_r1c1)%	
+%(faded_r1c2)%	
+%(faded_r1c3)%	
+%(faded_r1c4)%	 
+%(4496962056300963153)%	If you have already given Lauren $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> should you give Lauren to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(-650096386311017303)%	
+%(-6292769245166384709)%	If you have already given Lauren $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> would you give Lauren to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(1536372731759848564)%	Try entering <%=round(floor((918-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 0)))%>
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7087947555267362117)%	If you have already given Lauren $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> should you give Lauren to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350911774282051931)%	
+%(-213056756848980930)%	If you have already given Lauren $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%>  would you give Lauren to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-213055756840980947)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c3", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650099386311017326)%	
+%(-213054756852981056)%	Try entering <%=round(floor((918-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)*floor(918/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))%>
+%(7368803326211549759)%	Try entering <%=round(floor((918-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)*floor(918/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c3",0)))))%>
+%(-6292766245166384832)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c2", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-650097386299017340)%	
+%(1536371731755848561)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-6292767245154384723)%	Try entering <%=round(floor((918-columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)*floor(918/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c1",0)))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%,"r1c2",0)))%>
+%(4496963056308963138)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5166532556208710060)%	No, this is not correct.
+%(-3036208045157016914)%	
+%(-3036209045161016917)%	
+%(4496964056296963183)%	Try entering <%=round(floor((918-totalTableDec(r3c1, r3c2, r3c3, r3c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_Center)%", 0)))%>
+%(-7087944555235362064)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-5350913774278051965)%	
+%(-9116211478850640512)%	Please enter '7' in the highlighted field.
+%(1536370731763848530)%	If you have already given Lauren $<%=fmtDecimal(totalTableDec(r3c1, r3c2, r3c3, r3c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r3_mostRight)%", 1)%> should you give Lauren to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(7368805326239549793)%	If you have already given Lauren $<%=fmtDecimal(totalTableDec(r1c1, r1c2, r1c3, r1c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> would you give Lauren to get $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-3036206045161016912)%	
+%(7368804326215549730)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "r1c4", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136516223160505835)%	What is the highest number of <%=columnCell(ten dollar bills, one dollar bills, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> you can have without going over $<%=fmtDecimal(%(total)%/100,2)%>?
+%(-136517223164505832)%	Try entering <%=round(floor((918-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 0)))%>
+%(-7087945555255362131)%	Try entering <%=round(floor((918-totalTableDec(r2c1, r2c2, r2c3, r2c4))/columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_mostRight)%", 0)))%>
+%(-5350914774282051954)%	
+%(-1575903042278205918)%	Please enter '13' in the highlighted field.
+%(-136515223168505802)%	If you have already given Lauren $<%=fmtDecimal(totalTableDec(r2c1, r2c2, r2c3, r2c4)/100,2)%>. How many <%=columnCell(ten dollar bills, %(column_2_type)%, %(column_3_type)%, %(column_4_type)%, %(column_1_value)%, %(column_2_value)%, %(column_3_value)%, %(column_4_value)%, "%(link_r2_Center)%", 1)%> should you give Lauren to get $<%=fmtDecimal(%(total)%/100,2)%>?

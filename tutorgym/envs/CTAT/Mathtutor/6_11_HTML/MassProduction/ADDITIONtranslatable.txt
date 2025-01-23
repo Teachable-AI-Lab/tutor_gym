@@ -1,0 +1,3388 @@
+Problem Name	p1
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	You have $4.66 in your pocket and $24.59 in your wallet. How much total money do you have with you?
+%(temp-numbers)%	Please add 4.66 to 24.59.
+%(op)%	+
+%(decimalposition)%	n1d5
+%(decimalposition2)%	n2d5
+%(carry_dec_loc)%	c5
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d3req)%	1
+%(n1d3)%	2
+%(n1d3hint1)%	Please enter the digit in the tens place of 24.59.
+%(n1d3hint2)%	The digit in the tens place of 24.59 is 2. Please enter 2.
+%(n1d4req)%	1
+%(n1d4)%	4
+%(n1d4hint1)%	Please enter the digit in the ones place of 24.59.
+%(n1d4hint2)%	The digit in the ones place of 24.59 is 4. Please enter 4.
+%(n1d5req)%	0
+%(n1d5)%	---
+%(n1d5hint1)%	
+%(n1d5hint2)%	
+%(n1d6req)%	1
+%(n1d6)%	5
+%(n1d6hint1)%	Please enter the digit in the tenths place of 24.59.
+%(n1d6hint2)%	The digit in the tenths place of 24.59 is 5. Please enter 5.
+%(n1d7req)%	1
+%(n1d7)%	9
+%(n1d7hint1)%	Please enter the digit in the hundredths place of 24.59.
+%(n1d7hint2)%	The digit in the hundredths place of 24.59 is 9. Please enter 9.
+%(n1d8req)%	0
+%(n1d8)%	0
+%(n1d8hint1)%	
+%(n1d8hint2)%	
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	1
+%(n2d4)%	4
+%(n2d4hint1)%	Please enter the digit in the ones place of 4.66.
+%(n2d4hint2)%	The digit in the ones place of 4.66 is 4. Please enter 4.
+%(n2d5req)%	0
+%(n2d5)%	---
+%(n2d5hint1)%	
+%(n2d5hint2)%	
+%(n2d6req)%	1
+%(n2d6)%	6
+%(n2d6hint1)%	Please enter the digit in the tenths place of 4.66.
+%(n2d6hint2)%	The digit in the tenths place of 4.66 is 6. Please enter 6.
+%(n2d7req)%	1
+%(n2d7)%	6
+%(n2d7hint1)%	Please enter the digit in the hundredths place of 4.66.
+%(n2d7hint2)%	The digit in the hundredths place of 4.66 is 6. Please enter 6.
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"c1,c2,c3,c4,c5,c6,c7,c8,c9"
+%(c1)%	0
+%(c1hint1)%	
+%(c1hint2)%	
+%(c2)%	0
+%(c2hint1)%	
+%(c2hint2)%	
+%(c3)%	0
+%(c3hint1)%	
+%(c3hint2)%	
+%(c4)%	1
+%(c4hint1)%	If you carry a value over from adding the tenths values, please enter it here.
+%(c4hint2)%	One unit was carried over from the addition of 5 tenths, 6 tenths, and a carried tenth. Please enter 1.
+%(c5)%	0
+%(c5hint1)%	
+%(c5hint2)%	
+%(c6)%	1
+%(c6hint1)%	If you carry a value over from adding the hundredths values, please enter it here.
+%(c6hint2)%	One tenth was carried over from the addition of 9 hundreths and 6 hundredths. Please enter 1.
+%(c7)%	0
+%(c7hint1)%	
+%(c7hint2)%	
+%(c8)%	0
+%(c8hint1)%	
+%(c8hint2)%	
+%(c9)%	0
+%(c9hint1)%	
+%(c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a3req)%	1
+%(a3)%	2
+%(a3hint1)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(a3hint2)%	The digits in the tens places are 2 and 0, and 2+0=2, so please enter 2 here.
+%(a4req)%	1
+%(a4)%	9
+%(a4hint1)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(a4hint2)%	The digits in the ones places are 4 and 4, and 1 one was carried from the sum of the tenths column. 4+4+1=9, so please enter 9 here.
+%(a5req)%	1
+%(a5)%	.
+%(a5hint1)%	Please enter a decimal point here.
+%(a5hint2)%	
+%(a6req)%	1
+%(a6)%	2
+%(a6hint1)%	Add the digits in the tenths places and enter the sum here. Don't forget to add any values carried!
+%(a6hint2)%	The digits in the tenths places are 5 and 6, and 1 tenth was carried from the sum of the hundreths column. 5+6+1=12, so please enter 2 here and carry a 1 over to the ones column (10 tenths = 1 one).
+%(a7req)%	1
+%(a7)%	5
+%(a7hint1)%	Add the digits in the hundredths places and enter the sum here.
+%(a7hint2)%	The digits in the hundreths places are 9 and 6.  9+6=15, so please enter 5 here and carry a 1 over to the tenths column (10 hundredths = 1 tenth).
+%(a8req)%	0
+%(a8)%	0
+%(a8hint1)%	
+%(a8hint2)%	
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+	
+	
+	
+%(a8_incorrect)%	
+%(a8_incorrect_msg)%	
+%(a7_incorrect)%	15
+%(a7_incorrect_msg)%	The number you've entered is the sum of 9+6, however you need to carry 10 into the next column using the carryboxes.
+%(a6_incorrect)%	12
+%(a6_incorrect_msg)%	The number you've entered is the sum of 6+5+1, however you need to carry 10 into the next column using the carryboxes.
+%(a5_incorrect)%	
+%(a5_incorrect_msg)%	
+%(a4_incorrect)%	
+%(a4_incorrect_msg)%	
+%(a3_incorrect)%	
+%(a3_incorrect_msg)%	
+%(a2_incorrect)%	
+%(a2_incorrect_msg)%	
+	
+	
+%(a7_missed_carry)%	
+%(a7_missed_carry_msg)%	
+%(a6_missed_carry)%	1
+%(a6_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a5_missed_carry)%	
+%(a5_missed_carry_msg)%	
+%(a4_missed_carry)%	8
+%(a4_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a3_missed_carry)%	
+%(a3_missed_carry_msg)%	
+%(a2_missed_carry)%	
+%(a2_missed_carry_msg)%	
+%(a1_missed_carry)%	
+%(a1_missed_carry_msg)%	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-addends
+%(n1d4_skill)%	Enter-addends
+%(n1d5_skill)%	Align-decimals
+%(n1d6_skill)%	Enter-addends
+%(n1d7_skill)%	Enter-addends
+%(n1d8_skill)%	Enter-leading-or-trailing-zero
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-addends
+%(n2d5_skill)%	Align-decimals
+%(n2d6_skill)%	Enter-addends
+%(n2d7_skill)%	Enter-addends
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill1)%	Enter-leading-or-trailing-zero
+%(a2_skill2)%	Enter-leading-or-trailing-zero
+%(a3_skill)%	Add-column-no-carry
+%(a4_skill1)%	Add-column-with-carry-in
+%(a4_skill2)%	Generic-skill
+%(a5_skill1)%	Align-decimals
+%(a5_skill2)%	Generic-skill
+%(a6_skill1)%	Add-column-with-carry-out
+%(a6_skill2)%	Add-column-with-carry-in
+%(a7_skill1)%	Add-column-with-carry-out
+%(a7_skill2)%	Generic-skill
+%(a8_skill)%	Enter-leading-or-trailing-zero
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(1270617690788562020)%	One unit was carried over from the addition of 5 tenths, 6 tenths, and a carried tenth. Please enter 1.
+%(6793406834378098584)%	
+%(4122547966151021001)%	
+%(-3680528304229549849)%	
+%(5939726124832416050)%	
+%(-8618717357535436169)%	Think about where the second number needs to be placed in for you to be able to solve this problem.
+%(-6907532864849400112)%	The digit in the hundredths place of 4.66 is 6. Please enter 6.
+%(1953684789227255040)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(4352543352198365568)%	
+%(-103575905657380754)%	The digits in the ones places are 4 and 4, and 1 one was carried from the sum of the tenths column. 4+4+1=9, so please enter 9 here.
+%(2011383615763894068)%	
+%(4119033553413564137)%	
+%(163251407906615009)%	If you carry a value over from adding the hundredths values, please enter it here.
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	The digits in the tens places are 2 and 0, and 2+0=2, so please enter 2 here.
+%(4140092011089457802)%	Please enter '9' in the highlighted field.
+%(1270618690780561927)%	If you carry a value over from adding the tenths values, please enter it here.
+%(6213752517472455109)%	
+%(-4733341091933527816)%	The digit in the ones place of 24.59 is 4. Please enter 4.
+%(267630474009556348)%	
+%(6382391196249600991)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	
+%(6793407834386098667)%	
+%(4457052840164545463)%	
+%(641187239159714154)%	
+%(3982482621457137133)%	
+%(-9117002631066219755)%	
+%(1951833195040611473)%	
+%(-9202527078397046537)%	
+%(5475859671157392990)%	Please enter '' in the highlighted field.
+%(4122546966191021130)%	
+%(-5088804614345645648)%	
+%(-103578905657380747)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(-3012007946899168714)%	The number you've entered is the sum of 6+5+1, however you need to carry 10 into the next column using the carryboxes.
+%(9041503051529695589)%	The digit in the tens place of 24.59 is 2. Please enter 2.
+%(-1431871633887445892)%	Please enter '3' in the highlighted field.
+%(-2825355576575072325)%	
+%(-1418468650008855376)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(8185252744885425129)%	
+%(-6058999401977538257)%	
+%(-5667668291611333756)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-6724020093282192323)%	
+%(3094705722605100522)%	Please enter the digit in the hundredths place of 24.59.
+%(-9202524078429046708)%	
+%(-6451121139349854999)%	
+%(6213751517464455158)%	
+%(622241884408253971)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(3982485621489137190)%	Please enter a decimal point here.
+%(-4936737373465204086)%	
+%(-4644522401360927443)%	Please enter the digit in the tenths place of 24.59.
+%(-6724017093314192458)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(-2567775295912293987)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(7703666018947561602)%	
+%(4989872382532288054)%	
+%(-654681931127624440)%	The digits in the tenths places are 5 and 6, and 1 tenth was carried from the sum of the hundreths column. 5+6+1=12, so please enter 2 here and carry a 1 over to the ones column (10 tenths = 1 one).
+%(-6998249527640291250)%	
+%(-654680931119624421)%	Add the digits in the tenths places and enter the sum here. Don't forget to add any values carried!
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	Please enter the digit in the ones place of 24.59.
+%(2160408901803418563)%	The number you've entered is the sum of 9+6, however you need to carry 10 into the next column using the carryboxes.
+%(3094706722693100777)%	The digit in the hundredths place of 24.59 is 9. Please enter 9.
+%(1951836195136611818)%	
+%(5939723124832416025)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the hundredths place of 4.66.
+%(-9116999631066219762)%	
+%(282619425198773699)%	Please enter '2' in the highlighted field.
+%(348783926355036851)%	Please enter '10' in the highlighted field.
+%(-7048402377707711960)%	Please enter the digit in the tenths place of 4.66.
+%(-5088807614313645509)%	
+%(-6058996401977538364)%	
+%(-3353315824230496612)%	Add the digits in the hundredths places and enter the sum here.
+%(-7793444101545105188)%	
+%(-4644523401368927522)%	The digit in the tenths place of 24.59 is 5. Please enter 5.
+%(6809645260764282625)%	The digit in the ones place of 4.66 is 4. Please enter 4.
+%(-7048405377707711949)%	The digit in the tenths place of 4.66 is 6. Please enter 6.
+%(4989873382540288005)%	
+%(3121503337589117626)%	
+%(163254407938615098)%	One tenth was carried over from the addition of 9 hundreths and 6 hundredths. Please enter 1.
+%(9041502051521695510)%	Please enter the digit in the tens place of 24.59.
+%(-2825356576583072344)%	
+%(-6451118139349855102)%	
+%(6382390196225600924)%	
+%(-3680529304221549884)%	
+%(6809644260772282722)%	Please enter the digit in the ones place of 4.66.
+%(-3353314824206496545)%	The digits in the hundreths places are 9 and 6.  9+6=15, so please enter 5 here and carry a 1 over to the tenths column (10 hundredths = 1 tenth).
+Problem Name	p4
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	You are keeping track of how much gas you use on a road trip. Yesterday, you used 13.25 gallons of gas, and today, you used 9.24 gallons of gas before arriving at your destination. How many gallons of gas did you use on your trip?
+%(temp-numbers)%	Please add 13.25 to 9.24.
+%(op)%	+
+%(decimalposition)%	n1d4
+%(decimalposition2)%	n2d4
+%(carry_dec_loc)%	c4
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d2req)%	1
+%(n1d2)%	1
+%(n1d2hint1)%	Please enter the digit in the tens place of 13.25.
+%(n1d2hint2)%	The digit in the tens place of 13.25 is 1. Please enter 1.
+%(n1d3req)%	1
+%(n1d3)%	3
+%(n1d3hint1)%	Please enter the digit in the ones place of 13.25.
+%(n1d3hint2)%	The digit in the ones place of 13.25 is 3. Please enter 3.
+%(n1d4req)%	0
+%(n1d4)%	---
+%(n1d4hint1)%	
+%(n1d4hint2)%	
+%(n1d5req)%	1
+%(n1d5)%	2
+%(n1d5hint1)%	Please enter the digit in the tenths place of 13.25.
+%(n1d5hint2)%	The digit in the tenths place of 13.25 is 2. Please enter 2.
+%(n1d6req)%	1
+%(n1d6)%	5
+%(n1d6hint1)%	Please enter the digit in the hundredths place of 13.25.
+%(n1d6hint2)%	The digit in the hundredths place of 13.25 is 5. Please enter 5.
+%(n1d7req)%	0
+%(n1d7)%	0
+%(n1d7hint1)%	
+%(n1d7hint2)%	
+%(n1d8req)%	0
+%(n1d8)%	0
+%(n1d8hint1)%	
+%(n1d8hint2)%	
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	1
+%(n2d3)%	9
+%(n2d3hint1)%	Please enter the digit in the ones place of 9.24.
+%(n2d3hint2)%	The digit in the ones place of 9.24 is 9. Please enter 9.
+%(n2d4req)%	0
+%(n2d4)%	---
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	1
+%(n2d5)%	2
+%(n2d5hint1)%	Please enter the digit in the tenths place of 9.24.
+%(n2d5hint2)%	The digit in the tenths place of 9.24 is 2. Please enter 2.
+%(n2d6req)%	1
+%(n2d6)%	4
+%(n2d6hint1)%	Please enter the digit in the hundredths place of 9.24.
+%(n2d6hint2)%	The digit in the hundredths place of 9.24 is 4. Please enter 4.
+%(n2d7req)%	0
+%(n2d7)%	0
+%(n2d7hint1)%	
+%(n2d7hint2)%	
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"c1,c2,c3,c4,c5,c6,c7,c8,c9"
+%(c1)%	0
+%(c1hint1)%	
+%(c1hint2)%	
+%(c2)%	1
+%(c2hint1)%	If you carry a value over from adding the ones values, please enter it here.
+%(c2hint2)%	One ten was carried over from the addition of 3 ones and 9 ones. Please enter 1.
+%(c3)%	0
+%(c3hint1)%	
+%(c3hint2)%	
+%(c4)%	0
+%(c4hint1)%	
+%(c4hint2)%	
+%(c5)%	0
+%(c5hint1)%	
+%(c5hint2)%	
+%(c6)%	0
+%(c6hint1)%	
+%(c6hint2)%	
+%(c7)%	0
+%(c7hint1)%	
+%(c7hint2)%	
+%(c8)%	0
+%(c8hint1)%	
+%(c8hint2)%	
+%(c9)%	0
+%(c9hint1)%	
+%(c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a2req)%	1
+%(a2)%	2
+%(a2hint1)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(a2hint2)%	The digits in the tens places are 1 and 0, and 1 ten was carried over from addition in the ones column, so 1+0+1=2, so please enter 2 here.
+%(a3req)%	1
+%(a3)%	2
+%(a3hint1)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(a3hint2)%	The digits in the ones places are 3 and 9, and nothing was carried from the sum of the tenths column. 3+9=12, so please enter a 2 here and carry a 1 over to the tens column (10 ones = 1 ten).
+%(a4req)%	1
+%(a4)%	.
+%(a4hint1)%	Please enter a decimal point here.
+%(a4hint2)%	
+%(a5req)%	1
+%(a5)%	4
+%(a5hint1)%	Add the digits in the tenths places and enter the sum here. Don't forget to add any values carried!
+%(a5hint2)%	The digits in the tenths places are 2 and 2, and nothing was carried from the sum of the hundreths column. 2+2=4, so please enter 4 here.
+%(a6req)%	1
+%(a6)%	9
+%(a6hint1)%	Add the digits in the hundredths places and enter the sum here.
+%(a6hint2)%	The digits in the hundreths places are 5 and 4.  5+4=9, so please enter 9 here.
+%(a7req)%	0
+%(a7)%	0
+%(a7hint1)%	
+%(a7hint2)%	
+%(a8req)%	0
+%(a8)%	0
+%(a8hint1)%	
+%(a8hint2)%	
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+	
+	
+	
+%(a8_incorrect)%	
+%(a8_incorrect_msg)%	
+%(a7_incorrect)%	
+%(a7_incorrect_msg)%	
+%(a6_incorrect)%	
+%(a6_incorrect_msg)%	
+%(a5_incorrect)%	
+%(a5_incorrect_msg)%	
+%(a4_incorrect)%	
+%(a4_incorrect_msg)%	
+%(a3_incorrect)%	12
+%(a3_incorrect_msg)%	The number you've entered is the sum of 9+3, however you need to carry 10 into the next column using the carryboxes.
+%(a2_incorrect)%	
+%(a2_incorrect_msg)%	
+	
+	
+%(a7_missed_carry)%	
+%(a7_missed_carry_msg)%	
+%(a6_missed_carry)%	
+%(a6_missed_carry_msg)%	
+%(a5_missed_carry)%	
+%(a5_missed_carry_msg)%	
+%(a4_missed_carry)%	
+%(a4_missed_carry_msg)%	
+%(a3_missed_carry)%	
+%(a3_missed_carry_msg)%	
+%(a2_missed_carry)%	1
+%(a2_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a1_missed_carry)%	
+%(a1_missed_carry_msg)%	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-addends
+%(n1d3_skill)%	Enter-addends
+%(n1d4_skill)%	Align-decimals
+%(n1d5_skill)%	Enter-addends
+%(n1d6_skill)%	Enter-addends
+%(n1d7_skill)%	Enter-leading-or-trailing-zero
+%(n1d8_skill)%	Enter-leading-or-trailing-zero
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-addends
+%(n2d4_skill)%	Align-decimals
+%(n2d5_skill)%	Enter-addends
+%(n2d6_skill)%	Enter-addends
+%(n2d7_skill)%	Enter-leading-or-trailing-zero
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill1)%	Add-column-with-carry-in
+%(a2_skill2)%	Generic-skill
+%(a3_skill)%	Add-column-with-carry-out
+%(a4_skill1)%	Align-decimals
+%(a4_skill2)%	Generic-skill
+%(a5_skill1)%	Add-column-no-carry
+%(a5_skill2)%	Generic-skill
+%(a6_skill1)%	Add-column-no-carry
+%(a6_skill2)%	Generic-skill
+%(a7_skill1)%	Enter-leading-or-trailing-zero
+%(a7_skill2)%	Generic-skill
+%(a8_skill)%	Enter-leading-or-trailing-zero
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(1270617690788562020)%	
+%(6793406834378098584)%	
+%(4122547966151021001)%	
+%(-3680528304229549849)%	
+%(5939726124832416050)%	
+%(-8618717357535436169)%	Think about where the second number needs to be placed in for you to be able to solve this problem.
+%(-6907532864849400112)%	
+%(1953684789227255040)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(4352543352198365568)%	
+%(-103575905657380754)%	
+%(2011383615763894068)%	
+%(4119033553413564137)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(163251407906615009)%	
+%(641188239247714409)%	Please enter the digit in the tens place of 13.25.
+%(-6634764911781064177)%	
+%(1953685789235255059)%	The digits in the ones places are 3 and 9, and nothing was carried from the sum of the tenths column. 3+9=12, so please enter a 2 here and carry a 1 over to the tens column (10 ones = 1 ten).
+%(4140092011089457802)%	Please enter '9' in the highlighted field.
+%(1270618690780561927)%	
+%(6213752517472455109)%	
+%(-4733341091933527816)%	
+%(267630474009556348)%	
+%(6382391196249600991)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	
+%(6793407834386098667)%	
+%(4457052840164545463)%	The number you've entered is the sum of 9+3, however you need to carry 10 into the next column using the carryboxes.
+%(641187239159714154)%	The digit in the tens place of 13.25 is 1. Please enter 1.
+%(3982482621457137133)%	The digits in the tenths places are 2 and 2, and nothing was carried from the sum of the hundreths column. 2+2=4, so please enter 4 here.
+%(-9117002631066219755)%	
+%(1951833195040611473)%	
+%(-9202527078397046537)%	
+%(5475859671157392990)%	Please enter '' in the highlighted field.
+%(4122546966191021130)%	
+%(-5088804614345645648)%	Please enter the digit in the tenths place of 13.25.
+%(-103578905657380747)%	Please enter a decimal point here.
+%(-3012007946899168714)%	
+%(9041503051529695589)%	The digit in the ones place of 13.25 is 3. Please enter 3.
+%(-1431871633887445892)%	Please enter '3' in the highlighted field.
+%(-2825355576575072325)%	
+%(-1418468650008855376)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(8185252744885425129)%	
+%(-6058999401977538257)%	
+%(-5667668291611333756)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-6724020093282192323)%	If you carry a value over from adding the ones values, please enter it here.
+%(3094705722605100522)%	
+%(-9202524078429046708)%	
+%(-6451121139349854999)%	
+%(6213751517464455158)%	
+%(622241884408253971)%	
+%(3982485621489137190)%	Add the digits in the tenths places and enter the sum here. Don't forget to add any values carried!
+%(-4936737373465204086)%	
+%(-4644522401360927443)%	Please enter the digit in the hundredths place of 13.25.
+%(-6724017093314192458)%	One ten was carried over from the addition of 3 ones and 9 ones. Please enter 1.
+%(-5166532556208710060)%	No, this is not correct.
+%(-2567775295912293987)%	
+%(7703666018947561602)%	
+%(4989872382532288054)%	The digit in the tenths place of 9.24 is 2. Please enter 2.
+%(-654681931127624440)%	The digits in the hundreths places are 5 and 4.  5+4=9, so please enter 9 here.
+%(-6998249527640291250)%	
+%(-654680931119624421)%	Add the digits in the hundredths places and enter the sum here.
+%(-7793447101577105273)%	Please enter the digit in the ones place of 9.24.
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	
+%(2160408901803418563)%	
+%(3094706722693100777)%	
+%(1951836195136611818)%	
+%(5939723124832416025)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	
+%(-9116999631066219762)%	
+%(282619425198773699)%	Please enter '2' in the highlighted field.
+%(348783926355036851)%	Please enter '10' in the highlighted field.
+%(-7048402377707711960)%	Please enter the digit in the hundredths place of 9.24.
+%(-5088807614313645509)%	The digit in the tenths place of 13.25 is 2. Please enter 2.
+%(-6058996401977538364)%	
+%(-3353315824230496612)%	
+%(-7793444101545105188)%	The digit in the ones place of 9.24 is 9. Please enter 9.
+%(-4644523401368927522)%	The digit in the hundredths place of 13.25 is 5. Please enter 5.
+%(6809645260764282625)%	
+%(-7048405377707711949)%	The digit in the hundredths place of 9.24 is 4. Please enter 4.
+%(4989873382540288005)%	Please enter the digit in the tenths place of 9.24.
+%(3121503337589117626)%	
+%(163254407938615098)%	
+%(9041502051521695510)%	Please enter the digit in the ones place of 13.25.
+%(-2825356576583072344)%	
+%(-6451118139349855102)%	
+%(6382390196225600924)%	The digits in the tens places are 1 and 0, and 1 ten was carried over from addition in the ones column, so 1+0+1=2, so please enter 2 here.
+%(-3680529304221549884)%	
+%(6809644260772282722)%	
+%(-3353314824206496545)%	
+Problem Name	p5
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	Please add 50.48 to 15.69.
+%(temp-numbers)%	Please add 50.48 to 15.69.
+%(op)%	+
+%(decimalposition)%	n1d6
+%(decimalposition2)%	n2d6
+%(carry_dec_loc)%	c6
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d3req)%	0
+%(n1d3)%	0
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d4req)%	1
+%(n1d4)%	1
+%(n1d4hint1)%	Please enter the digit in the tens place of 15.69.
+%(n1d4hint2)%	The digit in the tens place of 15.69 is 1. Please enter 1.
+%(n1d5req)%	1
+%(n1d5)%	5
+%(n1d5hint1)%	Please enter the digit in the ones place of 15.69.
+%(n1d5hint2)%	The digit in the ones place of 15.69 is 5. Please enter 5.
+%(n1d6req)%	0
+%(n1d6)%	---
+%(n1d6hint1)%	
+%(n1d6hint2)%	
+%(n1d7req)%	1
+%(n1d7)%	6
+%(n1d7hint1)%	Please enter the digit in the tenths place of 15.69.
+%(n1d7hint2)%	The digit in the tenths place of 15.69 is 6. Please enter 6.
+%(n1d8req)%	1
+%(n1d8)%	9
+%(n1d8hint1)%	Please enter the digit in the hundredths place of 15.69.
+%(n1d8hint2)%	The digit in the hundredths place of 15.69 is 9. Please enter 9.
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	1
+%(n2d4)%	5
+%(n2d4hint1)%	Please enter the digit in the tens place of 50.48.
+%(n2d4hint2)%	The digit in the tens place of 50.48 is 5. Please enter 5.
+%(n2d5req)%	1
+%(n2d5)%	0
+%(n2d5hint1)%	Please enter the digit in the ones place of 50.48.
+%(n2d5hint2)%	The digit in the ones place of 50.48 is 0. Please enter 0.
+%(n2d6req)%	0
+%(n2d6)%	---
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	1
+%(n2d7)%	4
+%(n2d7hint1)%	Please enter the digit in the tenths place of 50.48.
+%(n2d7hint2)%	The digit in the tenths place of 50.48 is 4. Please enter 4.
+%(n2d8req)%	1
+%(n2d8)%	8
+%(n2d8hint1)%	Please enter the digit in the hundredths place of 50.48.
+%(n2d8hint2)%	The digit in the hundredths place of 50.48 is 8. Please enter 8.
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"c1,c2,c3,c4,c5,c6,c7,c8,c9"
+%(c1)%	0
+%(c1hint1)%	
+%(c1hint2)%	
+%(c2)%	0
+%(c2hint1)%	
+%(c2hint2)%	
+%(c3)%	0
+%(c3hint1)%	
+%(c3hint2)%	
+%(c4)%	0
+%(c4hint1)%	
+%(c4hint2)%	
+%(c5)%	1
+%(c5hint1)%	If you carry a value over from adding the tenths values, please enter it here.
+%(c5hint2)%	One unit was carried over from the addition of 6 tenths, 4 tenths, and one carried tenth. Please enter 1.
+%(c6)%	0
+%(c6hint1)%	
+%(c6hint2)%	
+%(c7)%	1
+%(c7hint1)%	If you carry a value over from adding the hundredths values, please enter it here.
+%(c7hint2)%	One tenth was carried over from the addition of 8 hundreths and 9 hundredths. Please enter 1.
+%(c8)%	0
+%(c8hint1)%	
+%(c8hint2)%	
+%(c9)%	0
+%(c9hint1)%	
+%(c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a4req)%	1
+%(a4)%	6
+%(a4hint1)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(a4hint2)%	The digits in the tens places are 5 and 1, and nothing was carried over from addition in the ones column. 5+1=6, so please enter 6 here.
+%(a5req)%	1
+%(a5)%	6
+%(a5hint1)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(a5hint2)%	The digits in the ones places are 0 and 5, and 1 one was carried from the sum of the tenths column. 0+5+1=6, so please enter a 6 here.
+%(a6req)%	1
+%(a6)%	.
+%(a6hint1)%	Please enter a decimal point here.
+%(a6hint2)%	
+%(a7req)%	1
+%(a7)%	1
+%(a7hint1)%	Add the digits in the tenths places and enter the sum here. Don't forget to add any values carried!
+%(a7hint2)%	The digits in the tenths places are 4 and 6, and 1 tenth was carried from the sum of the hundreths column. 4+6+1=11, so please enter 1 here and carry a 1 over to the ones column (10 tenths = 1 one).
+%(a8req)%	1
+%(a8)%	7
+%(a8hint1)%	Add the digits in the hundredths places and enter the sum here.
+%(a8hint2)%	The digits in the hundreths places are 8 and 9.  8+9=17, so please enter 7 here and carry a 1 over to the tenths column (10 hundredths = 1 tenth).
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+	
+	
+	
+%(a8_incorrect)%	17
+%(a8_incorrect_msg)%	The number you've entered is the sum of 9+8, however you need to carry 10 into the next column using the carryboxes.
+%(a7_incorrect)%	11
+%(a7_incorrect_msg)%	The number you've entered is the sum of 6+4+1, however you need to carry 10 into the next column using the carryboxes.
+%(a6_incorrect)%	
+%(a6_incorrect_msg)%	
+%(a5_incorrect)%	
+%(a5_incorrect_msg)%	
+%(a4_incorrect)%	
+%(a4_incorrect_msg)%	
+%(a3_incorrect)%	
+%(a3_incorrect_msg)%	
+%(a2_incorrect)%	
+%(a2_incorrect_msg)%	
+	
+	
+%(a7_missed_carry)%	0
+%(a7_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a6_missed_carry)%	
+%(a6_missed_carry_msg)%	
+%(a5_missed_carry)%	5
+%(a5_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a4_missed_carry)%	
+%(a4_missed_carry_msg)%	
+%(a3_missed_carry)%	
+%(a3_missed_carry_msg)%	
+%(a2_missed_carry)%	
+%(a2_missed_carry_msg)%	
+%(a1_missed_carry)%	
+%(a1_missed_carry_msg)%	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-leading-or-trailing-zero
+%(n1d4_skill)%	Enter-addends
+%(n1d5_skill)%	Enter-addends
+%(n1d6_skill)%	Align-decimals
+%(n1d7_skill)%	Enter-addends
+%(n1d8_skill)%	Enter-addends
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-addends
+%(n2d5_skill)%	Enter-addends
+%(n2d6_skill)%	Align-decimals
+%(n2d7_skill)%	Enter-addends
+%(n2d8_skill)%	Enter-addends
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill1)%	Enter-leading-or-trailing-zero
+%(a2_skill2)%	Enter-leading-or-trailing-zero
+%(a3_skill)%	Enter-leading-or-trailing-zero
+%(a4_skill1)%	Add-column-no-carry
+%(a4_skill2)%	Generic-skill
+%(a5_skill1)%	Add-column-with-carry-in
+%(a5_skill2)%	Generic-skill
+%(a6_skill1)%	Align-decimals
+%(a6_skill2)%	Generic-skill
+%(a7_skill1)%	Add-column-with-carry-out
+%(a7_skill2)%	Add-column-with-carry-in
+%(a8_skill)%	Add-column-with-carry-out
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(1270617690788562020)%	
+%(6793406834378098584)%	
+%(4122547966151021001)%	
+%(-3680528304229549849)%	
+%(5939726124832416050)%	
+%(-8618717357535436169)%	Think about where the second number needs to be placed in for you to be able to solve this problem.
+%(-6907532864849400112)%	The digit in the tenths place of 50.48 is 4. Please enter 4.
+%(1953684789227255040)%	
+%(4352543352198365568)%	
+%(-103575905657380754)%	The digits in the tens places are 5 and 1, and nothing was carried over from addition in the ones column. 5+1=6, so please enter 6 here.
+%(2011383615763894068)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(4119033553413564137)%	
+%(163251407906615009)%	
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(4140092011089457802)%	Please enter '9' in the highlighted field.
+%(1270618690780561927)%	
+%(6213752517472455109)%	The digit in the hundredths place of 50.48 is 8. Please enter 8.
+%(-4733341091933527816)%	The digit in the tens place of 15.69 is 1. Please enter 1.
+%(267630474009556348)%	The digit in the hundredths place of 15.69 is 9. Please enter 9.
+%(6382391196249600991)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	Please enter the digit in the hundredths place of 15.69.
+%(6793407834386098667)%	
+%(4457052840164545463)%	
+%(641187239159714154)%	
+%(3982482621457137133)%	The digits in the ones places are 0 and 5, and 1 one was carried from the sum of the tenths column. 0+5+1=6, so please enter a 6 here.
+%(-9117002631066219755)%	
+%(1951833195040611473)%	Add the digits in the hundredths places and enter the sum here.
+%(-9202527078397046537)%	
+%(5475859671157392990)%	Please enter '0' in the highlighted field.
+%(4122546966191021130)%	
+%(-5088804614345645648)%	Please enter the digit in the ones place of 15.69.
+%(-103578905657380747)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(-3012007946899168714)%	
+%(9041503051529695589)%	
+%(-1431871633887445892)%	Please enter '3' in the highlighted field.
+%(-2825355576575072325)%	One unit was carried over from the addition of 6 tenths, 4 tenths, and one carried tenth. Please enter 1.
+%(-1418468650008855376)%	The number you've entered is the sum of 9+8, however you need to carry 10 into the next column using the carryboxes.
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(8185252744885425129)%	
+%(-6058999401977538257)%	
+%(-5667668291611333756)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-6724020093282192323)%	
+%(3094705722605100522)%	Please enter the digit in the tenths place of 15.69.
+%(-9202524078429046708)%	
+%(-6451121139349854999)%	One tenth was carried over from the addition of 8 hundreths and 9 hundredths. Please enter 1.
+%(6213751517464455158)%	Please enter the digit in the hundredths place of 50.48.
+%(622241884408253971)%	
+%(3982485621489137190)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(-4936737373465204086)%	
+%(-4644522401360927443)%	
+%(-6724017093314192458)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(-2567775295912293987)%	
+%(7703666018947561602)%	
+%(4989872382532288054)%	The digit in the ones place of 50.48 is 0. Please enter 0.
+%(-654681931127624440)%	
+%(-6998249527640291250)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(-654680931119624421)%	Please enter a decimal point here.
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	Please enter the digit in the tens place of 15.69.
+%(2160408901803418563)%	The number you've entered is the sum of 6+4+1, however you need to carry 10 into the next column using the carryboxes.
+%(3094706722693100777)%	The digit in the tenths place of 15.69 is 6. Please enter 6.
+%(1951836195136611818)%	The digits in the hundreths places are 8 and 9.  8+9=17, so please enter 7 here and carry a 1 over to the tenths column (10 hundredths = 1 tenth).
+%(5939723124832416025)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the tenths place of 50.48.
+%(-9116999631066219762)%	
+%(282619425198773699)%	Please enter '2' in the highlighted field.
+%(348783926355036851)%	Please enter '10' in the highlighted field.
+%(-7048402377707711960)%	
+%(-5088807614313645509)%	The digit in the ones place of 15.69 is 5. Please enter 5.
+%(-6058996401977538364)%	
+%(-3353315824230496612)%	Add the digits in the tenths places and enter the sum here. Don't forget to add any values carried!
+%(-7793444101545105188)%	
+%(-4644523401368927522)%	
+%(6809645260764282625)%	The digit in the tens place of 50.48 is 5. Please enter 5.
+%(-7048405377707711949)%	
+%(4989873382540288005)%	Please enter the digit in the ones place of 50.48.
+%(3121503337589117626)%	
+%(163254407938615098)%	
+%(9041502051521695510)%	
+%(-2825356576583072344)%	If you carry a value over from adding the tenths values, please enter it here.
+%(-6451118139349855102)%	If you carry a value over from adding the hundredths values, please enter it here.
+%(6382390196225600924)%	
+%(-3680529304221549884)%	
+%(6809644260772282722)%	Please enter the digit in the tens place of 50.48.
+%(-3353314824206496545)%	The digits in the tenths places are 4 and 6, and 1 tenth was carried from the sum of the hundreths column. 4+6+1=11, so please enter 1 here and carry a 1 over to the ones column (10 tenths = 1 one).
+Problem Name	p6
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	Please add 6.95 to 2.48.
+%(temp-numbers)%	Please add 6.95 to 2.48.
+%(op)%	+
+%(decimalposition)%	n1d6
+%(decimalposition2)%	n2d6
+%(carry_dec_loc)%	c6
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d3req)%	0
+%(n1d3)%	0
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d4req)%	0
+%(n1d4)%	0
+%(n1d4hint1)%	
+%(n1d4hint2)%	
+%(n1d5req)%	1
+%(n1d5)%	2
+%(n1d5hint1)%	Please enter the digit in the ones place of 2.48.
+%(n1d5hint2)%	The digit in the ones place of 2.48 is 2. Please enter 2.
+%(n1d6req)%	0
+%(n1d6)%	---
+%(n1d6hint1)%	
+%(n1d6hint2)%	
+%(n1d7req)%	1
+%(n1d7)%	4
+%(n1d7hint1)%	Please enter the digit in the tenths place of 2.48.
+%(n1d7hint2)%	The digit in the tenths place of 2.48 is 4. Please enter 4.
+%(n1d8req)%	1
+%(n1d8)%	8
+%(n1d8hint1)%	Please enter the digit in the hundredths place of 2.48.
+%(n1d8hint2)%	The digit in the hundredths place of 2.48 is 8. Please enter 8.
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	0
+%(n2d4)%	0
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	1
+%(n2d5)%	6
+%(n2d5hint1)%	Please enter the digit in the ones place of 6.95.
+%(n2d5hint2)%	The digit in the ones place of 6.95 is 6. Please enter 6.
+%(n2d6req)%	0
+%(n2d6)%	---
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	1
+%(n2d7)%	9
+%(n2d7hint1)%	Please enter the digit in the tenths place of 6.95.
+%(n2d7hint2)%	The digit in the tenths place of 6.95 is 9. Please enter 9.
+%(n2d8req)%	1
+%(n2d8)%	5
+%(n2d8hint1)%	Please enter the digit in the hundredths place of 6.95.
+%(n2d8hint2)%	The digit in the hundredths place of 6.95 is 5. Please enter 5.
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"c1,c2,c3,c4,c5,c6,c7,c8,c9"
+%(c1)%	0
+%(c1hint1)%	
+%(c1hint2)%	
+%(c2)%	0
+%(c2hint1)%	
+%(c2hint2)%	
+%(c3)%	0
+%(c3hint1)%	
+%(c3hint2)%	
+%(c4)%	0
+%(c4hint1)%	
+%(c4hint2)%	
+%(c5)%	1
+%(c5hint1)%	If you carry a value over from adding the tenths values, please enter it here.
+%(c5hint2)%	One unit was carried over from the addition of 9 tenths, 4 tenths, and one carried tenth. Please enter 1.
+%(c6)%	0
+%(c6hint1)%	
+%(c6hint2)%	
+%(c7)%	1
+%(c7hint1)%	If you carry a value over from adding the hundredths values, please enter it here.
+%(c7hint2)%	One tenth was carried over from the addition of 8 hundreths and 5 hundredths. Please enter 1.
+%(c8)%	0
+%(c8hint1)%	
+%(c8hint2)%	
+%(c9)%	0
+%(c9hint1)%	
+%(c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a4req)%	0
+%(a4)%	0
+%(a4hint1)%	
+%(a4hint2)%	
+%(a5req)%	1
+%(a5)%	9
+%(a5hint1)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(a5hint2)%	The digits in the ones places are 6 and 2, and 1 one was carried from the sum of the tenths column. 6+2+1=9, so please enter a 9 here.
+%(a6req)%	1
+%(a6)%	.
+%(a6hint1)%	Please enter a decimal point here.
+%(a6hint2)%	
+%(a7req)%	1
+%(a7)%	4
+%(a7hint1)%	Add the digits in the tenths places and enter the sum here. Don't forget to add any values carried!
+%(a7hint2)%	The digits in the tenths places are 4 and 9, and 1 tenth was carried from the sum of the hundreths column. 4+9+1=14, so please enter 4 here and carry a 1 over to the ones column (10 tenths = 1 one).
+%(a8req)%	1
+%(a8)%	3
+%(a8hint1)%	Add the digits in the hundredths places and enter the sum here.
+%(a8hint2)%	The digits in the hundreths places are 8 and 5.  8+5=13, so please enter 3 here and carry a 1 over to the tenths column (10 hundredths = 1 tenth).
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+	
+	
+	
+%(a8_incorrect)%	13
+%(a8_incorrect_msg)%	The number you've entered is the sum of 5+8, however you need to carry 10 into the next column using the carryboxes.
+%(a7_incorrect)%	14
+%(a7_incorrect_msg)%	The number you've entered is the sum of 9+4+1, however you need to carry 10 into the next column using the carryboxes.
+%(a6_incorrect)%	
+%(a6_incorrect_msg)%	
+%(a5_incorrect)%	
+%(a5_incorrect_msg)%	
+%(a4_incorrect)%	
+%(a4_incorrect_msg)%	
+%(a3_incorrect)%	
+%(a3_incorrect_msg)%	
+%(a2_incorrect)%	
+%(a2_incorrect_msg)%	
+	
+	
+%(a7_missed_carry)%	3
+%(a7_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a6_missed_carry)%	
+%(a6_missed_carry_msg)%	
+%(a5_missed_carry)%	8
+%(a5_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a4_missed_carry)%	
+%(a4_missed_carry_msg)%	
+%(a3_missed_carry)%	
+%(a3_missed_carry_msg)%	
+%(a2_missed_carry)%	
+%(a2_missed_carry_msg)%	
+%(a1_missed_carry)%	
+%(a1_missed_carry_msg)%	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-leading-or-trailing-zero
+%(n1d4_skill)%	Enter-leading-or-trailing-zero
+%(n1d5_skill)%	Enter-addends
+%(n1d6_skill)%	Align-decimals
+%(n1d7_skill)%	Enter-addends
+%(n1d8_skill)%	Enter-addends
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-leading-or-trailing-zero
+%(n2d5_skill)%	Enter-addends
+%(n2d6_skill)%	Align-decimals
+%(n2d7_skill)%	Enter-addends
+%(n2d8_skill)%	Enter-addends
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill1)%	Enter-leading-or-trailing-zero
+%(a2_skill2)%	Enter-leading-or-trailing-zero
+%(a3_skill)%	Enter-leading-or-trailing-zero
+%(a4_skill1)%	Enter-leading-or-trailing-zero
+%(a4_skill2)%	Generic-skill
+%(a5_skill1)%	Add-column-with-carry-in
+%(a5_skill2)%	Generic-skill
+%(a6_skill1)%	Align-decimals
+%(a6_skill2)%	Generic-skill
+%(a7_skill1)%	Add-column-with-carry-out
+%(a7_skill2)%	Add-column-with-carry-in
+%(a8_skill)%	Add-column-with-carry-out
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(1270617690788562020)%	
+%(6793406834378098584)%	
+%(4122547966151021001)%	
+%(-3680528304229549849)%	
+%(5939726124832416050)%	
+%(-8618717357535436169)%	Think about where the second number needs to be placed in for you to be able to solve this problem.
+%(-6907532864849400112)%	The digit in the tenths place of 6.95 is 9. Please enter 9.
+%(1953684789227255040)%	
+%(4352543352198365568)%	
+%(-103575905657380754)%	
+%(2011383615763894068)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(4119033553413564137)%	
+%(163251407906615009)%	
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(4140092011089457802)%	Please enter '9' in the highlighted field.
+%(1270618690780561927)%	
+%(6213752517472455109)%	The digit in the hundredths place of 6.95 is 5. Please enter 5.
+%(-4733341091933527816)%	
+%(267630474009556348)%	The digit in the hundredths place of 2.48 is 8. Please enter 8.
+%(6382391196249600991)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	Please enter the digit in the hundredths place of 2.48.
+%(6793407834386098667)%	
+%(4457052840164545463)%	
+%(641187239159714154)%	
+%(3982482621457137133)%	The digits in the ones places are 6 and 2, and 1 one was carried from the sum of the tenths column. 6+2+1=9, so please enter a 9 here.
+%(-9117002631066219755)%	
+%(1951833195040611473)%	Add the digits in the hundredths places and enter the sum here.
+%(-9202527078397046537)%	
+%(5475859671157392990)%	Please enter '3' in the highlighted field.
+%(4122546966191021130)%	
+%(-5088804614345645648)%	Please enter the digit in the ones place of 2.48.
+%(-103578905657380747)%	
+%(-3012007946899168714)%	
+%(9041503051529695589)%	
+%(-1431871633887445892)%	Please enter '3' in the highlighted field.
+%(-2825355576575072325)%	One unit was carried over from the addition of 9 tenths, 4 tenths, and one carried tenth. Please enter 1.
+%(-1418468650008855376)%	The number you've entered is the sum of 5+8, however you need to carry 10 into the next column using the carryboxes.
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(8185252744885425129)%	
+%(-6058999401977538257)%	
+%(-5667668291611333756)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-6724020093282192323)%	
+%(3094705722605100522)%	Please enter the digit in the tenths place of 2.48.
+%(-9202524078429046708)%	
+%(-6451121139349854999)%	One tenth was carried over from the addition of 8 hundreths and 5 hundredths. Please enter 1.
+%(6213751517464455158)%	Please enter the digit in the hundredths place of 6.95.
+%(622241884408253971)%	
+%(3982485621489137190)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(-4936737373465204086)%	
+%(-4644522401360927443)%	
+%(-6724017093314192458)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(-2567775295912293987)%	
+%(7703666018947561602)%	
+%(4989872382532288054)%	The digit in the ones place of 6.95 is 6. Please enter 6.
+%(-654681931127624440)%	
+%(-6998249527640291250)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(-654680931119624421)%	Please enter a decimal point here.
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	
+%(2160408901803418563)%	The number you've entered is the sum of 9+4+1, however you need to carry 10 into the next column using the carryboxes.
+%(3094706722693100777)%	The digit in the tenths place of 2.48 is 4. Please enter 4.
+%(1951836195136611818)%	The digits in the hundreths places are 8 and 5.  8+5=13, so please enter 3 here and carry a 1 over to the tenths column (10 hundredths = 1 tenth).
+%(5939723124832416025)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the tenths place of 6.95.
+%(-9116999631066219762)%	
+%(282619425198773699)%	Please enter '2' in the highlighted field.
+%(348783926355036851)%	Please enter '10' in the highlighted field.
+%(-7048402377707711960)%	
+%(-5088807614313645509)%	The digit in the ones place of 2.48 is 2. Please enter 2.
+%(-6058996401977538364)%	
+%(-3353315824230496612)%	Add the digits in the tenths places and enter the sum here. Don't forget to add any values carried!
+%(-7793444101545105188)%	
+%(-4644523401368927522)%	
+%(6809645260764282625)%	
+%(-7048405377707711949)%	
+%(4989873382540288005)%	Please enter the digit in the ones place of 6.95.
+%(3121503337589117626)%	
+%(163254407938615098)%	
+%(9041502051521695510)%	
+%(-2825356576583072344)%	If you carry a value over from adding the tenths values, please enter it here.
+%(-6451118139349855102)%	If you carry a value over from adding the hundredths values, please enter it here.
+%(6382390196225600924)%	
+%(-3680529304221549884)%	
+%(6809644260772282722)%	
+%(-3353314824206496545)%	The digits in the tenths places are 4 and 9, and 1 tenth was carried from the sum of the hundreths column. 4+9+1=14, so please enter 4 here and carry a 1 over to the ones column (10 tenths = 1 one).
+Problem Name	p7
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	Yesterday, you used 598.8 gallons of water to fill your swimming pool and 37.4 gallons of water to wash the family car. How many gallons of water did you use for both chores?
+%(temp-numbers)%	Please add 37.4 to 598.8
+%(op)%	+
+%(decimalposition)%	n1d7
+%(decimalposition2)%	n2d7
+%(carry_dec_loc)%	c7
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d3req)%	0
+%(n1d3)%	0
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d4req)%	1
+%(n1d4)%	5
+%(n1d4hint1)%	Please enter the digit in the hundreds place of 598.8.
+%(n1d4hint2)%	The digit in the hundreds place of 598.8 is 5. Please enter 5.
+%(n1d5req)%	1
+%(n1d5)%	9
+%(n1d5hint1)%	Please enter the digit in the tens place of 598.8.
+%(n1d5hint2)%	The digit in the tens place of 598.8 is 9. Please enter 9.
+%(n1d6req)%	1
+%(n1d6)%	8
+%(n1d6hint1)%	Please enter the digit in the ones place of 598.8.
+%(n1d6hint2)%	The digit in the ones place of 598.8 is 8. Please enter 8.
+%(n1d7req)%	0
+%(n1d7)%	---
+%(n1d7hint1)%	
+%(n1d7hint2)%	
+%(n1d8req)%	1
+%(n1d8)%	8
+%(n1d8hint1)%	Please enter the digit in the tenths place of 598.8.
+%(n1d8hint2)%	The digit in the tenths place of 598.8 is 8. Please enter 8.
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	0
+%(n2d4)%	0
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	1
+%(n2d5)%	3
+%(n2d5hint1)%	Please enter the digit in the tens place of 37.4.
+%(n2d5hint2)%	The digit in the tens place of 37.4 is 3. Please enter 3.
+%(n2d6req)%	1
+%(n2d6)%	7
+%(n2d6hint1)%	Please enter the digit in the ones place of 37.4.
+%(n2d6hint2)%	The digit in the ones place of 37.4 is 7. Please enter 7.
+%(n2d7req)%	0
+%(n2d7)%	---
+%(n2d7hint1)%	
+%(n2d7hint2)%	
+%(n2d8req)%	1
+%(n2d8)%	4
+%(n2d8hint1)%	Please enter the digit in the tenths place of 37.4.
+%(n2d8hint2)%	The digit in the tenths place of 37.4 is 4. Please enter 4.
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"c1,c2,c3,c4,c5,c6,c7,c8,c9"
+%(c1)%	0
+%(c1hint1)%	
+%(c1hint2)%	
+%(c2)%	0
+%(c2hint1)%	
+%(c2hint2)%	
+%(c3)%	0
+%(c3hint1)%	
+%(c3hint2)%	
+%(c4)%	1
+%(c4hint1)%	If you carry a value over from adding the tens values, please enter it here.
+%(c4hint2)%	One hundred was carried over from the addition of 9 tens, 3 tens, and one carried ten. Please enter 1.
+%(c5)%	1
+%(c5hint1)%	If you carry a value over from adding the ones values, please enter it here.
+%(c5hint2)%	One ten was carried over from the addition of 8 ones, 7 ones, and 1 carried one. Please enter 1.
+%(c6)%	1
+%(c6hint1)%	If you carry a value over from adding the tenths values, please enter it here.
+%(c6hint2)%	One unit was carried over from the addition of 8 tenths and 4 tenths. Please enter 1.
+%(c7)%	0
+%(c7hint1)%	
+%(c7hint2)%	
+%(c8)%	0
+%(c8hint1)%	
+%(c8hint2)%	
+%(c9)%	0
+%(c9hint1)%	
+%(c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a4req)%	1
+%(a4)%	6
+%(a4hint1)%	Add the digits in the hundreds places and enter the sum here. Don't forget to add any values carried!
+%(a4hint2)%	The digits in the hundreds places are 5 and 0, and 1 hundred was carried over from addition in the tens column. 5+0+1=6, so please enter 6 here.
+%(a5req)%	1
+%(a5)%	3
+%(a5hint1)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(a5hint2)%	The digits in the tens places are 9 and 3, and 1 ten was carried over from addition in the ones column. 9+3+1=13, so please enter 3 here and carry a 1 over to the hundreds column.
+%(a6req)%	1
+%(a6)%	6
+%(a6hint1)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(a6hint2)%	The digits in the ones places are 8 and 7, and 1 one was carried from the sum of the tenths column. 8+7+1=16, so please enter a 6 here and carry a 1 over to the tens place (10 ones = 1 ten).
+%(a7req)%	1
+%(a7)%	.
+%(a7hint1)%	Please enter a decimal point here.
+%(a7hint2)%	
+%(a8req)%	1
+%(a8)%	2
+%(a8hint1)%	Add the digits in the tenths places and enter the sum here. 
+%(a8hint2)%	The digits in the tenths places are 4 and 8.  4+8=12, so please enter 2 here and carry a 1 over to the ones column (10 tenths = 1).
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+	
+	
+	
+%(a8_incorrect)%	12
+%(a8_incorrect_msg)%	The number you've entered is the sum of 4+8, however you need to carry 10 into the next column using the carryboxes.
+%(a7_incorrect)%	
+%(a7_incorrect_msg)%	
+%(a6_incorrect)%	16
+%(a6_incorrect_msg)%	The number you've entered is the sum of 7+8+1, however you need to carry 10 into the next column using the carryboxes.
+%(a5_incorrect)%	13
+%(a5_incorrect_msg)%	The number you've entered is the sum of 3+9+1, however you need to carry 10 into the next column using the carryboxes.
+%(a4_incorrect)%	
+%(a4_incorrect_msg)%	
+%(a3_incorrect)%	
+%(a3_incorrect_msg)%	
+%(a2_incorrect)%	
+%(a2_incorrect_msg)%	
+	
+	
+%(a7_missed_carry)%	
+%(a7_missed_carry_msg)%	
+%(a6_missed_carry)%	5
+%(a6_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a5_missed_carry)%	2
+%(a5_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a4_missed_carry)%	5
+%(a4_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a3_missed_carry)%	
+%(a3_missed_carry_msg)%	
+%(a2_missed_carry)%	
+%(a2_missed_carry_msg)%	
+%(a1_missed_carry)%	
+%(a1_missed_carry_msg)%	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-leading-or-trailing-zero
+%(n1d4_skill)%	Enter-addends
+%(n1d5_skill)%	Enter-addends
+%(n1d6_skill)%	Enter-addends
+%(n1d7_skill)%	Align-decimals
+%(n1d8_skill)%	Enter-addends
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-leading-or-trailing-zero
+%(n2d5_skill)%	Enter-addends
+%(n2d6_skill)%	Enter-addends
+%(n2d7_skill)%	Align-decimals
+%(n2d8_skill)%	Enter-addends
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill1)%	Enter-leading-or-trailing-zero
+%(a2_skill2)%	Enter-leading-or-trailing-zero
+%(a3_skill)%	Enter-leading-or-trailing-zero
+%(a4_skill1)%	Add-column-with-carry-in
+%(a4_skill2)%	Generic-skill
+%(a5_skill1)%	Add-column-with-carry-out
+%(a5_skill2)%	Add-column-with-carry-in
+%(a6_skill1)%	Add-column-with-carry-out
+%(a6_skill2)%	Add-column-with-carry-in
+%(a7_skill1)%	Align-decimals
+%(a7_skill2)%	Generic-skill
+%(a8_skill)%	Add-column-with-carry-out
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(1270617690788562020)%	One hundred was carried over from the addition of 9 tens, 3 tens, and one carried ten. Please enter 1.
+%(6793406834378098584)%	
+%(4122547966151021001)%	
+%(-3680528304229549849)%	
+%(5939726124832416050)%	
+%(-8618717357535436169)%	Think about where the second number needs to be placed in for you to be able to solve this problem.
+%(-6907532864849400112)%	
+%(1953684789227255040)%	
+%(4352543352198365568)%	
+%(-103575905657380754)%	The digits in the hundreds places are 5 and 0, and 1 hundred was carried over from addition in the tens column. 5+0+1=6, so please enter 6 here.
+%(2011383615763894068)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(4119033553413564137)%	
+%(163251407906615009)%	If you carry a value over from adding the tenths values, please enter it here.
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(4140092011089457802)%	Please enter '9' in the highlighted field.
+%(1270618690780561927)%	If you carry a value over from adding the tens values, please enter it here.
+%(6213752517472455109)%	The digit in the tenths place of 37.4 is 4. Please enter 4.
+%(-4733341091933527816)%	The digit in the hundreds place of 598.8 is 5. Please enter 5.
+%(267630474009556348)%	The digit in the tenths place of 598.8 is 8. Please enter 8.
+%(6382391196249600991)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	Please enter the digit in the tenths place of 598.8.
+%(6793407834386098667)%	
+%(4457052840164545463)%	
+%(641187239159714154)%	
+%(3982482621457137133)%	The digits in the tens places are 9 and 3, and 1 ten was carried over from addition in the ones column. 9+3+1=13, so please enter 3 here and carry a 1 over to the hundreds column.
+%(-9117002631066219755)%	
+%(1951833195040611473)%	Add the digits in the tenths places and enter the sum here. 
+%(-9202527078397046537)%	
+%(5475859671157392990)%	Please enter '' in the highlighted field.
+%(4122546966191021130)%	
+%(-5088804614345645648)%	Please enter the digit in the tens place of 598.8.
+%(-103578905657380747)%	Add the digits in the hundreds places and enter the sum here. Don't forget to add any values carried!
+%(-3012007946899168714)%	The number you've entered is the sum of 7+8+1, however you need to carry 10 into the next column using the carryboxes.
+%(9041503051529695589)%	
+%(-1431871633887445892)%	Please enter '3' in the highlighted field.
+%(-2825355576575072325)%	One ten was carried over from the addition of 8 ones, 7 ones, and 1 carried one. Please enter 1.
+%(-1418468650008855376)%	The number you've entered is the sum of 4+8, however you need to carry 10 into the next column using the carryboxes.
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(8185252744885425129)%	The number you've entered is the sum of 3+9+1, however you need to carry 10 into the next column using the carryboxes.
+%(-6058999401977538257)%	
+%(-5667668291611333756)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-6724020093282192323)%	
+%(3094705722605100522)%	
+%(-9202524078429046708)%	
+%(-6451121139349854999)%	
+%(6213751517464455158)%	Please enter the digit in the tenths place of 37.4.
+%(622241884408253971)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(3982485621489137190)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(-4936737373465204086)%	
+%(-4644522401360927443)%	Please enter the digit in the ones place of 598.8.
+%(-6724017093314192458)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(-2567775295912293987)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(7703666018947561602)%	
+%(4989872382532288054)%	The digit in the tens place of 37.4 is 3. Please enter 3.
+%(-654681931127624440)%	The digits in the ones places are 8 and 7, and 1 one was carried from the sum of the tenths column. 8+7+1=16, so please enter a 6 here and carry a 1 over to the tens place (10 ones = 1 ten).
+%(-6998249527640291250)%	
+%(-654680931119624421)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	Please enter the digit in the hundreds place of 598.8.
+%(2160408901803418563)%	
+%(3094706722693100777)%	
+%(1951836195136611818)%	The digits in the tenths places are 4 and 8.  4+8=12, so please enter 2 here and carry a 1 over to the ones column (10 tenths = 1).
+%(5939723124832416025)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	
+%(-9116999631066219762)%	
+%(282619425198773699)%	Please enter '2' in the highlighted field.
+%(348783926355036851)%	Please enter '10' in the highlighted field.
+%(-7048402377707711960)%	Please enter the digit in the ones place of 37.4.
+%(-5088807614313645509)%	The digit in the tens place of 598.8 is 9. Please enter 9.
+%(-6058996401977538364)%	
+%(-3353315824230496612)%	Please enter a decimal point here.
+%(-7793444101545105188)%	
+%(-4644523401368927522)%	The digit in the ones place of 598.8 is 8. Please enter 8.
+%(6809645260764282625)%	
+%(-7048405377707711949)%	The digit in the ones place of 37.4 is 7. Please enter 7.
+%(4989873382540288005)%	Please enter the digit in the tens place of 37.4.
+%(3121503337589117626)%	
+%(163254407938615098)%	One unit was carried over from the addition of 8 tenths and 4 tenths. Please enter 1.
+%(9041502051521695510)%	
+%(-2825356576583072344)%	If you carry a value over from adding the ones values, please enter it here.
+%(-6451118139349855102)%	
+%(6382390196225600924)%	
+%(-3680529304221549884)%	
+%(6809644260772282722)%	
+%(-3353314824206496545)%	
+Problem Name	p8
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	You and your friend Christina go to the mall. You spend 39.86 dollars while shopping. Christina spends 2.55 dollars while shopping. How much money did you and Christina spend together?
+%(temp-numbers)%	Add 2.55 to 39.86
+%(op)%	+
+%(decimalposition)%	n1d5
+%(decimalposition2)%	n2d5
+%(carry_dec_loc)%	c5
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d3req)%	1
+%(n1d3)%	3
+%(n1d3hint1)%	Please enter the digit in the tens place of 39.86.
+%(n1d3hint2)%	The digit in the tens place of 39.86 is 3. Please enter 3.
+%(n1d4req)%	1
+%(n1d4)%	9
+%(n1d4hint1)%	Please enter the digit in the ones place of 39.86.
+%(n1d4hint2)%	The digit in the ones place of 39.86 is 9. Please enter 9.
+%(n1d5req)%	0
+%(n1d5)%	---
+%(n1d5hint1)%	
+%(n1d5hint2)%	
+%(n1d6req)%	1
+%(n1d6)%	8
+%(n1d6hint1)%	Please enter the digit in the tenths place of 39.86.
+%(n1d6hint2)%	The digit in the tenths place of 39.86 is 8. Please enter 8.
+%(n1d7req)%	1
+%(n1d7)%	6
+%(n1d7hint1)%	Please enter the digit in the hundredths place of 39.86.
+%(n1d7hint2)%	The digit in the hundredths place of 39.86 is 6. Please enter 6.
+%(n1d8req)%	0
+%(n1d8)%	0
+%(n1d8hint1)%	
+%(n1d8hint2)%	
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	1
+%(n2d4)%	2
+%(n2d4hint1)%	Please enter the digit in the ones place of 2.55.
+%(n2d4hint2)%	The digit in the ones place of 2.55 is 2. Please enter 2.
+%(n2d5req)%	0
+%(n2d5)%	---
+%(n2d5hint1)%	
+%(n2d5hint2)%	
+%(n2d6req)%	1
+%(n2d6)%	5
+%(n2d6hint1)%	Please enter the digit in the tenths place of 2.55.
+%(n2d6hint2)%	The digit in the tenths place of 2.55 is 5. Please enter 5.
+%(n2d7req)%	1
+%(n2d7)%	5
+%(n2d7hint1)%	Please enter the digit in the hundredths place of 2.55.
+%(n2d7hint2)%	The digit in the hundredths place of 2.55 is 5. Please enter 5.
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"c1,c2,c3,c4,c5,c6,c7,c8,c9"
+%(c1)%	0
+%(c1hint1)%	
+%(c1hint2)%	
+%(c2)%	0
+%(c2hint1)%	
+%(c2hint2)%	
+%(c3)%	1
+%(c3hint1)%	If you carry a value over from adding the ones values, please enter it here.
+%(c3hint2)%	One ten was carried over from the addition of 9 ones, 2 ones, and 1 carried one. Please enter 1.
+%(c4)%	1
+%(c4hint1)%	If you carry a value over from adding the tenths values, please enter it here.
+%(c4hint2)%	One unit was carried over from the addition of 8 tenths, 7 tenths, and 1 carried tenth. Please enter 1.
+%(c5)%	0
+%(c5hint1)%	
+%(c5hint2)%	
+%(c6)%	1
+%(c6hint1)%	If you carry a value over from adding the hundredths values, please enter it here.
+%(c6hint2)%	One tenth was carried over from the addition of 6 hundreths and 5 hundredths. Please enter 1.
+%(c7)%	0
+%(c7hint1)%	
+%(c7hint2)%	
+%(c8)%	0
+%(c8hint1)%	
+%(c8hint2)%	
+%(c9)%	0
+%(c9hint1)%	
+%(c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a3req)%	1
+%(a3)%	4
+%(a3hint1)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(a3hint2)%	The digits in the tens places are 0 and 3, and 1 ten was carried over from addition in the ones column. 0+3+1=4, so please enter 4 here.
+%(a4req)%	1
+%(a4)%	2
+%(a4hint1)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(a4hint2)%	The digits in the ones places are 9 and 2, and nothing was carried from the sum of the tenths column. 9+2=11, so please enter a 1 here and carry a 1 over to the tens place (10 ones = 1 ten).
+%(a5req)%	1
+%(a5)%	.
+%(a5hint1)%	Please enter a decimal point here.
+%(a5hint2)%	
+%(a6req)%	1
+%(a6)%	4
+%(a6hint1)%	Add the digits in the tenths places and enter the sum here. 
+%(a6hint2)%	The digits in the tenths places are 5 and 8, and 1 one was carried from the sum of the hundredths column.  5+8+1=14, so please enter 4 here and carry a 1 over to the ones column (10 tenths = 1).
+%(a7req)%	1
+%(a7)%	1
+%(a7hint1)%	Add the digits in the hundredths places and enter the sum here.
+%(a7hint2)%	The digits in the hundreths places are 6 and 5.  6+5=11, so please enter 1 here and carry a 1 over to the tenths column (10 hundredths = 1 tenth).
+%(a8req)%	0
+%(a8)%	0
+%(a8hint1)%	
+%(a8hint2)%	
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+	
+	
+	
+%(a8_incorrect)%	
+%(a8_incorrect_msg)%	
+%(a7_incorrect)%	11
+%(a7_incorrect_msg)%	The number you've entered is the sum of 5+6, however you need to carry 10 into the next column using the carryboxes.
+%(a6_incorrect)%	14
+%(a6_incorrect_msg)%	The number you've entered is the sum of 8+5+1, however you need to carry 10 into the next column using the carryboxes.
+%(a5_incorrect)%	
+%(a5_incorrect_msg)%	
+%(a4_incorrect)%	12
+%(a4_incorrect_msg)%	The number you've entered is the sum of 9+2+1, however you need to carry 10 into the next column using the carryboxes.
+%(a3_incorrect)%	
+%(a3_incorrect_msg)%	
+%(a2_incorrect)%	
+%(a2_incorrect_msg)%	
+	
+	
+%(a7_missed_carry)%	
+%(a7_missed_carry_msg)%	
+%(a6_missed_carry)%	3
+%(a6_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a5_missed_carry)%	
+%(a5_missed_carry_msg)%	
+%(a4_missed_carry)%	1
+%(a4_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a3_missed_carry)%	3
+%(a3_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a2_missed_carry)%	
+%(a2_missed_carry_msg)%	
+%(a1_missed_carry)%	
+%(a1_missed_carry_msg)%	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-addends
+%(n1d4_skill)%	Enter-addends
+%(n1d5_skill)%	Align-decimals
+%(n1d6_skill)%	Enter-addends
+%(n1d7_skill)%	Enter-addends
+%(n1d8_skill)%	Enter-leading-or-trailing-zero
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-addends
+%(n2d5_skill)%	Align-decimals
+%(n2d6_skill)%	Enter-addends
+%(n2d7_skill)%	Enter-addends
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill1)%	Enter-leading-or-trailing-zero
+%(a2_skill2)%	Enter-leading-or-trailing-zero
+%(a3_skill)%	Add-column-with-carry-in
+%(a4_skill1)%	Add-column-with-carry-out
+%(a4_skill2)%	Add-column-with-carry-in
+%(a5_skill1)%	Align-decimals
+%(a5_skill2)%	Generic-skill
+%(a6_skill1)%	Add-column-with-carry-out
+%(a6_skill2)%	Add-column-with-carry-in
+%(a7_skill1)%	Add-column-with-carry-out
+%(a7_skill2)%	Generic-skill
+%(a8_skill)%	Enter-leading-or-trailing-zero
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(1270617690788562020)%	One unit was carried over from the addition of 8 tenths, 7 tenths, and 1 carried tenth. Please enter 1.
+%(6793406834378098584)%	
+%(4122547966151021001)%	
+%(-3680528304229549849)%	
+%(5939726124832416050)%	
+%(-8618717357535436169)%	Think about where the second number needs to be placed in for you to be able to solve this problem.
+%(-6907532864849400112)%	The digit in the hundredths place of 2.55 is 5. Please enter 5.
+%(1953684789227255040)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(4352543352198365568)%	
+%(-103575905657380754)%	The digits in the ones places are 9 and 2, and nothing was carried from the sum of the tenths column. 9+2=11, so please enter a 1 here and carry a 1 over to the tens place (10 ones = 1 ten).
+%(2011383615763894068)%	
+%(4119033553413564137)%	
+%(163251407906615009)%	If you carry a value over from adding the hundredths values, please enter it here.
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	The digits in the tens places are 0 and 3, and 1 ten was carried over from addition in the ones column. 0+3+1=4, so please enter 4 here.
+%(4140092011089457802)%	Please enter '9' in the highlighted field.
+%(1270618690780561927)%	If you carry a value over from adding the tenths values, please enter it here.
+%(6213752517472455109)%	
+%(-4733341091933527816)%	The digit in the ones place of 39.86 is 9. Please enter 9.
+%(267630474009556348)%	
+%(6382391196249600991)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	
+%(6793407834386098667)%	
+%(4457052840164545463)%	
+%(641187239159714154)%	
+%(3982482621457137133)%	
+%(-9117002631066219755)%	One ten was carried over from the addition of 9 ones, 2 ones, and 1 carried one. Please enter 1.
+%(1951833195040611473)%	
+%(-9202527078397046537)%	
+%(5475859671157392990)%	Please enter '' in the highlighted field.
+%(4122546966191021130)%	
+%(-5088804614345645648)%	
+%(-103578905657380747)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(-3012007946899168714)%	The number you've entered is the sum of 8+5+1, however you need to carry 10 into the next column using the carryboxes.
+%(9041503051529695589)%	The digit in the tens place of 39.86 is 3. Please enter 3.
+%(-1431871633887445892)%	Please enter '3' in the highlighted field.
+%(-2825355576575072325)%	
+%(-1418468650008855376)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(8185252744885425129)%	
+%(-6058999401977538257)%	
+%(-5667668291611333756)%	The number you've entered is the sum of 9+2+1, however you need to carry 10 into the next column using the carryboxes.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-6724020093282192323)%	
+%(3094705722605100522)%	Please enter the digit in the hundredths place of 39.86.
+%(-9202524078429046708)%	
+%(-6451121139349854999)%	
+%(6213751517464455158)%	
+%(622241884408253971)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(3982485621489137190)%	Please enter a decimal point here.
+%(-4936737373465204086)%	
+%(-4644522401360927443)%	Please enter the digit in the tenths place of 39.86.
+%(-6724017093314192458)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(-2567775295912293987)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(7703666018947561602)%	
+%(4989872382532288054)%	
+%(-654681931127624440)%	The digits in the tenths places are 5 and 8, and 1 one was carried from the sum of the hundredths column.  5+8+1=14, so please enter 4 here and carry a 1 over to the ones column (10 tenths = 1).
+%(-6998249527640291250)%	
+%(-654680931119624421)%	Add the digits in the tenths places and enter the sum here. 
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	Please enter the digit in the ones place of 39.86.
+%(2160408901803418563)%	The number you've entered is the sum of 5+6, however you need to carry 10 into the next column using the carryboxes.
+%(3094706722693100777)%	The digit in the hundredths place of 39.86 is 6. Please enter 6.
+%(1951836195136611818)%	
+%(5939723124832416025)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the hundredths place of 2.55.
+%(-9116999631066219762)%	If you carry a value over from adding the ones values, please enter it here.
+%(282619425198773699)%	Please enter '2' in the highlighted field.
+%(348783926355036851)%	Please enter '10' in the highlighted field.
+%(-7048402377707711960)%	Please enter the digit in the tenths place of 2.55.
+%(-5088807614313645509)%	
+%(-6058996401977538364)%	
+%(-3353315824230496612)%	Add the digits in the hundredths places and enter the sum here.
+%(-7793444101545105188)%	
+%(-4644523401368927522)%	The digit in the tenths place of 39.86 is 8. Please enter 8.
+%(6809645260764282625)%	The digit in the ones place of 2.55 is 2. Please enter 2.
+%(-7048405377707711949)%	The digit in the tenths place of 2.55 is 5. Please enter 5.
+%(4989873382540288005)%	
+%(3121503337589117626)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(163254407938615098)%	One tenth was carried over from the addition of 6 hundreths and 5 hundredths. Please enter 1.
+%(9041502051521695510)%	Please enter the digit in the tens place of 39.86.
+%(-2825356576583072344)%	
+%(-6451118139349855102)%	
+%(6382390196225600924)%	
+%(-3680529304221549884)%	
+%(6809644260772282722)%	Please enter the digit in the ones place of 2.55.
+%(-3353314824206496545)%	The digits in the hundreths places are 6 and 5.  6+5=11, so please enter 1 here and carry a 1 over to the tenths column (10 hundredths = 1 tenth).
+Problem Name	p9
+	faded1
+%(startStateNodeName)%	state32
+%(problemstatement)%	You are trying to eat healthy foods. For breakfast, you eat 8.124 grams of protein. For lunch, you eat 9.51 grams of protein. How much total protein did you eat at breakfast and lunch?
+%(temp-numbers)%	Add 9.51 to 8.124.
+%(op)%	+
+%(decimalposition)%	n1d6
+%(decimalposition2)%	n2d6
+%(carry_dec_loc)%	c6
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d3req)%	0
+%(n1d3)%	0
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d4req)%	0
+%(n1d4)%	0
+%(n1d4hint1)%	
+%(n1d4hint2)%	
+%(n1d5req)%	1
+%(n1d5)%	8
+%(n1d5hint1)%	Please enter the digit in the ones place of 8.124.
+%(n1d5hint2)%	The digit in the ones place of 8.124 is 8. Please enter 8.
+%(n1d6req)%	0
+%(n1d6)%	.
+%(n1d6hint1)%	
+%(n1d6hint2)%	
+%(n1d7req)%	1
+%(n1d7)%	1
+%(n1d7hint1)%	Please enter the digit in the tenths place of 8.124.
+%(n1d7hint2)%	The digit in the tenths place of 8.124 is 1. Please enter 1.
+%(n1d8req)%	1
+%(n1d8)%	2
+%(n1d8hint1)%	Please enter the digit in the hundredths place of 8.124.
+%(n1d8hint2)%	The digit in the hundredths place of 8.124 is 2. Please enter 2.
+%(n1d9req)%	1
+%(n1d9)%	4
+%(n1d9hint1)%	Please enter the digit in the thousandths place of 8.124.
+%(n1d9hint2)%	The digit in the thousandths place of 8.124 is 4. Please enter 4.
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	0
+%(n2d4)%	0
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	1
+%(n2d5)%	9
+%(n2d5hint1)%	Please enter the digit in the ones place of 9.51.
+%(n2d5hint2)%	The digit in the ones place of 9.51 is 9. Please enter 9.
+%(n2d6req)%	0
+%(n2d6)%	.
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	1
+%(n2d7)%	5
+%(n2d7hint1)%	Please enter the digit in the tenths place of 9.51.
+%(n2d7hint2)%	The digit in the tenths place of 9.51 is 5. Please enter 5.
+%(n2d8req)%	1
+%(n2d8)%	1
+%(n2d8hint1)%	Please enter the digit in the hundredths place of 9.51.
+%(n2d8hint2)%	The digit in the hundredths place of 9.51 is 1. Please enter 1.
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"c1,c2,c3,c4,c5,c6,c7,c8,c9"
+%(c1)%	0
+%(c1hint1)%	
+%(c1hint2)%	
+%(c2)%	0
+%(c2hint1)%	
+%(c2hint2)%	
+%(c3)%	0
+%(c3hint1)%	
+%(c3hint2)%	
+%(c4)%	1
+%(c4hint1)%	If you carry a value over from adding the ones values, please enter it here.
+%(c4hint2)%	One ten was carried over from the addition of 9 ones and 8 ones. Please enter 1.
+%(c5)%	0
+%(c5hint1)%	
+%(c5hint2)%	
+%(c6)%	.
+%(c6hint1)%	
+%(c6hint2)%	
+%(c7)%	0
+%(c7hint1)%	
+%(c7hint2)%	
+%(c8)%	0
+%(c8hint1)%	
+%(c8hint2)%	
+%(c9)%	0
+%(c9hint1)%	
+%(c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a4req)%	1
+%(a4)%	1
+%(a4hint1)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(a4hint2)%	There are no digits in the tens places except for 1 ten that was carried over from addition in the ones column, so please enter 1 here.
+%(a5req)%	1
+%(a5)%	7
+%(a5hint1)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(a5hint2)%	The digits in the ones places are 8 and 9, and nothing was carried from the sum of the tenths column. 8+9=17, so please enter a 7 here and carry a 1 over to the tens column (10 ones = 1 ten).
+%(a6req)%	1
+%(a6)%	.
+%(a6hint1)%	Please enter a decimal point here.
+%(a6hint2)%	
+%(a7req)%	1
+%(a7)%	6
+%(a7hint1)%	
+%(a7hint2)%	
+%(a8req)%	1
+%(a8)%	3
+%(a8hint1)%	
+%(a8hint2)%	
+%(a9req)%	1
+%(a9)%	4
+%(a9hint1)%	
+%(a9hint2)%	
+	
+	
+	
+%(a8_incorrect)%	
+%(a8_incorrect_msg)%	
+%(a7_incorrect)%	
+%(a7_incorrect_msg)%	
+%(a6_incorrect)%	
+%(a6_incorrect_msg)%	
+%(a5_incorrect)%	17
+%(a5_incorrect_msg)%	The number you've entered is the sum of 9+8, however you need to carry 10 into the next column using the carryboxes.
+%(a4_incorrect)%	
+%(a4_incorrect_msg)%	
+%(a3_incorrect)%	
+%(a3_incorrect_msg)%	
+%(a2_incorrect)%	
+%(a2_incorrect_msg)%	
+	
+	
+%(a7_missed_carry)%	
+%(a7_missed_carry_msg)%	
+%(a6_missed_carry)%	
+%(a6_missed_carry_msg)%	
+%(a5_missed_carry)%	
+%(a5_missed_carry_msg)%	
+%(a4_missed_carry)%	
+%(a4_missed_carry_msg)%	
+%(a3_missed_carry)%	
+%(a3_missed_carry_msg)%	
+%(a2_missed_carry)%	
+%(a2_missed_carry_msg)%	
+%(a1_missed_carry)%	
+%(a1_missed_carry_msg)%	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-leading-or-trailing-zero
+%(n1d4_skill)%	Enter-leading-or-trailing-zero
+%(n1d5_skill)%	Enter-addends
+%(n1d6_skill)%	Align-decimals
+%(n1d7_skill)%	Enter-addends
+%(n1d8_skill)%	Enter-addends
+%(n1d9_skill)%	Enter-addends
+	
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-leading-or-trailing-zero
+%(n2d5_skill)%	Enter-addends
+%(n2d6_skill)%	Align-decimals
+%(n2d7_skill)%	Enter-addends
+%(n2d8_skill)%	Enter-addends
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill1)%	Enter-leading-or-trailing-zero
+%(a2_skill2)%	Enter-leading-or-trailing-zero
+%(a3_skill)%	Enter-leading-or-trailing-zero
+%(a4_skill1)%	Add-column-with-carry-in
+%(a4_skill2)%	Generic-skill
+%(a5_skill1)%	Add-column-with-carry-out
+%(a5_skill2)%	Generic-skill
+%(a6_skill1)%	Align-decimals
+%(a6_skill2)%	Generic-skill
+%(a7_skill1)%	Add-column-no-carry
+%(a7_skill2)%	Generic-skill
+%(a8_skill)%	Add-column-no-carry
+%(a9_skill)%	Add-column-no-carry
+%(1270617690788562020)%	One ten was carried over from the addition of 9 ones and 8 ones. Please enter 1.
+%(6793406834378098584)%	
+%(4122547966151021001)%	
+%(-3680528304229549849)%	
+%(5939726124832416050)%	
+%(-8618717357535436169)%	Think about where the second number needs to be placed in for you to be able to solve this problem.
+%(-6907532864849400112)%	The digit in the tenths place of 9.51 is 5. Please enter 5.
+%(1953684789227255040)%	
+%(4352543352198365568)%	
+%(-103575905657380754)%	There are no digits in the tens places except for 1 ten that was carried over from addition in the ones column, so please enter 1 here.
+%(2011383615763894068)%	
+%(4119033553413564137)%	
+%(163251407906615009)%	
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(4140092011089457802)%	Please enter '9' in the highlighted field.
+%(1270618690780561927)%	If you carry a value over from adding the ones values, please enter it here.
+%(6213752517472455109)%	The digit in the hundredths place of 9.51 is 1. Please enter 1.
+%(-4733341091933527816)%	
+%(267630474009556348)%	The digit in the hundredths place of 8.124 is 2. Please enter 2.
+%(6382391196249600991)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	Please enter the digit in the hundredths place of 8.124.
+%(6793407834386098667)%	
+%(4457052840164545463)%	
+%(641187239159714154)%	
+%(3982482621457137133)%	The digits in the ones places are 8 and 9, and nothing was carried from the sum of the tenths column. 8+9=17, so please enter a 7 here and carry a 1 over to the tens column (10 ones = 1 ten).
+%(-9117002631066219755)%	
+%(1951833195040611473)%	
+%(-9202527078397046537)%	
+%(5475859671157392990)%	Please enter '' in the highlighted field.
+%(4122546966191021130)%	
+%(-5088804614345645648)%	Please enter the digit in the ones place of 8.124.
+%(-103578905657380747)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(-3012007946899168714)%	
+%(9041503051529695589)%	
+%(-1431871633887445892)%	Please enter '3' in the highlighted field.
+%(-2825355576575072325)%	
+%(-1418468650008855376)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(8185252744885425129)%	The number you've entered is the sum of 9+8, however you need to carry 10 into the next column using the carryboxes.
+%(-6058999401977538257)%	The digit in the thousandths place of 8.124 is 4. Please enter 4.
+%(-5667668291611333756)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-6724020093282192323)%	
+%(3094705722605100522)%	Please enter the digit in the tenths place of 8.124.
+%(-9202524078429046708)%	
+%(-6451121139349854999)%	
+%(6213751517464455158)%	Please enter the digit in the hundredths place of 9.51.
+%(622241884408253971)%	
+%(3982485621489137190)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(-4936737373465204086)%	
+%(-4644522401360927443)%	
+%(-6724017093314192458)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(-2567775295912293987)%	
+%(7703666018947561602)%	
+%(4989872382532288054)%	The digit in the ones place of 9.51 is 9. Please enter 9.
+%(-654681931127624440)%	
+%(-6998249527640291250)%	
+%(-654680931119624421)%	Please enter a decimal point here.
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	
+%(2160408901803418563)%	
+%(3094706722693100777)%	The digit in the tenths place of 8.124 is 1. Please enter 1.
+%(1951836195136611818)%	
+%(5939723124832416025)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the tenths place of 9.51.
+%(-9116999631066219762)%	
+%(282619425198773699)%	Please enter '2' in the highlighted field.
+%(348783926355036851)%	Please enter '10' in the highlighted field.
+%(-7048402377707711960)%	
+%(-5088807614313645509)%	The digit in the ones place of 8.124 is 8. Please enter 8.
+%(-6058996401977538364)%	Please enter the digit in the thousandths place of 8.124.
+%(-3353315824230496612)%	
+%(-7793444101545105188)%	
+%(-4644523401368927522)%	
+%(6809645260764282625)%	
+%(-7048405377707711949)%	
+%(4989873382540288005)%	Please enter the digit in the ones place of 9.51.
+%(3121503337589117626)%	
+%(163254407938615098)%	
+%(9041502051521695510)%	
+%(-2825356576583072344)%	
+%(-6451118139349855102)%	
+%(6382390196225600924)%	
+%(-3680529304221549884)%	
+%(6809644260772282722)%	
+%(-3353314824206496545)%	
+Problem Name	p10
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	You are training for the school's obstacle course. You finish the first half of the course in 983.3 seconds. The second half of the course takes you 140.6 seconds to complete. How long did it take you to finish the entire course?
+%(temp-numbers)%	Add 140.6 to 983.3
+%(op)%	+
+%(decimalposition)%	n1d5
+%(decimalposition2)%	n2d5
+%(carry_dec_loc)%	c5
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d2req)%	1
+%(n1d2)%	9
+%(n1d2hint1)%	Please enter the digit in the hundreds place of 983.3.
+%(n1d2hint2)%	The digit in the hundreds place of 983.3 is 9. Please enter 9.
+%(n1d3req)%	1
+%(n1d3)%	8
+%(n1d3hint1)%	Please enter the digit in the tens place of 983.3.
+%(n1d3hint2)%	The digit in the tens place of 983.3 is 8. Please enter 8.
+%(n1d4req)%	1
+%(n1d4)%	3
+%(n1d4hint1)%	Please enter the digit in the ones place of 983.3.
+%(n1d4hint2)%	The digit in the ones place of 983.3 is 3. Please enter 3.
+%(n1d5req)%	0
+%(n1d5)%	---
+%(n1d5hint1)%	
+%(n1d5hint2)%	
+%(n1d6req)%	1
+%(n1d6)%	3
+%(n1d6hint1)%	Please enter the digit in the tenths place of 983.3.
+%(n1d6hint2)%	The digit in the tenths place of 983.3 is 3. Please enter 3.
+%(n1d7req)%	0
+%(n1d7)%	0
+%(n1d7hint1)%	
+%(n1d7hint2)%	
+%(n1d8req)%	0
+%(n1d8)%	0
+%(n1d8hint1)%	
+%(n1d8hint2)%	
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	1
+%(n2d2)%	1
+%(n2d2hint1)%	Please enter the digit in the hundreds place of 140.6.
+%(n2d2hint2)%	The digit in the hundreds place of 140.6 is 1. Please enter 1.
+%(n2d3req)%	1
+%(n2d3)%	4
+%(n2d3hint1)%	Please enter the digit in the tens place of 140.6.
+%(n2d3hint2)%	The digit in the tens place of 140.6 is 4. Please enter 4.
+%(n2d4req)%	1
+%(n2d4)%	0
+%(n2d4hint1)%	Please enter the digit in the ones place of 140.6.
+%(n2d4hint2)%	The digit in the ones place of 140.6 is 0. Please enter 0.
+%(n2d5req)%	0
+%(n2d5)%	---
+%(n2d5hint1)%	
+%(n2d5hint2)%	
+%(n2d6req)%	1
+%(n2d6)%	6
+%(n2d6hint1)%	Please enter the digit in the tenths place of 140.6.
+%(n2d6hint2)%	The digit in the tenths place of 140.6 is 6. Please enter 6.
+%(n2d7req)%	0
+%(n2d7)%	0
+%(n2d7hint1)%	
+%(n2d7hint2)%	
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"c1,c2,c3,c4,c5,c6,c7,c8,c9"
+%(c1)%	1
+%(c1hint1)%	If you carry a value over from adding the hundreds values, please enter it here.
+%(c1hint2)%	One thousand was carried over from the addition of 9 hundreds, 1 hundreds, and 1 carried hundredn. Please enter 1.
+%(c2)%	1
+%(c2hint1)%	If you carry a value over from adding the tens values, please enter it here.
+%(c2hint2)%	One hundred was carried over from the addition of 8 tens and 4 tens. Please enter 1.
+%(c3)%	0
+%(c3hint1)%	
+%(c3hint2)%	
+%(c4)%	0
+%(c4hint1)%	
+%(c4hint2)%	
+%(c5)%	0
+%(c5hint1)%	
+%(c5hint2)%	
+%(c6)%	0
+%(c6hint1)%	
+%(c6hint2)%	
+%(c7)%	0
+%(c7hint1)%	
+%(c7hint2)%	
+%(c8)%	0
+%(c8hint1)%	
+%(c8hint2)%	
+%(c9)%	0
+%(c9hint1)%	
+%(c9hint2)%	
+%(a1req)%	1
+%(a1)%	1
+%(a1hint1)%	Add the digits in the thousands places and enter the sum here. Don't forget to add any values carried!
+%(a1hint2)%	There are no digits in the thousands places except for 1 thousand that was carried over from addition in the hundreds column, so please enter 1 here.
+%(a2req)%	1
+%(a2)%	1
+%(a2hint1)%	Add the digits in the hundreds places and enter the sum here. Don't forget to add any values carried!
+%(a2hint2)%	The digits in the hundreds places are 9 and 1, and 1 hundred was carried over from addition in the tens column. 9+1+1=11, so please enter a 1 here and carry 1 over to the thousands column (10 hundreds = 1 thousand).
+%(a3req)%	1
+%(a3)%	2
+%(a3hint1)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(a3hint2)%	The digits in the tens places are 8 and 4, and nothing was carried over from addition in the ones column. 8+4=12, so please enter 2 here and carry a 1 over to the hundreds column.
+%(a4req)%	1
+%(a4)%	3
+%(a4hint1)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(a4hint2)%	The digits in the ones places are 0 and 3, and nothing was carried from the sum of the tenths column. 0+3=3, so please enter a 3 here.
+%(a5req)%	1
+%(a5)%	.
+%(a5hint1)%	Please enter a decimal point here.
+%(a5hint2)%	
+%(a6req)%	1
+%(a6)%	9
+%(a6hint1)%	Add the digits in the tenths places and enter the sum here. 
+%(a6hint2)%	The digits in the tenths places are 6 and 3.  6+3=9, so please enter 9 here.
+%(a7req)%	0
+%(a7)%	0
+%(a7hint1)%	
+%(a7hint2)%	
+%(a8req)%	0
+%(a8)%	0
+%(a8hint1)%	
+%(a8hint2)%	
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+	
+	
+	
+%(a8_incorrect)%	
+%(a8_incorrect_msg)%	
+%(a7_incorrect)%	
+%(a7_incorrect_msg)%	
+%(a6_incorrect)%	
+%(a6_incorrect_msg)%	
+%(a5_incorrect)%	
+%(a5_incorrect_msg)%	
+%(a4_incorrect)%	
+%(a4_incorrect_msg)%	
+%(a3_incorrect)%	12
+%(a3_incorrect_msg)%	The number you've entered is the sum of 4+8, however you need to carry 10 into the next column using the carryboxes.
+%(a2_incorrect)%	11
+%(a2_incorrect_msg)%	The number you've entered is the sum of 9+1+1, however you need to carry 10 into the next column using the carryboxes.
+	
+	
+%(a7_missed_carry)%	
+%(a7_missed_carry_msg)%	
+%(a6_missed_carry)%	
+%(a6_missed_carry_msg)%	
+%(a5_missed_carry)%	
+%(a5_missed_carry_msg)%	
+%(a4_missed_carry)%	
+%(a4_missed_carry_msg)%	
+%(a3_missed_carry)%	
+%(a3_missed_carry_msg)%	
+%(a2_missed_carry)%	0
+%(a2_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a1_missed_carry)%	0
+%(a1_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-addends
+%(n1d3_skill)%	Enter-addends
+%(n1d4_skill)%	Enter-addends
+%(n1d5_skill)%	Align-decimals
+%(n1d6_skill)%	Enter-addends
+%(n1d7_skill)%	Enter-leading-or-trailing-zero
+%(n1d8_skill)%	Enter-leading-or-trailing-zero
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-addends
+%(n2d3_skill)%	Enter-addends
+%(n2d4_skill)%	Enter-addends
+%(n2d5_skill)%	Align-decimals
+%(n2d6_skill)%	Enter-addends
+%(n2d7_skill)%	Enter-leading-or-trailing-zero
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a1_skill)%	Add-column-with-carry-in
+%(a2_skill1)%	Add-column-with-carry-out
+%(a2_skill2)%	Add-column-with-carry-in
+%(a3_skill)%	Add-column-with-carry-out
+%(a4_skill1)%	Add-column-no-carry
+%(a4_skill2)%	Generic-skill
+%(a5_skill1)%	Align-decimals
+%(a5_skill2)%	Generic-skill
+%(a6_skill1)%	Add-column-no-carry
+%(a6_skill2)%	Generic-skill
+%(a7_skill1)%	Enter-leading-or-trailing-zero
+%(a7_skill2)%	Generic-skill
+%(a8_skill)%	Enter-leading-or-trailing-zero
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(1270617690788562020)%	
+%(6793406834378098584)%	
+%(4122547966151021001)%	
+%(-3680528304229549849)%	One thousand was carried over from the addition of 9 hundreds, 1 hundreds, and 1 carried hundredn. Please enter 1.
+%(5939726124832416050)%	
+%(-8618717357535436169)%	Think about where the second number needs to be placed in for you to be able to solve this problem.
+%(-6907532864849400112)%	
+%(1953684789227255040)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(4352543352198365568)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(-103575905657380754)%	The digits in the ones places are 0 and 3, and nothing was carried from the sum of the tenths column. 0+3=3, so please enter a 3 here.
+%(2011383615763894068)%	
+%(4119033553413564137)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(163251407906615009)%	
+%(641188239247714409)%	Please enter the digit in the hundreds place of 983.3.
+%(-6634764911781064177)%	The digit in the hundreds place of 140.6 is 1. Please enter 1.
+%(1953685789235255059)%	The digits in the tens places are 8 and 4, and nothing was carried over from addition in the ones column. 8+4=12, so please enter 2 here and carry a 1 over to the hundreds column.
+%(4140092011089457802)%	Please enter '9' in the highlighted field.
+%(1270618690780561927)%	
+%(6213752517472455109)%	
+%(-4733341091933527816)%	The digit in the ones place of 983.3 is 3. Please enter 3.
+%(267630474009556348)%	
+%(6382391196249600991)%	Add the digits in the hundreds places and enter the sum here. Don't forget to add any values carried!
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	Add the digits in the thousands places and enter the sum here. Don't forget to add any values carried!
+%(7703667018939561633)%	
+%(267627473977556263)%	
+%(6793407834386098667)%	
+%(4457052840164545463)%	The number you've entered is the sum of 4+8, however you need to carry 10 into the next column using the carryboxes.
+%(641187239159714154)%	The digit in the hundreds place of 983.3 is 9. Please enter 9.
+%(3982482621457137133)%	
+%(-9117002631066219755)%	
+%(1951833195040611473)%	
+%(-9202527078397046537)%	
+%(5475859671157392990)%	Please enter '' in the highlighted field.
+%(4122546966191021130)%	
+%(-5088804614345645648)%	
+%(-103578905657380747)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(-3012007946899168714)%	
+%(9041503051529695589)%	The digit in the tens place of 983.3 is 8. Please enter 8.
+%(-1431871633887445892)%	Please enter '3' in the highlighted field.
+%(-2825355576575072325)%	
+%(-1418468650008855376)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(8185252744885425129)%	
+%(-6058999401977538257)%	
+%(-5667668291611333756)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	There are no digits in the thousands places except for 1 thousand that was carried over from addition in the hundreds column, so please enter 1 here.
+%(-6724020093282192323)%	If you carry a value over from adding the tens values, please enter it here.
+%(3094705722605100522)%	
+%(-9202524078429046708)%	
+%(-6451121139349854999)%	
+%(6213751517464455158)%	
+%(622241884408253971)%	
+%(3982485621489137190)%	Please enter a decimal point here.
+%(-4936737373465204086)%	The number you've entered is the sum of 9+1+1, however you need to carry 10 into the next column using the carryboxes.
+%(-4644522401360927443)%	Please enter the digit in the tenths place of 983.3.
+%(-6724017093314192458)%	One hundred was carried over from the addition of 8 tens and 4 tens. Please enter 1.
+%(-5166532556208710060)%	No, this is not correct.
+%(-2567775295912293987)%	
+%(7703666018947561602)%	
+%(4989872382532288054)%	
+%(-654681931127624440)%	The digits in the tenths places are 6 and 3.  6+3=9, so please enter 9 here.
+%(-6998249527640291250)%	
+%(-654680931119624421)%	Add the digits in the tenths places and enter the sum here. 
+%(-7793447101577105273)%	Please enter the digit in the tens place of 140.6.
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	Please enter the digit in the ones place of 983.3.
+%(2160408901803418563)%	
+%(3094706722693100777)%	
+%(1951836195136611818)%	
+%(5939723124832416025)%	
+%(-6634761911781064156)%	Please enter the digit in the hundreds place of 140.6.
+%(-6907535864945400357)%	
+%(-9116999631066219762)%	
+%(282619425198773699)%	Please enter '2' in the highlighted field.
+%(348783926355036851)%	Please enter '10' in the highlighted field.
+%(-7048402377707711960)%	Please enter the digit in the tenths place of 140.6.
+%(-5088807614313645509)%	
+%(-6058996401977538364)%	
+%(-3353315824230496612)%	
+%(-7793444101545105188)%	The digit in the tens place of 140.6 is 4. Please enter 4.
+%(-4644523401368927522)%	The digit in the tenths place of 983.3 is 3. Please enter 3.
+%(6809645260764282625)%	The digit in the ones place of 140.6 is 0. Please enter 0.
+%(-7048405377707711949)%	The digit in the tenths place of 140.6 is 6. Please enter 6.
+%(4989873382540288005)%	
+%(3121503337589117626)%	
+%(163254407938615098)%	
+%(9041502051521695510)%	Please enter the digit in the tens place of 983.3.
+%(-2825356576583072344)%	
+%(-6451118139349855102)%	
+%(6382390196225600924)%	The digits in the hundreds places are 9 and 1, and 1 hundred was carried over from addition in the tens column. 9+1+1=11, so please enter a 1 here and carry 1 over to the thousands column (10 hundreds = 1 thousand).
+%(-3680529304221549884)%	If you carry a value over from adding the hundreds values, please enter it here.
+%(6809644260772282722)%	Please enter the digit in the ones place of 140.6.
+%(-3353314824206496545)%	
+Problem Name	p11
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	You have a paper to write over the weekend. You spend 9.69 hours at the library on Saturday and go back to the library for 8.4 hours on Sunday to finish the paper. How much time did you spend in the library?
+%(temp-numbers)%	Add 8.4 to 9.69
+%(op)%	+
+%(decimalposition)%	n1d6
+%(decimalposition2)%	n2d6
+%(carry_dec_loc)%	c6
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d3req)%	0
+%(n1d3)%	0
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d4req)%	0
+%(n1d4)%	0
+%(n1d4hint1)%	
+%(n1d4hint2)%	
+%(n1d5req)%	1
+%(n1d5)%	9
+%(n1d5hint1)%	Please enter the digit in the ones place of 9.69.
+%(n1d5hint2)%	The digit in the ones place of 9.69 is 9. Please enter 9.
+%(n1d6req)%	0
+%(n1d6)%	---
+%(n1d6hint1)%	
+%(n1d6hint2)%	
+%(n1d7req)%	1
+%(n1d7)%	6
+%(n1d7hint1)%	Please enter the digit in the tenths place of 9.69.
+%(n1d7hint2)%	The digit in the tenths place of 9.69 is 6. Please enter 6.
+%(n1d8req)%	1
+%(n1d8)%	9
+%(n1d8hint1)%	Please enter the digit in the hundredths place of 9.69.
+%(n1d8hint2)%	The digit in the hundredths place of 9.69 is 9. Please enter 9.
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	0
+%(n2d4)%	0
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	1
+%(n2d5)%	8
+%(n2d5hint1)%	Please enter the digit in the ones place of 8.4.
+%(n2d5hint2)%	The digit in the ones place of 8.4 is 8. Please enter 8.
+%(n2d6req)%	0
+%(n2d6)%	---
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	1
+%(n2d7)%	4
+%(n2d7hint1)%	Please enter the digit in the tenths place of 8.4.
+%(n2d7hint2)%	The digit in the tenths place of 8.4 is 4. Please enter 4.
+%(n2d8req)%	0
+%(n2d8)%	0
+%(n2d8hint1)%	
+%(n2d8hint2)%	
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"c1,c2,c3,c4,c5,c6,c7,c8,c9"
+%(c1)%	0
+%(c1hint1)%	
+%(c1hint2)%	
+%(c2)%	0
+%(c2hint1)%	
+%(c2hint2)%	
+%(c3)%	0
+%(c3hint1)%	
+%(c3hint2)%	
+%(c4)%	1
+%(c4hint1)%	If you carry a value over from adding the ones values, please enter it here.
+%(c4hint2)%	One ten was carried over from the addition of 9 ones, 8 ones, and 1 carried one. Please enter 1.
+%(c5)%	1
+%(c5hint1)%	If you carry a value over from adding the tenths values, please enter it here.
+%(c5hint2)%	One unit was carried over from the addition of 6 tenths and 4 tenths. Please enter 1.
+%(c6)%	0
+%(c6hint1)%	
+%(c6hint2)%	
+%(c7)%	0
+%(c7hint1)%	
+%(c7hint2)%	
+%(c8)%	0
+%(c8hint1)%	
+%(c8hint2)%	
+%(c9)%	0
+%(c9hint1)%	
+%(c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a4req)%	1
+%(a4)%	1
+%(a4hint1)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(a4hint2)%	There are no digits in the tens places except for 1 ten that was carried over from addition in the ones column, so please enter 1 here.
+%(a5req)%	1
+%(a5)%	8
+%(a5hint1)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(a5hint2)%	The digits in the ones places are 8 and 9, and 1 one was carried from the sum of the tenths column. 8+9+1=18, so please enter a 8 here and carry a 1 over to the tens place (10 ones = 1 ten).
+%(a6req)%	1
+%(a6)%	.
+%(a6hint1)%	Please enter a decimal point here.
+%(a6hint2)%	
+%(a7req)%	1
+%(a7)%	0
+%(a7hint1)%	Add the digits in the tenths places and enter the sum here. 
+%(a7hint2)%	The digits in the tenths places are 4 and 6.  4+6=10, so please enter 0 here and carry a 1 over to the ones column (10 tenths = 1).
+%(a8req)%	1
+%(a8)%	9
+%(a8hint1)%	Add the digits in the hundredths places and enter the sum here.
+%(a8hint2)%	The digits in the hundreths places are 9 and 0.  9+0=9, so please enter 9 here.
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+	
+	
+	
+%(a8_incorrect)%	
+%(a8_incorrect_msg)%	
+%(a7_incorrect)%	10
+%(a7_incorrect_msg)%	The number you've entered is the sum of 4+6, however you need to carry 10 into the next column using the carryboxes.
+%(a6_incorrect)%	
+%(a6_incorrect_msg)%	
+%(a5_incorrect)%	18
+%(a5_incorrect_msg)%	The number you've entered is the sum of 9+8+1, however you need to carry 10 into the next column using the carryboxes.
+%(a4_incorrect)%	
+%(a4_incorrect_msg)%	
+%(a3_incorrect)%	
+%(a3_incorrect_msg)%	
+%(a2_incorrect)%	
+%(a2_incorrect_msg)%	
+	
+	
+%(a7_missed_carry)%	
+%(a7_missed_carry_msg)%	
+%(a6_missed_carry)%	
+%(a6_missed_carry_msg)%	
+%(a5_missed_carry)%	7
+%(a5_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a4_missed_carry)%	0
+%(a4_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a3_missed_carry)%	
+%(a3_missed_carry_msg)%	
+%(a2_missed_carry)%	
+%(a2_missed_carry_msg)%	
+%(a1_missed_carry)%	
+%(a1_missed_carry_msg)%	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-leading-or-trailing-zero
+%(n1d4_skill)%	Enter-leading-or-trailing-zero
+%(n1d5_skill)%	Enter-addends
+%(n1d6_skill)%	Align-decimals
+%(n1d7_skill)%	Enter-addends
+%(n1d8_skill)%	Enter-addends
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-leading-or-trailing-zero
+%(n2d5_skill)%	Enter-addends
+%(n2d6_skill)%	Align-decimals
+%(n2d7_skill)%	Enter-addends
+%(n2d8_skill)%	Enter-leading-or-trailing-zero
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill1)%	Enter-leading-or-trailing-zero
+%(a2_skill2)%	Enter-leading-or-trailing-zero
+%(a3_skill)%	Enter-leading-or-trailing-zero
+%(a4_skill1)%	Add-column-with-carry-in
+%(a4_skill2)%	Generic-skill
+%(a5_skill1)%	Add-column-with-carry-out
+%(a5_skill2)%	Add-column-with-carry-in
+%(a6_skill1)%	Align-decimals
+%(a6_skill2)%	Generic-skill
+%(a7_skill1)%	Add-column-with-carry-out
+%(a7_skill2)%	Generic-skill
+%(a8_skill)%	Add-column-no-carry
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(1270617690788562020)%	One ten was carried over from the addition of 9 ones, 8 ones, and 1 carried one. Please enter 1.
+%(6793406834378098584)%	
+%(4122547966151021001)%	
+%(-3680528304229549849)%	
+%(5939726124832416050)%	
+%(-8618717357535436169)%	Think about where the second number needs to be placed in for you to be able to solve this problem.
+%(-6907532864849400112)%	The digit in the tenths place of 8.4 is 4. Please enter 4.
+%(1953684789227255040)%	
+%(4352543352198365568)%	
+%(-103575905657380754)%	There are no digits in the tens places except for 1 ten that was carried over from addition in the ones column, so please enter 1 here.
+%(2011383615763894068)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(4119033553413564137)%	
+%(163251407906615009)%	
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(4140092011089457802)%	Please enter '9' in the highlighted field.
+%(1270618690780561927)%	If you carry a value over from adding the ones values, please enter it here.
+%(6213752517472455109)%	
+%(-4733341091933527816)%	
+%(267630474009556348)%	The digit in the hundredths place of 9.69 is 9. Please enter 9.
+%(6382391196249600991)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	Please enter the digit in the hundredths place of 9.69.
+%(6793407834386098667)%	
+%(4457052840164545463)%	
+%(641187239159714154)%	
+%(3982482621457137133)%	The digits in the ones places are 8 and 9, and 1 one was carried from the sum of the tenths column. 8+9+1=18, so please enter a 8 here and carry a 1 over to the tens place (10 ones = 1 ten).
+%(-9117002631066219755)%	
+%(1951833195040611473)%	Add the digits in the hundredths places and enter the sum here.
+%(-9202527078397046537)%	
+%(5475859671157392990)%	Please enter '' in the highlighted field.
+%(4122546966191021130)%	
+%(-5088804614345645648)%	Please enter the digit in the ones place of 9.69.
+%(-103578905657380747)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(-3012007946899168714)%	
+%(9041503051529695589)%	
+%(-1431871633887445892)%	Please enter '3' in the highlighted field.
+%(-2825355576575072325)%	One unit was carried over from the addition of 6 tenths and 4 tenths. Please enter 1.
+%(-1418468650008855376)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(8185252744885425129)%	The number you've entered is the sum of 9+8+1, however you need to carry 10 into the next column using the carryboxes.
+%(-6058999401977538257)%	
+%(-5667668291611333756)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-6724020093282192323)%	
+%(3094705722605100522)%	Please enter the digit in the tenths place of 9.69.
+%(-9202524078429046708)%	
+%(-6451121139349854999)%	
+%(6213751517464455158)%	
+%(622241884408253971)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(3982485621489137190)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(-4936737373465204086)%	
+%(-4644522401360927443)%	
+%(-6724017093314192458)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(-2567775295912293987)%	
+%(7703666018947561602)%	
+%(4989872382532288054)%	The digit in the ones place of 8.4 is 8. Please enter 8.
+%(-654681931127624440)%	
+%(-6998249527640291250)%	
+%(-654680931119624421)%	Please enter a decimal point here.
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	
+%(2160408901803418563)%	The number you've entered is the sum of 4+6, however you need to carry 10 into the next column using the carryboxes.
+%(3094706722693100777)%	The digit in the tenths place of 9.69 is 6. Please enter 6.
+%(1951836195136611818)%	The digits in the hundreths places are 9 and 0.  9+0=9, so please enter 9 here.
+%(5939723124832416025)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the tenths place of 8.4.
+%(-9116999631066219762)%	
+%(282619425198773699)%	Please enter '2' in the highlighted field.
+%(348783926355036851)%	Please enter '10' in the highlighted field.
+%(-7048402377707711960)%	
+%(-5088807614313645509)%	The digit in the ones place of 9.69 is 9. Please enter 9.
+%(-6058996401977538364)%	
+%(-3353315824230496612)%	Add the digits in the tenths places and enter the sum here. 
+%(-7793444101545105188)%	
+%(-4644523401368927522)%	
+%(6809645260764282625)%	
+%(-7048405377707711949)%	
+%(4989873382540288005)%	Please enter the digit in the ones place of 8.4.
+%(3121503337589117626)%	
+%(163254407938615098)%	
+%(9041502051521695510)%	
+%(-2825356576583072344)%	If you carry a value over from adding the tenths values, please enter it here.
+%(-6451118139349855102)%	
+%(6382390196225600924)%	
+%(-3680529304221549884)%	
+%(6809644260772282722)%	
+%(-3353314824206496545)%	The digits in the tenths places are 4 and 6.  4+6=10, so please enter 0 here and carry a 1 over to the ones column (10 tenths = 1).
+Problem Name	p12
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	You and your friend Jeremy are baking cookies for the school bake sale. Your recipe uses 3.8 cups of sugar. Jeremy's recipe uses 6.97 cups of sugar. How many cups of sugar will you need to make both recipes?
+%(temp-numbers)%	Add 6.97 to 3.8
+%(op)%	+
+%(decimalposition)%	n1d6
+%(decimalposition2)%	n2d6
+%(carry_dec_loc)%	c6
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d3req)%	0
+%(n1d3)%	0
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d4req)%	0
+%(n1d4)%	0
+%(n1d4hint1)%	
+%(n1d4hint2)%	
+%(n1d5req)%	1
+%(n1d5)%	3
+%(n1d5hint1)%	Please enter the digit in the ones place of 3.8.
+%(n1d5hint2)%	The digit in the ones place of 3.8 is 3. Please enter 3.
+%(n1d6req)%	0
+%(n1d6)%	---
+%(n1d6hint1)%	
+%(n1d6hint2)%	
+%(n1d7req)%	1
+%(n1d7)%	8
+%(n1d7hint1)%	Please enter the digit in the tenths place of 3.8.
+%(n1d7hint2)%	The digit in the tenths place of 3.8 is 8. Please enter 8.
+%(n1d8req)%	0
+%(n1d8)%	0
+%(n1d8hint1)%	
+%(n1d8hint2)%	
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	0
+%(n2d4)%	0
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	1
+%(n2d5)%	6
+%(n2d5hint1)%	Please enter the digit in the ones place of 6.97.
+%(n2d5hint2)%	The digit in the ones place of 6.97 is 6. Please enter 6.
+%(n2d6req)%	0
+%(n2d6)%	---
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	1
+%(n2d7)%	9
+%(n2d7hint1)%	Please enter the digit in the tenths place of 6.97.
+%(n2d7hint2)%	The digit in the tenths place of 6.97 is 9. Please enter 9.
+%(n2d8req)%	1
+%(n2d8)%	7
+%(n2d8hint1)%	Please enter the digit in the hundredths place of 6.97.
+%(n2d8hint2)%	The digit in the hundredths place of 6.97 is 7. Please enter 7.
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"c1,c2,c3,c4,c5,c6,c7,c8,c9"
+%(c1)%	0
+%(c1hint1)%	
+%(c1hint2)%	
+%(c2)%	0
+%(c2hint1)%	
+%(c2hint2)%	
+%(c3)%	0
+%(c3hint1)%	
+%(c3hint2)%	
+%(c4)%	1
+%(c4hint1)%	If you carry a value over from adding the ones values, please enter it here.
+%(c4hint2)%	One ten was carried over from the addition of 3 ones, 6 ones, and 1 carried one. Please enter 1.
+%(c5)%	1
+%(c5hint1)%	If you carry a value over from adding the tenths values, please enter it here.
+%(c5hint2)%	One unit was carried over from the addition of 9 tenths and 8 tenths. Please enter 1.
+%(c6)%	0
+%(c6hint1)%	
+%(c6hint2)%	
+%(c7)%	0
+%(c7hint1)%	
+%(c7hint2)%	
+%(c8)%	0
+%(c8hint1)%	
+%(c8hint2)%	
+%(c9)%	0
+%(c9hint1)%	
+%(c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a4req)%	1
+%(a4)%	1
+%(a4hint1)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(a4hint2)%	There are no digits in the tens places except for 1 ten that was carried over from addition in the ones column, so please enter 1 here.
+%(a5req)%	1
+%(a5)%	0
+%(a5hint1)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(a5hint2)%	The digits in the ones places are 6 and 3, and 1 one was carried from the sum of the tenths column. 6+3+1=10, so please enter a 0 here and carry a 1 over to the tens place (10 ones = 1 ten).
+%(a6req)%	1
+%(a6)%	.
+%(a6hint1)%	Please enter a decimal point here.
+%(a6hint2)%	
+%(a7req)%	1
+%(a7)%	7
+%(a7hint1)%	Add the digits in the tenths places and enter the sum here. 
+%(a7hint2)%	The digits in the tenths places are 9 and 8.  9+8=17, so please enter 7 here and carry a 1 over to the ones column (10 tenths = 1).
+%(a8req)%	1
+%(a8)%	7
+%(a8hint1)%	Add the digits in the hundredths places and enter the sum here.
+%(a8hint2)%	The digits in the hundreths places are 7 and 0.  7+0=7, so please enter 7 here.
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+	
+	
+	
+%(a8_incorrect)%	
+%(a8_incorrect_msg)%	
+%(a7_incorrect)%	17
+%(a7_incorrect_msg)%	The number you've entered is the sum of 9+8, however you need to carry 10 into the next column using the carryboxes.
+%(a6_incorrect)%	
+%(a6_incorrect_msg)%	
+%(a5_incorrect)%	10
+%(a5_incorrect_msg)%	The number you've entered is the sum of 6+3+1, however you need to carry 10 into the next column using the carryboxes.
+%(a4_incorrect)%	
+%(a4_incorrect_msg)%	
+%(a3_incorrect)%	
+%(a3_incorrect_msg)%	
+%(a2_incorrect)%	
+%(a2_incorrect_msg)%	
+	
+	
+%(a7_missed_carry)%	
+%(a7_missed_carry_msg)%	
+%(a6_missed_carry)%	
+%(a6_missed_carry_msg)%	
+%(a5_missed_carry)%	9
+%(a5_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a4_missed_carry)%	0
+%(a4_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a3_missed_carry)%	
+%(a3_missed_carry_msg)%	
+%(a2_missed_carry)%	
+%(a2_missed_carry_msg)%	
+%(a1_missed_carry)%	
+%(a1_missed_carry_msg)%	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-leading-or-trailing-zero
+%(n1d4_skill)%	Enter-leading-or-trailing-zero
+%(n1d5_skill)%	Enter-addends
+%(n1d6_skill)%	Align-decimals
+%(n1d7_skill)%	Enter-addends
+%(n1d8_skill)%	Enter-leading-or-trailing-zero
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-leading-or-trailing-zero
+%(n2d5_skill)%	Enter-addends
+%(n2d6_skill)%	Align-decimals
+%(n2d7_skill)%	Enter-addends
+%(n2d8_skill)%	Enter-addends
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill1)%	Enter-leading-or-trailing-zero
+%(a2_skill2)%	Enter-leading-or-trailing-zero
+%(a3_skill)%	Enter-leading-or-trailing-zero
+%(a4_skill1)%	Add-column-with-carry-in
+%(a4_skill2)%	Generic-skill
+%(a5_skill1)%	Add-column-with-carry-out
+%(a5_skill2)%	Add-column-with-carry-in
+%(a6_skill1)%	Align-decimals
+%(a6_skill2)%	Generic-skill
+%(a7_skill1)%	Add-column-with-carry-out
+%(a7_skill2)%	Generic-skill
+%(a8_skill)%	Add-column-no-carry
+%(a9_skill)%	Enter-leading-or-trailing-zero
+%(1270617690788562020)%	One ten was carried over from the addition of 3 ones, 6 ones, and 1 carried one. Please enter 1.
+%(6793406834378098584)%	
+%(4122547966151021001)%	
+%(-3680528304229549849)%	
+%(5939726124832416050)%	
+%(-8618717357535436169)%	Think about where the second number needs to be placed in for you to be able to solve this problem.
+%(-6907532864849400112)%	The digit in the tenths place of 6.97 is 9. Please enter 9.
+%(1953684789227255040)%	
+%(4352543352198365568)%	
+%(-103575905657380754)%	There are no digits in the tens places except for 1 ten that was carried over from addition in the ones column, so please enter 1 here.
+%(2011383615763894068)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(4119033553413564137)%	
+%(163251407906615009)%	
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(4140092011089457802)%	Please enter '9' in the highlighted field.
+%(1270618690780561927)%	If you carry a value over from adding the ones values, please enter it here.
+%(6213752517472455109)%	The digit in the hundredths place of 6.97 is 7. Please enter 7.
+%(-4733341091933527816)%	
+%(267630474009556348)%	
+%(6382391196249600991)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	
+%(6793407834386098667)%	
+%(4457052840164545463)%	
+%(641187239159714154)%	
+%(3982482621457137133)%	The digits in the ones places are 6 and 3, and 1 one was carried from the sum of the tenths column. 6+3+1=10, so please enter a 0 here and carry a 1 over to the tens place (10 ones = 1 ten).
+%(-9117002631066219755)%	
+%(1951833195040611473)%	Add the digits in the hundredths places and enter the sum here.
+%(-9202527078397046537)%	
+%(5475859671157392990)%	Please enter '' in the highlighted field.
+%(4122546966191021130)%	
+%(-5088804614345645648)%	Please enter the digit in the ones place of 3.8.
+%(-103578905657380747)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(-3012007946899168714)%	
+%(9041503051529695589)%	
+%(-1431871633887445892)%	Please enter '3' in the highlighted field.
+%(-2825355576575072325)%	One unit was carried over from the addition of 9 tenths and 8 tenths. Please enter 1.
+%(-1418468650008855376)%	
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(8185252744885425129)%	The number you've entered is the sum of 6+3+1, however you need to carry 10 into the next column using the carryboxes.
+%(-6058999401977538257)%	
+%(-5667668291611333756)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-6724020093282192323)%	
+%(3094705722605100522)%	Please enter the digit in the tenths place of 3.8.
+%(-9202524078429046708)%	
+%(-6451121139349854999)%	
+%(6213751517464455158)%	Please enter the digit in the hundredths place of 6.97.
+%(622241884408253971)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(3982485621489137190)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(-4936737373465204086)%	
+%(-4644522401360927443)%	
+%(-6724017093314192458)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(-2567775295912293987)%	
+%(7703666018947561602)%	
+%(4989872382532288054)%	The digit in the ones place of 6.97 is 6. Please enter 6.
+%(-654681931127624440)%	
+%(-6998249527640291250)%	
+%(-654680931119624421)%	Please enter a decimal point here.
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	
+%(2160408901803418563)%	The number you've entered is the sum of 9+8, however you need to carry 10 into the next column using the carryboxes.
+%(3094706722693100777)%	The digit in the tenths place of 3.8 is 8. Please enter 8.
+%(1951836195136611818)%	The digits in the hundreths places are 7 and 0.  7+0=7, so please enter 7 here.
+%(5939723124832416025)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the tenths place of 6.97.
+%(-9116999631066219762)%	
+%(282619425198773699)%	Please enter '2' in the highlighted field.
+%(348783926355036851)%	Please enter '10' in the highlighted field.
+%(-7048402377707711960)%	
+%(-5088807614313645509)%	The digit in the ones place of 3.8 is 3. Please enter 3.
+%(-6058996401977538364)%	
+%(-3353315824230496612)%	Add the digits in the tenths places and enter the sum here. 
+%(-7793444101545105188)%	
+%(-4644523401368927522)%	
+%(6809645260764282625)%	
+%(-7048405377707711949)%	
+%(4989873382540288005)%	Please enter the digit in the ones place of 6.97.
+%(3121503337589117626)%	
+%(163254407938615098)%	
+%(9041502051521695510)%	
+%(-2825356576583072344)%	If you carry a value over from adding the tenths values, please enter it here.
+%(-6451118139349855102)%	
+%(6382390196225600924)%	
+%(-3680529304221549884)%	
+%(6809644260772282722)%	
+%(-3353314824206496545)%	The digits in the tenths places are 9 and 8.  9+8=17, so please enter 7 here and carry a 1 over to the ones column (10 tenths = 1).
+Problem Name	p23
+	
+%(startStateNodeName)%	state39
+%(problemstatement)%	Your family is driving to an amusement park for a vacation. It will take two days to drive to the park. On the first day, you use 20.54 gallons of gas. On the second day, you use 5.06 gallons of gas. How many gallons of gas were used to drive to the park?
+%(temp-numbers)%	Add 5.06 to 20.54
+%(op)%	+
+%(decimalposition)%	n1d6
+%(decimalposition2)%	n2d6
+%(carry_dec_loc)%	c6
+%(n1d1req)%	0
+%(n1d1)%	0
+%(n1d1hint1)%	
+%(n1d1hint2)%	
+%(n1d2req)%	0
+%(n1d2)%	0
+%(n1d2hint1)%	
+%(n1d2hint2)%	
+%(n1d3req)%	0
+%(n1d3)%	0
+%(n1d3hint1)%	
+%(n1d3hint2)%	
+%(n1d4req)%	1
+%(n1d4)%	2
+%(n1d4hint1)%	Please enter the digit in the tens place of 20.54.
+%(n1d4hint2)%	The digit in the tens place of 20.54 is 2. Please enter 2.
+%(n1d5req)%	1
+%(n1d5)%	0
+%(n1d5hint1)%	Please enter the digit in the ones place of 20.54.
+%(n1d5hint2)%	The digit in the ones place of 20.54 is 0. Please enter 0.
+%(n1d6req)%	0
+%(n1d6)%	---
+%(n1d6hint1)%	
+%(n1d6hint2)%	
+%(n1d7req)%	1
+%(n1d7)%	5
+%(n1d7hint1)%	Please enter the digit in the tenths place of 20.54.
+%(n1d7hint2)%	The digit in the tenths place of 20.54 is 5. Please enter 5.
+%(n1d8req)%	1
+%(n1d8)%	4
+%(n1d8hint1)%	Please enter the digit in the hundredths place of 20.54.
+%(n1d8hint2)%	The digit in the hundredths place of 20.54 is 4. Please enter 4.
+%(n1d9req)%	0
+%(n1d9)%	0
+%(n1d9hint1)%	
+%(n1d9hint2)%	
+%(n2d1req)%	0
+%(n2d1)%	0
+%(n2d1hint1)%	
+%(n2d1hint2)%	
+%(n2d2req)%	0
+%(n2d2)%	0
+%(n2d2hint1)%	
+%(n2d2hint2)%	
+%(n2d3req)%	0
+%(n2d3)%	0
+%(n2d3hint1)%	
+%(n2d3hint2)%	
+%(n2d4req)%	0
+%(n2d4)%	0
+%(n2d4hint1)%	
+%(n2d4hint2)%	
+%(n2d5req)%	1
+%(n2d5)%	5
+%(n2d5hint1)%	Please enter the digit in the ones place of 5.06.
+%(n2d5hint2)%	The digit in the ones place of 5.06 is 5. Please enter 5.
+%(n2d6req)%	0
+%(n2d6)%	---
+%(n2d6hint1)%	
+%(n2d6hint2)%	
+%(n2d7req)%	1
+%(n2d7)%	0
+%(n2d7hint1)%	Please enter the digit in the tenths place of 5.06.
+%(n2d7hint2)%	The digit in the tenths place of 5.06 is 0. Please enter 0.
+%(n2d8req)%	1
+%(n2d8)%	6
+%(n2d8hint1)%	Please enter the digit in the hundredths place of 5.06.
+%(n2d8hint2)%	The digit in the hundredths place of 5.06 is 6. Please enter 6.
+%(n2d9req)%	0
+%(n2d9)%	0
+%(n2d9hint1)%	
+%(n2d9hint2)%	
+%(carryBoxesToShow)%	"c1,c2,c3,c4,c5,c6,c7,c8,c9"
+%(c1)%	0
+%(c1hint1)%	
+%(c1hint2)%	
+%(c2)%	0
+%(c2hint1)%	
+%(c2hint2)%	
+%(c3)%	0
+%(c3hint1)%	
+%(c3hint2)%	
+%(c4)%	0
+%(c4hint1)%	
+%(c4hint2)%	
+%(c5)%	0
+%(c5hint1)%	
+%(c5hint2)%	
+%(c6)%	0
+%(c6hint1)%	
+%(c6hint2)%	
+%(c7)%	1
+%(c7hint1)%	If you carry a value over from adding the hundredths values, please enter it here.
+%(c7hint2)%	One tenth was carried over from the addition of 4 hundreths and 6 hundredths. Please enter 1.
+%(c8)%	0
+%(c8hint1)%	
+%(c8hint2)%	
+%(c9)%	0
+%(c9hint1)%	
+%(c9hint2)%	
+%(a1req)%	0
+%(a1)%	0
+%(a1hint1)%	
+%(a1hint2)%	
+%(a2req)%	0
+%(a2)%	0
+%(a2hint1)%	
+%(a2hint2)%	
+%(a3req)%	0
+%(a3)%	0
+%(a3hint1)%	
+%(a3hint2)%	
+%(a4req)%	1
+%(a4)%	2
+%(a4hint1)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(a4hint2)%	The digits in the tens places are 2 and 0, and nothing was carried over from addition in the ones column. 2+0=2, so please enter 2 here.
+%(a5req)%	1
+%(a5)%	5
+%(a5hint1)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(a5hint2)%	The digits in the ones places are 5 and 0, and 1 one was carried from the sum of the tenths column. 5+0+1=6, so please enter a 6 here.
+%(a6req)%	1
+%(a6)%	.
+%(a6hint1)%	Please enter a decimal point here.
+%(a6hint2)%	
+%(a7req)%	1
+%(a7)%	6
+%(a7hint1)%	Add the digits in the tenths places and enter the sum here. 
+%(a7hint2)%	The digits in the tenths places are 4 and 6.  4+6=10, so please enter 0 here and carry a 1 over to the ones column (10 tenths = 1).
+%(a8req)%	0
+%(a8)%	0
+%(a8hint1)%	
+%(a8hint2)%	
+%(a9req)%	0
+%(a9)%	0
+%(a9hint1)%	
+%(a9hint2)%	
+	
+	
+	
+%(a8_incorrect)%	10
+%(a8_incorrect_msg)%	The number you've entered is the sum of 6+4, however you need to carry 10 into the next column using the carryboxes.
+%(a7_incorrect)%	
+%(a7_incorrect_msg)%	
+%(a6_incorrect)%	
+%(a6_incorrect_msg)%	
+%(a5_incorrect)%	
+%(a5_incorrect_msg)%	
+%(a4_incorrect)%	
+%(a4_incorrect_msg)%	
+%(a3_incorrect)%	
+%(a3_incorrect_msg)%	
+%(a2_incorrect)%	
+%(a2_incorrect_msg)%	
+	
+	
+%(a7_missed_carry)%	5
+%(a7_missed_carry_msg)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(a6_missed_carry)%	
+%(a6_missed_carry_msg)%	
+%(a5_missed_carry)%	
+%(a5_missed_carry_msg)%	
+%(a4_missed_carry)%	
+%(a4_missed_carry_msg)%	
+%(a3_missed_carry)%	
+%(a3_missed_carry_msg)%	
+%(a2_missed_carry)%	
+%(a2_missed_carry_msg)%	
+%(a1_missed_carry)%	
+%(a1_missed_carry_msg)%	
+	
+%(n1d1_skill)%	Enter-leading-or-trailing-zero
+%(n1d2_skill)%	Enter-leading-or-trailing-zero
+%(n1d3_skill)%	Enter-leading-or-trailing-zero
+%(n1d4_skill)%	Enter-addends
+%(n1d5_skill)%	Enter-addends
+%(n1d6_skill)%	Align-decimals
+%(n1d7_skill)%	Enter-addends
+%(n1d8_skill)%	Enter-addends
+%(n1d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(n2d1_skill)%	Enter-leading-or-trailing-zero
+%(n2d2_skill)%	Enter-leading-or-trailing-zero
+%(n2d3_skill)%	Enter-leading-or-trailing-zero
+%(n2d4_skill)%	Enter-leading-or-trailing-zero
+%(n2d5_skill)%	Enter-addends
+%(n2d6_skill)%	Align-decimals
+%(n2d7_skill)%	Enter-addends
+%(n2d8_skill)%	Enter-addends
+%(n2d9_skill)%	Enter-leading-or-trailing-zero
+	
+%(a1_skill)%	Enter-leading-or-trailing-zero
+%(a2_skill1)%	Enter-leading-or-trailing-zero
+%(a2_skill2)%	Enter-leading-or-trailing-zero
+%(a3_skill)%	Enter-leading-or-trailing-zero
+%(a4_skill1)%	Add-column-no-carry
+%(a4_skill2)%	Generic-skill
+%(a5_skill1)%	Add-column-no-carry
+%(a5_skill2)%	Generic-skill
+%(a6_skill1)%	Align-decimals
+%(a6_skill2)%	Generic-skill
+%(a7_skill1)%	Add-column-with-carry-in
+%(a7_skill2)%	Generic-skill
+%(a8_skill)%	Add-column-with-carry-out
+%(a9_skill)%	Enter-leading-or-trailing-zero 
+%(1270617690788562020)%	
+%(6793406834378098584)%	
+%(4122547966151021001)%	
+%(-3680528304229549849)%	
+%(5939726124832416050)%	
+%(-8618717357535436169)%	Think about where the second number needs to be placed in for you to be able to solve this problem.
+%(-6907532864849400112)%	The digit in the tenths place of 5.06 is 0. Please enter 0.
+%(1953684789227255040)%	
+%(4352543352198365568)%	
+%(-103575905657380754)%	The digits in the tens places are 2 and 0, and nothing was carried over from addition in the ones column. 2+0=2, so please enter 2 here.
+%(2011383615763894068)%	
+%(4119033553413564137)%	
+%(163251407906615009)%	
+%(641188239247714409)%	
+%(-6634764911781064177)%	
+%(1953685789235255059)%	
+%(4140092011089457802)%	Please enter '9' in the highlighted field.
+%(1270618690780561927)%	
+%(6213752517472455109)%	The digit in the hundredths place of 5.06 is 6. Please enter 6.
+%(-4733341091933527816)%	The digit in the tens place of 20.54 is 2. Please enter 2.
+%(267630474009556348)%	The digit in the hundredths place of 20.54 is 4. Please enter 4.
+%(6382391196249600991)%	
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(8676312691321844538)%	
+%(7703667018939561633)%	
+%(267627473977556263)%	Please enter the digit in the hundredths place of 20.54.
+%(6793407834386098667)%	
+%(4457052840164545463)%	
+%(641187239159714154)%	
+%(3982482621457137133)%	The digits in the ones places are 5 and 0, and 1 one was carried from the sum of the tenths column. 5+0+1=6, so please enter a 6 here.
+%(-9117002631066219755)%	
+%(1951833195040611473)%	
+%(-9202527078397046537)%	
+%(5475859671157392990)%	Please enter '5' in the highlighted field.
+%(4122546966191021130)%	
+%(-5088804614345645648)%	Please enter the digit in the ones place of 20.54.
+%(-103578905657380747)%	Add the digits in the tens places and enter the sum here. Don't forget to add any values carried!
+%(-3012007946899168714)%	
+%(9041503051529695589)%	
+%(-1431871633887445892)%	Please enter '3' in the highlighted field.
+%(-2825355576575072325)%	
+%(-1418468650008855376)%	The number you've entered is the sum of 6+4, however you need to carry 10 into the next column using the carryboxes.
+%(-1289697314384453718)%	This means that the decimal points of both numbers should be aligned. Please enter a decimal point in the box below where it has been entered for you in the first number.
+%(8185252744885425129)%	
+%(-6058999401977538257)%	
+%(-5667668291611333756)%	
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(8676309691289844449)%	
+%(-6724020093282192323)%	
+%(3094705722605100522)%	Please enter the digit in the tenths place of 20.54.
+%(-9202524078429046708)%	
+%(-6451121139349854999)%	One tenth was carried over from the addition of 4 hundreths and 6 hundredths. Please enter 1.
+%(6213751517464455158)%	Please enter the digit in the hundredths place of 5.06.
+%(622241884408253971)%	
+%(3982485621489137190)%	Add the digits in the ones places and enter the sum here. Don't forget to add any values carried!
+%(-4936737373465204086)%	
+%(-4644522401360927443)%	
+%(-6724017093314192458)%	
+%(-5166532556208710060)%	No, this is not correct.
+%(-2567775295912293987)%	
+%(7703666018947561602)%	
+%(4989872382532288054)%	The digit in the ones place of 5.06 is 5. Please enter 5.
+%(-654681931127624440)%	
+%(-6998249527640291250)%	You've added the two numbers correctly, but you've forgotten about the number in the carry box.
+%(-654680931119624421)%	Please enter a decimal point here.
+%(-7793447101577105273)%	
+%(-5333958728013136857)%	To add or subtract decimal numbers, you want to line up the second number with the first number according to place values.
+%(-4733344091933527869)%	Please enter the digit in the tens place of 20.54.
+%(2160408901803418563)%	
+%(3094706722693100777)%	The digit in the tenths place of 20.54 is 5. Please enter 5.
+%(1951836195136611818)%	
+%(5939723124832416025)%	
+%(-6634761911781064156)%	
+%(-6907535864945400357)%	Please enter the digit in the tenths place of 5.06.
+%(-9116999631066219762)%	
+%(282619425198773699)%	Please enter '2' in the highlighted field.
+%(348783926355036851)%	Please enter '10' in the highlighted field.
+%(-7048402377707711960)%	
+%(-5088807614313645509)%	The digit in the ones place of 20.54 is 0. Please enter 0.
+%(-6058996401977538364)%	
+%(-3353315824230496612)%	Add the digits in the tenths places and enter the sum here. 
+%(-7793444101545105188)%	
+%(-4644523401368927522)%	
+%(6809645260764282625)%	
+%(-7048405377707711949)%	
+%(4989873382540288005)%	Please enter the digit in the ones place of 5.06.
+%(3121503337589117626)%	
+%(163254407938615098)%	
+%(9041502051521695510)%	
+%(-2825356576583072344)%	
+%(-6451118139349855102)%	If you carry a value over from adding the hundredths values, please enter it here.
+%(6382390196225600924)%	
+%(-3680529304221549884)%	
+%(6809644260772282722)%	
+%(-3353314824206496545)%	The digits in the tenths places are 4 and 6.  4+6=10, so please enter 0 here and carry a 1 over to the ones column (10 tenths = 1).

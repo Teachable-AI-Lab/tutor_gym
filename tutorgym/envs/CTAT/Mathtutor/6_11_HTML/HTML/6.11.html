@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+
+  <title>Tutor</title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/CTAT.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/Mathtutor.css">
+  <link rel="stylesheet" type="text/css" href="Assets/6.11.css">
+
+  <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/jquery.min.js"></script>
+  <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctat.min.js"></script>
+  <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctatloader.js"></script>
+</head>
+
+  <body>
+    <main class="CTATTutor">
+      <h1>Tutor</h1>
+
+      <section class="CTATProblemSolving">
+        <h2>Problem Solving</h2>
+
+        <section class="CTATProblem third">
+          <h3>Problem</h3>
+
+          <div id="problemstatement" class="CTATTextField"></div>
+        </section>
+
+        <section class="CTATSolution twothirds">
+          <h2>Solution</h2>
+
+          <div id="caption" class="CTATElement hidden">Use these boxes to recombine values:</div>
+          <div id="recombine" class="CTATElement table hidden">
+            <div id="r1" class="row CTATElement hidden">
+              <div class="cell"><div id="r1c1" class="CTATTextInput" tabindex="53"></div></div>
+              <div class="cell"><div id="r1c2" class="CTATTextInput" tabindex="49"></div></div>
+              <div class="cell"><div id="r1c3" class="CTATTextInput" tabindex="45"></div></div>
+              <div class="cell"><div id="r1c4" class="CTATTextInput" tabindex="41"></div></div>
+              <div class="cell"><div id="r1c5" class="CTATTextInput" tabindex="37"></div></div>
+              <div class="cell"><div id="r1c6" class="CTATTextInput" tabindex="33"></div></div>
+              <div class="cell"><div id="r1c7" class="CTATTextInput" tabindex="29"></div></div>
+              <div class="cell"><div id="r1c8" class="CTATTextInput" tabindex="25"></div></div>
+              <div class="cell"><div id="r1c9" class="CTATTextInput" tabindex="21"></div></div>
+            </div>
+            <div id="r2" class="row CTATElement hidden">
+              <div class="cell"><div id="r2c1" class="CTATTextInput" tabindex="52"></div></div>
+              <div class="cell"><div id="r2c2" class="CTATTextInput" tabindex="48"></div></div>
+              <div class="cell"><div id="r2c3" class="CTATTextInput" tabindex="44"></div></div>
+              <div class="cell"><div id="r2c4" class="CTATTextInput" tabindex="40"></div></div>
+              <div class="cell"><div id="r2c5" class="CTATTextInput" tabindex="36"></div></div>
+              <div class="cell"><div id="r2c6" class="CTATTextInput" tabindex="32"></div></div>
+              <div class="cell"><div id="r2c7" class="CTATTextInput" tabindex="28"></div></div>
+              <div class="cell"><div id="r2c8" class="CTATTextInput" tabindex="24"></div></div>
+              <div class="cell"><div id="r2c9" class="CTATTextInput" tabindex="20"></div></div>
+            </div>
+            <div id="r3" class="row CTATElement hidden">
+              <div class="cell"><div id="c1" class="CTATTextInput" tabindex="51"></div></div>
+              <div class="cell"><div id="c2" class="CTATTextInput" tabindex="47"></div></div>
+              <div class="cell"><div id="c3" class="CTATTextInput" tabindex="43"></div></div>
+              <div class="cell"><div id="c4" class="CTATTextInput" tabindex="39"></div></div>
+              <div class="cell"><div id="c5" class="CTATTextInput" tabindex="35"></div></div>
+              <div class="cell"><div id="c6" class="CTATTextInput" tabindex="31"></div></div>
+              <div class="cell"><div id="c7" class="CTATTextInput" tabindex="27"></div></div>
+              <div class="cell"><div id="c8" class="CTATTextInput" tabindex="23"></div></div>
+              <div class="cell"><div id="c9" class="CTATTextInput" tabindex="19"></div></div>
+            </div>
+          </div>
+          <div id="main" class="table">
+            <div class="row">
+              <div class="cell"></div>
+              <div class="cell"><div id="n1d1" class="CTATTextInput" tabindex="1"></div></div>
+              <div class="cell"><div id="n1d2" class="CTATTextInput" tabindex="2"></div></div>
+              <div class="cell"><div id="n1d3" class="CTATTextInput" tabindex="3"></div></div>
+              <div class="cell"><div id="n1d4" class="CTATTextInput" tabindex="4"></div></div>
+              <div class="cell"><div id="n1d5" class="CTATTextInput" tabindex="5"></div></div>
+              <div class="cell"><div id="n1d6" class="CTATTextInput" tabindex="6"></div></div>
+              <div class="cell"><div id="n1d7" class="CTATTextInput" tabindex="7"></div></div>
+              <div class="cell"><div id="n1d8" class="CTATTextInput" tabindex="8"></div></div>
+              <div class="cell"><div id="n1d9" class="CTATTextInput" tabindex="9"></div></div>
+            </div>
+            <div class="row">
+              <div class="cell"><span id="sign" class="CTATTextField"></span></div>
+              <div class="cell"><div id="n2d1" class="CTATTextInput" tabindex="10"></div></div>
+              <div class="cell"><div id="n2d2" class="CTATTextInput" tabindex="11"></div></div>
+              <div class="cell"><div id="n2d3" class="CTATTextInput" tabindex="12"></div></div>
+              <div class="cell"><div id="n2d4" class="CTATTextInput" tabindex="13"></div></div>
+              <div class="cell"><div id="n2d5" class="CTATTextInput" tabindex="14"></div></div>
+              <div class="cell"><div id="n2d6" class="CTATTextInput" tabindex="15"></div></div>
+              <div class="cell"><div id="n2d7" class="CTATTextInput" tabindex="16"></div></div>
+              <div class="cell"><div id="n2d8" class="CTATTextInput" tabindex="17"></div></div>
+              <div class="cell"><div id="n2d9" class="CTATTextInput" tabindex="18"></div></div>
+            </div>
+            <div class="row line">
+              <div class="cell"></div>
+              <div class="cell"><hr></div>
+            </div>
+            <div class="row">
+              <div class="cell"></div>
+              <div class="cell"><div id="a1" class="CTATTextInput" tabindex="54"></div></div>
+              <div class="cell"><div id="a2" class="CTATTextInput" tabindex="50"></div></div>
+              <div class="cell"><div id="a3" class="CTATTextInput" tabindex="46"></div></div>
+              <div class="cell"><div id="a4" class="CTATTextInput" tabindex="42"></div></div>
+              <div class="cell"><div id="a5" class="CTATTextInput" tabindex="38"></div></div>
+              <div class="cell"><div id="a6" class="CTATTextInput" tabindex="34"></div></div>
+              <div class="cell"><div id="a7" class="CTATTextInput" tabindex="30"></div></div>
+              <div class="cell"><div id="a8" class="CTATTextInput" tabindex="26"></div></div>
+              <div class="cell"><div id="a9" class="CTATTextInput" tabindex="22"></div></div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="CTATTools">
+        <h2>Tools</h2>
+
+        <div class="CTATButtons">
+          <div class="CTATDoneButton"></div>
+          <div class="CTATHintButton"></div>
+        </div>
+
+        <section class="CTATHints">
+          <h3>Hints</h3>
+          <div class="CTATHintWindow"></div>
+        </section>
+
+        <section class="CTATSkills">
+          <h3>Skills</h3>
+          <div class="CTATSkillWindow"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
