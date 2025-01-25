@@ -92,10 +92,11 @@ class FractionArithmetic(StateMachineTutor):
         self.possible_selections = self.conv_nums + self.conv_dens + ['ans_num', 'ans_den', 'done']
         self.possible_args = self.init_nums + self.init_dens + self.conv_nums + self.conv_dens
 
+        print("POSSIBLE SELECTIONS", self.possible_selections)
+        print("POSSIBLE ARGS", self.possible_args)
         # Ensure all have an id attribute
         for key, obj in state.items():
             state[key]['id'] = key
-
         return ProblemState(state)
 
     def set_start_state(self, op, fracs, **kwargs):
@@ -135,14 +136,15 @@ class FractionArithmetic(StateMachineTutor):
             nums = [str(randint(1, 15)) for _ in range(self.n)]
             dens = [str(randint(2, 15))] * self.n
             operator = "+"
-
+        print("NUMERATORS", nums)
+        print("DENOMINATORS", dens)
         self.set_problem(operator, list(zip(nums, dens)))
         return (operator, list(zip(nums, dens)))
         # print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {operator.join([f'({n}/{v})' for n,v in zip(nums,dens)])}" )
 
     def create_fsm(self, state):
         curr_state = state.copy()
-
+        print("CURR STATE", state)
         fsm = FiniteStateMachine(curr_state)
 
         init_num_vals = [int(state[f'init_num{i+1}']['value']) for i in range(self.n)]
