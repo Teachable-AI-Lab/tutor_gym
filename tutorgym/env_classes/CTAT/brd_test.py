@@ -132,6 +132,7 @@ def parse_brd(filepath):
 
         # print("  ", child, child.tag)
 
-parse_brd("AS_3_7_plus_4_7.brd")
+# parse_brd("AS_3_7_plus_4_7.brd")
+parse_brd("Mathtutor/6_01_HTML/FinalBRDs/Problem1.brd")
 
 
