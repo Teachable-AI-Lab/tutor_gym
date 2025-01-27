@@ -27,7 +27,7 @@ class HTNCognitiveModel:
 
     def get_next_actions(self, state):
         state_list: list[dict] = sorted(list(state.objs.values()), key=lambda x: x['y'])
-        fact_state: Fact = Fact(start=True) & Fact(scaffold='level_2')
+        fact_state: Fact = Fact(start=True) & Fact(scaffold='level_4') & Fact(scaffold='level_3') & Fact(scaffold='level_2') & Fact(scaffold='level_1')       
 
         answers: list[Fact] = []
         for value in state_list:
@@ -37,18 +37,14 @@ class HTNCognitiveModel:
                 answers.append(Fact(field=value['id'], value=value['value'], answer=value['locked']))
             else:
                 fact_state = fact_state & Fact(field=value['id'], value=value['value'], answer=value['locked'])
-
         
         plan = planner(fact_state, self.task, self.domain)
         effect, fact_state = plan.send(None)
         for answer in answers:
-            # value = sp.sstr(parse_latex(re.sub(r'sqrt(\d+)', r'sqrt{\1}', answer['value'])), order="grlex").replace('-1*s', '-s').replace('-1*l', '-l').replace('-1*e', '-e')
-            value = answer['value'][0]
+            value = answer['value']
             while True:
                 exitloop = False
-                if effect['value'][0] == value and effect['field'] == answer['field']:
-                # for evalue in effect['value']:
-                    # if evalue[0].match(value) and effect['field'] == answer['field']:
+                if effect['value'][0][1] == value and effect['field'] == answer['field']:
                     effect['value'] = answer['value']
                     effect, fact_state = plan.send((fact_state, True, effect))
                     exitloop = True
@@ -57,13 +53,14 @@ class HTNCognitiveModel:
                     break
                 effect, fact_state = plan.send((fact_state, False, effect))
         
-        expected: list[Fact] = [effect]
+        expected: list[Fact] = []
 
-        while True:
+        while True:            
             effect, fact_state = plan.send((fact_state, False, expected))
             if not effect:
                 break
             expected.append(effect)
+            
 
         
         next_actions = []
@@ -77,9 +74,9 @@ class HTNCognitiveModel:
             else:
                 next_actions.append(
                     Action(
-                        (f'{effect["field"]}', 'UpdateTextField', {'value': effect['value']}), 
-                        arg_foci=[effect['arg_foci']],
-                        how_str=effect['how']
+                        (f'{effect["field"]}', 'UpdateTextField', {'value': effect['value'][0][1]}), 
+                        arg_foci=[effect['arg_foci']] if 'arg_foci' in effect else [''],
+                        how_str=effect['how'] if 'how' in effect else ''
                     )
                 )
 

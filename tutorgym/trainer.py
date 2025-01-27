@@ -129,7 +129,7 @@ class Trainer:
             # extra = f"{how_part}({','.join(arg_foci)})"
 
         if(outcome_kind == "CORRECT"):
-            print(Back.GREEN + Fore.BLACK  + f"CORRExCT: {sai[0]} -> {sai[2]} {extra}" + Style.RESET_ALL)
+            print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai[0]} -> {sai[2]} {extra}" + Style.RESET_ALL)
         elif(outcome_kind == "INCORRECT"):            
             print(Back.RED + Fore.BLACK + f"INCORRECT: {sai[0]} -> {sai[2]} {extra}" + Style.RESET_ALL)
         elif(outcome_kind == "HINT"):
