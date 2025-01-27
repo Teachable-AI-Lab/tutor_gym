@@ -5,17 +5,19 @@ const host_url = window.location.origin
 // -------------------------------------------
 // : REST Endpoints w/ host server 
 
+HEADERS = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+    crossdomain : true,
+}
+
 async function getHtmlConfigs() {
     try {
         const response = await fetch(host_url + '/get_html_configs',
-            { 
+        {
             method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                crossdomain : true,
-                }
-            }
-        );
+            headers: HEADERS
+        });
         const data = await response.text();
         console.log('Success:', data);
         return JSON.parse(data)
@@ -30,11 +32,7 @@ async function saveHtmlJson(html_json, filepath) {
         const response = await fetch(host_url + '/save_html_json',
         {
             method: 'POST',
-            headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            // crossdomain : true,
-            },
+            headers: HEADERS,
             body : JSON.stringify({html_json, filepath})
         });
         const data = await response.text();
@@ -49,15 +47,26 @@ async function saveHtmlImage(image_data, filepath) {
         const response = await fetch(host_url + '/save_html_image',
         {
             method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                // crossdomain : true,
-            },
+            headers: HEADERS,
             body: JSON.stringify({image_data, filepath})
         });
         const data = await response.text();
         console.log('Success:', data);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+async function processingFinished() {
+    try {
+        const response = await fetch(host_url + '/processing_finished',
+        { 
+            method: 'POST',
+            headers: HEADERS
+        });
+        const data = await response.text();
+        console.log('Success:', data);
+        return JSON.parse(data)
     } catch (error) {
         console.error('Error:', error);
     }
@@ -98,7 +107,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log("BEF")
         // Promise for when processing finished
         let proc_finished = new Promise((resolve, reject) => {
-
             // Set onload() for when src changes
             iframe.onload = async () => {
                 console.log("On Load")
@@ -121,6 +129,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // Resolve proc_finished Promise
                 resolve(true)
             };
+            iframe.onerror = (error) => {
+                console.error('Error loading iframe:', error);
+                reject()
+            };
         });
         console.log("AFT")
         
@@ -133,16 +145,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log("finish VAL", val)
     }
     
-    
-    // Now you can work with the iframe's DOM
-    // For example:
-    // iframeDocument.body.innerHTML = '<div>Hello from iframe!</div>';
-
-    
-    // Error handling
-    iframe.onerror = (error) => {
-        console.error('Error loading iframe:', error);
-    };
+    processingFinished()
 });
 
 

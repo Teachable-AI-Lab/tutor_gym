@@ -46,7 +46,7 @@ class TutorEnvBase(ABC):
         pass
 
     @abstractmethod
-    def get_demo(self, state=None, **kwargs):
+    def get_all_demos(self, state=None, **kwargs):
         """
         Get a list of instances of Action for all next correct actions in the Tutor
         """
@@ -67,7 +67,7 @@ class TutorEnvBase(ABC):
         pass
 
     @abstractmethod
-    def set_state(self, objs):
+    def set_state(self, state):
         """
         Set the current state of the Tutor
         """

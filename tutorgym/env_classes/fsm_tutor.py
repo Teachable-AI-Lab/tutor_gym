@@ -96,12 +96,14 @@ class StateMachineTutor(TutorEnvBase):
     def set_problem(self, *args, **kwargs):
         # subclasses defined start state
         self.set_start_state(*args, **kwargs)
+        self.problem_config = self._standardize_config(*args, **kwargs)
+
         # subclasses defined fsm constructor
-        self.fsm = self.create_fsm(self.start_state)
+        self.fsm = self.create_fsm(self.start_state, **self.problem_config)
         self.state = self.start_state
         self.is_done = False
 
-        self.problem_config = self._standardize_config(*args, **kwargs)
+        
         
 
     def get_problem(self):

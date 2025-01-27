@@ -3,9 +3,11 @@ import time
 from threading import Thread
 import socket
 import os
+import sys
 import base64
 import glob
 import warnings
+from tutorgym.shared import glob_iter
 
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -57,19 +59,13 @@ import os
 def build_flask_server(host, port, root_dir, html_configs):
     app = Flask("html_tools_server")
     host_url = f"http://{host}:{port}"
+    flask_thread = None
     # config_index = 0
 
     @app.route('/get_html_configs', methods=['GET'])
     def get_html_configs():
         print("GET HTML CONFIGS")
         try:
-            # html_config = html_configs[config_index]
-            # html_config['config_index'] = config_index
-            # config_index += 1
-
-            # html_config['html_url'] = host_url + html_config['html_path']
-
-
             return jsonify(html_configs) #f'{host_url}/Mathtutor/6_01_HTML/HTML/6.01-4.html'
         
         except Exception as e:
@@ -116,6 +112,25 @@ def build_flask_server(host, port, root_dir, html_configs):
             print(e)
             return jsonify({"status": "error", "message": str(e)}), 400
 
+    @app.route('/processing_finished', methods=['POST'])
+    def processing_finished():
+        print("Processing Finished.")
+        shutdown_func = request.environ.get('werkzeug.server.shutdown')
+        if shutdown_func is not None:
+            shutdown_func()
+        else:
+            import signal
+            os.kill(os.getpid(), signal.SIGINT)
+            
+            # cleanup()
+            # signal.raise_signal(signal.SIGABRT)
+            # print("SYS EXIT")
+            # pid = os.getpid()
+            # # Send SIGTERM signal to the process
+            # os.kill(pid, signal.SIGTERM)
+            # sys.exit(0)
+        return jsonify({"message" : "Server shutting down..."}) #f'{host_url}/Mathtutor/6_01_HTML/HTML/6.01-4.html'
+        
 
     # Also serve root index.html
     @app.route('/<path:filename>')
@@ -129,8 +144,14 @@ def build_flask_server(host, port, root_dir, html_configs):
         print(f"--serve_static: /html_tools/", filename)
         return send_from_directory(THIS_DIR, filename)
 
+    def run_flask():
+        app.run(host=host, port=port)
 
-    return app
+    flask_thread = Thread(target=run_flask)
+    flask_thread.daemon = True # cleanup when main process does
+    flask_thread.start()
+
+    return flask_thread
 
 # -----------------------------------------------------------
 # : Start Flask Server 
@@ -144,19 +165,7 @@ def is_server_running(host='localhost', port=3000):
         return False
 
 def start_flask_server(host, port, root_dir, html_configs):
-    app = build_flask_server(host, port, root_dir, html_configs)
-    def run_flask():
-        app.run(host=host, port=port)
-
-    flask_thread = Thread(target=run_flask)
-    flask_thread.daemon = True
-    flask_thread.start()
-
-    # Wait for the server to start
-    print("Waiting for Flask server to start...")
-    while not is_server_running():
-        time.sleep(0.1)  # Check every 100ms
-    print("Flask server is now running!")
+    flask_thread = build_flask_server(host, port, root_dir, html_configs)
     return flask_thread
 
 
@@ -199,12 +208,16 @@ def get_cached_proc_filepath(html_path, long_hash=None, new_ext='.json'):
 # -----------------------------------------------------------
 # : HTML_Preprocessor 
 
+
 class HTML_Preprocessor:
     def __init__(self, root_dir, html_paths, 
                  get_json=True, get_image=True, 
-                 disk_cache=True, 
+                 cache=True, 
                  browser="firefox", browser_args=[],
-                 host='localhost', port=3000):
+                 host='localhost', port=3000,
+                 keep_alive=False):
+
+    
         if(isinstance(html_paths, (str,dict))):
             html_paths = [html_paths]
 
@@ -218,12 +231,11 @@ class HTML_Preprocessor:
 
             config['get_json'] = config.get('get_json', get_json)
             config['get_image'] = config.get('get_image', get_json)
-            # config['disk_cache'] = config.get('disk_cache', disk_cache)
+            config['cache'] = config.get('cache', cache)
 
             valid_config = False
             if("html_path" in config):
                 if("*" in html_path):
-                    print(os.path.join(root_dir, html_path))
                     config['glob'] = {"pathname": html_path, "root_dir":root_dir,  "recursive" : True}
                     del config['html_path']
                 else:
@@ -232,7 +244,9 @@ class HTML_Preprocessor:
         
             if("glob" in config):
                 item_config = {k:v for k,v in config.items() if k != "glob"}
-                for html_path in glob.glob(**config["glob"]):
+
+
+                for html_path in glob_iter(**config["glob"]):
                     if(not html_path.endswith(".html")):
                         warnings.warn(f"HTML path ({html_path}) retrieved by glob arguments {config['glob']} does not end in '.html'.")
 
@@ -250,17 +264,19 @@ class HTML_Preprocessor:
         self.port = port
         self.is_done = False
 
-        self.ensure_outpaths(disk_cache)
+        self.ensure_outpaths()
 
-    def ensure_outpaths(self, disk_cache): 
+    def ensure_outpaths(self): 
+        need_run_browser = False
+
         for html_config in self.html_configs:
             get_json = html_config.get('get_json', True)
             get_image = html_config.get('get_json', True)
             if(not get_json and not get_image):
                 continue 
 
-            html_path = html_config['html_path']
-            longhash = get_file_longhash(os.path.join(self.root_dir, html_path))
+            html_path = os.path.join(self.root_dir, html_config['html_path']) 
+            longhash = get_file_longhash(html_path)
 
             # Ensure that 'json_path' and 'image_path' exist
             if(get_json and not 'json_path' in html_config):
@@ -271,35 +287,50 @@ class HTML_Preprocessor:
                 html_config['image_path'] = \
                     get_cached_proc_filepath(html_path, longhash, '.png')
 
-            # When disk_cache=True don't overwrite  
-            if(disk_cache and os.path.exists(html_config['json_path'])):
+            # When cache=True don't overwrite  
+            cache = html_config.get('cache', True)
+            json_path = os.path.join(self.root_dir, html_config['json_path'])
+            if(cache and os.path.exists(json_path)):
                 html_config['get_json'] = False
+            else:
+                need_run_browser = True
 
-            if(disk_cache and os.path.exists(html_config['image_path'])):
+            image_path = os.path.join(self.root_dir, html_config['image_path'])
+            if(cache and os.path.exists(image_path)):
                 html_config['get_image'] = False
+            else:
+                need_run_browser = True
+
+        self.need_run_browser = need_run_browser
 
 
     def start(self, block=True):
-        self.flask_thread = start_flask_server(self.host, self.port, self.root_dir, self.html_configs)
+        if(self.need_run_browser):
+            self.flask_thread = start_flask_server(self.host, self.port, self.root_dir, self.html_configs)
 
-        host_url = f"http://{self.host}:{self.port}"
-        # host_url = html_paths
-        browser_process = open_browser(f"{host_url}/html_tools/index.html", "firefox")
+            host_url = f"http://{self.host}:{self.port}"
+            # host_url = html_paths
+            browser_process = open_browser(f"{host_url}/html_tools/index.html", "firefox")
 
-        while is_server_running(self.host, self.port):
-            time.sleep(0.1)  # Check every 100ms
-
+            if(block):
+                try:
+                    self.flask_thread.join()
+                except KeyboardInterrupt:
+                    print("Caught SIGINT")
+                    pass
+                self.flask_thread = None
 
     def get_configs(self):
         return self.html_configs
 
+    def shutdown(self):
+        flask_thread = getattr(self, "flask_thread", None)
+        if(flask_thread is not None):
+
+    def __del__(self):
+        self.shutdown()
 
 
-
-
-            
-
-            
 
 
 
@@ -309,14 +340,18 @@ if __name__ == '__main__':
     # # browser_process = open_browser("Mathtutor/6_01_HTML/HTML/6.01-4.html", "google-chrome")
     # browser_process = open_browser("http://localhost:3000/index.html", "firefox")
     proc = HTML_Preprocessor(
-        root_dir="../../envs/CTAT/Mathtutor/",
+        root_dir="../envs/CTAT/Mathtutor/",
         html_paths="**/*.html"
     )
+    print("START")
 
     proc.start()
 
-    # for config in proc.get_configs():
-    #     print(config)
+    print("END")
+    # proc.get
+
+    for config in proc.get_configs():
+        print(config)
 
     # while is_server_running():
     #     time.sleep(0.1)  # Check every 100ms

@@ -1,4 +1,8 @@
 from tutorgym.utils import unique_hash
+import sys
+import os
+import glob
+
 
 # ----------------------------------
 # : ProblemState
@@ -228,3 +232,22 @@ class Action:
             "inputs" : self.sai[2],
             **self.annotations,
         }
+
+
+# -------------------------------------------------------
+# : glob_iter
+
+def glob_iter(**kwargs):
+    # Python < 3.10 no support for glob(root_dir=...) (need to hack it)
+    if(sys.version_info < (3, 10)):
+        root_dir = kwargs.get("root_dir", "./")
+        if("root_dir" in kwargs):
+            kwargs = {k:v for k,v in kwargs.items() if k != "root_dir"}
+        kwargs['pathname'] = os.path.join(root_dir, kwargs['pathname'])
+        results = glob.glob(**kwargs)
+        results = [os.path.relpath(x, root_dir) for x in results]
+        return results
+
+    # Python >= 3.10 supports glob(root_dir=...)
+    else:
+        return glob.glob(**kwargs)

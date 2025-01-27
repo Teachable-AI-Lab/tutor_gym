@@ -1,7 +1,6 @@
 import xmltodict
 import lxml.etree as ET
 from tutorgym.shared import Action
-from tutorgym.env_classes.fsm_tutor import StateMachineTutor
 
 # --------------------
 # : parse_sai
@@ -130,9 +129,11 @@ def parse_brd(filepath):
     for e in edges:
         print(e)
 
+    return start_actions, edges
+
         # print("  ", child, child.tag)
 
 # parse_brd("AS_3_7_plus_4_7.brd")
-parse_brd("Mathtutor/6_01_HTML/FinalBRDs/Problem1.brd")
+# parse_brd("Mathtutor/6_01_HTML/FinalBRDs/Problem1.brd")
 
 
