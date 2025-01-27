@@ -59,18 +59,6 @@ class FiniteStateMachine:
         out_edges = self.nodes[state]['edges']
         return list(out_edges.keys())
 
-    # def copy(self, omit_action_parts=[]):
-    #     new_fsm = FiniteStateMachine(self.start_state)
-    #     for state, node in new_fsm.nodes.items():
-    #         new_node = new_fsm._ensure_node(state)
-    #         new_edges = {}
-    #         for action, next_state in node['edges'].items():
-    #             action_copy = action.copy(omit_action_parts)
-    #             new_edges[action_copy] = next_state
-    #         new_node['edges'] = new_edges
-    #         new_fsm.nodes[state] = new_node
-    #     return new_fsm
-
 
 def load_fsm(file_path):
     ''' Load a finite state machine from a brd or json file.'''
@@ -85,8 +73,9 @@ class StateMachineTutor(TutorEnvBase):
         raise NotImplementedError("Subclass must implement set_start_state().")
 
     def _standardize_config(self, *args, **kwargs):
+        
         sig = inspect.signature(self.set_start_state)
-
+        
         problem_config = {}
         for (arg_name, arg) in zip(sig.parameters, args):
             problem_config[arg_name] = arg
@@ -102,8 +91,6 @@ class StateMachineTutor(TutorEnvBase):
         self.fsm = self.create_fsm(self.start_state, **self.problem_config)
         self.state = self.start_state
         self.is_done = False
-
-        
         
 
     def get_problem(self):
@@ -139,19 +126,8 @@ class StateMachineTutor(TutorEnvBase):
     def sai_makes_done(self, sai):
         return sai[0] == 'done'
 
-    # def _action_to_sai(self, action):
-    #     if(not isinstance(action, (SAI, tuple, list, dict))):
-    #         if(hasattr(action, 'sai')):
-    #             sai = SAI(*action.sai)
-    #         else:
-    #             raise ValueError(f"Action {action} does not have .sai property.")
-    #     else:
-    #         sai = SAI(action)
-    #     return sai
-
     def apply(self, action):
         """ Applies an Action. Modifying self.state. """
-        # sai = self._action_to_sai(action)
         if(self.sai_makes_done(action.sai)):
             self.is_done = True
             self.state = ProblemState({})
@@ -160,14 +136,9 @@ class StateMachineTutor(TutorEnvBase):
         return self.state.objs
 
     def _process_demo(self, action, **kwargs):
-        # demo_args = kwargs.get('demo_args',self.demo_args)
-        # demo_how = kwargs.get('demo_how',self.demo_how)
-        # print("PROCESS", demo_how, demo_args)
-        # if(not demo_args or not demo_how):
         action = Action(action.sai, 
                 **{k:v for k,v in action.annotations.items() if k in self.demo_annotations
                 })
-        # action = action.copy(ommit_annotations=not demo_args, omit_how=not demo_how)
         return action
 
     def get_demo(self, state=None, **kwargs):
@@ -179,10 +150,7 @@ class StateMachineTutor(TutorEnvBase):
     def get_all_demos(self, state=None, **kwargs):
         """ Returns all correct next-step Actions """
         state = self.state if state is None else state 
-        correct_actions = self.fsm.get_next_actions(self.state)
-        # print("DEMOS:")
-        # for a in correct_actions:
-        #     print('\t', repr(a))
+        correct_actions = self.fsm.get_next_actions(self.state)     
         return [self._process_demo(a, **kwargs) for a in correct_actions]
 
     
