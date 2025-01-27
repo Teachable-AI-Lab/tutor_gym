@@ -1,6 +1,6 @@
 import subprocess
 import time
-from threading import Thread
+from threading import Thread, Lock
 import socket
 import os
 import sys
@@ -8,6 +8,8 @@ import base64
 import glob
 import warnings
 from tutorgym.shared import glob_iter
+from queue import Queue
+
 
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -50,31 +52,75 @@ def open_browser(html_file, browser=None, browser_args=[]):
         webbrowser.get().open(html_file)
 
 from flask import Flask, request, jsonify, send_from_directory
+from flask_socketio import SocketIO, send, emit
 import json
 import os
 
 # -----------------------------------------------------------
 # : Flask Server Endpoints 
 
-def build_flask_server(host, port, root_dir, html_configs):
+# class MessageSender:
+#     def __init__(self, message_queue, emit_func):
+#         self.running = True
+#         self.message_queue = message_queue
+#         self.emit_func = emit_func
+    
+#     def stop(self):
+#         self.running = False
+
+#     def run(self):
+#         while self.running:
+#             try:
+#                 # Process messages from queue
+#                 while not self.message_queue.empty():
+#                     msg = self.message_queue.get()
+#                     emit_func('html_configs', msg)
+                
+#                 # # Send periodic updates
+#                 # socketio.emit('heartbeat', {'timestamp': time.time()})
+#                 # time.sleep(1)
+                
+#             except Exception as e:
+#                 print(f"Error in message sender: {str(e)}")
+#                 time.sleep(1)
+
+def build_flask_server(host, port, root_dir):
+    # message_queue = Queue()
     app = Flask("html_tools_server")
+    socketio = SocketIO(app)
     host_url = f"http://{host}:{port}"
     flask_thread = None
+    message_thread = None
+    # message_sender = MessageSender(message_queue, socketio.emit)
+    html_configs = []
+
+    connect_lock = Lock()
+    connect_lock.acquire()
+
+
     # config_index = 0
 
-    @app.route('/get_html_configs', methods=['GET'])
-    def get_html_configs():
-        print("GET HTML CONFIGS")
-        try:
-            return jsonify(html_configs) #f'{host_url}/Mathtutor/6_01_HTML/HTML/6.01-4.html'
+    # @app.route('/get_html_configs', methods=['GET'])
+    # def get_html_configs():
+    #     print("GET HTML CONFIGS")
+    #     try:
+    #         return jsonify(html_configs) #f'{host_url}/Mathtutor/6_01_HTML/HTML/6.01-4.html'
         
-        except Exception as e:
-            return jsonify({"status": "error", "message": str(e)}), 400
+    #     except Exception as e:
+    #         return jsonify({"status": "error", "message": str(e)}), 400
 
+    @socketio.on('connect')
+    def handle_connect():
+        print('Client connected')
+        connect_lock.release()
+
+    @socketio.on('disconnect')
+    def handle_connect():
+        print('Client disconnected')
+        connect_lock.acquire()
 
     @app.route('/save_html_json', methods=['POST'])
     def save_html_json():
-        print("SAVE HTML JSON")
         try:
             # Get JSON data from request
             data = request.get_json()
@@ -144,14 +190,17 @@ def build_flask_server(host, port, root_dir, html_configs):
         print(f"--serve_static: /html_tools/", filename)
         return send_from_directory(THIS_DIR, filename)
 
+
+
+
     def run_flask():
-        app.run(host=host, port=port)
+        socketio.run(app, host=host, port=port)
 
     flask_thread = Thread(target=run_flask)
     flask_thread.daemon = True # cleanup when main process does
     flask_thread.start()
 
-    return flask_thread
+    return flask_thread, socketio.emit, connect_lock
 
 # -----------------------------------------------------------
 # : Start Flask Server 
@@ -164,9 +213,10 @@ def is_server_running(host='localhost', port=3000):
     except (socket.timeout, ConnectionRefusedError):
         return False
 
-def start_flask_server(host, port, root_dir, html_configs):
-    flask_thread = build_flask_server(host, port, root_dir, html_configs)
-    return flask_thread
+# def start_flask_server(host, port, root_dir):
+#     # emit_queue = Queue()
+#     flask_thread, emit_func = build_flask_server(host, port, root_dir)
+#     return flask_thread, emit_func#, emit_queue
 
 
 # -----------------------------------------------------------
@@ -196,9 +246,9 @@ def get_file_longhash(filename):
     return b64str
 
 
-def get_cached_proc_filepath(html_path, long_hash=None, new_ext='.json'):
+def get_cached_proc_filepath(root_dir, html_path, long_hash=None, new_ext='.json'):
     if(long_hash is None):
-        long_hash = get_file_longhash(html_path)
+        long_hash = get_file_longhash(os.path.join(root_dir, html_path))
     directory, name, ext = split_filepath(html_path)
     return f"{directory}/.{name}.tgym_{long_hash[:14]}{new_ext}"
 
@@ -210,14 +260,25 @@ def get_cached_proc_filepath(html_path, long_hash=None, new_ext='.json'):
 
 
 class HTML_Preprocessor:
-    def __init__(self, root_dir, html_paths, 
+    def __init__(self, root_dir, 
                  get_json=True, get_image=True, 
                  cache=True, 
                  browser="firefox", browser_args=[],
-                 host='localhost', port=3000,
-                 keep_alive=False):
+                 host='localhost', port=3000):
 
-    
+        self.root_dir = root_dir
+        self.get_json = get_json
+        self.get_image = get_image
+        self.cache = cache
+        self.browser = browser
+        self.browser_args = browser_args
+        self.host = host
+        self.port = port
+
+
+        # self.is_done = False
+
+    def _process_paths(self, html_paths):
         if(isinstance(html_paths, (str,dict))):
             html_paths = [html_paths]
 
@@ -229,14 +290,14 @@ class HTML_Preprocessor:
             elif(isinstance(html_path, dict)):
                 config = html_path
 
-            config['get_json'] = config.get('get_json', get_json)
-            config['get_image'] = config.get('get_image', get_json)
-            config['cache'] = config.get('cache', cache)
+            config['get_json'] = config.get('get_json', self.get_json)
+            config['get_image'] = config.get('get_image', self.get_json)
+            config['cache'] = config.get('cache', self.cache)
 
             valid_config = False
             if("html_path" in config):
                 if("*" in html_path):
-                    config['glob'] = {"pathname": html_path, "root_dir":root_dir,  "recursive" : True}
+                    config['glob'] = {"pathname": html_path, "root_dir": self.root_dir,  "recursive" : True}
                     del config['html_path']
                 else:
                     valid_config = True
@@ -256,101 +317,146 @@ class HTML_Preprocessor:
             if(not valid_config):
                 raise ValueError(f"Invalid config {config}. Must have valid 'html_path' or 'glob' key.")
 
-        self.root_dir = os.path.abspath(root_dir)
-        self.html_configs = processed_html_configs
-        self.browser = browser
-        self.browser_args = browser_args
-        self.host = host
-        self.port = port
-        self.is_done = False
+        html_configs, need_run_browser = self._ensure_outpaths(processed_html_configs)
+        return html_configs, need_run_browser
 
-        self.ensure_outpaths()
-
-    def ensure_outpaths(self): 
+    def _ensure_outpaths(self, html_configs): 
         need_run_browser = False
 
-        for html_config in self.html_configs:
+        for html_config in html_configs:
             get_json = html_config.get('get_json', True)
             get_image = html_config.get('get_json', True)
             if(not get_json and not get_image):
                 continue 
 
-            html_path = os.path.join(self.root_dir, html_config['html_path']) 
-            longhash = get_file_longhash(html_path)
+            # print("html_path", html_config['html_path'])
+
+            html_path = html_config['html_path']
+            abs_html_path = os.path.join(self.root_dir, html_path) 
+            longhash = get_file_longhash(abs_html_path)
 
             # Ensure that 'json_path' and 'image_path' exist
             if(get_json and not 'json_path' in html_config):
                 html_config['json_path'] = \
-                    get_cached_proc_filepath(html_path, longhash, '.json')
+                    get_cached_proc_filepath(self.root_dir, html_path, longhash, '.json')
 
             if(get_image and not 'image_path' in html_config):
                 html_config['image_path'] = \
-                    get_cached_proc_filepath(html_path, longhash, '.png')
+                    get_cached_proc_filepath(self.root_dir, html_path, longhash, '.png')
 
             # When cache=True don't overwrite  
             cache = html_config.get('cache', True)
-            json_path = os.path.join(self.root_dir, html_config['json_path'])
+            # json_path = os.path.join(self.root_dir, html_config['json_path'])
+            json_path = html_config['json_path']
+            # print("json_path", json_path)
             if(cache and os.path.exists(json_path)):
                 html_config['get_json'] = False
             else:
                 need_run_browser = True
 
-            image_path = os.path.join(self.root_dir, html_config['image_path'])
+            image_path = html_config['image_path']
+            # image_path = os.path.join(self.root_dir, html_config['image_path'])
+            # print("image_path", image_path)
             if(cache and os.path.exists(image_path)):
                 html_config['get_image'] = False
             else:
                 need_run_browser = True
 
-        self.need_run_browser = need_run_browser
+        # self.need_run_browser = need_run_browser
+        return html_configs, need_run_browser
 
-
-    def start(self, block=True):
-        if(self.need_run_browser):
-            self.flask_thread = start_flask_server(self.host, self.port, self.root_dir, self.html_configs)
-
+    def _ensure_browser(self):
+        if(not hasattr(self, 'flask_thread')):
+            self.flask_thread, self.emit, self.connect_lock = build_flask_server(self.host, self.port, self.root_dir)
             host_url = f"http://{self.host}:{self.port}"
-            # host_url = html_paths
-            browser_process = open_browser(f"{host_url}/html_tools/index.html", "firefox")
+            self.browser_process = open_browser(f"{host_url}/html_tools/index.html", self.browser)
 
-            if(block):
-                try:
-                    self.flask_thread.join()
-                except KeyboardInterrupt:
-                    print("Caught SIGINT")
-                    pass
-                self.flask_thread = None
+            self.emit_queue = Queue()
 
-    def get_configs(self):
-        return self.html_configs
+            def handle_emit_queue():
+                while True:
+                    with self.connect_lock:
+                        html_configs, emit_lock = self.emit_queue.get()
+
+                        def send_html_configs_callback(data):
+                            emit_lock.release()
+
+                        print(" -- DO EMIT -- ")
+                        self.emit("send_html_configs", 
+                         {"html_configs" : html_configs}, 
+                         callback=send_html_configs_callback)
+
+                        # Don't continue until the client returns has finished 
+                        #  processing all of the html files
+                        with emit_lock:
+                            print(" -- EMIT FINISHED -- ")
+                            pass
+
+            self.emit_thread = Thread(target=handle_emit_queue)
+            self.emit_thread.daemon = True # cleanup when main process does
+            self.emit_thread.start()
+
+    # def send_html_configs_callback(self, data):
+    #     self.emit_queue.put(data)
+
+    def process_htmls(self, html_paths, block=True, keep_alive=True, **kwargs):
+        html_configs, need_run_browser = self._process_paths(html_paths)
+
+        if(need_run_browser):
+            self._ensure_browser()
+        
+        emit_lock = Lock()
+        emit_lock.acquire()
+        self.emit_queue.put((html_configs, emit_lock))
+
+        if(block):
+            print("-- BEFORE LOCK --")
+            with emit_lock:
+                pass
+            print("-- AFTER LOCK --")
+            return html_configs
+        else:
+            return html_configs, emit_lock
+
+    # def get_configs(self):
+    #     return self.html_configs
 
     def shutdown(self):
         flask_thread = getattr(self, "flask_thread", None)
         if(flask_thread is not None):
+            os.kill(flask_thread.native_id, signal.SIGINT)
+
 
     def __del__(self):
         self.shutdown()
-
-
-
-
 
 
 if __name__ == '__main__':
     # start_flask_server()
     # # browser_process = open_browser("Mathtutor/6_01_HTML/HTML/6.01-4.html", "google-chrome")
     # browser_process = open_browser("http://localhost:3000/index.html", "firefox")
-    proc = HTML_Preprocessor(
+    html_proc = HTML_Preprocessor(
         root_dir="../envs/CTAT/Mathtutor/",
-        html_paths="**/*.html"
     )
-    print("START")
 
-    proc.start()
+    html_configs, lock1 = html_proc.process_htmls(html_paths="**/*.html", block=False)
+    html_configs, lock2 = html_proc.process_htmls(html_paths="**/*.html", block=False)
 
-    print("END")
+    with lock1:
+        print("-- FINISH 1 --")
+
+    with lock2:
+        print("-- FINISH 2 --")
+
+
+    # print("START")
+
+    # proc.start()
+
+    # print("END")
     # proc.get
 
-    for config in proc.get_configs():
+    for config in html_configs:
         print(config)
 
     # while is_server_running():

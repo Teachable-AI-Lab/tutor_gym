@@ -11,21 +11,63 @@ HEADERS = {
     crossdomain : true,
 }
 
-async function getHtmlConfigs() {
-    try {
-        const response = await fetch(host_url + '/get_html_configs',
-        {
-            method: 'GET',
-            headers: HEADERS
-        });
-        const data = await response.text();
-        console.log('Success:', data);
-        return JSON.parse(data)
-    } catch (error) {
-        console.error('Error:', error);
-    }
+function connectToHost(process_htmls) {
+    return new Promise((resolve, reject) => {
 
+        const socket = io(host_url, {
+                reconnection: true,
+                reconnectionAttempts: 5,
+                reconnectionDelay: 1000
+        }); 
+
+        socket.on('connect', () => {
+            console.log('Connected to host', host_url);
+            resolve(socket);
+        });
+
+        socket.on('connect_error', (error) => {
+            console.error('Connection error:', error);
+            reject(error);
+        });
+
+        socket.on("send_html_configs", async (data, callback) =>{
+            console.log("Acquired HTML CONFIGS", data)
+
+            try{
+                await process_htmls(data['html_configs'])    
+                callback({"success" : true})
+            }catch (error){
+                console.error('Error:', error);
+                callback({"error" : jsonify(error)})
+            }
+            
+            console.log("AFT FINISHED")
+            
+        })
+
+        // Optional: Add timeout
+        setTimeout(() => {
+            if (!socket.connected) {
+                reject(new Error('Connection timeout'));
+            }
+        }, 5000);
+    })
 }
+
+// async function getHtmlConfigs() {
+//     try {
+//         const response = await fetch(host_url + '/get_html_configs',
+//         {
+//             method: 'GET',
+//             headers: HEADERS
+//         });
+//         const data = await response.text();
+//         console.log('Success:', data);
+//         return JSON.parse(data)
+//     } catch (error) {
+//         console.error('Error:', error);
+//     }
+// }
 
 async function saveHtmlJson(html_json, filepath) {
     try {
@@ -88,64 +130,61 @@ function get_iframe_doc(iframe){
 document.addEventListener('DOMContentLoaded', async () => {
     // Create a new iframe
     const iframe = document.getElementById('tutor_iframe');
-    
-    let get_json = true
-    let get_image = true
     // Wait for iframe to load
     
-    // Ask the host for the HTML files configurations i.e. what we 
-    //  need to do to them and where to write the output
-    html_configs = await getHtmlConfigs();
-
-    // Set the source in the iframe to each HTML file one at a time
-    for(let config of html_configs){
-        let html_path = config.html_path
-        console.log("BEF1")
-        console.log("html_config", config)
+    let process_htmls = async (html_configs) =>{
+        // Set the source in the iframe to each HTML file one at a time
+        for(let config of html_configs){
+            let html_path = config.html_path
+            console.log("BEF1")
+            console.log("html_config", config)
 
 
-        console.log("BEF")
-        // Promise for when processing finished
-        let proc_finished = new Promise((resolve, reject) => {
-            // Set onload() for when src changes
-            iframe.onload = async () => {
-                console.log("On Load")
-                let iframeDocument = get_iframe_doc(iframe)
+            console.log("BEF")
+            // Promise for when processing finished
+            let proc_finished = new Promise((resolve, reject) => {
+                // Set onload() for when src changes
+                iframe.onload = async () => {
+                    console.log("On Load")
+                    let iframeDocument = get_iframe_doc(iframe)
 
 
-                // Do HTML -> JSON
-                if(config.get_json){
-                    let json = Tutor_DOM_to_JSON(iframeDocument)
-                    console.log("DOM TO JSON", json)
-                    await saveHtmlJson(json, config.json_path)
-                }
+                    // Do HTML -> JSON
+                    if(config.get_json){
+                        let json = Tutor_DOM_to_JSON(iframeDocument)
+                        console.log("DOM TO JSON", json)
+                        await saveHtmlJson(json, config.json_path)
+                    }
 
-                // Do HTML -> Image
-                if(config.get_image){
-                    let imageData = await Tutor_DOM_to_Image(iframeDocument)
-                    console.log("DOM TO Image", imageData)
-                    await saveHtmlImage(imageData, config.image_path)    
-                }
-                // Resolve proc_finished Promise
-                resolve(true)
-            };
-            iframe.onerror = (error) => {
-                console.error('Error loading iframe:', error);
-                reject()
-            };
-        });
-        console.log("AFT")
-        
-        // Trigger onload by setting the source
-        iframe.src = host_url + "/" + html_path;
-        console.log("src", iframe.src)
+                    // Do HTML -> Image
+                    if(config.get_image){
+                        let imageData = await Tutor_DOM_to_Image(iframeDocument)
+                        console.log("DOM TO Image", imageData)
+                        await saveHtmlImage(imageData, config.image_path)    
+                    }
+                    // Resolve proc_finished Promise
+                    resolve(true)
+                };
+                iframe.onerror = (error) => {
+                    console.error('Error loading iframe:', error);
+                    reject()
+                };
+            });
+            console.log("AFT")
+            
+            // Trigger onload by setting the source
+            iframe.src = host_url + "/" + html_path;
+            console.log("src", iframe.src)
 
-        // Wait for the processing to finish before next loop 
-        let val = await proc_finished;
-        console.log("finish VAL", val)
+            // Wait for the processing to finish before next loop 
+            let val = await proc_finished;
+            console.log("-- FINISHED -- ", val)
+        }
     }
+
+    socket = await connectToHost(process_htmls);
     
-    processingFinished()
+    // processingFinished()
 });
 
 
