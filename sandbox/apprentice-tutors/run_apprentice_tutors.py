@@ -94,7 +94,7 @@ def run_environment(env_name, n_problems=20):
     Run a specific environment by name
     
     Args:
-        env_name: String name of environment ('quotient', 'product', or 'power')
+        env_name: String name of environment ('logarithms_quotient', 'radicals_product', etc.)
         n_problems: Number of problems to run
     """
     if env_name not in ENVIRONMENTS:
