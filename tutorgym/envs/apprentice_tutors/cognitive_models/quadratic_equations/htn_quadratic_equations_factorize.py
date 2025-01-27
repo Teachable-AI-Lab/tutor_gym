@@ -13,9 +13,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
   
 def htn_quadratic_equations_factorize_problem():
     x = sp.symbols('x')
@@ -172,42 +169,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_quadratic_equations_factorize_kc_mapping():
-    kcs = {
-        "b_value": "b_value",
-        "ac_value": "ac_value",
-        'factor_1_b': "factor_1_b",
-        'factor_2_b': "factor_2_b",
-        'sum_factor': "sum_factor",
-        'sum_c': "sum_c",
-        'expanded_equation': "expanded_equation",
-        'done': "done",
-    }
-    return kcs
-
-
-def htn_quadratic_equations_factorize_intermediate_hints():
-
-    hints = {
-        "b_value": ["Here \(b\) is coefficient of \(x\)."],
-        "ac_value": ["Here \(ac\) is the product of the coefficients of \(x^2\) and constant."],
-        'factor_1_b': ["Enter a factor of \(ac\)."],
-        'factor_2_b': ["Enter the other factor of \(ac\)."],
-        'sum_factor': ["Add the two factos to get the sum."],
-        'sum_c': ["Check this box if the sum of the factors is equal to \(b\)."],
-        'expanded_equation': ["Expand the \(x\) term using the factors"],
-    }
-    return hints
-def htn_quadratic_equations_factorize_studymaterial():
-    study_material = studymaterial["quadratic_equations_factorize"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_quadratic_equations',
-                                             'htn_quadratic_equations_factorize',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_quadratic_equations_factorize_problem,
-                                             htn_quadratic_equations_factorize_kc_mapping(),
-                                             htn_quadratic_equations_factorize_intermediate_hints(),
-                                             htn_quadratic_equations_factorize_studymaterial()))

@@ -12,11 +12,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-
-
 def htn_exponential_equations_solve_quadratic_form_problem():
     x = symbols('x')
     ex = sp.E**x
@@ -30,7 +25,6 @@ def htn_exponential_equations_solve_quadratic_form_problem():
 def rhs_zero(init_value):
     x = symbols('x')
     equation = parse_latex(init_value)
-    print("WHAT IS IT", init_value)
 
     equation = parse_latex(latex(Eq((equation.lhs)-equation.rhs, 0)))
     answer = re.compile(re.sub(r'([-+^()*])', r'\\\1', sstr(equation, order="grlex")))
@@ -86,11 +80,9 @@ def second_equation(init_value, factor_eq):
     return value
 
 def first_x(equation):
-    print("WHAT IS IT", equation)
     x = symbols('x')
     lhs = parse_latex(equation).lhs
     root = Eq(lhs.args[0] , -lhs.args[1])
-    print("WHAT IS IT", root)
     equation  = sp.ln(root.rhs) if root.rhs >=0 else parse_latex("NA")
     answer = re.compile(re.sub(r'([-+^()*])', r'\\\1', re.sub(r'log\(([^)]+)\)', r'log(\1, E)', sstr(equation, order="grlex"))))
     hint = latex(sp.ln(root.rhs)).replace('\log', '\ln') if root.rhs >=0 else "NA"
@@ -185,43 +177,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_exponential_equations_solve_quadratic_form_kc_mapping():
-
-    kcs = {
-    "rhs_zero": "rhs_zero",
-    "factorized_form": "factorized_form",
-    "first_equation": "first_equation",
-    "second_equation": "second_equation",
-    "first_x": "first_x",
-    "second_x": "second_x",
-    'done': 'done'
-    }
-    return kcs
-
-
-def htn_exponential_equations_solve_quadratic_form_intermediate_hints():
-    hints = {
-        "rhs_zero": ["Set the right hand side equal to zero."],
-        "factorized_form": ["Factor the left hand side of the equation using FOIL."],
-        "first_equation": ["Set first factor equal to zero."],
-        "second_equation": ["Set second factor equal to zero."],
-        "first_x": ["Solve for x."],
-        "second_x": ["Solve for x."],
-        "solve_for_x" : ["Solve for x."],
-    }
-    return hints
-
-
-def htn_exponential_equations_solve_quadratic_form_studymaterial():
-    study_material = studymaterial["exponential_equations_solve_quadratic_form"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_exponential_equations',
-                                             'htn_exponential_equations_solve_quadratic_form',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_exponential_equations_solve_quadratic_form_problem,
-                                             htn_exponential_equations_solve_quadratic_form_kc_mapping(),
-                                             htn_exponential_equations_solve_quadratic_form_intermediate_hints(),
-                                             htn_exponential_equations_solve_quadratic_form_studymaterial()))

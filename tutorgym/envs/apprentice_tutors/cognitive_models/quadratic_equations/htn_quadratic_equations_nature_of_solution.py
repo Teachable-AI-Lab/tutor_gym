@@ -12,11 +12,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-
-
 def htn_quadratic_equations_nature_of_solution_problem():
     x = sp.symbols('x')
     a, b, c = 0, 0, 0
@@ -50,7 +45,6 @@ def d_expression(init_value):
     ac = sp.simplify(init_equation.lhs).coeff(x, 2) * sp.simplify(init_equation.lhs).coeff(x, 0) 
     b_2 = b**2
     d = int(b_2) - 4*int(ac)
-    print(b_2, ac)
     answer = re.compile(re.sub(r'([-+()*])', r'\\\1', sp.sstr(d)))
     hint = latex(d)
     value = tuple([(answer, hint)])
@@ -129,43 +123,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_quadratic_equations_nature_of_solution_kc_mapping():
-
-    kcs = {
-
-        "squared_b_value": "squared_b_value",
-        "ac_product": "ac_product",
-        "d_expression": "d_expression",
-        "type_of_roots": "type_of_roots",
-        'done': "done",
-    }
-    return kcs
-
-
-def htn_quadratic_equations_nature_of_solution_intermediate_hints():
-    hints = {
-
-        'squared_b_value': ["Here \(b^2\) is coefficient of \(x\) squared."],
-        'ac_product': ["Here \(ac\) is the product of the coefficients of \(x^2\) and constant."],
-        'd_expression': ["Discriminat is \(b^2 - 4ac\)."],
-        'type_of_roots': ["If \(D>0\) then roots are real and distinct. "
-                          "If \(D=0\) then roots are real and equal. "
-                          "If \(D<0\) then roots are imaginary."],
-        'select_done': ["Once you are done finding the roots "
-                        "select the done button to move to the next problem."]
-    }
-    return hints
-
-def htn_quadratic_equations_nature_of_solution_studymaterial():
-    study_material = studymaterial["quadratic_equations_nature_of_solution"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_quadratic_equations',
-                                             'htn_quadratic_equations_nature_of_solution',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_quadratic_equations_nature_of_solution_problem,
-                                             htn_quadratic_equations_nature_of_solution_kc_mapping(),
-                                             htn_quadratic_equations_nature_of_solution_intermediate_hints(),
-                                             htn_quadratic_equations_nature_of_solution_studymaterial()))

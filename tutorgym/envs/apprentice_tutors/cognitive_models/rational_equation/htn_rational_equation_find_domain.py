@@ -13,9 +13,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
 
 import math
 
@@ -145,16 +142,13 @@ def zero_product_left(init_value):
     factors = sp.factor(equation)
     if factors.args[1] == 2:
         answer = sp.Eq(factors.args[0], 0)
-        print("ANSWER ", answer)
         hint = latex(answer)
-        print("HINT", hint)
         answer = re.compile(re.sub(r'([-+()*])', r'\\\1', sp.sstr(answer, order="grlex")))
         return tuple([(answer, hint)])
     else:
         facts = list()
         for factor in factors.args:
             answer = sp.Eq(factor, 0)
-            print("ANSWER", answer)
             hint = latex(answer)
             answer = re.compile(re.sub(r'([-+()*])', r'\\\1', sp.sstr(answer, order="grlex")))
             facts.append((answer, hint))
@@ -208,7 +202,6 @@ def solve_left(init_value):
         facts = list()
         for factor in equation.lhs.args:
             factor = sp.Eq(factor, 0)
-            print("FACT", factor)
             root = sp.Eq(x, sp.solve(factor, x)[0])
             answer = re.compile(re.sub(r'([-+()*])', r'\\\1', sp.sstr(root, order="grlex")))
             hint = latex(root)
@@ -388,50 +381,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_rational_equation_find_domain_kc_mapping():
-    kcs = {
-        "denominator_set_zero": "Set the denominator equal to zero",
-        "factor_trinomial": "Factor the trinomial",
-        "zero_product_left": "Use zero product property",
-        "zero_product_right": "Use zero product property",
-        "solve_right": "Solve the equation",
-        "solve_left": "Solve the equation",
-        "domain_left": "Write down the result",
-        "domain_right": "Write down the result",
-        "done": "Determine if find domain problem is complete"
-    }
-
-    return kcs
-    
-
-
-def htn_rational_equation_find_domain_intermediate_hints():
-    hints = {
-        "denominator_set_zero": ["The domain of a rational function is all real numbers except those that make the rational expression undefined. ",
-                                 "Set the denominator equal to zero"],
-        "factor_trinomial": [
-            "Factor the trinomial"
-        ],
-        "zero_product_left":["Use zero product property to set the first factor"],
-        "zero_product_right":["Use zero product property to set the second factor"],
-        "solve_left":["Solve the first equation"],
-        "solve_right":["Solve the second equation"],
-        "domain_left":["Write down the result"],
-        "domain_right":["Write down the result"],
-        "done":["Click on the done button to complete the problem"],
-    }
-    return hints
-
-def htn_rational_equation_find_domain_studymaterial():
-    study_material = studymaterial["rational_equation_find_domain"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_rational_equation',
-                                             'htn_rational_equation_find_domain',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_rational_equation_find_domain_problem,
-                                             htn_rational_equation_find_domain_kc_mapping(),
-                                             htn_rational_equation_find_domain_intermediate_hints(),
-                                             htn_rational_equation_find_domain_studymaterial()))

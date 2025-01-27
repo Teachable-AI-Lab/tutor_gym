@@ -1,21 +1,17 @@
 import sympy as sp
-from random import randint, choice
+from random import randint
 
 import sympy as sp
-from sympy import sstr, latex, symbols, Eq, solve
+from sympy import sstr, latex, symbols 
 from sympy.parsing.latex._parse_latex_antlr import parse_latex
 import re
 
 from random import randint
 from shop2.domain import Task, Operator, Method
-# from shop2.planner import SHOP2
 from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
 import math
 from random import random
 from functools import reduce
@@ -46,7 +42,7 @@ def factors(n):
     return fset
 
 
-def htn_factor_slip_slide_problem():
+def factor_slip_slide_problem():
     n1 = randint(2, 5)
     # if random() > 0.5:
     #     n1 *= -1
@@ -64,13 +60,13 @@ def htn_factor_slip_slide_problem():
         n4 *= -1
 
     if math.gcd(n1, n2) != 1 or math.gcd(n3, n4) != 1:
-        return htn_factor_slip_slide_problem()
+        return factor_slip_slide_problem()
 
     problem = "{}x^2".format(n1 * n3)
 
     b_value = n1 * n4 + n2 * n3
     if b_value == 0:
-        return htn_factor_slip_slide_problem()
+        return factor_slip_slide_problem()
 
     if b_value > 0:
         problem += "+"
@@ -553,105 +549,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_factor_slip_slide_kc_mapping():
-    kcs = {
-        'a_value': 'a_value',
-        'b_value': 'b_value',
-        'c_value': 'c_value',
-        'ac_value': 'ac_value',
-        'new_equation': 'new_equation',
-        'new_b_value': 'new_b_value',
-        'new_c_value': 'new_c_value',
-        'factor_1_b': 'factor_1_b',
-        'factor_2_b': 'factor_2_b',
-        'sum_factor': 'sum_factor',
-        'sum_c': 'sum_c',
-        'new_first_expression': 'new_first_expression',
-        'new_second_expression': 'new_second_expression',
-        'raw_first_expression': 'raw_first_expression',
-        'raw_second_expression': 'raw_second_expression',
-        'simplified_first_expression': 'simplified_first_expression',
-        'simplified_second_expression': 'simplified_second_expression',
-        'final_first_expression': 'final_first_expression',
-        'final_second_expression': 'final_second_expression',
-        'final_answer': 'final_answer',
-        'done': 'done',
-    }
-    return kcs
-
-
-
-
-def htn_factor_slip_slide_intermediate_hints():
-    hints = {
-        "a_value": [
-            "The a value is extracted from the first term of the trinomial."],
-        "b_value": [
-            "The b value is extracted from the middle term of the trinomial."],
-        "c_value": [
-            "The c value is extracted from the last term of the trinomial."],
-        "ac_value": [
-            "Enter the value obtained by multiplying a and c."],
-        "new_equation": ["This new trinomial is produced using the"
-                                 " formula x^2 + bx + ac"],
-        "new_b_value": [
-            "The b value is extracted from the middle term of the new"
-            " trinomial."],
-        "new_c_value": [
-            "The c value is extracted from the middle term of the new"
-            " trinomial."],
-        'factor_1_b': ["Enter a factor of c from the new trinomial."],
-
-        'factor_2_b': ["Enter the value that when multipled with"
-                                  " the other factor yields c from the new"
-                                  " trinomial."],
-        'sum_factor': [
-            "This value is computed by adding the two factors in this row."],
-        'sum_c': [
-            "Check this box if the sum of the factors is equal to b from the"
-            " new trinomial."],
-        'new_first_expression': ["This expression has the form (x+v) where"
-                                    " v is one of the factors from the table"
-                                    " above."],
-        'new_second_expression': ["This expression has the form (x+v)"
-                                           " where v is other factor you have"
-                                           " not already used."],
-        'raw_first_expression': [
-            "This expression has the form (x+v/a), where (x+v) is the"
-            " expression you just created directly above and a is the leading"
-            " coefficient of the original trinomial."],
-        'raw_second_expression': [
-            "This expression has the form (x+v/a), where (x+v) is the"
-            " expression you just created directly above and a is the leading"
-            " coefficient of the original trinomial."],
-        'simplified_first_expression': [
-            "Simplify the expression above."],
-        'simplified_second_expression': [
-            "Simplify the expression above."],
-        'final_first_expression': [
-            "If the expression above still has a fraction for the second term"
-            " (e.g., x+v/d), then rewrite to pull the denominator out (e.g.,"
-            " dx+v)"],
-        'final_second_expression': [
-            "If the expression above still has a fraction for the second term"
-            " (e.g., x+v/d), then rewrite to pull the denominator out (e.g.,"
-            " dx+v)"],
-        'final_answer': ["The final factored form is the"
-                                " combination of the two expressions."],
-    }
-
-    return hints
-
-def htn_factor_slip_slide_studymaterial():
-    study_material = studymaterial["factor_slip_slide"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_factoring_polynomials',    
-                                             'htn_factor_slip_slide',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_factor_slip_slide_problem,
-                                             htn_factor_slip_slide_kc_mapping(),
-                                             htn_factor_slip_slide_intermediate_hints(),
-                                             htn_factor_slip_slide_studymaterial()))

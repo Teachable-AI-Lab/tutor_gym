@@ -12,11 +12,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-
-
 def htn_quadratic_equations_identify_coeffs_problem():
     x = sp.symbols('x')
     x1, x2, coeff = 0, 0, 0
@@ -114,38 +109,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_quadratic_equations_identify_coeffs_kc_mapping():
-    kcs = {
-        "a_value": "update_a_value",
-        "b_value": "update_b_value",
-        "c_value": "update_c_value",
-        "b2_value": "update_b2_value",
-        "ac_value": "update_ac_value",
-        "done": "done"
-        }
-    return kcs
-
-
-def htn_quadratic_equations_identify_coeffs_intermediate_hints():
-    hints = {
-        "a_value": ["Here \(a\) is coefficient of \(x^2\)."],
-        "b_value": ["Here \(b\) is coefficient of \(x\)."],
-        "c_value": ["Here \(c\) is coefficient of the constant term."],
-        "b2_value": ["Here \(b^2\) is the square of the coefficient of \(x\)."],
-        "ac_value": ["Here \(ac\) is the product of the coefficients of \(x^2\) and constant."],
-    }
-    return hints
-
-def htn_quadratic_equations_identify_coeffs_studymaterial():
-    study_material = studymaterial["quadratic_equations_identify_coeffs"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_quadratic_equations',
-                                             'htn_quadratic_equations_identify_coeffs',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_quadratic_equations_identify_coeffs_problem,
-                                             htn_quadratic_equations_identify_coeffs_kc_mapping(),
-                                             htn_quadratic_equations_identify_coeffs_intermediate_hints(),
-                                             htn_quadratic_equations_identify_coeffs_studymaterial()))

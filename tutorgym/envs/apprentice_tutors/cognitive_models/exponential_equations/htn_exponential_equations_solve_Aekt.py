@@ -12,10 +12,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-
 
 def htn_exponential_equations_solve_Aekt_problem():
     x = symbols('x')
@@ -141,35 +137,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_exponential_equations_solve_Aekt_kc_mapping():
-    kcs = {
-        "coeff0_to_rhs": "coeff0_to_rhs",
-        "coeffk_to_rhs": "coeffk_to_rhs",
-        "ln_both_sides": "ln_both_sides",
-        "solve_for_x": "solve_for_x",
-        "done": "done"
-    }
-    return kcs
-
-def htn_exponential_equations_solve_Aekt_intermediate_hints():
-    hints = {
-        "coeff0_to_rhs" : ["Move the constant term to the right-hand side of the equation."],
-        "coeffk_to_rhs" : ["Move the coefficient of the exponential term to the right-hand side of the equation."],
-        "ln_both_sides" : ["Take the natural log of both sides of the equation."],
-        "solve_for_x" : ["Solve for x."],
-    }
-    return hints
-
-def htn_exponential_equations_solve_Aekt_studymaterial():
-    study_material = studymaterial["exponential_equations_solve_Aekt"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_exponential_equations',
-                                             'htn_exponential_equations_solve_Aekt',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_exponential_equations_solve_Aekt_problem,
-                                             htn_exponential_equations_solve_Aekt_kc_mapping(),
-                                             htn_exponential_equations_solve_Aekt_intermediate_hints(),
-                                             htn_exponential_equations_solve_Aekt_studymaterial()))

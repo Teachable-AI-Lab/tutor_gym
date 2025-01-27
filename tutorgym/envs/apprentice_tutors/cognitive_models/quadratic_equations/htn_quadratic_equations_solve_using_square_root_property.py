@@ -13,12 +13,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-
-
-    
 def htn_quadratic_equations_solve_using_square_root_property_problem():
     x = sp.symbols('x')
     c1, c2 = -1, -1
@@ -153,41 +147,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_quadratic_equations_solve_using_square_root_property_kc_mapping():
-    kcs = {
-        'coeff0_to_rhs': "coeff0_to_rhs",
-        'update_coeff0_on_rhs': 'update_coeff0_on_rhs',
-        'coeff2_to_rhs': 'coeff2_to_rhs',
-        'update_coeff2_on_rhs': 'update_coeff2_on_rhs',
-        'positive_root': 'positive_root',
-        'negative_root': 'negative_root',
-        'done': "done",
-    }
-    return kcs
-
-
-def htn_quadratic_equations_solve_using_square_root_property_intermediate_hints():
-    hints = {
-            'coeff0_to_rhs': ["Move the constant term to the right hand side of the "
-                            "equation."],
-            'update_coeff0_on_rhs': ["Simplify the RHS"],
-            'coeff2_to_rhs': ["Move the coeeficient of x^2 to the right hand."],
-            'update_coeff2_on_rhs': ["Move the coeeficient of x^2 to the right hand."],
-            'positive_root': ["Take square of both sides and solve for x."],
-            'negative_root': ["Take square of both sides and solve for x."],
-    }
-    return hints
-
-def htn_quadratic_equations_solve_using_square_root_property_studymaterial():
-    study_material = studymaterial["quadratic_equations_solve_using_square_root_property"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_quadratic_equations',
-                                             'htn_quadratic_equations_solve_using_square_root_property',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_quadratic_equations_solve_using_square_root_property_problem,
-                                             htn_quadratic_equations_solve_using_square_root_property_kc_mapping(),
-                                             htn_quadratic_equations_solve_using_square_root_property_intermediate_hints(),
-                                             htn_quadratic_equations_solve_using_square_root_property_studymaterial()))

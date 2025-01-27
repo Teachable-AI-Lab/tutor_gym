@@ -13,10 +13,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-
 
 def htn_exponents_product_problem():
     constant = randint(2,1000)
@@ -83,33 +79,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_exponents_product_kc_mapping():
-    kcs = {
-        "adding_values": "adding_values",
-        "simplify_exp": "simplify_exp",
-        "done": "done"
-    }
-    return kcs
-
-
-def htn_exponents_product_intermediate_hints():
-    hints = {
-        "adding_values": ["Use the product rule to shift the exponent to multiplication with the exponents."],
-        "simplify_exp": ["Solve the exponents."], 
-        'done': [" You have solved the problem. Click the done button!"]
-    }
-    return hints
-
-def htn_exponents_product_studymaterial():
-    study_material = studymaterial["exponents_product_rule"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_exponents',
-                                             'htn_exponents_product',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_exponents_product_problem,
-                                             htn_exponents_product_kc_mapping(),
-                                             htn_exponents_product_intermediate_hints(),
-                                             htn_exponents_product_studymaterial()))

@@ -13,12 +13,7 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
 
-
-    
 def htn_quadratic_equations_solve_using_factors_problem():
     x = sp.symbols('x')
     x1, x2, coeff = 0, 0, 0
@@ -67,7 +62,6 @@ def second_equation(init_value, factor):
     for i in range(2):
         equation = sp.Mul(const, factors[i])*factors[(i+1)%2]
         feq = parse_latex(factor).lhs
-        print("FACTORS", feq, equation)
         quotient = sp.Eq(sp.div(equation, feq)[0],0)
         answer = re.compile(re.sub(r'([-+()*])', r'\\\1', sp.sstr(quotient, order="grlex")))
         hint = f"{quotient.lhs}={quotient.rhs}"
@@ -190,42 +184,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_quadratic_equations_solve_using_factors_kc_mapping():
-    kcs = {
-        'factorized_form': "factorized_form",
-        'first_equation': 'first_equation',
-        'second_equation': 'second_equation',
-        'first_root': 'first_root',
-        'second_root': 'second_root',
-        'done': "done",
-    }
-    return kcs
-
-
-def htn_quadratic_equations_solve_using_factors_intermediate_hints():
-    hints = {
-        'factorized_form': ["The factored form of the equation in this "
-                            "case is first two terms clubbed together and "
-                            "the last two terms clubbed together."],
-        'first_equation': ["Equate one of the above expressions to zero"],
-        'second_equation': ["Equate the other expression to zero"],
-        'first_root': ["The first root is the value of x that makes the "
-                            "first expression equal to zero."],
-        'second_root': ["The second root is the value of x that makes the "
-                            "second expression equal to zero."],
-    }
-    return hints
-
-def htn_quadratic_equations_solve_using_factors_studymaterial():
-    study_material = studymaterial["quadratic_equations_solve_using_factors"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_quadratic_equations',
-                                             'htn_quadratic_equations_solve_using_factors',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_quadratic_equations_solve_using_factors_problem,
-                                             htn_quadratic_equations_solve_using_factors_kc_mapping(),
-                                             htn_quadratic_equations_solve_using_factors_intermediate_hints(),
-                                             htn_quadratic_equations_solve_using_factors_studymaterial()))

@@ -13,10 +13,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-
 
 def htn_exponents_quotient_problem():
     constant = randint(2,1000)
@@ -83,33 +79,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_exponents_quotient_kc_mapping():
-    kcs = {
-        "subtract_values": "subtract_values",
-        "simplify_exp": "simplify_exp",
-        "done": "done"
-    }
-    return kcs
-
-
-def htn_exponents_quotient_intermediate_hints():
-    hints = {
-        "subtract_values": ["Use the quotient rule to shift the exponent to multiplication with the exponents."],
-        "simplify_exp": ["Solve the exponents."], 
-        'done': [" You have solved the problem. Click the done button!"]
-    }
-    return hints
-
-def htn_exponents_quotient_studymaterial():
-    study_material = studymaterial["exponents_quotient_rule"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_exponents',
-                                             'htn_exponents_quotient',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_exponents_quotient_problem,
-                                             htn_exponents_quotient_kc_mapping(),
-                                             htn_exponents_quotient_intermediate_hints(),
-                                             htn_exponents_quotient_studymaterial()))

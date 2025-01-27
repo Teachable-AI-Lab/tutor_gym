@@ -12,10 +12,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-
 
 def replace_log_with_ln(equation):
     return equation.replace('\log', '\ln')
@@ -33,7 +29,6 @@ def coeff0_to_rhs(init_value):
         x = symbols('x')
         lhs, rhs = parse_latex(init_value).lhs, parse_latex(init_value).rhs
         equation = Eq(lhs-lhs.coeff(x, 0), rhs-lhs.coeff(x, 0))
-        print("EQUATION", equation)
         answer = re.compile(re.sub(r'([-+^()*])', r'\\\1', sstr(equation, order="grlex").replace("-1*", "-")))
         hint = replace_log_with_ln(latex(equation).replace("\\left(-1\\right) ", "-"))
         value = tuple([(answer, hint)])
@@ -63,7 +58,6 @@ def exponential_both_sides(init_value):
         if lhs.args[1].is_integer:
             constant *= lhs.args[1]
         equation = Eq(lhs.args[-1], rhs/constant)
-        print("EQUATION", equation)
         equation = parse_latex(latex(Eq(x, sp.E**equation.rhs)))
         answer = re.compile(re.sub(r'([-+^()*])', r'\\\1', sstr(equation, order="grlex")))
         hint = replace_log_with_ln(latex(equation))
@@ -120,36 +114,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_logarithmic_equations_solve_algebraically_kc_mapping():
-
-    kcs = {
-        "coeff0_to_rhs": "coeff0_to_rhs",
-        "coefflnx_to_rhs": "coefflnx_to_rhs",
-        "exponential_both_sides": "exponential_both_sides",
-        "done": "done"
-    }
-    return kcs
-
-
-def htn_logarithmic_equations_solve_algebraically_intermediate_hints():
-    hints = {
-        "coeff0_to_rhs": ["Take the natural log of both sides of the equation."],
-        "coefflnx_to_rhs": ["Set the right hand side equal to zero."],
-        "exponential_both_sides": ["Factor the left hand side of the equation using FOIL."],
-        'done': [" You have solved the problem. Click the done button!"]
-    }
-    return hints
-
-def htn_logarithmic_equations_solve_algebraically_studymaterial():
-    study_material = studymaterial["logarithmic_equations_solve_algebraically"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_logarithmic_equations',
-                                             'htn_logarithmic_equations_solve_algebraically',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_logarithmic_equations_solve_algebraically_problem,
-                                             htn_logarithmic_equations_solve_algebraically_kc_mapping(),
-                                             htn_logarithmic_equations_solve_algebraically_intermediate_hints(),
-                                             htn_logarithmic_equations_solve_algebraically_studymaterial()))

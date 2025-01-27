@@ -12,10 +12,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-
 
 def htn_logarithmic_equations_solve_using_one_to_one_property_problem():
     x = symbols('x')
@@ -86,7 +82,6 @@ def second_equation(init_value, factor_eq):
         equation = parse_latex(latex(Eq(equation.lhs-equation.rhs, 0)))
         equation = Eq(equation.lhs-equation.rhs, 0)
         equation = sp.factor(equation)
-        print("FACTOR EQ", factor_eq)
         first = parse_latex(factor_eq).lhs
         second = sp.div(equation.lhs, first)[0]
         equation = Eq(second, 0)
@@ -231,44 +226,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_logarithmic_equations_solve_using_one_to_one_property_kc_mapping():
-
-    kcs = {
-        'ln_both_sides': 'ln_both_sides',
-        'rhs_zero': 'rhs_zero',
-        'factorized_form': 'factorized_form',
-        'first_equation': 'first_equation',
-        'second_equation': 'second_equation',
-        'first_root': 'first_root',
-        'second_root': 'second_root',
-        'done': 'done'
-    }
-    return kcs
-
-
-def htn_logarithmic_equations_solve_using_one_to_one_property_intermediate_hints():
-    hints = {
-        "ln_both_sides": ["Take the natural log of both sides of the equation."],
-        "rhs_zero": ["Set the right hand side equal to zero."],
-        "factorized_form": ["Factor the left hand side of the equation using FOIL."],
-        "first_equation": ["Set first factor equal to zero."],
-        "second_equation": ["Set second factor equal to zero."],
-        "first_root": ["Find value of \(e^{x}\) that makes first factor equal to zero."],
-        "second_root": ["Find value of \(e^{x}\) that makes second factor equal to zero."],
-        'done': [" You have solved the problem. Click the done button!"]
-    }
-    return hints
-
-def htn_logarithmic_equations_solve_using_one_to_one_property_studymaterial():
-    study_material = studymaterial["logarithmic_equations_solve_using_one_to_one_property"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_logarithmic_equations',
-                                             'htn_logarithmic_equations_solve_using_one_to_one_property',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_logarithmic_equations_solve_using_one_to_one_property_problem,
-                                             htn_logarithmic_equations_solve_using_one_to_one_property_kc_mapping(),
-                                             htn_logarithmic_equations_solve_using_one_to_one_property_intermediate_hints(),
-                                             htn_logarithmic_equations_solve_using_one_to_one_property_studymaterial()))
