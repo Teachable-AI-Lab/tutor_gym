@@ -1,0 +1,248 @@
+<div style="display: flex; justify-content: center; align-items: center;">
+    <form class="" style="width: 650px;">
+        
+        <div class="container" style="margin: 3%;">
+            <div class="row">
+                <div class="col-sm">
+                    <div style="text-align: center;">
+                        <h3>Factor this polynomial by grouping:</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                    <input disabled type="text" id="initial_problem" class="form-control" style="width: 250px; display: none;">
+                    <div style="text-align: center; width: 250px;" id="initial_problem_text"></div>
+                </div>
+                <div class="col-sm">
+                </div>      
+            </div>
+        </div>
+
+        <div class="container level_1" style="margin: 2%;">
+            <p><strong>Write the coefficients of the quadratic equation:</strong></p>
+            <div class="row">
+                <div class="col-sm">
+                    <label class="form-label">What does <em>a</em> equal? </label>
+                    <math-field id="a_value" virtual-keyboard-mode="onfocus" style="width: 175px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <label class="form-label">What does <em>b</em> equal? </label>
+                    <math-field id="b_value" virtual-keyboard-mode="onfocus" style="width: 175px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <label class="form-label">What does <em>c</em> equal? </label>
+                    <math-field id="c_value" virtual-keyboard-mode="onfocus" style="width: 175px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <button id="level_2" style="margin-left: -13px; margin-top:43px" class="btn btn-danger scaffold">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="container level_2" style="margin:2%;">
+            <div class="row" style="margin-top:1%">
+                <div class="col-sm">
+                    <p>What does <em>ac</em> equal?</p>
+                    <math-field id="ac_value" virtual-keyboard-mode="onfocus" style="width: 570px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <button id="level_3" style="margin-left: -13px; margin-top:43px" class="btn btn-danger scaffold">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container level_3" style="margin: 2%;">
+            <div class="row">
+                <div class="col-sm" style="width:570px;">
+                    <label style="width:570px;" class="form-label"><strong>Find factors using the factor table:</strong></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"><p style="font-size: 14px;">Factor 1 of <em>c</em> :</p></div>
+                <div class="col"><p style="font-size: 14px;">Factor 2 of <em>c</em> :</p></div>
+                <div class="col"><p style="font-size: 14px;">Sum of Factors:</p></div>
+                <div class="col"><p style="font-size: 14px;">Sum equals <em>b</em>?</strong></p></div>
+                <div class='col'></div>
+            </div>
+            <div class="row row_1">
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <math-field id="factor_1_b_1" data-column= "1" data-row= "1" class="form-control" value="" style="width: 75px; margin-bottom: 5px;"></math-field>
+                </div>
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <math-field id="factor_2_b_1" data-column= "2" data-row= "1" class="form-control" value="" style="width: 75px; margin-bottom: 5px;"></math-field>
+                </div>
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <math-field id="sum_factor_1" data-column= "3" data-row= "1" class="form-control" value="" style="width: 75px; margin-bottom: 5px;"></math-field>
+                </div>
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <input id="sum_c_1" type="checkbox" data-column= "4" data-row= "1" value="" style="width: 38px; height: 38px; display: block; margin-bottom: 5px;">
+                </div>
+                <div class='col'></div>
+            </div>
+            <div class="row row_2">
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <math-field id="factor_1_b_2" data-column= "1" data-row= "2" class="form-control" value="" style="width: 75px; margin-bottom: 5px;"></math-field>
+                </div>
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <math-field id="factor_2_b_2" data-column= "2" data-row= "2" class="form-control" value="" style="width: 75px; margin-bottom: 5px;"></math-field>
+                </div>
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <math-field id="sum_factor_2" data-column= "3" data-row= "2" class="form-control" value="" style="width: 75px; margin-bottom: 5px;"></math-field>
+                </div>
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <input id="sum_c_2" type="checkbox" data-column= "4" data-row= "2" value="" style="width: 38px; height: 38px; display: block; margin-bottom: 5px;">
+                </div>
+                <div class="col">
+                    <span id="row_3" style="width:95px" class="add_row btn btn-primary">Add Row</span>
+                </div>
+            </div>
+            <div class="row row_3" style="display:none;">
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <math-field id="factor_1_b_3" data-column= "1" data-row= "2" class="form-control" value="" style="width: 75px; margin-bottom: 5px;"></math-field>
+                </div>
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <math-field id="factor_2_b_3" data-column= "2" data-row= "2" class="form-control" value="" style="width: 75px; margin-bottom: 5px;"></math-field>
+                </div>
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <math-field id="sum_factor_3" data-column= "3" data-row= "2" class="form-control" value="" style="width: 75px; margin-bottom: 5px;"></math-field>
+                </div>
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <input id="sum_c_3" type="checkbox" data-column= "4" data-row= "2" value="" style="width: 38px; height: 38px; display: block; margin-bottom: 5px;">
+                </div>
+                <div class="col">
+                    <span id="row_4" style="width:95px" class="add_row btn btn-primary">Add Row</span>
+                </div>
+            </div>
+            <div class="row row_4" style="display:none;">
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <math-field id="factor_1_b_4" data-column= "1" data-row= "2" class="form-control" value="" style="width: 75px; margin-bottom: 5px;"></math-field>
+                </div>
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <math-field id="factor_2_b_4" data-column= "2" data-row= "2" class="form-control" value="" style="width: 75px; margin-bottom: 5px;"></math-field>
+                </div>
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <math-field id="sum_factor_4" data-column= "3" data-row= "2" class="form-control" value="" style="width: 75px; margin-bottom: 5px;"></math-field>
+                </div>
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <input id="sum_c_4" type="checkbox" data-column= "4" data-row= "2" value="" style="width: 38px; height: 38px; display: block; margin-bottom: 5px;">
+                </div>
+                <div class="col">
+                    <span id="row_5" style="width:95px" class="add_row btn btn-primary">Add Row</span>
+                </div>
+            </div>
+            <div class="row row_5" style="display:none;"">
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <math-field id="factor_1_b_5" data-column= "1" data-row= "2" class="form-control" value="" style="width: 75px; margin-bottom: 5px;"></math-field>
+                </div>
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <math-field id="factor_2_b_5" data-column= "2" data-row= "2" class="form-control" value="" style="width: 75px; margin-bottom: 5px;"></math-field>
+                </div>
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <math-field id="sum_factor_5" data-column= "3" data-row= "2" class="form-control" value="" style="width: 75px; margin-bottom: 5px;"></math-field>
+                </div>
+                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                    <input id="sum_c_5" type="checkbox" data-column= "4" data-row= "2" value="" style="width: 38px; height: 38px; display: block; margin-bottom: 5px;">
+                </div>
+                <div class="col">
+                </div>
+            </div>
+            <div class="row" style="margin-top:2%;flex: auto;">
+                <div class="col-sm" style="margin-top: 1%;">
+                    <p>Utilize <strong>factor 1</strong> and <strong>factor 2</strong> to create expressions with <strong><em>x</em></strong>.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <p>What does p equal?</p>
+                    <math-field id="p_value" virtual-keyboard-mode="off" style="width: 271px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <p>What does q equal?</p>
+                    <math-field id="q_value" virtual-keyboard-mode="off" style="width: 271px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <button id="level_4" style="margin-left:-10px;margin-top:43px" class="btn btn-danger scaffold">+</button>
+                </div>
+            </div>
+            <div class="row" style="margin-top:2%;flex: auto;">
+                <strong><p>Rewrite the trinomial by using p and q to group terms.</p></strong>
+            </div>
+        </div>
+        <div class="container level_4" style="margin: 2%;">
+            <div class="row">
+                <div class="col-sm">
+                    <p>What is the first group of terms?</p>
+                    <math-field id="first_part" virtual-keyboard-mode="off" style="width: 271px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <p>What is the second group of terms?</p>
+                    <math-field id="second_part" virtual-keyboard-mode="off" style="width: 271px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <p>Factor the first group of terms:</p>
+                    <math-field id="gcf_1_factor" virtual-keyboard-mode="off" style="width: 271px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <p>Factor the second group of terms:</p>
+                    <math-field id="gcf_2_factor" virtual-keyboard-mode="off" style="width: 271px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <button id="level_5" style="margin-left:-10px;margin-top:43px" class="btn btn-danger scaffold">+</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container level_5" style="margin: 2%;">
+            <div class="row" style="flex: auto;">
+                <div class="col-sm" style="margin-top: 1%;">
+                    <strong><p>Use factoring by grouping find the two expresions that factor the trinomial.</p></strong>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <p>What is the first expression?</p>
+                    <math-field id="gcf_1_final" virtual-keyboard-mode="off" style="width: 271px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <p>What is the second expression?</p>
+                    <math-field id="gcf_2_final" virtual-keyboard-mode="off" style="width: 271px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                </div>
+            </div>
+        </div>
+         
+        <div class="container level_0" style="margin: 2%;">
+            <div class="row">
+                <div class="col-sm">
+                    <p>Final factored form of polynomial:</p>
+                    <math-field id="final_answer" virtual-keyboard-mode="onfocus" style="width: 569px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <button id="level_1" style="margin-left:-10px;margin-top:43px" class="btn btn-danger scaffold">+</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    function add_row() {
+        // Get the ID of the clicked span
+        var clickedId = $(this).attr('id');
+        $('.' + clickedId).toggle();
+        $('#' + clickedId).toggle();
+    }
+
+    $().ready(function(){
+        $('.add_row').click(add_row);
+    });
+
+</script>

@@ -37,6 +37,7 @@ from tutorgym.envs.apprentice_tutors.cognitive_models.exponents import (
 
 from tutorgym.envs.apprentice_tutors.cognitive_models.exponential_equations import (
     htn_exponential_equations_common_base as exponential_equations_common_base,
+    htn_exponential_equations_change_to_common_base as exponential_equations_change_to_common_base,
     htn_exponential_equations_different_base as exponential_equations_different_base,
     htn_exponential_equations_fractional_exponents_common_base as exponential_equations_fractional_exponents_common_base,
     htn_exponential_equations_solve_Aekt as exponential_equations_solve_Aekt,
@@ -44,6 +45,7 @@ from tutorgym.envs.apprentice_tutors.cognitive_models.exponential_equations impo
 )
 
 from tutorgym.envs.apprentice_tutors.cognitive_models.quadratic_equations import (
+    htn_quadratic_equations_factorize as quadratic_equations_factorize,
     htn_quadratic_equations_identify_coeffs as quadratic_equations_identify_coeffs,
     htn_quadratic_equations_nature_of_solution as quadratic_equations_nature_of_solution,
     htn_quadratic_equations_solve_using_completing_square as quadratic_equations_solve_using_completing_square,
@@ -74,10 +76,12 @@ ENVIRONMENTS = {
     'exponents_product': (exponents_product.Domain, exponents_product.htn_exponents_product_problem),
     'exponents_quotient': (exponents_quotient.Domain, exponents_quotient.htn_exponents_quotient_problem),
     'exponential_equations_common_base': (exponential_equations_common_base.Domain, exponential_equations_common_base.htn_exponential_equations_common_base_problem),
+    'exponential_equations_change_to_common_base': (exponential_equations_change_to_common_base.Domain, exponential_equations_change_to_common_base.htn_exponential_equations_change_to_common_base_problem),
     'exponential_equations_different_base': (exponential_equations_different_base.Domain, exponential_equations_different_base.htn_exponential_equations_different_base_problem),
     'exponential_equations_fractional_exponents_common_base': (exponential_equations_fractional_exponents_common_base.Domain, exponential_equations_fractional_exponents_common_base.htn_exponential_equations_fractional_exponents_common_base_problem),
     'exponential_equations_solve_Aekt': (exponential_equations_solve_Aekt.Domain, exponential_equations_solve_Aekt.htn_exponential_equations_solve_Aekt_problem),
     'exponential_equations_solve_quadratic_form': (exponential_equations_solve_quadratic_form.Domain, exponential_equations_solve_quadratic_form.htn_exponential_equations_solve_quadratic_form_problem),
+    'quadratic_equations_factorize': (quadratic_equations_factorize.Domain, quadratic_equations_factorize.htn_quadratic_equations_factorize_problem),
     'quadratic_equations_identify_coeffs': (quadratic_equations_identify_coeffs.Domain, quadratic_equations_identify_coeffs.htn_quadratic_equations_identify_coeffs_problem),
     'quadratic_equations_nature_of_solution': (quadratic_equations_nature_of_solution.Domain, quadratic_equations_nature_of_solution.htn_quadratic_equations_nature_of_solution_problem),
     'quadratic_equations_solve_using_completing_square': (quadratic_equations_solve_using_completing_square.Domain, quadratic_equations_solve_using_completing_square.htn_quadratic_equations_solve_using_completing_square_problem),
