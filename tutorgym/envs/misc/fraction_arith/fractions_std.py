@@ -19,6 +19,7 @@ from tutorgym.utils import DataShopLogger
 
 from tutorgym.shared import ProblemState, Action
 from tutorgym.env_classes.fsm_tutor import FiniteStateMachine, StateMachineTutor
+from tutorgym.env_classes.CTAT.action_model import CTAT_ActionModel
 
 
 class FractionArithmetic(StateMachineTutor):
@@ -28,7 +29,8 @@ class FractionArithmetic(StateMachineTutor):
         """
         if n_fracs < 2:
             raise Exception("n cannot be lower than 2.")
-        super().__init__(**kwargs)
+        super().__init__(action_model=CTAT_ActionModel,
+                         **kwargs)
         self.n = self.n_fracs = n_fracs
         self.problem_types = problem_types
         # self.logger.set_student()

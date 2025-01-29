@@ -4,17 +4,28 @@ import os
 import glob
 
 
+class Annotatable:
+    def add_annotations(self, annos):
+        self.annotations = {**self.annotations, **annos}
+
+    def remove_annotations(self, anno_keys):
+        self.annotations = {k:v for k, v in self.annotations.items() if k not in annos}
+
+    def get_annotation(self, key, *args, **kwargs):
+        return self.annotations.get(key, *args, **kwargs)
+
+
 # ----------------------------------
 # : ProblemState
-class ProblemState:
-    # Global factory for MemSet Objects (w/ defualt context)
-    # ms_builder = MemSetBuilder()
 
-    def __new__(cls, objs):
+class ProblemState(Annotatable):
+    def __new__(cls, objs, action_hist=[], **annotations):
         if(isinstance(objs, ProblemState)):
             return objs
         self = super().__new__(cls)
         self.objs = objs
+        self.annotations = annotations
+        self.action_hist = action_hist
         # self.memset = ms_builder(objs)
         # self._uid = f"S_{self.memset.long_hash()}"
         return self
@@ -24,39 +35,64 @@ class ProblemState:
 
     def __setitem__(self, attr, val):
         if(self.objs.get(attr,None) != val):
-            self._uid = None #Invalidate uid on change
+            self._longhash = None #Invalidate longhash on change
         self.objs[attr] = val
 
-    def copy(self):
+    def copy(self, add_hist=None, keep_annotations=False):
         objs_copy = {k : {**v} for k,v in self.objs.items()}
-        ps = ProblemState(objs_copy)
+
+        annotations_copy = {}
+        if(isinstance(keep_annotations, bool)):
+            if(keep_annotations == True):
+                annotations_copy = {k:v for k,v in self.annotations.items()}
+        else:
+            annotations_copy = {k:v for k,v in self.annotations.items() if k in keep_annotations}
+        
+        if(add_hist is not None):
+            hist_copy = [*self.action_hist, add_hist]
+        else:
+            hist_copy = [*self.action_hist]
+        ps = ProblemState(objs_copy, hist_copy, **annotations_copy)
         return ps
 
     def __copy__(self):
         return self.copy()
 
     @property
-    def uid(self):
-        if(getattr(self, '_uid', None) is None):
+    def longhash(self):
+        if(getattr(self, '_longhash', None) is None):
             # Note: Slow-ish way to update modifications via rebuilding
             # self.memset = self.ms_builder(self.objs)
             sorted_state = sorted(self.objs.items())
-            self._uid = self._uid = f"S_{unique_hash(sorted_state)}"
-        return self._uid
+            self._longhash = self._longhash = f"S_{unique_hash(sorted_state)}"
+        return self._longhash
+
+    @property
+    def unique_id(self):
+        if("unique_id" in self.annotations):
+            return self.annotations["unique_id"]
+        else:
+            return self.longhash
         
 
     def __eq__(self, other):
         # NOTE: uids long/hash-conflict safe so this should be fine
-        return self.uid == other.uid
+        return self.longhash == other.longhash
 
     def __hash__(self):
-        return hash(self.uid)
+        return hash(self.longhash)
 
     def __str__(self):
-        return self.uid[:8]
+        return f"ProblemState_{self.longhash[:8]}"
 
     def __repr__(self):
-        return self.uid[:8]
+        s = f"ProblemState_{self.longhash[:8]}({self.objs}" + \
+               f", action_hist=[{self.action_hist}])"
+        for anno_name, anno in self.annotations.items():
+            s += f", {anno_name}={anno}"
+        s += ")"
+        return s
+        
 
 # ----------------------------------
 # : Registries 
@@ -128,7 +164,7 @@ def _standardize_action(inp):
     return (selection, action_type, inputs), annotations
 
 
-class Action:
+class Action(Annotatable):
     ''' An object representing the ideal action taken by an agent.
         Includes Selection-ActionType-Inputs (SAI) and optional annotations 
         like the string of the how-part of the skill that produced the SAI
@@ -158,11 +194,6 @@ class Action:
 
         return self
 
-    def add_annotations(self, annos):
-        self.annotations = {**self.annotations, **annos}
-
-    def remove_annotations(self, anno_keys):
-        self.annotations = {k:v for k, v in self.annotations.items() if k not in annos}
 
 
     def is_equal(self, other, check_annotations=[]):        
@@ -191,7 +222,8 @@ class Action:
                 if(self_anno != other_anno):
                     return False
 
-        return True        
+        return True
+
 
     def __eq__(self, other):
         return self.is_equal(other)

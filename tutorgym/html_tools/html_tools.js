@@ -1,5 +1,5 @@
 
-// const urlParams = new URLSearchParams(window.location.search);
+
 const host_url = window.location.origin
 
 // -------------------------------------------
@@ -14,10 +14,15 @@ HEADERS = {
 function connectToHost(process_htmls) {
     return new Promise((resolve, reject) => {
 
+        const urlParams = new URLSearchParams(window.location.search);
+
+
         const socket = io(host_url, {
                 reconnection: true,
                 reconnectionAttempts: 5,
-                reconnectionDelay: 1000
+                reconnectionDelay: 1000,
+                forceNew : true,
+                auth: {auth_key: urlParams.get('auth_key')}
         }); 
 
         socket.on('connect', () => {
@@ -151,7 +156,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     // Do HTML -> JSON
                     if(config.get_json){
-                        let json = Tutor_DOM_to_JSON(iframeDocument)
+                        let json = await Tutor_DOM_to_JSON(iframeDocument)
                         console.log("DOM TO JSON", json)
                         await saveHtmlJson(json, config.json_path)
                     }
@@ -195,15 +200,24 @@ document.addEventListener('DOMContentLoaded', async () => {
 // -------------------------------------------
 // Tutor_DOM_to_JSON
 
+let tag_counters = {}
+
 function get_element_info(elem){
+    let elem_id = elem.id || elem?.['data-gen_id'] || null;
+    let tag = elem?.tagName.toLowerCase() || ""
+    
+    if(!elem_id){
+        let cnt = tag_counters[tag] = (tag_counters?.[tag] || 0) + 1
+        elem_id = elem['data-gen_id'] = `anon_${tag}_${cnt}`
+        obj_counter += 1;
+    }
     // console.log("!", elem.id)
-    let info = {
-        id: elem.id || null,
+    let info = {     
+        id: elem_id,
+        tag: tag,
         locked: !elem.isContentEditable,
     };
-    if(elem?.tagName){
-        info['tag'] = elem.tagName.toLowerCase()
-    }
+    
     if (elem.getBoundingClientRect) {
         let bbox = elem.getBoundingClientRect();
         info['x'] = bbox.x
@@ -211,33 +225,40 @@ function get_element_info(elem){
         info['width'] = bbox.width
         info['height'] = bbox.height
     }
+    info['classList'] = Array.from(elem.classList)
     return info
 }
 
 function _recurse_handle_elem(elem, infos){
     let info = get_element_info(elem)
+    if(info['tag'] != 'body'){
+        infos[info['id']] = info
+    }
     
     children = elem?.children || []
     
     if(children.length > 0){
         child_ids = []
         for (let child of children) {
-            child_ids.push(child.id)
             _recurse_handle_elem(child, infos)
+            let child_id = child.id || child?.['data-gen_id'] || null;
+            child_ids.push(child_id)
         }
         info['child_ids'] = child_ids;
     }else if(elem?.innerHTML){
         info['value'] = elem?.innerHTML
     }
+
+
     
-    infos.push(info)
     // console.log(elem, info)
 }
 
 async function Tutor_DOM_to_JSON(tutor_dom){
-    infos = []
+    infos = {}
+    obj_counter = 0
     _recurse_handle_elem(tutor_dom.body, infos)
-    return JSON.stringify(infos);
+    return JSON.stringify(infos, null, 2);
 }
 
 // -------------------------------------------

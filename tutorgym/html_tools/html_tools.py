@@ -9,6 +9,8 @@ import glob
 import warnings
 from tutorgym.shared import glob_iter
 from queue import Queue
+import signal
+import uuid
 
 
 
@@ -84,7 +86,7 @@ import os
 #                 print(f"Error in message sender: {str(e)}")
 #                 time.sleep(1)
 
-def build_flask_server(host, port, root_dir):
+def build_flask_server(host, port, root_dir, auth_key):
     # message_queue = Queue()
     app = Flask("html_tools_server")
     socketio = SocketIO(app)
@@ -93,6 +95,8 @@ def build_flask_server(host, port, root_dir):
     message_thread = None
     # message_sender = MessageSender(message_queue, socketio.emit)
     html_configs = []
+
+    clients = [];
 
     connect_lock = Lock()
     connect_lock.acquire()
@@ -110,14 +114,25 @@ def build_flask_server(host, port, root_dir):
     #         return jsonify({"status": "error", "message": str(e)}), 400
 
     @socketio.on('connect')
-    def handle_connect():
-        print('Client connected')
-        connect_lock.release()
+    def handle_connect(auth=None):
+        # global current_client
+        okay = (auth['auth_key'] == auth_key)
+        if(len(clients) == 0 and okay):
+            print('Client connected', request.sid)
+            clients.append(request.sid)
+            connect_lock.release()
+            return {"success" : True}
+        else:
+            print('Client rejected', request.sid)
+            return {"error" : "Authentication failed or host connection established in other tab."}
+
 
     @socketio.on('disconnect')
-    def handle_connect():
-        print('Client disconnected')
-        connect_lock.acquire()
+    def handle_disconnect(data=None):
+        print('Client disconnected', request.sid)
+        if(len(clients) > 0 and request.sid == clients[0]):
+            connect_lock.acquire()
+            clients.pop()
 
     @app.route('/save_html_json', methods=['POST'])
     def save_html_json():
@@ -128,7 +143,8 @@ def build_flask_server(host, port, root_dir):
             filepath = os.path.join(root_dir, data['filepath'])
 
             with open(filepath, 'w') as f:
-                json.dump(data['html_json'], f)
+                f.write(data['html_json'])
+                # json.dump(data['html_json'], f)
 
                     
             return jsonify({"status": "success", "message": "JSON data saved successfully"}), 200
@@ -158,24 +174,15 @@ def build_flask_server(host, port, root_dir):
             print(e)
             return jsonify({"status": "error", "message": str(e)}), 400
 
-    @app.route('/processing_finished', methods=['POST'])
-    def processing_finished():
-        print("Processing Finished.")
-        shutdown_func = request.environ.get('werkzeug.server.shutdown')
-        if shutdown_func is not None:
-            shutdown_func()
-        else:
-            import signal
-            os.kill(os.getpid(), signal.SIGINT)
-            
-            # cleanup()
-            # signal.raise_signal(signal.SIGABRT)
-            # print("SYS EXIT")
-            # pid = os.getpid()
-            # # Send SIGTERM signal to the process
-            # os.kill(pid, signal.SIGTERM)
-            # sys.exit(0)
-        return jsonify({"message" : "Server shutting down..."}) #f'{host_url}/Mathtutor/6_01_HTML/HTML/6.01-4.html'
+    # @app.route('/processing_finished', methods=['POST'])
+    # def processing_finished():
+    #     print("Processing Finished.")
+    #     shutdown_func = request.environ.get('werkzeug.server.shutdown')
+    #     if shutdown_func is not None:
+    #         shutdown_func()
+    #     else:
+    #         os.kill(os.getpid(), signal.SIGINT)
+    #     return jsonify({"message" : "Server shutting down..."}) #f'{host_url}/Mathtutor/6_01_HTML/HTML/6.01-4.html'
         
 
     # Also serve root index.html
@@ -200,7 +207,11 @@ def build_flask_server(host, port, root_dir):
     flask_thread.daemon = True # cleanup when main process does
     flask_thread.start()
 
-    return flask_thread, socketio.emit, connect_lock
+    def emit(endpoint, data, **kwargs):
+        with connect_lock:
+            socketio.emit(endpoint, data, room=clients[0], **kwargs)
+
+    return flask_thread, emit, connect_lock
 
 # -----------------------------------------------------------
 # : Start Flask Server 
@@ -264,7 +275,7 @@ class HTML_Preprocessor:
                  get_json=True, get_image=True, 
                  cache=True, 
                  browser="firefox", browser_args=[],
-                 host='localhost', port=3000):
+                 host='localhost', port=3000, **kwargs):
 
         self.root_dir = root_dir
         self.get_json = get_json
@@ -274,6 +285,7 @@ class HTML_Preprocessor:
         self.browser_args = browser_args
         self.host = host
         self.port = port
+        self.total_emits = 0
 
 
         # self.is_done = False
@@ -321,7 +333,7 @@ class HTML_Preprocessor:
         return html_configs, need_run_browser
 
     def _ensure_outpaths(self, html_configs): 
-        need_run_browser = False
+        need_to_process = False
 
         for html_config in html_configs:
             get_json = html_config.get('get_json', True)
@@ -346,51 +358,67 @@ class HTML_Preprocessor:
 
             # When cache=True don't overwrite  
             cache = html_config.get('cache', True)
-            # json_path = os.path.join(self.root_dir, html_config['json_path'])
+            
             json_path = html_config['json_path']
+            abs_json_path = os.path.join(self.root_dir, json_path)
             # print("json_path", json_path)
-            if(cache and os.path.exists(json_path)):
+            if(cache and os.path.exists(abs_json_path)):
                 html_config['get_json'] = False
             else:
-                need_run_browser = True
+                need_to_process = True
 
             image_path = html_config['image_path']
-            # image_path = os.path.join(self.root_dir, html_config['image_path'])
+            abs_image_path = os.path.join(self.root_dir, image_path)
+            
             # print("image_path", image_path)
-            if(cache and os.path.exists(image_path)):
+            if(cache and os.path.exists(abs_image_path)):
                 html_config['get_image'] = False
             else:
-                need_run_browser = True
+                need_to_process = True
 
         # self.need_run_browser = need_run_browser
-        return html_configs, need_run_browser
+        return html_configs, need_to_process
 
-    def _ensure_browser(self):
+    def _ensure_browser(self, keep_alive=True):
         if(not hasattr(self, 'flask_thread')):
-            self.flask_thread, self.emit, self.connect_lock = build_flask_server(self.host, self.port, self.root_dir)
+            self.auth_key = str(uuid.uuid4())
+            self.flask_thread, self.emit, self.connect_lock = build_flask_server(
+                self.host, self.port, self.root_dir, self.auth_key)
+
+            # time.sleep(1)
+            # if(not self.connect_lock.locked()):
             host_url = f"http://{self.host}:{self.port}"
-            self.browser_process = open_browser(f"{host_url}/html_tools/index.html", self.browser)
+            page_url = f"{host_url}/html_tools/index.html?auth_key={self.auth_key}"
+            self.browser_process = open_browser(page_url, self.browser)
 
             self.emit_queue = Queue()
 
             def handle_emit_queue():
                 while True:
-                    with self.connect_lock:
-                        html_configs, emit_lock = self.emit_queue.get()
+                    index, html_configs, emit_lock = self.emit_queue.get()
 
+                    def make_callback(index, emit_lock):
                         def send_html_configs_callback(data):
+                            is_last_emit = self.total_emits == index-1
                             emit_lock.release()
+                            if(not keep_alive and is_last_emit):
+                                time.sleep(1)
+                                if(self.total_emits == index-1):
+                                    self.shutdown()
+                        return send_html_configs_callback
 
-                        print(" -- DO EMIT -- ")
-                        self.emit("send_html_configs", 
-                         {"html_configs" : html_configs}, 
-                         callback=send_html_configs_callback)
+                    print(" -- DO EMIT -- ")
 
-                        # Don't continue until the client returns has finished 
-                        #  processing all of the html files
-                        with emit_lock:
-                            print(" -- EMIT FINISHED -- ")
-                            pass
+                    # Not emit waits on connect_lock
+                    self.emit("send_html_configs", 
+                     {"html_configs" : html_configs}, 
+                     callback=make_callback(index, emit_lock))
+
+                    # Don't continue until the client returns has finished 
+                    #  processing all of the html files
+                    with emit_lock:
+                        print(" -- FINISHED PROCESSING EMIT -- ")
+                        pass
 
             self.emit_thread = Thread(target=handle_emit_queue)
             self.emit_thread.daemon = True # cleanup when main process does
@@ -400,20 +428,22 @@ class HTML_Preprocessor:
     #     self.emit_queue.put(data)
 
     def process_htmls(self, html_paths, block=True, keep_alive=True, **kwargs):
-        html_configs, need_run_browser = self._process_paths(html_paths)
+        html_configs, need_to_process = self._process_paths(html_paths)
 
-        if(need_run_browser):
-            self._ensure_browser()
-        
+
         emit_lock = Lock()
-        emit_lock.acquire()
-        self.emit_queue.put((html_configs, emit_lock))
+
+        if(not self.cache or need_to_process):
+            emit_lock.acquire()
+            self._ensure_browser(keep_alive)
+            index = self.total_emits
+            self.total_emits += 1
+            self.emit_queue.put((index, html_configs, emit_lock))
+            
 
         if(block):
-            print("-- BEFORE LOCK --")
             with emit_lock:
                 pass
-            print("-- AFTER LOCK --")
             return html_configs
         else:
             return html_configs, emit_lock
@@ -425,6 +455,14 @@ class HTML_Preprocessor:
         flask_thread = getattr(self, "flask_thread", None)
         if(flask_thread is not None):
             os.kill(flask_thread.native_id, signal.SIGINT)
+            flask_thread = None
+
+        emit_thread = getattr(self, "emit_thread", None)
+        if(emit_thread is not None):
+            os.kill(emit_thread.native_id, signal.SIGINT)
+            emit_thread = None
+
+        print("-- SHUTDOWN --")
 
 
     def __del__(self):
@@ -437,9 +475,10 @@ if __name__ == '__main__':
     # browser_process = open_browser("http://localhost:3000/index.html", "firefox")
     html_proc = HTML_Preprocessor(
         root_dir="../envs/CTAT/Mathtutor/",
+        cache=False,
     )
 
-    html_configs, lock1 = html_proc.process_htmls(html_paths="**/*.html", block=False)
+    html_configs, lock1 = html_proc.process_htmls(html_paths="**/*.html", block=False, keep_alive=False)
     html_configs, lock2 = html_proc.process_htmls(html_paths="**/*.html", block=False)
 
     with lock1:

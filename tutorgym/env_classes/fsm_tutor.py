@@ -12,36 +12,41 @@ from tutorgym.env_classes.env_base import TutorEnvBase
 
 # TODO: Should reuse the predict_next_state() machinery in cre_agent 
 #  to implement this.
-def make_next_state(state, sai):
-    next_state = state.copy()
-    selection, action_type, inputs = sai
-    if(action_type == "UpdateTextField"):
-        next_state[selection]['value'] = inputs['value']
-        next_state[selection]['locked'] = True        
-    return next_state
+# def make_next_state(state, sai):
+#     next_state = state.copy()
+#     selection, action_type, inputs = sai
+#     if(action_type == "UpdateTextField"):
+#         next_state[selection]['value'] = inputs['value']
+#         next_state[selection]['locked'] = True        
+#     return next_state
+
+
 
 class FiniteStateMachine:
-    def __init__(self, start_state):
+    def __init__(self, start_state, action_model):
         self.start_state = ProblemState(start_state)
+        self.action_model = action_model
         self.nodes = {}
         self._ensure_node(start_state)
 
     def _ensure_node(self, state):
-        if(state not in self.nodes):
-            self.nodes[state] = {
+        unique_id = state.unique_id
+        if(unique_id not in self.nodes):
+            self.nodes[unique_id] = {
                 "state" : state,
                 "edges" : {}
             }
-        return self.nodes[state]
+        return self.nodes[unique_id]
 
-    def add_edge(self, state, action, is_done=False):
+    def add_edge(self, state, action, is_done=False, force_unique_id=None):
         action = Action(action) # Standardize
         state = ProblemState(state)
         node = self._ensure_node(state)
-        if(is_done):
-            next_state = ProblemState({})
-        else:
-            next_state = make_next_state(state, action.sai)
+
+        next_state = self.action_model.apply(state, action)
+        if(force_unique_id is not None):
+            next_state.add_annotations({"unique_id": force_unique_id})
+        
         node['edges'][action] = next_state
         self._ensure_node(next_state)
         return next_state
@@ -56,7 +61,7 @@ class FiniteStateMachine:
         return state # State after unordered actions
 
     def get_next_actions(self, state):
-        out_edges = self.nodes[state]['edges']
+        out_edges = self.nodes[state.unique_id]['edges']
         return list(out_edges.keys())
 
 
@@ -66,6 +71,9 @@ def load_fsm(file_path):
 
 
 class StateMachineTutor(TutorEnvBase):
+    def __init__(self, action_model, **kwargs):
+        self.action_model = action_model
+
     def create_fsm(self):
         raise NotImplementedError("Subclass must implement create_fsm().")
             
@@ -73,7 +81,6 @@ class StateMachineTutor(TutorEnvBase):
         raise NotImplementedError("Subclass must implement set_start_state().")
 
     def _standardize_config(self, *args, **kwargs):
-        
         sig = inspect.signature(self.set_start_state)
         
         problem_config = {}
@@ -104,10 +111,10 @@ class StateMachineTutor(TutorEnvBase):
         self.is_done = False
 
     def get_state(self):
-        return self.state.objs
+        return self.state
 
-    def set_state(self, objs):
-        self.state = ProblemState(objs)
+    def set_state(self, state):
+        self.state = ProblemState(state)
         self.is_done = False
 
     def check(self, action, **kwargs):
@@ -129,8 +136,8 @@ class StateMachineTutor(TutorEnvBase):
     def apply(self, action):
         """ Applies an Action. Modifying self.state. """
         if(self.sai_makes_done(action.sai)):
-            self.is_done = True
-            self.state = ProblemState({})
+            # self.is_done = True
+            self.state = ProblemState({}, is_done=True)
         else:
             self.state = make_next_state(self.state, action.sai)
         return self.state.objs

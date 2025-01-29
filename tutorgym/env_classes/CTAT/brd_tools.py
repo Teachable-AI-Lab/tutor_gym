@@ -67,7 +67,7 @@ def parse_start_node_messages(messages, verbosity=1):
 # --------------------
 # : parse_edges()
 
-def parse_edge(edge):
+def parse_edge(edge, verbosity=1):
     # for edge in edges:
 
     # -- SAI Part --
@@ -75,11 +75,13 @@ def parse_edge(edge):
     message = action_label.find("message")
 
     verb = message.find("verb").text
-    if(verb != "NotePropertySet"):
+    if(verb not in ("NotePropertySet", "SendNoteProperty")):
         if(verbosity > 0):
             print(f"Warning edge message unknown verb: {verb}")
     properties = message.find("properties")
-    if(properties.find("MessageType").text != "InterfaceAction"):
+
+    message_type = properties.find("MessageType").text
+    if(message_type not in ["InterfaceAction", "CorrectAction"]):
         raise ValueError(f"unexpected edge MessageType: {properties.find('MessageType').text}")
     action = parse_sai(properties)
 
@@ -91,7 +93,11 @@ def parse_edge(edge):
 
     sm = action_label.find("successMessage")
     if(sm is not None):
-        annotations["success_message"] = bm.text
+        annotations["success_message"] = sm.text
+
+    act_t = action_label.find("actionType")
+    if(act_t is not None):
+        annotations["action_type"] = act_t.text
 
     hint_messages = []
     for hint in action_label.iter("hintMessage"):
@@ -106,30 +112,34 @@ def parse_edge(edge):
 
 
 
-def parse_brd(filepath):
+def parse_brd(filepath, verbosity=1):
     start_actions = None
     edges = []
+    edge_groups = []
 
     tree = ET.parse(filepath)
     root = tree.getroot()
-    for child in root:
 
-        if(child.tag == "startNodeMessages"):
-            problem_name, start_actions = parse_start_node_messages(child)
+    try:
+        for child in root:
+            if(child.tag == "startNodeMessages"):
+                problem_name, start_actions = parse_start_node_messages(child)
 
-        elif(child.tag == "edge"):
-            edges.append(parse_edge(child))
+            elif(child.tag == "edge"):
+                edges.append(parse_edge(child, verbosity))
+    except Exception as e:
+        raise type(e)(f"An error occured while parsing {filepath} " + str(e)) from e
 
 
-    print(problem_name)
-    print("--START ACTIONS--")
-    for a in start_actions:
-        print(a)
-    print("--EDGES--")
-    for e in edges:
-        print(e)
+    # print(problem_name)
+    # print("--START ACTIONS--")
+    # for a in start_actions:
+    #     print(a)
+    # print("--EDGES--")
+    # for e in edges:
+    #     print(e)
 
-    return start_actions, edges
+    return start_actions, edges, edge_groups
 
         # print("  ", child, child.tag)
 
