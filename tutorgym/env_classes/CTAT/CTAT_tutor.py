@@ -131,7 +131,7 @@ class CTAT_Tutor(StateMachineTutor):
 if __name__ == '__main__':
 
     tutor = CTAT_Tutor()
-    problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/")
+    problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_16_HTML/")
     for prob_set in problem_sets:
         for problem in prob_set:
             tutor.set_problem(**problem)

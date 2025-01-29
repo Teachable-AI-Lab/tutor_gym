@@ -73,6 +73,7 @@ def load_fsm(file_path):
 class StateMachineTutor(TutorEnvBase):
     def __init__(self, action_model, **kwargs):
         self.action_model = action_model
+        super().__init__(**kwargs)
 
     def create_fsm(self):
         raise NotImplementedError("Subclass must implement create_fsm().")
@@ -130,17 +131,19 @@ class StateMachineTutor(TutorEnvBase):
                 return 1
         return -1
 
-    def sai_makes_done(self, sai):
-        return sai[0] == 'done'
+    # def sai_makes_done(self, sai):
+    #     return sai[0] == 'done'
 
     def apply(self, action):
         """ Applies an Action. Modifying self.state. """
-        if(self.sai_makes_done(action.sai)):
-            # self.is_done = True
-            self.state = ProblemState({}, is_done=True)
-        else:
-            self.state = make_next_state(self.state, action.sai)
-        return self.state.objs
+
+        self.state = self.action_model.apply(self.state, action)
+        # if(self.sai_makes_done(action.sai)):
+        #     # self.is_done = True
+        #     self.state = ProblemState({}, is_done=True)
+        # else:
+        #     self.state = make_next_state(self.state, action.sai)
+        return self.state
 
     def _process_demo(self, action, **kwargs):
         action = Action(action.sai, 

@@ -29,8 +29,7 @@ class FractionArithmetic(StateMachineTutor):
         """
         if n_fracs < 2:
             raise Exception("n cannot be lower than 2.")
-        super().__init__(action_model=CTAT_ActionModel,
-                         **kwargs)
+        super().__init__(action_model=CTAT_ActionModel, **kwargs)
         self.n = self.n_fracs = n_fracs
         self.problem_types = problem_types
         # self.logger.set_student()
@@ -144,10 +143,10 @@ class FractionArithmetic(StateMachineTutor):
         return (operator, list(zip(nums, dens)))
         # print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {operator.join([f'({n}/{v})' for n,v in zip(nums,dens)])}" )
 
-    def create_fsm(self, state):
+    def create_fsm(self, state, **kwargs):
         curr_state = state.copy()
         print("CURR STATE", state)
-        fsm = FiniteStateMachine(curr_state)
+        fsm = FiniteStateMachine(curr_state, self.action_model)
 
         init_num_vals = [int(state[f'init_num{i+1}']['value']) for i in range(self.n)]
         init_den_vals = [int(state[f'init_den{i+1}']['value']) for i in range(self.n)]

@@ -41,7 +41,8 @@ class Trainer:
                  problem_end_callbacks = [],
                  step_end_callbacks = [],
                  train_end_callbacks = [],
-                 act_return_kind = "sai",
+                 agent_action_repr = "sai",
+                 agent_state_repr = "obj_dicts",
                  **kwargs):
         self.agent = agent
         self.env = env
@@ -57,7 +58,8 @@ class Trainer:
         self.total_incorrect = 0
         self.total_correct = 0
         self.total_hints = 0
-        self.act_return_kind = act_return_kind
+        self.agent_action_repr = agent_action_repr
+        self.agent_state_repr = agent_state_repr
 
         if('problem_set' not in kwargs and
            'n_problems' not in kwargs and 
@@ -90,18 +92,38 @@ class Trainer:
         self.train_end_callbacks = train_end_callbacks
 
 
-    def _to_train_kwargs(self, state, action, reward, is_demo=False, is_start=None):
-        if(self.act_return_kind == "skill_app" and not is_demo):
-            return {"state" : state,
-                    "skill_app" : action,
-                    "is_start" : is_start,
-                    "reward" : reward}
+    def _state_to_kwargs(self, state, is_start=None):
+        if(self.agent_state_repr == "obj_dicts"):
+            s = {"state" : state.objs, **state.annotations, "is_start" : is_start,}
         else:
-            return {"state" : state,
-                    "reward" : reward,
-                    "is_start" : is_start,
-                    **action.as_train_kwargs(),
-                    "is_demo" : is_demo}
+            s = {"state" : state, "is_start" : is_start}
+        return s
+
+    def _to_train_kwargs(self, state, action, reward, is_demo=False, is_start=None):
+
+        s = self._state_to_kwargs(state, is_start)
+
+        if(self.agent_action_repr == "skill_app" and not is_demo):
+            a = {"skill_app" : action}
+        else:
+            a = action.as_train_kwargs()
+
+        return {**s, 
+                "reward": reward,
+                **a,
+                "is_demo" : is_demo
+                }
+        # # if(self.agent_action_repr == "skill_app" and not is_demo):
+        #     return {"state" : state,
+        #             "skill_app" : action,
+        #             "is_start" : is_start,
+        #             "reward" : reward}
+        # # else:
+        #     return {"state" : state,
+        #             "reward" : reward,
+        #             "is_start" : is_start,
+        #             **action.as_train_kwargs(),
+        #             "is_demo" : is_demo}
 
     def print_outcome(self, action, outcome_kind):
         extra = ""
@@ -137,7 +159,7 @@ class Trainer:
 
     def tutor_train_state(self, state, is_start=False):
         ''' Tutor-train (i.e. train one action at a time) on 'state'.'''
-        action = self.agent.act(state, return_kind=self.act_return_kind,
+        action = self.agent.act(state, return_kind=self.agent_action_repr,
             is_start=is_start)
         conv_action = Action(action)
         outcome_kind = None
@@ -206,15 +228,15 @@ class Trainer:
 class AuthorTrainer(Trainer):
     def __init__(self, *args, **kwargs):
         # Author trainer defaults return kind to 'skill_app'
-        kwargs['act_return_kind'] = kwargs.get('act_return_kind', 'skill_app')
+        kwargs['agent_action_repr'] = kwargs.get('agent_action_repr', 'skill_app')
         super(AuthorTrainer, self).__init__(*args, **kwargs)
         self.states_trained = 0
         self.problem_jumps = 0
 
     def author_train_state(self, state, is_start=None):
         ''' Author-train (i.e. all proposed actions + available demos at once) on 'state'.'''
-        actions = self.agent.act_all(state, is_start=is_start,
-            return_kind=self.act_return_kind)
+        actions = self.agent.act_all(**self._state_to_kwargs(state, is_start), #, is_start=is_start,
+            return_kind=self.agent_action_repr)
         demos = self.env.get_all_demos(state)
 
         # print("ACTIONS")

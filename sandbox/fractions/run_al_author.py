@@ -2,7 +2,7 @@
 # from apprentice.working_memory.representation import Sai
 # from apprentice.working_memory.numba_operators import *
 
-from tutorgym.envs.fraction_arithmetic.fractions_std import FractionArithmetic
+from tutorgym.envs.misc.fraction_arith.fractions_std import FractionArithmetic
 from tutorgym.trainer import Trainer, AuthorTrainer
 from tutorgym.evaluator import CompletenessEvaluator
 from tutorgym.utils import DataShopLogger
