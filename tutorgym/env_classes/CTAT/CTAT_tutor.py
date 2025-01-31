@@ -55,7 +55,7 @@ class CTAT_Tutor(StateMachineTutor):
 
         # Start by indexing sets of edges by by their source node
         edge_dict = {}
-        for node_unq_id, next_unq_id, action in self.edges:
+        for edge_id, (node_unq_id, next_unq_id, action) in self.edges.items():
             lst = edge_dict.get(node_unq_id, [])
             lst.append((next_unq_id, action))
             edge_dict[node_unq_id] = lst
@@ -83,7 +83,8 @@ class CTAT_Tutor(StateMachineTutor):
                     next_state = fsm.add_edge(node['state'], action, 
                         force_unique_id=next_unq_id)
 
-                    print(node_unq_id, next_unq_id, action.sai)
+                    # print(node_unq_id, next_unq_id, action.sai)
+                    print(f"{repr(action)}")
 
                     if(next_state.get_annotation("is_done", False)):
                         continue
@@ -112,14 +113,18 @@ class CTAT_Tutor(StateMachineTutor):
 
         # Apply any start state messages in the brd 
         for action in self.start_actions:
-            start_state = self.apply(start_state, action, make_copy=False)
+            start_state = self.action_model.apply(start_state, action, make_copy=False)
         start_state.action_history = []
 
         start_state.add_annotations({"is_start": True, "unique_id" : "1"})
+
+
         self.start_state = start_state
 
-    def apply(self, state, action, **kwargs):
-        return self.action_model.apply(state, action)
+
+
+    # def apply(self, state, action, **kwargs):
+    #     return self.action_model.apply(state, action)
 
 
 
@@ -131,10 +136,29 @@ class CTAT_Tutor(StateMachineTutor):
 if __name__ == '__main__':
 
     tutor = CTAT_Tutor()
-    problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_16_HTML/")
-    for prob_set in problem_sets:
-        for problem in prob_set:
-            tutor.set_problem(**problem)
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_16_HTML/")
+    # for prob_set in problem_sets:
+    #     for problem in prob_set:
+    #         tutor.set_problem(**problem)
+
+    tutor.set_problem(html_path="../../envs/CTAT/Mathtutor/6_11_HTML/HTML/6.11.html",
+                model_path="../../envs/CTAT/Mathtutor/6_11_HTML/FinalBRDs/p21.brd"
+    )
+
+
+    for i in range(100):
+        print("-- STEP", i, "--")
+        actions = tutor.get_all_demos()
+        for action in actions:
+            print("Action:", repr(action))
+
+        tutor.apply(actions[0])
+        print()
+
+
+
+
+
 
 
 

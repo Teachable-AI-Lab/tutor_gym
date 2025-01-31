@@ -1,9 +1,68 @@
 import xmltodict
 import lxml.etree as ET
 from tutorgym.shared import Action
+from tutorgym.env_classes.fsm_tutor import ActionGroup
+
+# ---------------------
+class BaseMatcher:
+    def __str__(self):
+        return f"{type(self).__name__}({', '.join([f'{k}={v}' for k,v in self.__dict__.items()])})"
+
+class ExpressionMatcher(BaseMatcher):
+    def __init__(self, InputExpression, relation, **kwargs):
+        self.value = InputExpression
+        self.relation = relation
+        self.kwargs = kwargs
+
+    def check(self, state, inputs):
+        # TODO actually make work
+        return inputs.get('value',None) == value
+
+
+class ExactMatcher(BaseMatcher): 
+    def __init__(self, single):
+        self.value = single
+
+    def check(self, state, inputs):
+        return inputs.get('value',None) == value
+
+class RegexMatcher(BaseMatcher): 
+    def __init__(self, single, **kwargs):
+        self.value = single
+
+    def check(self, state, inputs):
+        # TODO actually make work
+        return inputs.get('value',None) == value
+
+
+matcher_classes = {
+    "ExpressionMatcher" : ExpressionMatcher,
+    "ExactMatcher" : ExactMatcher,
+    "RegexMatcher" : RegexMatcher
+}
+
+class Checker():
+    def __init__(self, selection, action_type, inputs_matcher):
+        self.selection = selection
+        self.action_type = action_type
+        self.inputs_matcher = inputs_matcher
+
+    def __call__(self, state, action):
+        sel, act, inps = action.sai
+        if(sel == self.selection and
+           act == self.action_type and
+           self.inputs_matcher.check(state, inps)):
+            return True
+        return False
+
+    def __str__(self):
+        return f"Checker({self.inputs_matcher})"
+
+    __repr__ = __str__
+
 
 # --------------------
-# : parse_sai
+# : parse_sai / matcher
 
 def parse_sai(node):
     selection = node.find("Selection").find("value").text
@@ -14,13 +73,77 @@ def parse_sai(node):
 
     return Action((selection, action_type, inputs))
 
+def parse_matcher(node):
+    matcher_type = node.find("matcherType").text
+    cls = matcher_classes[matcher_type]
+    params = {x.attrib['name'] : x.text for x in node.iter("matcherParameter")}
+    print(params)
+    matcher = cls(**params)
+    return matcher
+
+# def make_checker(selection, action_type, inp_m):
+#     def checker(state, action):
+#             sel, act, inps = action.sai
+#             if(sel == selection and
+#                act == action_type and
+#                inp_m.check(state, inps)):
+#                 return True
+#             return False
+#     return checker
+
+
+def parse_old_matcher(node):
+    matcher_type = node.find("matcherType").text
+    cls = matcher_classes[matcher_type]
+
+    params = {x.attrib['name'] : x.text for x in node.iter("matcherParameter")}
+
+    selection = params["selection"]
+    action_type = params["action"]
+    inputs = {"value" : params["input"]}
+    actor = params["actor"].lower()
+
+    inp_m = cls(params["input"])
+
+    annotations = {"checker" : 
+        Checker(selection, action_type, inp_m)
+    }
+    return actor, Action((selection, action_type, inputs), **annotations)
+
+
+
+def parse_matchers(node):
+    sel_m = parse_matcher(node.find("Selection").find("matcher"))
+    act_m = parse_matcher(node.find("Action").find("matcher"))
+    inp_m = parse_matcher(node.find("Input").find("matcher"))
+
+    # assert isinstance(sel_m, ExactMatcher), "Not Implemented non exact 'selection' matcher"
+    # assert isinstance(act_m, ExactMatcher), "Not Implemented non exact action_type matcher"
+
+    selection = sel_m.value
+    action_type = act_m.value
+    inputs = {"value" : inp_m.value}
+
+    actor = node.find("Actor").text.lower()
+    # selection = node.find("Selection").find("matcher").text
+    # action_type = node.find("Action").find("value").text
+    inputs = {}
+    for node in node.find("Input"):
+        inputs[node.tag] = node.text
+
+    annotations = {}
+    if(not isinstance(inp_m, ExactMatcher)):
+        annotations['checker'] = Checker(selection, action_type, inp_m)
+
+    return actor, Action((selection, action_type, inputs), **annotations)
+
 
 # --------------------
 # : parse_start_node_messages()
 
 def parse_jess_wm_description(node):
     # Probably don't need to implement this, but it is a thing
-    #  in the brds I have
+    #  in the brds of Mathtutor
     pass
 
 
@@ -83,10 +206,25 @@ def parse_edge(edge, verbosity=1):
     message_type = properties.find("MessageType").text
     if(message_type not in ["InterfaceAction", "CorrectAction"]):
         raise ValueError(f"unexpected edge MessageType: {properties.find('MessageType').text}")
+
+    # TODO... not sure what 
     action = parse_sai(properties)
 
+    print("action", action)
+    matchers = action_label.find("matchers")
+    if(matchers is not None):
+        actor, matcher_action = parse_matchers(matchers)
+    else:
+        matcher = action_label.find("matcher")
+        actor, matcher_action = parse_old_matcher(matcher)
+    print("matchers", matchers)
+
+        
+
     # -- Annotations --
-    annotations = {}
+    annotations = {"actor" : actor,
+        **matcher_action.annotations}
+
     bm = action_label.find("buggyMessage")
     if(bm is not None):
         annotations["buggy_message"] = bm.text
@@ -99,23 +237,56 @@ def parse_edge(edge, verbosity=1):
     if(act_t is not None):
         annotations["action_type"] = act_t.text
 
+    uid = action_label.find("uniqueID")
+    if(uid is not None):
+        annotations["unique_id"] = uid.text
+
+    src_id = edge.find("sourceID").text
+    annotations["src_id"] = src_id
+    dest_id = edge.find("destID").text
+    annotations["dest_id"] = dest_id
+
     hint_messages = []
     for hint in action_label.iter("hintMessage"):
-        hint_messages.append(hint.text)
+        if(hint.text):
+            hint_messages.append(hint.text)
 
     annotations["hint_messages"] = hint_messages
     action.add_annotations(annotations)
 
-    src_id = edge.find("sourceID").text
-    dest_id = edge.find("destID").text
+    # print(f"{repr(action)}")
+    
     return (src_id, dest_id, action)
 
+
+# --------------------
+# : parse_group()
+
+def parse_groups(edge_groups, edges):
+    out_groups = {}
+    for i, group_node in enumerate(edge_groups.iter("group")):
+        name = group_node.attrib.get("name", f'group{i}')
+        assert name not in out_groups, f"Duplicate EdgeGroup name {name}"
+
+        actions = []
+        for link_node in group_node.iter("link"):
+            s, n, action = edges[link_node.attrib['id']]
+            action.add_annotations({"group" : name})
+            actions.append(action)
+
+        unordered = group_node.attrib.get("ordered", 'false') != 'false'
+        reenterable = group_node.attrib.get("reenterable", True)
+
+        out_groups[name] = ActionGroup(name, actions, unordered, reenterable)
+
+    return out_groups
 
 
 def parse_brd(filepath, verbosity=1):
     start_actions = None
-    edges = []
-    edge_groups = []
+    edges = {}
+    _eg_nodes = []
+    edge_groups = {}
 
     tree = ET.parse(filepath)
     root = tree.getroot()
@@ -126,7 +297,15 @@ def parse_brd(filepath, verbosity=1):
                 problem_name, start_actions = parse_start_node_messages(child)
 
             elif(child.tag == "edge"):
-                edges.append(parse_edge(child, verbosity))
+                edge = (src,dest,action) = parse_edge(child, verbosity)
+                edges[action.get_annotation('unique_id')] = edge
+            elif(child.tag == "EdgesGroups"):
+                _eg_nodes.append(child)
+
+        # Need be parsed after edges
+        for eg_node in _eg_nodes:
+            edge_groups.update(parse_groups(eg_node, edges))
+
     except Exception as e:
         raise type(e)(f"An error occured while parsing {filepath} " + str(e)) from e
 

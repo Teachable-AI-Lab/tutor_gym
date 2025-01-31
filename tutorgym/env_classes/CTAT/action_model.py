@@ -11,7 +11,7 @@ class CTAT_ActionModel:
             new_state = state.copy(add_hist=action)
         else:
             new_state = state
-            new_state.action_history.append(action)
+            new_state.action_hist.append(action)
 
         sel, act_type, inputs = action.sai
 

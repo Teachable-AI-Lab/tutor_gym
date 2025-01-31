@@ -89,7 +89,7 @@ class ProblemState(Annotatable):
         s = f"ProblemState_{self.longhash[:8]}({self.objs}" + \
                f", action_hist=[{self.action_hist}])"
         for anno_name, anno in self.annotations.items():
-            s += f", {anno_name}={anno}"
+            s += f", {anno_name}={anno!r}"
         s += ")"
         return s
         
@@ -228,6 +228,13 @@ class Action(Annotatable):
     def __eq__(self, other):
         return self.is_equal(other)
 
+    def check(self, other):
+        checker = self.annotations.get("checker", None)
+        if(checker is not None):
+            return checker(other) 
+        else:
+            return self.sai == other.sai
+
     def __hash__(self):
         return hash((unique_hash(self.sai), unique_hash(self.annotations)))
 
@@ -238,7 +245,7 @@ class Action(Annotatable):
         s = f"{self.sai[1]}({self.sai[0]}, {self.sai[2]}"
 
         for anno_name, anno in self.annotations.items():
-            s += f", {anno_name}={anno}"
+            s += f", {anno_name}={anno!r}"
         return s + ")"
 
     def copy(self, omit_annotations=[]):
