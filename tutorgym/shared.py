@@ -228,10 +228,10 @@ class Action(Annotatable):
     def __eq__(self, other):
         return self.is_equal(other)
 
-    def check(self, other):
+    def check(self, state, other):
         checker = self.annotations.get("checker", None)
         if(checker is not None):
-            return checker(other) 
+            return checker(state, other) 
         else:
             return self.sai == other.sai
 

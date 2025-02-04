@@ -16,7 +16,7 @@ class ExpressionMatcher(BaseMatcher):
 
     def check(self, state, inputs):
         # TODO actually make work
-        return inputs.get('value',None) == value
+        return inputs.get('value',None) == self.value
 
 
 class ExactMatcher(BaseMatcher): 
@@ -24,7 +24,7 @@ class ExactMatcher(BaseMatcher):
         self.value = single
 
     def check(self, state, inputs):
-        return inputs.get('value',None) == value
+        return inputs.get('value',None) == self.value
 
 class RegexMatcher(BaseMatcher): 
     def __init__(self, single, **kwargs):
@@ -32,7 +32,7 @@ class RegexMatcher(BaseMatcher):
 
     def check(self, state, inputs):
         # TODO actually make work
-        return inputs.get('value',None) == value
+        return inputs.get('value',None) == self.value
 
 
 matcher_classes = {
@@ -77,7 +77,6 @@ def parse_matcher(node):
     matcher_type = node.find("matcherType").text
     cls = matcher_classes[matcher_type]
     params = {x.attrib['name'] : x.text for x in node.iter("matcherParameter")}
-    print(params)
     matcher = cls(**params)
     return matcher
 
@@ -127,9 +126,9 @@ def parse_matchers(node):
     actor = node.find("Actor").text.lower()
     # selection = node.find("Selection").find("matcher").text
     # action_type = node.find("Action").find("value").text
-    inputs = {}
-    for node in node.find("Input"):
-        inputs[node.tag] = node.text
+    # inputs = {}
+    # for node in node.find("Input"):
+    #     inputs[node.tag] = node.text
 
     annotations = {}
     if(not isinstance(inp_m, ExactMatcher)):
@@ -208,21 +207,26 @@ def parse_edge(edge, verbosity=1):
         raise ValueError(f"unexpected edge MessageType: {properties.find('MessageType').text}")
 
     # TODO... not sure what 
-    action = parse_sai(properties)
+    message_action = parse_sai(properties)
 
-    print("action", action)
+    
     matchers = action_label.find("matchers")
     if(matchers is not None):
         actor, matcher_action = parse_matchers(matchers)
     else:
         matcher = action_label.find("matcher")
         actor, matcher_action = parse_old_matcher(matcher)
-    print("matchers", matchers)
+    # print("matchers", matchers)
+
+    # Use the matcher action instaed of the message action
+    action = matcher_action
+    # print("action", action)
 
         
 
     # -- Annotations --
     annotations = {"actor" : actor,
+        "optional" : action_label.attrib['minTraversals'] == "0",
         **matcher_action.annotations}
 
     bm = action_label.find("buggyMessage")

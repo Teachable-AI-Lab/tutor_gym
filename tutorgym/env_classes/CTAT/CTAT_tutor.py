@@ -30,22 +30,77 @@ def action_not_template(action):
 # ------------------------------------------------------------------
 # : CTAT_Tutor
 
+def ensure_not_early_done_filter(actions):
+    # Find the done action
+    done_action = None
+    for action in actions:
+        if(action.sai[0] == "done"):
+            done_action = action
+            break
+
+    # Check to see if any action in the same group as the done action is 
+    #  non-optional
+    done_okay = True
+    if(done_action is not None):
+        done_group = done_action.get_annotation("group", False)
+        for action in actions:
+            if(action is not done_action and
+               action.get_annotation("group", False) == done_group  and
+               action.get_annotation("optional", False) == False):
+                done_okay = False
+                break
+
+    if(done_okay):
+        return actions
+    else:
+        return [a for a in actions if a is not done_action]
+
+
+
+
+
 class CTAT_Tutor(StateMachineTutor):
     def __init__(self, html_proc_config={"root_dir" : "./"},
-                       action_filters=[action_not_buggy, action_not_template],
+                       edge_filters=[action_not_buggy, action_not_template],
                     **kwargs):
         self.html_proc_config = html_proc_config
         self.html_proc = HTML_Preprocessor(**html_proc_config)
-        self.action_filters = action_filters
+        self.edge_filters = edge_filters
         super().__init__(action_model=CTAT_ActionModel,**kwargs)
+        self.next_action_filters.append(ensure_not_early_done_filter)
 
     def _satisfies_filters(self, action):
-        for fltr in self.action_filters:
+        for fltr in self.edge_filters:
             # print("SKIPPING ACTION", action, f"Failed filter {fltr.__name__}")
             if(not fltr(action)):
                 return False
         return True
 
+    def set_start_state(self, html_path, model_path, **kwargs):
+        # Render the HTML converted the DOM to JSON and snap a picture
+        configs = self.html_proc.process_htmls(
+            [html_path],
+            keep_alive=True
+        )
+
+        print(html_path)
+        print(model_path)
+
+        # Load the HTML converted to JSON
+        with open(configs[0]['json_path']) as f:
+            start_state = json.load(f)
+            self.start_actions, self.edges, self.groups = \
+                parse_brd(model_path)
+
+        # Apply any start state messages in the brd 
+        for action in self.start_actions:
+            start_state = self.action_model.apply(start_state, action, make_copy=False)
+        start_state.action_history = []
+
+        start_state.add_annotations({"is_start": True, "unique_id" : "1"})
+
+
+        self.start_state = start_state
 
     def create_fsm(self, start_state, **kwargs):
         fsm = FiniteStateMachine(
@@ -79,6 +134,11 @@ class CTAT_Tutor(StateMachineTutor):
                         continue
                     # if(action.get_annotation("action_type", None) == "Buggy Action"):
                     #     continue
+                    group_name = action.get_annotation("group", None)
+                    if(group_name is not None):
+                        group = self.groups[group_name]
+                        next_state = fsm.add_unordered(node['state'], group)
+
 
                     next_state = fsm.add_edge(node['state'], action, 
                         force_unique_id=next_unq_id)
@@ -95,31 +155,9 @@ class CTAT_Tutor(StateMachineTutor):
 
         return fsm
 
-    def set_start_state(self, html_path, model_path, **kwargs):
-        # Render the HTML converted the DOM to JSON and snap a picture
-        configs = self.html_proc.process_htmls(
-            [html_path],
-            keep_alive=True
-        )
-
-        print(html_path)
-        print(model_path)
-
-        # Load the HTML converted to JSON
-        with open(configs[0]['json_path']) as f:
-            start_state = json.load(f)
-            self.start_actions, self.edges, self.edge_groups = \
-                parse_brd(model_path)
-
-        # Apply any start state messages in the brd 
-        for action in self.start_actions:
-            start_state = self.action_model.apply(start_state, action, make_copy=False)
-        start_state.action_history = []
-
-        start_state.add_annotations({"is_start": True, "unique_id" : "1"})
 
 
-        self.start_state = start_state
+    
 
 
 
@@ -149,8 +187,8 @@ if __name__ == '__main__':
     for i in range(100):
         print("-- STEP", i, "--")
         actions = tutor.get_all_demos()
-        for action in actions:
-            print("Action:", repr(action))
+        # for action in actions:
+        print("Apply Action:", actions[0])
 
         tutor.apply(actions[0])
         print()
