@@ -279,6 +279,9 @@ class StateMachineTutor(TutorEnvBase):
         self.next_action_filters = kwargs.get("next_action_filters", [])
         super().__init__(**kwargs)
 
+    def action_is_done(self):
+        raise NotImplementedError("Subclass must implement action_is_done().")
+
     def create_fsm(self):
         raise NotImplementedError("Subclass must implement create_fsm().")
             
@@ -320,6 +323,12 @@ class StateMachineTutor(TutorEnvBase):
     def set_state(self, state):
         # print("-- SET STATE GET NEXT -- ")
         self.state = ProblemState(state)
+
+        # No need to handle next actions if done
+        if(self.state.get_annotation("is_done", False) == True):
+            self.next_actions = []
+            return self.state
+
         self.next_actions = self.fsm.get_next_actions(state)
 
         for nfilter in self.next_action_filters:
@@ -406,15 +415,19 @@ class StateMachineTutor(TutorEnvBase):
         if(group is not None):
             groups.add(group)
             
-
-
-        state = self.action_model.apply(self.state, action, make_copy=make_copy)
+        if(self.action_is_done(action)):
+            state = ProblemState({}, is_done=True)
+        else:
+            state = self.action_model.apply(self.state, action, make_copy=make_copy)
         
         dest_id = corr_action.get_annotation("dest_id", None)
         if(dest_id is not None):
             state.add_annotations({"unique_id" : dest_id})
 
         state.add_annotations({"groups" : groups})        
+
+        
+
         # for corr_action in self.next_actions:
         #     if(corr_action.check(action)):
         #         break

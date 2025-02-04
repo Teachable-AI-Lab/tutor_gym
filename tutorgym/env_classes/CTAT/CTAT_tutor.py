@@ -155,6 +155,13 @@ class CTAT_Tutor(StateMachineTutor):
 
         return fsm
 
+    def action_is_done(self, action):
+        if(action.sai[0] == "done"):
+            return True
+        return False
+
+
+
 
 
     
@@ -190,7 +197,9 @@ if __name__ == '__main__':
         # for action in actions:
         print("Apply Action:", actions[0])
 
-        tutor.apply(actions[0])
+        next_state = tutor.apply(actions[0])
+        if(next_state.get_annotation("is_done", False) == True):
+            break
         print()
 
 
