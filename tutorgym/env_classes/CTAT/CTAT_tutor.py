@@ -186,9 +186,13 @@ if __name__ == '__main__':
     #     for problem in prob_set:
     #         tutor.set_problem(**problem)
 
-    tutor.set_problem(html_path="../../envs/CTAT/Mathtutor/6_11_HTML/HTML/6.11.html",
-                model_path="../../envs/CTAT/Mathtutor/6_11_HTML/FinalBRDs/p21.brd"
+    tutor.set_problem(html_path="../../envs/CTAT/Mathtutor/6_01_HTML/HTML/6.01-4.html",
+                model_path="../../envs/CTAT/Mathtutor/6_01_HTML/FinalBRDs/Problem10.brd"
     )
+
+    # tutor.set_problem(html_path="../../envs/CTAT/Mathtutor/6_11_HTML/HTML/6.11.html",
+    #             model_path="../../envs/CTAT/Mathtutor/6_11_HTML/FinalBRDs/p21.brd"
+    # )
 
 
     for i in range(100):
