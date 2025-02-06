@@ -1,0 +1,81 @@
+
+<div style="display: flex; justify-content: center; align-items: center;">
+    <form class="" style="width: 650px;">
+
+        <div class="container" style="margin: 3%;">
+            <div class="row">
+                <div class="col-sm">
+                    <div style="text-align: center;">
+                        <h3>Finding Solution Using Quadratic Formula:</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                    <input disabled type="text" id="initial_problem" class="form-control" style="width: 250px; display: none;">
+                    <div style="text-align: center; width: 250px;" id="initial_problem_text"></div>
+                </div>
+                <div class="col-sm">
+                </div>      
+            </div>
+        </div>
+
+        <div class="container level_1" style="margin: 2%;">
+            <div class="row" style="margin-top: 0%;">
+                <div class="col-sm">
+                    <p>Enter the discriminant:</p>
+                    <math-field id="d_value" virtual-keyboard-mode="onfocus" style="width: 276px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <p>Enter squareroot of discriminant:</p>
+                    <math-field id="sqrt_d_value" virtual-keyboard-mode="onfocus" style="width: 276px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <button id="level_2" style="margin-left: -13px; margin-top:43px" class="btn btn-danger scaffold">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="container level_2" style="margin: 2%;">
+            <div class="row" style="margin-top: 2%;margin-bottom: 3%;">
+                <div class="col-sm">
+                    <p>Enter numerator of first root of \(x\):</p>
+                    <math-field id="first_numerator" virtual-keyboard-mode="onfocus" style="width: 276px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <p>Enter numerator of second root of \(x\):</p>
+                    <math-field id="second_numerator" virtual-keyboard-mode="onfocus" style="width: 276px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm"></div>
+            </div>
+            <div class="row" style="margin-top: 2%;margin-bottom: 3%;">
+                <div class="col-sm">
+                    <p>Enter denominator for roots of \(x\):</p>
+                    <math-field id="denominator" virtual-keyboard-mode="onfocus" style="width: 276px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm"></div>
+                <div class="col-sm">
+                    <!-- <button id="level_2" style="margin-left: 110px; margin-top:43px" class="btn btn-danger scaffold">+</button> -->
+                </div>
+            </div>
+        </div>
+        <div class="container level_0" style="margin: 2%;">
+            <div class="row" style="margin-top: 2%;margin-bottom: 3%;">
+                <div class="col">
+                    <p>Enter first root of \(x\):</p>
+                    <!-- <p>What is \(\frac{-b+\sqrt{b^2-4ac}}{2a}\) ?</p> -->
+                    <math-field id="first_root" virtual-keyboard-mode="onfocus" style="width: 276px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <p>Enter second root of \(x\):</p>
+                    <math-field id="second_root" virtual-keyboard-mode="onfocus" style="width: 276px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <button id="level_1" style="margin-left: -13px; margin-top:43px" class="btn btn-danger scaffold">+</button>
+                </div>
+            </div>
+        </div>
+        
+    </form>
+</div>

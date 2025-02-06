@@ -27,7 +27,7 @@ class HTNCognitiveModel:
 
     def get_next_actions(self, state):
         state_list: list[dict] = sorted(list(state.objs.values()), key=lambda x: x['y'])
-        fact_state: Fact = Fact(start=True) & Fact(scaffold='level_4') & Fact(scaffold='level_3') & Fact(scaffold='level_2') & Fact(scaffold='level_1')       
+        fact_state: Fact = Fact(start=True) & Fact(scaffold='level_6') & Fact(scaffold='level_5') & Fact(scaffold='level_4') & Fact(scaffold='level_3') & Fact(scaffold='level_2') & Fact(scaffold='level_1')       
 
         answers: list[Fact] = []
         for value in state_list:
@@ -38,17 +38,18 @@ class HTNCognitiveModel:
             else:
                 fact_state = fact_state & Fact(field=value['id'], value=value['value'], answer=value['locked'])
         
-        plan = planner(fact_state, self.task, self.domain)
+        plan = planner(fact_state, self.task, self.domain)        
         effect, fact_state = plan.send(None)
-        for answer in answers:
+        for answer in answers:            
             value = answer['value']
-            while True:
+            while True:                
                 exitloop = False
-                if effect['value'][0][1] == value and effect['field'] == answer['field']:
-                    effect['value'] = answer['value']
-                    effect, fact_state = plan.send((fact_state, True, effect))
-                    exitloop = True
-                    break
+                for evalue in effect['value']:
+                    if evalue[1] == value and effect['field'] == answer['field']:
+                        effect['value'] = answer['value']
+                        effect, fact_state = plan.send((fact_state, True, effect))
+                        exitloop = True
+                        break
                 if exitloop:
                     break
                 effect, fact_state = plan.send((fact_state, False, effect))

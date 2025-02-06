@@ -1,22 +1,12 @@
 import sympy as sp
-from random import randint, choice
-
-import sympy as sp
-from sympy import sstr, latex, symbols, Eq, solve
+from random import randint
+from sympy import sstr, latex, symbols
 from sympy.parsing.latex._parse_latex_antlr import parse_latex
 import re
-
-from random import randint
 from shop2.domain import Task, Operator, Method
-# from shop2.planner import SHOP2
 from shop2.fact import Fact
-from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-import math
 from random import random
 from functools import reduce
 
@@ -39,7 +29,7 @@ def factors(n):
 
     return fset
 
-def htn_factor_leading_one_problem():
+def factor_leading_one_problem():
     n1 = 1
 
     print(type(random))
@@ -58,7 +48,7 @@ def htn_factor_leading_one_problem():
 
     b_value = n1*n4+n2*n3
     if b_value == 0:
-        return htn_factor_leading_one_problem()
+        return factor_leading_one_problem()
 
     if b_value > 0:
         problem += "+"
@@ -261,54 +251,3 @@ Domain = {
     ),
 }
 
-def htn_factor_leading_one_kc_mapping():
-    kcs = {
-        'b_value':'b_value',
-        'c_value':'c_value',
-        'factor_1_b':'factor_1_b',
-        'factor_2_b':'factor_2_b',
-        'sum_factor':'sum_factor',
-        'sum_c':'sum_c',
-        'first_expression':'first_expression',
-        'second_expression':'second_expression',
-        'final_answer':'final_answer',
-        'done':'done',
-    }
-    return kcs
-
-
-
-
-def htn_factor_leading_one_intermediate_hints():
-    hints = {
-        "b_value": [
-            "The b value is extracted from the middle term of the trinomial."],
-        "c_value": [
-            "The c value is extracted from the last term of the trinomial."],
-        'factor_1_b': ["Enter a factor of ac."],
-        'factor_2_b': ["Enter the value that when multipled with"
-                                  " the other factor yields ac."],
-        'sum_factor': [
-            "This value is computed by adding the two factors in this row."],
-        'sum_c': [
-            "Check this box if the sum of the factors is equal to b."],
-        'first_expression': [
-            "This is the first factor of the trinomial."],
-        'second_expression': [
-            "This is the second factor of the trinomial."],
-        'final_answer': ["Enter the factored form of the trinomial."],
-    }
-    return hints
-
-def htn_factor_leading_one_studymaterial():
-    study_material = studymaterial["factor_leading_one"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_factoring_polynomials',    
-                                             'htn_factor_leading_one',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_factor_leading_one_problem,
-                                             htn_factor_leading_one_kc_mapping(),
-                                             htn_factor_leading_one_intermediate_hints(),
-                                             htn_factor_leading_one_studymaterial()))

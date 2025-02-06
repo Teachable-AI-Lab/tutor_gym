@@ -12,10 +12,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-
 def root_to_exponent_form(expression):
     pattern = r"\\sqrt\[(\d+)\]\{(\d+)\^\{(\d+)\}\}"
     match = re.match(pattern, expression)
@@ -116,34 +112,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_exponential_equations_fractional_exponents_common_base_kc_mapping():
-    kcs = {
-        "fractional_exponents": "fractional_exponents",
-        "apply_one_to_one_property": "apply_one_to_one_property",
-        "solve_linear_equation": "solve_linear_equation",
-        "done": "done"
-    }
-    return kcs
-
-def htn_exponential_equations_fractional_exponents_common_base_intermediate_hints():
-    hints = {
-        "fractional_exponents": ["Convert the radicals to fractional exponents "],
-        "apply_one_to_one_property": ["Apply the one-to-one property for exponents"],
-        "solve_linear_equation": ["Solve the linear equation for \(x\)."], 
-    }
-    return hints
-
-
-def htn_exponential_equations_fractional_exponents_common_base_studymaterial():
-    study_material = studymaterial["exponential_equations_fractional_exponents_common_base"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_exponential_equations',
-                                             'htn_exponential_equations_fractional_exponents_common_base',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_exponential_equations_fractional_exponents_common_base_problem,
-                                             htn_exponential_equations_fractional_exponents_common_base_kc_mapping(),
-                                             htn_exponential_equations_fractional_exponents_common_base_intermediate_hints(),
-                                             htn_exponential_equations_fractional_exponents_common_base_studymaterial()))

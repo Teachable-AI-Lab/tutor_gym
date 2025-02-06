@@ -12,10 +12,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-
 
 def htn_exponents_power_problem():
     constant = randint(2,1000)
@@ -80,33 +76,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_exponents_power_kc_mapping():
-    kcs = {
-        "multiply_values": "multiply_values",
-        "simplify_exp": "simplify_exp",
-        "done": "done"
-    }
-    return kcs
-
-
-def htn_exponents_power_intermediate_hints():
-    hints = {
-        "multiply_values": ["Use the power rule to shift the exponent to multiplication with the exponents."],
-        "simplify_exp": ["Solve the exponents."], 
-        'done': [" You have solved the problem. Click the done button!"]
-    }
-    return hints
-
-def htn_exponents_power_studymaterial():
-    study_material = studymaterial["exponents_power_rule"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_exponents',
-                                             'htn_exponents_power',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_exponents_power_problem,
-                                             htn_exponents_power_kc_mapping(),
-                                             htn_exponents_power_intermediate_hints(),
-                                             htn_exponents_power_studymaterial()))

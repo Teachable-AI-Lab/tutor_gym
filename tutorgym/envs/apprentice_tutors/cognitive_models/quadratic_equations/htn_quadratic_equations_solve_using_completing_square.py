@@ -13,11 +13,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-
-
     
 def htn_quadratic_equations_solve_using_completing_square_problem():
     x = sp.symbols('x')
@@ -234,50 +229,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_quadratic_equations_solve_using_completing_square_kc_mapping():
-    kcs = {
-        "b_by_2_square_lhs": "b_by_2_square_lhs",
-        "b_by_2_square_rhs": "b_by_2_square_rhs",
-        "factor_lhs": "factor_lhs",
-        "simplify_rhs": "simplify_rhs",
-        "combine_lhs_rhs": "combine_lhs_rhs",
-        "positive_root_of_rhs": "positive_root_of_rhs",
-        "negative_root_of_rhs": "negative_root_of_rhs",
-        "positive_root": "positive_root_of_quadratic_equation",
-        "negative_root": "negative_root_of_quadratic_equation",
-        'done': 'done',
-    }
-    return kcs
-
-
-def htn_quadratic_equations_solve_using_completing_square_intermediate_hints():
-    hints = {
-        'b_by_2_square_lhs': ["Add the value of \(b^2/4\) to left hand "
-                              "side of the equation."],
-        'b_by_2_square_rhs': ["Add the value of \(b^2/4\) to right hand "
-                              "side of the equation."],
-        'factor_lhs': ["Now left hand side is of \((x+b/2)\)"],
-        'simplify_rhs': ["Simplify the right hand side."],
-        'combine_lhs_rhs': ["Write the lhs and rhs together."],
-        'positive_root_of_rhs': ["Take square root of both sides and put "
-                                 "positive root on the right hand side."],
-        'negative_root_of_rhs': ["Take square root of both sides and put "
-                                 "negative root on the right hand side."],
-        'positive_root': ["Solve for \(x\)."],
-        'negative_root': ["Solve for \(x\)."],
-    }
-    return hints
-
-def htn_quadratic_equations_solve_using_completing_square_studymaterial():
-    study_material = studymaterial["quadratic_equations_solve_using_completing_square"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_quadratic_equations',
-                                             'htn_quadratic_equations_solve_using_completing_square',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_quadratic_equations_solve_using_completing_square_problem,
-                                             htn_quadratic_equations_solve_using_completing_square_kc_mapping(),
-                                             htn_quadratic_equations_solve_using_completing_square_intermediate_hints(),
-                                             htn_quadratic_equations_solve_using_completing_square_studymaterial()))

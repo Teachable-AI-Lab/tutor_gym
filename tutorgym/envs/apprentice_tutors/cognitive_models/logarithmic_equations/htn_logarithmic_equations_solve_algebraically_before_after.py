@@ -12,10 +12,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-
 
 def replace_log_with_ln(equation):
     return equation.replace('\log', '\ln')
@@ -27,7 +23,6 @@ def htn_logarithmic_equations_solve_algebraically_before_after_problem():
       a, b, c1, c2 = randint(-10, 10), randint(-10, 10), randint(-10, 10), randint(-10, 10)
     equation = latex(Eq(b*sp.log(a*x)+c1, c2, evaluate=False))
     equation = replace_log_with_ln(equation)
-    print(equation)
     return equation
 
 def coeff0_to_rhs(init_value):
@@ -80,7 +75,6 @@ def solve_for_x(init_value):
     equation = Eq(lhs.args[-1], rhs/constant)
     lhs, rhs = equation.lhs, equation.rhs
     equation = parse_latex(latex(Eq(sp.E**lhs, sp.E**rhs)))
-    print("EQUATION", equation)
     lhs, rhs = equation.lhs, equation.rhs
     constant = lhs.args[0]
     if lhs.args[1].is_integer:
@@ -155,37 +149,3 @@ Domain = {
     ),
  }
 
-def htn_logarithmic_equations_solve_algebraically_before_after_kc_mapping():
-
-    kcs = {
-        "coeff0_to_rhs": "coeff0_to_rhs",
-        "coefflnx_to_rhs": "coefflnx_to_rhs",
-        "exponential_both_sides": "exponential_both_sides",
-        "solve_for_x": "solve_for_x",
-        "done": "done"
-    }
-    return kcs
-
-
-def htn_logarithmic_equations_solve_algebraically_before_after_intermediate_hints():
-    hints = {
-        "coeff0_to_rhs": ["Take the natural log of both sides of the equation."],
-        "coefflnx_to_rhs": ["Set the right hand side equal to zero."],
-        "exponential_both_sides": ["Factor the left hand side of the equation using FOIL."],
-        "solve_for_x": ["Take the exponential of both sides of the equation."],
-        'done': [" You have solved the problem. Click the done button!"]
-    }
-    return hints
-
-def htn_logarithmic_equations_solve_algebraically_before_after_studymaterial():
-    study_material = studymaterial["logarithmic_equations_solve_algebraically_before_after"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_logarithmic_equations',
-                                             'htn_logarithmic_equations_solve_algebraically_before_after',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_logarithmic_equations_solve_algebraically_before_after_problem,
-                                             htn_logarithmic_equations_solve_algebraically_before_after_kc_mapping(),
-                                             htn_logarithmic_equations_solve_algebraically_before_after_intermediate_hints(),
-                                             htn_logarithmic_equations_solve_algebraically_before_after_studymaterial()))

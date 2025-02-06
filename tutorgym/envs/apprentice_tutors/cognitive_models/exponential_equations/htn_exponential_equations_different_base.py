@@ -12,10 +12,6 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-
 
 def htn_exponential_equations_different_base_problem():
     x = symbols('x')
@@ -202,43 +198,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_exponential_equations_different_base_kc_mapping():
-    kcs = {
-        "ln_both_sides": "ln_both_sides",
-        "apply_logarithms_power_rule": "apply_logarithms_power_rule",
-        "distributive_property": "distributive_property",
-        "group_for_x": "group_for_x",
-        "properties_of_logarithms": "properties_of_logarithms",
-        "solve_for_x": "solve_for_x",
-        "done": "done"
-    }
-    return kcs
-
-
-def htn_exponential_equations_different_base_intermediate_hints():
-    hints = {
-        "ln_both_sides": ["Take the natural log of both sides of the equation"],
-        "apply_logarithms_power_rule": ["Apply the logarithms power rule"],
-        "distributive_property": ["Apply the distributive property"],
-        "group_for_x": ["Group the \(x\) terms on one side of the equation"],
-        "properties_of_logarithms": ["Apply the properties of logarithms"],
-        "apply_one_to_one_property": ["Apply the one-to-one property for exponents"],
-        "solve_for_x": ["Find the value of \(x\) without solving the logarithms."],
-        "solve_linear_equation": ["Solve the linear equation for \(x\)."], 
-    }
-    return hints
-
-
-def htn_exponential_equations_different_base_studymaterial():
-    study_material = studymaterial["exponential_equations_different_base"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_exponential_equations',
-                                             'htn_exponential_equations_different_base',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_exponential_equations_different_base_problem,
-                                             htn_exponential_equations_different_base_kc_mapping(),
-                                             htn_exponential_equations_different_base_intermediate_hints(),
-                                             htn_exponential_equations_different_base_studymaterial()))

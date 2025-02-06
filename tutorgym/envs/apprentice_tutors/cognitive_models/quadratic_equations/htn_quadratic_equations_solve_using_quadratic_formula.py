@@ -12,12 +12,6 @@ from shop2.domain import Task, Operator, Method
 from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
-
-from htn_cognitive_models import HTNCognitiveModel
-from htn_cognitive_models import htn_loaded_models
-from studymaterial import studymaterial
-
-
     
 def htn_quadratic_equations_solve_using_quadratic_formula_problem():
     x = sp.symbols('x')
@@ -173,43 +167,3 @@ Domain = {
                     ]
     ),
 }
-
-def htn_quadratic_equations_solve_using_quadratic_formula_kc_mapping():
-    kcs = {
-        "d_value": "d_value",
-        "sqrt_d_value": "sqrt_d_value",
-        "first_numerator": "first_numerator",
-        "second_numerator": "second_numerator",
-        "denominator": "denominator",
-        "first_root": "first_root",
-        "second_root": "second_root",
-        "done": "done"
-    }
-    return kcs
-
-
-def htn_quadratic_equations_solve_using_quadratic_formula_intermediate_hints():
-    hints = {
-
-        'd_value':["Discriminat is \(b^2 - 4ac\)."],
-        'sqrt_d_value':["Square root of \(\sqrt{b^2 - 4ac}\)."],
-        'first_numerator':["First numerator is equal to \(-b+\sqrt{b^2-4ac}\)"],
-        'second_numerator':["Second numerator is equal to \(-b-\sqrt{b^2-4ac}\)"],
-        'denominator':["Denominator is equal to \(2a\)."],
-        'first_root':["First root is equal to \(\\frac{-b+\sqrt{b^2-4ac}}{2a}\)"],
-        'second_root':["Second root is equal to \(\\frac{-b-\sqrt{b^2-4ac}}{2a}\)"],
-    }
-    return hints
-
-def htn_quadratic_equations_solve_using_quadratic_formula_studymaterial():
-    study_material = studymaterial["quadratic_equations_solve_using_quadratic_formula"]
-    return study_material
-
-htn_loaded_models.register(HTNCognitiveModel('htn_quadratic_equations',
-                                             'htn_quadratic_equations_solve_using_quadratic_formula',
-                                             Domain,
-                                             Task(head=('solve', 'equation'), primitive=False),
-                                             htn_quadratic_equations_solve_using_quadratic_formula_problem,
-                                             htn_quadratic_equations_solve_using_quadratic_formula_kc_mapping(),
-                                             htn_quadratic_equations_solve_using_quadratic_formula_intermediate_hints(),
-                                             htn_quadratic_equations_solve_using_quadratic_formula_studymaterial()))
