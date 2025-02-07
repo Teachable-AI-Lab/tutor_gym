@@ -211,8 +211,11 @@ class Trainer:
             print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {self.env.problem_name}"  + Style.RESET_ALL)
 
             is_start = True
-            while(not self.env.is_done):
+            while True:#(not self.env.is_done):
                 state = self.env.get_state()
+                if(state.get_annotation("is_done") == True):
+                    break
+
                 rew = self.tutor_train_state(state, is_start=is_start)
                 if(rew > 0):
                     is_start = False
@@ -239,9 +242,9 @@ class AuthorTrainer(Trainer):
             return_kind=self.agent_action_repr)
         demos = self.env.get_all_demos(state)
 
-        # print("ACTIONS")
-        # for action in actions:
-        #     print(action)
+        # print("demos:", len(demos))
+        # for demo in demos:
+        #     print(demo)
 
         # Annotate each proposed action with reward and add to training set
         train_set = []
@@ -296,8 +299,10 @@ class AuthorTrainer(Trainer):
         unapplied = []
 
         
-        while(not self.env.is_done):
+        while True:#(not self.env.is_done):
             state = self.env.get_state()
+            if(state.get_annotation("is_done") == True):
+                break
             # print("########")
             # for key, obj in state.items():
             #     print(key, obj)
@@ -371,7 +376,8 @@ class AuthorTrainer(Trainer):
 
                         # Don't bother repeating states
                         s_str = str(n_state)
-                        if(s_str in cov or self.env.is_done):
+                        if(s_str in cov or 
+                           n_state.get_annotation("is_done") == True):
                             continue
                         else:
                             cov.add(s_str)

@@ -38,7 +38,7 @@ class ProblemState(Annotatable):
             self._longhash = None #Invalidate longhash on change
         self.objs[attr] = val
 
-    def copy(self, add_hist=None, keep_annotations=False):
+    def copy(self, add_hist=None, keep_annotations=True):
         objs_copy = {k : {**v} for k,v in self.objs.items()}
 
         annotations_copy = {}

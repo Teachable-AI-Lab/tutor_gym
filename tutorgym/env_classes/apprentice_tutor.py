@@ -102,6 +102,7 @@ class ApprenticeTutor(TutorEnvBase):
         self.is_done = False
 
         self.problem_config = self._standardize_config(*args, **kwargs)
+        print("problem_config", self.problem_config)
     
     def get_problem(self):
         return getattr(self, 'problem_name', self.problem_config)
@@ -114,7 +115,7 @@ class ApprenticeTutor(TutorEnvBase):
         self.is_done = False
 
     def get_state(self):
-        return self.state.objs
+        return self.state
     
     def set_state(self, objs):
         self.state = ProblemState(objs)
@@ -138,7 +139,7 @@ class ApprenticeTutor(TutorEnvBase):
         """ Applies an Action. Modifying self.state. """
         if (self.sai_makes_done(action.sai)):
             self.is_done = True
-            self.state = ProblemState({})
+            self.state = ProblemState({}, is_done=True)
         else:
             self.state = make_next_state(self.state, action.sai)
         return self.state.objs

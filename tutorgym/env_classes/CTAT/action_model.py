@@ -8,7 +8,7 @@ class CTAT_ActionModel:
     def apply(self, state, action, is_correct=True, make_copy=True):
         state = ProblemState(state)
         if(make_copy):
-            new_state = state.copy(add_hist=action)
+            new_state = state.copy(add_hist=action, keep_annotations=False)
         else:
             new_state = state
             new_state.action_hist.append(action)

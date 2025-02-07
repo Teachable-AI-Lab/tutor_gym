@@ -18,23 +18,36 @@ class ActionGroup:
         self.unordered = unordered
         self.reenterable = reenterable
 
-        src_ids = set()
-        dest_ids = set()
-        self.optional_mask = np.zeros(len(actions), dtype=np.int8)
-        for i, action in enumerate(actions):
-            optional = action.get_annotation("optional", False)
-            self.optional_mask[i] = optional
-
-            src_ids.add(action.get_annotation("src_id"))
-            dest_ids.add(action.get_annotation("dest_id"))
-
-        self.out_state_ids = list(dest_ids-src_ids)
 
 
         # for action in action_group:
         #     src_ids.add(action.get_annotation("src_id"))
         #     dest_id action.get_annotation("dest_id")
-            
+    @property
+    def optional_mask(self):
+        if(not hasattr(self, "_optional_mask")):
+            self._optional_mask = np.zeros(len(self.actions), dtype=np.int8)
+            for i, action in enumerate(self.actions):
+                optional = action.get_annotation("optional", False)
+                self._optional_mask[i] = optional
+        return self._optional_mask
+
+    @property
+    def out_state_ids(self):
+        if(not hasattr(self, "_out_state_ids")):
+            src_ids = set()
+            dest_ids = set()
+            for i, action in enumerate(self.actions):
+                src_ids.add(action.get_annotation("src_id"))
+                dest_ids.add(action.get_annotation("dest_id"))
+
+            # print("name:", self.name)
+            # print("src_ids:", src_ids)
+            # print("dest_ids:", dest_ids)
+            self._out_state_ids = list(dest_ids-src_ids)
+            # print("out_state_ids:", self.out_state_ids)
+        return self._out_state_ids
+    
 
     def __iter__(self):
         return iter(self.actions)
@@ -47,6 +60,12 @@ class ActionGroup:
 
     def __eq__(self, other):
         return self.name == other.name
+
+    def __str__(self):
+        return f"ActionGroup(name={self.name}, {self.actions})"
+
+    def __repr__(self):
+        return f"ActionGroup(name={self.name}, {self.actions!r})"
 
 
 
@@ -61,8 +80,29 @@ class FiniteStateMachine:
         self.groups = {}
         self._ensure_node(start_state)
 
-    def _ensure_node(self, state):
-        unique_id = state.unique_id
+    # -----------------------
+    # : add_edge
+
+    def _gen_state_id(self):
+        i = len(self.nodes)+1
+        name = str(i)
+        while name in self.nodes:
+            i += 1
+            name = str(i)
+        
+        # print("DID GENERATE STATE ID", name)
+        return name
+
+    def _ensure_node(self, state, back_up_id=None):
+        unique_id = state.get_annotation("unique_id")
+        # print("UB", unique_id, back_up_id)
+        if(unique_id is None):
+            unique_id = back_up_id if back_up_id else self._gen_state_id()
+            # print("DID GENERATE STATE ID", unique_id)
+            state.add_annotations({"unique_id" : unique_id})
+        # else:
+            # print("DID HAVE STATE ID", unique_id)
+
         if(unique_id not in self.nodes):
             self.nodes[unique_id] = {
                 "state" : state,
@@ -71,55 +111,129 @@ class FiniteStateMachine:
         return self.nodes[unique_id]
 
     def add_edge(self, state, action, is_done=False, force_unique_id=None):
-        action = Action(action) # Standardize
-        state = ProblemState(state)
-        node = self._ensure_node(state)
-
-        next_state = self.action_model.apply(state, action)
-        if(force_unique_id is not None):
-            next_state.add_annotations({"unique_id": force_unique_id})
         
-        node['edges'][action] = next_state
-        self._ensure_node(next_state)
+        action = Action(action) # Standardize
+        _state = ProblemState(state)
+        src_node = self._ensure_node(_state)
+
+        state_id = _state.get_annotation("unique_id")
+        src_id = action.get_annotation('src_id', state_id)
+        # assert state_id == src_id, f"state's unique_id={state_id!r} does not agree with action src_id={src_id!r}"
+        action.add_annotations({"src_id" : src_id})
+
+        next_state = self.action_model.apply(_state, action, make_copy=True)
+
+        if(force_unique_id is not None):
+            dest_id = force_unique_id
+        else:
+            dest_id = action.get_annotation('dest_id')
+
+        dest_node = self._ensure_node(next_state, dest_id)
+        next_id = next_state.get_annotation("unique_id", dest_id)
+        if(dest_id is None):
+            dest_id = next_id
+
+        # dest_id = action.get_annotation('dest_id', next_id)
+        assert next_id == dest_id, f"state's unique_id={next_id!r} does not agree with action dest_id={dest_id!r}"
+        action.add_annotations({"dest_id" : dest_id})
+        next_state.add_annotations({'unique_id' : dest_id})
+
+
+        src_node['edges'][action] = next_state
+
+        # print(f"-- add_edge({src_id}, {dest_id})", repr(action), "\n")
+        
         return next_state
 
-    def _action_group_from_list(self, action_list):
-        action_list = [Action(x) for x in action_list] # Standardize
+    # -----------------------
+    # : add_unordered
+
+    def _gen_action_group_name(self):
+        # action_list = [Action(x) for x in action_list] # Standardize
         name = "group1"
         i = 2 
         while name in self.groups:
             name = f"group{i}"
             i += 1
-        return ActionGroup(name, action_list)
+        return name
+        # return ActionGroup(name, action_list)
 
-    def _add_group(self, node, group_name):
+    def _node_add_group(self, node, group_name):
         groups = node.get('groups', set())
         groups.add(group_name)
+        # print(id(groups))
         node['groups'] = groups
 
+    def _format_group(self, action_group):
+        # inp_actions = [Action(x) for x in action_group] # Standardize
+        if(isinstance(action_group, ActionGroup)):
+            name = action_group.name
+        else:
+            name = self._gen_action_group_name()  
+
+        # Copy actions and ensure annotated with group name
+        actions = []
+        for action in action_group:
+            action_copy = Action(action)
+            action_copy.add_annotations({"group" : name})
+            actions.append(action_copy)
+        return ActionGroup(name, actions)
 
     def add_unordered(self, state, action_group, force_unique_id=None):
-        if(isinstance(action_group, list)):
-            action_group = self._action_group_from_list(action_group)
+        
+
+        # if(isinstance(action_group, list)):
+        #     action_group = self._action_group_from_list(action_group)
+
+        action_group = self._format_group(action_group)
 
         if(action_group.name in self.groups):
             return self.groups[action_group.name]['next_state']
         # else:
         #     assert action_group.name not in self.groups
         
-        start_state = ProblemState(state)
-        node = self._ensure_node(start_state)
+        start_state = ProblemState(state)#.copy()
+        state_id = start_id = start_state.get_annotation("unique_id")
+        node = self._ensure_node(start_state, state_id)
+            
+        # print("state_id", start_state.annotations)
+        _state = start_state
+        
+        for i, action in enumerate(action_group):
+            state_id = _state.get_annotation("unique_id")
+            src_id = action.get_annotation('src_id', state_id)
+            # assert state_id == src_id, f"state's unique_id={state_id!r} does not agree with action src_id={src_id!r}"
+            action.add_annotations({"src_id": src_id})
 
-        next_state = start_state.copy()
-        for action in action_group:
-            next_state.add_annotations({
+            src_node = self._ensure_node(_state, src_id)
+            _state.add_annotations({
                 "groups" : set([action_group.name]),
-                "unique_id" : action.get_annotation('src_id')
             })
-            node = self._ensure_node(next_state)
-            self._add_group(node, action_group.name)
 
-            next_state = self.action_model.apply(next_state, action)
+            # print("_node_add_group", src_id, action_group.name)
+            self._node_add_group(src_node, action_group.name)
+            next_state = self.action_model.apply(_state, action)
+            
+            if(force_unique_id is not None and i == len(action_group)-1):
+                dest_id = force_unique_id
+            else:
+                dest_id = action.get_annotation('dest_id')
+
+            dest_node = self._ensure_node(next_state, dest_id)
+            next_id = next_state.get_annotation("unique_id")
+
+            dest_id = action.get_annotation('dest_id', next_id)
+            assert next_id == dest_id, f"state's unique_id={next_id!r} does not agree with action dest_id={dest_id!r}"
+            action.add_annotations({"dest_id" : dest_id})
+
+            _state = next_state
+
+        
+        # if(force_unique_id):
+        #     # print("FORCE NEXT", force_unique_id, next_id)
+        #     assert force_unique_id == dest_id
+        #     _state.add_annotations({'unique_id' : dest_id})
+        _state.add_annotations({"groups" : set([action_group.name])})
 
 
         # next_state.add_annotations({
@@ -130,20 +244,23 @@ class FiniteStateMachine:
         # self._add_group(node, action_group.name)
 
 
-
         self.groups[action_group.name] = {
             "group" : action_group,
             "start_state" : start_state,
-            "next_state" : next_state,
+            "next_state" : _state,
             "edges" : []
         }
 
         if(force_unique_id is not None):
-            next_state.add_annotations({"unique_id": force_unique_id})
+            _state.add_annotations({"unique_id": force_unique_id})
 
         # node['edges'][action_group] = next_state
-        self._ensure_node(next_state)
-        return next_state
+        # self._ensure_node(next_state)
+
+
+        # print(f"-- add_unordered {action_group.name}({start_id},{next_id})", len(action_group), "\n")
+        # print(f"state_annotations", start_state.annotations, _state.annotations)
+        return _state
 
         # for ordered in permutations(action_list):
         #     state = start_state
@@ -151,10 +268,14 @@ class FiniteStateMachine:
         #         state = self.add_edge(state, action)
         # return state # State after unordered actions
 
+    # ---------------------
+    # : get_next_actions
+
     def _action_satisfied(self, state, action):
         for hist_action in state.action_hist:
-            # print(action, grp_action)
+            
             if(action.check(state, hist_action)):
+                # print("\t::", action, hist_action)
                 return True
                 # action_done = True
                 # break
@@ -187,21 +308,25 @@ class FiniteStateMachine:
 
 
     def get_next_actions(self, state):
-        next_actions = None
+        # print("get_next_actions STATE", state.unique_id)
 
-        node = self.nodes.get(state.unique_id, None)
+        next_actions = None
+        state_id = state.get_annotation("unique_id")
+        node = self.nodes.get(state_id, None)
         state_groups = state.get_annotation("groups", None)
+        # print("gna group_name", state_id, state_groups)
 
         if(state_groups is None and node is not None):
             state_groups = node['state'].get_annotation("groups", None)
 
-        print("gna group_name", state_groups)
+        # print("gna group_name", state_id, state_groups)
+        # print("Node", node)
 
         all_groups_satisfied = True
         exit_actions = []
         next_actions = []
         if(state_groups is not None):# and 
-            print(' -- groups', state_groups)
+            # print(' -- groups', state_groups)
             # any(gn in self.groups for gn in node['groups'])):
             for group_name in state_groups:
                 # The next actions should include any unsatisfied actions
@@ -218,21 +343,25 @@ class FiniteStateMachine:
                 #   actions have been taken) then any actions that leave 
                 #   the group should also be included.
                 if(group_satisfied):
-                    # print("GROUP SATISFIED!", group.out_state_ids)
+                    
                     for out_state_id in group.out_state_ids:
                         out_edges = self.nodes[out_state_id]['edges']
                         exit_actions += list(out_edges.keys())
+                    # print("GROUP SATISFIED!", group.out_state_ids, list(out_edges.keys()))
                 else:
                     all_groups_satisfied = False
 
+        # print("all_groups_satisfied", all_groups_satisfied)
         if(all_groups_satisfied and state.unique_id in self.nodes):
-            print(' -- edges', len(node['edges']))
+            # print(' -- edges', len(node['edges']))
             out_edges = node['edges']
             exit_actions += list(out_edges.keys())
 
+        # print("n_exit_actions", len(exit_actions))
         for exit_action in exit_actions:
-            print("exit_action", exit_action)
-            if(not self._action_satisfied(state, exit_action)):
+            satisfied = self._action_satisfied(state, exit_action)
+            # print("exit_action", exit_action, f"id={exit_action.get_annotation('unique_id')} ({exit_action.get_annotation('src_id')}, {exit_action.get_annotation('dest_id')})", satisfied)
+            if(not satisfied):
                 next_actions.append(exit_action)    
 
         
@@ -279,7 +408,7 @@ class StateMachineTutor(TutorEnvBase):
         self.next_action_filters = kwargs.get("next_action_filters", [])
         super().__init__(**kwargs)
 
-    def action_is_done(self):
+    def action_is_done(self, action):
         raise NotImplementedError("Subclass must implement action_is_done().")
 
     def create_fsm(self):
@@ -300,10 +429,19 @@ class StateMachineTutor(TutorEnvBase):
     def set_problem(self, *args, **kwargs):
         # subclasses defined start state
         self.set_start_state(*args, **kwargs)
+
+        # print("self.start_state", self.start_state)
+        # self.start_state = ProblemState(self.start_state)
         self.problem_config = self._standardize_config(*args, **kwargs)
 
+        # print("BEF annotations:", self.start_state.annotations)
         # subclasses defined fsm constructor
         self.fsm = self.create_fsm(self.start_state, **self.problem_config)
+
+        # print("AFT annotations:", self.start_state.annotations)
+        if(self.start_state.get_annotation("unique_id") is None):
+            self.start_state.add_annotations({"unique_id" : "1"})
+
         self.set_state(self.start_state)
         # self.is_done = False
     
@@ -324,6 +462,8 @@ class StateMachineTutor(TutorEnvBase):
         # print("-- SET STATE GET NEXT -- ")
         self.state = ProblemState(state)
 
+        # print("annotations:", self.state.annotations)
+
         # No need to handle next actions if done
         if(self.state.get_annotation("is_done", False) == True):
             self.next_actions = []
@@ -334,10 +474,10 @@ class StateMachineTutor(TutorEnvBase):
         for nfilter in self.next_action_filters:
             self.next_actions = nfilter(self.next_actions)
 
-        print("\nNext Actions")
-        for a in self.next_actions:
-            prefix = "* " if a.get_annotation("optional", False) else "  "
-            print(prefix, a)
+        # print("\nNext Actions")
+        # for a in self.next_actions:
+        #     prefix = "* " if a.get_annotation("optional", False) else "  "
+        #     print(prefix, a)
 
         for action in [*self.next_actions]:
             actor = action.get_annotation("actor", "student")
@@ -405,16 +545,9 @@ class StateMachineTutor(TutorEnvBase):
         # TODO: There is difference in how groups are added or removed 
         #  from the state which depends on whether the state graph is 
         #  unordered. 
-        groups = self.state.get_annotation("groups", set())
-        # for group in groups:
-        #     for na in self.next_actions:
-        #         na_optional = na.get_annotation("optional", False)
-        #         if(not na_optional):
-        #             na_group = na.get_annotation("group", None)
-        group = corr_action.get_annotation("group", None)
-        if(group is not None):
-            groups.add(group)
-            
+        
+
+
         if(self.action_is_done(action)):
             state = ProblemState({}, is_done=True)
         else:
@@ -424,7 +557,13 @@ class StateMachineTutor(TutorEnvBase):
         if(dest_id is not None):
             state.add_annotations({"unique_id" : dest_id})
 
-        state.add_annotations({"groups" : groups})        
+        # NOTE: This messes things up because the last group action can
+        #  cause the state to leave the group
+        # groups = self.state.get_annotation("groups", set())
+        # group = corr_action.get_annotation("group", None)
+        # if(group is not None):
+        #     groups.add(group)
+        # state.add_annotations({"groups" : groups})        
 
         
 

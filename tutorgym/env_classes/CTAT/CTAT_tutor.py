@@ -123,13 +123,11 @@ class CTAT_Tutor(StateMachineTutor):
         while len(frontier) > 0:
             new_frontier = set()
             for node_unq_id in frontier:
-                if(node_unq_id in covered):
+                if(node_unq_id in covered or node_unq_id not in edge_dict):
                     continue 
 
                 node = fsm.nodes[node_unq_id]
                 for next_unq_id, action in edge_dict[node_unq_id]:
-
-                    
                     if(not self._satisfies_filters(action)):
                         continue
                     # if(action.get_annotation("action_type", None) == "Buggy Action"):
@@ -138,13 +136,12 @@ class CTAT_Tutor(StateMachineTutor):
                     if(group_name is not None):
                         group = self.groups[group_name]
                         next_state = fsm.add_unordered(node['state'], group)
-
-
-                    next_state = fsm.add_edge(node['state'], action, 
-                        force_unique_id=next_unq_id)
+                    else:
+                        next_state = fsm.add_edge(node['state'], action, 
+                            force_unique_id=next_unq_id)
 
                     # print(node_unq_id, next_unq_id, action.sai)
-                    print(f"{repr(action)}")
+                    # print(f"{repr(action)}")
 
                     if(next_state.get_annotation("is_done", False)):
                         continue
@@ -186,13 +183,13 @@ if __name__ == '__main__':
     #     for problem in prob_set:
     #         tutor.set_problem(**problem)
 
-    tutor.set_problem(html_path="../../envs/CTAT/Mathtutor/6_01_HTML/HTML/6.01-4.html",
-                model_path="../../envs/CTAT/Mathtutor/6_01_HTML/FinalBRDs/Problem10.brd"
-    )
-
-    # tutor.set_problem(html_path="../../envs/CTAT/Mathtutor/6_11_HTML/HTML/6.11.html",
-    #             model_path="../../envs/CTAT/Mathtutor/6_11_HTML/FinalBRDs/p21.brd"
+    # tutor.set_problem(html_path="../../envs/CTAT/Mathtutor/6_01_HTML/HTML/6.01-4.html",
+    #             model_path="../../envs/CTAT/Mathtutor/6_01_HTML/FinalBRDs/Problem10.brd"
     # )
+
+    tutor.set_problem(html_path="../../envs/CTAT/Mathtutor/6_11_HTML/HTML/6.11.html",
+                model_path="../../envs/CTAT/Mathtutor/6_11_HTML/FinalBRDs/p21.brd"
+    )
 
 
     for i in range(100):
