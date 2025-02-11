@@ -92,6 +92,13 @@ class ProblemState(Annotatable):
             s += f", {anno_name}={anno!r}"
         s += ")"
         return s
+
+    def get(self, *args, **kwargs):
+        return self.objs.get(*args, **kwargs)
+
+    def items(self):
+        return self.objs.items()
+
         
 
 # ----------------------------------

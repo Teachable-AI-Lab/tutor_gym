@@ -92,13 +92,13 @@ class CTAT_Tutor(StateMachineTutor):
             self.start_actions, self.edges, self.groups = \
                 parse_brd(model_path)
 
+        start_state = ProblemState(start_state)
         # Apply any start state messages in the brd 
         for action in self.start_actions:
             start_state = self.action_model.apply(start_state, action, make_copy=False)
-        start_state.action_history = []
 
+        start_state.action_hist = []
         start_state.add_annotations({"is_start": True, "unique_id" : "1"})
-
 
         self.start_state = start_state
 
@@ -176,32 +176,172 @@ class CTAT_Tutor(StateMachineTutor):
 # parse_brd("Mathtutor/6_01_HTML/FinalBRDs/Problem1.brd")
 
 if __name__ == '__main__':
+    from tutorgym.trainer import Trainer, AuthorTrainer
+    from tutorgym.oracle_agent import OracleAgent
+    from random import choice
 
-    tutor = CTAT_Tutor()
+
+
+    tutor = CTAT_Tutor(demo_annotations={"src_id", "dest_id", "unique_id"})
+
+    # Values [0]: Incomplete, value of expression matcher requires eval
+    # Order  [?]: 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_01_HTML/")
+
+    # Values [x]
+    # Order [x]: 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_02_HTML/")
+
+    # Values [0]: Complicated, mostly dynamic
+    # Order [?]: 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_05_HTML/")
+
+    # Values [0]: Complicated, mostly dynamic (Highly custom)
+    # Order [?]: 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_06_HTML/")
+
+    # Values [x]: 
+    # Order [?]: TODO
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_07_HTML/")
+
+    # Values [0]:Complicated, mostly dynamic (Highly custom similar to 05) 
+    # Order [?]: 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_08_HTML/")
+
+    # Values [x]:
+    # Order [?]: 
+    problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_09_HTML/")
+
+    # Values [0]:Complicated, mostly dynamic (Highly custom similar to 05) 
+    # Order [?]: 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_10_HTML/")
+
+    # Values [x]:
+    # Order [?]: 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_11_HTML/")
+
+    # Values [0]: Expressions: ifThen, isVar, concat
+    # Order [?]: 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_14_HTML/")
+
+    # Values [x]: Only simple ExpressionMatches 
+    # Order [?]: 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_15_HTML/")
+
+    # Values [-]: Some simple ExpressionMatches, but several hard ones
+    # Order [?]: 
     # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_16_HTML/")
-    # for prob_set in problem_sets:
-    #     for problem in prob_set:
-    #         tutor.set_problem(**problem)
+
+    # Values [-]: Number line, seems feasible
+    # Order [?]: 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_17_HTML/")
+
+    # Values [-]: Number line, seems feasible 
+    # Order [?]: 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_18_HTML/")
+
+    # Values [-]: Number line, but seems feasible 
+    # Order [?]: 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_19_HTML/")
+
+    # Values [-]: Number line, uses eval, but feasible 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_20_HTML/")
+
+    # Values [0]: Expressions, and(), rationalEquals, getDivisor
+    # Order [?]: 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_21_HTML/")
+
+    # Values [x]: Just ExpressionMatches
+    # Order [?]: 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_24_HTML/")
+
+    # Values [0]: Lots of regular expression matches, including regex in selection
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_25_HTML/")
+
+    # Values [0]: Some regular expression matches, including regex in selection
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_26_HTML/")
+
+    # Values [x]: Just ExpressionMatches
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_27_HTML/")
+
+    # Values [-]: Complicated Expressions, but not that complex
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_28_HTML/")
+
+    # Values [x]: All simple values 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_30_HTML/")
+
+    # Values [x]: All simple values # 
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_34_HTML/")
+
+
+
+    omit_problems = [
+        "../../envs/CTAT/Mathtutor/6_16_HTML/FinalBRDs/18ABC.brd",
+        "../../envs/CTAT/Mathtutor/6_16_HTML/FinalBRDs/13ABDE.brd"
+    ]
+
+    problems_so_far = []
+    for prob_set in problem_sets:
+        for problem in prob_set:
+            if(problem['model_path'] in omit_problems):
+                continue
+
+            problems_so_far.append(problem)
+            #ft
+             # print(problem)
+            
+            agent = OracleAgent(tutor)
+            trainer = AuthorTrainer(agent, tutor, problem_set=[problem])
+            try:
+                trainer.start()
+            except Exception as e:
+                state = tutor.get_state()
+                print(problem['html_path'], problem['model_path'])
+                print("ACTION HIST")
+                for action in state.action_hist:
+                    print(action.get_annotation("unique_id"), action)
+                # for prob in problems_so_far:
+                #     print(prob['html_path'], prob['model_path'])
+
+                tutor.set_problem(**problem)
+                for action in state.action_hist:
+                    tutor.apply(action)
+
+                state = tutor.get_state()
+                actions = tutor.get_all_demos()
+                print(actions)
+
+                raise e
+            
+
+            # tutor.set_problem(**problem)
+            # for i in range(100):
+            #     actions = tutor.get_all_demos()
+            #     action = actions[0]
+            #     # action = choice(actions)#[-1]
+            #     # print(action.annotations)
+            #     src_id = action.get_annotation("src_id")
+            #     dest_id = action.get_annotation("dest_id")
+            #     print(f"{src_id},{dest_id}  Apply Action:", str(action))
+            #     next_state = tutor.apply(action)
+            #     if(next_state.get_annotation("is_done", False) == True):
+            #         break
+
+            # break # only first problem
+
+
+            
 
     # tutor.set_problem(html_path="../../envs/CTAT/Mathtutor/6_01_HTML/HTML/6.01-4.html",
     #             model_path="../../envs/CTAT/Mathtutor/6_01_HTML/FinalBRDs/Problem10.brd"
     # )
 
-    tutor.set_problem(html_path="../../envs/CTAT/Mathtutor/6_11_HTML/HTML/6.11.html",
-                model_path="../../envs/CTAT/Mathtutor/6_11_HTML/FinalBRDs/p21.brd"
-    )
+    # tutor.set_problem(html_path="../../envs/CTAT/Mathtutor/6_11_HTML/HTML/6.11.html",
+    #             model_path="../../envs/CTAT/Mathtutor/6_11_HTML/FinalBRDs/p21.brd"
+    # )
 
 
-    for i in range(100):
-        print("-- STEP", i, "--")
-        actions = tutor.get_all_demos()
-        # for action in actions:
-        print("Apply Action:", actions[0])
-
-        next_state = tutor.apply(actions[0])
-        if(next_state.get_annotation("is_done", False) == True):
-            break
-        print()
+    
 
 
 

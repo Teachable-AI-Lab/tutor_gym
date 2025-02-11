@@ -205,7 +205,7 @@ class Trainer:
             if(prob_args is None):
                 prob_args = self.env.set_random_problem()
             else:
-                self.env.set_problem(*prob_args)
+                self.env.set_problem(**prob_args)
             self.logger.set_problem(self.env.problem_name)
 
             print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {self.env.problem_name}"  + Style.RESET_ALL)
@@ -338,7 +338,7 @@ class AuthorTrainer(Trainer):
             if(prob_args is None):
                 prob_args = self.env.set_random_problem()
             else:
-                self.env.set_problem(*prob_args)
+                self.env.set_problem(**prob_args)
 
             problem = getattr(self.env, 'problem_name', self.env.problem_config)
             print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {problem}" + Style.RESET_ALL)

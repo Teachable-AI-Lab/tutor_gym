@@ -39,16 +39,18 @@ class AllTutorContainer(ApprenticeTutor):
 
         return ProblemState(state)                
 
-    def set_start_state(self, *args, **kwargs):
+    def set_start_state(self, initial_problem, **kwargs):
         ''' Domain implementation: Used by ApprenticeTutor.set_problem() 
             to initialize a start state.'''
+
+        #print(args, kwargs)
         state = self._blank_state(self.problem_types)
-        self.problem = args[0]
+        self.problem = initial_problem
         state['equation']['value'] = self.problem
         self.start_state = ProblemState(state)
     
     def set_random_problem(self):
-        equation: str = self.problem_generator()        
+        equation: str = self.problem_generator()
         self.set_problem(equation)
 
     def create_htn_model(self, state):

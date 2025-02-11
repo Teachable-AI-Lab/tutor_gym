@@ -116,7 +116,12 @@ class TutorEnvBase(ABC):
                         demos = self.get_all_demos(state)
                         actions = [demo.get_info() for demo in demos]
                         problem = self.get_problem()
-                        profile.write(json.dumps({"problem" : problem, 'state' : state, 'hist' : hist, 'actions' : actions})+"\n")
+                        profile.write(json.dumps({
+                            "problem" : problem,
+                            'state' : state,
+                            'hist' : hist,
+                            'actions' : actions
+                        })+"\n")
 
                         for demo in demos:
 

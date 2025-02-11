@@ -272,8 +272,9 @@ class FiniteStateMachine:
     # : get_next_actions
 
     def _action_satisfied(self, state, action):
+        # print("Looking for", action)
         for hist_action in state.action_hist:
-            
+            # print("\tH", hist_action)
             if(action.check(state, hist_action)):
                 # print("\t::", action, hist_action)
                 return True
@@ -351,7 +352,7 @@ class FiniteStateMachine:
                 else:
                     all_groups_satisfied = False
 
-        # print("all_groups_satisfied", all_groups_satisfied)
+        # print("all_groups_satisfied", all_groups_satisfied, state.unique_id in self.nodes)
         if(all_groups_satisfied and state.unique_id in self.nodes):
             # print(' -- edges', len(node['edges']))
             out_edges = node['edges']
@@ -388,10 +389,10 @@ class FiniteStateMachine:
                     next_actions += self.get_next_actions(next_state)
 
 
-        
+        # print("next_actions", len(next_actions))        
         actions_sorted = sorted(next_actions, key=lambda x : x.get_annotation("optional", False))
 
-
+        # print("actions_sorted", len(actions_sorted))
         return actions_sorted
 
     def apply(self, state, action, make_copy=True):
@@ -428,6 +429,7 @@ class StateMachineTutor(TutorEnvBase):
 
     def set_problem(self, *args, **kwargs):
         # subclasses defined start state
+        # print(args, kwargs)
         self.set_start_state(*args, **kwargs)
 
         # print("self.start_state", self.start_state)
@@ -474,10 +476,10 @@ class StateMachineTutor(TutorEnvBase):
         for nfilter in self.next_action_filters:
             self.next_actions = nfilter(self.next_actions)
 
-        # print("\nNext Actions")
-        # for a in self.next_actions:
-        #     prefix = "* " if a.get_annotation("optional", False) else "  "
-        #     print(prefix, a)
+        print("\nNext Actions")
+        for a in self.next_actions:
+            prefix = "* " if a.get_annotation("optional", False) else "  "
+            print(prefix, a)
 
         for action in [*self.next_actions]:
             actor = action.get_annotation("actor", "student")
@@ -498,6 +500,7 @@ class StateMachineTutor(TutorEnvBase):
             self._action_map[id(action)] = action
         # self.is_done = False
         self.state.add_annotations({"groups" : groups})
+        print("GROUPS", groups)
 
         return self.state
 

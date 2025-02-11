@@ -34,11 +34,19 @@ class RegexMatcher(BaseMatcher):
         # TODO actually make work
         return inputs.get('value',None) == self.value
 
+class AnyMatcher(BaseMatcher): 
+    def __init__(self, **kwargs):
+        self.value = None
+
+    def check(self, state, inputs):
+        return True
+
 
 matcher_classes = {
     "ExpressionMatcher" : ExpressionMatcher,
     "ExactMatcher" : ExactMatcher,
-    "RegexMatcher" : RegexMatcher
+    "RegexMatcher" : RegexMatcher,
+    "AnyMatcher" : AnyMatcher,
 }
 
 class Checker():
@@ -188,6 +196,40 @@ def parse_start_node_messages(messages, verbosity=1):
 
 # --------------------
 # : parse_edges()
+import re 
+polyTermsEqual_re = re.compile(r"polyTermsEqual\((.*),\"([^\)\"]*)\"\)")
+expr_matches_re = re.compile(r"expressionMatches\((.*),(\"[^\)\"]*)\)\"")
+number_re = re.compile(r"expressionMatches\((.*),(.*)\)")
+
+def resolve_action(message_action, matcher_action):
+    ''' Uses information from the message_action and matcher_action to resolve the 
+        'inputs' field of the SAIs.
+    '''
+    if(matcher_action.get_annotation("omitted", False) == True or
+       matcher_action.get_annotation("action_type") == "Buggy Action"):
+        return matcher_action
+
+    checker = matcher_action.get_annotation('checker')
+    # print("RESOLVE", checker)
+    if(not checker or isinstance(checker.inputs_matcher, ExactMatcher)):
+        return matcher_action
+
+    sel, at, inps = matcher_action.sai
+    matcher = checker.inputs_matcher
+    if(isinstance(matcher, ExpressionMatcher)):
+        # print("<< ExpressionMatcher")
+        epxr_match = expr_matches_re.search(matcher.value)
+        poly_match = polyTermsEqual_re.search(matcher.value)
+        print(matcher)
+        if(epxr_match):
+            print(f"Expr matcher({sel}):", epxr_match.group(2))
+        elif(poly_match):
+            print(f"Poly matcher({sel}):", poly_match.group(2))
+        else:
+            print(f"? matcher({sel}):", matcher)
+        print()
+
+    return matcher_action
 
 def parse_edge(edge, verbosity=1):
     # for edge in edges:
@@ -216,10 +258,12 @@ def parse_edge(edge, verbosity=1):
     else:
         matcher = action_label.find("matcher")
         actor, matcher_action = parse_old_matcher(matcher)
+
+
     # print("matchers", matchers)
 
     # Use the matcher action instaed of the message action
-    action = matcher_action
+    
     # print("action", action)
 
         
@@ -227,6 +271,7 @@ def parse_edge(edge, verbosity=1):
     # -- Annotations --
     annotations = {"actor" : actor,
         "optional" : action_label.attrib['minTraversals'] == "0",
+        "omitted" : action_label.attrib['maxTraversals'] == "0",
         **matcher_action.annotations}
 
     bm = action_label.find("buggyMessage")
@@ -256,7 +301,12 @@ def parse_edge(edge, verbosity=1):
             hint_messages.append(hint.text)
 
     annotations["hint_messages"] = hint_messages
-    action.add_annotations(annotations)
+
+    matcher_action.add_annotations(annotations)
+
+
+    action = resolve_action(message_action, matcher_action)
+    
 
     # print(f"{repr(action)}")
     
