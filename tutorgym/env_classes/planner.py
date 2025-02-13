@@ -45,7 +45,7 @@ def planner(state:Fact, T: Union[List, Tuple], D: Dict, debug: bool = False) -> 
                         T, state = stack.pop()
                         state = AND(*flatten(state))
                         stack.append((deepcopy(T), deepcopy(state)))
-                        state, correct = yield (False, state)
+                        state, correct,_ = yield (False, state)
                     # yield from backtrack()
             else:
                 if stack:
@@ -58,9 +58,10 @@ def planner(state:Fact, T: Union[List, Tuple], D: Dict, debug: bool = False) -> 
                     T, state = stack.pop()
                     state = AND(*flatten(state))
                     stack.append((deepcopy(T), deepcopy(state)))
-                    state, correct = yield (False, state)
+                    state, correct,_ = yield (False, state)
                 # yield from backtrack()
         else:
+            
             result = D[task.name].applicable(task, state, str(), visited, debug)
             if result:
                 subtask = result
@@ -79,4 +80,4 @@ def planner(state:Fact, T: Union[List, Tuple], D: Dict, debug: bool = False) -> 
                     T, state = stack.pop()
                     state = AND(*flatten(state))
                     stack.append((deepcopy(T), deepcopy(state)))
-                    state, correct = yield (False, state)
+                    state, correct,_ = yield (False, state)
