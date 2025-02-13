@@ -78,7 +78,7 @@ def effect_to_action(effect):
             
     else:
         #value = str(parse_latex(effect['value'][0][1]))
-        value = effect['value'][0][1]
+        value = str(effect['value'][0][1])
 
         action = Action(
             (f'{effect["field"]}', 'input change', {'value': value}), 
