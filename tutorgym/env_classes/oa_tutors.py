@@ -5,20 +5,17 @@ import re
 
 def make_next_state(state, sai):
     next_state = state.copy()
+    print("STATE", next_state.objs)
     selection, action_type, inputs = sai
     if(action_type == "UpdateTextField"):
         next_state[selection]['value'] = inputs['value']
         next_state[selection]['locked'] = True
     elif action_type == "UpdateRadioButton":
         step_number = selection.split('_')[0]
-        print("selection", selection)
         next_state[selection]['value'] = True
         for key in next_state.objs.keys():
             if key.startswith(step_number):
                 next_state[key]['locked'] = True
-                next_state[key]['value'] = False
-
-    print("next_state", next_state.objs)
     return next_state
 
 class CogModel:
@@ -65,7 +62,6 @@ class OATutor(TutorEnvBase):
 
     def create_cog_model(self, state):
         curr_state = state.copy()
-        print("curr_state", curr_state.objs)
         return CogModel(curr_state, self.action_list)
     
     def set_start_state(self, *args, **kwargs):

@@ -476,15 +476,15 @@ class StateMachineTutor(TutorEnvBase):
         for nfilter in self.next_action_filters:
             self.next_actions = nfilter(self.next_actions)
 
-        print("\nNext Actions")
-        for a in self.next_actions:
-            prefix = "* " if a.get_annotation("optional", False) else "  "
-            print(prefix, a)
+        # print("\nNext Actions")
+        # for a in self.next_actions:
+        #     prefix = "* " if a.get_annotation("optional", False) else "  "
+        #     print(prefix, a)
 
         for action in [*self.next_actions]:
             actor = action.get_annotation("actor", "student")
             if(actor == "tutor"):
-                print("Tutor Performed:", action)
+                # print("Tutor Performed:", action)
                 self.state = self.apply(action)
                 return self.state
                 # break
@@ -500,7 +500,7 @@ class StateMachineTutor(TutorEnvBase):
             self._action_map[id(action)] = action
         # self.is_done = False
         self.state.add_annotations({"groups" : groups})
-        print("GROUPS", groups)
+        # print("GROUPS", groups)
 
         return self.state
 

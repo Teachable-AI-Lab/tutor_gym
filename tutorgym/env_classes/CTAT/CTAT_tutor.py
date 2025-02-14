@@ -177,7 +177,7 @@ class CTAT_Tutor(StateMachineTutor):
 
 if __name__ == '__main__':
     from tutorgym.trainer import Trainer, AuthorTrainer
-    from tutorgym.oracle_agent import OracleAgent
+    from tutorgym.agents.oracle_agent import OracleAgent
     from random import choice
 
 

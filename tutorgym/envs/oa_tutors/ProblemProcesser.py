@@ -32,7 +32,7 @@ def process_step_json(step_idx: int, step_json: dict, y: int) -> tuple[Dict, int
     if step_json.get('problemType') == 'TextBox':
         # Handle TextBox type
         state[f'{field_prefix}_field'] = create_state_item(
-            f'{field_prefix}_field', 'TextField', '', 50, (y + 1) * 100, False
+            f'{field_prefix}_field', 'TextField', step_json['stepAnswer'][0], 50, (y + 1) * 100, False
         )
         y += 2
     else:
@@ -40,7 +40,7 @@ def process_step_json(step_idx: int, step_json: dict, y: int) -> tuple[Dict, int
         for choice_idx, choice in enumerate(step_json['choices']):
             state[f'{field_prefix}_choice{choice_idx}'] = {
                 **create_state_item(f'{field_prefix}_choice{choice_idx}', 'RadioButton', choice, 50, (y + 1) * 100, False),
-                'value': ''
+                'selected': False
             }
             y += 2
     
@@ -70,6 +70,7 @@ def process_problem_pool(problem_name: str) -> tuple[dict, dict]:
                 state['body'] = create_state_item('problem_description', 'Label', problem_json['body'], 50, (y + 1) * 100)
                 y += 2
 
+    # Process steps
     steps_dir = os.path.join(problem_dir_path, "steps")
     if os.path.exists(steps_dir):
         for step_idx, step_dir in enumerate(sorted(os.listdir(steps_dir))):
