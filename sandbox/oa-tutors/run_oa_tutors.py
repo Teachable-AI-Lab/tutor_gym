@@ -11,7 +11,7 @@ def main():
         problem_names = [line.strip() for line in file if line.strip()]
     
     # Loop through each problem
-    for problem_name in problem_names:
+    for problem_name in problem_names[:2]:
         print(f"\nRunning tutor for problem: {problem_name}")
         env = OATutor(problem_name=problem_name)
         agent = OracleAgent(env)
