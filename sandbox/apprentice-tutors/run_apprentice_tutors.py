@@ -22,7 +22,7 @@ def run_environment(env_name, n_problems=20, problem_set=[], scaffold="first"):
     domain, problem_generator = ENVIRONMENTS[env_name]
     
     logger = DataShopLogger(env_name, extra_kcs=['field'], output_dir=f'log_{env_name}_author')
-    env = ApprenticeTutor(domain=domain, problem_generator=problem_generator, problem_types=["power"], scaffold=scaffold)
+    env = ApprenticeTutor(domain=domain, problem_generator=problem_generator, problem_types=env_name, scaffold=scaffold)
     # env.htn_model.scaffold = scaffold
 
     agent = OracleAgent(env)

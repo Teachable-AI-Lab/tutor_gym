@@ -1,3 +1,4 @@
+from pathlib import Path
 from tutorgym.shared import ProblemState, Action
 from shop2.fact import Fact # type: ignore
 from .planner import planner
@@ -6,6 +7,7 @@ from sympy.parsing.latex._parse_latex_antlr import parse_latex
 from tutorgym.env_classes.env_base import TutorEnvBase
 import re
 import inspect
+from bs4 import BeautifulSoup
 
 # from tutorgym.shared import ProblemState
 # from tutorgym.env_classes.apprentice_tutor import ApprenticeTutor, HTNCognitiveModel
@@ -136,7 +138,7 @@ class HTNCognitiveModel:
 
         answers: list[Fact] = []
         for value in state_list:
-            if value['id'] == 'done':
+            if value['id'] == 'done' or 'label' in value['id']:
                 continue
             
             if value['id'] != 'equation' and value['locked']:
@@ -200,7 +202,7 @@ class HTNCognitiveModel:
 
 
 class ApprenticeTutor(TutorEnvBase):
-    def __init__(self, domain, problem_generator, problem_types=["power"], scaffold="first", **kwargs):
+    def __init__(self, domain, problem_generator, problem_types="power", scaffold="first", **kwargs):
         super().__init__(**kwargs)        
         self.problem_types = problem_types
         self.domain = deepcopy(domain)
@@ -249,20 +251,41 @@ class ApprenticeTutor(TutorEnvBase):
         return self.scaffold_options
 
     def _blank_state(self, type):
-        field_params = {'x': 0, 'type': 'TextField', 'value' : "", 'width' : 100, 'height' : 50,  }
+        current_dir = Path(__file__).parent.parent
+        html_path = f"{current_dir}/envs/apprentice_tutors/static_html/{type}.html"
+        with open(html_path, 'r') as file:
+            soup = BeautifulSoup(file, 'html.parser')
+            
+        field_params = {'type': 'TextField', 'value' : "", 'width' : 100, 'height' : 50,  }
+        label_params = {'type': 'Label', 'width' : 100, 'height' : 50, 'locked': True, }
         button_params = {'x': 0, 'type': 'Button', 'width' : 100, 'height' : 50, }
 
-        field_names = [x.name for x in self.domain['solve'].subtasks[0]]
+        field_names = [x.name for x in self.domain['solve'].subtasks[0]]        
 
         state: dict = { 'equation' : {'y': 10, 'locked': False,  **field_params}}
-        for idx, field in enumerate(field_names):
+        row_count: dict[str, int] = {'factor_1_b': 1, 'factor_2_b': 1, 'sum_factor': 1, 'sum_c': 1}
+        for idx, field in enumerate(field_names):            
             if field == 'done':
                 state[field] = {'y': 10 + (idx + 1) * 100, **button_params}
             else:
-                state[field] = {'y': 10 + (idx + 1) * 100, 'locked': False,  **field_params}
-
+                # Check if field matches special patterns that need row count
+                if (field.startswith(('factor_1_b', 'factor_2_b', 'sum_factor', 'sum_c'))):
+                    field_id = f'{field}_{row_count[field]}'
+                    label_elem = soup.find(id=field_id).find_previous_sibling('label')
+                    if not label_elem:
+                        label_elem = soup.find(id=field_id).find_previous_sibling('p')
+                    row_count[field] += 1
+                else:
+                    field_id = field
+                    label_elem = soup.find(id=field).find_previous_sibling('label')
+                    if not label_elem:
+                        label_elem = soup.find(id=field).find_previous_sibling('p')
+                
+                label_text = label_elem.text if label_elem else field
+                state[f'label_of_{field}'] = {'x': 0, 'y': 10 + (idx + 1) * 100, 'value': label_text, **label_params}
+                state[field] = {'x': 200, 'y': 10 + (idx + 1) * 100, 'locked': False,  **field_params}
         for key, value in state.items():
-            state[key]['id'] = key
+            state[key]['id'] = key        
 
         self.possible_selections = [x.name for x in self.domain['solve'].subtasks[0]]
         self.possible_args = ['equation', *self.possible_selections[:-2]]
@@ -310,7 +333,6 @@ class ApprenticeTutor(TutorEnvBase):
         self.state = self.start_state
 
         self.problem_config = self._standardize_config(*args, **kwargs)
-        # print("problem_config", self.problem_config)
     
     def get_problem(self):
         return getattr(self, 'problem_name', self.problem_config)
