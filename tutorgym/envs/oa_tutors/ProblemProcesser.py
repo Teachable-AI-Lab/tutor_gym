@@ -4,9 +4,8 @@ from typing import Dict, Optional
 import random
 from pathlib import Path
 
-# Get the absolute path to ProblemPool relative to this file
 current_dir = Path(__file__).parent
-problem_pool_path = current_dir / "ProblemPool"  # or "../ProblemPool" if it's one level up
+problem_pool_path = current_dir / "ProblemPool"  
 
 def read_json_file(file_path: str) -> Optional[dict]:
     try:
@@ -33,7 +32,7 @@ def process_step_json(step_idx: int, step_json: dict, y: int) -> tuple[Dict, int
     if step_json.get('problemType') == 'TextBox':
         # Handle TextBox type
         state[f'{field_prefix}_field'] = create_state_item(
-            f'{field_prefix}_field', 'TextField', step_json['stepAnswer'][0], 50, (y + 1) * 100, False
+            f'{field_prefix}_field', 'TextField', '', 50, (y + 1) * 100, False
         )
         y += 2
     else:
@@ -41,7 +40,7 @@ def process_step_json(step_idx: int, step_json: dict, y: int) -> tuple[Dict, int
         for choice_idx, choice in enumerate(step_json['choices']):
             state[f'{field_prefix}_choice{choice_idx}'] = {
                 **create_state_item(f'{field_prefix}_choice{choice_idx}', 'RadioButton', choice, 50, (y + 1) * 100, False),
-                'selected': False
+                'value': ''
             }
             y += 2
     
@@ -49,7 +48,6 @@ def process_step_json(step_idx: int, step_json: dict, y: int) -> tuple[Dict, int
 
 def process_problem_pool(problem_name: str) -> tuple[dict, dict]:
 
-    # Get list of matching problem directories and randomly select one
     matching_dirs = [d for d in os.listdir(problem_pool_path) 
                     if problem_name in d and os.path.isdir(os.path.join(problem_pool_path, d))]
     if not matching_dirs:
@@ -63,7 +61,6 @@ def process_problem_pool(problem_name: str) -> tuple[dict, dict]:
     y = 0
     problem_dir_path = os.path.join(problem_pool_path, problem_dir)
     
-    # Process problem JSON files
     for json_file in [f for f in os.listdir(problem_dir_path) if f.endswith('.json')]:
         json_path = os.path.join(problem_dir_path, json_file)
         
@@ -73,7 +70,6 @@ def process_problem_pool(problem_name: str) -> tuple[dict, dict]:
                 state['body'] = create_state_item('problem_description', 'Label', problem_json['body'], 50, (y + 1) * 100)
                 y += 2
 
-    # Process steps
     steps_dir = os.path.join(problem_dir_path, "steps")
     if os.path.exists(steps_dir):
         for step_idx, step_dir in enumerate(sorted(os.listdir(steps_dir))):
