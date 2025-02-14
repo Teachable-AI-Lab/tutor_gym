@@ -41,7 +41,7 @@ class Trainer:
                  problem_end_callbacks = [],
                  step_end_callbacks = [],
                  train_end_callbacks = [],
-                 agent_action_repr = "sai",
+                 agent_action_repr = "action",
                  agent_state_repr = "obj_dicts",
                  **kwargs):
         self.agent = agent
@@ -105,12 +105,14 @@ class Trainer:
 
         if(self.agent_action_repr == "skill_app" and not is_demo):
             a = {"skill_app" : action}
+        elif(self.agent_action_repr == "action"):
+            a = {"action" : action}
         else:
             a = action.as_train_kwargs()
 
         return {**s, 
-                "reward": reward,
                 **a,
+                "reward": reward,
                 "is_demo" : is_demo
                 }
         # # if(self.agent_action_repr == "skill_app" and not is_demo):
@@ -178,7 +180,7 @@ class Trainer:
             outcome_kind = "HINT"
             self.total_hints += 1
 
-        print("A ACTION:", action)
+        # print("A ACTION:", action)
 
         action_kwargs = action.as_train_kwargs()
         s,a,i = action_kwargs['sai']
@@ -231,7 +233,7 @@ class Trainer:
 class AuthorTrainer(Trainer):
     def __init__(self, *args, **kwargs):
         # Author trainer defaults return kind to 'skill_app'
-        kwargs['agent_action_repr'] = kwargs.get('agent_action_repr', 'skill_app')
+        kwargs['agent_action_repr'] = kwargs.get('agent_action_repr', 'action')
         super(AuthorTrainer, self).__init__(*args, **kwargs)
         self.states_trained = 0
         self.problem_jumps = 0

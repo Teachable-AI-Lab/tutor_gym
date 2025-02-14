@@ -1,14 +1,14 @@
 import argparse
 from tutorgym.trainer import AuthorTrainer
 from tutorgym.utils import DataShopLogger
-from tutorgym.oracle_agent import OracleAgent
+from tutorgym.agents.oracle_agent import OracleAgent
 # from tutorgym.envs.apprentice_tutors.tutor import AllTutorContainer
 from tutorgym.env_classes.apprentice_tutor import ApprenticeTutor
 from tutorgym.envs.apprentice_tutors.env_registry import ENVIRONMENTS
 
 
 
-def run_environment(env_name, n_problems=20, problem_set=[], scaffold="first"):
+def run_environment(domain_name, n_problems=20, problem_set=[], scaffold="first"):
     """
     Run a specific environment by name
     
@@ -16,13 +16,13 @@ def run_environment(env_name, n_problems=20, problem_set=[], scaffold="first"):
         env_name: String name of environment ('logarithms_quotient', 'radicals_product', etc.)
         n_problems: Number of problems to run
     """
-    if env_name not in ENVIRONMENTS:
-        raise ValueError(f"Environment {env_name} not found. Available environments: {list(ENVIRONMENTS.keys())}")
+    if domain_name not in ENVIRONMENTS:
+        raise ValueError(f"Environment {domain_name} not found. Available environments: {list(ENVIRONMENTS.keys())}")
         
-    domain, problem_generator = ENVIRONMENTS[env_name]
+    # domain, problem_generator = ENVIRONMENTS[env_name]
     
-    logger = DataShopLogger(env_name, extra_kcs=['field'], output_dir=f'log_{env_name}_author')
-    env = ApprenticeTutor(domain=domain, problem_generator=problem_generator, problem_types=["power"], scaffold=scaffold)
+    logger = DataShopLogger(domain_name, extra_kcs=['field'], output_dir=f'log_{domain_name}_author')
+    env = ApprenticeTutor(domain=domain_name, scaffold=scaffold)
     # env.htn_model.scaffold = scaffold
 
     agent = OracleAgent(env)

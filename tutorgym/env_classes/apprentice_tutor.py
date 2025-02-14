@@ -12,6 +12,7 @@ import inspect
 from shop2.domain import Task
 from copy import deepcopy
 from shop2.conditions import AND
+from random import choice
 
 
 
@@ -200,42 +201,18 @@ class HTNCognitiveModel:
 
 
 class ApprenticeTutor(TutorEnvBase):
-    def __init__(self, domain, problem_generator, problem_types=["power"], scaffold="first", **kwargs):
+    def __init__(self, domain=None, scaffold="first", **kwargs):
         super().__init__(**kwargs)        
-        self.problem_types = problem_types
-        self.domain = deepcopy(domain)
 
-        self._resolve_scaffold_options()
-        
-
-        if(scaffold == "first"):
-            scaffold = list(self.scaffold_options)[0]
-
-            # precond = self.domain['solve'].preconditions[0]
-            # if(not isinstance(precond, AND)):
-            #     precond = AND(precond)
-
-            # for cond in precond:
-            #     print("cond", cond)
-            #     scaffold = cond.get('scaffold', None)
-            #     if(scaffold is not None):
-            #         continue
-
-        # self.domain['solve'].preconditions = [self.domain['solve'].preconditions[0]]
-        # self.domain['solve'].subtasks = [self.domain['solve'].subtasks[0]]
-
-
-        self.problem_generator = problem_generator
-        self.scaffold = scaffold
+        self.default_domain = domain
+        self.default_scaffold = scaffold
+        # if(isinstance())
+        # self.problem_types = problem_types
         self.set_random_problem()
-
-    # def __init__(self, scaffold="all", **kwargs):
-    #     self.scaffold = scaffold
-    #     super().__init__(self,**kwargs)
-
+        
     def _resolve_scaffold_options(self):
         self.scaffold_options = []
-        for precond in self.domain['solve'].preconditions:
+        for precond in self.domain_model['solve'].preconditions:
             if(not isinstance(precond, AND)):
                 precond = AND(precond)
         
@@ -248,11 +225,11 @@ class ApprenticeTutor(TutorEnvBase):
         print("scaffold_options", self.scaffold_options)
         return self.scaffold_options
 
-    def _blank_state(self, type):
+    def _blank_state(self, type=None):
         field_params = {'x': 0, 'type': 'TextField', 'value' : "", 'width' : 100, 'height' : 50,  }
         button_params = {'x': 0, 'type': 'Button', 'width' : 100, 'height' : 50, }
 
-        field_names = [x.name for x in self.domain['solve'].subtasks[0]]
+        field_names = [x.name for x in self.domain_model['solve'].subtasks[0]]
 
         state: dict = { 'equation' : {'y': 10, 'locked': False,  **field_params}}
         for idx, field in enumerate(field_names):
@@ -264,29 +241,56 @@ class ApprenticeTutor(TutorEnvBase):
         for key, value in state.items():
             state[key]['id'] = key
 
-        self.possible_selections = [x.name for x in self.domain['solve'].subtasks[0]]
+        self.possible_selections = [x.name for x in self.domain_model['solve'].subtasks[0]]
         self.possible_args = ['equation', *self.possible_selections[:-2]]
 
         return ProblemState(state)                
 
-    def set_start_state(self, initial_problem, **kwargs):
-        ''' Domain implementation: Used by ApprenticeTutor.set_problem() 
-            to initialize a start state.'''
+    def set_start_state(self, domain, initial_problem, scaffold="undef", **kwargs):
+        from tutorgym.envs.apprentice_tutors.env_registry import ENVIRONMENTS
+
+        domain_model, problem_generator = ENVIRONMENTS[domain]
+
+        if(scaffold == "undef"):
+            scaffold = self.default_scaffold
+
+        self.domain = domain
+        self.domain_model = deepcopy(domain_model)
+        self._resolve_scaffold_options()
+        if(scaffold == "first"):
+            scaffold = list(self.scaffold_options)[0]
+
+        self.problem_generator = problem_generator
+        self.scaffold = scaffold
 
         #print(args, kwargs)
-        state = self._blank_state(self.problem_types)
+        state = self._blank_state()#self.problem_types)
+        self.problem_name = f"{domain}/{initial_problem}"
         self.problem = initial_problem
         state['equation']['value'] = self.problem
         self.start_state = ProblemState(state)
     
-    def set_random_problem(self):
-        equation: str = self.problem_generator()
-        self.set_problem(equation)
+    def set_random_problem(self, domain=None, scaffold="undef"):
+        from tutorgym.envs.apprentice_tutors.env_registry import ENVIRONMENTS
+
+        if(domain is None and self.default_domain is not None):
+            # If default set use that
+            domain = self.default_domain
+        else:
+            # Otherwise randomly select one
+            domains = list(ENVIRONMENTS.keys())
+            domain = choice(domains)
+
+        print("domain", domain)
+        _, problem_generator = ENVIRONMENTS[domain]        
+
+        initial_problem = problem_generator()
+        self.set_problem(domain, initial_problem, scaffold)
 
     def create_htn_model(self, state):
         curr_state = state.copy()
         task = [Task(head=('solve','equation'), primitive=False)]
-        return HTNCognitiveModel(curr_state, task, self.domain, scaffold=self.scaffold)
+        return HTNCognitiveModel(curr_state, task, self.domain_model, scaffold=self.scaffold)
     
     def get_possible_selections(self):
         return self.possible_selections
@@ -331,12 +335,12 @@ class ApprenticeTutor(TutorEnvBase):
         """ Returns 1 for correct next-step Actions, -1 for incorrect ones."""
         action = Action(action)
         correct_actions = self.htn_model.get_next_actions(self.state)
-        check_args = kwargs.get('check_args', self.check_args)
-        check_how = kwargs.get('check_how', self.check_how)
+        # check_args = kwargs.get('check_args', self.check_args)
+        # check_how = kwargs.get('check_how', self.check_how)
         for ca in correct_actions:
 
 
-            if ca.is_equal(action, check_args=check_args, check_how=check_how):
+            if ca.is_equal(action, self.check_annotations):
                 return 1
         return -1
     
