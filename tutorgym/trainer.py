@@ -37,6 +37,7 @@ class ProblemIterator:
 
 class Trainer:
     def __init__(self, agent, env, logger=None,
+                 num_incorrect_force_demo=-1,
                  evaluators=[],
                  problem_end_callbacks = [],
                  step_end_callbacks = [],
@@ -53,6 +54,7 @@ class Trainer:
             self.logger = DataShopLogger(logger_name, extra_kcs=['field'])
         else:
             self.logger = logger
+        self.num_incorrect_force_demo = num_incorrect_force_demo
         self.always_update_state = kwargs.get('always_update_state', False)
         self.train_next_state = kwargs.get('train_next_state', False)
         self.total_incorrect = 0
@@ -159,14 +161,20 @@ class Trainer:
         elif(outcome_kind == "HINT"):
             print(Back.BLUE + Fore.YELLOW + f"HINT: {sai[0]} -> {sai[2]} {extra}" + Style.RESET_ALL)
 
-    def tutor_train_state(self, state, is_start=False):
+    def tutor_train_state(self, state, is_start=False, force_demo=False):
         ''' Tutor-train (i.e. train one action at a time) on 'state'.'''
-        action = self.agent.act(state, return_kind=self.agent_action_repr,
-            is_start=is_start)
-        conv_action = Action(action)
+
+        if(not force_demo):
+            action = self.agent.act(state, return_kind=self.agent_action_repr,
+                is_start=is_start)
+        else:
+            action = None
+
+        
         outcome_kind = None
 
         if(action):
+            conv_action = Action(action)
             reward = self.env.check(conv_action)
             if(reward > 0):
                 outcome_kind = "CORRECT"
@@ -176,6 +184,7 @@ class Trainer:
                 self.total_incorrect += 1
         else:
             action = self.env.get_demo()
+            conv_action = Action(action)
             reward = 1
             outcome_kind = "HINT"
             self.total_hints += 1
@@ -213,14 +222,23 @@ class Trainer:
             print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {self.env.problem_name}"  + Style.RESET_ALL)
 
             is_start = True
+            incorr_streak = 0
             while True:#(not self.env.is_done):
                 state = self.env.get_state()
                 if(state.get_annotation("is_done") == True):
                     break
 
-                rew = self.tutor_train_state(state, is_start=is_start)
+                force_demo = False
+                if(self.num_incorrect_force_demo >= 0 and 
+                   incorr_streak >= self.num_incorrect_force_demo):
+                    force_demo = True
+                
+                rew = self.tutor_train_state(state, is_start=is_start, force_demo=force_demo)
                 if(rew > 0):
+                    incorr_streak = 0
                     is_start = False
+                else:
+                    incorr_streak += 1
 
             print("+" * 100)
             print(f"Finished problem {p} of {getattr(p_iter, 'n_problems', '??')}")

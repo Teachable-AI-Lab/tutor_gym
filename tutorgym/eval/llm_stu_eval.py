@@ -72,7 +72,8 @@ def run_training(problem_set, scaffold="first"):
     ####################################### 
 
     trainer = Trainer(agent, env, logger=logger,
-                problem_set=problem_set)
+                problem_set=problem_set,
+                num_incorrect_force_demo=2)
 
     print("START", problem_set)
     trainer.start()
