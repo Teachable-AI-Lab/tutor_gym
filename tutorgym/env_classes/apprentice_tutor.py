@@ -203,14 +203,17 @@ class HTNCognitiveModel:
 
 
 class ApprenticeTutor(TutorEnvBase):
-    def __init__(self, domain=None, scaffold="first", **kwargs):
+    def __init__(self, domain=None, initial_problem=None, scaffold="first", **kwargs):
         super().__init__(**kwargs)        
 
         self.default_domain = domain
         self.default_scaffold = scaffold
         # if(isinstance())
         # self.problem_types = problem_types
-        self.set_random_problem()
+        if(initial_problem is None):
+            self.set_random_problem()
+        else:
+            self.set_problem(domain, initial_problem, scaffold)
         
     def _resolve_scaffold_options(self):
         self.scaffold_options = []
@@ -224,7 +227,7 @@ class ApprenticeTutor(TutorEnvBase):
                 if(scaffold is not None):
                     break
             self.scaffold_options.append(scaffold)
-        print("scaffold_options", self.scaffold_options)
+        #print("scaffold_options", self.scaffold_options)
         return self.scaffold_options
 
     def _blank_state(self):
@@ -304,7 +307,7 @@ class ApprenticeTutor(TutorEnvBase):
             domains = list(ENVIRONMENTS.keys())
             domain = choice(domains)
 
-        print("domain", domain)
+        #print("domain", domain)
         _, problem_generator = ENVIRONMENTS[domain]        
 
         initial_problem = problem_generator()
