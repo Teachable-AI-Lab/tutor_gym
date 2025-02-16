@@ -5,7 +5,6 @@ import re
 
 def make_next_state(state, sai):
     next_state = state.copy()
-    print("STATE", next_state.objs)
     selection, action_type, inputs = sai
     if(action_type == "UpdateTextField"):
         next_state[selection]['value'] = inputs['value']

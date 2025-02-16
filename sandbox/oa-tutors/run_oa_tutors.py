@@ -1,7 +1,7 @@
 from pathlib import Path
 from tutorgym.env_classes.oa_tutors import OATutor
 from tutorgym.trainer import AuthorTrainer
-from tutorgym.oracle_agent import OracleAgent
+from tutorgym.agents.oracle_agent import OracleAgent
 
 def main():
     # Read problem names from file
