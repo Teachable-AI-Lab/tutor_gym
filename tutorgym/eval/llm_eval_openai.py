@@ -108,21 +108,25 @@ def main():
                 is_correct = any(action['selection'] == selection and action['action_type'] == action_type and action['inputs']['value'] == input
                                for action in obj['correct_actions'])
             
-            with open('action_check_openai.csv', 'a', newline='') as f:
-                writer = csv.writer(f)
-                writer.writerow([hash_id, obj['domain'], (selection, action_type, input), is_correct])
-            
-            # Process verification results
-            for result in [correct_verify, incorrect_verify]:
-                action_type, actions, response = result
-                if action_type == "Correct":
-                    with open('correctness_check_openai.csv', 'a', newline='') as f:
-                        writer = csv.writer(f)
-                        writer.writerow([hash_id, obj['domain'], response.lower() == 'yes'])
-                else:
-                    with open('incorrectness_check_openai.csv', 'a', newline='') as f:
-                        writer = csv.writer(f)
-                        writer.writerow([hash_id, obj['domain'], response.lower() == 'no'])
+            try:
+                with open('action_check_openai.csv', 'a', newline='', encoding='utf-8') as f:
+                    writer = csv.writer(f)
+                    writer.writerow([hash_id, obj['domain'], (selection, action_type, input), is_correct])
+                
+                # Process verification results
+                for result in [correct_verify, incorrect_verify]:
+                    action_type, actions, response = result
+                    if action_type == "Correct":
+                        with open('correctness_check_openai.csv', 'a', newline='', encoding='utf-8') as f:
+                            writer = csv.writer(f)
+                            writer.writerow([hash_id, obj['domain'], response.lower() == 'yes'])
+                    else:
+                        with open('incorrectness_check_openai.csv', 'a', newline='', encoding='utf-8') as f:
+                            writer = csv.writer(f)
+                            writer.writerow([hash_id, obj['domain'], response.lower() == 'no'])
+            except Exception as e:
+                print(f"Error writing to CSV: {str(e)}")
+                continue
             
             progress_bar.update(1)
         progress_bar.close()
