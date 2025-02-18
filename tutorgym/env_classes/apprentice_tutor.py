@@ -21,7 +21,7 @@ from random import choice
 # TODO
 
 def make_next_state(state, sai, reward=1):
-    next_state = state.copy()
+    next_state = state.copy()    
     selection, action_type, inputs = sai
     if(action_type == "UpdateTextField" or action_type == "input change"):
         next_state[selection] = next_state.objs.get(selection, {})
@@ -261,9 +261,18 @@ class ApprenticeTutor(TutorEnvBase):
                     if not label_elem:
                         label_elem = soup.find(id=field).find_previous_sibling('p')
                 
+                container_div = soup.find(id=field_id).find_parent('div', class_='container')
+                scaffold_id = 'level_0'
+                if container_div:
+                    # Check for any class that starts with 'level_'
+                    level_classes = [cls for cls in container_div.get('class', []) if cls.startswith('level_')]
+                    if level_classes:
+                        scaffold_id = level_classes[0]
+                
                 label_text = label_elem.text if label_elem else field
-                state[f'label_of_{field}'] = {'x': 0, 'y': 10 + (idx + 1) * 100, 'value': label_text, **label_params}
-                state[field] = {'x': 200, 'y': 10 + (idx + 1) * 100, 'locked': False,  **field_params}
+                
+                state[f'label_of_{field}'] = {'x': 0, 'y': 10 + (idx + 1) * 100, 'value': label_text, 'scaffold_level': scaffold_id, **label_params}
+                state[field] = {'x': 200, 'y': 10 + (idx + 1) * 100, 'locked': False, 'scaffold_level': scaffold_id, **field_params}                
         for key, value in state.items():
             state[key]['id'] = key        
 
