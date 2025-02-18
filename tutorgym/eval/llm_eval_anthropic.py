@@ -35,7 +35,6 @@ as False. I need your response in this format: field;action_type;value, where:
 3. value is the value to enter that field. 
 Avoid additional text.
     """
-    time.sleep(1)  # Add delay before API call
     response = anthropic.messages.create(
         model="claude-3-5-sonnet-20241022",
         max_tokens=100,
