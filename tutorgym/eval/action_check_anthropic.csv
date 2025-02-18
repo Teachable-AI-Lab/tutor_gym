@@ -1,17 +1,17 @@
 hash_id,domain,action,action_correct
-1gccJJ3ECAespBXFNhbUCdQLLtUWaq0SxN48Gn8MLBQ,htn_exponents_quotient,"('subtract_values', 'input change', '816^9')",False
+1gccJJ3ECAespBXFNhbUCdQLLtUWaq0SxN48Gn8MLBQ,htn_exponents_quotient,"('subtract_values', 'input change', '816^{9}')",False
 FIfyVKIy9kLhqMUiLh4qa0uvxOdRMj8BeFUtZbQJK0U,htn_exponents_quotient,"('simplify_exp', 'input change', '816^9')",False
-ekgCIB6Tt2rzAGq19VITeGy4ofpKYHTA0lkluvH9Rtc,htn_exponents_quotient,"('equation', 'input change', '\\frac{816^{12}}{816^{3}} = 816^{12-3}')",False
+ekgCIB6Tt2rzAGq19VITeGy4ofpKYHTA0lkluvH9Rtc,htn_exponents_quotient,"('equation', 'input change', '\\frac{816^{12}}{816^{3}}=816^{-3 + 12}')",False
 igLodcABTVkPd5aLp8SR2AjABALjpBBkiuRDXJxbDZk,htn_exponents_power,"('multiply_values', 'input change', '11 * 12')",False
 8u1GD71xJbW79S8WdAomlHDuQpAsHBUsWExKskpSPxw,htn_exponents_power,"('simplify_exp', 'input change', '947^{132}')",True
 20rd3KwSZws2ULkCnJCJeRonegs9hm4d1TNqaD0CQBM,htn_exponents_power,"('equation', 'input change', '947^{132}')",False
-HvTFJHO4hyBdOHBHASlbrMZpTowSXi25qwCVLNZFArk,htn_logarithms_quotient,"('solve_log', 'input change', '\\log_{30}{60} - \\log_{30}{2}')",False
+HvTFJHO4hyBdOHBHASlbrMZpTowSXi25qwCVLNZFArk,htn_logarithms_quotient,"('solve_log', 'input change', '\\log_{30}{30}')",False
 fZR3vV81D3pArWu4RBCQPBpuVdyga1TeEnIkdtwtne4,htn_factor_grouping,"('a_value', 'input change', '16')",True
 IoBuEABCBJBUMDKJgehTWeAsNXxde6wppehmaA5gJVY,htn_factor_slip_slide,"('a_value', 'input change', '20')",True
 tAV3Jre6NVLM6JlUd1Wi8sUSGBUl47VfJNpPyBaQEPA,htn_factor_slip_slide,"('b_value', 'input change', '-33')",True
 CNDRMdx3hOoon4yQ40CbfP3HLP8Tpy00dhBAlVsHUOQ,htn_factor_slip_slide,"('c_value', 'input change', '10')",True
 rGcpzuA1UdXmopwaBdG4RjR4ttJzoLZDjiFA3VXWvrQ,htn_factor_slip_slide,"('ac_value', 'input change', '200')",True
-mB34GJiz4vBomnvVrGCSZuFLTDOM74ZABbAA7cWOLDs,htn_factor_slip_slide,"('new_equation', 'input change', '20x^2-8x+200')",False
+mB34GJiz4vBomnvVrGCSZuFLTDOM74ZABbAA7cWOLDs,htn_factor_slip_slide,"('new_equation', 'input change', '20x^2-40x+200')",False
 57ThTUMJyFTQBtV4Mfw7TPE86qz9AdMQtmc9WhiIUo8,htn_factor_slip_slide,"('new_b_value', 'input change', '-33')",True
 GkEEJ0lxvlB3av9BSJq6dPApU4mnZ9S4WDGmkIjxXLc,htn_factor_slip_slide,"('new_c_value', 'input change', '200')",True
 ij5AlupHSqLtdkKXfBikWxxh8n7ARuvObzwYHcJSwdQ,htn_factor_slip_slide,"('factor_1_b', 'input change', '-25')",True
@@ -19,12 +19,15 @@ IRKOGq9hQwBaVGiuOQ178G8yH2SX2SKkBxVAAnvrZig,htn_factor_slip_slide,"('factor_2_b'
 b6Rw7WO3jejUTNV3SotLfdBy22fAdgBSywR9IV7vG6g,htn_exponents_power,"('multiply_values', 'input change', '5 * 5')",False
 Sr8qBDeoBVlHJnSiyDHPWOkOfE6eIBNMBIRmwSL5deY,htn_exponents_power,"('simplify_exp', 'input change', '438^{25}')",True
 T7y0lp6HmKZGZBiIMWsBD3DXoqLuEuMIF8DdeB1fAjs,htn_exponents_power,"('equation', 'input change', '438^{25}')",False
-38lOJAYxzBsrRPWgD4vN0OggUgYoSeGOalZ57WdVByw,htn_exponents_power,"('multiply_values', 'input change', '7 * 3')",False
+38lOJAYxzBsrRPWgD4vN0OggUgYoSeGOalZ57WdVByw,htn_exponents_power,"('multiply_values', 'input change', '7*3')",False
 L8SNZt8yVbyzAafccBeyuSWR5ALz0NSDz9oG4i4x9tc,htn_exponents_power,"('simplify_exp', 'input change', '323^{21}')",True
 XAWLCEXhq7uDsK9JnoFzHBzpABVYvSVPec795AdotW0,htn_exponents_power,"('equation', 'input change', '323^{21}')",False
 HNQyD3LARQVhdePx59qyI2lW7R79LohLMf8DOg6AR1I,htn_radicals_product_rule,"('apply_product_rule', 'input change', '\\sqrt{81}')",False
 BXBatAyE6kPQjc2wsZ5ycq3CAojfEO5Lkzc9WKLjC8E,htn_radicals_product_rule,"('update_product_value', 'input change', '81')",False
 hoo46eradkstkh3Bmk6xa3RvxqM8QdTwIj2sY13r3Jk,htn_radicals_product_rule,"('simplify_product_value', 'input change', '9')",True
 Jsnga3BUsV2BtLRuDLdW5UlE5nSMnt4xg5VaWBPLTvY,htn_radicals_product_rule,"('equation', 'input change', '\\sqrt{9*9}')",False
-w0QlACj5w0Q4fqnm3T1zrGTm2bjK1DdGF6XyhMkAihE,htn_logarithmic_equations_solve_algebraically_before_after,"('coeff0_to_rhs', 'input change', '-3\\ln(2x) = 1')",False
-e8czQ1vz4jks3iKboHclG9ty0HNnEPzCTRtufRs0tKE,htn_exponents_quotient,"('subtract_values', 'input change', '19-3')",False
+w0QlACj5w0Q4fqnm3T1zrGTm2bjK1DdGF6XyhMkAihE,htn_logarithmic_equations_solve_algebraically_before_after,"('coeff0_to_rhs', 'input change', '- 3 \\ln{\\left(2 x \\right)} = 1')",False
+e8czQ1vz4jks3iKboHclG9ty0HNnEPzCTRtufRs0tKE,htn_exponents_quotient,"('subtract_values', 'input change', '776^16')",False
+SZHjipKD6xWd9vgQEeKyKfAVRLJKc4e98rjX0sFQFBI,htn_logarithms_power,"('apply_power_rule', 'input change', '4\\log_{6}{216}')",False
+SgvC2o7CurKhwZCftb2XnsAKT9alGtAkDL14fgQKDas,htn_logarithms_power,"('apply_power_rule', 'input change', '4\\log_{6}{216}')",False
+ahvNbMbe6S8bk3dKESDxTdGg3tTvbBHWi8S5AWpUVgU,htn_radicals_product_rule,"('apply_product_rule', 'input change', '\\sqrt{9 \\cdot 1}')",False

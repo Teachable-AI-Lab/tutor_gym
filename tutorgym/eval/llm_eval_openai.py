@@ -88,13 +88,25 @@ def main():
 
             # Sequential API calls instead of concurrent
             next_action_response = get_next_action(filtered_state, obj['domain'])
+            
+            # Check if response format is correct
+            try:
+                parts = next_action_response.split(';')
+                if len(parts) != 3:
+                    selection, action_type, input = 'incorrect_format', 'incorrect_format', 'incorrect_format'
+                else:
+                    selection, action_type, input = parts
+            except Exception as e:
+                selection, action_type, input = 'incorrect_format', 'incorrect_format', 'incorrect_format'
+
             correct_verify = verify_actions(filtered_state, obj['domain'], obj['correct_actions'], True)
             incorrect_verify = verify_actions(filtered_state, obj['domain'], obj['incorrect_actions'], False)
 
             # Process results sequentially
-            selection, action_type, input = next_action_response.split(';')
-            is_correct = any(action['selection'] == selection and action['action_type'] == action_type and action['inputs']['value'] == input
-                           for action in obj['correct_actions'])
+            is_correct = False
+            if selection != 'incorrect_format':
+                is_correct = any(action['selection'] == selection and action['action_type'] == action_type and action['inputs']['value'] == input
+                               for action in obj['correct_actions'])
             
             with open('action_check_openai.csv', 'a', newline='') as f:
                 writer = csv.writer(f)
