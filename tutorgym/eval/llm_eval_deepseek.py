@@ -40,7 +40,10 @@ Avoid additional text.
     response = requests.post('http://localhost:11434/api/generate', json={
         'model': 'deepseek-v2.5',
         'prompt': next_action_message,
-        'stream': False
+        'stream': False,
+        'options': {
+            'num_ctx': 20000
+        }
     })
     return response.json()['response']
 
@@ -59,7 +62,10 @@ Answer only with 'yes' or 'no'.
     response = requests.post('http://localhost:11434/api/generate', json={
         'model': 'deepseek-v2.5',
         'prompt': verify_message,
-        'stream': False
+        'stream': False,
+        'options': {
+            'num_ctx': 20000
+        }
     })
     return action_type, actions, response.json()['response']
 
