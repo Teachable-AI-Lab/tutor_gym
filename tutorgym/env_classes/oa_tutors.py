@@ -2,6 +2,9 @@ from tutorgym.envs.oa_tutors.ProblemProcesser import process_problem_pool
 from tutorgym.shared import ProblemState, Action
 from tutorgym.env_classes.env_base import TutorEnvBase
 import re
+import os
+import inspect
+import random
 
 def make_next_state(state, sai):
     next_state = state.copy()
@@ -47,40 +50,62 @@ class CogModel:
             )
         ]
 
+
+
+
 class OATutor(TutorEnvBase):
-    def __init__(self, problem_name:str, **kwargs):
+    def __init__(self, problem_name=None, **kwargs):
+        self_dir, _ = os.path.split(__file__)
+        problem_names_path = os.path.join(self_dir, '../envs/oa_tutors/ProblemNames.txt')
+        with open(problem_names_path, 'r') as file:
+            self.problem_names = [line.strip() for line in file if line.strip()]
+
+        print(self.problem_names)
+
         super().__init__(**kwargs)     
-        self.problem_name = problem_name        
-        self.set_random_problem()
+        if(problem_name is not None):
+            self.set_problem(problem_name)
+            # self.set_random_problem()
 
     def set_random_problem(self):
-        self.problem_state, self.action_list = process_problem_pool(self.problem_name)
-        for key, value in self.problem_state.items():
-            self.problem_state[key]['id'] = key
-        self.set_problem(self.problem_state['title']['value'])
+        problem_name = random.choice(self.problem_names)
+        self.set_problem(problem_name)        
+        # self.problem_state, self.action_list = process_problem_pool(self.problem_name)
+        # self.set_problem(self.problem_state['title']['value'])
 
     def create_cog_model(self, state):
         curr_state = state.copy()
         return CogModel(curr_state, self.action_list)
     
-    def set_start_state(self, *args, **kwargs):
+    def set_start_state(self, problem_name, **kwargs):
         ''' Domain implementation: Used by ApprenticeTutor.set_problem() 
             to initialize a start state.'''
+        self.problem_name = problem_name
+        self.problem_state, self.action_list = process_problem_pool(self.problem_name)
+        # print(self.problem_state)
+
+        for key, obj in self.problem_state.items():
+            obj['id'] = key
+
         step_fields = [self.problem_state[k]['field'] for k in self.problem_state.keys() if k.startswith('step')]
         self.possible_selections = step_fields
         self.possible_args = step_fields
         self.start_state = ProblemState(self.problem_state)
     
     def _standardize_config(self, *args, **kwargs):
-        problem: str = self.set_start_state
-        return {'problem': problem}
+        sig = inspect.signature(self.set_start_state)
+        
+        problem_config = {}
+        for (arg_name, arg) in zip(sig.parameters, args):
+            problem_config[arg_name] = arg
+
+        return {**problem_config, **kwargs}
 
     def set_problem(self, *args, **kwargs):
         self.set_start_state(*args, **kwargs)
         self.cog_model = self.create_cog_model(self.start_state)
         self.state = self.start_state
         self.is_done = False
-
         self.problem_config = self._standardize_config(*args, **kwargs)
     
     def get_problem(self):
@@ -119,7 +144,7 @@ class OATutor(TutorEnvBase):
             self.state = ProblemState({})
         else:
             self.state = make_next_state(self.state, action.sai)
-        return self.state.objs
+        return self.state
     
     def _process_demo(self, action, **kwargs):
         action = Action(action.sai, 

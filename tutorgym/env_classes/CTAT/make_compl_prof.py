@@ -136,14 +136,12 @@ if __name__ == "__main__":
     
     # make_compl_prof(tutor, "ctat_compl.prof", problems)
 
-    # if(False):
     for problem in problems:
         print(problem)
         tutor.set_problem(**problem)
-        make_compl_prof
+        
         agent = OracleAgent(tutor)
         trainer = Trainer(agent, tutor, problem_set=[problem], num_incorrect_force_demo=2)
-    # try:
         trainer.start()
 
     

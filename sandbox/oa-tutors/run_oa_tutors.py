@@ -10,13 +10,18 @@ def main():
     with open(problem_names_file, 'r') as file:
         problem_names = [line.strip() for line in file if line.strip()]
     
+
+    problems = [{"problem_name" : p} for p in problem_names]
+    env = OATutor()
+    agent = OracleAgent(env)
+    trainer = AuthorTrainer(agent, env, problem_set=problems)
+    trainer.start()
+
     # Loop through each problem
-    for problem_name in problem_names:
-        print(f"\nRunning tutor for problem: {problem_name}")
-        env = OATutor(problem_name=problem_name)
-        agent = OracleAgent(env)
-        trainer = AuthorTrainer(agent, env, n_problems=20)
-        trainer.start()
+    # for problem_name in problem_names:
+    #     print(f"\nRunning tutor for problem: {problem_name}")
+        # OATutor.set_problem(problem_name)
+        
 
 if __name__ == "__main__":
     main()

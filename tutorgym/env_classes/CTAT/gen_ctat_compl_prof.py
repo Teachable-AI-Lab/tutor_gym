@@ -18,4 +18,4 @@ if __name__ == "__main__":
 
     # if(False):
     
-    make_compl_prof(tutor, "ctat_compl.prof", problems)
+    make_compl_prof(tutor, "ctat_compl.prof", problems, problem_line_limit=40)
