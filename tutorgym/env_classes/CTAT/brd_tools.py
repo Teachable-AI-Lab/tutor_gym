@@ -16,6 +16,7 @@ class ExpressionMatcher(BaseMatcher):
 
     def check(self, state, inputs):
         # TODO actually make work
+        print('check', inputs.get('value',None),  self.value)
         return inputs.get('value',None) == self.value
 
 
@@ -211,6 +212,7 @@ def resolve_input_from_matcher(matcher, matcher_action):
         if(b == 'input'): a,b = b,a
         if(matcher.relation == "boolean"):
             print(f"Expr matcher({sel}):", b)
+            matcher.value = b
             return b
 
     elif(poly_match):

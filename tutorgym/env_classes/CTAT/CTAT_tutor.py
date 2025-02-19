@@ -90,6 +90,10 @@ class CTAT_Tutor(StateMachineTutor):
         # Load the HTML converted to JSON
         with open(configs[0]['json_path']) as f:
             start_state = json.load(f)
+
+            # Ignore any fields marked as anonamous
+            # start_state = {k:v for k,v in start_state.items() if k[:4] != 'anon'}
+
             self.start_actions, self.edges, self.groups = \
                 parse_brd(model_path)
 
