@@ -36,17 +36,16 @@ as False. I need your response in this format: field;action_type;value, where:
 3. value is the value to enter that field. 
 Avoid additional text.
     """
-    print("PRINTING CONTEXT SIZE: ", int(len(next_action_message)))
-    # response = requests.post('http://localhost:11434/api/generate', json={
-    #     'model': 'deepseek-v2.5',
-    #     'prompt': next_action_message,
-    #     'stream': False,
-    #     # 'options': {
-    #     #     'num_ctx': int(len(next_action_message)/3)
-    #     # }
-    # })
-    # return response.json()['response']
-    return "field;PressButton;1"
+    print("PRINTING CONTEXT SIZE: ", int(len(next_action_message)/3))
+    response = requests.post('http://localhost:11434/api/generate', json={
+        'model': 'deepseek-v2.5',
+        'prompt': next_action_message,
+        'stream': False,
+        'options': {
+            'num_ctx': 4096
+        }
+    })
+    return response.json()['response']
 
 def verify_actions(state, domain, actions, is_correct=True):
     action_type = "Correct" if is_correct else "Incorrect"
@@ -60,16 +59,16 @@ Are any of these actions correct?
 
 Answer only with 'yes' or 'no'.
     """
-    # response = requests.post('http://localhost:11434/api/generate', json={
-    #     'model': 'deepseek-v2.5',
-    #     'prompt': verify_message,
-    #     'stream': False,
-    #     # 'options': {
-    #     #     'num_ctx': int(len(verify_message)/3)
-    #     # }
-    # })
-    # return action_type, actions, response.json()['response']
-    return action_type, actions, "yes"
+    response = requests.post('http://localhost:11434/api/generate', json={
+        'model': 'deepseek-v2.5',
+        'prompt': verify_message,
+        'stream': False,
+        'options': {
+            'num_ctx': 4096
+        }
+    })
+    return action_type, actions, response.json()['response']
+
 def main():
     initialize_csv_files()
     
