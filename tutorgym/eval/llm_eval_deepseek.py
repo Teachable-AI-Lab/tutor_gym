@@ -12,15 +12,15 @@ import requests  # Add this import at the top
 
 # Initialize CSV files with headers
 def initialize_csv_files():
-    with open('action_check_anthropic.csv', 'w', newline='') as f:
+    with open('action_check_deepseek.csv', 'w', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(['hash_id', 'domain', 'action', 'action_correct'])
     
-    with open('correctness_check_anthropic.csv', 'w', newline='') as f:
+    with open('correctness_check_deepseek.csv', 'w', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(['hash_id', 'domain', 'correct'])
     
-    with open('incorrectness_check_anthropic.csv', 'w', newline='') as f:
+    with open('incorrectness_check_deepseek.csv', 'w', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(['hash_id', 'domain', 'incorrect'])
 
@@ -56,7 +56,6 @@ Are any of these actions correct?
 
 Answer only with 'yes' or 'no'.
     """
-    time.sleep(1)  # Add delay before API call
     response = requests.post('http://localhost:11434/api/generate', json={
         'model': 'deepseek-v2.5',
         'prompt': verify_message,
@@ -109,7 +108,7 @@ def main():
                                for action in obj['correct_actions'])
             
             try:
-                with open('action_check_anthropic.csv', 'a', newline='', encoding='utf-8') as f:
+                with open('action_check_deepseek.csv', 'a', newline='', encoding='utf-8') as f:
                     writer = csv.writer(f)
                     writer.writerow([hash_id, obj['domain'], (selection, action_type, input), is_correct])
                 
@@ -117,11 +116,11 @@ def main():
                 for result in [correct_verify, incorrect_verify]:
                     action_type, actions, response = result
                     if action_type == "Correct":
-                        with open('correctness_check_anthropic.csv', 'a', newline='', encoding='utf-8') as f:
+                        with open('correctness_check_deepseek.csv', 'a', newline='', encoding='utf-8') as f:
                             writer = csv.writer(f)
                             writer.writerow([hash_id, obj['domain'], response.lower() == 'yes'])
                     else:
-                        with open('incorrectness_check_anthropic.csv', 'a', newline='', encoding='utf-8') as f:
+                        with open('incorrectness_check_deepseek.csv', 'a', newline='', encoding='utf-8') as f:
                             writer = csv.writer(f)
                             writer.writerow([hash_id, obj['domain'], response.lower() == 'no'])
             except Exception as e:
