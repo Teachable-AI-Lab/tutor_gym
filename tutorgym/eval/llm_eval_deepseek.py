@@ -36,7 +36,7 @@ as False. I need your response in this format: field;action_type;value, where:
 3. value is the value to enter that field. 
 Avoid additional text.
     """
-
+    print("PRINTING CONTEXT SIZE: ", int(len(next_action_message)/3))
     response = requests.post('http://localhost:11434/api/generate', json={
         'model': 'deepseek-v2.5',
         'prompt': next_action_message,
