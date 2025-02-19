@@ -9,6 +9,7 @@ from tutorgym.html_tools import HTML_Preprocessor
 import json
 from copy import copy
 import re
+import os
 
 # -----------------------------------------------------------------
 # : Action Filters
@@ -92,6 +93,8 @@ class CTAT_Tutor(StateMachineTutor):
             self.start_actions, self.edges, self.groups = \
                 parse_brd(model_path)
 
+        self.problem_name = os.path.split(model_path)[-1]
+
         start_state = ProblemState(start_state)
         # Apply any start state messages in the brd 
         for action in self.start_actions:
@@ -151,6 +154,9 @@ class CTAT_Tutor(StateMachineTutor):
             frontier = new_frontier
 
         return fsm
+
+    # def get_problem():
+    #     return self.problem
 
     def action_is_done(self, action):
         if(action.sai[0] == "done"):
@@ -272,8 +278,6 @@ if __name__ == '__main__':
 
     # Values [x]: All simple values # 
     # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_34_HTML/")
-
-
 
     omit_problems = [
         "../../envs/CTAT/Mathtutor/6_16_HTML/FinalBRDs/18ABC.brd",

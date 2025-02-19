@@ -1,0 +1,27 @@
+#problem_function {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+dt {
+  display: inline-block;
+  margin: 5px 5px;
+  width: 30%;
+}
+dt .CTATTextInput {
+  width: 100%;
+}
+dd {
+  display: inline-block;
+  margin: 5px 5px;
+  margin-inline: 0;
+  width: 64%;
+}
+dd div {
+  width: 100%;
+}
+dt .CTATTextField, dd .CTATTextField {
+  margin-bottom: 10px;
+  font-weight: bold;
+}

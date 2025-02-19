@@ -29,7 +29,7 @@ WORKING_DOMAINS = [
     '6_11_HTML',
 
     # Values [0]: Expressions: ifThen, isVar, concat
-    '6_14_HTML',
+    # '6_14_HTML',
 
     # Values [x]: Only simple ExpressionMatches 
     '6_15_HTML',
@@ -72,4 +72,92 @@ WORKING_DOMAINS = [
     
     # Values [x]: All simple values # 
     '6_34_HTML',
+
+    # Values [0]: Expressions                       
+    # '7_01_HTML',
+
+    # Values [0]: Just dropdowns, but using weird matcher 
+    # '7_02_HTML',
+
+    # Values [0]: Expressions                       
+    # '7_04_HTML',
+
+    # Values [0]: Expressions 
+    # '7_05_HTML',
+
+    # Values [0]: Expressions 
+    # '7_06_HTML',
+
+    # Values [0]: Expressions 
+    # '7_10_HTML',
+
+    # Values [0]: Expressions 
+    # '7_12_HTML',
+
+    # Values [0]: Expressions 
+    # '7_15_HTML',
+
+    # Values [-]: Plausible & simple but weird matcher  
+    # '7_16_HTML',
+
+    # Values [0]: Expressions Poly
+    # '7_50_HTML',
+
+    # Values [0]: Expressions Poly
+    # '7_51_HTML',
+
+    # Values [0]: Expressions Poly
+    # '7_52_HTML',
+
+    # Values [0]: Expressions Poly
+    # '7_53_HTML',
+
+    # Values [0]: Expressions Poly
+    # '7_54_HTML',
+
+    # Values [0]: Expressions Poly
+    # '8_05_HTML',
+
+    # Values [0]: Expressions 
+    # '8_06_HTML',
+
+    # Values [0]: Complex Expressions 
+    # '8_07_HTML',
+
+    # Values [0]: Complex Expressions 
+    # '8_09_HTML',
+
+    # Values [0]: Complex Expressions 
+    # '8_11_HTML',
+
+    # Values [-]: Plausible & simple but weird matcher  
+    # '8_12_HTML',
+
+    # Values [-]: Plausible & simple but weird matcher  
+    # '8_14_HTML',
+
+    # Values [0]: Complex Expressions 
+    # '8_17_HTML',
+
+    # Values [-]: Plausible & simple but weird matcher  
+    # '8_18_HTML',
+
+    # Values [x] : Simple static
+    '8_19_HTML',
+
+    # Values [x] : Simple static
+    '8_20_HTML',
+
+    # Values [-]: Plausible & simple but weird matcher  
+    # '8_21_HTML',
+
+    # Values [0]: Complex Expressions 
+    # '8_22_HTML',
+
+    # Values [0]: Simple, but requires reading a figure
+    # '8_26_HTML',
+
+    # Values [0]: Simple, but requires reading a figure
+    # '8_28_HTML',
+
 ]

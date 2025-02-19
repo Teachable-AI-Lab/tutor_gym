@@ -1,0 +1,56 @@
+.CTATProblem {
+  flex: none;
+  text-align: center;
+}
+#expression {
+  font-size: 20px;
+  font-weight: bold;
+}
+.CTATProblemSolving {
+  flex-flow: column;
+}
+.CTATSolution {
+  justify-content: center;
+  text-align: center;
+}
+.problem_table {
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+  font-size: inherit;
+}
+.row {
+  display: table-row;
+  text-align: center;
+}
+.cell .CTATTextInput {
+  width: 30%;
+  vertical-align: bottom;
+}
+.CTATTextInput > input[type="text"] {
+  width: 100%;
+}
+.head, .cell {
+  height: 25px;
+  display: table-cell;
+  padding: 0;
+  text-align: center;
+  font-size: inherit;
+}
+.head {
+  font-weight: bold;
+}
+.cell span {
+  font-size: 22px;
+}
+.cell.factor {
+  width: 32%;
+}
+.cell.operator {
+  width: 1%;
+}
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+}

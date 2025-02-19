@@ -1,0 +1,863 @@
+<?xml version="1.0" standalone="yes"?>
+
+<stateGraph firstCheckAllStates="true" caseInsensitive="true" unordered="true" lockWidget="true" version="2.1" suppressStudentFeedback="false" highlightRightSelection="true" startStateNodeName="">
+    <startNodeMessages>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartProblem</MessageType>
+                <ProblemName>Problem9</ProblemName>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>4D4DDA465C235D18EDACCCAB109BF9873E97E43</transaction_id>
+                <Selection>
+                    <value>problemtext</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Alexis Fairweather is the star of the wildly popular prime-time soap opera Metropolis, and she recently signed a new contract for the next season of the show. For each episode of Metropolis in which she appears, Alexis will receive $50000. In addition, at the end of the season, she will be given a bonus check in the amount of $100000. Using x and y as your variables, you can represent this situation with this equation:</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>222F92ECCBF79B6570EF3F9A2E752C04271BFC9</transaction_id>
+                <Selection>
+                    <value>problem_function</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>y=50000x+100000</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7EF7943191BFD35928EC8372597AD28B37A3F00</transaction_id>
+                <Selection>
+                    <value>instructions</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Please fill in the left-hand blanks with the mathematical expressions and the right-hand blanks with descriptions of the expressions.</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>83E439DA574C7A0774CC5AC52D8D0F24F362880</transaction_id>
+                <Selection>
+                    <value>def1</value>
+                </Selection>
+                <Action>
+                    <value>setLabels</value>
+                </Action>
+                <Input>
+                    <value>-----Select a Definition-----,the amount of money,the total amount she makes for all episodes,the number of seasons she has been on the show,the amount she receives as a bonus,the amount she receives for each episode,the total amount she makes all season,the number of episodes in which she appears</value>
+                </Input>
+            </properties>
+        </message>
+	    <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>83E439DA574C7A0774CC5AC52D8D0F24F362880</transaction_id>
+                <Selection>
+                    <value>def2</value>
+                </Selection>
+                <Action>
+                    <value>setLabels</value>
+                </Action>
+                <Input>
+                    <value>-----Select a Definition-----,the amount of money,the total amount she makes for all episodes,the number of seasons she has been on the show,the amount she receives as a bonus,the amount she receives for each episode,the total amount she makes all season,the number of episodes in which she appears</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>83E439DA574C7A0774CC5AC52D8D0F24F362880</transaction_id>
+                <Selection>
+                    <value>def3</value>
+                </Selection>
+                <Action>
+                    <value>setLabels</value>
+                </Action>
+                <Input>
+                    <value>-----Select a Definition-----,the amount of money,the total amount she makes for all episodes,the number of seasons she has been on the show,the amount she receives as a bonus,the amount she receives for each episode,the total amount she makes all season,the number of episodes in which she appears</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>83E439DA574C7A0774CC5AC52D8D0F24F362880</transaction_id>
+                <Selection>
+                    <value>def4</value>
+                </Selection>
+                <Action>
+                    <value>setLabels</value>
+                </Action>
+                <Input>
+                    <value>-----Select a Definition-----,the amount of money,the total amount she makes for all episodes,the number of seasons she has been on the show,the amount she receives as a bonus,the amount she receives for each episode,the total amount she makes all season,the number of episodes in which she appears</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>83E439DA574C7A0774CC5AC52D8D0F24F362880</transaction_id>
+                <Selection>
+                    <value>def5</value>
+                </Selection>
+                <Action>
+                    <value>setLabels</value>
+                </Action>
+                <Input>
+                    <value>-----Select a Definition-----,the amount of money,the total amount she makes for all episodes,the number of seasons she has been on the show,the amount she receives as a bonus,the amount she receives for each episode,the total amount she makes all season,the number of episodes in which she appears</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>83E439DA574C7A0774CC5AC52D8D0F24F362880</transaction_id>
+                <Selection>
+                    <value>def6</value>
+                </Selection>
+                <Action>
+                    <value>setLabels</value>
+                </Action>
+                <Input>
+                    <value>-----Select a Definition-----,the amount of money,the total amount she makes for all episodes,the number of seasons she has been on the show,the amount she receives as a bonus,the amount she receives for each episode,the total amount she makes all season,the number of episodes in which she appears</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>8550D6B92E69B878F960429CBE931F53A0B8D5F</transaction_id>
+                <Selection>
+                    <value>def1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the amount she receives as a bonus</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>3692D91907DB785BEEA8C4A46EEC6794D81FA2C</transaction_id>
+                <Selection>
+                    <value>def2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the total amount she makes all season</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>22B0FEB1C51D19464A1E98ED2F59FBD4467372D</transaction_id>
+                <Selection>
+                    <value>def3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the total amount she makes for all episodes</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>BA67FED6ED97CA420F76501CA2A94538A3C0A1E</transaction_id>
+                <Selection>
+                    <value>def4</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the number of episodes in which she appears</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>AF20155D30B4F140A0318093D2B4C5AE2788E5C</transaction_id>
+                <Selection>
+                    <value>def5</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the amount she receives for each episode</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>83E439DA574C7A0774CC5AC52D8D0F24F362880</transaction_id>
+                <Selection>
+                    <value>exp6</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextField</value>
+                </Action>
+                <Input>
+                    <value>y</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartStateEnd</MessageType>
+            </properties>
+        </message>
+    </startNodeMessages>
+    <node locked="false" doneState="false">
+        <text>htmlProblem6</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>162</x>
+            <y>28</y>
+            <width>37</width>
+            <height>25</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state1</text>
+        <uniqueID>2</uniqueID>
+        <dimension>
+            <x>157</x>
+            <y>138</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state2</text>
+        <uniqueID>3</uniqueID>
+        <dimension>
+            <x>157</x>
+            <y>248</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state3</text>
+        <uniqueID>4</uniqueID>
+        <dimension>
+            <x>157</x>
+            <y>358</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state4</text>
+        <uniqueID>5</uniqueID>
+        <dimension>
+            <x>157</x>
+            <y>468</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state5</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>157</x>
+            <y>578</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state6</text>
+        <uniqueID>7</uniqueID>
+        <dimension>
+            <x>157</x>
+            <y>688</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="true">
+        <text>Done</text>
+        <uniqueID>8</uniqueID>
+        <dimension>
+            <x>160</x>
+            <y>798</y>
+            <width>31</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>1</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>E1E68934817A81AFC98B8EB521C07FDACF487E7</transaction_id>
+                    <Selection>
+                        <value>exp1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value></value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=50000x+100000. What part of the equation does the given definition describe?</hintMessage>
+            <hintMessage>The given definition describes a constant in the problem. What value given in the problem represents the amount she receives as a bonus?</hintMessage>
+            <hintMessage>Try entering '100000' in the Expression column.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp1</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(&quot;100000&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>150</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Identify-Constant-Term Slope-Intercept-Form</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>169</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>3</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>8F2D4FC8D5A1B86F3BF7E01110A526AAE749036</transaction_id>
+                    <Selection>
+                        <value>exp2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value></value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=50000x+100000. What part of the equation does the given definition describe?</hintMessage>
+            <hintMessage>The given definition describes the sum of two terms. What term(s) in the equation represents the total amount she makes all season?</hintMessage>
+            <hintMessage>Try entering '50000x+100000' in the Expression column.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp2</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(&quot;50000x+100000&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>150</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Identify-Sum-Two-Terms Slope-Intercept-Form</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>169</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>5</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>A8D16EF9FFF15B5F7580C54C408DC0239558C23</transaction_id>
+                    <Selection>
+                        <value>exp3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value></value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=50000x+100000. What part of the equation does the given definition describe?</hintMessage>
+            <hintMessage>The given definition describes the product of a coefficient and a variable. What term in the equation represents the total amount she makes for all episodes?</hintMessage>
+            <hintMessage>Try entering '50000x' in the Expression column.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp3</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(&quot;50000x&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>150</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Identify-Coefficient-and-Variable-Expression Slope-Intercept-Form</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>169</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>3</sourceID>
+        <destID>4</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>7</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>B324A144AE8A84249234A6A692B5565E800D2D0</transaction_id>
+                    <Selection>
+                        <value>exp4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value></value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=50000x+100000. What part of the equation does the given definition describe?</hintMessage>
+            <hintMessage>The given definition describes a variable term in the problem. Which variable in the problem represents the number of episodes in which she appears?</hintMessage>
+            <hintMessage>Try entering 'x' in the Expression column.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp4</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(&quot;x&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>150</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Identify-Variable Slope-Intercept-Form</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>169</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>4</sourceID>
+        <destID>5</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>9</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>5173E9B6674BE20710C022C6102A7C1E295E772</transaction_id>
+                    <Selection>
+                        <value>exp5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value></value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=50000x+100000. What part of the equation does the given definition describe?</hintMessage>
+            <hintMessage>The given definition describes a coefficient in the problem. What value given in the problem represents the amount she receives for each episode?</hintMessage>
+            <hintMessage>Try entering '50000' in the Expression column.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp5</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(&quot;50000&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>150</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Identify-Coefficient Slope-Intercept-Form</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>169</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>11</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>309F6C1DBB842EEF1E7AF1DDDFB68169D125531</transaction_id>
+                    <Selection>
+                        <value>def6</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateComboBox</value>
+                    </Action>
+                    <Input>
+                        <value>equals(&quot;the total amount she makes all season&quot;,input)</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>You need to choose the definition from the menu that best defines the expression given.</hintMessage>
+            <hintMessage>A variable represents a quantity whose value is not given in the problem statement. Look at the equation and the problem statement to determine what y represents.</hintMessage>
+            <hintMessage>Try choosing 'the total amount she makes all season' from the list of definitions.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">def6</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateComboBox</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">equals(&quot;the total amount she makes all season&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>155</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Define-Variable Slope-Intercept-Form</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>169</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>6</sourceID>
+        <destID>7</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>13</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>4B165213485289246F4F1B392CFBB730EF6C668</transaction_id>
+                    <Selection>
+                        <value>done</value>
+                    </Selection>
+                    <Action>
+                        <value>ButtonPressed</value>
+                    </Action>
+                    <Input>
+                        <value>-1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please click on the highlighted button.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">done</matcherParameter>
+                <matcherParameter name="action">ButtonPressed</matcherParameter>
+                <matcherParameter name="input">-1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>72</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>7</sourceID>
+        <destID>8</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <productionRule opportunities="1">
+        <ruleName>Identify-Coefficient-and-Variable-Expression</ruleName>
+        <productionSet>Slope-Intercept-Form</productionSet>
+        <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=50000x+100000. What part of the equation does the given definition describe?</hintMessage>
+        <hintMessage>The given definition describes the product of a coefficient and a variable. What term in the equation represents the total amount she makes for all episodes?</hintMessage>
+        <hintMessage>Try entering '50000x' in the Expression column.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Identify-Variable</ruleName>
+        <productionSet>Slope-Intercept-Form</productionSet>
+        <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=50000x+100000. What part of the equation does the given definition describe?</hintMessage>
+        <hintMessage>The given definition describes a variable term in the problem. Which variable in the problem represents the number of episodes in which she appears?</hintMessage>
+        <hintMessage>Try entering 'x' in the Expression column.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Define-Variable</ruleName>
+        <productionSet>Slope-Intercept-Form</productionSet>
+        <hintMessage>You need to choose the definition from the menu that best defines the expression given.</hintMessage>
+        <hintMessage>A variable represents a quantity whose value is not given in the problem statement. Look at the equation and the problem statement to determine what y represents.</hintMessage>
+        <hintMessage>Try choosing 'the total amount she makes all season' from the list of definitions.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Identify-Coefficient</ruleName>
+        <productionSet>Slope-Intercept-Form</productionSet>
+        <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=50000x+100000. What part of the equation does the given definition describe?</hintMessage>
+        <hintMessage>The given definition describes a coefficient in the problem. What value given in the problem represents the amount she receives for each episode?</hintMessage>
+        <hintMessage>Try entering '50000' in the Expression column.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Identify-Sum-Two-Terms</ruleName>
+        <productionSet>Slope-Intercept-Form</productionSet>
+        <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=50000x+100000. What part of the equation does the given definition describe?</hintMessage>
+        <hintMessage>The given definition describes the sum of two terms. What term(s) in the equation represents the total amount she makes all season?</hintMessage>
+        <hintMessage>Try entering '50000x+100000' in the Expression column.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Identify-Constant-Term</ruleName>
+        <productionSet>Slope-Intercept-Form</productionSet>
+        <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=50000x+100000. What part of the equation does the given definition describe?</hintMessage>
+        <hintMessage>The given definition describes a constant in the problem. What value given in the problem represents the amount she receives as a bonus?</hintMessage>
+        <hintMessage>Try entering '100000' in the Expression column.</hintMessage>
+    </productionRule>
+    <EdgesGroups ordered="false"></EdgesGroups>
+</stateGraph>
+

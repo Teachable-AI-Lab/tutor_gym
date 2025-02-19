@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="8.18 Permutations" description="Provides varying numbers for different situations and asks student to compute the number of possible permutations." save_state="true">
+  <Problems>
+    <Problem name="00Bubble" label="3 Runners" description="The track team coach is choosing 3 runners for a relay race. To be fair to everybody on the team, he is going to randomly pick the first runner, then randomly pick the second and third runners." tutor_flag="tutor" model_file="00Bubble.brd" student_interface="8.18.html">
+      <Skills>
+        <Skill name="idenNextPossible" category="8-18-permutations" occurrences="23"/>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" occurrences="4"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" occurrences="4"/>
+      </Skills>
+    </Problem>
+    <Problem name="01Runners" label="3 Runners" description="The track team coach is choosing 3 runners for a relay race. To be fair to everybody on the team, he is going to randomly pick the first runner, then randomly pick the second and third runners." tutor_flag="tutor" model_file="01Runners.brd" student_interface="8.18.html">
+      <Skills>
+        <Skill name="idenNextPossible" category="8-18-permutations" occurrences="23"/>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" occurrences="4"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" occurrences="4"/>
+      </Skills>
+    </Problem>
+    <Problem name="02Runners" label="6 Runners" description="The track team coach is choosing 6 runners for a relay race. To be fair to everybody on the team, he is going to randomly pick the first runner, then randomly pick the second, third, fourth, fifth, and sixth runners." tutor_flag="tutor" model_file="02Runners.brd" student_interface="8.18.html">
+      <Skills>
+        <Skill name="idenNextPossible" category="8-18-permutations" occurrences="23"/>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" occurrences="4"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" occurrences="4"/>
+      </Skills>
+    </Problem>
+    <Problem name="03Baton" label="Baton Twirls" description="Cheryl is choreographing a baton routine for her school talent show. She knows a number of different twirls, but she can only fit a sequence of 6 twirls into the routine." tutor_flag="tutor" model_file="03Baton.brd" student_interface="8.18.html">
+      <Skills>
+        <Skill name="idenNextPossible" category="8-18-permutations" occurrences="23"/>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" occurrences="4"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" occurrences="4"/>
+      </Skills>
+    </Problem>
+    <Problem name="04CDs" label="CDs" description="Thom is making a CD of songs that he downloaded from Snapster. Because the songs are so long, only 5 will fit on a CD, so Thom doesn't want to put any songs on the CD more than once." tutor_flag="tutor" model_file="04CDs.brd" student_interface="8.18.html">
+      <Skills>
+        <Skill name="idenNextPossible" category="8-18-permutations" occurrences="23"/>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" occurrences="4"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" occurrences="4"/>
+      </Skills>
+    </Problem>
+    <Problem name="05Programmer" label="Math Tutors" description="Ryan is a computer programmer who creates math tutors for a living. Right now, Ryan is building a tutor for his little brother, A.J. Ryan created a number of different lessons that he could put into the tutor." tutor_flag="tutor" model_file="05Programmer.brd" student_interface="8.18.html">
+      <Skills>
+        <Skill name="idenNextPossible" category="8-18-permutations" occurrences="23"/>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" occurrences="4"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" occurrences="4"/>
+      </Skills>
+    </Problem>
+    <Problem name="06Seoul" label="Seoul Palaces" description="Liam is visiting Seoul, the capital of South Korea, for 4 days. In Seoul, there are a number of major palaces, restored from the days when South Korea had a monarchy." tutor_flag="tutor" model_file="06Seoul.brd" student_interface="8.18.html">
+      <Skills>
+        <Skill name="idenNextPossible" category="8-18-permutations" occurrences="23"/>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" occurrences="4"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" occurrences="4"/>
+      </Skills>
+    </Problem>
+    <Problem name="07Stories" label="Stories" description="Mrs. Hemingway is putting together a collection of her students' short stories to send to parents and teachers. Due to printing costs, she can only choose 5 stories to go into the first collection and each story can only appear once." tutor_flag="tutor" model_file="07Stories.brd" student_interface="8.18.html">
+      <Skills>
+        <Skill name="idenNextPossible" category="8-18-permutations" occurrences="23"/>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" occurrences="4"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" occurrences="4"/>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="8.18 HTML" label="8.18 Permutations" description="Provides varying numbers for different situations and asks student to compute the number of possible permutations." status="active" picture="8.18.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="01Runners" position="1" role="0"/>
+        <Problem name="02Runners" position="2" role="0"/>
+        <Problem name="03Baton" position="3" role="0"/>
+        <Problem name="00Bubble" position="4" role="0"/>
+        <Problem name="04CDs" position="5" role="0"/>
+        <Problem name="05Programmer" position="6" role="0"/>
+        <Problem name="06Seoul" position="7" role="0"/>
+        <Problem name="07Stories" position="8" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="idenNextPossible" category="8-18-permutations" label="Identify number of next choice of possibility" description="Identify number of next choice of possibility" position="0"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" label="Find outcome" description="Find outcome" position="1"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" label="Find outcome expression" description="Find outcome expression" position="2"/>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" label="Enter given" description="Enter given" position="3"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.E" label="E. Data Analysis and Probability" description="E. Data Analysis and Probability" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.E.3" label="E.3. Concepts of Probability" description="E.3. Understand and apply basic concepts of probability." standard_level="assessment_anchor" parent_name="PA.E" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="6th" label="6th Grade" description="6th Grade"/>
+        <Grade name="7th" label="7th Grade" description="7th Grade"/>
+        <Grade name="8th" label="8th Grade" description="8th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.PC" label="Permutations and Combinations" description="Permutations and Combinations" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.7" label="7th Grade" description="7th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.7.SP" label="7.SP. Statistics and Probability" description="7.SP. Statistics and Probability" standard_level="strand" parent_name="CommonCore.7" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="8.18.png" path="Assets"/>
+    <Asset name="00Bubble.brd" path="FinalBRDs"/>
+    <Asset name="01Runners.brd" path="FinalBRDs"/>
+    <Asset name="02Runners.brd" path="FinalBRDs"/>
+    <Asset name="03Baton.brd" path="FinalBRDs"/>
+    <Asset name="04CDs.brd" path="FinalBRDs"/>
+    <Asset name="05Programmer.brd" path="FinalBRDs"/>
+    <Asset name="06Seoul.brd" path="FinalBRDs"/>
+    <Asset name="07Stories.brd" path="FinalBRDs"/>
+    <Asset name="8.18.html" path="HTML"/>
+    <Asset name="8.18.css" path="HTML/Assets"/>
+    <Asset name="finalMassProdtable.txt" path="MassProduction"/>
+    <Asset name="finalTemplate.brd" path="MassProduction"/>
+    <Asset name="translatable.txt" path="MassProduction"/>
+  </Assets>
+</Package>

@@ -1,0 +1,1864 @@
+Problem Name	faded1
+%(startStateNodeName)%	
+%(problem_statement)%	Michael's FishMart sells a variety of fish species. In December, the store sold 1,000 total fish. The list below describes the varieties sold.
+%(problem_list)%	<ul><li>Rainbowfish: 170</li><li>Angelfish: 40</li><li>Goldfish: 90</li><li>Paradisefish: 150</li><li>Oscar Fish: 550</li></ul>
+%(question1)%	(1) What percent of the fish sold were Goldfish?
+%(question2)%	(2) What percent of the fish sold were not Angelfish?
+%(question3)%	(3) What percent of the fish sold were Rainbowfish or Oscar Fish?
+%(question4)%	(4) What percent of the fish sold were not Oscar Fish?
+%(tar1)%	90
+%(tar2)%	960
+%(tar3)%	720
+%(tar4)%	450
+%(tot)%	1000
+%(unreduced1)%	90/1000
+%(unreduced2)%	960/1000
+%(unreduced3)%	720/1000
+%(unreduced4)%	450/1000
+%(100ratio1)%	9/100
+%(100ratio2)%	96/100
+%(100ratio3)%	72/100
+%(100ratio4)%	45/100
+%(percent1)%	9
+%(percent2)%	96
+%(percent3)%	72
+%(percent4)%	45
+%(decimal1)%	0.09
+%(decimal2)%	0.96
+%(decimal3)%	0.72
+%(decimal4)%	0.45
+%(reduced1)%	9/100
+%(reduced2)%	24/25
+%(reduced3)%	18/25
+%(reduced4)%	9/20
+%(gcf1)%	10
+%(gcf2)%	40
+%(gcf3)%	40
+%(gcf4)%	50
+	
+%(tar1_hint1)%	To work through question 1, you must first find the number of Goldfish sold.
+%(tar1_hint2)%	How many Goldfish were sold in Decemeber?
+%(tar1_hint3)%	
+%(tar1_hint4)%	Try entering '90' in the highlighted field.
+%(tar2_hint1)%	To work through question 2, you must first find the number of fish sold that were not Angelfish.
+%(tar2_hint2)%	How many of the fish sold in Decemeber were not Angelfish?
+%(tar2_hint3)%	
+%(tar2_hint4)%	Try entering '960' in the highlighted field.
+%(tar3_hint1)%	To work through question 3, you must first find the number of Rainbowfish and Oscar fish sold.
+%(tar3_hint2)%	How many of the fish sold in Decemeber were Rainbowfish or Oscar Fish?
+%(tar3_hint3)%	The number of fish sold that were Rainbowfish or Oscar Fish is equal to the number of Rainbowfish added to the number of Oscar Fish.
+%(tar3_hint4)%	Try entering '720' in the highlighted field.
+%(tar4_hint1)%	To work through question 4, you must first find the number of fish sold that were not Oscar Fish.
+%(tar4_hint2)%	How many of the fish sold in Decemeber were not Oscar Fish?
+%(tar4_hint3)%	
+%(tar4_hint4)%	Try entering '450' in the highlighted field.
+%(tot_hint1)%	The next step is to figure out the total number of fish sold.
+%(tot_hint2)%	How many total fish were sold in December?
+%(tot_hint3)%	Try entering '1000' in the highlighted field.
+%(unreduced1_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced1_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced1_hint3)%	Try entering '90/1000' in the highlighted field.
+%(unreduced2_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced2_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced2_hint3)%	Try entering '960/1000' in the highlighted field.
+%(unreduced3_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced3_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced3_hint3)%	Try entering '720/1000' in the highlighted field.
+%(unreduced4_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced4_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced4_hint3)%	Try entering '450/1000' in the highlighted field.
+%(100ratio1_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '90/1000' to 100.
+%(100ratio1_hint2)%	What number do you need to divide 1000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio1_hint3)%	Try entering '9/100' in the highlighted field.
+%(100ratio2_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '960/1000' to 100.
+%(100ratio2_hint2)%	What number do you need to divide 1000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio2_hint3)%	Try entering '96/100' in the highlighted field.
+%(100ratio3_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '720/1000' to 100.
+%(100ratio3_hint2)%	What number do you need to divide 1000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio3_hint3)%	Try entering '72/100' in the highlighted field.
+%(100ratio4_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '450/1000' to 100.
+%(100ratio4_hint2)%	What number do you need to divide 1000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio4_hint3)%	Try entering '45/100' in the highlighted field.
+%(percent1_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent1_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent1_hint3)%	Try entering '9' in the highlighted field.
+%(percent2_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent2_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent2_hint3)%	Try entering '96' in the highlighted field.
+%(percent3_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent3_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent3_hint3)%	Try entering '72' in the highlighted field.
+%(percent4_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent4_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent4_hint3)%	Try entering '45' in the highlighted field.
+%(decimal1_hint1)%	The ratio out of 100 is written as '9/100'. Please express this value as a decimal.
+%(decimal1_hint2)%	To find the decimal, divide the numerator of 9/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal1_hint3)%	Try entering '0.09' in the highlighted field.
+%(decimal2_hint1)%	The ratio out of 100 is written as '96/100'. Please express this value as a decimal.
+%(decimal2_hint2)%	To find the decimal, divide the numerator of 96/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal2_hint3)%	Try entering '0.96' in the highlighted field.
+%(decimal3_hint1)%	The ratio out of 100 is written as '72/100'. Please express this value as a decimal.
+%(decimal3_hint2)%	To find the decimal, divide the numerator of 72/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal3_hint3)%	Try entering '0.72' in the highlighted field.
+%(decimal4_hint1)%	The ratio out of 100 is written as '45/100'. Please express this value as a decimal.
+%(decimal4_hint2)%	To find the decimal, divide the numerator of 45/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal4_hint3)%	Try entering '0.45' in the highlighted field.
+%(reduced1_hint1)%	To make the unreduced ratio, '90/1000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced1_hint2)%	90 is the numerator and 1000 is the denominator. Divide 90 and 1000 by their greatest common factor.
+%(reduced1_hint3)%	The greatest common factor of 90 and 1000 is 10.
+%(reduced1_hint4)%	Try entering '9/100' in the highlighted field.
+%(reduced2_hint1)%	To make the unreduced ratio, '960/1000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced2_hint2)%	960 is the numerator and 1000 is the denominator. Divide 960 and 1000 by their greatest common factor.
+%(reduced2_hint3)%	The greatest common factor of '960' and '1000' is '40'.
+%(reduced2_hint4)%	Try entering '24/25' in the highlighted field.
+%(reduced3_hint1)%	To make the unreduced ratio, '720/1000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced3_hint2)%	720 is the numerator and 1000 is the denominator. Divide 720 and 1000 by their greatest common factor.
+%(reduced3_hint3)%	The greatest common factor of '720' and '1000' is '40'.
+%(reduced3_hint4)%	Try entering '18/25' in the highlighted field.
+%(reduced4_hint1)%	To make the unreduced ratio, '450/1000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced4_hint2)%	450 is the numerator and 1000 is the denominator. Divide 450 and 1000 by their greatest common factor.
+%(reduced4_hint3)%	The greatest common factor of '450' and '1000' is '50'.
+%(reduced4_hint4)%	Try entering '9/20' in the highlighted field.
+	
+%(bug1)%	
+%(bug2)%	40
+%(bug3)%	
+%(bug4)%	550
+	
+%(error_message1)%	
+%(error_message2)%	You have entered the number of fish sold that were Angelfish. This question is asking for how many total fish sold were NOT Angelfish. You can subtract the number of Angelfish from the total number of fish sold to find how many were not Angelfish.
+%(error_message3)%	
+%(error_message4)%	You have entered the number of fish sold that were Oscar Fish. This question is asking for how many total fish sold were NOT Oscar Fish. You can subtract the number of Oscar Fish from the total number of fish sold to find how many were not Oscar Fish.
+	
+%(min1)%	0
+%(max1)%	0
+%(min2)%	0
+%(max2)%	1
+%(min3)%	0
+%(max3)%	0
+%(min4)%	0
+%(max4)%	1
+%(7565146944932883601)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(917399830692180717)%	Try entering '0.96' in the highlighted field.
+%(-1833497593299982943)%	
+%(-636783797046426605)%	
+%(1645221181899907971)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3002313564472979001)%	To find the decimal, divide the numerator of 72/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(1888465201918485151)%	The greatest common factor of 90 and 1000 is %(gcf1)%.
+%(-1181257822923671979)%	You have entered the number of fish sold that were Oscar Fish. This question is asking for how many total fish sold were NOT Oscar Fish. You can subtract the number of Oscar Fish from the total number of fish sold to find how many were not Oscar Fish.
+%(-1181262822935671972)%	
+%(5198795231079414010)%	Try entering '0.09' in the highlighted field.
+%(7969913978189485225)%	The greatest common factor of '720' and '1000' is '%(gcf3)%'.
+%(7565145944944883708)%	Try entering '90/1000' in the highlighted field.
+%(3002314564480978986)%	The ratio out of 100 is written as '72/100'. Please express this value as a decimal.
+%(-3119633469235552708)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '720/1000' to 100.
+%(-8714893952752715067)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '960/1000' to 100.
+%(6736889133846231615)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '450/1000' to 100.
+%(3077956359363269943)%	450 is the numerator and 1000 is the denominator. Divide 450 and 1000 by their greatest common factor.
+%(1888463201890485073)%	To make the unreduced ratio, '90/1000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(3077953359363269932)%	To make the unreduced ratio, '450/1000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(9083055518520690370)%	The percent is the ratio out of 100 multiplied by a 100.
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-8306868468448174315)%	How many of the fish sold in Decemeber were Rainbowfish or Oscar Fish?
+%(3147932447584519032)%	Try entering '1000' in the highlighted field.
+%(-636782797038426516)%	Try entering '450' in the highlighted field.
+%(5198793231067413900)%	The ratio out of 100 is written as '9/100'. Please express this value as a decimal.
+%(-6866043604834726440)%	The greatest common factor of '960' and '1000' is '%(gcf2)%'.
+%(3002312564468979004)%	Try entering '0.72' in the highlighted field.
+%(5368664278338448703)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(1645220181895907974)%	Try entering '72' in the highlighted field.
+%(-1223762966594790273)%	Try entering '0.45' in the highlighted field.
+%(1888464201898485058)%	90 is the numerator and 1000 is the denominator. Divide 90 and 1000 by their greatest common factor.
+%(1142586747250679332)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(6546436051857008036)%	Try entering '9/100' in the highlighted field.
+%(1142587747270679417)%	Try entering '450/1000' in the highlighted field.
+%(3283752544553650317)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(7969918978221485286)%	Try entering '18/25' in the highlighted field.
+%(328547711787478872)%	Try entering '9' in the highlighted field.
+%(6736888133854231580)%	What number do you need to divide 1000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-4496519548807638142)%	Please enter '' in the highlighted field.
+%(6546435051853008057)%	What number do you need to divide 1000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-1181260822923671990)%	
+%(-8306869468452174320)%	The number of fish sold that were Rainbowfish or Oscar Fish is equal to the number of Rainbowfish added to the number of Oscar Fish.
+%(3283750544557650411)%	Try entering '960/1000' in the highlighted field.
+%(7969915978185485239)%	To make the unreduced ratio, '720/1000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(6736887133850231569)%	Try entering '45/100' in the highlighted field.
+%(5198796231067413911)%	To find the decimal, divide the numerator of 9/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5162537381742577495)%	Please enter '40' in the highlighted field.
+%(-1833498593303982932)%	How many of the fish sold in Decemeber were not Angelfish?
+%(328548711791478853)%	The percent is the ratio out of 100 multiplied by a 100.
+%(8103488325513018496)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3283749544553650406)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(-6866041604806726394)%	To make the unreduced ratio, '960/1000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(-6866044604842726441)%	Try entering '24/25' in the highlighted field.
+%(3077955359375269914)%	The greatest common factor of '450' and '1000' is '%(gcf4)%'.
+%(2145548300705985814)%	
+%(-3119631469239552806)%	Try entering '72/100' in the highlighted field.
+%(-8714891952740714957)%	Try entering '96/100' in the highlighted field.
+%(1645218181867907928)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-1223764966622790351)%	The ratio out of 100 is written as '45/100'. Please express this value as a decimal.
+%(9083054518512690385)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-8306862468412174241)%	Try entering '720' in the highlighted field.
+%(-1181259822935671961)%	You have entered the number of fish sold that were Angelfish. This question is asking for how many total fish sold were NOT Angelfish. You can subtract the number of Angelfish from the total number of fish sold to find how many were not Angelfish.
+%(-1833500593395983186)%	Try entering '960' in the highlighted field.
+%(3147930447588518982)%	The next step is to figure out the total number of fish sold.
+%(5368663278334448698)%	Try entering '720/1000' in the highlighted field.
+%(-1833495593303983033)%	To work through question 2, you must first find the number of fish sold that were not Angelfish.
+%(2145546300693985792)%	To work through question 1, you must first find the number of Goldfish sold.
+%(917401830688180619)%	The ratio out of 100 is written as '96/100'. Please express this value as a decimal.
+%(-636784797130426770)%	How many of the fish sold in Decemeber were not Oscar Fish?
+%(9083056518540690463)%	Try entering '96' in the highlighted field.
+%(2145551300705985801)%	Try entering '90' in the highlighted field.
+%(-636785797138426851)%	To work through question 4, you must first find the number of fish sold that were not Oscar Fish.
+%(-8714890952656714802)%	What number do you need to divide 1000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(7565143944932883594)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(8103489325517018509)%	Try entering '45' in the highlighted field.
+%(328549711815478918)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(6546438051885008098)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '90/1000' to 100.
+%(-8865737956518473063)%	Please enter '550' in the highlighted field.
+%(1888466201926485120)%	Try entering '9/100' in the highlighted field.
+%(8103491325513018539)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(2577276927472933268)%	Please enter '' in the highlighted field.
+%(3147931447596518997)%	How many total fish were sold in December?
+%(-1223763966614790366)%	To find the decimal, divide the numerator of 45/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5368665278346448684)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(1142585747242679351)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(-6866042604830726459)%	960 is the numerator and 1000 is the denominator. Divide 960 and 1000 by their greatest common factor.
+%(-8306867468440174234)%	To work through question 3, you must first find the number of Rainbowfish and Oscar fish sold.
+%(917398830688180704)%	To find the decimal, divide the numerator of 96/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(-3119632469243552801)%	What number do you need to divide 1000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(2145549300693985851)%	How many Goldfish were sold in Decemeber?
+%(7969912978185485228)%	720 is the numerator and 1000 is the denominator. Divide 720 and 1000 by their greatest common factor.
+%(3077958359375269925)%	Try entering '9/20' in the highlighted field.
+Problem Name	faded2
+%(startStateNodeName)%	state14
+%(problem_statement)%	Walking through a strange forest you encounter a lot of magical creatures. Counting them you find that there are a total of 200 magical beings. The list below describes the creatures that you see.
+%(problem_list)%	<ul><li>Dwarves: 50</li><li>Evil Wolves: 2</li><li>Talking Pigs: 40</li><li>Giants: 22</li><li>Bouncing ferns: 6</li><li>Fairies: 80</li></ul>
+%(question1)%	(1) What percent of magical creatures were talking pigs?
+%(question2)%	(2) What percent of magical creatures were not bouncing ferns?
+%(question3)%	(3) What percent of magical creatures were dwarves or fairies?
+%(question4)%	(4) What percent of magical creatures were not giants?
+%(tar1)%	40
+%(tar2)%	194
+%(tar3)%	130
+%(tar4)%	178
+%(tot)%	200
+%(unreduced1)%	40/200
+%(unreduced2)%	194/200
+%(unreduced3)%	130/200
+%(unreduced4)%	178/200
+%(100ratio1)%	20/100
+%(100ratio2)%	97/100
+%(100ratio3)%	65/100
+%(100ratio4)%	89/100
+%(percent1)%	20
+%(percent2)%	97
+%(percent3)%	65
+%(percent4)%	89
+%(decimal1)%	0.2
+%(decimal2)%	0.97
+%(decimal3)%	0.65
+%(decimal4)%	0.89
+%(reduced1)%	1/5
+%(reduced2)%	97/100
+%(reduced3)%	13/20
+%(reduced4)%	89/100
+%(gcf1)%	40
+%(gcf2)%	2
+%(gcf3)%	10
+%(gcf4)%	2
+	
+%(tar1_hint1)%	To work through question 1, you must first find the number of talking pigs.
+%(tar1_hint2)%	How many talking pigs were in the forest?
+%(tar1_hint3)%	
+%(tar1_hint4)%	Try entering '40' in the highlighted field.
+%(tar2_hint1)%	To work through question 2, you must first find the number of creatures that were not bouncing ferns.
+%(tar2_hint2)%	How many creatures in the forest were not bouncing ferns?
+%(tar2_hint3)%	
+%(tar2_hint4)%	Try entering '194' in the highlighted field.
+%(tar3_hint1)%	To work through question 3, you must first find the number of dwarves and fairies.
+%(tar3_hint2)%	How many creatures in the forest were dwarves or fairies?
+%(tar3_hint3)%	The number of creatures that were dwarves or fairies is equal to the number of dwarves added to the number of fairies.
+%(tar3_hint4)%	Try entering '130' in the highlighted field.
+%(tar4_hint1)%	To work through question 4, you must first find the number of creatures that were not giants.
+%(tar4_hint2)%	How many creatures in the forest were not giants?
+%(tar4_hint3)%	
+%(tar4_hint4)%	Try entering '178' in the highlighted field.
+%(tot_hint1)%	The next step is to figure out the total number of creatures in the forest.
+%(tot_hint2)%	How many total creatures were in the forest?
+%(tot_hint3)%	Try entering '200' in the highlighted field.
+%(unreduced1_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced1_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced1_hint3)%	Try entering '40/200' in the highlighted field.
+%(unreduced2_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced2_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced2_hint3)%	Try entering '194/200' in the highlighted field.
+%(unreduced3_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced3_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced3_hint3)%	Try entering '130/200' in the highlighted field.
+%(unreduced4_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced4_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced4_hint3)%	Try entering '178/200' in the highlighted field.
+%(100ratio1_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '40/200' to 100.
+%(100ratio1_hint2)%	What number do you need to divide 200 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio1_hint3)%	Try entering '20/100' in the highlighted field.
+%(100ratio2_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '194/200' to 100.
+%(100ratio2_hint2)%	What number do you need to divide 200 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio2_hint3)%	Try entering '97/100' in the highlighted field.
+%(100ratio3_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '130/200' to 100.
+%(100ratio3_hint2)%	What number do you need to divide 200 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio3_hint3)%	Try entering '65/100' in the highlighted field.
+%(100ratio4_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '178/200' to 100.
+%(100ratio4_hint2)%	What number do you need to divide 200 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio4_hint3)%	Try entering '89/100' in the highlighted field.
+%(percent1_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent1_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent1_hint3)%	Try entering '20' in the highlighted field.
+%(percent2_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent2_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent2_hint3)%	Try entering '97' in the highlighted field.
+%(percent3_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent3_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent3_hint3)%	Try entering '65' in the highlighted field.
+%(percent4_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent4_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent4_hint3)%	Try entering '89' in the highlighted field.
+%(decimal1_hint1)%	The ratio out of 100 is written as '20/100'. Please express this value as a decimal.
+%(decimal1_hint2)%	To find the decimal, divide the numerator of 20/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal1_hint3)%	Try entering '0.2' in the highlighted field.
+%(decimal2_hint1)%	The ratio out of 100 is written as '97/100'. Please express this value as a decimal.
+%(decimal2_hint2)%	To find the decimal, divide the numerator of 97/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal2_hint3)%	Try entering '0.97' in the highlighted field.
+%(decimal3_hint1)%	The ratio out of 100 is written as '65/100'. Please express this value as a decimal.
+%(decimal3_hint2)%	To find the decimal, divide the numerator of 65/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal3_hint3)%	Try entering '0.65' in the highlighted field.
+%(decimal4_hint1)%	The ratio out of 100 is written as '89/100'. Please express this value as a decimal.
+%(decimal4_hint2)%	To find the decimal, divide the numerator of 89/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal4_hint3)%	Try entering '0.89' in the highlighted field.
+%(reduced1_hint1)%	To make the unreduced ratio, '40/200', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced1_hint2)%	40 is the numerator and 200 is the denominator. Divide 40 and 200 by their greatest common factor.
+%(reduced1_hint3)%	The greatest common factor of 40 and 200 is 40.
+%(reduced1_hint4)%	Try entering '1/5' in the highlighted field.
+%(reduced2_hint1)%	To make the unreduced ratio, '194/200', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced2_hint2)%	194 is the numerator and 200 is the denominator. Divide 194 and 200 by their greatest common factor.
+%(reduced2_hint3)%	The greatest common factor of '194' and '200' is '2'.
+%(reduced2_hint4)%	Try entering '97/100' in the highlighted field.
+%(reduced3_hint1)%	To make the unreduced ratio, '130/200', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced3_hint2)%	130 is the numerator and 200 is the denominator. Divide 130 and 200 by their greatest common factor.
+%(reduced3_hint3)%	The greatest common factor of '130' and '200' is '10'.
+%(reduced3_hint4)%	Try entering '13/20' in the highlighted field.
+%(reduced4_hint1)%	To make the unreduced ratio, '178/200', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced4_hint2)%	178 is the numerator and 200 is the denominator. Divide 178 and 200 by their greatest common factor.
+%(reduced4_hint3)%	The greatest common factor of '178' and '200' is '2'.
+%(reduced4_hint4)%	Try entering '89/100' in the highlighted field.
+	
+%(bug1)%	
+%(bug2)%	6
+%(bug3)%	
+%(bug4)%	22
+	
+%(error_message1)%	
+%(error_message2)%	You have entered the number of creatures that were bouncing ferns. This question is asking for how many total creatures were NOT bouncing ferns. You can subtract the number of bouncing ferns from the total number of creatures to find how many were not bouncing ferns.
+%(error_message3)%	
+%(error_message4)%	You have entered the number of creatures that were giants. This question is asking for how many total creatures were NOT giants. You can subtract the number of giants from the total number of creatures to find how many were not giants.
+	
+%(min1)%	0
+%(max1)%	0
+%(min2)%	0
+%(max2)%	1
+%(min3)%	0
+%(max3)%	0
+%(min4)%	0
+%(max4)%	1
+%(7565146944932883601)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(917399830692180717)%	Try entering '0.97' in the highlighted field.
+%(-1833497593299982943)%	
+%(-636783797046426605)%	
+%(1645221181899907971)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3002313564472979001)%	To find the decimal, divide the numerator of 65/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(1888465201918485151)%	The greatest common factor of 40 and 200 is %(gcf1)%.
+%(-1181257822923671979)%	You have entered the number of creatures that were giants. This question is asking for how many total creatures were NOT giants. You can subtract the number of giants from the total number of creatures to find how many were not giants.
+%(-1181262822935671972)%	
+%(5198795231079414010)%	Try entering '0.2' in the highlighted field.
+%(7969913978189485225)%	The greatest common factor of '130' and '200' is '%(gcf3)%'.
+%(7565145944944883708)%	Try entering '40/200' in the highlighted field.
+%(3002314564480978986)%	The ratio out of 100 is written as '65/100'. Please express this value as a decimal.
+%(-3119633469235552708)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '130/200' to 100.
+%(-8714893952752715067)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '194/200' to 100.
+%(6736889133846231615)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '178/200' to 100.
+%(3077956359363269943)%	178 is the numerator and 200 is the denominator. Divide 178 and 200 by their greatest common factor.
+%(1888463201890485073)%	To make the unreduced ratio, '40/200', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(3077953359363269932)%	To make the unreduced ratio, '178/200', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(9083055518520690370)%	The percent is the ratio out of 100 multiplied by a 100.
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-8306868468448174315)%	How many creatures in the forest were dwarves or fairies?
+%(3147932447584519032)%	Try entering '200' in the highlighted field.
+%(-636782797038426516)%	Try entering '178' in the highlighted field.
+%(5198793231067413900)%	The ratio out of 100 is written as '20/100'. Please express this value as a decimal.
+%(-6866043604834726440)%	The greatest common factor of '194' and '200' is '%(gcf2)%'.
+%(3002312564468979004)%	Try entering '0.65' in the highlighted field.
+%(5368664278338448703)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(1645220181895907974)%	Try entering '65' in the highlighted field.
+%(-1223762966594790273)%	Try entering '0.89' in the highlighted field.
+%(1888464201898485058)%	40 is the numerator and 200 is the denominator. Divide 40 and 200 by their greatest common factor.
+%(1142586747250679332)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(6546436051857008036)%	Try entering '20/100' in the highlighted field.
+%(1142587747270679417)%	Try entering '178/200' in the highlighted field.
+%(3283752544553650317)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(7969918978221485286)%	Try entering '13/20' in the highlighted field.
+%(328547711787478872)%	Try entering '20' in the highlighted field.
+%(6736888133854231580)%	What number do you need to divide 200 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-4496519548807638142)%	Please enter '' in the highlighted field.
+%(6546435051853008057)%	What number do you need to divide 200 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-1181260822923671990)%	
+%(-8306869468452174320)%	The number of creatures that were dwarves or fairies is equal to the number of dwarves added to the number of fairies.
+%(3283750544557650411)%	Try entering '194/200' in the highlighted field.
+%(7969915978185485239)%	To make the unreduced ratio, '130/200', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(6736887133850231569)%	Try entering '89/100' in the highlighted field.
+%(5198796231067413911)%	To find the decimal, divide the numerator of 20/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5162537381742577495)%	Please enter '6' in the highlighted field.
+%(-1833498593303982932)%	How many creatures in the forest were not bouncing ferns?
+%(328548711791478853)%	The percent is the ratio out of 100 multiplied by a 100.
+%(8103488325513018496)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3283749544553650406)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(-6866041604806726394)%	To make the unreduced ratio, '194/200', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(-6866044604842726441)%	Try entering '97/100' in the highlighted field.
+%(3077955359375269914)%	The greatest common factor of '178' and '200' is '%(gcf4)%'.
+%(2145548300705985814)%	
+%(-3119631469239552806)%	Try entering '65/100' in the highlighted field.
+%(-8714891952740714957)%	Try entering '97/100' in the highlighted field.
+%(1645218181867907928)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-1223764966622790351)%	The ratio out of 100 is written as '89/100'. Please express this value as a decimal.
+%(9083054518512690385)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-8306862468412174241)%	Try entering '130' in the highlighted field.
+%(-1181259822935671961)%	You have entered the number of creatures that were bouncing ferns. This question is asking for how many total creatures were NOT bouncing ferns. You can subtract the number of bouncing ferns from the total number of creatures to find how many were not bouncing ferns.
+%(-1833500593395983186)%	Try entering '194' in the highlighted field.
+%(3147930447588518982)%	The next step is to figure out the total number of creatures in the forest.
+%(5368663278334448698)%	Try entering '130/200' in the highlighted field.
+%(-1833495593303983033)%	To work through question 2, you must first find the number of creatures that were not bouncing ferns.
+%(2145546300693985792)%	To work through question 1, you must first find the number of talking pigs.
+%(917401830688180619)%	The ratio out of 100 is written as '97/100'. Please express this value as a decimal.
+%(-636784797130426770)%	How many creatures in the forest were not giants?
+%(9083056518540690463)%	Try entering '97' in the highlighted field.
+%(2145551300705985801)%	Try entering '40' in the highlighted field.
+%(-636785797138426851)%	To work through question 4, you must first find the number of creatures that were not giants.
+%(-8714890952656714802)%	What number do you need to divide 200 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(7565143944932883594)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(8103489325517018509)%	Try entering '89' in the highlighted field.
+%(328549711815478918)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(6546438051885008098)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '40/200' to 100.
+%(-8865737956518473063)%	Please enter '22' in the highlighted field.
+%(1888466201926485120)%	Try entering '1/5' in the highlighted field.
+%(8103491325513018539)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(2577276927472933268)%	Please enter '' in the highlighted field.
+%(3147931447596518997)%	How many total creatures were in the forest?
+%(-1223763966614790366)%	To find the decimal, divide the numerator of 89/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5368665278346448684)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(1142585747242679351)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(-6866042604830726459)%	194 is the numerator and 200 is the denominator. Divide 194 and 200 by their greatest common factor.
+%(-8306867468440174234)%	To work through question 3, you must first find the number of dwarves and fairies.
+%(917398830688180704)%	To find the decimal, divide the numerator of 97/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(-3119632469243552801)%	What number do you need to divide 200 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(2145549300693985851)%	How many talking pigs were in the forest?
+%(7969912978185485228)%	130 is the numerator and 200 is the denominator. Divide 130 and 200 by their greatest common factor.
+%(3077958359375269925)%	Try entering '89/100' in the highlighted field.
+Problem Name	faded3
+%(startStateNodeName)%	state11
+%(problem_statement)%	In Felipe's Ristorante Italiano, they serve many Italian dishes. The most commonly sold items are pizza, lasagna, spaghetti with meatballs, eggplant parmigiana, and pasta primavera. Felipe's head chef reported the following numbers of meals served during the week of May 20th.
+%(problem_list)%	<ul><li>Pizza: 75</li><li>Lasagna: 125</li><li>Spaghetti with Meatballs: 100</li><li>Eggplant Parmigiana: 105</li><li>Pasta Primavera: 95</li></ul>
+%(question1)%	(1) What percent of meals served were lasagna?
+%(question2)%	(2) What percent of meals served were eggplant parmigiana or pasta primavera?
+%(question3)%	(3) What percent of meals served were not pizza?
+%(question4)%	(4) What percent of meals served were spaghetti with meatballs?
+%(tar1)%	125
+%(tar2)%	200
+%(tar3)%	425
+%(tar4)%	100
+%(tot)%	500
+%(unreduced1)%	125/500
+%(unreduced2)%	200/500
+%(unreduced3)%	425/500
+%(unreduced4)%	100/500
+%(100ratio1)%	25/100
+%(100ratio2)%	40/100
+%(100ratio3)%	85/100
+%(100ratio4)%	20/100
+%(percent1)%	25
+%(percent2)%	40
+%(percent3)%	85
+%(percent4)%	20
+%(decimal1)%	0.25
+%(decimal2)%	0.4
+%(decimal3)%	0.85
+%(decimal4)%	.2
+%(reduced1)%	1/4
+%(reduced2)%	2/5
+%(reduced3)%	17/20
+%(reduced4)%	1/5
+%(gcf1)%	125
+%(gcf2)%	100
+%(gcf3)%	25
+%(gcf4)%	100
+	
+%(tar1_hint1)%	To work through question 1, you must first find the number of lasagna dishes sold.
+%(tar1_hint2)%	How many meals served were lasagna?
+%(tar1_hint3)%	
+%(tar1_hint4)%	Try entering '125' in the highlighted field.
+%(tar2_hint1)%	To work through question 2, you must first find the number of eggplant parmigiana and pasta primavera dishes sold.
+%(tar2_hint2)%	How many meals served were eggplant parmigiana or pasta primavera?
+%(tar2_hint3)%	The number of meals that were eggplant parmigiana or pasta primavera is equal to the number of eggplant parmigiana meals added to the number of pasta primavera meals.
+%(tar2_hint4)%	Try entering '200' in the highlighted field.
+%(tar3_hint1)%	To work through question 3, you must first find the number of dishes served that were not pizza.
+%(tar3_hint2)%	How many meals served were not pizza?
+%(tar3_hint3)%	
+%(tar3_hint4)%	Try entering '425' in the highlighted field.
+%(tar4_hint1)%	To work through question 4, you must first find the number of dishes served that were spaghetti and meatballs.
+%(tar4_hint2)%	How many meals served were not spaghetti and meatballs?
+%(tar4_hint3)%	
+%(tar4_hint4)%	Try entering '100' in the highlighted field.
+%(tot_hint1)%	The next step is to figure out the total number of meals served.
+%(tot_hint2)%	How many total meals were served during the week of May 20th?
+%(tot_hint3)%	Try entering '500' in the highlighted field.
+%(unreduced1_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced1_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced1_hint3)%	Try entering '125/500' in the highlighted field.
+%(unreduced2_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced2_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced2_hint3)%	Try entering '200/500' in the highlighted field.
+%(unreduced3_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced3_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced3_hint3)%	Try entering '425/500' in the highlighted field.
+%(unreduced4_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced4_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced4_hint3)%	Try entering '100/500' in the highlighted field.
+%(100ratio1_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '125/500' to 100.
+%(100ratio1_hint2)%	What number do you need to divide 500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio1_hint3)%	Try entering '25/100' in the highlighted field.
+%(100ratio2_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '200/500' to 100.
+%(100ratio2_hint2)%	What number do you need to divide 500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio2_hint3)%	Try entering '40/100' in the highlighted field.
+%(100ratio3_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '425/500' to 100.
+%(100ratio3_hint2)%	What number do you need to divide 500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio3_hint3)%	Try entering '85/100' in the highlighted field.
+%(100ratio4_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '100/500' to 100.
+%(100ratio4_hint2)%	What number do you need to divide 500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio4_hint3)%	Try entering '20/100' in the highlighted field.
+%(percent1_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent1_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent1_hint3)%	Try entering '25' in the highlighted field.
+%(percent2_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent2_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent2_hint3)%	Try entering '40' in the highlighted field.
+%(percent3_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent3_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent3_hint3)%	Try entering '85' in the highlighted field.
+%(percent4_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent4_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent4_hint3)%	Try entering '20' in the highlighted field.
+%(decimal1_hint1)%	The ratio out of 100 is written as '25/100'. Please express this value as a decimal.
+%(decimal1_hint2)%	To find the decimal, divide the numerator of 25/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal1_hint3)%	Try entering '0.25' in the highlighted field.
+%(decimal2_hint1)%	The ratio out of 100 is written as '40/100'. Please express this value as a decimal.
+%(decimal2_hint2)%	To find the decimal, divide the numerator of 40/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal2_hint3)%	Try entering '0.4' in the highlighted field.
+%(decimal3_hint1)%	The ratio out of 100 is written as '85/100'. Please express this value as a decimal.
+%(decimal3_hint2)%	To find the decimal, divide the numerator of 85/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal3_hint3)%	Try entering '0.85' in the highlighted field.
+%(decimal4_hint1)%	The ratio out of 100 is written as '20/100'. Please express this value as a decimal.
+%(decimal4_hint2)%	To find the decimal, divide the numerator of 20/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal4_hint3)%	Try entering '.2' in the highlighted field.
+%(reduced1_hint1)%	To make the unreduced ratio, '125/500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced1_hint2)%	125 is the numerator and 500 is the denominator. Divide 125 and 500 by their greatest common factor.
+%(reduced1_hint3)%	The greatest common factor of 125 and 500 is 125.
+%(reduced1_hint4)%	Try entering '1/4' in the highlighted field.
+%(reduced2_hint1)%	To make the unreduced ratio, '200/500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced2_hint2)%	200 is the numerator and 500 is the denominator. Divide 200 and 500 by their greatest common factor.
+%(reduced2_hint3)%	The greatest common factor of '200' and '500' is '100'.
+%(reduced2_hint4)%	Try entering '2/5' in the highlighted field.
+%(reduced3_hint1)%	To make the unreduced ratio, '425/500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced3_hint2)%	425 is the numerator and 500 is the denominator. Divide 425 and 500 by their greatest common factor.
+%(reduced3_hint3)%	The greatest common factor of '425' and '500' is '25'.
+%(reduced3_hint4)%	Try entering '17/20' in the highlighted field.
+%(reduced4_hint1)%	To make the unreduced ratio, '100/500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced4_hint2)%	100 is the numerator and 500 is the denominator. Divide 100 and 500 by their greatest common factor.
+%(reduced4_hint3)%	The greatest common factor of '100' and '500' is '100'.
+%(reduced4_hint4)%	Try entering '1/5' in the highlighted field.
+	
+%(bug1)%	
+%(bug2)%	
+%(bug3)%	75
+%(bug4)%	
+	
+%(error_message1)%	
+%(error_message2)%	
+%(error_message3)%	You have entered the number of meals served that were pizza. This question is asking for how many total meals were NOT pizza. You can subtract the number of pizzas served from the total number of meals served to find how many were not pizza.
+%(error_message4)%	
+	
+%(min1)%	0
+%(max1)%	0
+%(min2)%	0
+%(max2)%	0
+%(min3)%	0
+%(max3)%	1
+%(min4)%	0
+%(max4)%	0
+%(7565146944932883601)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(917399830692180717)%	Try entering '0.4' in the highlighted field.
+%(-1833497593299982943)%	The number of meals that were eggplant parmigiana or pasta primavera is equal to the number of eggplant parmigiana meals added to the number of pasta primavera meals.
+%(-636783797046426605)%	
+%(1645221181899907971)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3002313564472979001)%	To find the decimal, divide the numerator of 85/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(1888465201918485151)%	The greatest common factor of 125 and 500 is %(gcf1)%.
+%(-1181257822923671979)%	
+%(-1181262822935671972)%	
+%(5198795231079414010)%	Try entering '0.25' in the highlighted field.
+%(7969913978189485225)%	The greatest common factor of '425' and '500' is '%(gcf3)%'.
+%(7565145944944883708)%	Try entering '125/500' in the highlighted field.
+%(3002314564480978986)%	The ratio out of 100 is written as '85/100'. Please express this value as a decimal.
+%(-3119633469235552708)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '425/500' to 100.
+%(-8714893952752715067)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '200/500' to 100.
+%(6736889133846231615)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '100/500' to 100.
+%(3077956359363269943)%	100 is the numerator and 500 is the denominator. Divide 100 and 500 by their greatest common factor.
+%(1888463201890485073)%	To make the unreduced ratio, '125/500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(3077953359363269932)%	To make the unreduced ratio, '100/500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(9083055518520690370)%	The percent is the ratio out of 100 multiplied by a 100.
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-8306868468448174315)%	How many meals served were not pizza?
+%(3147932447584519032)%	Try entering '500' in the highlighted field.
+%(-636782797038426516)%	Try entering '100' in the highlighted field.
+%(5198793231067413900)%	The ratio out of 100 is written as '25/100'. Please express this value as a decimal.
+%(-6866043604834726440)%	The greatest common factor of '200' and '500' is '%(gcf2)%'.
+%(3002312564468979004)%	Try entering '0.85' in the highlighted field.
+%(5368664278338448703)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(1645220181895907974)%	Try entering '85' in the highlighted field.
+%(-1223762966594790273)%	Try entering '.2' in the highlighted field.
+%(1888464201898485058)%	125 is the numerator and 500 is the denominator. Divide 125 and 500 by their greatest common factor.
+%(1142586747250679332)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(6546436051857008036)%	Try entering '25/100' in the highlighted field.
+%(1142587747270679417)%	Try entering '100/500' in the highlighted field.
+%(3283752544553650317)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(7969918978221485286)%	Try entering '17/20' in the highlighted field.
+%(328547711787478872)%	Try entering '25' in the highlighted field.
+%(6736888133854231580)%	What number do you need to divide 500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-4496519548807638142)%	Please enter '' in the highlighted field.
+%(6546435051853008057)%	What number do you need to divide 500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-1181260822923671990)%	You have entered the number of meals served that were pizza. This question is asking for how many total meals were NOT pizza. You can subtract the number of pizzas served from the total number of meals served to find how many were not pizza.
+%(-8306869468452174320)%	
+%(3283750544557650411)%	Try entering '200/500' in the highlighted field.
+%(7969915978185485239)%	To make the unreduced ratio, '425/500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(6736887133850231569)%	Try entering '20/100' in the highlighted field.
+%(5198796231067413911)%	To find the decimal, divide the numerator of 25/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5162537381742577495)%	Please enter '' in the highlighted field.
+%(-1833498593303982932)%	How many meals served were eggplant parmigiana or pasta primavera?
+%(328548711791478853)%	The percent is the ratio out of 100 multiplied by a 100.
+%(8103488325513018496)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3283749544553650406)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(-6866041604806726394)%	To make the unreduced ratio, '200/500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(-6866044604842726441)%	Try entering '2/5' in the highlighted field.
+%(3077955359375269914)%	The greatest common factor of '100' and '500' is '%(gcf4)%'.
+%(2145548300705985814)%	
+%(-3119631469239552806)%	Try entering '85/100' in the highlighted field.
+%(-8714891952740714957)%	Try entering '40/100' in the highlighted field.
+%(1645218181867907928)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-1223764966622790351)%	The ratio out of 100 is written as '20/100'. Please express this value as a decimal.
+%(9083054518512690385)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-8306862468412174241)%	Try entering '425' in the highlighted field.
+%(-1181259822935671961)%	
+%(-1833500593395983186)%	Try entering '200' in the highlighted field.
+%(3147930447588518982)%	The next step is to figure out the total number of meals served.
+%(5368663278334448698)%	Try entering '425/500' in the highlighted field.
+%(-1833495593303983033)%	To work through question 2, you must first find the number of eggplant parmigiana and pasta primavera dishes sold.
+%(2145546300693985792)%	To work through question 1, you must first find the number of lasagna dishes sold.
+%(917401830688180619)%	The ratio out of 100 is written as '40/100'. Please express this value as a decimal.
+%(-636784797130426770)%	How many meals served were not spaghetti and meatballs?
+%(9083056518540690463)%	Try entering '40' in the highlighted field.
+%(2145551300705985801)%	Try entering '125' in the highlighted field.
+%(-636785797138426851)%	To work through question 4, you must first find the number of dishes served that were spaghetti and meatballs.
+%(-8714890952656714802)%	What number do you need to divide 500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(7565143944932883594)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(8103489325517018509)%	Try entering '20' in the highlighted field.
+%(328549711815478918)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(6546438051885008098)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '125/500' to 100.
+%(-8865737956518473063)%	Please enter '' in the highlighted field.
+%(1888466201926485120)%	Try entering '1/4' in the highlighted field.
+%(8103491325513018539)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(2577276927472933268)%	Please enter '75' in the highlighted field.
+%(3147931447596518997)%	How many total meals were served during the week of May 20th?
+%(-1223763966614790366)%	To find the decimal, divide the numerator of 20/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5368665278346448684)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(1142585747242679351)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(-6866042604830726459)%	200 is the numerator and 500 is the denominator. Divide 200 and 500 by their greatest common factor.
+%(-8306867468440174234)%	To work through question 3, you must first find the number of dishes served that were not pizza.
+%(917398830688180704)%	To find the decimal, divide the numerator of 40/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(-3119632469243552801)%	What number do you need to divide 500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(2145549300693985851)%	How many meals served were lasagna?
+%(7969912978185485228)%	425 is the numerator and 500 is the denominator. Divide 425 and 500 by their greatest common factor.
+%(3077958359375269925)%	Try entering '1/5' in the highlighted field.
+Problem Name	Problem1
+%(startStateNodeName)%	state2
+%(problem_statement)%	Lea teaches freshman Chemistry at the university. This semester, there are 800 students enrolled in the class. The list below shows how many students are enrolled in each section.
+%(problem_list)%	<ul><li>Section 1: 120</li><li>Section 2: 145</li><li>Section 3: 80</li><li>Section 4: 160</li><li>Section 5: 95</li><li>Section 6: 200</li></ul>
+%(question1)%	(1) What percent of the students are enrolled in sections 1 or 6?
+%(question2)%	(2) What percent of the students are enrolled in sections 2 or 5?
+%(question3)%	(3) What percent of the students are not enrolled in section 4?
+%(question4)%	(4) What percent of the students are enrolled in section 6?
+%(tar1)%	320
+%(tar2)%	240
+%(tar3)%	640
+%(tar4)%	200
+%(tot)%	800
+%(unreduced1)%	320/800
+%(unreduced2)%	240/800
+%(unreduced3)%	640/800
+%(unreduced4)%	200/800
+%(100ratio1)%	40/100
+%(100ratio2)%	30/100
+%(100ratio3)%	80/100
+%(100ratio4)%	25/100
+%(percent1)%	40
+%(percent2)%	30
+%(percent3)%	80
+%(percent4)%	25
+%(decimal1)%	0.4
+%(decimal2)%	0.3
+%(decimal3)%	0.8
+%(decimal4)%	0.25
+%(reduced1)%	2/5
+%(reduced2)%	3/10
+%(reduced3)%	4/5
+%(reduced4)%	1/4
+%(gcf1)%	160
+%(gcf2)%	80
+%(gcf3)%	160
+%(gcf4)%	200
+	
+%(tar1_hint1)%	To work through question 1, you must first find the number of students enrolled in sections 1 and 6.
+%(tar1_hint2)%	How many students are enrolled in sections 1 or 6?
+%(tar1_hint3)%	The number of students in either section 1 or section 6 is equal to the number of students in section 1 added to the number of students in section 6.
+%(tar1_hint4)%	Try entering '320' in the highlighted field.
+%(tar2_hint1)%	To work through question 2, you must first find the number of students enrolled in sections 2 and 5.
+%(tar2_hint2)%	How many students are enrolled in sections 2 or 5?
+%(tar2_hint3)%	The number of students in either section 2 or section 5 is equal to the number of students in section 2 added to the number of students in section 5.
+%(tar2_hint4)%	Try entering '240' in the highlighted field.
+%(tar3_hint1)%	To work through question 4, you must first find the number of students not enrolled in section 4.
+%(tar3_hint2)%	How many students are not enrolled in section 4?
+%(tar3_hint3)%	
+%(tar3_hint4)%	Try entering '640' in the highlighted field.
+%(tar4_hint1)%	To work through question 4, you must first find the number of students enrolled in section6.
+%(tar4_hint2)%	How many students are enrolled in section 6?
+%(tar4_hint3)%	
+%(tar4_hint4)%	Try entering '200' in the highlighted field.
+%(tot_hint1)%	The next step is to figure out the total number of students enrolled in the class.
+%(tot_hint2)%	How many total students are enrolled in freshman Chemistry?
+%(tot_hint3)%	Try entering '800' in the highlighted field.
+%(unreduced1_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced1_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced1_hint3)%	Try entering '320/800' in the highlighted field.
+%(unreduced2_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced2_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced2_hint3)%	Try entering '240/800' in the highlighted field.
+%(unreduced3_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced3_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced3_hint3)%	Try entering '640/800' in the highlighted field.
+%(unreduced4_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced4_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced4_hint3)%	Try entering '200/800' in the highlighted field.
+%(100ratio1_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '320/800' to 100.
+%(100ratio1_hint2)%	What number do you need to divide 800 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio1_hint3)%	Try entering '40/100' in the highlighted field.
+%(100ratio2_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '240/800' to 100.
+%(100ratio2_hint2)%	What number do you need to divide 800 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio2_hint3)%	Try entering '30/100' in the highlighted field.
+%(100ratio3_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '640/800' to 100.
+%(100ratio3_hint2)%	What number do you need to divide 800 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio3_hint3)%	Try entering '80/100' in the highlighted field.
+%(100ratio4_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '200/800' to 100.
+%(100ratio4_hint2)%	What number do you need to divide 800 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio4_hint3)%	Try entering '25/100' in the highlighted field.
+%(percent1_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent1_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent1_hint3)%	Try entering '40' in the highlighted field.
+%(percent2_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent2_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent2_hint3)%	Try entering '30' in the highlighted field.
+%(percent3_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent3_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent3_hint3)%	Try entering '80' in the highlighted field.
+%(percent4_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent4_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent4_hint3)%	Try entering '25' in the highlighted field.
+%(decimal1_hint1)%	The ratio out of 100 is written as '40/100'. Please express this value as a decimal.
+%(decimal1_hint2)%	To find the decimal, divide the numerator of 40/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal1_hint3)%	Try entering '0.4' in the highlighted field.
+%(decimal2_hint1)%	The ratio out of 100 is written as '30/100'. Please express this value as a decimal.
+%(decimal2_hint2)%	To find the decimal, divide the numerator of 30/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal2_hint3)%	Try entering '0.3' in the highlighted field.
+%(decimal3_hint1)%	The ratio out of 100 is written as '80/100'. Please express this value as a decimal.
+%(decimal3_hint2)%	To find the decimal, divide the numerator of 80/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal3_hint3)%	Try entering '0.8' in the highlighted field.
+%(decimal4_hint1)%	The ratio out of 100 is written as '25/100'. Please express this value as a decimal.
+%(decimal4_hint2)%	To find the decimal, divide the numerator of 25/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal4_hint3)%	Try entering '0.25' in the highlighted field.
+%(reduced1_hint1)%	To make the unreduced ratio, '320/800', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced1_hint2)%	320 is the numerator and 800 is the denominator. Divide 320 and 800 by their greatest common factor.
+%(reduced1_hint3)%	The greatest common factor of 320 and 800 is 160.
+%(reduced1_hint4)%	Try entering '2/5' in the highlighted field.
+%(reduced2_hint1)%	To make the unreduced ratio, '240/800', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced2_hint2)%	240 is the numerator and 800 is the denominator. Divide 240 and 800 by their greatest common factor.
+%(reduced2_hint3)%	The greatest common factor of '240' and '800' is '80'.
+%(reduced2_hint4)%	Try entering '3/10' in the highlighted field.
+%(reduced3_hint1)%	To make the unreduced ratio, '640/800', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced3_hint2)%	640 is the numerator and 800 is the denominator. Divide 640 and 800 by their greatest common factor.
+%(reduced3_hint3)%	The greatest common factor of '640' and '800' is '160'.
+%(reduced3_hint4)%	Try entering '4/5' in the highlighted field.
+%(reduced4_hint1)%	To make the unreduced ratio, '200/800', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced4_hint2)%	200 is the numerator and 800 is the denominator. Divide 200 and 800 by their greatest common factor.
+%(reduced4_hint3)%	The greatest common factor of '200' and '800' is '200'.
+%(reduced4_hint4)%	Try entering '1/4' in the highlighted field.
+	
+%(bug1)%	
+%(bug2)%	
+%(bug3)%	160
+%(bug4)%	
+	
+%(error_message1)%	
+%(error_message2)%	
+%(error_message3)%	You have entered the number of students enrolled in Section 4. This question is asking for how many students were NOT enrolled in Section 4. You can subtract the number of students in Section 4 from the total number of students to find how many were not in Section 4.
+%(error_message4)%	
+	
+%(min1)%	0
+%(max1)%	0
+%(min2)%	0
+%(max2)%	0
+%(min3)%	0
+%(max3)%	1
+%(min4)%	0
+%(max4)%	0
+%(7565146944932883601)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(917399830692180717)%	Try entering '0.3' in the highlighted field.
+%(-1833497593299982943)%	The number of students in either section 2 or section 5 is equal to the number of students in section 2 added to the number of students in section 5.
+%(-636783797046426605)%	
+%(1645221181899907971)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3002313564472979001)%	To find the decimal, divide the numerator of 80/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(1888465201918485151)%	The greatest common factor of 320 and 800 is %(gcf1)%.
+%(-1181257822923671979)%	
+%(-1181262822935671972)%	
+%(5198795231079414010)%	Try entering '0.4' in the highlighted field.
+%(7969913978189485225)%	The greatest common factor of '640' and '800' is '%(gcf3)%'.
+%(7565145944944883708)%	Try entering '320/800' in the highlighted field.
+%(3002314564480978986)%	The ratio out of 100 is written as '80/100'. Please express this value as a decimal.
+%(-3119633469235552708)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '640/800' to 100.
+%(-8714893952752715067)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '240/800' to 100.
+%(6736889133846231615)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '200/800' to 100.
+%(3077956359363269943)%	200 is the numerator and 800 is the denominator. Divide 200 and 800 by their greatest common factor.
+%(1888463201890485073)%	To make the unreduced ratio, '320/800', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(3077953359363269932)%	To make the unreduced ratio, '200/800', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(9083055518520690370)%	The percent is the ratio out of 100 multiplied by a 100.
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-8306868468448174315)%	How many students are not enrolled in section 4?
+%(3147932447584519032)%	Try entering '800' in the highlighted field.
+%(-636782797038426516)%	Try entering '200' in the highlighted field.
+%(5198793231067413900)%	The ratio out of 100 is written as '40/100'. Please express this value as a decimal.
+%(-6866043604834726440)%	The greatest common factor of '240' and '800' is '%(gcf2)%'.
+%(3002312564468979004)%	Try entering '0.8' in the highlighted field.
+%(5368664278338448703)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(1645220181895907974)%	Try entering '80' in the highlighted field.
+%(-1223762966594790273)%	Try entering '0.25' in the highlighted field.
+%(1888464201898485058)%	320 is the numerator and 800 is the denominator. Divide 320 and 800 by their greatest common factor.
+%(1142586747250679332)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(6546436051857008036)%	Try entering '40/100' in the highlighted field.
+%(1142587747270679417)%	Try entering '200/800' in the highlighted field.
+%(3283752544553650317)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(7969918978221485286)%	Try entering '4/5' in the highlighted field.
+%(328547711787478872)%	Try entering '40' in the highlighted field.
+%(6736888133854231580)%	What number do you need to divide 800 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-4496519548807638142)%	Please enter '' in the highlighted field.
+%(6546435051853008057)%	What number do you need to divide 800 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-1181260822923671990)%	You have entered the number of students enrolled in Section 4. This question is asking for how many students were NOT enrolled in Section 4. You can subtract the number of students in Section 4 from the total number of students to find how many were not in Section 4.
+%(-8306869468452174320)%	
+%(3283750544557650411)%	Try entering '240/800' in the highlighted field.
+%(7969915978185485239)%	To make the unreduced ratio, '640/800', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(6736887133850231569)%	Try entering '25/100' in the highlighted field.
+%(5198796231067413911)%	To find the decimal, divide the numerator of 40/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5162537381742577495)%	Please enter '' in the highlighted field.
+%(-1833498593303982932)%	How many students are enrolled in sections 2 or 5?
+%(328548711791478853)%	The percent is the ratio out of 100 multiplied by a 100.
+%(8103488325513018496)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3283749544553650406)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(-6866041604806726394)%	To make the unreduced ratio, '240/800', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(-6866044604842726441)%	Try entering '3/10' in the highlighted field.
+%(3077955359375269914)%	The greatest common factor of '200' and '800' is '%(gcf4)%'.
+%(2145548300705985814)%	The number of students in either section 1 or section 6 is equal to the number of students in section 1 added to the number of students in section 6.
+%(-3119631469239552806)%	Try entering '80/100' in the highlighted field.
+%(-8714891952740714957)%	Try entering '30/100' in the highlighted field.
+%(1645218181867907928)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-1223764966622790351)%	The ratio out of 100 is written as '25/100'. Please express this value as a decimal.
+%(9083054518512690385)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-8306862468412174241)%	Try entering '640' in the highlighted field.
+%(-1181259822935671961)%	
+%(-1833500593395983186)%	Try entering '240' in the highlighted field.
+%(3147930447588518982)%	The next step is to figure out the total number of students enrolled in the class.
+%(5368663278334448698)%	Try entering '640/800' in the highlighted field.
+%(-1833495593303983033)%	To work through question 2, you must first find the number of students enrolled in sections 2 and 5.
+%(2145546300693985792)%	To work through question 1, you must first find the number of students enrolled in sections 1 and 6.
+%(917401830688180619)%	The ratio out of 100 is written as '30/100'. Please express this value as a decimal.
+%(-636784797130426770)%	How many students are enrolled in section 6?
+%(9083056518540690463)%	Try entering '30' in the highlighted field.
+%(2145551300705985801)%	Try entering '320' in the highlighted field.
+%(-636785797138426851)%	To work through question 4, you must first find the number of students enrolled in section6.
+%(-8714890952656714802)%	What number do you need to divide 800 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(7565143944932883594)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(8103489325517018509)%	Try entering '25' in the highlighted field.
+%(328549711815478918)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(6546438051885008098)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '320/800' to 100.
+%(-8865737956518473063)%	Please enter '' in the highlighted field.
+%(1888466201926485120)%	Try entering '2/5' in the highlighted field.
+%(8103491325513018539)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(2577276927472933268)%	Please enter '160' in the highlighted field.
+%(3147931447596518997)%	How many total students are enrolled in freshman Chemistry?
+%(-1223763966614790366)%	To find the decimal, divide the numerator of 25/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5368665278346448684)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(1142585747242679351)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(-6866042604830726459)%	240 is the numerator and 800 is the denominator. Divide 240 and 800 by their greatest common factor.
+%(-8306867468440174234)%	To work through question 4, you must first find the number of students not enrolled in section 4.
+%(917398830688180704)%	To find the decimal, divide the numerator of 30/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(-3119632469243552801)%	What number do you need to divide 800 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(2145549300693985851)%	How many students are enrolled in sections 1 or 6?
+%(7969912978185485228)%	640 is the numerator and 800 is the denominator. Divide 640 and 800 by their greatest common factor.
+%(3077958359375269925)%	Try entering '1/4' in the highlighted field.
+Problem Name	Problem2
+%(startStateNodeName)%	
+%(problem_statement)%	Katie participates in every fundraiser during the year for band. At the end of the year, she has raised $2000. The list below describes how much money she raised in each fundraiser.
+%(problem_list)%	<ul><li>Candy: $800</li><li>Pizza: $700</li><li>T-shirt: $300</li><li>Sandwich: $200</li></ul>
+%(question1)%	(1) What percent of the total raised was from selling candy or sandwiches?
+%(question2)%	(2) What percent of the total raised was from selling candy or pizza?
+%(question3)%	(3) What percent of her total was raised by selling T-shirts?
+%(question4)%	(4) What percent of the total raised was from selling pizza, T-shirts, or sandwiches?
+%(tar1)%	1000
+%(tar2)%	1500
+%(tar3)%	300
+%(tar4)%	1200
+%(tot)%	2000
+%(unreduced1)%	1000/2000
+%(unreduced2)%	1500/2000
+%(unreduced3)%	300/2000
+%(unreduced4)%	1200/2000
+%(100ratio1)%	50/100
+%(100ratio2)%	75/100
+%(100ratio3)%	15/100
+%(100ratio4)%	60/100
+%(percent1)%	50
+%(percent2)%	75
+%(percent3)%	15
+%(percent4)%	60
+%(decimal1)%	0.5
+%(decimal2)%	0.75
+%(decimal3)%	0.15
+%(decimal4)%	0.6
+%(reduced1)%	1/2
+%(reduced2)%	3/4
+%(reduced3)%	3/20
+%(reduced4)%	3/5
+%(gcf1)%	1000
+%(gcf2)%	500
+%(gcf3)%	100
+%(gcf4)%	200
+	
+%(tar1_hint1)%	To work through question 1, you must first find the amount of money Katie raised from selling candy or sandwiches.
+%(tar1_hint2)%	How much money did Katie raise from selling candy or sandwiches?
+%(tar1_hint3)%	The money raised from selling candy or sandwiches is equal to the money raised from selling candy added to the money raised from selling sandwiches.
+%(tar1_hint4)%	Try entering '1000' in the highlighted field.
+%(tar2_hint1)%	To work through question 2, you must first find the amount of money Katie raised from selling candy or pizza.
+%(tar2_hint2)%	How much money did Katie raise from selling candy or pizza?
+%(tar2_hint3)%	The money raised from selling candy or pizza is equal to the money raised from selling candy added to the money raised from selling pizza.
+%(tar2_hint4)%	Try entering '1500' in the highlighted field.
+%(tar3_hint1)%	To work through question 3, you must first find the amount of money Katie raised from selling T-shirts.
+%(tar3_hint2)%	How much money did Katie raise from selling T-shirts?
+%(tar3_hint3)%	
+%(tar3_hint4)%	Try entering '300' in the highlighted field.
+%(tar4_hint1)%	To work through question 4, you must first find the amount of money Katie raised from selling pizza, T-shirts, or sandwiches.
+%(tar4_hint2)%	How much money did Katie raise from selling pizza, T-shirts, or sandwiches?
+%(tar4_hint3)%	The money raised from selling pizza, T-shirts, or sandwiches is equal to the money raised from selling pizza added to the money raised from selling T-shirts and the money raised from selling sandwiches.
+%(tar4_hint4)%	Try entering '1200' in the highlighted field.
+%(tot_hint1)%	The next step is to figure out the total amount of money Katie raised.
+%(tot_hint2)%	How much total money did Katie raise?
+%(tot_hint3)%	Try entering '2000' in the highlighted field.
+%(unreduced1_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced1_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced1_hint3)%	Try entering '1000/2000' in the highlighted field.
+%(unreduced2_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced2_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced2_hint3)%	Try entering '1500/2000' in the highlighted field.
+%(unreduced3_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced3_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced3_hint3)%	Try entering '300/2000' in the highlighted field.
+%(unreduced4_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced4_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced4_hint3)%	Try entering '1200/2000' in the highlighted field.
+%(100ratio1_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '1000/2000' to 100.
+%(100ratio1_hint2)%	What number do you need to divide 2000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio1_hint3)%	Try entering '50/100' in the highlighted field.
+%(100ratio2_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '1500/2000' to 100.
+%(100ratio2_hint2)%	What number do you need to divide 2000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio2_hint3)%	Try entering '75/100' in the highlighted field.
+%(100ratio3_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '300/2000' to 100.
+%(100ratio3_hint2)%	What number do you need to divide 2000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio3_hint3)%	Try entering '15/100' in the highlighted field.
+%(100ratio4_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '1200/2000' to 100.
+%(100ratio4_hint2)%	What number do you need to divide 2000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio4_hint3)%	Try entering '60/100' in the highlighted field.
+%(percent1_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent1_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent1_hint3)%	Try entering '50' in the highlighted field.
+%(percent2_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent2_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent2_hint3)%	Try entering '75' in the highlighted field.
+%(percent3_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent3_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent3_hint3)%	Try entering '15' in the highlighted field.
+%(percent4_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent4_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent4_hint3)%	Try entering '60' in the highlighted field.
+%(decimal1_hint1)%	The ratio out of 100 is written as '50/100'. Please express this value as a decimal.
+%(decimal1_hint2)%	To find the decimal, divide the numerator of 50/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal1_hint3)%	Try entering '0.5' in the highlighted field.
+%(decimal2_hint1)%	The ratio out of 100 is written as '75/100'. Please express this value as a decimal.
+%(decimal2_hint2)%	To find the decimal, divide the numerator of 75/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal2_hint3)%	Try entering '0.75' in the highlighted field.
+%(decimal3_hint1)%	The ratio out of 100 is written as '15/100'. Please express this value as a decimal.
+%(decimal3_hint2)%	To find the decimal, divide the numerator of 15/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal3_hint3)%	Try entering '0.15' in the highlighted field.
+%(decimal4_hint1)%	The ratio out of 100 is written as '60/100'. Please express this value as a decimal.
+%(decimal4_hint2)%	To find the decimal, divide the numerator of 60/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal4_hint3)%	Try entering '0.6' in the highlighted field.
+%(reduced1_hint1)%	To make the unreduced ratio, '1000/2000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced1_hint2)%	1000 is the numerator and 2000 is the denominator. Divide 1000 and 2000 by their greatest common factor.
+%(reduced1_hint3)%	The greatest common factor of 1000 and 2000 is 1000.
+%(reduced1_hint4)%	Try entering '1/2' in the highlighted field.
+%(reduced2_hint1)%	To make the unreduced ratio, '1500/2000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced2_hint2)%	1500 is the numerator and 2000 is the denominator. Divide 1500 and 2000 by their greatest common factor.
+%(reduced2_hint3)%	The greatest common factor of '1500' and '2000' is '500'.
+%(reduced2_hint4)%	Try entering '3/4' in the highlighted field.
+%(reduced3_hint1)%	To make the unreduced ratio, '300/2000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced3_hint2)%	300 is the numerator and 2000 is the denominator. Divide 300 and 2000 by their greatest common factor.
+%(reduced3_hint3)%	The greatest common factor of '300' and '2000' is '100'.
+%(reduced3_hint4)%	Try entering '3/20' in the highlighted field.
+%(reduced4_hint1)%	To make the unreduced ratio, '1200/2000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced4_hint2)%	1200 is the numerator and 2000 is the denominator. Divide 1200 and 2000 by their greatest common factor.
+%(reduced4_hint3)%	The greatest common factor of '1200' and '2000' is '200'.
+%(reduced4_hint4)%	Try entering '3/5' in the highlighted field.
+	
+%(bug1)%	
+%(bug2)%	
+%(bug3)%	
+%(bug4)%	
+	
+%(error_message1)%	
+%(error_message2)%	
+%(error_message3)%	
+%(error_message4)%	
+	
+%(min1)%	0
+%(max1)%	0
+%(min2)%	0
+%(max2)%	0
+%(min3)%	0
+%(max3)%	0
+%(min4)%	0
+%(max4)%	0
+%(7565146944932883601)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(917399830692180717)%	Try entering '0.75' in the highlighted field.
+%(-1833497593299982943)%	The money raised from selling candy or pizza is equal to the money raised from selling candy added to the money raised from selling pizza.
+%(-636783797046426605)%	The money raised from selling pizza, T-shirts, or sandwiches is equal to the money raised from selling pizza added to the money raised from selling T-shirts and the money raised from selling sandwiches.
+%(1645221181899907971)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3002313564472979001)%	To find the decimal, divide the numerator of 15/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(1888465201918485151)%	The greatest common factor of 1000 and 2000 is %(gcf1)%.
+%(-1181257822923671979)%	
+%(-1181262822935671972)%	
+%(5198795231079414010)%	Try entering '0.5' in the highlighted field.
+%(7969913978189485225)%	The greatest common factor of '300' and '2000' is '%(gcf3)%'.
+%(7565145944944883708)%	Try entering '1000/2000' in the highlighted field.
+%(3002314564480978986)%	The ratio out of 100 is written as '15/100'. Please express this value as a decimal.
+%(-3119633469235552708)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '300/2000' to 100.
+%(-8714893952752715067)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '1500/2000' to 100.
+%(6736889133846231615)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '1200/2000' to 100.
+%(3077956359363269943)%	1200 is the numerator and 2000 is the denominator. Divide 1200 and 2000 by their greatest common factor.
+%(1888463201890485073)%	To make the unreduced ratio, '1000/2000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(3077953359363269932)%	To make the unreduced ratio, '1200/2000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(9083055518520690370)%	The percent is the ratio out of 100 multiplied by a 100.
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-8306868468448174315)%	How much money did Katie raise from selling T-shirts?
+%(3147932447584519032)%	Try entering '2000' in the highlighted field.
+%(-636782797038426516)%	Try entering '1200' in the highlighted field.
+%(5198793231067413900)%	The ratio out of 100 is written as '50/100'. Please express this value as a decimal.
+%(-6866043604834726440)%	The greatest common factor of '1500' and '2000' is '%(gcf2)%'.
+%(3002312564468979004)%	Try entering '0.15' in the highlighted field.
+%(5368664278338448703)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(1645220181895907974)%	Try entering '15' in the highlighted field.
+%(-1223762966594790273)%	Try entering '0.6' in the highlighted field.
+%(1888464201898485058)%	1000 is the numerator and 2000 is the denominator. Divide 1000 and 2000 by their greatest common factor.
+%(1142586747250679332)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(6546436051857008036)%	Try entering '50/100' in the highlighted field.
+%(1142587747270679417)%	Try entering '1200/2000' in the highlighted field.
+%(3283752544553650317)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(7969918978221485286)%	Try entering '3/20' in the highlighted field.
+%(328547711787478872)%	Try entering '50' in the highlighted field.
+%(6736888133854231580)%	What number do you need to divide 2000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-4496519548807638142)%	Please enter '' in the highlighted field.
+%(6546435051853008057)%	What number do you need to divide 2000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-1181260822923671990)%	
+%(-8306869468452174320)%	
+%(3283750544557650411)%	Try entering '1500/2000' in the highlighted field.
+%(7969915978185485239)%	To make the unreduced ratio, '300/2000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(6736887133850231569)%	Try entering '60/100' in the highlighted field.
+%(5198796231067413911)%	To find the decimal, divide the numerator of 50/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5162537381742577495)%	Please enter '' in the highlighted field.
+%(-1833498593303982932)%	How much money did Katie raise from selling candy or pizza?
+%(328548711791478853)%	The percent is the ratio out of 100 multiplied by a 100.
+%(8103488325513018496)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3283749544553650406)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(-6866041604806726394)%	To make the unreduced ratio, '1500/2000', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(-6866044604842726441)%	Try entering '3/4' in the highlighted field.
+%(3077955359375269914)%	The greatest common factor of '1200' and '2000' is '%(gcf4)%'.
+%(2145548300705985814)%	The money raised from selling candy or sandwiches is equal to the money raised from selling candy added to the money raised from selling sandwiches.
+%(-3119631469239552806)%	Try entering '15/100' in the highlighted field.
+%(-8714891952740714957)%	Try entering '75/100' in the highlighted field.
+%(1645218181867907928)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-1223764966622790351)%	The ratio out of 100 is written as '60/100'. Please express this value as a decimal.
+%(9083054518512690385)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-8306862468412174241)%	Try entering '300' in the highlighted field.
+%(-1181259822935671961)%	
+%(-1833500593395983186)%	Try entering '1500' in the highlighted field.
+%(3147930447588518982)%	The next step is to figure out the total amount of money Katie raised.
+%(5368663278334448698)%	Try entering '300/2000' in the highlighted field.
+%(-1833495593303983033)%	To work through question 2, you must first find the amount of money Katie raised from selling candy or pizza.
+%(2145546300693985792)%	To work through question 1, you must first find the amount of money Katie raised from selling candy or sandwiches.
+%(917401830688180619)%	The ratio out of 100 is written as '75/100'. Please express this value as a decimal.
+%(-636784797130426770)%	How much money did Katie raise from selling pizza, T-shirts, or sandwiches?
+%(9083056518540690463)%	Try entering '75' in the highlighted field.
+%(2145551300705985801)%	Try entering '1000' in the highlighted field.
+%(-636785797138426851)%	To work through question 4, you must first find the amount of money Katie raised from selling pizza, T-shirts, or sandwiches.
+%(-8714890952656714802)%	What number do you need to divide 2000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(7565143944932883594)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(8103489325517018509)%	Try entering '60' in the highlighted field.
+%(328549711815478918)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(6546438051885008098)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '1000/2000' to 100.
+%(-8865737956518473063)%	Please enter '' in the highlighted field.
+%(1888466201926485120)%	Try entering '1/2' in the highlighted field.
+%(8103491325513018539)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(2577276927472933268)%	Please enter '' in the highlighted field.
+%(3147931447596518997)%	How much total money did Katie raise?
+%(-1223763966614790366)%	To find the decimal, divide the numerator of 60/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5368665278346448684)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(1142585747242679351)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(-6866042604830726459)%	1500 is the numerator and 2000 is the denominator. Divide 1500 and 2000 by their greatest common factor.
+%(-8306867468440174234)%	To work through question 3, you must first find the amount of money Katie raised from selling T-shirts.
+%(917398830688180704)%	To find the decimal, divide the numerator of 75/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(-3119632469243552801)%	What number do you need to divide 2000 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(2145549300693985851)%	How much money did Katie raise from selling candy or sandwiches?
+%(7969912978185485228)%	300 is the numerator and 2000 is the denominator. Divide 300 and 2000 by their greatest common factor.
+%(3077958359375269925)%	Try entering '3/5' in the highlighted field.
+Problem Name	Problem3
+%(startStateNodeName)%	
+%(problem_statement)%	The senior class at John Smith High School has ordered 400 balloons for the prom. The list below describes how many balloons of each color in the color scheme were ordered.
+%(problem_list)%	<ul><li>Blue: 130</li><li>Purple: 125</li><li>Silver: 75</li><li>Black: 40</li><li>White: 30</li></ul>
+%(question1)%	(1) What percent of the balloons are neither blue nor white?
+%(question2)%	(2) What percent of the balloons are black?
+%(question3)%	(3) What percent of the balloons are purple or silver?
+%(question4)%	(4) What percent of the balloons are not black?
+%(tar1)%	240
+%(tar2)%	40
+%(tar3)%	200
+%(tar4)%	360
+%(tot)%	400
+%(unreduced1)%	240/400
+%(unreduced2)%	40/400
+%(unreduced3)%	200/400
+%(unreduced4)%	360/400
+%(100ratio1)%	60/100
+%(100ratio2)%	10/100
+%(100ratio3)%	50/100
+%(100ratio4)%	90/100
+%(percent1)%	60
+%(percent2)%	10
+%(percent3)%	50
+%(percent4)%	90
+%(decimal1)%	0.6
+%(decimal2)%	0.1
+%(decimal3)%	0.5
+%(decimal4)%	0.9
+%(reduced1)%	3/5
+%(reduced2)%	1/10
+%(reduced3)%	1/2
+%(reduced4)%	9/10
+%(gcf1)%	80
+%(gcf2)%	40
+%(gcf3)%	200
+%(gcf4)%	40
+	
+%(tar1_hint1)%	To work through question 1, you must first find the number of balloons that are not blue or white.
+%(tar1_hint2)%	How many balloons are neither blue nor white?
+%(tar1_hint3)%	
+%(tar1_hint4)%	Try entering '240' in the highlighted field.
+%(tar2_hint1)%	To work through question 2, you must first find the number of balloons that are black.
+%(tar2_hint2)%	How many balloons are black?
+%(tar2_hint3)%	
+%(tar2_hint4)%	Try entering '40' in the highlighted field.
+%(tar3_hint1)%	To work through question 3, you must first find the number of balloons that are purple or silver.
+%(tar3_hint2)%	How many balloons are purple or silver?
+%(tar3_hint3)%	The number of balloons that are purple or silver is equal to the number of purple balloons added to the number of silver balloons.
+%(tar3_hint4)%	Try entering '200' in the highlighted field.
+%(tar4_hint1)%	To work through question 4, you must first find the number of balloons that are not black.
+%(tar4_hint2)%	How many balloons are not black?
+%(tar4_hint3)%	
+%(tar4_hint4)%	Try entering '360' in the highlighted field.
+%(tot_hint1)%	The next step is to figure out how many total balloons were ordered.
+%(tot_hint2)%	How many total balloons did the seniors order?
+%(tot_hint3)%	Try entering '400' in the highlighted field.
+%(unreduced1_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced1_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced1_hint3)%	Try entering '240/400' in the highlighted field.
+%(unreduced2_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced2_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced2_hint3)%	Try entering '40/400' in the highlighted field.
+%(unreduced3_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced3_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced3_hint3)%	Try entering '200/400' in the highlighted field.
+%(unreduced4_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced4_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced4_hint3)%	Try entering '360/400' in the highlighted field.
+%(100ratio1_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '240/400' to 100.
+%(100ratio1_hint2)%	What number do you need to divide 400 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio1_hint3)%	Try entering '60/100' in the highlighted field.
+%(100ratio2_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '40/400' to 100.
+%(100ratio2_hint2)%	What number do you need to divide 400 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio2_hint3)%	Try entering '10/100' in the highlighted field.
+%(100ratio3_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '200/400' to 100.
+%(100ratio3_hint2)%	What number do you need to divide 400 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio3_hint3)%	Try entering '50/100' in the highlighted field.
+%(100ratio4_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '360/400' to 100.
+%(100ratio4_hint2)%	What number do you need to divide 400 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio4_hint3)%	Try entering '90/100' in the highlighted field.
+%(percent1_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent1_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent1_hint3)%	Try entering '60' in the highlighted field.
+%(percent2_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent2_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent2_hint3)%	Try entering '10' in the highlighted field.
+%(percent3_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent3_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent3_hint3)%	Try entering '50' in the highlighted field.
+%(percent4_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent4_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent4_hint3)%	Try entering '90' in the highlighted field.
+%(decimal1_hint1)%	The ratio out of 100 is written as '60/100'. Please express this value as a decimal.
+%(decimal1_hint2)%	To find the decimal, divide the numerator of 60/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal1_hint3)%	Try entering '0.6' in the highlighted field.
+%(decimal2_hint1)%	The ratio out of 100 is written as '10/100'. Please express this value as a decimal.
+%(decimal2_hint2)%	To find the decimal, divide the numerator of 10/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal2_hint3)%	Try entering '0.1' in the highlighted field.
+%(decimal3_hint1)%	The ratio out of 100 is written as '50/100'. Please express this value as a decimal.
+%(decimal3_hint2)%	To find the decimal, divide the numerator of 50/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal3_hint3)%	Try entering '0.5' in the highlighted field.
+%(decimal4_hint1)%	The ratio out of 100 is written as '90/100'. Please express this value as a decimal.
+%(decimal4_hint2)%	To find the decimal, divide the numerator of 90/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal4_hint3)%	Try entering '0.9' in the highlighted field.
+%(reduced1_hint1)%	To make the unreduced ratio, '240/400', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced1_hint2)%	240 is the numerator and 400 is the denominator. Divide 240 and 400 by their greatest common factor.
+%(reduced1_hint3)%	The greatest common factor of 240 and 400 is 80.
+%(reduced1_hint4)%	Try entering '3/5' in the highlighted field.
+%(reduced2_hint1)%	To make the unreduced ratio, '40/400', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced2_hint2)%	40 is the numerator and 400 is the denominator. Divide 40 and 400 by their greatest common factor.
+%(reduced2_hint3)%	The greatest common factor of '40' and '400' is '40'.
+%(reduced2_hint4)%	Try entering '1/10' in the highlighted field.
+%(reduced3_hint1)%	To make the unreduced ratio, '200/400', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced3_hint2)%	200 is the numerator and 400 is the denominator. Divide 200 and 400 by their greatest common factor.
+%(reduced3_hint3)%	The greatest common factor of '200' and '400' is '200'.
+%(reduced3_hint4)%	Try entering '1/2' in the highlighted field.
+%(reduced4_hint1)%	To make the unreduced ratio, '360/400', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced4_hint2)%	360 is the numerator and 400 is the denominator. Divide 360 and 400 by their greatest common factor.
+%(reduced4_hint3)%	The greatest common factor of '360' and '400' is '40'.
+%(reduced4_hint4)%	Try entering '9/10' in the highlighted field.
+	
+%(bug1)%	
+%(bug2)%	
+%(bug3)%	
+%(bug4)%	40
+	
+%(error_message1)%	
+%(error_message2)%	
+%(error_message3)%	
+%(error_message4)%	You have entered the number of balloons that were black. This question is asking for how many total balloons were NOT black. You can subtract the number of black balloons from the total number of balloons to find how many were not black.
+	
+%(min1)%	0
+%(max1)%	0
+%(min2)%	0
+%(max2)%	0
+%(min3)%	0
+%(max3)%	0
+%(min4)%	0
+%(max4)%	1
+%(7565146944932883601)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(917399830692180717)%	Try entering '0.1' in the highlighted field.
+%(-1833497593299982943)%	
+%(-636783797046426605)%	
+%(1645221181899907971)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3002313564472979001)%	To find the decimal, divide the numerator of 50/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(1888465201918485151)%	The greatest common factor of 240 and 400 is %(gcf1)%.
+%(-1181257822923671979)%	You have entered the number of balloons that were black. This question is asking for how many total balloons were NOT black. You can subtract the number of black balloons from the total number of balloons to find how many were not black.
+%(-1181262822935671972)%	
+%(5198795231079414010)%	Try entering '0.6' in the highlighted field.
+%(7969913978189485225)%	The greatest common factor of '200' and '400' is '%(gcf3)%'.
+%(7565145944944883708)%	Try entering '240/400' in the highlighted field.
+%(3002314564480978986)%	The ratio out of 100 is written as '50/100'. Please express this value as a decimal.
+%(-3119633469235552708)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '200/400' to 100.
+%(-8714893952752715067)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '40/400' to 100.
+%(6736889133846231615)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '360/400' to 100.
+%(3077956359363269943)%	360 is the numerator and 400 is the denominator. Divide 360 and 400 by their greatest common factor.
+%(1888463201890485073)%	To make the unreduced ratio, '240/400', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(3077953359363269932)%	To make the unreduced ratio, '360/400', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(9083055518520690370)%	The percent is the ratio out of 100 multiplied by a 100.
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-8306868468448174315)%	How many balloons are purple or silver?
+%(3147932447584519032)%	Try entering '400' in the highlighted field.
+%(-636782797038426516)%	Try entering '360' in the highlighted field.
+%(5198793231067413900)%	The ratio out of 100 is written as '60/100'. Please express this value as a decimal.
+%(-6866043604834726440)%	The greatest common factor of '40' and '400' is '%(gcf2)%'.
+%(3002312564468979004)%	Try entering '0.5' in the highlighted field.
+%(5368664278338448703)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(1645220181895907974)%	Try entering '50' in the highlighted field.
+%(-1223762966594790273)%	Try entering '0.9' in the highlighted field.
+%(1888464201898485058)%	240 is the numerator and 400 is the denominator. Divide 240 and 400 by their greatest common factor.
+%(1142586747250679332)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(6546436051857008036)%	Try entering '60/100' in the highlighted field.
+%(1142587747270679417)%	Try entering '360/400' in the highlighted field.
+%(3283752544553650317)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(7969918978221485286)%	Try entering '1/2' in the highlighted field.
+%(328547711787478872)%	Try entering '60' in the highlighted field.
+%(6736888133854231580)%	What number do you need to divide 400 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-4496519548807638142)%	Please enter '' in the highlighted field.
+%(6546435051853008057)%	What number do you need to divide 400 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-1181260822923671990)%	
+%(-8306869468452174320)%	The number of balloons that are purple or silver is equal to the number of purple balloons added to the number of silver balloons.
+%(3283750544557650411)%	Try entering '40/400' in the highlighted field.
+%(7969915978185485239)%	To make the unreduced ratio, '200/400', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(6736887133850231569)%	Try entering '90/100' in the highlighted field.
+%(5198796231067413911)%	To find the decimal, divide the numerator of 60/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5162537381742577495)%	Please enter '' in the highlighted field.
+%(-1833498593303982932)%	How many balloons are black?
+%(328548711791478853)%	The percent is the ratio out of 100 multiplied by a 100.
+%(8103488325513018496)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3283749544553650406)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(-6866041604806726394)%	To make the unreduced ratio, '40/400', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(-6866044604842726441)%	Try entering '1/10' in the highlighted field.
+%(3077955359375269914)%	The greatest common factor of '360' and '400' is '%(gcf4)%'.
+%(2145548300705985814)%	
+%(-3119631469239552806)%	Try entering '50/100' in the highlighted field.
+%(-8714891952740714957)%	Try entering '10/100' in the highlighted field.
+%(1645218181867907928)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-1223764966622790351)%	The ratio out of 100 is written as '90/100'. Please express this value as a decimal.
+%(9083054518512690385)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-8306862468412174241)%	Try entering '200' in the highlighted field.
+%(-1181259822935671961)%	
+%(-1833500593395983186)%	Try entering '40' in the highlighted field.
+%(3147930447588518982)%	The next step is to figure out how many total balloons were ordered.
+%(5368663278334448698)%	Try entering '200/400' in the highlighted field.
+%(-1833495593303983033)%	To work through question 2, you must first find the number of balloons that are black.
+%(2145546300693985792)%	To work through question 1, you must first find the number of balloons that are not blue or white.
+%(917401830688180619)%	The ratio out of 100 is written as '10/100'. Please express this value as a decimal.
+%(-636784797130426770)%	How many balloons are not black?
+%(9083056518540690463)%	Try entering '10' in the highlighted field.
+%(2145551300705985801)%	Try entering '240' in the highlighted field.
+%(-636785797138426851)%	To work through question 4, you must first find the number of balloons that are not black.
+%(-8714890952656714802)%	What number do you need to divide 400 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(7565143944932883594)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(8103489325517018509)%	Try entering '90' in the highlighted field.
+%(328549711815478918)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(6546438051885008098)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '240/400' to 100.
+%(-8865737956518473063)%	Please enter '40' in the highlighted field.
+%(1888466201926485120)%	Try entering '3/5' in the highlighted field.
+%(8103491325513018539)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(2577276927472933268)%	Please enter '' in the highlighted field.
+%(3147931447596518997)%	How many total balloons did the seniors order?
+%(-1223763966614790366)%	To find the decimal, divide the numerator of 90/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5368665278346448684)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(1142585747242679351)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(-6866042604830726459)%	40 is the numerator and 400 is the denominator. Divide 40 and 400 by their greatest common factor.
+%(-8306867468440174234)%	To work through question 3, you must first find the number of balloons that are purple or silver.
+%(917398830688180704)%	To find the decimal, divide the numerator of 10/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(-3119632469243552801)%	What number do you need to divide 400 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(2145549300693985851)%	How many balloons are neither blue nor white?
+%(7969912978185485228)%	200 is the numerator and 400 is the denominator. Divide 200 and 400 by their greatest common factor.
+%(3077958359375269925)%	Try entering '9/10' in the highlighted field.
+Problem Name	Problem4
+%(startStateNodeName)%	
+%(problem_statement)%	The girls' basketball team at Amberson High School has a sell-out crowd for the playoff game. The gymnasium holds 1500 fans. The list below describes the fans in attendance.
+%(problem_list)%	<ul><li>Home Students: 750</li><li>Visiting Students: 525</li><li>Home Parents: 100</li><li>Visiting Parents: 50</li><li>Other Fans: 75</li></ul>
+%(question1)%	(1) What percent of the fans are students from the visiting school?
+%(question2)%	(2) What percent of the fans are not students from either school?
+%(question3)%	(3) What percent of the fans are not parents or students from either school?
+%(question4)%	(4) What percent of the fans are students from the home school?
+%(tar1)%	525
+%(tar2)%	225
+%(tar3)%	75
+%(tar4)%	750
+%(tot)%	1500
+%(unreduced1)%	525/1500
+%(unreduced2)%	225/1500
+%(unreduced3)%	75/1500
+%(unreduced4)%	750/1500
+%(100ratio1)%	35/100
+%(100ratio2)%	15/100
+%(100ratio3)%	5/100
+%(100ratio4)%	50/100
+%(percent1)%	35
+%(percent2)%	15
+%(percent3)%	5
+%(percent4)%	50
+%(decimal1)%	0.35
+%(decimal2)%	0.15
+%(decimal3)%	0.05
+%(decimal4)%	.50
+%(reduced1)%	7/20
+%(reduced2)%	3/20
+%(reduced3)%	1/20
+%(reduced4)%	1/2
+%(gcf1)%	75
+%(gcf2)%	75
+%(gcf3)%	75
+%(gcf4)%	750
+	
+%(tar1_hint1)%	To work through question 1, you must first find the number of students from the visiting school.
+%(tar1_hint2)%	How many fans are students are from the visiting school?
+%(tar1_hint3)%	
+%(tar1_hint4)%	Try entering '525' in the highlighted field.
+%(tar2_hint1)%	To work through question 2, you must first find the number of fans who are not students from either school.
+%(tar2_hint2)%	How many fans are not students from either school?
+%(tar2_hint3)%	
+%(tar2_hint4)%	Try entering '225' in the highlighted field.
+%(tar3_hint1)%	To work through question 3, you must first find the number of fans who are neither parents nor students from either school.
+%(tar3_hint2)%	How many fans are not students or parents from either school?
+%(tar3_hint3)%	
+%(tar3_hint4)%	Try entering '75' in the highlighted field.
+%(tar4_hint1)%	To work through question 4, you must first find the number of fans who are students from the home school.
+%(tar4_hint2)%	How many fans are students from the home school?
+%(tar4_hint3)%	
+%(tar4_hint4)%	Try entering '750' in the highlighted field.
+%(tot_hint1)%	The next step is to figure out how many fans attended the game.
+%(tot_hint2)%	How many total fans attended the game?
+%(tot_hint3)%	Try entering '1500' in the highlighted field.
+%(unreduced1_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced1_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced1_hint3)%	Try entering '525/1500' in the highlighted field.
+%(unreduced2_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced2_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced2_hint3)%	Try entering '225/1500' in the highlighted field.
+%(unreduced3_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced3_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced3_hint3)%	Try entering '75/1500' in the highlighted field.
+%(unreduced4_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced4_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced4_hint3)%	Try entering '750/1500' in the highlighted field.
+%(100ratio1_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '525/1500' to 100.
+%(100ratio1_hint2)%	What number do you need to divide 1500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio1_hint3)%	Try entering '35/100' in the highlighted field.
+%(100ratio2_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '225/1500' to 100.
+%(100ratio2_hint2)%	What number do you need to divide 1500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio2_hint3)%	Try entering '15/100' in the highlighted field.
+%(100ratio3_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '75/1500' to 100.
+%(100ratio3_hint2)%	What number do you need to divide 1500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio3_hint3)%	Try entering '5/100' in the highlighted field.
+%(100ratio4_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '750/1500' to 100.
+%(100ratio4_hint2)%	What number do you need to divide 1500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio4_hint3)%	Try entering '50/100' in the highlighted field.
+%(percent1_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent1_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent1_hint3)%	Try entering '35' in the highlighted field.
+%(percent2_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent2_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent2_hint3)%	Try entering '15' in the highlighted field.
+%(percent3_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent3_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent3_hint3)%	Try entering '5' in the highlighted field.
+%(percent4_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent4_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent4_hint3)%	Try entering '50' in the highlighted field.
+%(decimal1_hint1)%	The ratio out of 100 is written as '35/100'. Please express this value as a decimal.
+%(decimal1_hint2)%	To find the decimal, divide the numerator of 35/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal1_hint3)%	Try entering '0.35' in the highlighted field.
+%(decimal2_hint1)%	The ratio out of 100 is written as '15/100'. Please express this value as a decimal.
+%(decimal2_hint2)%	To find the decimal, divide the numerator of 15/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal2_hint3)%	Try entering '0.15' in the highlighted field.
+%(decimal3_hint1)%	The ratio out of 100 is written as '5/100'. Please express this value as a decimal.
+%(decimal3_hint2)%	To find the decimal, divide the numerator of 5/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal3_hint3)%	Try entering '0.05' in the highlighted field.
+%(decimal4_hint1)%	The ratio out of 100 is written as '50/100'. Please express this value as a decimal.
+%(decimal4_hint2)%	To find the decimal, divide the numerator of 50/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal4_hint3)%	Try entering '.50' in the highlighted field.
+%(reduced1_hint1)%	To make the unreduced ratio, '525/1500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced1_hint2)%	525 is the numerator and 1500 is the denominator. Divide 525 and 1500 by their greatest common factor.
+%(reduced1_hint3)%	The greatest common factor of 525 and 1500 is 75.
+%(reduced1_hint4)%	Try entering '7/20' in the highlighted field.
+%(reduced2_hint1)%	To make the unreduced ratio, '225/1500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced2_hint2)%	225 is the numerator and 1500 is the denominator. Divide 225 and 1500 by their greatest common factor.
+%(reduced2_hint3)%	The greatest common factor of '225' and '1500' is '75'.
+%(reduced2_hint4)%	Try entering '3/20' in the highlighted field.
+%(reduced3_hint1)%	To make the unreduced ratio, '75/1500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced3_hint2)%	75 is the numerator and 1500 is the denominator. Divide 75 and 1500 by their greatest common factor.
+%(reduced3_hint3)%	The greatest common factor of '75' and '1500' is '75'.
+%(reduced3_hint4)%	Try entering '1/20' in the highlighted field.
+%(reduced4_hint1)%	To make the unreduced ratio, '750/1500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced4_hint2)%	750 is the numerator and 1500 is the denominator. Divide 750 and 1500 by their greatest common factor.
+%(reduced4_hint3)%	The greatest common factor of '750' and '1500' is '750'.
+%(reduced4_hint4)%	Try entering '1/2' in the highlighted field.
+	
+%(bug1)%	
+%(bug2)%	
+%(bug3)%	
+%(bug4)%	
+	
+%(error_message1)%	
+%(error_message2)%	
+%(error_message3)%	
+%(error_message4)%	
+	
+%(min1)%	0
+%(max1)%	0
+%(min2)%	0
+%(max2)%	0
+%(min3)%	0
+%(max3)%	0
+%(min4)%	0
+%(max4)%	0
+%(7565146944932883601)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(917399830692180717)%	Try entering '0.15' in the highlighted field.
+%(-1833497593299982943)%	
+%(-636783797046426605)%	
+%(1645221181899907971)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3002313564472979001)%	To find the decimal, divide the numerator of 5/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(1888465201918485151)%	The greatest common factor of 525 and 1500 is %(gcf1)%.
+%(-1181257822923671979)%	
+%(-1181262822935671972)%	
+%(5198795231079414010)%	Try entering '0.35' in the highlighted field.
+%(7969913978189485225)%	The greatest common factor of '75' and '1500' is '%(gcf3)%'.
+%(7565145944944883708)%	Try entering '525/1500' in the highlighted field.
+%(3002314564480978986)%	The ratio out of 100 is written as '5/100'. Please express this value as a decimal.
+%(-3119633469235552708)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '75/1500' to 100.
+%(-8714893952752715067)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '225/1500' to 100.
+%(6736889133846231615)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '750/1500' to 100.
+%(3077956359363269943)%	750 is the numerator and 1500 is the denominator. Divide 750 and 1500 by their greatest common factor.
+%(1888463201890485073)%	To make the unreduced ratio, '525/1500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(3077953359363269932)%	To make the unreduced ratio, '750/1500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(9083055518520690370)%	The percent is the ratio out of 100 multiplied by a 100.
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-8306868468448174315)%	How many fans are not students or parents from either school?
+%(3147932447584519032)%	Try entering '1500' in the highlighted field.
+%(-636782797038426516)%	Try entering '750' in the highlighted field.
+%(5198793231067413900)%	The ratio out of 100 is written as '35/100'. Please express this value as a decimal.
+%(-6866043604834726440)%	The greatest common factor of '225' and '1500' is '%(gcf2)%'.
+%(3002312564468979004)%	Try entering '0.05' in the highlighted field.
+%(5368664278338448703)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(1645220181895907974)%	Try entering '5' in the highlighted field.
+%(-1223762966594790273)%	Try entering '.50' in the highlighted field.
+%(1888464201898485058)%	525 is the numerator and 1500 is the denominator. Divide 525 and 1500 by their greatest common factor.
+%(1142586747250679332)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(6546436051857008036)%	Try entering '35/100' in the highlighted field.
+%(1142587747270679417)%	Try entering '750/1500' in the highlighted field.
+%(3283752544553650317)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(7969918978221485286)%	Try entering '1/20' in the highlighted field.
+%(328547711787478872)%	Try entering '35' in the highlighted field.
+%(6736888133854231580)%	What number do you need to divide 1500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-4496519548807638142)%	Please enter '' in the highlighted field.
+%(6546435051853008057)%	What number do you need to divide 1500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-1181260822923671990)%	
+%(-8306869468452174320)%	
+%(3283750544557650411)%	Try entering '225/1500' in the highlighted field.
+%(7969915978185485239)%	To make the unreduced ratio, '75/1500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(6736887133850231569)%	Try entering '50/100' in the highlighted field.
+%(5198796231067413911)%	To find the decimal, divide the numerator of 35/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5162537381742577495)%	Please enter '' in the highlighted field.
+%(-1833498593303982932)%	How many fans are not students from either school?
+%(328548711791478853)%	The percent is the ratio out of 100 multiplied by a 100.
+%(8103488325513018496)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3283749544553650406)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(-6866041604806726394)%	To make the unreduced ratio, '225/1500', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(-6866044604842726441)%	Try entering '3/20' in the highlighted field.
+%(3077955359375269914)%	The greatest common factor of '750' and '1500' is '%(gcf4)%'.
+%(2145548300705985814)%	
+%(-3119631469239552806)%	Try entering '5/100' in the highlighted field.
+%(-8714891952740714957)%	Try entering '15/100' in the highlighted field.
+%(1645218181867907928)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-1223764966622790351)%	The ratio out of 100 is written as '50/100'. Please express this value as a decimal.
+%(9083054518512690385)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-8306862468412174241)%	Try entering '75' in the highlighted field.
+%(-1181259822935671961)%	
+%(-1833500593395983186)%	Try entering '225' in the highlighted field.
+%(3147930447588518982)%	The next step is to figure out how many fans attended the game.
+%(5368663278334448698)%	Try entering '75/1500' in the highlighted field.
+%(-1833495593303983033)%	To work through question 2, you must first find the number of fans who are not students from either school.
+%(2145546300693985792)%	To work through question 1, you must first find the number of students from the visiting school.
+%(917401830688180619)%	The ratio out of 100 is written as '15/100'. Please express this value as a decimal.
+%(-636784797130426770)%	How many fans are students from the home school?
+%(9083056518540690463)%	Try entering '15' in the highlighted field.
+%(2145551300705985801)%	Try entering '525' in the highlighted field.
+%(-636785797138426851)%	To work through question 4, you must first find the number of fans who are students from the home school.
+%(-8714890952656714802)%	What number do you need to divide 1500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(7565143944932883594)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(8103489325517018509)%	Try entering '50' in the highlighted field.
+%(328549711815478918)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(6546438051885008098)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '525/1500' to 100.
+%(-8865737956518473063)%	Please enter '' in the highlighted field.
+%(1888466201926485120)%	Try entering '7/20' in the highlighted field.
+%(8103491325513018539)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(2577276927472933268)%	Please enter '' in the highlighted field.
+%(3147931447596518997)%	How many total fans attended the game?
+%(-1223763966614790366)%	To find the decimal, divide the numerator of 50/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5368665278346448684)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(1142585747242679351)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(-6866042604830726459)%	225 is the numerator and 1500 is the denominator. Divide 225 and 1500 by their greatest common factor.
+%(-8306867468440174234)%	To work through question 3, you must first find the number of fans who are neither parents nor students from either school.
+%(917398830688180704)%	To find the decimal, divide the numerator of 15/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(-3119632469243552801)%	What number do you need to divide 1500 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(2145549300693985851)%	How many fans are students are from the visiting school?
+%(7969912978185485228)%	75 is the numerator and 1500 is the denominator. Divide 75 and 1500 by their greatest common factor.
+%(3077958359375269925)%	Try entering '1/2' in the highlighted field.
+Problem Name	Problem5
+%(startStateNodeName)%	
+%(problem_statement)%	Miss Mitra is shopping for a new car. The car lot she visits has 600 available vehicles. The list below describes the different vehicles available.
+%(problem_list)%	<ul><li>SUVs: 180</li><li>Sedans: 240</li><li>Trucks: 150</li><li>Convertibles: 30</li></ul>
+%(question1)%	(1) What percent of the vehicles are convertibles?
+%(question2)%	(2) What percent of the vehicles are sedans?
+%(question3)%	(3) What percent of the vehicles are not SUVs?
+%(question4)%	(4) What percent of the vehicles are SUVs or trucks?
+%(tar1)%	30
+%(tar2)%	240
+%(tar3)%	420
+%(tar4)%	330
+%(tot)%	600
+%(unreduced1)%	30/600
+%(unreduced2)%	240/600
+%(unreduced3)%	420/600
+%(unreduced4)%	330/600
+%(100ratio1)%	5/100
+%(100ratio2)%	40/100
+%(100ratio3)%	70/100
+%(100ratio4)%	55/100
+%(percent1)%	5
+%(percent2)%	40
+%(percent3)%	70
+%(percent4)%	55
+%(decimal1)%	0.05
+%(decimal2)%	0.4
+%(decimal3)%	0.7
+%(decimal4)%	0.55
+%(reduced1)%	1/20
+%(reduced2)%	2/5
+%(reduced3)%	7/10
+%(reduced4)%	11/20
+%(gcf1)%	30
+%(gcf2)%	60
+%(gcf3)%	120
+%(gcf4)%	30
+	
+%(tar1_hint1)%	To work through question 1, you must first find the number of vehicles that are convertibles.
+%(tar1_hint2)%	How many vehicles on the lot are convertibles?
+%(tar1_hint3)%	
+%(tar1_hint4)%	Try entering '30' in the highlighted field.
+%(tar2_hint1)%	To work through question 2, you must first find the number of vehicles that are sedans.
+%(tar2_hint2)%	How many vehicles on the lot are sedans?
+%(tar2_hint3)%	
+%(tar2_hint4)%	Try entering '240' in the highlighted field.
+%(tar3_hint1)%	To work through question 31, you must first find the number of vehicles that are not SUVs.
+%(tar3_hint2)%	How many vehicles on the lot are not SUVs?
+%(tar3_hint3)%	
+%(tar3_hint4)%	Try entering '420' in the highlighted field.
+%(tar4_hint1)%	To work through question 4, you must first find the number of vehicles that are SUVs or trucks.
+%(tar4_hint2)%	How many vehicles on the lot are SUVs or trucks?
+%(tar4_hint3)%	The number of vehicles on the lot that are SUVs or trucks is equal to the number of SUVs added to the number of trucks.
+%(tar4_hint4)%	Try entering '330' in the highlighted field.
+%(tot_hint1)%	The next step is to figure out how many total vehicles are in the car lot.
+%(tot_hint2)%	How many total vehicles are in the car lot?
+%(tot_hint3)%	Try entering '600' in the highlighted field.
+%(unreduced1_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced1_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced1_hint3)%	Try entering '30/600' in the highlighted field.
+%(unreduced2_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced2_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced2_hint3)%	Try entering '240/600' in the highlighted field.
+%(unreduced3_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced3_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced3_hint3)%	Try entering '420/600' in the highlighted field.
+%(unreduced4_hint1)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(unreduced4_hint2)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(unreduced4_hint3)%	Try entering '330/600' in the highlighted field.
+%(100ratio1_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '30/600' to 100.
+%(100ratio1_hint2)%	What number do you need to divide 600 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio1_hint3)%	Try entering '5/100' in the highlighted field.
+%(100ratio2_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '240/600' to 100.
+%(100ratio2_hint2)%	What number do you need to divide 600 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio2_hint3)%	Try entering '40/100' in the highlighted field.
+%(100ratio3_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '420/600' to 100.
+%(100ratio3_hint2)%	What number do you need to divide 600 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio3_hint3)%	Try entering '70/100' in the highlighted field.
+%(100ratio4_hint1)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '330/600' to 100.
+%(100ratio4_hint2)%	What number do you need to divide 600 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(100ratio4_hint3)%	Try entering '55/100' in the highlighted field.
+%(percent1_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent1_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent1_hint3)%	Try entering '5' in the highlighted field.
+%(percent2_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent2_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent2_hint3)%	Try entering '40' in the highlighted field.
+%(percent3_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent3_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent3_hint3)%	Try entering '70' in the highlighted field.
+%(percent4_hint1)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(percent4_hint2)%	The percent is the ratio out of 100 multiplied by a 100.
+%(percent4_hint3)%	Try entering '55' in the highlighted field.
+%(decimal1_hint1)%	The ratio out of 100 is written as '5/100'. Please express this value as a decimal.
+%(decimal1_hint2)%	To find the decimal, divide the numerator of 5/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal1_hint3)%	Try entering '0.05' in the highlighted field.
+%(decimal2_hint1)%	The ratio out of 100 is written as '40/100'. Please express this value as a decimal.
+%(decimal2_hint2)%	To find the decimal, divide the numerator of 40/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal2_hint3)%	Try entering '0.4' in the highlighted field.
+%(decimal3_hint1)%	The ratio out of 100 is written as '70/100'. Please express this value as a decimal.
+%(decimal3_hint2)%	To find the decimal, divide the numerator of 70/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal3_hint3)%	Try entering '0.7' in the highlighted field.
+%(decimal4_hint1)%	The ratio out of 100 is written as '55/100'. Please express this value as a decimal.
+%(decimal4_hint2)%	To find the decimal, divide the numerator of 55/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(decimal4_hint3)%	Try entering '0.55' in the highlighted field.
+%(reduced1_hint1)%	To make the unreduced ratio, '30/600', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced1_hint2)%	30 is the numerator and 600 is the denominator. Divide 30 and 600 by their greatest common factor.
+%(reduced1_hint3)%	The greatest common factor of 30 and 600 is 30.
+%(reduced1_hint4)%	Try entering '1/20' in the highlighted field.
+%(reduced2_hint1)%	To make the unreduced ratio, '240/600', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced2_hint2)%	240 is the numerator and 600 is the denominator. Divide 240 and 600 by their greatest common factor.
+%(reduced2_hint3)%	The greatest common factor of '240' and '600' is '60'.
+%(reduced2_hint4)%	Try entering '2/5' in the highlighted field.
+%(reduced3_hint1)%	To make the unreduced ratio, '420/600', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced3_hint2)%	420 is the numerator and 600 is the denominator. Divide 420 and 600 by their greatest common factor.
+%(reduced3_hint3)%	The greatest common factor of '420' and '600' is '120'.
+%(reduced3_hint4)%	Try entering '7/10' in the highlighted field.
+%(reduced4_hint1)%	To make the unreduced ratio, '330/600', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(reduced4_hint2)%	330 is the numerator and 600 is the denominator. Divide 330 and 600 by their greatest common factor.
+%(reduced4_hint3)%	The greatest common factor of '330' and '600' is '30'.
+%(reduced4_hint4)%	Try entering '11/20' in the highlighted field.
+	
+%(bug1)%	
+%(bug2)%	
+%(bug3)%	180
+%(bug4)%	
+	
+%(error_message1)%	
+%(error_message2)%	
+%(error_message3)%	You have entered the number of vehicles that were SUVs. This question is asking for how many total vehicles were NOT SUVs. You can subtract the number of SUVs from the total number of vehicles to find how many were not SUVs.
+%(error_message4)%	
+	
+%(min1)%	0
+%(max1)%	0
+%(min2)%	0
+%(max2)%	0
+%(min3)%	0
+%(max3)%	1
+%(min4)%	0
+%(max4)%	0 
+%(7565146944932883601)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(917399830692180717)%	Try entering '0.4' in the highlighted field.
+%(-1833497593299982943)%	
+%(-636783797046426605)%	The number of vehicles on the lot that are SUVs or trucks is equal to the number of SUVs added to the number of trucks.
+%(1645221181899907971)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3002313564472979001)%	To find the decimal, divide the numerator of 70/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(1888465201918485151)%	The greatest common factor of 30 and 600 is %(gcf1)%.
+%(-1181257822923671979)%	
+%(-1181262822935671972)%	
+%(5198795231079414010)%	Try entering '0.05' in the highlighted field.
+%(7969913978189485225)%	The greatest common factor of '420' and '600' is '%(gcf3)%'.
+%(7565145944944883708)%	Try entering '30/600' in the highlighted field.
+%(3002314564480978986)%	The ratio out of 100 is written as '70/100'. Please express this value as a decimal.
+%(-3119633469235552708)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '420/600' to 100.
+%(-8714893952752715067)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '240/600' to 100.
+%(6736889133846231615)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '330/600' to 100.
+%(3077956359363269943)%	330 is the numerator and 600 is the denominator. Divide 330 and 600 by their greatest common factor.
+%(1888463201890485073)%	To make the unreduced ratio, '30/600', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(3077953359363269932)%	To make the unreduced ratio, '330/600', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(9083055518520690370)%	The percent is the ratio out of 100 multiplied by a 100.
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-8306868468448174315)%	How many vehicles on the lot are not SUVs?
+%(3147932447584519032)%	Try entering '600' in the highlighted field.
+%(-636782797038426516)%	Try entering '330' in the highlighted field.
+%(5198793231067413900)%	The ratio out of 100 is written as '5/100'. Please express this value as a decimal.
+%(-6866043604834726440)%	The greatest common factor of '240' and '600' is '%(gcf2)%'.
+%(3002312564468979004)%	Try entering '0.7' in the highlighted field.
+%(5368664278338448703)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(1645220181895907974)%	Try entering '70' in the highlighted field.
+%(-1223762966594790273)%	Try entering '0.55' in the highlighted field.
+%(1888464201898485058)%	30 is the numerator and 600 is the denominator. Divide 30 and 600 by their greatest common factor.
+%(1142586747250679332)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(6546436051857008036)%	Try entering '5/100' in the highlighted field.
+%(1142587747270679417)%	Try entering '330/600' in the highlighted field.
+%(3283752544553650317)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(7969918978221485286)%	Try entering '7/10' in the highlighted field.
+%(328547711787478872)%	Try entering '5' in the highlighted field.
+%(6736888133854231580)%	What number do you need to divide 600 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-4496519548807638142)%	Please enter '' in the highlighted field.
+%(6546435051853008057)%	What number do you need to divide 600 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(-1181260822923671990)%	You have entered the number of vehicles that were SUVs. This question is asking for how many total vehicles were NOT SUVs. You can subtract the number of SUVs from the total number of vehicles to find how many were not SUVs.
+%(-8306869468452174320)%	
+%(3283750544557650411)%	Try entering '240/600' in the highlighted field.
+%(7969915978185485239)%	To make the unreduced ratio, '420/600', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(6736887133850231569)%	Try entering '55/100' in the highlighted field.
+%(5198796231067413911)%	To find the decimal, divide the numerator of 5/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5162537381742577495)%	Please enter '' in the highlighted field.
+%(-1833498593303982932)%	How many vehicles on the lot are sedans?
+%(328548711791478853)%	The percent is the ratio out of 100 multiplied by a 100.
+%(8103488325513018496)%	The percent is the ratio out of 100 multiplied by a 100.
+%(3283749544553650406)%	Make sure you enter the unreduced ratio as a fraction: the target number is the numerator and the total number is the denominator.
+%(-6866041604806726394)%	To make the unreduced ratio, '240/600', a reduced fraction, first find the greatest common factor of the numerator and the denominator.
+%(-6866044604842726441)%	Try entering '2/5' in the highlighted field.
+%(3077955359375269914)%	The greatest common factor of '330' and '600' is '%(gcf4)%'.
+%(2145548300705985814)%	
+%(-3119631469239552806)%	Try entering '70/100' in the highlighted field.
+%(-8714891952740714957)%	Try entering '40/100' in the highlighted field.
+%(1645218181867907928)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-1223764966622790351)%	The ratio out of 100 is written as '55/100'. Please express this value as a decimal.
+%(9083054518512690385)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(-8306862468412174241)%	Try entering '420' in the highlighted field.
+%(-1181259822935671961)%	
+%(-1833500593395983186)%	Try entering '240' in the highlighted field.
+%(3147930447588518982)%	The next step is to figure out how many total vehicles are in the car lot.
+%(5368663278334448698)%	Try entering '420/600' in the highlighted field.
+%(-1833495593303983033)%	To work through question 2, you must first find the number of vehicles that are sedans.
+%(2145546300693985792)%	To work through question 1, you must first find the number of vehicles that are convertibles.
+%(917401830688180619)%	The ratio out of 100 is written as '40/100'. Please express this value as a decimal.
+%(-636784797130426770)%	How many vehicles on the lot are SUVs or trucks?
+%(9083056518540690463)%	Try entering '40' in the highlighted field.
+%(2145551300705985801)%	Try entering '30' in the highlighted field.
+%(-636785797138426851)%	To work through question 4, you must first find the number of vehicles that are SUVs or trucks.
+%(-8714890952656714802)%	What number do you need to divide 600 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(7565143944932883594)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(8103489325517018509)%	Try entering '55' in the highlighted field.
+%(328549711815478918)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(6546438051885008098)%	To express the unreduced ratio as a ratio out of 100, first convert the denominator of '30/600' to 100.
+%(-8865737956518473063)%	Please enter '' in the highlighted field.
+%(1888466201926485120)%	Try entering '1/20' in the highlighted field.
+%(8103491325513018539)%	After finding the 'Ratio out of 100', how can you use this to find the 'Percent'?
+%(2577276927472933268)%	Please enter '180' in the highlighted field.
+%(3147931447596518997)%	How many total vehicles are in the car lot?
+%(-1223763966614790366)%	To find the decimal, divide the numerator of 55/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(5368665278346448684)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(1142585747242679351)%	The unreduced ratio is a fraction representing the target number of items divided by the total number of items.
+%(-6866042604830726459)%	240 is the numerator and 600 is the denominator. Divide 240 and 600 by their greatest common factor.
+%(-8306867468440174234)%	To work through question 31, you must first find the number of vehicles that are not SUVs.
+%(917398830688180704)%	To find the decimal, divide the numerator of 40/100 by the denominator. Dividing by 100 is equivalent to dividing by 10, then dividing by 10 again.
+%(-3119632469243552801)%	What number do you need to divide 600 by to get 100? Make sure you divide the numerator and the denominator by the same number.
+%(2145549300693985851)%	How many vehicles on the lot are convertibles?
+%(7969912978185485228)%	420 is the numerator and 600 is the denominator. Divide 420 and 600 by their greatest common factor.
+%(3077958359375269925)%	Try entering '11/20' in the highlighted field.

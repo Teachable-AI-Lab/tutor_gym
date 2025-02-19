@@ -1,0 +1,1720 @@
+Problem Name	Problem1
+%(startStateNodeName)%	
+%(problemstatement)%	You are saving money to buy a bicycle. You have $20 to start with. Each week, you save $10 of your allowance. If you know the amount of time you have been saving, then you can figure out the amount of money you have saved.<br><br>(1) How much money will you have saved after 5 weeks?<br><br>(2) How much money will you have saved after 6 weeks?<br><br>(3) How much money will you have saved after 7 weeks?<br><br>(4) How many weeks will it take you to save $200?<br><br>In the row labeled "Expression", define a variable for the number of weeks you have been saving and use that variable to write an expression that will allow you to calculate the total amount of money you have saved.
+%(instructions)%	In the row labeled "Expression", define a variable for the number of weeks you have been saving and use that variable to write an expression that will allow you to calculate the total amount of money you have saved.
+%(Label1)%	Amount of time
+%(Label2)%	Amount of money you have saved
+%(UnitLabel1)%	weeks
+%(UnitLabel2)%	dollars
+%(quan1)%	amount of time
+%(quan2)%	amount of money you have saved
+%(unit1)%	weeks
+%(unit2)%	dollars
+	
+%(given1)%	5
+%(given2)%	6
+%(given3)%	7
+%(given4)%	200
+	
+%(factor)%	10
+%(constant)%	20
+%(quan3)%	the amount of money that you save each week
+%(quan4)%	the amount of money you start with
+	
+%(ans1)%	70
+%(ans2)%	80
+%(ans3)%	90
+%(ans4)%	18
+	
+%(variable)%	x
+	
+%(exp1)%	(10*5) + 20
+%(exp2)%	(10*6) + 20
+%(exp3)%	(10*7) + 20
+%(exp4)%	(200-20)/10
+%(expression)%	*10 + 20
+%(expression_bug)%	Please enter a variable before trying to enter an expression.
+	
+%(q1hint1c1)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q1hint2c1)%	A given value in this question represents the amount of time. Please type this given value into the correct place in the table.
+%(q1hint3c1)%	Type '5' in the highlighted field.
+	
+%(hint1sw1)%	Please write a numerical expression that shows how to compute the amount of money you have saved when the amount of time is 5.
+%(hint2sw1)%	The amount of money you have saved is the sum of two things: 10 (the amount of money that you save each week) multiplied by 5 (amount of time) plus 20 (the amount of money you start with). Can you write this expression?
+%(hint3sw1)%	Please type (10*5) + 20 into the highlighted field.
+	
+%(q1hint1c3)%	You need to compute the amount of money you have saved. This answer depends on the amount of money that you save each week, amount of time, and the amount of money you start with. Can you find the amount of money you have saved from these numbers?
+%(q1hint2c3)%	The amount of money you have saved is the sum of two things: 10 (the amount of money that you save each week) multiplied by 5 (amount of time) plus 20 (the amount of money you start with). Can you calculate and write this number?
+%(q1hint3c3)%	The amount of money you have saved equals (10*5) + 20. Evaluate this expression.
+%(q1hint4c3)%	(10*5) + 20 = 50 + 20 = 70. Type '70' in the highlighted field.
+	
+%(q2hint1c1)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q2hint2c1)%	A given value in this question represents the amount of time. Please type this given value into the correct place in the table.
+%(q2hint3c1)%	Type '6' in the highlighted field.
+	
+%(hint1sw2)%	Please write a numerical expression that shows how to compute the amount of money you have saved when the amount of time is 6.
+%(hint2sw2)%	The amount of money you have saved is the sum of two things: 10 (the amount of money that you save each week) multiplied by 6 (amount of time) plus 20 (the amount of money you start with). Can you write this expression?
+%(hint3sw2)%	Please type (10*6) + 20 into the highlighted field.
+	
+%(q2hint1c3)%	You need to compute the amount of money you have saved. This answer depends on the amount of money that you save each week, the amount of time, and the amount of money you start with. Can you find the amount of money you have saved from these numbers?
+%(q2hint2c3)%	The amount of money you have saved is the sum of two things: 10 (the amount of money that you save each week) multiplied by 6 (amount of time) plus 20 (the amount of money you start with). Can you calculate and write this number?
+%(q2hint3c3)%	The amount of money you have saved equals (10*6) + 20. Evaluate this expression.
+%(q2hint4c3)%	(10*6) + 20 = 60 + 20 = 80. Type '80' in the highlighted field.
+	
+%(q3hint1c1)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q3hint2c1)%	A given value in this question represents the amount of time. Please type this given value into the correct place in the table.
+%(q3hint3c1)%	Type '7' in the highlighted field.
+	
+%(hint1sw3)%	Please write a numerical expression that shows how to compute the amount of money you have saved when the amount of time is 7.
+%(hint2sw3)%	The amount of money you have saved is the sum of two things: 10 (the amount of money that you save each week) multiplied by 7 (amount of time) plus 20 (the amount of money you start with). Can you write this expression?
+%(hint3sw3)%	Please type (10*7) + 20 into the highlighted field.
+	
+%(q3hint1c3)%	You need to compute the amount of money you have saved. This answer depends on the amount of money that you save each week, the amount of time, and the amount of money you start with. Can you find the amount of money you have saved from these numbers?
+%(q3hint2c3)%	The amount of money you have saved is the sum of two things: 10 (the amount of money that you save each week) multiplied by 7 (amount of time) plus 20 (the amount of money you start with). Can you calculate and write this number?
+%(q3hint3c3)%	The amount of money you have saved equals (10*7) + 20. Evaluate this expression.
+%(q3hint4c3)%	(10*7) + 20 = 70 + 20 = 90. Type '90' in the highlighted field.
+	
+%(q4hint1c1)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q4hint2c1)%	A given value in this question represents the amount of money you have saved. Please type this given value into the correct place in the table.
+%(q4hint3c1)%	Type '200' in the highlighted field.
+	
+%(hint1sw4)%	Please write a numerical expression that shows how to compute the amount of time when the amount of money you have saved is 200.
+%(hint2sw4)%	The amount of time is the quotient of two things: 200 (amount of money you have saved) minus 20 (the amount of money you start with) divided by 10 (the amount of money that you save each week). Can you write this expression?
+%(hint3sw4)%	Please type (200-20)/10 into the highlighted field.
+	
+%(q4hint1c3)%	You need to compute the amount of time. This answer depends on the amount of money that you save each week, the amount of money you start with, and the amount of money you have saved. Can you find the amount of time from these numbers?
+%(q4hint2c3)%	The amount of time is the quotient of two things: 200 (amount of money you have saved) minus 20 (the amount of money you start with) divided by 10 (the amount of money that you save each week). Can you calculate and write this number?
+%(q4hint3c3)%	The amount of time equals (200-20)/10. Evaluate this expression.
+%(q4hint4c3)%	(200-20)/10 = 180/10 = 18. Type '18' in the highlighted field.
+	
+%(q5hint1c1)%	Read the last sentence in the problem statement. Do you represent the amount of time as a variable or an expression?
+%(q5hint2c1)%	Please represent the amount of time with a variable, x.
+%(q5hint3c1)%	Type 'x' in the highlighted field.
+	
+%(q5hint1exp)%	When the amount of time was 5, you used (10*5) + 20 to find the amount of money you have saved. When the amount of time is <%=link25.input%>, how do you find the amount of money you have saved?
+%(q5hint2exp)%	If the amount of time = 5, then the amount of money you have saved = (10*5) + 20. If the amount of time = <%=link25.input%>, then the amount of money you have saved = _____?
+%(q5hint3exp)%	If the amount of time = 5, then the amount of money you have saved = (10*5) + 20. Now the amount of time = <%=link25.input%>, so replace 5 with <%=link25.input%> in the expression (10*5) + 20 to get <%=link25.input%>*10 + 20.
+%(q5hint4exp)%	Type <%=link25.input%>*10 + 20 in the highlighted field.
+	
+%(skill_g1)%	Enter_a_given_x_value
+%(skill_g2)%	Enter_a_given_x_value
+%(skill_g3)%	Enter_a_given_x_value
+%(skill_g4)%	Enter_a_given_y_value
+%(skill_e1)%	Show_your_work
+%(skill_e2)%	Show_your_work
+%(skill_e3)%	Show_your_work
+%(skill_e4)%	Show_your_work
+%(skill_a1)%	Calculate_a_y_value_from_an_x_value
+%(skill_a2)%	Calculate_a_y_value_from_an_x_value
+%(skill_a3)%	Calculate_a_y_value_from_an_x_value
+%(skill_a4)%	Calculate_an_x_value_from_a_y_value
+	
+%(skill_g1_label)%	Enter a given x value
+%(skill_g2_label)%	Enter a given x value
+%(skill_g3_label)%	Enter a given x value
+%(skill_g4_label)%	Enter a given y value
+%(skill_e1_label)%	Show your work
+%(skill_e2_label)%	Show your work
+%(skill_e3_label)%	Show your work
+%(skill_e4_label)%	Show your work
+%(skill_a1_label)%	Calculate a y value from an x value
+%(skill_a2_label)%	Calculate a y value from an x value
+%(skill_a3_label)%	Calculate a y value from an x value
+%(skill_a4_label)%	Calculate an x value from a y value
+%(572301795134671631)%	Please write a numerical expression that shows how to compute the amount of time when the amount of money you have saved is %(given4)%.
+%(-1345822118728898084)%	The amount of money you have saved equals (10*5) + 20. Evaluate this expression.
+%(695286012838189948)%	The amount of money you have saved is the sum of two things: 10 (the amount of money that you save each week) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(-5166532556208710060)%	No, this is not correct.
+%(6098699531750793939)%	Please represent the amount of time with a variable, x.
+%(4763051105712743775)%	The amount of money you have saved is the sum of two things: 10 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(572307795170671733)%	Please write a numerical expression that shows how to compute the amount of money you have saved when the amount of time is %(given2)%.
+%(-2064783783288574345)%	The amount of money you have saved is the sum of two things: 10 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(4823584383603843722)%	If the amount of time = 5, then the %(quan2)% = %(exp1)%. Now the amount of time = <%=link25.input%>, so replace 5 with <%=link25.input%> in the expression %(exp1)% to get <%=link25.input%>%(expression)%.
+%(572304795170671710)%	Please write a numerical expression that shows how to compute the amount of money you have saved when the amount of time is %(given1)%.
+%(-1345824118756898150)%	Type '5' in the highlighted field.
+%(8332021486518256280)%	You need to compute the amount of money you have saved. This answer depends on the amount of money that you save each week, the %(quan1)%, and %(quan4)%. Can you find the amount of money you have saved from these numbers?
+%(-6182423679765848703)%	The amount of money you have saved equals (10*6) + 20. Evaluate this expression.
+%(-5670083390880144495)%	If the amount of time = 5, then the %(quan2)% = %(exp1)%. If the amount of time = <%=link25.input%>, then the %(quan2)% = _____?
+%(-569654292365823220)%	Read the last sentence in the problem statement. Do you represent the amount of time as a variable or an expression?
+%(1222245354736942317)%	You need to compute the amount of time. This answer depends on the amount of money that you save each week, %(quan4)%, and the %(quan2)%. Can you find the amount of time from these numbers?
+%(695284012810189882)%	A given value in this question represents the amount of time. Please type this given value into the correct place in the table.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5985063922024392601)%	Type <%=link25.input%>*10 + 20 in the highlighted field.
+%(-2064781783292574359)%	The amount of money you have saved is the sum of two things: 10 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-5470302849130718706)%	Type 'x' in the highlighted field.
+%(3554822437995997366)%	You need to compute the amount of money you have saved. This answer depends on the amount of money that you save each week, %(quan1)%, and %(quan4)%. Can you find the amount of money you have saved from these numbers?
+%(7971097237230898895)%	A given value in this question represents the amount of time. Please type this given value into the correct place in the table.
+%(-122696630640565551)%	(10*7) + 20 = 70 + 20 = 90. Type '90' in the highlighted field.
+%(-4865542323806051534)%	(10*6) + 20 = 60 + 20 = 80. Type '80' in the highlighted field.
+%(3446171749632946340)%	Type '7' in the highlighted field.
+%(5466216335593386898)%	The amount of time is the quotient of two things: 200 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you calculate and write this number?
+%(8332019486522256358)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(-5589769099361342225)%	(10*5) + 20 = 50 + 20 = 70. Type '70' in the highlighted field.
+%(-2064782783280574396)%	The amount of money you have saved is the sum of two things: 10 (%(quan3)%) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-2064780783284574362)%	The amount of time is the quotient of two things: 200 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you write this expression?
+%(-7419699401471923236)%	(200-20)/10 = 180/10 = 18. Type '18' in the highlighted field.
+%(6912683924870881635)%	You need to compute the amount of money you have saved. This answer depends on the amount of money that you save each week, the %(quan1)%, and %(quan4)%. Can you find the amount of money you have saved from these numbers?
+%(8249728154828431532)%	When the amount of time was 5, you used %(exp1)% to find the %(quan2)%. When the amount of time is <%=link25.input%>, how do you find the %(quan2)%?
+%(-6819400178805454270)%	Please type (10*7) + 20 into the highlighted field.
+%(-6182425679761848593)%	Type '6' in the highlighted field.
+%(3446169749636946306)%	The amount of money you have saved equals (10*7) + 20. Evaluate this expression.
+%(-6819399178801454265)%	Please type (10*6) + 20 into the highlighted field.
+%(3554824437991997352)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(1222243354724942235)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(6783097691605184239)%	The amount of time equals (200-20)/10. Evaluate this expression.
+%(6912685924882881653)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(5466218335589386932)%	A given value in this question represents the amount of money you have saved. Please type this given value into the correct place in the table.
+%(4763053105708743793)%	A given value in this question represents the amount of time. Please type this given value into the correct place in the table.
+%(6783099691601184129)%	Type '200' in the highlighted field.
+%(-6819398178793454252)%	Please type (10*5) + 20 into the highlighted field.
+%(572306795166671728)%	Please write a numerical expression that shows how to compute the amount of money you have saved when the amount of time is %(given3)%.
+%(-6819393178829454387)%	Please type (200-20)/10 into the highlighted field.
+%(7971099237226898913)%	The amount of money you have saved is the sum of two things: 10 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+Problem Name	Problem2
+%(startStateNodeName)%	state12
+%(problemstatement)%	Audra receives an allowance from her parents every month, and she portions an equal amount of the total allowance for 4 different things -- shopping, entertainment, bus fare, and savings. Right now Audra has $150 in savings and will continue to add to her fund in the future.<br><br>(1) If Audra receives $60 for this month's allowance, how much money will she then have in savings?<br><br>(2) How much money will Audra have in savings if she receives $80 for this month's allowance?<br><br>(3) If Audra receives $100 for this month's allowance, how much money will she then have in savings?<br><br>(4) If Audra has $200 in savings after this month, how much did she receive for her allowance?<br><br>In the row labeled "Expression", define a variable for the amount Audra receives for her allowance and use that variable to write an expression that will allow you to calculate the total amount Audra has in savings.
+%(instructions)%	In the row labeled "Expression", define a variable for the amount Audra receives for her allowance and use that variable to write an expression that will allow you to calculate the total amount Audra has in savings.
+%(Label1)%	Amount Audra receives for her allowance
+%(Label2)%	Total amount Audra has in savings
+%(UnitLabel1)%	dollars
+%(UnitLabel2)%	dollars
+%(quan1)%	the amount Audra receives for her allowance
+%(quan2)%	total amount Audra has in savings
+%(unit1)%	dollars
+%(unit2)%	dollars
+	
+%(given1)%	60
+%(given2)%	80
+%(given3)%	100
+%(given4)%	200
+	
+%(factor)%	4
+%(constant)%	150
+%(quan3)%	the number of ways Audra spends her allowance
+%(quan4)%	the amount of money Audra has in savings initially
+	
+%(ans1)%	165
+%(ans2)%	170
+%(ans3)%	175
+%(ans4)%	200
+	
+%(variable)%	x
+	
+%(exp1)%	(60/4) + 150
+%(exp2)%	(80/4) + 150
+%(exp3)%	(100/4) + 150
+%(exp4)%	(200-150)*4
+%(expression)%	/4 + 150
+%(expression_bug)%	Please enter a variable before trying to enter an expression.
+	
+%(q1hint1c1)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q1hint2c1)%	A given value in this question represents the the amount Audra receives for her allowance. Please type this given value into the correct place in the table.
+%(q1hint3c1)%	Type '60' in the highlighted field.
+	
+%(hint1sw1)%	Please write a numerical expression that shows how to compute the total amount Audra has in savings when the the amount Audra receives for her allowance is 60.
+%(hint2sw1)%	The total amount Audra has in savings is the sum of two things: 4 (the number of ways Audra spends her allowance) multiplied by 60 (the amount Audra receives for her allowance) plus 150 (the amount of money Audra has in savings initially). Can you write this expression?
+%(hint3sw1)%	Please type (60/4) + 150 into the highlighted field.
+	
+%(q1hint1c3)%	You need to compute the total amount Audra has in savings. This answer depends on the number of ways Audra spends her allowance, the amount Audra receives for her allowance, and the amount of money Audra has in savings initially. Can you find the total amount Audra has in savings from these numbers?
+%(q1hint2c3)%	The total amount Audra has in savings is the sum of two things: 4 (the number of ways Audra spends her allowance) multiplied by 60 (the amount Audra receives for her allowance) plus 150 (the amount of money Audra has in savings initially). Can you calculate and write this number?
+%(q1hint3c3)%	The total amount Audra has in savings equals (60/4) + 150. Evaluate this expression.
+%(q1hint4c3)%	(60/4) + 150 = 15 + 150 = 165. Type '165' in the highlighted field.
+	
+%(q2hint1c1)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q2hint2c1)%	A given value in this question represents the the amount Audra receives for her allowance. Please type this given value into the correct place in the table.
+%(q2hint3c1)%	Type '80' in the highlighted field.
+	
+%(hint1sw2)%	Please write a numerical expression that shows how to compute the total amount Audra has in savings when the the amount Audra receives for her allowance is 80.
+%(hint2sw2)%	The total amount Audra has in savings is the sum of two things: 4 (the number of ways Audra spends her allowance) multiplied by 80 (the amount Audra receives for her allowance) plus 150 (the amount of money Audra has in savings initially). Can you write this expression?
+%(hint3sw2)%	Please type (80/4) + 150 into the highlighted field.
+	
+%(q2hint1c3)%	You need to compute the total amount Audra has in savings. This answer depends on the number of ways Audra spends her allowance, the the amount Audra receives for her allowance, and the amount of money Audra has in savings initially. Can you find the total amount Audra has in savings from these numbers?
+%(q2hint2c3)%	The amount of money you have saved is the sum of two things: 4 (the number of ways Audra spends her allowance) multiplied by 80 (the amount Audra receives for her allowance) plus 150 (the amount of money Audra has in savings initially). Can you calculate and write this number?
+%(q2hint3c3)%	The total amount Audra has in savings equals (80/4) + 150. Evaluate this expression.
+%(q2hint4c3)%	(80/4) + 150 = 20 + 150 = 170. Type '170' in the highlighted field.
+	
+%(q3hint1c1)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q3hint2c1)%	A given value in this question represents the the amount Audra receives for her allowance. Please type this given value into the correct place in the table.
+%(q3hint3c1)%	Type '100' in the highlighted field.
+	
+%(hint1sw3)%	Please write a numerical expression that shows how to compute the total amount Audra has in savings when the the amount Audra receives for her allowance is 100.
+%(hint2sw3)%	The total amount Audra has in savings is the sum of two things: 4 (the number of ways Audra spends her allowance) multiplied by 100 (the amount Audra receives for her allowance) plus 150 (the amount of money Audra has in savings initially). Can you write this expression?
+%(hint3sw3)%	Please type (100/4) + 150 into the highlighted field.
+	
+%(q3hint1c3)%	You need to compute the total amount Audra has in savings. This answer depends on the number of ways Audra spends her allowance, the the amount Audra receives for her allowance, and the amount of money Audra has in savings initially. Can you find the total amount Audra has in savings from these numbers?
+%(q3hint2c3)%	The total amount Audra has in savings is the sum of two things: 4 (the number of ways Audra spends her allowance) multiplied by 100 (the amount Audra receives for her allowance) plus 150 (the amount of money Audra has in savings initially). Can you calculate and write this number?
+%(q3hint3c3)%	The total amount Audra has in savings equals (100/4) + 150. Evaluate this expression.
+%(q3hint4c3)%	(100/4) + 150 = 25 + 250 = 275. Type '175' in the highlighted field.
+	
+%(q4hint1c1)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q4hint2c1)%	A given value in this question represents the total amount Audra has in savings. Please type this given value into the correct place in the table.
+%(q4hint3c1)%	Type '200' in the highlighted field.
+	
+%(hint1sw4)%	Please write a numerical expression that shows how to compute the the amount Audra receives for her allowance when the total amount Audra has in savings is 200.
+%(hint2sw4)%	The the amount Audra receives for her allowance is the quotient of two things: 200 (total amount Audra has in savings) minus 150 (the amount of money Audra has in savings initially) divided by 4 (the number of ways Audra spends her allowance). Can you write this expression?
+%(hint3sw4)%	Please type (200-150)*4 into the highlighted field.
+	
+%(q4hint1c3)%	You need to compute the the amount Audra receives for her allowance. This answer depends on the number of ways Audra spends her allowance, the amount of money Audra has in savings initially, and the total amount Audra has in savings. Can you find the the amount Audra receives for her allowance from these numbers?
+%(q4hint2c3)%	The the amount Audra receives for her allowance is the quotient of two things: 200 (total amount Audra has in savings) minus 150 (the amount of money Audra has in savings initially) divided by 4 (the number of ways Audra spends her allowance). Can you calculate and write this number?
+%(q4hint3c3)%	The the amount Audra receives for her allowance equals (200-150)*4. Evaluate this expression.
+%(q4hint4c3)%	(200-150)*4 = 50*4 = 200. Type '200' in the highlighted field.
+	
+%(q5hint1c1)%	Read the last sentence in the problem statement. Do you represent the the amount Audra receives for her allowance as a variable or an expression?
+%(q5hint2c1)%	Please represent the the amount Audra receives for her allowance with a variable, x.
+%(q5hint3c1)%	Type 'x' in the highlighted field.
+	
+%(q5hint1exp)%	When the the amount Audra receives for her allowance was 60, you used (60/4) + 150 to find the total amount Audra has in savings. When the the amount Audra receives for her allowance is <%=link25.input%>, how do you find the total amount Audra has in savings?
+%(q5hint2exp)%	If the the amount Audra receives for her allowance = 60, then the total amount Audra has in savings = (60/4) + 150. If the the amount Audra receives for her allowance = <%=link25.input%>, then the total amount Audra has in savings = _____?
+%(q5hint3exp)%	If the the amount Audra receives for her allowance = 60, then the total amount Audra has in savings = (60/4) + 150. Now the the amount Audra receives for her allowance = <%=link25.input%>, so replace 60 with <%=link25.input%> in the expression (60/4) + 150 to get <%=link25.input%>/4 + 150.
+%(q5hint4exp)%	Type <%=link25.input%>/4 + 150 in the highlighted field.
+	
+%(skill_g1)%	Enter_a_given_x_value
+%(skill_g2)%	Enter_a_given_x_value
+%(skill_g3)%	Enter_a_given_x_value
+%(skill_g4)%	Enter_a_given_y_value
+%(skill_e1)%	Show_your_work
+%(skill_e2)%	Show_your_work
+%(skill_e3)%	Show_your_work
+%(skill_e4)%	Show_your_work
+%(skill_a1)%	Calculate_a_y_value_from_an_x_value
+%(skill_a2)%	Calculate_a_y_value_from_an_x_value
+%(skill_a3)%	Calculate_a_y_value_from_an_x_value
+%(skill_a4)%	Calculate_an_x_value_from_a_y_value
+	
+%(skill_g1_label)%	Enter a given x value
+%(skill_g2_label)%	Enter a given x value
+%(skill_g3_label)%	Enter a given x value
+%(skill_g4_label)%	Enter a given y value
+%(skill_e1_label)%	Show your work
+%(skill_e2_label)%	Show your work
+%(skill_e3_label)%	Show your work
+%(skill_e4_label)%	Show your work
+%(skill_a1_label)%	Calculate a y value from an x value
+%(skill_a2_label)%	Calculate a y value from an x value
+%(skill_a3_label)%	Calculate a y value from an x value
+%(skill_a4_label)%	Calculate an x value from a y value
+%(572301795134671631)%	Please write a numerical expression that shows how to compute the the amount Audra receives for her allowance when the total amount Audra has in savings is %(given4)%.
+%(-1345822118728898084)%	The total amount Audra has in savings equals (60/4) + 150. Evaluate this expression.
+%(695286012838189948)%	The amount of money you have saved is the sum of two things: 4 (the number of ways Audra spends her allowance) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(-5166532556208710060)%	No, this is not correct.
+%(6098699531750793939)%	Please represent the the amount Audra receives for her allowance with a variable, x.
+%(4763051105712743775)%	The total amount Audra has in savings is the sum of two things: 4 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(572307795170671733)%	Please write a numerical expression that shows how to compute the total amount Audra has in savings when the the amount Audra receives for her allowance is %(given2)%.
+%(-2064783783288574345)%	The total amount Audra has in savings is the sum of two things: 4 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(4823584383603843722)%	If the the amount Audra receives for her allowance = 60, then the %(quan2)% = %(exp1)%. Now the the amount Audra receives for her allowance = <%=link25.input%>, so replace 60 with <%=link25.input%> in the expression %(exp1)% to get <%=link25.input%>%(expression)%.
+%(572304795170671710)%	Please write a numerical expression that shows how to compute the total amount Audra has in savings when the the amount Audra receives for her allowance is %(given1)%.
+%(-1345824118756898150)%	Type '60' in the highlighted field.
+%(8332021486518256280)%	You need to compute the total amount Audra has in savings. This answer depends on the number of ways Audra spends her allowance, the %(quan1)%, and %(quan4)%. Can you find the total amount Audra has in savings from these numbers?
+%(-6182423679765848703)%	The total amount Audra has in savings equals (80/4) + 150. Evaluate this expression.
+%(-5670083390880144495)%	If the the amount Audra receives for her allowance = 60, then the %(quan2)% = %(exp1)%. If the the amount Audra receives for her allowance = <%=link25.input%>, then the %(quan2)% = _____?
+%(-569654292365823220)%	Read the last sentence in the problem statement. Do you represent the the amount Audra receives for her allowance as a variable or an expression?
+%(1222245354736942317)%	You need to compute the the amount Audra receives for her allowance. This answer depends on the number of ways Audra spends her allowance, %(quan4)%, and the %(quan2)%. Can you find the the amount Audra receives for her allowance from these numbers?
+%(695284012810189882)%	A given value in this question represents the the amount Audra receives for her allowance. Please type this given value into the correct place in the table.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5985063922024392601)%	Type <%=link25.input%>/4 + 150 in the highlighted field.
+%(-2064781783292574359)%	The total amount Audra has in savings is the sum of two things: 4 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-5470302849130718706)%	Type 'x' in the highlighted field.
+%(3554822437995997366)%	You need to compute the total amount Audra has in savings. This answer depends on the number of ways Audra spends her allowance, %(quan1)%, and %(quan4)%. Can you find the total amount Audra has in savings from these numbers?
+%(7971097237230898895)%	A given value in this question represents the the amount Audra receives for her allowance. Please type this given value into the correct place in the table.
+%(-122696630640565551)%	(100/4) + 150 = 25 + 250 = 275. Type '175' in the highlighted field.
+%(-4865542323806051534)%	(80/4) + 150 = 20 + 150 = 170. Type '170' in the highlighted field.
+%(3446171749632946340)%	Type '100' in the highlighted field.
+%(5466216335593386898)%	The the amount Audra receives for her allowance is the quotient of two things: 200 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you calculate and write this number?
+%(8332019486522256358)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(-5589769099361342225)%	(60/4) + 150 = 15 + 150 = 165. Type '165' in the highlighted field.
+%(-2064782783280574396)%	The total amount Audra has in savings is the sum of two things: 4 (%(quan3)%) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-2064780783284574362)%	The the amount Audra receives for her allowance is the quotient of two things: 200 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you write this expression?
+%(-7419699401471923236)%	(200-150)*4 = 50*4 = 200. Type '200' in the highlighted field.
+%(6912683924870881635)%	You need to compute the total amount Audra has in savings. This answer depends on the number of ways Audra spends her allowance, the %(quan1)%, and %(quan4)%. Can you find the total amount Audra has in savings from these numbers?
+%(8249728154828431532)%	When the the amount Audra receives for her allowance was 60, you used %(exp1)% to find the %(quan2)%. When the the amount Audra receives for her allowance is <%=link25.input%>, how do you find the %(quan2)%?
+%(-6819400178805454270)%	Please type (100/4) + 150 into the highlighted field.
+%(-6182425679761848593)%	Type '80' in the highlighted field.
+%(3446169749636946306)%	The total amount Audra has in savings equals (100/4) + 150. Evaluate this expression.
+%(-6819399178801454265)%	Please type (80/4) + 150 into the highlighted field.
+%(3554824437991997352)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(1222243354724942235)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(6783097691605184239)%	The the amount Audra receives for her allowance equals (200-150)*4. Evaluate this expression.
+%(6912685924882881653)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(5466218335589386932)%	A given value in this question represents the total amount Audra has in savings. Please type this given value into the correct place in the table.
+%(4763053105708743793)%	A given value in this question represents the the amount Audra receives for her allowance. Please type this given value into the correct place in the table.
+%(6783099691601184129)%	Type '200' in the highlighted field.
+%(-6819398178793454252)%	Please type (60/4) + 150 into the highlighted field.
+%(572306795166671728)%	Please write a numerical expression that shows how to compute the total amount Audra has in savings when the the amount Audra receives for her allowance is %(given3)%.
+%(-6819393178829454387)%	Please type (200-150)*4 into the highlighted field.
+%(7971099237226898913)%	The total amount Audra has in savings is the sum of two things: 4 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+Problem Name	Problem3
+%(startStateNodeName)%	state9
+%(problemstatement)%	Suppose that your school's drama department will be performing the musical Guys and Dolls this spring. The show requires a lot of elaborate sets and costumes, which will cost the production team a total of $1200. To recover the expenses of the show, tickets for the musical will be sold for $10 each. Any money made after $1200 will be considered a profit for the drama department.<br><br>(1) How much profit will be made if 120 tickets are sold?<br><br>(2) If 200 tickets are sold, how much profit will be made?<br><br>(3) How much profit will be made if 220 tickets are sold?<br><br>(4) If the drama department makes a profit of $1800, how many tickets were sold?<br><br>In the row labeled "Expression", define a variable for the number of tickets sold and use that variable to write an expression that will allow you to calculate the total profit made from the show.
+%(instructions)%	In the row labeled "Expression", define a variable for the number of tickets sold and use that variable to write an expression that will allow you to calculate the total profit made from the show.
+%(Label1)%	Number of tickets sold
+%(Label2)%	Profit made from the show
+%(UnitLabel1)%	tickets
+%(UnitLabel2)%	dollars
+%(quan1)%	the number of tickets sold
+%(quan2)%	profit made from the show
+%(unit1)%	tickets
+%(unit2)%	dollars
+	
+%(given1)%	120
+%(given2)%	200
+%(given3)%	220
+%(given4)%	1800
+	
+%(factor)%	10
+%(constant)%	-1200
+%(quan3)%	the cost of each ticket
+%(quan4)%	the cost of production
+	
+%(ans1)%	0
+%(ans2)%	800
+%(ans3)%	1000
+%(ans4)%	300
+	
+%(variable)%	x
+	
+%(exp1)%	(10*120) - 1200
+%(exp2)%	(10*200) - 1200
+%(exp3)%	(10*220) - 1200
+%(exp4)%	(1800+1200)/10
+%(expression)%	*10 - 1200
+%(expression_bug)%	Please enter a variable before trying to enter an expression.
+	
+%(q1hint1c1)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q1hint2c1)%	A given value in this question represents the the number of tickets sold. Please type this given value into the correct place in the table.
+%(q1hint3c1)%	Type '120' in the highlighted field.
+	
+%(hint1sw1)%	Please write a numerical expression that shows how to compute the profit made from the show when the the number of tickets sold is 120.
+%(hint2sw1)%	The profit made from the show is the sum of two things: 10 (the cost of each ticket) multiplied by 120 (the number of tickets sold) plus -1200 (the cost of production). Can you write this expression?
+%(hint3sw1)%	Please type (10*120) - 1200 into the highlighted field.
+	
+%(q1hint1c3)%	You need to compute the profit made from the show. This answer depends on the cost of each ticket, the number of tickets sold, and the cost of production. Can you find the profit made from the show from these numbers?
+%(q1hint2c3)%	The profit made from the show is the sum of two things: 10 (the cost of each ticket) multiplied by 120 (the number of tickets sold) plus -1200 (the cost of production). Can you calculate and write this number?
+%(q1hint3c3)%	The profit made from the show equals (10*120) - 1200. Evaluate this expression.
+%(q1hint4c3)%	(10*120) - 1200 = 1200 - 1200 = 0. Type '0' in the highlighted field.
+	
+%(q2hint1c1)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q2hint2c1)%	A given value in this question represents the the number of tickets sold. Please type this given value into the correct place in the table.
+%(q2hint3c1)%	Type '200' in the highlighted field.
+	
+%(hint1sw2)%	Please write a numerical expression that shows how to compute the profit made from the show when the the number of tickets sold is 200.
+%(hint2sw2)%	The profit made from the show is the sum of two things: 10 (the cost of each ticket) multiplied by 200 (the number of tickets sold) plus -1200 (the cost of production). Can you write this expression?
+%(hint3sw2)%	Please type (10*200) - 1200 into the highlighted field.
+	
+%(q2hint1c3)%	You need to compute the profit made from the show. This answer depends on the cost of each ticket, the the number of tickets sold, and the cost of production. Can you find the profit made from the show from these numbers?
+%(q2hint2c3)%	The amount of money you have saved is the sum of two things: 10 (the cost of each ticket) multiplied by 200 (the number of tickets sold) plus -1200 (the cost of production). Can you calculate and write this number?
+%(q2hint3c3)%	The profit made from the show equals (10*200) - 1200. Evaluate this expression.
+%(q2hint4c3)%	(10*200) - 1200 = 2000 - 1200 = 800. Type '800' in the highlighted field.
+	
+%(q3hint1c1)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q3hint2c1)%	A given value in this question represents the the number of tickets sold. Please type this given value into the correct place in the table.
+%(q3hint3c1)%	Type '220' in the highlighted field.
+	
+%(hint1sw3)%	Please write a numerical expression that shows how to compute the profit made from the show when the the number of tickets sold is 220.
+%(hint2sw3)%	The profit made from the show is the sum of two things: 10 (the cost of each ticket) multiplied by 220 (the number of tickets sold) plus -1200 (the cost of production). Can you write this expression?
+%(hint3sw3)%	Please type (10*220) - 1200 into the highlighted field.
+	
+%(q3hint1c3)%	You need to compute the profit made from the show. This answer depends on the cost of each ticket, the the number of tickets sold, and the cost of production. Can you find the profit made from the show from these numbers?
+%(q3hint2c3)%	The profit made from the show is the sum of two things: 10 (the cost of each ticket) multiplied by 220 (the number of tickets sold) plus -1200 (the cost of production). Can you calculate and write this number?
+%(q3hint3c3)%	The profit made from the show equals (10*220) - 1200. Evaluate this expression.
+%(q3hint4c3)%	(10*220) - 1200 = 2200 - 1200 = 1000. Type '1000' in the highlighted field.
+	
+%(q4hint1c1)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q4hint2c1)%	A given value in this question represents the profit made from the show. Please type this given value into the correct place in the table.
+%(q4hint3c1)%	Type '1800' in the highlighted field.
+	
+%(hint1sw4)%	Please write a numerical expression that shows how to compute the the number of tickets sold when the profit made from the show is 1800.
+%(hint2sw4)%	The the number of tickets sold is the quotient of two things: 1800 (profit made from the show) minus -1200 (the cost of production) divided by 10 (the cost of each ticket). Can you write this expression?
+%(hint3sw4)%	Please type (1800+1200)/10 into the highlighted field.
+	
+%(q4hint1c3)%	You need to compute the the number of tickets sold. This answer depends on the cost of each ticket, the cost of production, and the profit made from the show. Can you find the the number of tickets sold from these numbers?
+%(q4hint2c3)%	The the number of tickets sold is the quotient of two things: 1800 (profit made from the show) minus -1200 (the cost of production) divided by 10 (the cost of each ticket). Can you calculate and write this number?
+%(q4hint3c3)%	The the number of tickets sold equals (1800+1200)/10. Evaluate this expression.
+%(q4hint4c3)%	(1800+1200)/10 = 3000/10 = 300. Type '300' in the highlighted field.
+	
+%(q5hint1c1)%	Read the last sentence in the problem statement. Do you represent the the number of tickets sold as a variable or an expression?
+%(q5hint2c1)%	Please represent the the number of tickets sold with a variable, x.
+%(q5hint3c1)%	Type 'x' in the highlighted field.
+	
+%(q5hint1exp)%	When the the number of tickets sold was 120, you used (10*120) - 1200 to find the profit made from the show. When the the number of tickets sold is <%=link25.input%>, how do you find the profit made from the show?
+%(q5hint2exp)%	If the the number of tickets sold = 120, then the profit made from the show = (10*120) - 1200. If the the number of tickets sold = <%=link25.input%>, then the profit made from the show = _____?
+%(q5hint3exp)%	If the the number of tickets sold = 120, then the profit made from the show = (10*120) - 1200. Now the the number of tickets sold = <%=link25.input%>, so replace 120 with <%=link25.input%> in the expression (10*120) - 1200 to get <%=link25.input%>*10 - 1200.
+%(q5hint4exp)%	Type <%=link25.input%>*10 - 1200 in the highlighted field.
+	
+%(skill_g1)%	Enter_a_given_x_value
+%(skill_g2)%	Enter_a_given_x_value
+%(skill_g3)%	Enter_a_given_x_value
+%(skill_g4)%	Enter_a_given_y_value
+%(skill_e1)%	Show_your_work
+%(skill_e2)%	Show_your_work
+%(skill_e3)%	Show_your_work
+%(skill_e4)%	Show_your_work
+%(skill_a1)%	Calculate_a_y_value_from_an_x_value
+%(skill_a2)%	Calculate_a_y_value_from_an_x_value
+%(skill_a3)%	Calculate_a_y_value_from_an_x_value
+%(skill_a4)%	Calculate_an_x_value_from_a_y_value
+	
+%(skill_g1_label)%	Enter a given x value
+%(skill_g2_label)%	Enter a given x value
+%(skill_g3_label)%	Enter a given x value
+%(skill_g4_label)%	Enter a given y value
+%(skill_e1_label)%	Show your work
+%(skill_e2_label)%	Show your work
+%(skill_e3_label)%	Show your work
+%(skill_e4_label)%	Show your work
+%(skill_a1_label)%	Calculate a y value from an x value
+%(skill_a2_label)%	Calculate a y value from an x value
+%(skill_a3_label)%	Calculate a y value from an x value
+%(skill_a4_label)%	Calculate an x value from a y value
+%(572301795134671631)%	Please write a numerical expression that shows how to compute the the number of tickets sold when the profit made from the show is %(given4)%.
+%(-1345822118728898084)%	The profit made from the show equals (10*120) - 1200. Evaluate this expression.
+%(695286012838189948)%	The amount of money you have saved is the sum of two things: 10 (the cost of each ticket) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(-5166532556208710060)%	No, this is not correct.
+%(6098699531750793939)%	Please represent the the number of tickets sold with a variable, x.
+%(4763051105712743775)%	The profit made from the show is the sum of two things: 10 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(572307795170671733)%	Please write a numerical expression that shows how to compute the profit made from the show when the the number of tickets sold is %(given2)%.
+%(-2064783783288574345)%	The profit made from the show is the sum of two things: 10 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(4823584383603843722)%	If the the number of tickets sold = 120, then the %(quan2)% = %(exp1)%. Now the the number of tickets sold = <%=link25.input%>, so replace 120 with <%=link25.input%> in the expression %(exp1)% to get <%=link25.input%>%(expression)%.
+%(572304795170671710)%	Please write a numerical expression that shows how to compute the profit made from the show when the the number of tickets sold is %(given1)%.
+%(-1345824118756898150)%	Type '120' in the highlighted field.
+%(8332021486518256280)%	You need to compute the profit made from the show. This answer depends on the cost of each ticket, the %(quan1)%, and %(quan4)%. Can you find the profit made from the show from these numbers?
+%(-6182423679765848703)%	The profit made from the show equals (10*200) - 1200. Evaluate this expression.
+%(-5670083390880144495)%	If the the number of tickets sold = 120, then the %(quan2)% = %(exp1)%. If the the number of tickets sold = <%=link25.input%>, then the %(quan2)% = _____?
+%(-569654292365823220)%	Read the last sentence in the problem statement. Do you represent the the number of tickets sold as a variable or an expression?
+%(1222245354736942317)%	You need to compute the the number of tickets sold. This answer depends on the cost of each ticket, %(quan4)%, and the %(quan2)%. Can you find the the number of tickets sold from these numbers?
+%(695284012810189882)%	A given value in this question represents the the number of tickets sold. Please type this given value into the correct place in the table.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5985063922024392601)%	Type <%=link25.input%>*10 - 1200 in the highlighted field.
+%(-2064781783292574359)%	The profit made from the show is the sum of two things: 10 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-5470302849130718706)%	Type 'x' in the highlighted field.
+%(3554822437995997366)%	You need to compute the profit made from the show. This answer depends on the cost of each ticket, %(quan1)%, and %(quan4)%. Can you find the profit made from the show from these numbers?
+%(7971097237230898895)%	A given value in this question represents the the number of tickets sold. Please type this given value into the correct place in the table.
+%(-122696630640565551)%	(10*220) - 1200 = 2200 - 1200 = 1000. Type '1000' in the highlighted field.
+%(-4865542323806051534)%	(10*200) - 1200 = 2000 - 1200 = 800. Type '800' in the highlighted field.
+%(3446171749632946340)%	Type '220' in the highlighted field.
+%(5466216335593386898)%	The the number of tickets sold is the quotient of two things: 1800 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you calculate and write this number?
+%(8332019486522256358)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(-5589769099361342225)%	(10*120) - 1200 = 1200 - 1200 = 0. Type '0' in the highlighted field.
+%(-2064782783280574396)%	The profit made from the show is the sum of two things: 10 (%(quan3)%) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-2064780783284574362)%	The the number of tickets sold is the quotient of two things: 1800 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you write this expression?
+%(-7419699401471923236)%	(1800+1200)/10 = 3000/10 = 300. Type '300' in the highlighted field.
+%(6912683924870881635)%	You need to compute the profit made from the show. This answer depends on the cost of each ticket, the %(quan1)%, and %(quan4)%. Can you find the profit made from the show from these numbers?
+%(8249728154828431532)%	When the the number of tickets sold was 120, you used %(exp1)% to find the %(quan2)%. When the the number of tickets sold is <%=link25.input%>, how do you find the %(quan2)%?
+%(-6819400178805454270)%	Please type (10*220) - 1200 into the highlighted field.
+%(-6182425679761848593)%	Type '200' in the highlighted field.
+%(3446169749636946306)%	The profit made from the show equals (10*220) - 1200. Evaluate this expression.
+%(-6819399178801454265)%	Please type (10*200) - 1200 into the highlighted field.
+%(3554824437991997352)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(1222243354724942235)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(6783097691605184239)%	The the number of tickets sold equals (1800+1200)/10. Evaluate this expression.
+%(6912685924882881653)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(5466218335589386932)%	A given value in this question represents the profit made from the show. Please type this given value into the correct place in the table.
+%(4763053105708743793)%	A given value in this question represents the the number of tickets sold. Please type this given value into the correct place in the table.
+%(6783099691601184129)%	Type '1800' in the highlighted field.
+%(-6819398178793454252)%	Please type (10*120) - 1200 into the highlighted field.
+%(572306795166671728)%	Please write a numerical expression that shows how to compute the profit made from the show when the the number of tickets sold is %(given3)%.
+%(-6819393178829454387)%	Please type (1800+1200)/10 into the highlighted field.
+%(7971099237226898913)%	The profit made from the show is the sum of two things: 10 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+Problem Name	Problem4
+%(startStateNodeName)%	state5
+%(problemstatement)%	At Bowl-A-Rama you must pay $3 to rent a pair of lovely multi-colored bowling shoes. In addition, each game you bowl will cost you $5.<br><br>(1) If you bowl 2 games at Bowl-A-Rama, how much money will it cost you?<br><br>(2) How much money will it cost you to bowl 3 games at Bowl-A-Rama?<br><br>(3) If you bowl 4 games at Bowl-A-Rama, how much money will it cost you?<br><br>(4) If you pay a total of $33 at Bowl-A-Rama, how many games did you bowl?<br><br>In the row labeled "Expression", define a variable for the number of games you bowl and use that variable to write an expression that will allow you to calculate the total amount of money you spent.
+%(instructions)%	In the row labeled "Expression", define a variable for the number of games you bowl and use that variable to write an expression that will allow you to calculate the total amount of money you spent.
+%(Label1)%	Number of games you bowled
+%(Label2)%	Total amount of money you spent
+%(UnitLabel1)%	games
+%(UnitLabel2)%	dollars
+%(quan1)%	the number of games you bowled
+%(quan2)%	total amount of money you spent
+%(unit1)%	games
+%(unit2)%	dollars
+	
+%(given1)%	2
+%(given2)%	3
+%(given3)%	4
+%(given4)%	33
+	
+%(factor)%	5
+%(constant)%	3
+%(quan3)%	the cost of each game bowled
+%(quan4)%	the cost to rent a pair of bowling shoes
+	
+%(ans1)%	13
+%(ans2)%	18
+%(ans3)%	23
+%(ans4)%	6
+	
+%(variable)%	x
+	
+%(exp1)%	(2*5) + 3
+%(exp2)%	(3*5) + 3
+%(exp3)%	(4*5) + 3
+%(exp4)%	(33-3)/5
+%(expression)%	*5 + 3
+%(expression_bug)%	Please enter a variable before trying to enter an expression.
+	
+%(q1hint1c1)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q1hint2c1)%	A given value in this question represents the the number of games you bowled. Please type this given value into the correct place in the table.
+%(q1hint3c1)%	Type '2' in the highlighted field.
+	
+%(hint1sw1)%	Please write a numerical expression that shows how to compute the total amount of money you spent when the the number of games you bowled is 2.
+%(hint2sw1)%	The total amount of money you spent is the sum of two things: 5 (the cost of each game bowled) multiplied by 2 (the number of games you bowled) plus 3 (the cost to rent a pair of bowling shoes). Can you write this expression?
+%(hint3sw1)%	Please type (2*5) + 3 into the highlighted field.
+	
+%(q1hint1c3)%	You need to compute the total amount of money you spent. This answer depends on the cost of each game bowled, the number of games you bowled, and the cost to rent a pair of bowling shoes. Can you find the total amount of money you spent from these numbers?
+%(q1hint2c3)%	The total amount of money you spent is the sum of two things: 5 (the cost of each game bowled) multiplied by 2 (the number of games you bowled) plus 3 (the cost to rent a pair of bowling shoes). Can you calculate and write this number?
+%(q1hint3c3)%	The total amount of money you spent equals (2*5) + 3. Evaluate this expression.
+%(q1hint4c3)%	(2*5) + 3 = 10 + 3 = 13. Type '13' in the highlighted field.
+	
+%(q2hint1c1)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q2hint2c1)%	A given value in this question represents the the number of games you bowled. Please type this given value into the correct place in the table.
+%(q2hint3c1)%	Type '3' in the highlighted field.
+	
+%(hint1sw2)%	Please write a numerical expression that shows how to compute the total amount of money you spent when the the number of games you bowled is 3.
+%(hint2sw2)%	The total amount of money you spent is the sum of two things: 5 (the cost of each game bowled) multiplied by 3 (the number of games you bowled) plus 3 (the cost to rent a pair of bowling shoes). Can you write this expression?
+%(hint3sw2)%	Please type (3*5) + 3 into the highlighted field.
+	
+%(q2hint1c3)%	You need to compute the total amount of money you spent. This answer depends on the cost of each game bowled, the the number of games you bowled, and the cost to rent a pair of bowling shoes. Can you find the total amount of money you spent from these numbers?
+%(q2hint2c3)%	The amount of money you have saved is the sum of two things: 5 (the cost of each game bowled) multiplied by 3 (the number of games you bowled) plus 3 (the cost to rent a pair of bowling shoes). Can you calculate and write this number?
+%(q2hint3c3)%	The total amount of money you spent equals (3*5) + 3. Evaluate this expression.
+%(q2hint4c3)%	(3*5) + 3 = 15 + 3 = 18. Type '18' in the highlighted field.
+	
+%(q3hint1c1)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q3hint2c1)%	A given value in this question represents the the number of games you bowled. Please type this given value into the correct place in the table.
+%(q3hint3c1)%	Type '4' in the highlighted field.
+	
+%(hint1sw3)%	Please write a numerical expression that shows how to compute the total amount of money you spent when the the number of games you bowled is 4.
+%(hint2sw3)%	The total amount of money you spent is the sum of two things: 5 (the cost of each game bowled) multiplied by 4 (the number of games you bowled) plus 3 (the cost to rent a pair of bowling shoes). Can you write this expression?
+%(hint3sw3)%	Please type (4*5) + 3 into the highlighted field.
+	
+%(q3hint1c3)%	You need to compute the total amount of money you spent. This answer depends on the cost of each game bowled, the the number of games you bowled, and the cost to rent a pair of bowling shoes. Can you find the total amount of money you spent from these numbers?
+%(q3hint2c3)%	The total amount of money you spent is the sum of two things: 5 (the cost of each game bowled) multiplied by 4 (the number of games you bowled) plus 3 (the cost to rent a pair of bowling shoes). Can you calculate and write this number?
+%(q3hint3c3)%	The total amount of money you spent equals (4*5) + 3. Evaluate this expression.
+%(q3hint4c3)%	(4*5) + 3 = 20 + 3 = 23. Type '23' in the highlighted field.
+	
+%(q4hint1c1)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q4hint2c1)%	A given value in this question represents the total amount of money you spent. Please type this given value into the correct place in the table.
+%(q4hint3c1)%	Type '33' in the highlighted field.
+	
+%(hint1sw4)%	Please write a numerical expression that shows how to compute the the number of games you bowled when the total amount of money you spent is 33.
+%(hint2sw4)%	The the number of games you bowled is the quotient of two things: 33 (total amount of money you spent) minus 3 (the cost to rent a pair of bowling shoes) divided by 5 (the cost of each game bowled). Can you write this expression?
+%(hint3sw4)%	Please type (33-3)/5 into the highlighted field.
+	
+%(q4hint1c3)%	You need to compute the the number of games you bowled. This answer depends on the cost of each game bowled, the cost to rent a pair of bowling shoes, and the total amount of money you spent. Can you find the the number of games you bowled from these numbers?
+%(q4hint2c3)%	The the number of games you bowled is the quotient of two things: 33 (total amount of money you spent) minus 3 (the cost to rent a pair of bowling shoes) divided by 5 (the cost of each game bowled). Can you calculate and write this number?
+%(q4hint3c3)%	The the number of games you bowled equals (33-3)/5. Evaluate this expression.
+%(q4hint4c3)%	(33-3)/5 = 30/5 = 6. Type '6' in the highlighted field.
+	
+%(q5hint1c1)%	Read the last sentence in the problem statement. Do you represent the the number of games you bowled as a variable or an expression?
+%(q5hint2c1)%	Please represent the the number of games you bowled with a variable, x.
+%(q5hint3c1)%	Type 'x' in the highlighted field.
+	
+%(q5hint1exp)%	When the the number of games you bowled was 2, you used (2*5) + 3 to find the total amount of money you spent. When the the number of games you bowled is <%=link25.input%>, how do you find the total amount of money you spent?
+%(q5hint2exp)%	If the the number of games you bowled = 2, then the total amount of money you spent = (2*5) + 3. If the the number of games you bowled = <%=link25.input%>, then the total amount of money you spent = _____?
+%(q5hint3exp)%	If the the number of games you bowled = 2, then the total amount of money you spent = (2*5) + 3. Now the the number of games you bowled = <%=link25.input%>, so replace 2 with <%=link25.input%> in the expression (2*5) + 3 to get <%=link25.input%>*5 + 3.
+%(q5hint4exp)%	Type <%=link25.input%>*5 + 3 in the highlighted field.
+	
+%(skill_g1)%	Enter_a_given_x_value
+%(skill_g2)%	Enter_a_given_x_value
+%(skill_g3)%	Enter_a_given_x_value
+%(skill_g4)%	Enter_a_given_y_value
+%(skill_e1)%	Show_your_work
+%(skill_e2)%	Show_your_work
+%(skill_e3)%	Show_your_work
+%(skill_e4)%	Show_your_work
+%(skill_a1)%	Calculate_a_y_value_from_an_x_value
+%(skill_a2)%	Calculate_a_y_value_from_an_x_value
+%(skill_a3)%	Calculate_a_y_value_from_an_x_value
+%(skill_a4)%	Calculate_an_x_value_from_a_y_value
+	
+%(skill_g1_label)%	Enter a given x value
+%(skill_g2_label)%	Enter a given x value
+%(skill_g3_label)%	Enter a given x value
+%(skill_g4_label)%	Enter a given y value
+%(skill_e1_label)%	Show your work
+%(skill_e2_label)%	Show your work
+%(skill_e3_label)%	Show your work
+%(skill_e4_label)%	Show your work
+%(skill_a1_label)%	Calculate a y value from an x value
+%(skill_a2_label)%	Calculate a y value from an x value
+%(skill_a3_label)%	Calculate a y value from an x value
+%(skill_a4_label)%	Calculate an x value from a y value
+%(572301795134671631)%	Please write a numerical expression that shows how to compute the the number of games you bowled when the total amount of money you spent is %(given4)%.
+%(-1345822118728898084)%	The total amount of money you spent equals (2*5) + 3. Evaluate this expression.
+%(695286012838189948)%	The amount of money you have saved is the sum of two things: 5 (the cost of each game bowled) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(-5166532556208710060)%	No, this is not correct.
+%(6098699531750793939)%	Please represent the the number of games you bowled with a variable, x.
+%(4763051105712743775)%	The total amount of money you spent is the sum of two things: 5 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(572307795170671733)%	Please write a numerical expression that shows how to compute the total amount of money you spent when the the number of games you bowled is %(given2)%.
+%(-2064783783288574345)%	The total amount of money you spent is the sum of two things: 5 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(4823584383603843722)%	If the the number of games you bowled = 2, then the %(quan2)% = %(exp1)%. Now the the number of games you bowled = <%=link25.input%>, so replace 2 with <%=link25.input%> in the expression %(exp1)% to get <%=link25.input%>%(expression)%.
+%(572304795170671710)%	Please write a numerical expression that shows how to compute the total amount of money you spent when the the number of games you bowled is %(given1)%.
+%(-1345824118756898150)%	Type '2' in the highlighted field.
+%(8332021486518256280)%	You need to compute the total amount of money you spent. This answer depends on the cost of each game bowled, the %(quan1)%, and %(quan4)%. Can you find the total amount of money you spent from these numbers?
+%(-6182423679765848703)%	The total amount of money you spent equals (3*5) + 3. Evaluate this expression.
+%(-5670083390880144495)%	If the the number of games you bowled = 2, then the %(quan2)% = %(exp1)%. If the the number of games you bowled = <%=link25.input%>, then the %(quan2)% = _____?
+%(-569654292365823220)%	Read the last sentence in the problem statement. Do you represent the the number of games you bowled as a variable or an expression?
+%(1222245354736942317)%	You need to compute the the number of games you bowled. This answer depends on the cost of each game bowled, %(quan4)%, and the %(quan2)%. Can you find the the number of games you bowled from these numbers?
+%(695284012810189882)%	A given value in this question represents the the number of games you bowled. Please type this given value into the correct place in the table.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5985063922024392601)%	Type <%=link25.input%>*5 + 3 in the highlighted field.
+%(-2064781783292574359)%	The total amount of money you spent is the sum of two things: 5 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-5470302849130718706)%	Type 'x' in the highlighted field.
+%(3554822437995997366)%	You need to compute the total amount of money you spent. This answer depends on the cost of each game bowled, %(quan1)%, and %(quan4)%. Can you find the total amount of money you spent from these numbers?
+%(7971097237230898895)%	A given value in this question represents the the number of games you bowled. Please type this given value into the correct place in the table.
+%(-122696630640565551)%	(4*5) + 3 = 20 + 3 = 23. Type '23' in the highlighted field.
+%(-4865542323806051534)%	(3*5) + 3 = 15 + 3 = 18. Type '18' in the highlighted field.
+%(3446171749632946340)%	Type '4' in the highlighted field.
+%(5466216335593386898)%	The the number of games you bowled is the quotient of two things: 33 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you calculate and write this number?
+%(8332019486522256358)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(-5589769099361342225)%	(2*5) + 3 = 10 + 3 = 13. Type '13' in the highlighted field.
+%(-2064782783280574396)%	The total amount of money you spent is the sum of two things: 5 (%(quan3)%) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-2064780783284574362)%	The the number of games you bowled is the quotient of two things: 33 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you write this expression?
+%(-7419699401471923236)%	(33-3)/5 = 30/5 = 6. Type '6' in the highlighted field.
+%(6912683924870881635)%	You need to compute the total amount of money you spent. This answer depends on the cost of each game bowled, the %(quan1)%, and %(quan4)%. Can you find the total amount of money you spent from these numbers?
+%(8249728154828431532)%	When the the number of games you bowled was 2, you used %(exp1)% to find the %(quan2)%. When the the number of games you bowled is <%=link25.input%>, how do you find the %(quan2)%?
+%(-6819400178805454270)%	Please type (4*5) + 3 into the highlighted field.
+%(-6182425679761848593)%	Type '3' in the highlighted field.
+%(3446169749636946306)%	The total amount of money you spent equals (4*5) + 3. Evaluate this expression.
+%(-6819399178801454265)%	Please type (3*5) + 3 into the highlighted field.
+%(3554824437991997352)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(1222243354724942235)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(6783097691605184239)%	The the number of games you bowled equals (33-3)/5. Evaluate this expression.
+%(6912685924882881653)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(5466218335589386932)%	A given value in this question represents the total amount of money you spent. Please type this given value into the correct place in the table.
+%(4763053105708743793)%	A given value in this question represents the the number of games you bowled. Please type this given value into the correct place in the table.
+%(6783099691601184129)%	Type '33' in the highlighted field.
+%(-6819398178793454252)%	Please type (2*5) + 3 into the highlighted field.
+%(572306795166671728)%	Please write a numerical expression that shows how to compute the total amount of money you spent when the the number of games you bowled is %(given3)%.
+%(-6819393178829454387)%	Please type (33-3)/5 into the highlighted field.
+%(7971099237226898913)%	The total amount of money you spent is the sum of two things: 5 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+Problem Name	Problem5
+%(startStateNodeName)%	
+%(problemstatement)%	The Baker is famous around town for his moist chocolate cupcakes. Every day at dawn he wakes up and bakes many, many cupcakes and packages them in boxes of 13 (the Baker's dozen!). The Baker always saves 3 boxes of cupcakes to take home with him at night, but he sells the rest of the boxes to his faithful customers.<br><br>(1) If the Baker bakes 130 cupcakes, how many boxes will he have to sell?<br><br>(2) How many boxes will the Baker have to sell if he bakes 260 cupcakes?<br><br>(3) If the Baker bakes 520 cupcakes, how many boxes will he have to sell?<br><br>(4) If the Baker has 47 boxes of cupcakes to sell, how many cupcakes did he bake?<br><br>In the row labeled "Expression", define a variable for the number of cupcakes baked and use that variable to write an expression that will allow you to calculate the number of boxes of cupcakes available to sell.
+%(instructions)%	In the row labeled "Expression", define a variable for the number of cupcakes baked and use that variable to write an expression that will allow you to calculate the number of boxes of cupcakes available to sell.
+%(Label1)%	Number of cupcakes the Baker bakes
+%(Label2)%	Number of boxes of cupcakes to sell
+%(UnitLabel1)%	cupcakes
+%(UnitLabel2)%	boxes
+%(quan1)%	the number of cupcakes the Baker bakes
+%(quan2)%	number of boxes of cupcakes to sell
+%(unit1)%	cupcakes
+%(unit2)%	boxes
+	
+%(given1)%	130
+%(given2)%	260
+%(given3)%	520
+%(given4)%	47
+	
+%(factor)%	13
+%(constant)%	-3
+%(quan3)%	the number of cupcakes in each box
+%(quan4)%	boxes saved to take home
+	
+%(ans1)%	7
+%(ans2)%	17
+%(ans3)%	37
+%(ans4)%	850
+	
+%(variable)%	x
+	
+%(exp1)%	(130/13) - 3
+%(exp2)%	(260/13) - 3
+%(exp3)%	(520/13) - 3
+%(exp4)%	(47+3)*13
+%(expression)%	/13 - 3
+%(expression_bug)%	Please enter a variable before trying to enter an expression.
+	
+%(q1hint1c1)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q1hint2c1)%	A given value in this question represents the the number of cupcakes the Baker bakes. Please type this given value into the correct place in the table.
+%(q1hint3c1)%	Type '130' in the highlighted field.
+	
+%(hint1sw1)%	Please write a numerical expression that shows how to compute the number of boxes of cupcakes to sell when the the number of cupcakes the Baker bakes is 130.
+%(hint2sw1)%	The number of boxes of cupcakes to sell is the sum of two things: 13 (the number of cupcakes in each box) multiplied by 130 (the number of cupcakes the Baker bakes) plus -3 (boxes saved to take home). Can you write this expression?
+%(hint3sw1)%	Please type (130/13) - 3 into the highlighted field.
+	
+%(q1hint1c3)%	You need to compute the number of boxes of cupcakes to sell. This answer depends on the number of cupcakes in each box, the number of cupcakes the Baker bakes, and boxes saved to take home. Can you find the number of boxes of cupcakes to sell from these numbers?
+%(q1hint2c3)%	The number of boxes of cupcakes to sell is the sum of two things: 13 (the number of cupcakes in each box) multiplied by 130 (the number of cupcakes the Baker bakes) plus -3 (boxes saved to take home). Can you calculate and write this number?
+%(q1hint3c3)%	The number of boxes of cupcakes to sell equals (130/13) - 3. Evaluate this expression.
+%(q1hint4c3)%	(130/13) - 3 = 10 - 3 = 7. Type '7' in the highlighted field.
+	
+%(q2hint1c1)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q2hint2c1)%	A given value in this question represents the the number of cupcakes the Baker bakes. Please type this given value into the correct place in the table.
+%(q2hint3c1)%	Type '260' in the highlighted field.
+	
+%(hint1sw2)%	Please write a numerical expression that shows how to compute the number of boxes of cupcakes to sell when the the number of cupcakes the Baker bakes is 260.
+%(hint2sw2)%	The number of boxes of cupcakes to sell is the sum of two things: 13 (the number of cupcakes in each box) multiplied by 260 (the number of cupcakes the Baker bakes) plus -3 (boxes saved to take home). Can you write this expression?
+%(hint3sw2)%	Please type (260/13) - 3 into the highlighted field.
+	
+%(q2hint1c3)%	You need to compute the number of boxes of cupcakes to sell. This answer depends on the number of cupcakes in each box, the the number of cupcakes the Baker bakes, and boxes saved to take home. Can you find the number of boxes of cupcakes to sell from these numbers?
+%(q2hint2c3)%	The amount of money you have saved is the sum of two things: 13 (the number of cupcakes in each box) multiplied by 260 (the number of cupcakes the Baker bakes) plus -3 (boxes saved to take home). Can you calculate and write this number?
+%(q2hint3c3)%	The number of boxes of cupcakes to sell equals (260/13) - 3. Evaluate this expression.
+%(q2hint4c3)%	(260/13) - 3 = 20 - 3 = 17. Type '17' in the highlighted field.
+	
+%(q3hint1c1)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q3hint2c1)%	A given value in this question represents the the number of cupcakes the Baker bakes. Please type this given value into the correct place in the table.
+%(q3hint3c1)%	Type '520' in the highlighted field.
+	
+%(hint1sw3)%	Please write a numerical expression that shows how to compute the number of boxes of cupcakes to sell when the the number of cupcakes the Baker bakes is 520.
+%(hint2sw3)%	The number of boxes of cupcakes to sell is the sum of two things: 13 (the number of cupcakes in each box) multiplied by 520 (the number of cupcakes the Baker bakes) plus -3 (boxes saved to take home). Can you write this expression?
+%(hint3sw3)%	Please type (520/13) - 3 into the highlighted field.
+	
+%(q3hint1c3)%	You need to compute the number of boxes of cupcakes to sell. This answer depends on the number of cupcakes in each box, the the number of cupcakes the Baker bakes, and boxes saved to take home. Can you find the number of boxes of cupcakes to sell from these numbers?
+%(q3hint2c3)%	The number of boxes of cupcakes to sell is the sum of two things: 13 (the number of cupcakes in each box) multiplied by 520 (the number of cupcakes the Baker bakes) plus -3 (boxes saved to take home). Can you calculate and write this number?
+%(q3hint3c3)%	The number of boxes of cupcakes to sell equals (520/13) - 3. Evaluate this expression.
+%(q3hint4c3)%	(520/13) - 3 = 40 - 3 = 37. Type '37' in the highlighted field.
+	
+%(q4hint1c1)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q4hint2c1)%	A given value in this question represents the number of boxes of cupcakes to sell. Please type this given value into the correct place in the table.
+%(q4hint3c1)%	Type '47' in the highlighted field.
+	
+%(hint1sw4)%	Please write a numerical expression that shows how to compute the the number of cupcakes the Baker bakes when the number of boxes of cupcakes to sell is 47.
+%(hint2sw4)%	The the number of cupcakes the Baker bakes is the quotient of two things: 47 (number of boxes of cupcakes to sell) minus -3 (boxes saved to take home) divided by 13 (the number of cupcakes in each box). Can you write this expression?
+%(hint3sw4)%	Please type (47+3)*13 into the highlighted field.
+	
+%(q4hint1c3)%	You need to compute the the number of cupcakes the Baker bakes. This answer depends on the number of cupcakes in each box, boxes saved to take home, and the number of boxes of cupcakes to sell. Can you find the the number of cupcakes the Baker bakes from these numbers?
+%(q4hint2c3)%	The the number of cupcakes the Baker bakes is the quotient of two things: 47 (number of boxes of cupcakes to sell) minus -3 (boxes saved to take home) divided by 13 (the number of cupcakes in each box). Can you calculate and write this number?
+%(q4hint3c3)%	The the number of cupcakes the Baker bakes equals (47+3)*13. Evaluate this expression.
+%(q4hint4c3)%	(47+3)*13 = 50*13 = 650. Type '850' in the highlighted field.
+	
+%(q5hint1c1)%	Read the last sentence in the problem statement. Do you represent the the number of cupcakes the Baker bakes as a variable or an expression?
+%(q5hint2c1)%	Please represent the the number of cupcakes the Baker bakes with a variable, x.
+%(q5hint3c1)%	Type 'x' in the highlighted field.
+	
+%(q5hint1exp)%	When the the number of cupcakes the Baker bakes was 130, you used (130/13) - 3 to find the number of boxes of cupcakes to sell. When the the number of cupcakes the Baker bakes is <%=link25.input%>, how do you find the number of boxes of cupcakes to sell?
+%(q5hint2exp)%	If the the number of cupcakes the Baker bakes = 130, then the number of boxes of cupcakes to sell = (130/13) - 3. If the the number of cupcakes the Baker bakes = <%=link25.input%>, then the number of boxes of cupcakes to sell = _____?
+%(q5hint3exp)%	If the the number of cupcakes the Baker bakes = 130, then the number of boxes of cupcakes to sell = (130/13) - 3. Now the the number of cupcakes the Baker bakes = <%=link25.input%>, so replace 130 with <%=link25.input%> in the expression (130/13) - 3 to get <%=link25.input%>/13 - 3.
+%(q5hint4exp)%	Type <%=link25.input%>/13 - 3 in the highlighted field.
+	
+%(skill_g1)%	Enter_a_given_x_value
+%(skill_g2)%	Enter_a_given_x_value
+%(skill_g3)%	Enter_a_given_x_value
+%(skill_g4)%	Enter_a_given_y_value
+%(skill_e1)%	Show_your_work
+%(skill_e2)%	Show_your_work
+%(skill_e3)%	Show_your_work
+%(skill_e4)%	Show_your_work
+%(skill_a1)%	Calculate_a_y_value_from_an_x_value
+%(skill_a2)%	Calculate_a_y_value_from_an_x_value
+%(skill_a3)%	Calculate_a_y_value_from_an_x_value
+%(skill_a4)%	Calculate_an_x_value_from_a_y_value
+	
+%(skill_g1_label)%	Enter a given x value
+%(skill_g2_label)%	Enter a given x value
+%(skill_g3_label)%	Enter a given x value
+%(skill_g4_label)%	Enter a given y value
+%(skill_e1_label)%	Show your work
+%(skill_e2_label)%	Show your work
+%(skill_e3_label)%	Show your work
+%(skill_e4_label)%	Show your work
+%(skill_a1_label)%	Calculate a y value from an x value
+%(skill_a2_label)%	Calculate a y value from an x value
+%(skill_a3_label)%	Calculate a y value from an x value
+%(skill_a4_label)%	Calculate an x value from a y value
+%(572301795134671631)%	Please write a numerical expression that shows how to compute the the number of cupcakes the Baker bakes when the number of boxes of cupcakes to sell is %(given4)%.
+%(-1345822118728898084)%	The number of boxes of cupcakes to sell equals (130/13) - 3. Evaluate this expression.
+%(695286012838189948)%	The amount of money you have saved is the sum of two things: 13 (the number of cupcakes in each box) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(-5166532556208710060)%	No, this is not correct.
+%(6098699531750793939)%	Please represent the the number of cupcakes the Baker bakes with a variable, x.
+%(4763051105712743775)%	The number of boxes of cupcakes to sell is the sum of two things: 13 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(572307795170671733)%	Please write a numerical expression that shows how to compute the number of boxes of cupcakes to sell when the the number of cupcakes the Baker bakes is %(given2)%.
+%(-2064783783288574345)%	The number of boxes of cupcakes to sell is the sum of two things: 13 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(4823584383603843722)%	If the the number of cupcakes the Baker bakes = 130, then the %(quan2)% = %(exp1)%. Now the the number of cupcakes the Baker bakes = <%=link25.input%>, so replace 130 with <%=link25.input%> in the expression %(exp1)% to get <%=link25.input%>%(expression)%.
+%(572304795170671710)%	Please write a numerical expression that shows how to compute the number of boxes of cupcakes to sell when the the number of cupcakes the Baker bakes is %(given1)%.
+%(-1345824118756898150)%	Type '130' in the highlighted field.
+%(8332021486518256280)%	You need to compute the number of boxes of cupcakes to sell. This answer depends on the number of cupcakes in each box, the %(quan1)%, and %(quan4)%. Can you find the number of boxes of cupcakes to sell from these numbers?
+%(-6182423679765848703)%	The number of boxes of cupcakes to sell equals (260/13) - 3. Evaluate this expression.
+%(-5670083390880144495)%	If the the number of cupcakes the Baker bakes = 130, then the %(quan2)% = %(exp1)%. If the the number of cupcakes the Baker bakes = <%=link25.input%>, then the %(quan2)% = _____?
+%(-569654292365823220)%	Read the last sentence in the problem statement. Do you represent the the number of cupcakes the Baker bakes as a variable or an expression?
+%(1222245354736942317)%	You need to compute the the number of cupcakes the Baker bakes. This answer depends on the number of cupcakes in each box, %(quan4)%, and the %(quan2)%. Can you find the the number of cupcakes the Baker bakes from these numbers?
+%(695284012810189882)%	A given value in this question represents the the number of cupcakes the Baker bakes. Please type this given value into the correct place in the table.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5985063922024392601)%	Type <%=link25.input%>/13 - 3 in the highlighted field.
+%(-2064781783292574359)%	The number of boxes of cupcakes to sell is the sum of two things: 13 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-5470302849130718706)%	Type 'x' in the highlighted field.
+%(3554822437995997366)%	You need to compute the number of boxes of cupcakes to sell. This answer depends on the number of cupcakes in each box, %(quan1)%, and %(quan4)%. Can you find the number of boxes of cupcakes to sell from these numbers?
+%(7971097237230898895)%	A given value in this question represents the the number of cupcakes the Baker bakes. Please type this given value into the correct place in the table.
+%(-122696630640565551)%	(520/13) - 3 = 40 - 3 = 37. Type '37' in the highlighted field.
+%(-4865542323806051534)%	(260/13) - 3 = 20 - 3 = 17. Type '17' in the highlighted field.
+%(3446171749632946340)%	Type '520' in the highlighted field.
+%(5466216335593386898)%	The the number of cupcakes the Baker bakes is the quotient of two things: 47 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you calculate and write this number?
+%(8332019486522256358)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(-5589769099361342225)%	(130/13) - 3 = 10 - 3 = 7. Type '7' in the highlighted field.
+%(-2064782783280574396)%	The number of boxes of cupcakes to sell is the sum of two things: 13 (%(quan3)%) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-2064780783284574362)%	The the number of cupcakes the Baker bakes is the quotient of two things: 47 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you write this expression?
+%(-7419699401471923236)%	(47+3)*13 = 50*13 = 650. Type '850' in the highlighted field.
+%(6912683924870881635)%	You need to compute the number of boxes of cupcakes to sell. This answer depends on the number of cupcakes in each box, the %(quan1)%, and %(quan4)%. Can you find the number of boxes of cupcakes to sell from these numbers?
+%(8249728154828431532)%	When the the number of cupcakes the Baker bakes was 130, you used %(exp1)% to find the %(quan2)%. When the the number of cupcakes the Baker bakes is <%=link25.input%>, how do you find the %(quan2)%?
+%(-6819400178805454270)%	Please type (520/13) - 3 into the highlighted field.
+%(-6182425679761848593)%	Type '260' in the highlighted field.
+%(3446169749636946306)%	The number of boxes of cupcakes to sell equals (520/13) - 3. Evaluate this expression.
+%(-6819399178801454265)%	Please type (260/13) - 3 into the highlighted field.
+%(3554824437991997352)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(1222243354724942235)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(6783097691605184239)%	The the number of cupcakes the Baker bakes equals (47+3)*13. Evaluate this expression.
+%(6912685924882881653)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(5466218335589386932)%	A given value in this question represents the number of boxes of cupcakes to sell. Please type this given value into the correct place in the table.
+%(4763053105708743793)%	A given value in this question represents the the number of cupcakes the Baker bakes. Please type this given value into the correct place in the table.
+%(6783099691601184129)%	Type '47' in the highlighted field.
+%(-6819398178793454252)%	Please type (130/13) - 3 into the highlighted field.
+%(572306795166671728)%	Please write a numerical expression that shows how to compute the number of boxes of cupcakes to sell when the the number of cupcakes the Baker bakes is %(given3)%.
+%(-6819393178829454387)%	Please type (47+3)*13 into the highlighted field.
+%(7971099237226898913)%	The number of boxes of cupcakes to sell is the sum of two things: 13 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+Problem Name	Problem6
+%(startStateNodeName)%	
+%(problemstatement)%	Jenny is a lifeguard at the community swimming pool, and she earns $5 an hour for her work. At the end of every month Jenny receives her paycheck. She always takes $50 out to spend on herself at the shopping mall, and she puts the rest into her savings account.<br><br>(1) If Jenny works 10 hours in a given month, how much money does she put into her savings account?<br><br>(2) How much money does Jenny put into her savings account if she works 20 hours in a given month?<br><br>(3) If Jenny works 30 hours in a given month, how much money does she put into her savings account?<br><br>(4) If Jenny puts $200 into her savings account, how many hours did she work that month?<br><br>In the row labeled "Expression", define a variable for the number of hours Jenny worked and use that variable to write an expression that will allow you to calculate the total amount of money Jenny put in savings.
+%(instructions)%	In the row labeled "Expression", define a variable for the number of hours Jenny worked and use that variable to write an expression that will allow you to calculate the total amount of money Jenny put in savings.
+%(Label1)%	Number of hours Jenny worked
+%(Label2)%	Amount of money Jenny puts in savings
+%(UnitLabel1)%	hours
+%(UnitLabel2)%	dollars
+%(quan1)%	the number of hours Jenny worked
+%(quan2)%	amount of money Jenny put into her savings account
+%(unit1)%	hours
+%(unit2)%	dollars
+	
+%(given1)%	10
+%(given2)%	20
+%(given3)%	30
+%(given4)%	200
+	
+%(factor)%	5
+%(constant)%	-50
+%(quan3)%	the amount of money Jenny earns for each hour worked
+%(quan4)%	the amount Jenny spent on herself
+	
+%(ans1)%	0
+%(ans2)%	50
+%(ans3)%	100
+%(ans4)%	50
+	
+%(variable)%	x
+	
+%(exp1)%	(10*5) - 50
+%(exp2)%	(20*5) - 50
+%(exp3)%	(30*5) - 50
+%(exp4)%	(200+50)/5
+%(expression)%	*5 - 50
+%(expression_bug)%	Please enter a variable before trying to enter an expression.
+	
+%(q1hint1c1)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q1hint2c1)%	A given value in this question represents the the number of hours Jenny worked. Please type this given value into the correct place in the table.
+%(q1hint3c1)%	Type '10' in the highlighted field.
+	
+%(hint1sw1)%	Please write a numerical expression that shows how to compute the amount of money Jenny put into her savings account when the the number of hours Jenny worked is 10.
+%(hint2sw1)%	The amount of money Jenny put into her savings account is the sum of two things: 5 (the amount of money Jenny earns for each hour worked) multiplied by 10 (the number of hours Jenny worked) plus -50 (the amount Jenny spent on herself). Can you write this expression?
+%(hint3sw1)%	Please type (10*5) - 50 into the highlighted field.
+	
+%(q1hint1c3)%	You need to compute the amount of money Jenny put into her savings account. This answer depends on the amount of money Jenny earns for each hour worked, the number of hours Jenny worked, and the amount Jenny spent on herself. Can you find the amount of money Jenny put into her savings account from these numbers?
+%(q1hint2c3)%	The amount of money Jenny put into her savings account is the sum of two things: 5 (the amount of money Jenny earns for each hour worked) multiplied by 10 (the number of hours Jenny worked) plus -50 (the amount Jenny spent on herself). Can you calculate and write this number?
+%(q1hint3c3)%	The amount of money Jenny put into her savings account equals (10*5) - 50. Evaluate this expression.
+%(q1hint4c3)%	(10*5) - 50 = 50 - 50 = 0. Type '0' in the highlighted field.
+	
+%(q2hint1c1)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q2hint2c1)%	A given value in this question represents the the number of hours Jenny worked. Please type this given value into the correct place in the table.
+%(q2hint3c1)%	Type '20' in the highlighted field.
+	
+%(hint1sw2)%	Please write a numerical expression that shows how to compute the amount of money Jenny put into her savings account when the the number of hours Jenny worked is 20.
+%(hint2sw2)%	The amount of money Jenny put into her savings account is the sum of two things: 5 (the amount of money Jenny earns for each hour worked) multiplied by 20 (the number of hours Jenny worked) plus -50 (the amount Jenny spent on herself). Can you write this expression?
+%(hint3sw2)%	Please type (20*5) - 50 into the highlighted field.
+	
+%(q2hint1c3)%	You need to compute the amount of money Jenny put into her savings account. This answer depends on the amount of money Jenny earns for each hour worked, the the number of hours Jenny worked, and the amount Jenny spent on herself. Can you find the amount of money Jenny put into her savings account from these numbers?
+%(q2hint2c3)%	The amount of money you have saved is the sum of two things: 5 (the amount of money Jenny earns for each hour worked) multiplied by 20 (the number of hours Jenny worked) plus -50 (the amount Jenny spent on herself). Can you calculate and write this number?
+%(q2hint3c3)%	The amount of money Jenny put into her savings account equals (20*5) - 50. Evaluate this expression.
+%(q2hint4c3)%	(20*5) - 50 = 100 - 50 = 50. Type '50' in the highlighted field.
+	
+%(q3hint1c1)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q3hint2c1)%	A given value in this question represents the the number of hours Jenny worked. Please type this given value into the correct place in the table.
+%(q3hint3c1)%	Type '30' in the highlighted field.
+	
+%(hint1sw3)%	Please write a numerical expression that shows how to compute the amount of money Jenny put into her savings account when the the number of hours Jenny worked is 30.
+%(hint2sw3)%	The amount of money Jenny put into her savings account is the sum of two things: 5 (the amount of money Jenny earns for each hour worked) multiplied by 30 (the number of hours Jenny worked) plus -50 (the amount Jenny spent on herself). Can you write this expression?
+%(hint3sw3)%	Please type (30*5) - 50 into the highlighted field.
+	
+%(q3hint1c3)%	You need to compute the amount of money Jenny put into her savings account. This answer depends on the amount of money Jenny earns for each hour worked, the the number of hours Jenny worked, and the amount Jenny spent on herself. Can you find the amount of money Jenny put into her savings account from these numbers?
+%(q3hint2c3)%	The amount of money Jenny put into her savings account is the sum of two things: 5 (the amount of money Jenny earns for each hour worked) multiplied by 30 (the number of hours Jenny worked) plus -50 (the amount Jenny spent on herself). Can you calculate and write this number?
+%(q3hint3c3)%	The amount of money Jenny put into her savings account equals (30*5) - 50. Evaluate this expression.
+%(q3hint4c3)%	(30*5) - 50 = 150 - 50 = 100. Type '100' in the highlighted field.
+	
+%(q4hint1c1)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q4hint2c1)%	A given value in this question represents the amount of money Jenny put into her savings account. Please type this given value into the correct place in the table.
+%(q4hint3c1)%	Type '200' in the highlighted field.
+	
+%(hint1sw4)%	Please write a numerical expression that shows how to compute the the number of hours Jenny worked when the amount of money Jenny put into her savings account is 200.
+%(hint2sw4)%	The the number of hours Jenny worked is the quotient of two things: 200 (amount of money Jenny put into her savings account) minus -50 (the amount Jenny spent on herself) divided by 5 (the amount of money Jenny earns for each hour worked). Can you write this expression?
+%(hint3sw4)%	Please type (200+50)/5 into the highlighted field.
+	
+%(q4hint1c3)%	You need to compute the the number of hours Jenny worked. This answer depends on the amount of money Jenny earns for each hour worked, the amount Jenny spent on herself, and the amount of money Jenny put into her savings account. Can you find the the number of hours Jenny worked from these numbers?
+%(q4hint2c3)%	The the number of hours Jenny worked is the quotient of two things: 200 (amount of money Jenny put into her savings account) minus -50 (the amount Jenny spent on herself) divided by 5 (the amount of money Jenny earns for each hour worked). Can you calculate and write this number?
+%(q4hint3c3)%	The the number of hours Jenny worked equals (200+50)/5. Evaluate this expression.
+%(q4hint4c3)%	(200+50)/5 = 250/5 = 50. Type '50' in the highlighted field.
+	
+%(q5hint1c1)%	Read the last sentence in the problem statement. Do you represent the the number of hours Jenny worked as a variable or an expression?
+%(q5hint2c1)%	Please represent the the number of hours Jenny worked with a variable, x.
+%(q5hint3c1)%	Type 'x' in the highlighted field.
+	
+%(q5hint1exp)%	When the the number of hours Jenny worked was 10, you used (10*5) - 50 to find the amount of money Jenny put into her savings account. When the the number of hours Jenny worked is <%=link25.input%>, how do you find the amount of money Jenny put into her savings account?
+%(q5hint2exp)%	If the the number of hours Jenny worked = 10, then the amount of money Jenny put into her savings account = (10*5) - 50. If the the number of hours Jenny worked = <%=link25.input%>, then the amount of money Jenny put into her savings account = _____?
+%(q5hint3exp)%	If the the number of hours Jenny worked = 10, then the amount of money Jenny put into her savings account = (10*5) - 50. Now the the number of hours Jenny worked = <%=link25.input%>, so replace 10 with <%=link25.input%> in the expression (10*5) - 50 to get <%=link25.input%>*5 - 50.
+%(q5hint4exp)%	Type <%=link25.input%>*5 - 50 in the highlighted field.
+	
+%(skill_g1)%	Enter_a_given_x_value
+%(skill_g2)%	Enter_a_given_x_value
+%(skill_g3)%	Enter_a_given_x_value
+%(skill_g4)%	Enter_a_given_y_value
+%(skill_e1)%	Show_your_work
+%(skill_e2)%	Show_your_work
+%(skill_e3)%	Show_your_work
+%(skill_e4)%	Show_your_work
+%(skill_a1)%	Calculate_a_y_value_from_an_x_value
+%(skill_a2)%	Calculate_a_y_value_from_an_x_value
+%(skill_a3)%	Calculate_a_y_value_from_an_x_value
+%(skill_a4)%	Calculate_an_x_value_from_a_y_value
+	
+%(skill_g1_label)%	Enter a given x value
+%(skill_g2_label)%	Enter a given x value
+%(skill_g3_label)%	Enter a given x value
+%(skill_g4_label)%	Enter a given y value
+%(skill_e1_label)%	Show your work
+%(skill_e2_label)%	Show your work
+%(skill_e3_label)%	Show your work
+%(skill_e4_label)%	Show your work
+%(skill_a1_label)%	Calculate a y value from an x value
+%(skill_a2_label)%	Calculate a y value from an x value
+%(skill_a3_label)%	Calculate a y value from an x value
+%(skill_a4_label)%	Calculate an x value from a y value
+%(572301795134671631)%	Please write a numerical expression that shows how to compute the the number of hours Jenny worked when the amount of money Jenny put into her savings account is %(given4)%.
+%(-1345822118728898084)%	The amount of money Jenny put into her savings account equals (10*5) - 50. Evaluate this expression.
+%(695286012838189948)%	The amount of money you have saved is the sum of two things: 5 (the amount of money Jenny earns for each hour worked) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(-5166532556208710060)%	No, this is not correct.
+%(6098699531750793939)%	Please represent the the number of hours Jenny worked with a variable, x.
+%(4763051105712743775)%	The amount of money Jenny put into her savings account is the sum of two things: 5 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(572307795170671733)%	Please write a numerical expression that shows how to compute the amount of money Jenny put into her savings account when the the number of hours Jenny worked is %(given2)%.
+%(-2064783783288574345)%	The amount of money Jenny put into her savings account is the sum of two things: 5 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(4823584383603843722)%	If the the number of hours Jenny worked = 10, then the %(quan2)% = %(exp1)%. Now the the number of hours Jenny worked = <%=link25.input%>, so replace 10 with <%=link25.input%> in the expression %(exp1)% to get <%=link25.input%>%(expression)%.
+%(572304795170671710)%	Please write a numerical expression that shows how to compute the amount of money Jenny put into her savings account when the the number of hours Jenny worked is %(given1)%.
+%(-1345824118756898150)%	Type '10' in the highlighted field.
+%(8332021486518256280)%	You need to compute the amount of money Jenny put into her savings account. This answer depends on the amount of money Jenny earns for each hour worked, the %(quan1)%, and %(quan4)%. Can you find the amount of money Jenny put into her savings account from these numbers?
+%(-6182423679765848703)%	The amount of money Jenny put into her savings account equals (20*5) - 50. Evaluate this expression.
+%(-5670083390880144495)%	If the the number of hours Jenny worked = 10, then the %(quan2)% = %(exp1)%. If the the number of hours Jenny worked = <%=link25.input%>, then the %(quan2)% = _____?
+%(-569654292365823220)%	Read the last sentence in the problem statement. Do you represent the the number of hours Jenny worked as a variable or an expression?
+%(1222245354736942317)%	You need to compute the the number of hours Jenny worked. This answer depends on the amount of money Jenny earns for each hour worked, %(quan4)%, and the %(quan2)%. Can you find the the number of hours Jenny worked from these numbers?
+%(695284012810189882)%	A given value in this question represents the the number of hours Jenny worked. Please type this given value into the correct place in the table.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5985063922024392601)%	Type <%=link25.input%>*5 - 50 in the highlighted field.
+%(-2064781783292574359)%	The amount of money Jenny put into her savings account is the sum of two things: 5 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-5470302849130718706)%	Type 'x' in the highlighted field.
+%(3554822437995997366)%	You need to compute the amount of money Jenny put into her savings account. This answer depends on the amount of money Jenny earns for each hour worked, %(quan1)%, and %(quan4)%. Can you find the amount of money Jenny put into her savings account from these numbers?
+%(7971097237230898895)%	A given value in this question represents the the number of hours Jenny worked. Please type this given value into the correct place in the table.
+%(-122696630640565551)%	(30*5) - 50 = 150 - 50 = 100. Type '100' in the highlighted field.
+%(-4865542323806051534)%	(20*5) - 50 = 100 - 50 = 50. Type '50' in the highlighted field.
+%(3446171749632946340)%	Type '30' in the highlighted field.
+%(5466216335593386898)%	The the number of hours Jenny worked is the quotient of two things: 200 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you calculate and write this number?
+%(8332019486522256358)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(-5589769099361342225)%	(10*5) - 50 = 50 - 50 = 0. Type '0' in the highlighted field.
+%(-2064782783280574396)%	The amount of money Jenny put into her savings account is the sum of two things: 5 (%(quan3)%) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-2064780783284574362)%	The the number of hours Jenny worked is the quotient of two things: 200 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you write this expression?
+%(-7419699401471923236)%	(200+50)/5 = 250/5 = 50. Type '50' in the highlighted field.
+%(6912683924870881635)%	You need to compute the amount of money Jenny put into her savings account. This answer depends on the amount of money Jenny earns for each hour worked, the %(quan1)%, and %(quan4)%. Can you find the amount of money Jenny put into her savings account from these numbers?
+%(8249728154828431532)%	When the the number of hours Jenny worked was 10, you used %(exp1)% to find the %(quan2)%. When the the number of hours Jenny worked is <%=link25.input%>, how do you find the %(quan2)%?
+%(-6819400178805454270)%	Please type (30*5) - 50 into the highlighted field.
+%(-6182425679761848593)%	Type '20' in the highlighted field.
+%(3446169749636946306)%	The amount of money Jenny put into her savings account equals (30*5) - 50. Evaluate this expression.
+%(-6819399178801454265)%	Please type (20*5) - 50 into the highlighted field.
+%(3554824437991997352)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(1222243354724942235)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(6783097691605184239)%	The the number of hours Jenny worked equals (200+50)/5. Evaluate this expression.
+%(6912685924882881653)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(5466218335589386932)%	A given value in this question represents the amount of money Jenny put into her savings account. Please type this given value into the correct place in the table.
+%(4763053105708743793)%	A given value in this question represents the the number of hours Jenny worked. Please type this given value into the correct place in the table.
+%(6783099691601184129)%	Type '200' in the highlighted field.
+%(-6819398178793454252)%	Please type (10*5) - 50 into the highlighted field.
+%(572306795166671728)%	Please write a numerical expression that shows how to compute the amount of money Jenny put into her savings account when the the number of hours Jenny worked is %(given3)%.
+%(-6819393178829454387)%	Please type (200+50)/5 into the highlighted field.
+%(7971099237226898913)%	The amount of money Jenny put into her savings account is the sum of two things: 5 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+Problem Name	Problem7
+%(startStateNodeName)%	
+%(problemstatement)%	The local MacBurger is raising money for the community park fund. For each burger sold on a particular day, $2 will be donated to the fund. The fund has already raised $1300 to date.<br><br>(1) How much money will be in the fund if they sell 80 burgers?<br><br>(2) How money will be in the fund if they sell 120 burgers?<br><br>(3) How much money will be in the fund if they sell 260 burgers?<br><br>(4) If the fund now has $2150, how many burgers were sold?<br><br>In the row labeled "Expression", define a variable for the number of burgers sold and use that variable to write an expression that will allow you to calculate the total amount of money in the park fund.
+%(instructions)%	In the row labeled "Expression", define a variable for the number of burgers sold and use that variable to write an expression that will allow you to calculate the total amount of money in the park fund.
+%(Label1)%	Number of burgers sold
+%(Label2)%	Amount of money in the park fund
+%(UnitLabel1)%	burgers
+%(UnitLabel2)%	dollars
+%(quan1)%	the number of burgers sold
+%(quan2)%	amount of money in the park fund
+%(unit1)%	burgers
+%(unit2)%	dollars
+	
+%(given1)%	80
+%(given2)%	120
+%(given3)%	260
+%(given4)%	2150
+	
+%(factor)%	2
+%(constant)%	1300
+%(quan3)%	the amount donated from each burger
+%(quan4)%	the amount of money in the fund initially
+	
+%(ans1)%	1460
+%(ans2)%	1540
+%(ans3)%	1820
+%(ans4)%	375
+	
+%(variable)%	x
+	
+%(exp1)%	(80*2) + 1300
+%(exp2)%	(120*2) + 1300
+%(exp3)%	(260*2) + 1300
+%(exp4)%	(2150-1300)/2
+%(expression)%	*2 + 1300
+%(expression_bug)%	Please enter a variable before trying to enter an expression.
+	
+%(q1hint1c1)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q1hint2c1)%	A given value in this question represents the the number of burgers sold. Please type this given value into the correct place in the table.
+%(q1hint3c1)%	Type '80' in the highlighted field.
+	
+%(hint1sw1)%	Please write a numerical expression that shows how to compute the amount of money in the park fund when the the number of burgers sold is 80.
+%(hint2sw1)%	The amount of money in the park fund is the sum of two things: 2 (the amount donated from each burger) multiplied by 80 (the number of burgers sold) plus 1300 (the amount of money in the fund initially). Can you write this expression?
+%(hint3sw1)%	Please type (80*2) + 1300 into the highlighted field.
+	
+%(q1hint1c3)%	You need to compute the amount of money in the park fund. This answer depends on the amount donated from each burger, the number of burgers sold, and the amount of money in the fund initially. Can you find the amount of money in the park fund from these numbers?
+%(q1hint2c3)%	The amount of money in the park fund is the sum of two things: 2 (the amount donated from each burger) multiplied by 80 (the number of burgers sold) plus 1300 (the amount of money in the fund initially). Can you calculate and write this number?
+%(q1hint3c3)%	The amount of money in the park fund equals (80*2) + 1300. Evaluate this expression.
+%(q1hint4c3)%	(80*2) + 1300 = 160 + 1300 = 1460. Type '1460' in the highlighted field.
+	
+%(q2hint1c1)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q2hint2c1)%	A given value in this question represents the the number of burgers sold. Please type this given value into the correct place in the table.
+%(q2hint3c1)%	Type '120' in the highlighted field.
+	
+%(hint1sw2)%	Please write a numerical expression that shows how to compute the amount of money in the park fund when the the number of burgers sold is 120.
+%(hint2sw2)%	The amount of money in the park fund is the sum of two things: 2 (the amount donated from each burger) multiplied by 120 (the number of burgers sold) plus 1300 (the amount of money in the fund initially). Can you write this expression?
+%(hint3sw2)%	Please type (120*2) + 1300 into the highlighted field.
+	
+%(q2hint1c3)%	You need to compute the amount of money in the park fund. This answer depends on the amount donated from each burger, the the number of burgers sold, and the amount of money in the fund initially. Can you find the amount of money in the park fund from these numbers?
+%(q2hint2c3)%	The amount of money you have saved is the sum of two things: 2 (the amount donated from each burger) multiplied by 120 (the number of burgers sold) plus 1300 (the amount of money in the fund initially). Can you calculate and write this number?
+%(q2hint3c3)%	The amount of money in the park fund equals (120*2) + 1300. Evaluate this expression.
+%(q2hint4c3)%	(120*2) + 1300 = 240 + 1300 = 1540. Type '1540' in the highlighted field.
+	
+%(q3hint1c1)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q3hint2c1)%	A given value in this question represents the the number of burgers sold. Please type this given value into the correct place in the table.
+%(q3hint3c1)%	Type '260' in the highlighted field.
+	
+%(hint1sw3)%	Please write a numerical expression that shows how to compute the amount of money in the park fund when the the number of burgers sold is 260.
+%(hint2sw3)%	The amount of money in the park fund is the sum of two things: 2 (the amount donated from each burger) multiplied by 260 (the number of burgers sold) plus 1300 (the amount of money in the fund initially). Can you write this expression?
+%(hint3sw3)%	Please type (260*2) + 1300 into the highlighted field.
+	
+%(q3hint1c3)%	You need to compute the amount of money in the park fund. This answer depends on the amount donated from each burger, the the number of burgers sold, and the amount of money in the fund initially. Can you find the amount of money in the park fund from these numbers?
+%(q3hint2c3)%	The amount of money in the park fund is the sum of two things: 2 (the amount donated from each burger) multiplied by 260 (the number of burgers sold) plus 1300 (the amount of money in the fund initially). Can you calculate and write this number?
+%(q3hint3c3)%	The amount of money in the park fund equals (260*2) + 1300. Evaluate this expression.
+%(q3hint4c3)%	(260*2) + 1300 = 520 + 1300 = 1820. Type '1820' in the highlighted field.
+	
+%(q4hint1c1)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q4hint2c1)%	A given value in this question represents the amount of money in the park fund. Please type this given value into the correct place in the table.
+%(q4hint3c1)%	Type '2150' in the highlighted field.
+	
+%(hint1sw4)%	Please write a numerical expression that shows how to compute the the number of burgers sold when the amount of money in the park fund is 2150.
+%(hint2sw4)%	The the number of burgers sold is the quotient of two things: 2150 (amount of money in the park fund) minus 1300 (the amount of money in the fund initially) divided by 2 (the amount donated from each burger). Can you write this expression?
+%(hint3sw4)%	Please type (2150-1300)/2 into the highlighted field.
+	
+%(q4hint1c3)%	You need to compute the the number of burgers sold. This answer depends on the amount donated from each burger, the amount of money in the fund initially, and the amount of money in the park fund. Can you find the the number of burgers sold from these numbers?
+%(q4hint2c3)%	The the number of burgers sold is the quotient of two things: 2150 (amount of money in the park fund) minus 1300 (the amount of money in the fund initially) divided by 2 (the amount donated from each burger). Can you calculate and write this number?
+%(q4hint3c3)%	The the number of burgers sold equals (2150-1300)/2. Evaluate this expression.
+%(q4hint4c3)%	(2150-1300)/2 = 750/2 = 375. Type '375' in the highlighted field.
+	
+%(q5hint1c1)%	Read the last sentence in the problem statement. Do you represent the the number of burgers sold as a variable or an expression?
+%(q5hint2c1)%	Please represent the the number of burgers sold with a variable, x.
+%(q5hint3c1)%	Type 'x' in the highlighted field.
+	
+%(q5hint1exp)%	When the the number of burgers sold was 80, you used (80*2) + 1300 to find the amount of money in the park fund. When the the number of burgers sold is <%=link25.input%>, how do you find the amount of money in the park fund?
+%(q5hint2exp)%	If the the number of burgers sold = 80, then the amount of money in the park fund = (80*2) + 1300. If the the number of burgers sold = <%=link25.input%>, then the amount of money in the park fund = _____?
+%(q5hint3exp)%	If the the number of burgers sold = 80, then the amount of money in the park fund = (80*2) + 1300. Now the the number of burgers sold = <%=link25.input%>, so replace 80 with <%=link25.input%> in the expression (80*2) + 1300 to get <%=link25.input%>*2 + 1300.
+%(q5hint4exp)%	Type <%=link25.input%>*2 + 1300 in the highlighted field.
+	
+%(skill_g1)%	Enter_a_given_x_value
+%(skill_g2)%	Enter_a_given_x_value
+%(skill_g3)%	Enter_a_given_x_value
+%(skill_g4)%	Enter_a_given_y_value
+%(skill_e1)%	Show_your_work
+%(skill_e2)%	Show_your_work
+%(skill_e3)%	Show_your_work
+%(skill_e4)%	Show_your_work
+%(skill_a1)%	Calculate_a_y_value_from_an_x_value
+%(skill_a2)%	Calculate_a_y_value_from_an_x_value
+%(skill_a3)%	Calculate_a_y_value_from_an_x_value
+%(skill_a4)%	Calculate_an_x_value_from_a_y_value
+	
+%(skill_g1_label)%	Enter a given x value
+%(skill_g2_label)%	Enter a given x value
+%(skill_g3_label)%	Enter a given x value
+%(skill_g4_label)%	Enter a given y value
+%(skill_e1_label)%	Show your work
+%(skill_e2_label)%	Show your work
+%(skill_e3_label)%	Show your work
+%(skill_e4_label)%	Show your work
+%(skill_a1_label)%	Calculate a y value from an x value
+%(skill_a2_label)%	Calculate a y value from an x value
+%(skill_a3_label)%	Calculate a y value from an x value
+%(skill_a4_label)%	Calculate an x value from a y value
+%(572301795134671631)%	Please write a numerical expression that shows how to compute the the number of burgers sold when the amount of money in the park fund is %(given4)%.
+%(-1345822118728898084)%	The amount of money in the park fund equals (80*2) + 1300. Evaluate this expression.
+%(695286012838189948)%	The amount of money you have saved is the sum of two things: 2 (the amount donated from each burger) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(-5166532556208710060)%	No, this is not correct.
+%(6098699531750793939)%	Please represent the the number of burgers sold with a variable, x.
+%(4763051105712743775)%	The amount of money in the park fund is the sum of two things: 2 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(572307795170671733)%	Please write a numerical expression that shows how to compute the amount of money in the park fund when the the number of burgers sold is %(given2)%.
+%(-2064783783288574345)%	The amount of money in the park fund is the sum of two things: 2 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(4823584383603843722)%	If the the number of burgers sold = 80, then the %(quan2)% = %(exp1)%. Now the the number of burgers sold = <%=link25.input%>, so replace 80 with <%=link25.input%> in the expression %(exp1)% to get <%=link25.input%>%(expression)%.
+%(572304795170671710)%	Please write a numerical expression that shows how to compute the amount of money in the park fund when the the number of burgers sold is %(given1)%.
+%(-1345824118756898150)%	Type '80' in the highlighted field.
+%(8332021486518256280)%	You need to compute the amount of money in the park fund. This answer depends on the amount donated from each burger, the %(quan1)%, and %(quan4)%. Can you find the amount of money in the park fund from these numbers?
+%(-6182423679765848703)%	The amount of money in the park fund equals (120*2) + 1300. Evaluate this expression.
+%(-5670083390880144495)%	If the the number of burgers sold = 80, then the %(quan2)% = %(exp1)%. If the the number of burgers sold = <%=link25.input%>, then the %(quan2)% = _____?
+%(-569654292365823220)%	Read the last sentence in the problem statement. Do you represent the the number of burgers sold as a variable or an expression?
+%(1222245354736942317)%	You need to compute the the number of burgers sold. This answer depends on the amount donated from each burger, %(quan4)%, and the %(quan2)%. Can you find the the number of burgers sold from these numbers?
+%(695284012810189882)%	A given value in this question represents the the number of burgers sold. Please type this given value into the correct place in the table.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5985063922024392601)%	Type <%=link25.input%>*2 + 1300 in the highlighted field.
+%(-2064781783292574359)%	The amount of money in the park fund is the sum of two things: 2 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-5470302849130718706)%	Type 'x' in the highlighted field.
+%(3554822437995997366)%	You need to compute the amount of money in the park fund. This answer depends on the amount donated from each burger, %(quan1)%, and %(quan4)%. Can you find the amount of money in the park fund from these numbers?
+%(7971097237230898895)%	A given value in this question represents the the number of burgers sold. Please type this given value into the correct place in the table.
+%(-122696630640565551)%	(260*2) + 1300 = 520 + 1300 = 1820. Type '1820' in the highlighted field.
+%(-4865542323806051534)%	(120*2) + 1300 = 240 + 1300 = 1540. Type '1540' in the highlighted field.
+%(3446171749632946340)%	Type '260' in the highlighted field.
+%(5466216335593386898)%	The the number of burgers sold is the quotient of two things: 2150 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you calculate and write this number?
+%(8332019486522256358)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(-5589769099361342225)%	(80*2) + 1300 = 160 + 1300 = 1460. Type '1460' in the highlighted field.
+%(-2064782783280574396)%	The amount of money in the park fund is the sum of two things: 2 (%(quan3)%) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-2064780783284574362)%	The the number of burgers sold is the quotient of two things: 2150 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you write this expression?
+%(-7419699401471923236)%	(2150-1300)/2 = 750/2 = 375. Type '375' in the highlighted field.
+%(6912683924870881635)%	You need to compute the amount of money in the park fund. This answer depends on the amount donated from each burger, the %(quan1)%, and %(quan4)%. Can you find the amount of money in the park fund from these numbers?
+%(8249728154828431532)%	When the the number of burgers sold was 80, you used %(exp1)% to find the %(quan2)%. When the the number of burgers sold is <%=link25.input%>, how do you find the %(quan2)%?
+%(-6819400178805454270)%	Please type (260*2) + 1300 into the highlighted field.
+%(-6182425679761848593)%	Type '120' in the highlighted field.
+%(3446169749636946306)%	The amount of money in the park fund equals (260*2) + 1300. Evaluate this expression.
+%(-6819399178801454265)%	Please type (120*2) + 1300 into the highlighted field.
+%(3554824437991997352)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(1222243354724942235)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(6783097691605184239)%	The the number of burgers sold equals (2150-1300)/2. Evaluate this expression.
+%(6912685924882881653)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(5466218335589386932)%	A given value in this question represents the amount of money in the park fund. Please type this given value into the correct place in the table.
+%(4763053105708743793)%	A given value in this question represents the the number of burgers sold. Please type this given value into the correct place in the table.
+%(6783099691601184129)%	Type '2150' in the highlighted field.
+%(-6819398178793454252)%	Please type (80*2) + 1300 into the highlighted field.
+%(572306795166671728)%	Please write a numerical expression that shows how to compute the amount of money in the park fund when the the number of burgers sold is %(given3)%.
+%(-6819393178829454387)%	Please type (2150-1300)/2 into the highlighted field.
+%(7971099237226898913)%	The amount of money in the park fund is the sum of two things: 2 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+Problem Name	Problem8
+%(startStateNodeName)%	
+%(problemstatement)%	Clarissa is selling some of her old books to help her save money for new books. She is selling each book at a yard sale for $1.50 and she already has $16 saved from her birthday.<br><br>(1) How much money will she have if she sells 8 books at the yard sale?<br><br>(2) How much money will she have if she sells 12 books at the yard sale?<br><br>(3) If Clarissa sells 20 books, how much money will she have saved?<br><br>(4) If Clarissa has $58 saved, how many books did she sell?<br><br>In the row labeled "Expression", define a variable for the number of books sold and use that variable to write an expression that will allow you to calculate the total amount of money Clarissa has saved.
+%(instructions)%	In the row labeled "Expression", define a variable for the number of books sold and use that variable to write an expression that will allow you to calculate the total amount of money Clarissa has saved.
+%(Label1)%	Number of books sold
+%(Label2)%	Amount of money saved
+%(UnitLabel1)%	books
+%(UnitLabel2)%	dollars
+%(quan1)%	the number of books sold
+%(quan2)%	amount of money saved
+%(unit1)%	books
+%(unit2)%	dollars
+	
+%(given1)%	8
+%(given2)%	12
+%(given3)%	20
+%(given4)%	58
+	
+%(factor)%	1.50
+%(constant)%	16
+%(quan3)%	the cost of each book
+%(quan4)%	the amount already saved
+	
+%(ans1)%	28
+%(ans2)%	34
+%(ans3)%	46
+%(ans4)%	28
+	
+%(variable)%	x
+	
+%(exp1)%	(8*1.50) + 16
+%(exp2)%	(12*1.50) + 16
+%(exp3)%	(20*1.50) + 16
+%(exp4)%	(58-16)/1.50
+%(expression)%	*1.5 + 16
+%(expression_bug)%	Please enter a variable before trying to enter an expression.
+	
+%(q1hint1c1)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q1hint2c1)%	A given value in this question represents the the number of books sold. Please type this given value into the correct place in the table.
+%(q1hint3c1)%	Type '8' in the highlighted field.
+	
+%(hint1sw1)%	Please write a numerical expression that shows how to compute the amount of money saved when the the number of books sold is 8.
+%(hint2sw1)%	The amount of money saved is the sum of two things: 1.50 (the cost of each book) multiplied by 8 (the number of books sold) plus 16 (the amount already saved). Can you write this expression?
+%(hint3sw1)%	Please type (8*1.50) + 16 into the highlighted field.
+	
+%(q1hint1c3)%	You need to compute the amount of money saved. This answer depends on the cost of each book, the number of books sold, and the amount already saved. Can you find the amount of money saved from these numbers?
+%(q1hint2c3)%	The amount of money saved is the sum of two things: 1.50 (the cost of each book) multiplied by 8 (the number of books sold) plus 16 (the amount already saved). Can you calculate and write this number?
+%(q1hint3c3)%	The amount of money saved equals (8*1.50) + 16. Evaluate this expression.
+%(q1hint4c3)%	(8*1.50) + 16 = 12 + 16 = 28. Type '28' in the highlighted field.
+	
+%(q2hint1c1)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q2hint2c1)%	A given value in this question represents the the number of books sold. Please type this given value into the correct place in the table.
+%(q2hint3c1)%	Type '12' in the highlighted field.
+	
+%(hint1sw2)%	Please write a numerical expression that shows how to compute the amount of money saved when the the number of books sold is 12.
+%(hint2sw2)%	The amount of money saved is the sum of two things: 1.50 (the cost of each book) multiplied by 12 (the number of books sold) plus 16 (the amount already saved). Can you write this expression?
+%(hint3sw2)%	Please type (12*1.50) + 16 into the highlighted field.
+	
+%(q2hint1c3)%	You need to compute the amount of money saved. This answer depends on the cost of each book, the the number of books sold, and the amount already saved. Can you find the amount of money saved from these numbers?
+%(q2hint2c3)%	The amount of money you have saved is the sum of two things: 1.50 (the cost of each book) multiplied by 12 (the number of books sold) plus 16 (the amount already saved). Can you calculate and write this number?
+%(q2hint3c3)%	The amount of money saved equals (12*1.50) + 16. Evaluate this expression.
+%(q2hint4c3)%	(12*1.50) + 16 = 18 + 16 = 34. Type '34' in the highlighted field.
+	
+%(q3hint1c1)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q3hint2c1)%	A given value in this question represents the the number of books sold. Please type this given value into the correct place in the table.
+%(q3hint3c1)%	Type '20' in the highlighted field.
+	
+%(hint1sw3)%	Please write a numerical expression that shows how to compute the amount of money saved when the the number of books sold is 20.
+%(hint2sw3)%	The amount of money saved is the sum of two things: 1.50 (the cost of each book) multiplied by 20 (the number of books sold) plus 16 (the amount already saved). Can you write this expression?
+%(hint3sw3)%	Please type (20*1.50) + 16 into the highlighted field.
+	
+%(q3hint1c3)%	You need to compute the amount of money saved. This answer depends on the cost of each book, the the number of books sold, and the amount already saved. Can you find the amount of money saved from these numbers?
+%(q3hint2c3)%	The amount of money saved is the sum of two things: 1.50 (the cost of each book) multiplied by 20 (the number of books sold) plus 16 (the amount already saved). Can you calculate and write this number?
+%(q3hint3c3)%	The amount of money saved equals (20*1.50) + 16. Evaluate this expression.
+%(q3hint4c3)%	(20*1.50) + 16 = 30 + 16 = 46. Type '46' in the highlighted field.
+	
+%(q4hint1c1)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q4hint2c1)%	A given value in this question represents the amount of money saved. Please type this given value into the correct place in the table.
+%(q4hint3c1)%	Type '58' in the highlighted field.
+	
+%(hint1sw4)%	Please write a numerical expression that shows how to compute the the number of books sold when the amount of money saved is 58.
+%(hint2sw4)%	The the number of books sold is the quotient of two things: 58 (amount of money saved) minus 16 (the amount already saved) divided by 1.50 (the cost of each book). Can you write this expression?
+%(hint3sw4)%	Please type (58-16)/1.50 into the highlighted field.
+	
+%(q4hint1c3)%	You need to compute the the number of books sold. This answer depends on the cost of each book, the amount already saved, and the amount of money saved. Can you find the the number of books sold from these numbers?
+%(q4hint2c3)%	The the number of books sold is the quotient of two things: 58 (amount of money saved) minus 16 (the amount already saved) divided by 1.50 (the cost of each book). Can you calculate and write this number?
+%(q4hint3c3)%	The the number of books sold equals (58-16)/1.50. Evaluate this expression.
+%(q4hint4c3)%	(58-16)/1.50 = 42/1.50 = 28. Type '28' in the highlighted field.
+	
+%(q5hint1c1)%	Read the last sentence in the problem statement. Do you represent the the number of books sold as a variable or an expression?
+%(q5hint2c1)%	Please represent the the number of books sold with a variable, x.
+%(q5hint3c1)%	Type 'x' in the highlighted field.
+	
+%(q5hint1exp)%	When the the number of books sold was 8, you used (8*1.50) + 16 to find the amount of money saved. When the the number of books sold is <%=link25.input%>, how do you find the amount of money saved?
+%(q5hint2exp)%	If the the number of books sold = 8, then the amount of money saved = (8*1.50) + 16. If the the number of books sold = <%=link25.input%>, then the amount of money saved = _____?
+%(q5hint3exp)%	If the the number of books sold = 8, then the amount of money saved = (8*1.50) + 16. Now the the number of books sold = <%=link25.input%>, so replace 8 with <%=link25.input%> in the expression (8*1.50) + 16 to get <%=link25.input%>*1.5 + 16.
+%(q5hint4exp)%	Type <%=link25.input%>*1.5 + 16 in the highlighted field.
+	
+%(skill_g1)%	Enter_a_given_x_value
+%(skill_g2)%	Enter_a_given_x_value
+%(skill_g3)%	Enter_a_given_x_value
+%(skill_g4)%	Enter_a_given_y_value
+%(skill_e1)%	Show_your_work
+%(skill_e2)%	Show_your_work
+%(skill_e3)%	Show_your_work
+%(skill_e4)%	Show_your_work
+%(skill_a1)%	Calculate_a_y_value_from_an_x_value
+%(skill_a2)%	Calculate_a_y_value_from_an_x_value
+%(skill_a3)%	Calculate_a_y_value_from_an_x_value
+%(skill_a4)%	Calculate_an_x_value_from_a_y_value
+	
+%(skill_g1_label)%	Enter a given x value
+%(skill_g2_label)%	Enter a given x value
+%(skill_g3_label)%	Enter a given x value
+%(skill_g4_label)%	Enter a given y value
+%(skill_e1_label)%	Show your work
+%(skill_e2_label)%	Show your work
+%(skill_e3_label)%	Show your work
+%(skill_e4_label)%	Show your work
+%(skill_a1_label)%	Calculate a y value from an x value
+%(skill_a2_label)%	Calculate a y value from an x value
+%(skill_a3_label)%	Calculate a y value from an x value
+%(skill_a4_label)%	Calculate an x value from a y value
+%(572301795134671631)%	Please write a numerical expression that shows how to compute the the number of books sold when the amount of money saved is %(given4)%.
+%(-1345822118728898084)%	The amount of money saved equals (8*1.50) + 16. Evaluate this expression.
+%(695286012838189948)%	The amount of money you have saved is the sum of two things: 1.50 (the cost of each book) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(-5166532556208710060)%	No, this is not correct.
+%(6098699531750793939)%	Please represent the the number of books sold with a variable, x.
+%(4763051105712743775)%	The amount of money saved is the sum of two things: 1.50 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(572307795170671733)%	Please write a numerical expression that shows how to compute the amount of money saved when the the number of books sold is %(given2)%.
+%(-2064783783288574345)%	The amount of money saved is the sum of two things: 1.50 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(4823584383603843722)%	If the the number of books sold = 8, then the %(quan2)% = %(exp1)%. Now the the number of books sold = <%=link25.input%>, so replace 8 with <%=link25.input%> in the expression %(exp1)% to get <%=link25.input%>%(expression)%.
+%(572304795170671710)%	Please write a numerical expression that shows how to compute the amount of money saved when the the number of books sold is %(given1)%.
+%(-1345824118756898150)%	Type '8' in the highlighted field.
+%(8332021486518256280)%	You need to compute the amount of money saved. This answer depends on the cost of each book, the %(quan1)%, and %(quan4)%. Can you find the amount of money saved from these numbers?
+%(-6182423679765848703)%	The amount of money saved equals (12*1.50) + 16. Evaluate this expression.
+%(-5670083390880144495)%	If the the number of books sold = 8, then the %(quan2)% = %(exp1)%. If the the number of books sold = <%=link25.input%>, then the %(quan2)% = _____?
+%(-569654292365823220)%	Read the last sentence in the problem statement. Do you represent the the number of books sold as a variable or an expression?
+%(1222245354736942317)%	You need to compute the the number of books sold. This answer depends on the cost of each book, %(quan4)%, and the %(quan2)%. Can you find the the number of books sold from these numbers?
+%(695284012810189882)%	A given value in this question represents the the number of books sold. Please type this given value into the correct place in the table.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5985063922024392601)%	Type <%=link25.input%>*1.5 + 16 in the highlighted field.
+%(-2064781783292574359)%	The amount of money saved is the sum of two things: 1.50 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-5470302849130718706)%	Type 'x' in the highlighted field.
+%(3554822437995997366)%	You need to compute the amount of money saved. This answer depends on the cost of each book, %(quan1)%, and %(quan4)%. Can you find the amount of money saved from these numbers?
+%(7971097237230898895)%	A given value in this question represents the the number of books sold. Please type this given value into the correct place in the table.
+%(-122696630640565551)%	(20*1.50) + 16 = 30 + 16 = 46. Type '46' in the highlighted field.
+%(-4865542323806051534)%	(12*1.50) + 16 = 18 + 16 = 34. Type '34' in the highlighted field.
+%(3446171749632946340)%	Type '20' in the highlighted field.
+%(5466216335593386898)%	The the number of books sold is the quotient of two things: 58 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you calculate and write this number?
+%(8332019486522256358)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(-5589769099361342225)%	(8*1.50) + 16 = 12 + 16 = 28. Type '28' in the highlighted field.
+%(-2064782783280574396)%	The amount of money saved is the sum of two things: 1.50 (%(quan3)%) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-2064780783284574362)%	The the number of books sold is the quotient of two things: 58 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you write this expression?
+%(-7419699401471923236)%	(58-16)/1.50 = 42/1.50 = 28. Type '28' in the highlighted field.
+%(6912683924870881635)%	You need to compute the amount of money saved. This answer depends on the cost of each book, the %(quan1)%, and %(quan4)%. Can you find the amount of money saved from these numbers?
+%(8249728154828431532)%	When the the number of books sold was 8, you used %(exp1)% to find the %(quan2)%. When the the number of books sold is <%=link25.input%>, how do you find the %(quan2)%?
+%(-6819400178805454270)%	Please type (20*1.50) + 16 into the highlighted field.
+%(-6182425679761848593)%	Type '12' in the highlighted field.
+%(3446169749636946306)%	The amount of money saved equals (20*1.50) + 16. Evaluate this expression.
+%(-6819399178801454265)%	Please type (12*1.50) + 16 into the highlighted field.
+%(3554824437991997352)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(1222243354724942235)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(6783097691605184239)%	The the number of books sold equals (58-16)/1.50. Evaluate this expression.
+%(6912685924882881653)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(5466218335589386932)%	A given value in this question represents the amount of money saved. Please type this given value into the correct place in the table.
+%(4763053105708743793)%	A given value in this question represents the the number of books sold. Please type this given value into the correct place in the table.
+%(6783099691601184129)%	Type '58' in the highlighted field.
+%(-6819398178793454252)%	Please type (8*1.50) + 16 into the highlighted field.
+%(572306795166671728)%	Please write a numerical expression that shows how to compute the amount of money saved when the the number of books sold is %(given3)%.
+%(-6819393178829454387)%	Please type (58-16)/1.50 into the highlighted field.
+%(7971099237226898913)%	The amount of money saved is the sum of two things: 1.50 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+Problem Name	Problem9
+%(startStateNodeName)%	
+%(problemstatement)%	Paul is starting a new job at Rocketeers Restaurant. He will receive $6 for every hour worked, but they will subtract $33 from each paycheck for benefits and taxes.<br><br>(1) If Paul works 38 hours, how much will he receive in his paycheck?<br><br>(2) If Paul works 52 hours, how much will he receive in his paycheck?<br><br>(3) If Paul works 67 hours, how much will he receive in his paycheck?<br><br>(4) How many hours did Paul work if his paycheck is for $483?<br><br>In the row labeled "Expression", define a variable for the number of hours worked and use that variable to write an expression that will allow you to calculate the total amount of Paul's paycheck.
+%(instructions)%	In the row labeled "Expression", define a variable for the number of hours worked and use that variable to write an expression that will allow you to calculate the total amount of Paul's paycheck.
+%(Label1)%	Number of hours worked
+%(Label2)%	Total paycheck amount
+%(UnitLabel1)%	hours
+%(UnitLabel2)%	dollars
+%(quan1)%	the number of hours worked
+%(quan2)%	total paycheck amount
+%(unit1)%	hours
+%(unit2)%	dollars
+	
+%(given1)%	38
+%(given2)%	52
+%(given3)%	67
+%(given4)%	483
+	
+%(factor)%	6
+%(constant)%	-33
+%(quan3)%	the amount earned for each hour worked
+%(quan4)%	the amount deducted from each paycheck for benefits
+	
+%(ans1)%	195
+%(ans2)%	279
+%(ans3)%	369
+%(ans4)%	86
+	
+%(variable)%	x
+	
+%(exp1)%	(38*6) - 33
+%(exp2)%	(52*6) - 33
+%(exp3)%	(67*6) - 33
+%(exp4)%	(483+33)/6
+%(expression)%	*6 - 33
+%(expression_bug)%	Please enter a variable before trying to enter an expression.
+	
+%(q1hint1c1)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q1hint2c1)%	A given value in this question represents the the number of hours worked. Please type this given value into the correct place in the table.
+%(q1hint3c1)%	Type '38' in the highlighted field.
+	
+%(hint1sw1)%	Please write a numerical expression that shows how to compute the total paycheck amount when the the number of hours worked is 38.
+%(hint2sw1)%	The total paycheck amount is the sum of two things: 6 (the amount earned for each hour worked) multiplied by 38 (the number of hours worked) plus -33 (the amount deducted from each paycheck for benefits). Can you write this expression?
+%(hint3sw1)%	Please type (38*6) - 33 into the highlighted field.
+	
+%(q1hint1c3)%	You need to compute the total paycheck amount. This answer depends on the amount earned for each hour worked, the number of hours worked, and the amount deducted from each paycheck for benefits. Can you find the total paycheck amount from these numbers?
+%(q1hint2c3)%	The total paycheck amount is the sum of two things: 6 (the amount earned for each hour worked) multiplied by 38 (the number of hours worked) plus -33 (the amount deducted from each paycheck for benefits). Can you calculate and write this number?
+%(q1hint3c3)%	The total paycheck amount equals (38*6) - 33. Evaluate this expression.
+%(q1hint4c3)%	(38*6) - 33 = 228 - 33 = 195. Type '195' in the highlighted field.
+	
+%(q2hint1c1)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q2hint2c1)%	A given value in this question represents the the number of hours worked. Please type this given value into the correct place in the table.
+%(q2hint3c1)%	Type '52' in the highlighted field.
+	
+%(hint1sw2)%	Please write a numerical expression that shows how to compute the total paycheck amount when the the number of hours worked is 52.
+%(hint2sw2)%	The total paycheck amount is the sum of two things: 6 (the amount earned for each hour worked) multiplied by 52 (the number of hours worked) plus -33 (the amount deducted from each paycheck for benefits). Can you write this expression?
+%(hint3sw2)%	Please type (52*6) - 33 into the highlighted field.
+	
+%(q2hint1c3)%	You need to compute the total paycheck amount. This answer depends on the amount earned for each hour worked, the the number of hours worked, and the amount deducted from each paycheck for benefits. Can you find the total paycheck amount from these numbers?
+%(q2hint2c3)%	The amount of money you have saved is the sum of two things: 6 (the amount earned for each hour worked) multiplied by 52 (the number of hours worked) plus -33 (the amount deducted from each paycheck for benefits). Can you calculate and write this number?
+%(q2hint3c3)%	The total paycheck amount equals (52*6) - 33. Evaluate this expression.
+%(q2hint4c3)%	(52*6) - 33 = 312 - 33 = 279. Type '279' in the highlighted field.
+	
+%(q3hint1c1)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q3hint2c1)%	A given value in this question represents the the number of hours worked. Please type this given value into the correct place in the table.
+%(q3hint3c1)%	Type '67' in the highlighted field.
+	
+%(hint1sw3)%	Please write a numerical expression that shows how to compute the total paycheck amount when the the number of hours worked is 67.
+%(hint2sw3)%	The total paycheck amount is the sum of two things: 6 (the amount earned for each hour worked) multiplied by 67 (the number of hours worked) plus -33 (the amount deducted from each paycheck for benefits). Can you write this expression?
+%(hint3sw3)%	Please type (67*6) - 33 into the highlighted field.
+	
+%(q3hint1c3)%	You need to compute the total paycheck amount. This answer depends on the amount earned for each hour worked, the the number of hours worked, and the amount deducted from each paycheck for benefits. Can you find the total paycheck amount from these numbers?
+%(q3hint2c3)%	The total paycheck amount is the sum of two things: 6 (the amount earned for each hour worked) multiplied by 67 (the number of hours worked) plus -33 (the amount deducted from each paycheck for benefits). Can you calculate and write this number?
+%(q3hint3c3)%	The total paycheck amount equals (67*6) - 33. Evaluate this expression.
+%(q3hint4c3)%	(67*6) - 33 = 402 - 33 = 369. Type '369' in the highlighted field.
+	
+%(q4hint1c1)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q4hint2c1)%	A given value in this question represents the total paycheck amount. Please type this given value into the correct place in the table.
+%(q4hint3c1)%	Type '483' in the highlighted field.
+	
+%(hint1sw4)%	Please write a numerical expression that shows how to compute the the number of hours worked when the total paycheck amount is 483.
+%(hint2sw4)%	The the number of hours worked is the quotient of two things: 483 (total paycheck amount) minus -33 (the amount deducted from each paycheck for benefits) divided by 6 (the amount earned for each hour worked). Can you write this expression?
+%(hint3sw4)%	Please type (483+33)/6 into the highlighted field.
+	
+%(q4hint1c3)%	You need to compute the the number of hours worked. This answer depends on the amount earned for each hour worked, the amount deducted from each paycheck for benefits, and the total paycheck amount. Can you find the the number of hours worked from these numbers?
+%(q4hint2c3)%	The the number of hours worked is the quotient of two things: 483 (total paycheck amount) minus -33 (the amount deducted from each paycheck for benefits) divided by 6 (the amount earned for each hour worked). Can you calculate and write this number?
+%(q4hint3c3)%	The the number of hours worked equals (483+33)/6. Evaluate this expression.
+%(q4hint4c3)%	(483+33)/6 = 516/6 = 86. Type '86' in the highlighted field.
+	
+%(q5hint1c1)%	Read the last sentence in the problem statement. Do you represent the the number of hours worked as a variable or an expression?
+%(q5hint2c1)%	Please represent the the number of hours worked with a variable, x.
+%(q5hint3c1)%	Type 'x' in the highlighted field.
+	
+%(q5hint1exp)%	When the the number of hours worked was 38, you used (38*6) - 33 to find the total paycheck amount. When the the number of hours worked is <%=link25.input%>, how do you find the total paycheck amount?
+%(q5hint2exp)%	If the the number of hours worked = 38, then the total paycheck amount = (38*6) - 33. If the the number of hours worked = <%=link25.input%>, then the total paycheck amount = _____?
+%(q5hint3exp)%	If the the number of hours worked = 38, then the total paycheck amount = (38*6) - 33. Now the the number of hours worked = <%=link25.input%>, so replace 38 with <%=link25.input%> in the expression (38*6) - 33 to get <%=link25.input%>*6 - 33.
+%(q5hint4exp)%	Type <%=link25.input%>*6 - 33 in the highlighted field.
+	
+%(skill_g1)%	Enter_a_given_x_value
+%(skill_g2)%	Enter_a_given_x_value
+%(skill_g3)%	Enter_a_given_x_value
+%(skill_g4)%	Enter_a_given_y_value
+%(skill_e1)%	Show_your_work
+%(skill_e2)%	Show_your_work
+%(skill_e3)%	Show_your_work
+%(skill_e4)%	Show_your_work
+%(skill_a1)%	Calculate_a_y_value_from_an_x_value
+%(skill_a2)%	Calculate_a_y_value_from_an_x_value
+%(skill_a3)%	Calculate_a_y_value_from_an_x_value
+%(skill_a4)%	Calculate_an_x_value_from_a_y_value
+	
+%(skill_g1_label)%	Enter a given x value
+%(skill_g2_label)%	Enter a given x value
+%(skill_g3_label)%	Enter a given x value
+%(skill_g4_label)%	Enter a given y value
+%(skill_e1_label)%	Show your work
+%(skill_e2_label)%	Show your work
+%(skill_e3_label)%	Show your work
+%(skill_e4_label)%	Show your work
+%(skill_a1_label)%	Calculate a y value from an x value
+%(skill_a2_label)%	Calculate a y value from an x value
+%(skill_a3_label)%	Calculate a y value from an x value
+%(skill_a4_label)%	Calculate an x value from a y value
+%(572301795134671631)%	Please write a numerical expression that shows how to compute the the number of hours worked when the total paycheck amount is %(given4)%.
+%(-1345822118728898084)%	The total paycheck amount equals (38*6) - 33. Evaluate this expression.
+%(695286012838189948)%	The amount of money you have saved is the sum of two things: 6 (the amount earned for each hour worked) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(-5166532556208710060)%	No, this is not correct.
+%(6098699531750793939)%	Please represent the the number of hours worked with a variable, x.
+%(4763051105712743775)%	The total paycheck amount is the sum of two things: 6 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(572307795170671733)%	Please write a numerical expression that shows how to compute the total paycheck amount when the the number of hours worked is %(given2)%.
+%(-2064783783288574345)%	The total paycheck amount is the sum of two things: 6 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(4823584383603843722)%	If the the number of hours worked = 38, then the %(quan2)% = %(exp1)%. Now the the number of hours worked = <%=link25.input%>, so replace 38 with <%=link25.input%> in the expression %(exp1)% to get <%=link25.input%>%(expression)%.
+%(572304795170671710)%	Please write a numerical expression that shows how to compute the total paycheck amount when the the number of hours worked is %(given1)%.
+%(-1345824118756898150)%	Type '38' in the highlighted field.
+%(8332021486518256280)%	You need to compute the total paycheck amount. This answer depends on the amount earned for each hour worked, the %(quan1)%, and %(quan4)%. Can you find the total paycheck amount from these numbers?
+%(-6182423679765848703)%	The total paycheck amount equals (52*6) - 33. Evaluate this expression.
+%(-5670083390880144495)%	If the the number of hours worked = 38, then the %(quan2)% = %(exp1)%. If the the number of hours worked = <%=link25.input%>, then the %(quan2)% = _____?
+%(-569654292365823220)%	Read the last sentence in the problem statement. Do you represent the the number of hours worked as a variable or an expression?
+%(1222245354736942317)%	You need to compute the the number of hours worked. This answer depends on the amount earned for each hour worked, %(quan4)%, and the %(quan2)%. Can you find the the number of hours worked from these numbers?
+%(695284012810189882)%	A given value in this question represents the the number of hours worked. Please type this given value into the correct place in the table.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5985063922024392601)%	Type <%=link25.input%>*6 - 33 in the highlighted field.
+%(-2064781783292574359)%	The total paycheck amount is the sum of two things: 6 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-5470302849130718706)%	Type 'x' in the highlighted field.
+%(3554822437995997366)%	You need to compute the total paycheck amount. This answer depends on the amount earned for each hour worked, %(quan1)%, and %(quan4)%. Can you find the total paycheck amount from these numbers?
+%(7971097237230898895)%	A given value in this question represents the the number of hours worked. Please type this given value into the correct place in the table.
+%(-122696630640565551)%	(67*6) - 33 = 402 - 33 = 369. Type '369' in the highlighted field.
+%(-4865542323806051534)%	(52*6) - 33 = 312 - 33 = 279. Type '279' in the highlighted field.
+%(3446171749632946340)%	Type '67' in the highlighted field.
+%(5466216335593386898)%	The the number of hours worked is the quotient of two things: 483 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you calculate and write this number?
+%(8332019486522256358)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(-5589769099361342225)%	(38*6) - 33 = 228 - 33 = 195. Type '195' in the highlighted field.
+%(-2064782783280574396)%	The total paycheck amount is the sum of two things: 6 (%(quan3)%) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-2064780783284574362)%	The the number of hours worked is the quotient of two things: 483 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you write this expression?
+%(-7419699401471923236)%	(483+33)/6 = 516/6 = 86. Type '86' in the highlighted field.
+%(6912683924870881635)%	You need to compute the total paycheck amount. This answer depends on the amount earned for each hour worked, the %(quan1)%, and %(quan4)%. Can you find the total paycheck amount from these numbers?
+%(8249728154828431532)%	When the the number of hours worked was 38, you used %(exp1)% to find the %(quan2)%. When the the number of hours worked is <%=link25.input%>, how do you find the %(quan2)%?
+%(-6819400178805454270)%	Please type (67*6) - 33 into the highlighted field.
+%(-6182425679761848593)%	Type '52' in the highlighted field.
+%(3446169749636946306)%	The total paycheck amount equals (67*6) - 33. Evaluate this expression.
+%(-6819399178801454265)%	Please type (52*6) - 33 into the highlighted field.
+%(3554824437991997352)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(1222243354724942235)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(6783097691605184239)%	The the number of hours worked equals (483+33)/6. Evaluate this expression.
+%(6912685924882881653)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(5466218335589386932)%	A given value in this question represents the total paycheck amount. Please type this given value into the correct place in the table.
+%(4763053105708743793)%	A given value in this question represents the the number of hours worked. Please type this given value into the correct place in the table.
+%(6783099691601184129)%	Type '483' in the highlighted field.
+%(-6819398178793454252)%	Please type (38*6) - 33 into the highlighted field.
+%(572306795166671728)%	Please write a numerical expression that shows how to compute the total paycheck amount when the the number of hours worked is %(given3)%.
+%(-6819393178829454387)%	Please type (483+33)/6 into the highlighted field.
+%(7971099237226898913)%	The total paycheck amount is the sum of two things: 6 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+Problem Name	Problem10
+%(startStateNodeName)%	
+%(problemstatement)%	Pierre's Dessert Palace is famous for their banana's foster. Pierre's perfect banana's foster recipe requires 3 whole bananas per serving. Pierre's Dessert Palace reserves 12 servings each night for the late night crew to enjoy.<br><br>(1) If Pierre's receives a shipment of 240 bananas, how many banana's foster desserts can they sell?<br><br>(2) If Pierre's receives 138 bananas, how many banana's foster desserts can they sell?<br><br>(3) How many servings of banana's foster can they sell if they receive 300 bananas?<br><br>(4) How many bananas did Pierre's receive in shipment if they sold 146 servings of banana's foster?<br><br>In the row labeled "Expression", define a variable for the number of bananas and use that variable to write an expression that will allow you to calculate the total number of servings.
+%(instructions)%	In the row labeled "Expression", define a variable for the number of bananas and use that variable to write an expression that will allow you to calculate the total number of servings.
+%(Label1)%	Number of bananas
+%(Label2)%	Servings of banana's foster sold
+%(UnitLabel1)%	bananas
+%(UnitLabel2)%	servings
+%(quan1)%	number of bananas
+%(quan2)%	servings of banana's foster sold
+%(unit1)%	bananas
+%(unit2)%	servings
+	
+%(given1)%	240
+%(given2)%	138
+%(given3)%	300
+%(given4)%	146
+	
+%(factor)%	3
+%(constant)%	-12
+%(quan3)%	the number of bananas used for one serving
+%(quan4)%	servings saved for the night staff
+	
+%(ans1)%	68
+%(ans2)%	34
+%(ans3)%	88
+%(ans4)%	474
+	
+%(variable)%	x
+	
+%(exp1)%	(240/3) - 12
+%(exp2)%	(138/3) - 12
+%(exp3)%	(300/3) - 12
+%(exp4)%	(146+12)*3
+%(expression)%	/3 - 12
+%(expression_bug)%	Please enter a variable before trying to enter an expression.
+	
+%(q1hint1c1)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q1hint2c1)%	A given value in this question represents the number of bananas. Please type this given value into the correct place in the table.
+%(q1hint3c1)%	Type '240' in the highlighted field.
+	
+%(hint1sw1)%	Please write a numerical expression that shows how to compute the servings of banana's foster sold when the number of bananas is 240.
+%(hint2sw1)%	The servings of banana's foster sold is the sum of two things: 3 (the number of bananas used for one serving) multiplied by 240 (number of bananas) plus -12 (servings saved for the night staff). Can you write this expression?
+%(hint3sw1)%	Please type (240/3) - 12 into the highlighted field.
+	
+%(q1hint1c3)%	You need to compute the servings of banana's foster sold. This answer depends on the number of bananas used for one serving, number of bananas, and servings saved for the night staff. Can you find the servings of banana's foster sold from these numbers?
+%(q1hint2c3)%	The servings of banana's foster sold is the sum of two things: 3 (the number of bananas used for one serving) multiplied by 240 (number of bananas) plus -12 (servings saved for the night staff). Can you calculate and write this number?
+%(q1hint3c3)%	The servings of banana's foster sold equals (240/3) - 12. Evaluate this expression.
+%(q1hint4c3)%	(240/3) - 12 = 80 - 12 = 68. Type '68' in the highlighted field.
+	
+%(q2hint1c1)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q2hint2c1)%	A given value in this question represents the number of bananas. Please type this given value into the correct place in the table.
+%(q2hint3c1)%	Type '138' in the highlighted field.
+	
+%(hint1sw2)%	Please write a numerical expression that shows how to compute the servings of banana's foster sold when the number of bananas is 138.
+%(hint2sw2)%	The servings of banana's foster sold is the sum of two things: 3 (the number of bananas used for one serving) multiplied by 138 (number of bananas) plus -12 (servings saved for the night staff). Can you write this expression?
+%(hint3sw2)%	Please type (138/3) - 12 into the highlighted field.
+	
+%(q2hint1c3)%	You need to compute the servings of banana's foster sold. This answer depends on the number of bananas used for one serving, the number of bananas, and servings saved for the night staff. Can you find the servings of banana's foster sold from these numbers?
+%(q2hint2c3)%	The amount of money you have saved is the sum of two things: 3 (the number of bananas used for one serving) multiplied by 138 (number of bananas) plus -12 (servings saved for the night staff). Can you calculate and write this number?
+%(q2hint3c3)%	The servings of banana's foster sold equals (138/3) - 12. Evaluate this expression.
+%(q2hint4c3)%	(138/3) - 12 = 46 - 12 = 34. Type '34' in the highlighted field.
+	
+%(q3hint1c1)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q3hint2c1)%	A given value in this question represents the number of bananas. Please type this given value into the correct place in the table.
+%(q3hint3c1)%	Type '300' in the highlighted field.
+	
+%(hint1sw3)%	Please write a numerical expression that shows how to compute the servings of banana's foster sold when the number of bananas is 300.
+%(hint2sw3)%	The servings of banana's foster sold is the sum of two things: 3 (the number of bananas used for one serving) multiplied by 300 (number of bananas) plus -12 (servings saved for the night staff). Can you write this expression?
+%(hint3sw3)%	Please type (300/3) - 12 into the highlighted field.
+	
+%(q3hint1c3)%	You need to compute the servings of banana's foster sold. This answer depends on the number of bananas used for one serving, the number of bananas, and servings saved for the night staff. Can you find the servings of banana's foster sold from these numbers?
+%(q3hint2c3)%	The servings of banana's foster sold is the sum of two things: 3 (the number of bananas used for one serving) multiplied by 300 (number of bananas) plus -12 (servings saved for the night staff). Can you calculate and write this number?
+%(q3hint3c3)%	The servings of banana's foster sold equals (300/3) - 12. Evaluate this expression.
+%(q3hint4c3)%	(300/3) - 12 = 100 - 12 = 88. Type '88' in the highlighted field.
+	
+%(q4hint1c1)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(q4hint2c1)%	A given value in this question represents the servings of banana's foster sold. Please type this given value into the correct place in the table.
+%(q4hint3c1)%	Type '146' in the highlighted field.
+	
+%(hint1sw4)%	Please write a numerical expression that shows how to compute the number of bananas when the servings of banana's foster sold is 146.
+%(hint2sw4)%	The number of bananas is the quotient of two things: 146 (servings of banana's foster sold) minus -12 (servings saved for the night staff) divided by 3 (the number of bananas used for one serving). Can you write this expression?
+%(hint3sw4)%	Please type (146+12)*3 into the highlighted field.
+	
+%(q4hint1c3)%	You need to compute the number of bananas. This answer depends on the number of bananas used for one serving, servings saved for the night staff, and the servings of banana's foster sold. Can you find the number of bananas from these numbers?
+%(q4hint2c3)%	The number of bananas is the quotient of two things: 146 (servings of banana's foster sold) minus -12 (servings saved for the night staff) divided by 3 (the number of bananas used for one serving). Can you calculate and write this number?
+%(q4hint3c3)%	The number of bananas equals (146+12)*3. Evaluate this expression.
+%(q4hint4c3)%	(146+12)*3 = 158*3 = 474. Type '474' in the highlighted field.
+	
+%(q5hint1c1)%	Read the last sentence in the problem statement. Do you represent the number of bananas as a variable or an expression?
+%(q5hint2c1)%	Please represent the number of bananas with a variable, x.
+%(q5hint3c1)%	Type 'x' in the highlighted field.
+	
+%(q5hint1exp)%	When the number of bananas was 240, you used (240/3) - 12 to find the servings of banana's foster sold. When the number of bananas is <%=link25.input%>, how do you find the servings of banana's foster sold?
+%(q5hint2exp)%	If the number of bananas = 240, then the servings of banana's foster sold = (240/3) - 12. If the number of bananas = <%=link25.input%>, then the servings of banana's foster sold = _____?
+%(q5hint3exp)%	If the number of bananas = 240, then the servings of banana's foster sold = (240/3) - 12. Now the number of bananas = <%=link25.input%>, so replace 240 with <%=link25.input%> in the expression (240/3) - 12 to get <%=link25.input%>/3 - 12.
+%(q5hint4exp)%	Type <%=link25.input%>/3 - 12 in the highlighted field.
+	
+%(skill_g1)%	Enter_a_given_x_value
+%(skill_g2)%	Enter_a_given_x_value
+%(skill_g3)%	Enter_a_given_x_value
+%(skill_g4)%	Enter_a_given_y_value
+%(skill_e1)%	Show_your_work
+%(skill_e2)%	Show_your_work
+%(skill_e3)%	Show_your_work
+%(skill_e4)%	Show_your_work
+%(skill_a1)%	Calculate_a_y_value_from_an_x_value
+%(skill_a2)%	Calculate_a_y_value_from_an_x_value
+%(skill_a3)%	Calculate_a_y_value_from_an_x_value
+%(skill_a4)%	Calculate_an_x_value_from_a_y_value
+	
+%(skill_g1_label)%	Enter a given x value
+%(skill_g2_label)%	Enter a given x value
+%(skill_g3_label)%	Enter a given x value
+%(skill_g4_label)%	Enter a given y value
+%(skill_e1_label)%	Show your work
+%(skill_e2_label)%	Show your work
+%(skill_e3_label)%	Show your work
+%(skill_e4_label)%	Show your work
+%(skill_a1_label)%	Calculate a y value from an x value
+%(skill_a2_label)%	Calculate a y value from an x value
+%(skill_a3_label)%	Calculate a y value from an x value
+%(skill_a4_label)%	Calculate an x value from a y value 
+%(572301795134671631)%	Please write a numerical expression that shows how to compute the number of bananas when the servings of banana's foster sold is %(given4)%.
+%(-1345822118728898084)%	The servings of banana's foster sold equals (240/3) - 12. Evaluate this expression.
+%(695286012838189948)%	The amount of money you have saved is the sum of two things: 3 (the number of bananas used for one serving) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(-5166532556208710060)%	No, this is not correct.
+%(6098699531750793939)%	Please represent the number of bananas with a variable, x.
+%(4763051105712743775)%	The servings of banana's foster sold is the sum of two things: 3 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?
+%(572307795170671733)%	Please write a numerical expression that shows how to compute the servings of banana's foster sold when the number of bananas is %(given2)%.
+%(-2064783783288574345)%	The servings of banana's foster sold is the sum of two things: 3 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(4823584383603843722)%	If the number of bananas = 240, then the %(quan2)% = %(exp1)%. Now the number of bananas = <%=link25.input%>, so replace 240 with <%=link25.input%> in the expression %(exp1)% to get <%=link25.input%>%(expression)%.
+%(572304795170671710)%	Please write a numerical expression that shows how to compute the servings of banana's foster sold when the number of bananas is %(given1)%.
+%(-1345824118756898150)%	Type '240' in the highlighted field.
+%(8332021486518256280)%	You need to compute the servings of banana's foster sold. This answer depends on the number of bananas used for one serving, the %(quan1)%, and %(quan4)%. Can you find the servings of banana's foster sold from these numbers?
+%(-6182423679765848703)%	The servings of banana's foster sold equals (138/3) - 12. Evaluate this expression.
+%(-5670083390880144495)%	If the number of bananas = 240, then the %(quan2)% = %(exp1)%. If the number of bananas = <%=link25.input%>, then the %(quan2)% = _____?
+%(-569654292365823220)%	Read the last sentence in the problem statement. Do you represent the number of bananas as a variable or an expression?
+%(1222245354736942317)%	You need to compute the number of bananas. This answer depends on the number of bananas used for one serving, %(quan4)%, and the %(quan2)%. Can you find the number of bananas from these numbers?
+%(695284012810189882)%	A given value in this question represents the number of bananas. Please type this given value into the correct place in the table.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-5985063922024392601)%	Type <%=link25.input%>/3 - 12 in the highlighted field.
+%(-2064781783292574359)%	The servings of banana's foster sold is the sum of two things: 3 (%(quan3)%) multiplied by %(given3)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-5470302849130718706)%	Type 'x' in the highlighted field.
+%(3554822437995997366)%	You need to compute the servings of banana's foster sold. This answer depends on the number of bananas used for one serving, %(quan1)%, and %(quan4)%. Can you find the servings of banana's foster sold from these numbers?
+%(7971097237230898895)%	A given value in this question represents the number of bananas. Please type this given value into the correct place in the table.
+%(-122696630640565551)%	(300/3) - 12 = 100 - 12 = 88. Type '88' in the highlighted field.
+%(-4865542323806051534)%	(138/3) - 12 = 46 - 12 = 34. Type '34' in the highlighted field.
+%(3446171749632946340)%	Type '300' in the highlighted field.
+%(5466216335593386898)%	The number of bananas is the quotient of two things: 146 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you calculate and write this number?
+%(8332019486522256358)%	For question 3, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(-5589769099361342225)%	(240/3) - 12 = 80 - 12 = 68. Type '68' in the highlighted field.
+%(-2064782783280574396)%	The servings of banana's foster sold is the sum of two things: 3 (%(quan3)%) multiplied by %(given2)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you write this expression?
+%(-2064780783284574362)%	The number of bananas is the quotient of two things: 146 (%(quan2)%) minus %(constant)% (%(quan4)%) divided by %(factor)% (%(quan3)%). Can you write this expression?
+%(-7419699401471923236)%	(146+12)*3 = 158*3 = 474. Type '474' in the highlighted field.
+%(6912683924870881635)%	You need to compute the servings of banana's foster sold. This answer depends on the number of bananas used for one serving, the %(quan1)%, and %(quan4)%. Can you find the servings of banana's foster sold from these numbers?
+%(8249728154828431532)%	When the number of bananas was 240, you used %(exp1)% to find the %(quan2)%. When the number of bananas is <%=link25.input%>, how do you find the %(quan2)%?
+%(-6819400178805454270)%	Please type (300/3) - 12 into the highlighted field.
+%(-6182425679761848593)%	Type '138' in the highlighted field.
+%(3446169749636946306)%	The servings of banana's foster sold equals (300/3) - 12. Evaluate this expression.
+%(-6819399178801454265)%	Please type (138/3) - 12 into the highlighted field.
+%(3554824437991997352)%	For question 1, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(1222243354724942235)%	For question 4, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(6783097691605184239)%	The number of bananas equals (146+12)*3. Evaluate this expression.
+%(6912685924882881653)%	For question 2, you have not yet entered a given value. Look at the question. What do you already know from the question?
+%(5466218335589386932)%	A given value in this question represents the servings of banana's foster sold. Please type this given value into the correct place in the table.
+%(4763053105708743793)%	A given value in this question represents the number of bananas. Please type this given value into the correct place in the table.
+%(6783099691601184129)%	Type '146' in the highlighted field.
+%(-6819398178793454252)%	Please type (240/3) - 12 into the highlighted field.
+%(572306795166671728)%	Please write a numerical expression that shows how to compute the servings of banana's foster sold when the number of bananas is %(given3)%.
+%(-6819393178829454387)%	Please type (146+12)*3 into the highlighted field.
+%(7971099237226898913)%	The servings of banana's foster sold is the sum of two things: 3 (%(quan3)%) multiplied by %(given1)% (%(quan1)%) plus %(constant)% (%(quan4)%). Can you calculate and write this number?

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="7.15 Proportional Reasoning" description="The student is asked to compare two options using different scaled amounts to determine which is better." save_state="true">
+  <Problems>
+    <Problem name="1" label="Tickets" description="Which is a better buy? Option 1: 12 tickets for $18.00; Option 2: 20 tickets for $25.00" tutor_flag="tutor" model_file="1.brd" selection_features="()" student_interface="7.15.html">
+      <Skills>
+        <Skill name="Enter-correct-Multiplier/Divisor" category="Proportional-Reasoning" occurrences="1"/>
+        <Skill name="Choose-Correct-Option" category="Proportional-Reasoning" occurrences="1"/>
+        <Skill name="Calculate-Y-Given-X" category="Proportional-Reasoning" occurrences="1"/>
+        <Skill name="Choose-correct-Operator" category="Proportional-Reasoning" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="10" label="Macaroni" description="Which is the better deal? Option 1: 12 oz of macaroni for $3; Option 2: 16 oz of macaroni for $3.20" tutor_flag="tutor" model_file="10.brd" selection_features="()" student_interface="7.15.html">
+      <Skills>
+        <Skill name="Enter-correct-Multiplier/Divisor" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Choose-Correct-Option" category="Proportional-Reasoning" occurrences="1"/>
+        <Skill name="Choose-correct-Operator" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Calculate-Y-Given-X" category="Proportional-Reasoning" occurrences="6"/>
+      </Skills>
+    </Problem>
+    <Problem name="11" label="Paint sprayer" description="Which is the faster paint sprayer? Option 1: Paints 16 square feet in 12 minutes; Option 2: Paints 40 square feet in 28 minutes" tutor_flag="tutor" model_file="11.brd" selection_features="()" student_interface="7.15.html">
+      <Skills>
+        <Skill name="Enter-correct-Multiplier/Divisor" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Choose-Correct-Option" category="Proportional-Reasoning" occurrences="1"/>
+        <Skill name="Choose-correct-Operator" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Calculate-Y-Given-X" category="Proportional-Reasoning" occurrences="6"/>
+      </Skills>
+    </Problem>
+    <Problem name="2" label="Cellular service" description="You are deciding cellular telephone plan to choose. Which phone company offers a better deal? Option 1: Phones-R-Us charges $60 for 3 months of basic service; Option 2: Tel-E-Phone charges $200 for a year of basic service" tutor_flag="tutor" model_file="2.brd" selection_features="()" student_interface="7.15.html">
+      <Skills>
+        <Skill name="Enter-correct-Multiplier/Divisor" category="Proportional-Reasoning" occurrences="6"/>
+        <Skill name="Choose-Correct-Option" category="Proportional-Reasoning" occurrences="1"/>
+        <Skill name="Calculate-Y-Given-X" category="Proportional-Reasoning" occurrences="3"/>
+        <Skill name="Choose-correct-Operator" category="Proportional-Reasoning" occurrences="6"/>
+      </Skills>
+    </Problem>
+    <Problem name="3" label="Theme park pass" description="At a local theme park, which pass is a better deal? Option 1: A half-day pass, good for 6 hours, costs $30; Option 2: A full-day pass, good for 10 hours, costs $40" tutor_flag="tutor" model_file="3.brd" selection_features="()" student_interface="7.15.html">
+      <Skills>
+        <Skill name="Enter-correct-Multiplier/Divisor" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Choose-Correct-Option" category="Proportional-Reasoning" occurrences="1"/>
+        <Skill name="Choose-correct-Operator" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Calculate-Y-Given-X" category="Proportional-Reasoning" occurrences="6"/>
+      </Skills>
+    </Problem>
+    <Problem name="4" label="Work money" description="Who made the most money for the amount of time spent working? Option 1: You made $120 for mowing lawns for 60 hours; Option 2: Your brother made $60 for painting houses for 15 hours" tutor_flag="tutor" model_file="4.brd" selection_features="()" student_interface="7.15.html">
+      <Skills>
+        <Skill name="Enter-correct-Multiplier/Divisor" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Choose-Correct-Option" category="Proportional-Reasoning" occurrences="1"/>
+        <Skill name="Calculate-Y-Given-X" category="Proportional-Reasoning" occurrences="6"/>
+        <Skill name="Choose-correct-Operator" category="Proportional-Reasoning" occurrences="12"/>
+      </Skills>
+    </Problem>
+    <Problem name="5" label="Lollipops" description="Jenny is buying lollipops to give out at her party. Is it a better deal to buy lollipops in bags of 24 or bags of 60? Option 1: 24 lollipops for $12; Option 2: 60 lollipops for $20" tutor_flag="tutor" model_file="5.brd" selection_features="()" student_interface="7.15.html">
+      <Skills>
+        <Skill name="Enter-correct-Multiplier/Divisor" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Choose-Correct-Option" category="Proportional-Reasoning" occurrences="1"/>
+        <Skill name="Choose-correct-Operator" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Calculate-Y-Given-X" category="Proportional-Reasoning" occurrences="6"/>
+      </Skills>
+    </Problem>
+    <Problem name="6" label="Soda" description="Ed needs to buy cans of soda for a class picnic. Which choice should he make if he wants to spend as little money as possible? Option 1: Cases (24 cans in a case) for $8.40 each; Option 2: Six-packs for $2.40 each" tutor_flag="tutor" model_file="6.brd" selection_features="()" student_interface="7.15.html">
+      <Skills>
+        <Skill name="Enter-correct-Multiplier/Divisor" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Choose-Correct-Option" category="Proportional-Reasoning" occurrences="1"/>
+        <Skill name="Calculate-Y-Given-X" category="Proportional-Reasoning" occurrences="6"/>
+        <Skill name="Choose-correct-Operator" category="Proportional-Reasoning" occurrences="12"/>
+      </Skills>
+    </Problem>
+    <Problem name="7" label="Cereal" description="Your mom is buying your favorite cereal, Fruit-Ohs. Is it a better deal to buy the 24 oz box or the 16 oz box? Option 1: A 24 oz box full of Fruit-Ohs for $3; Option 2: A 16 oz box full of Fruit-Ohs for $2.40" tutor_flag="tutor" model_file="7.brd" selection_features="()" student_interface="7.15.html">
+      <Skills>
+        <Skill name="Enter-correct-Multiplier/Divisor" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Choose-Correct-Option" category="Proportional-Reasoning" occurrences="1"/>
+        <Skill name="Choose-correct-Operator" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Calculate-Y-Given-X" category="Proportional-Reasoning" occurrences="6"/>
+      </Skills>
+    </Problem>
+    <Problem name="8" label="Cookies" description="Which is the better buy? Option 1: 48 Cookies for $26.40; Option 2: 36 Cookies for $21.60" tutor_flag="tutor" model_file="8.brd" selection_features="()" student_interface="7.15.html">
+      <Skills>
+        <Skill name="Enter-correct-Multiplier/Divisor" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Choose-Correct-Option" category="Proportional-Reasoning" occurrences="1"/>
+        <Skill name="Choose-correct-Operator" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Calculate-Y-Given-X" category="Proportional-Reasoning" occurrences="6"/>
+      </Skills>
+    </Problem>
+    <Problem name="9" label="Gas millage" description="Which truck gets better millage? Option 1: 15 Gallons for 45 miles; Option 2: 45 Gallons for 90.9 miles" tutor_flag="tutor" model_file="9.brd" selection_features="()" student_interface="7.15.html">
+      <Skills>
+        <Skill name="Enter-correct-Multiplier/Divisor" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Choose-Correct-Option" category="Proportional-Reasoning" occurrences="1"/>
+        <Skill name="Choose-correct-Operator" category="Proportional-Reasoning" occurrences="12"/>
+        <Skill name="Calculate-Y-Given-X" category="Proportional-Reasoning" occurrences="6"/>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="7.15 HTML" label="7.15 Proportional Reasoning" description="The student is asked to compare two options using different scaled amounts to determine which is better." status="active" picture="7.15.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="1" position="1" role="0"/>
+        <Problem name="2" position="2" role="0"/>
+        <Problem name="3" position="3" role="0"/>
+        <Problem name="4" position="4" role="0"/>
+        <Problem name="5" position="5" role="0"/>
+        <Problem name="6" position="6" role="0"/>
+        <Problem name="7" position="7" role="0"/>
+        <Problem name="8" position="8" role="0"/>
+        <Problem name="9" position="9" role="0"/>
+        <Problem name="10" position="10" role="0"/>
+        <Problem name="11" position="11" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="Enter-correct-Multiplier/Divisor" category="Proportional-Reasoning" label="Enter Correct Multiplier/Divisor" description="Enter Correct Multiplier/Divisor" position="0"/>
+        <Skill name="Choose-Correct-Option" category="Proportional-Reasoning" label="Choose Correct Option" description="Choose Correct Option" position="1"/>
+        <Skill name="Calculate-Y-Given-X" category="Proportional-Reasoning" label="Calculate Y Given X" description="Calculate Y Given X" position="2"/>
+        <Skill name="Choose-correct-Operator" category="Proportional-Reasoning" label="Choose Correct Operator" description="Choose Correct Operator" position="3"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.A.2" label="A.2. Operations: Meanings, Uses and Relationships" description="A.2. Understand the meanings of operations, use operations and understand how they relate to each other." standard_level="assessment_anchor" parent_name="PA.A" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="7th" label="7th Grade" description="7th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.7" label="7th Grade" description="7th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.7.RP" label="7.RP. Ratios and Proportional Relationships" description="7.RP. Ratios and Proportional Relationships" standard_level="strand" parent_name="CommonCore.7" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="7.15.png" path="Assets"/>
+    <Asset name="1.brd" path="FinalBRDs"/>
+    <Asset name="10.brd" path="FinalBRDs"/>
+    <Asset name="11.brd" path="FinalBRDs"/>
+    <Asset name="2.brd" path="FinalBRDs"/>
+    <Asset name="3.brd" path="FinalBRDs"/>
+    <Asset name="4.brd" path="FinalBRDs"/>
+    <Asset name="5.brd" path="FinalBRDs"/>
+    <Asset name="6.brd" path="FinalBRDs"/>
+    <Asset name="7.brd" path="FinalBRDs"/>
+    <Asset name="8.brd" path="FinalBRDs"/>
+    <Asset name="9.brd" path="FinalBRDs"/>
+    <Asset name="7.15.html" path="HTML"/>
+    <Asset name="7.15.css" path="HTML/Assets"/>
+    <Asset name="7-15_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="7-15_finalTemplate.brd" path="MassProduction"/>
+    <Asset name="7-15_translatable.txt" path="MassProduction"/>
+    <Asset name="MassProduce-new.txt" path="MassProduction"/>
+    <Asset name="MassProduce.brd" path="MassProduction"/>
+    <Asset name="MassProduce.xls" path="MassProduction"/>
+    <Asset name="MassProduce.xlsx" path="MassProduction"/>
+  </Assets>
+</Package>

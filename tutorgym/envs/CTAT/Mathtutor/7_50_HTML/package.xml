@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="7.50 Solving One-Step Linear Equations" description="Student solves one-step equations (no negative numbers)." save_state="true">
+  <Problems>
+    <Problem name="one1" label="x+2=5" description="x+2=5" tutor_flag="tutor" model_file="one1.brd" student_interface="7.50.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="one2" label="x+5=11" description="x+5=11" tutor_flag="tutor" model_file="one2.brd" student_interface="7.50.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="one3" label="9=k+7" description="9=k+7" tutor_flag="tutor" model_file="one3.brd" student_interface="7.50.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="one4" label="x-3=2" description="x-3=2" tutor_flag="tutor" model_file="one4.brd" student_interface="7.50.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="one5" label="5=k-4" description="5=k-4" tutor_flag="tutor" model_file="one5.brd" student_interface="7.50.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="one6" label="4+x=6" description="4+x=6" tutor_flag="tutor" model_file="one6.brd" student_interface="7.50.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="one7" label="3=2+k" description="3=2+k" tutor_flag="tutor" model_file="one7.brd" student_interface="7.50.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="one8" label="2x=6" description="2x=6" tutor_flag="tutor" model_file="one8.brd" student_interface="7.50.html">
+      <Skills>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="7.50 HTML" label="7.50 Solving One-Step Linear Equations" description="Student solves one-step equations (no negative numbers)." status="active" picture="7.50.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="one1" position="1" role="0"/>
+        <Problem name="one2" position="2" role="0"/>
+        <Problem name="one3" position="3" role="0"/>
+        <Problem name="one4" position="4" role="0"/>
+        <Problem name="one5" position="5" role="0"/>
+        <Problem name="one6" position="6" role="0"/>
+        <Problem name="one7" position="7" role="0"/>
+        <Problem name="one8" position="8" role="0"/>
+      </Problems>
+      <Skills>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.D" label="D. Algebraic Concepts" description="D. Algebraic Concepts" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.D.2" label="D.2. Represent Situations and Structures" description="D.2. Represent and/or analyze mathematical situations and structures using algebraic symbols, words, tables, and graphs." standard_level="assessment_anchor" parent_name="PA.D" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.B" label="B. Algebra" description="B. Algebra" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="7th" label="7th Grade" description="7th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.SE" label="Solving Equations" description="Solving Equations" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.7" label="7th Grade" description="7th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.7.EE" label="7.EE. Expressions and Equations" description="7.EE. Expressions and Equations" standard_level="strand" parent_name="CommonCore.7" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="7.50.png" path="Assets"/>
+    <Asset name="mathtutor_7.50_full.png" path="Assets"/>
+    <Asset name="one1.brd" path="FinalBRDs"/>
+    <Asset name="one2.brd" path="FinalBRDs"/>
+    <Asset name="one3.brd" path="FinalBRDs"/>
+    <Asset name="one4.brd" path="FinalBRDs"/>
+    <Asset name="one5.brd" path="FinalBRDs"/>
+    <Asset name="one6.brd" path="FinalBRDs"/>
+    <Asset name="one7.brd" path="FinalBRDs"/>
+    <Asset name="one8.brd" path="FinalBRDs"/>
+    <Asset name="7.50.html" path="HTML"/>
+    <Asset name="7.50.css" path="HTML/Assets"/>
+  </Assets>
+</Package>

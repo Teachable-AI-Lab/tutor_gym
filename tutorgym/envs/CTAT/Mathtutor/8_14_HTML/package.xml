@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="8.14 Percent Change" description="Student must perform calculations to determine percent change given an original value, a change in value, and the new value." save_state="true">
+  <Problems>
+    <Problem name="01 Bank" label="Bank statements" description="Damien is looking at some of his bank statements." tutor_flag="tutor" model_file="01Bank.brd" student_interface="8.14.html">
+      <Skills>
+        <Skill name="Gvn" category="8-14_Percent_Change" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="02 Highway" label="Highway speed" description="Imagine that you are driving your car on the highway to the mall. The speed limit is 50 miles per hour. You are driving at the speed limit." tutor_flag="tutor" model_file="02Highway.brd" student_interface="8.14.html">
+      <Skills>
+        <Skill name="Gvn" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindPercent" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindOrgVal" category="8-14_Percent_Change" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="03 Farmer" label="Farmer crops" description="A farmer is using a new growing technique this year for the first time. He wants to compare the amount of crops he grew this year to the amount he grew last year to see which technique produced better results." tutor_flag="tutor" model_file="03Farmer.brd" student_interface="8.14.html">
+      <Skills>
+        <Skill name="Gvn" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindNewVal" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindPercent" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindChngVal" category="8-14_Percent_Change" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="04 Stocks" label="Stocks" description="Here is what happened with your favorite stocks today" tutor_flag="tutor" model_file="04Stocks.brd" student_interface="8.14.html">
+      <Skills>
+        <Skill name="Gvn" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindPercent" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindChngVal" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindNewVal" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindOrgVal" category="8-14_Percent_Change" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="05 Vitamins" label="Multivitamins" description="Dr. Xu switched your multivitamin. You are comparing the amounts of vitamin B 12, vitamin E, potassium, and vitamin C in your old pills and your new pills." tutor_flag="tutor" model_file="05Vitamins.brd" student_interface="8.14.html">
+      <Skills>
+        <Skill name="Gvn" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindPercent" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindNewVal" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindChngVal" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindOrgVal" category="8-14_Percent_Change" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="06 Widgets" label="Widget factory" description="Natasha has been keeping track of the month-by-month production of her widget factory." tutor_flag="tutor" model_file="06Widgets.brd" student_interface="8.14.html">
+      <Skills>
+        <Skill name="Gvn" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindPercent" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindChngVal" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindOrgVal" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindNewVal" category="8-14_Percent_Change" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="07 Gold" label="Gold rush" description="During the California Gold Rush of the 1800s, thousands of people moved to San Francisco hoping to find gold and get rich." tutor_flag="tutor" model_file="07Gold.brd" student_interface="8.14.html">
+      <Skills>
+        <Skill name="Gvn" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindPercent" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindChngVal" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindNewVal" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindOrgVal" category="8-14_Percent_Change" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="08 Store" label="Department store" description="The Acme Department Store is getting ready for the fall by adjusting the prices of its merchandise. There will be a discount (a decrease in cost) for most of the spring and summer wear, and a markup (an increase in cost) for the new winter fashions." tutor_flag="tutor" model_file="08Store.brd" student_interface="8.14.html">
+      <Skills>
+        <Skill name="Gvn" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindPercent" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindOrgVal" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindNewVal" category="8-14_Percent_Change" occurrences="1"/>
+        <Skill name="FindChngVal" category="8-14_Percent_Change" occurrences="1"/>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="8.14 HTML" label="8.14 Percent Change" description="Student must perform calculations to determine percent change given an original value, a change in value, and the new value." status="active" picture="8.14.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="01 Bank" position="1" role="0"/>
+        <Problem name="02 Highway" position="2" role="0"/>
+        <Problem name="03 Farmer" position="3" role="0"/>
+        <Problem name="04 Stocks" position="4" role="0"/>
+        <Problem name="05 Vitamins" position="5" role="0"/>
+        <Problem name="06 Widgets" position="6" role="0"/>
+        <Problem name="07 Gold" position="7" role="0"/>
+        <Problem name="08 Store" position="8" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="Gvn" category="8-14_Percent_Change" label="Enter given" description="Enter given" position="0"/>
+        <Skill name="FindPercent" category="8-14_Percent_Change" label="Find percent change" description="Find percent change" position="1"/>
+        <Skill name="FindOrgVal" category="8-14_Percent_Change" label="Find original value" description="Find original value" position="2"/>
+        <Skill name="FindNewVal" category="8-14_Percent_Change" label="Find new changed value" description="Find new changed value" position="3"/>
+        <Skill name="FindChngVal" category="8-14_Percent_Change" label="Find change in value" description="Find change in value" position="4"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.A.2" label="A.2. Operations: Meanings, Uses and Relationships" description="A.2. Understand the meanings of operations, use operations and understand how they relate to each other." standard_level="assessment_anchor" parent_name="PA.A" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="7th" label="7th Grade" description="7th Grade"/>
+        <Grade name="8th" label="8th Grade" description="8th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.SPP" label="Solving Percent Problems" description="Solving Percent Problems" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.7" label="7th Grade" description="7th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.7.RP" label="7.RP. Ratios and Proportional Relationships" description="7.RP. Ratios and Proportional Relationships" standard_level="strand" parent_name="CommonCore.7" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="8.14.png" path="Assets"/>
+    <Asset name="mathtutor_8.14_full.png" path="Assets"/>
+    <Asset name="01Bank.brd" path="FinalBRDs"/>
+    <Asset name="02Highway.brd" path="FinalBRDs"/>
+    <Asset name="03Farmer.brd" path="FinalBRDs"/>
+    <Asset name="04Stocks.brd" path="FinalBRDs"/>
+    <Asset name="05Vitamins.brd" path="FinalBRDs"/>
+    <Asset name="06Widgets.brd" path="FinalBRDs"/>
+    <Asset name="07Gold.brd" path="FinalBRDs"/>
+    <Asset name="08Store.brd" path="FinalBRDs"/>
+    <Asset name="8.14.html" path="HTML"/>
+    <Asset name="8_14_templ.brd" path="MassProduction"/>
+    <Asset name="8-14_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="8-14_finalTemplate.brd" path="MassProduction"/>
+    <Asset name="8-14_translatable.txt" path="MassProduction"/>
+    <Asset name="8.14 Percent Change.doc" path="MassProduction"/>
+    <Asset name="8.14_templ.txt" path="MassProduction"/>
+  </Assets>
+</Package>

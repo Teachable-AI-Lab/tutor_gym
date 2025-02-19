@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="7.52 Solving Linear Equations with Parentheses" description="Student solves equations requiring use of distributive property (may contain negative numbers)." save_state="true">
+  <Problems>
+    <Problem name="par1" label="2(x+1)=6" description="2(x+1)=6" tutor_flag="tutor" model_file="par1.brd" student_interface="7.52.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="par2" label="3(x+1)=12" description="3(x+1)=12" tutor_flag="tutor" model_file="par2.brd" student_interface="7.52.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="par3" label="3(x-2)=3" description="3(x-2)=3" tutor_flag="tutor" model_file="par3.brd" student_interface="7.52.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="par4" label="4(x+3)=8" description="4(x+3)=8" tutor_flag="tutor" model_file="par4.brd" student_interface="7.52.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="par5" label="2(2+x)=16" description="2(2+x)=16" tutor_flag="tutor" model_file="par5.brd" student_interface="7.52.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="par6" label="16=4(x+2)" description="16=4(x+2)" tutor_flag="tutor" model_file="par6.brd" student_interface="7.52.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="par7" label="8=2(x-1)" description="8=2(x-1)" tutor_flag="tutor" model_file="par7.brd" student_interface="7.52.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="par8" label="3(x+2)=12" description="3(x+2)=12" tutor_flag="tutor" model_file="par8.brd" student_interface="7.52.html">
+      <Skills>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="7.52 HTML" label="7.52 Solving Linear Equations with Parentheses" description="Student solves equations requiring use of distributive property (may contain negative numbers)." status="active" picture="7.52.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="par1" position="1" role="0"/>
+        <Problem name="par2" position="2" role="0"/>
+        <Problem name="par3" position="3" role="0"/>
+        <Problem name="par4" position="4" role="0"/>
+        <Problem name="par5" position="5" role="0"/>
+        <Problem name="par6" position="6" role="0"/>
+        <Problem name="par7" position="7" role="0"/>
+        <Problem name="par8" position="8" role="0"/>
+      </Problems>
+      <Skills>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.D" label="D. Algebraic Concepts" description="D. Algebraic Concepts" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.D.2" label="D.2. Represent Situations and Structures" description="D.2. Represent and/or analyze mathematical situations and structures using algebraic symbols, words, tables, and graphs." standard_level="assessment_anchor" parent_name="PA.D" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.B" label="B. Algebra" description="B. Algebra" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="8th" label="8th Grade" description="8th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.SE" label="Solving Equations" description="Solving Equations" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.8" label="8th Grade" description="8th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.8.EE" label="8.EE. Expressions and Equations" description="8.EE. Expressions and Equations" standard_level="strand" parent_name="CommonCore.8" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="7.52.png" path="Assets"/>
+    <Asset name="mathtutor_7.52_full.png" path="Assets"/>
+    <Asset name="par1.brd" path="FinalBRDs"/>
+    <Asset name="par2.brd" path="FinalBRDs"/>
+    <Asset name="par3.brd" path="FinalBRDs"/>
+    <Asset name="par4.brd" path="FinalBRDs"/>
+    <Asset name="par5.brd" path="FinalBRDs"/>
+    <Asset name="par6.brd" path="FinalBRDs"/>
+    <Asset name="par7.brd" path="FinalBRDs"/>
+    <Asset name="par8.brd" path="FinalBRDs"/>
+    <Asset name="7.52.html" path="HTML"/>
+    <Asset name="7.52.css" path="HTML/Assets"/>
+  </Assets>
+</Package>

@@ -1,0 +1,656 @@
+Problem Name	Intro
+%(startStateNodeName)%	
+%(image)%	Assets/bp-interp-1.PNG
+%(problem_statement)%	This box-and-whisker plot shows the height of the players on a football team.
+%(instructions)%	Please use the box-and-whisker plot to answer the questions below.
+	
+%(question1)%	The shortest player is
+%(question2)%	75% of players are at least
+%(question3)%	50% of players are at least
+%(question4)%	75% of players are no taller than
+%(question5)%	The tallest player is
+	
+%(label1)%	inches tall.
+%(label2)%	inches tall.
+%(label3)%	inches tall.
+%(label4)%	inches tall.
+%(label5)%	inches tall.
+	
+%(ans1)%	66
+%(ans2)%	68
+%(ans3)%	71
+%(ans4)%	73
+%(ans5)%	78
+	
+%(q1_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q1_hint2)%	The question is asking about the shortest player. What line in the graph represents the shortest height?
+%(q1_hint3)%	The shortest player is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.
+%(q1_hint4)%	The minimum is 66. Please enter '66' in the highlighted field.
+	
+%(q2_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q2_hint2)%	The question is asking you to identify a percentage from the graph. If 75% of players are at least a certain height, we know that 25% of the players are less than that height. What line in the graph separates the bottom 25% from the upper 75%? 
+%(q2_hint3)%	The left end of the box represents the 1st quartile. That is the line that separates the shorter 25% from the taller 75%. What number on the scale matches that mark?
+%(q2_hint4)%	The left of the box marks 25%. The left lines up with 68. Please enter '68' in the highlighted field.
+	
+%(q3_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q3_hint2)%	The question is asking you to identify a percentage of the graph. What line marks the median of the players' heights?
+%(q3_hint3)%	Saying that '50% of the players are at least' some height means that exactly 50% of the players are taller than some height. Which line marks half of the distribution?
+%(q3_hint4)%	The line in the middle of the box marks half of the distribution. 50% of the values are above 71. Please enter '71' in the highlighted field.
+	
+%(q4_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q4_hint2)%	The question is asking you to identify a percentage from the graph. If 75% of players are no taller than a certain height, we know that 25% of the players are taller than that height. What line in the graph separates the bottom 75% from the upper 25%? 
+%(q4_hint3)%	The right end of the box represents the 3rd quartile. That is the line that separates the shorter 75% from the taller 25%. What number on the scale matches that mark?
+%(q4_hint4)%	The right of the box marks 75%. The right lines up with 73. Please enter '73' in the highlighted field.
+	
+%(q5_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q5_hint2)%	The question is asking about the tallest player. What line in the graph represents the tallest height?
+%(q5_hint3)%	The tallest player is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.
+%(q5_hint4)%	The maximum is 78. Please enter '78' in the highlighted field.
+	
+%(skill1)%	Identify_value_for_max_or_min
+%(skill2)%	Identify_value_given_quartile
+%(skill3)%	Identify_value_given_quartile
+%(skill4)%	Identify_value_given_quartile
+%(skill5)%	Identify_value_for_max_or_min
+	
+%(skill1_label)%	Identify value for maximum or minimum
+%(skill2_label)%	Identify value given a quartile
+%(skill3_label)%	Identify value given a quartile
+%(skill4_label)%	Identify value given a quartile
+%(skill5_label)%	Identify value for maximum or minimum
+%(2080210792202059750)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(-5909584844149505375)%	The right end of the box represents the 3rd quartile. That is the line that separates the shorter 75% from the taller 25%. What number on the scale matches that mark?
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(2542760092829795444)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682246523489399003)%	The minimum is 66. Please enter '66' in the highlighted field.
+%(2542765092921795693)%	The line in the middle of the box marks half of the distribution. 50% of the values are above 71. Please enter '71' in the highlighted field.
+%(-5909586844177505425)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682241523477398994)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(883899699975334140)%	The left of the box marks 25%. The left lines up with 68. Please enter '68' in the highlighted field.
+%(2542758092817795426)%	Saying that '50% of the players are at least' some height means that exactly 50% of the players are taller than some height. Which line marks half of the distribution?
+%(682243523489399076)%	The shortest player is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.
+%(2542759092821795431)%	The question is asking you to identify a percentage of the graph. What line marks the median of the players' heights?
+%(2080207792198059767)%	The maximum is 78. Please enter '78' in the highlighted field.
+%(883902700007334195)%	The left end of the box represents the 1st quartile. That is the line that separates the shorter 25% from the taller 75%. What number on the scale matches that mark?
+%(-5909585844169505412)%	The question is asking you to identify a percentage from the graph. If 75% of players are no taller than a certain height, we know that 25% of the players are taller than that height. What line in the graph separates the bottom 75% from the upper 25%? 
+%(2080213792234059837)%	The question is asking about the tallest player. What line in the graph represents the tallest height?
+%(883904700003334101)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682244523477398985)%	The question is asking about the shortest player. What line in the graph represents the shortest height?
+%(-5909583844141505346)%	The right of the box marks 75%. The right lines up with 73. Please enter '73' in the highlighted field.
+%(2080212792230059832)%	The tallest player is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.
+%(883901700003334206)%	The question is asking you to identify a percentage from the graph. If 75% of players are at least a certain height, we know that 25% of the players are less than that height. What line in the graph separates the bottom 25% from the upper 75%? 
+Problem Name	8.26.2
+%(startStateNodeName)%	state4
+%(image)%	Assets/bp-interp-2.PNG
+%(problem_statement)%	An environmentalist was studying how geese gather together in flocks to migrate south for the winter. Over the period of a week, she counted how many geese were in each flock that flew by overhead and created this graph:
+%(instructions)%	Please use the box-and-whisker plot to answer the questions below.
+	
+%(question1)%	The largest flock had
+%(question2)%	25% of the flocks had at least
+%(question3)%	50% of the flocks had at least
+%(question4)%	75% of the flocks had at least
+%(question5)%	The smallest flock had
+	
+%(label1)%	geese.
+%(label2)%	geese.
+%(label3)%	geese.
+%(label4)%	geese.
+%(label5)%	geese.
+	
+%(ans1)%	58
+%(ans2)%	51
+%(ans3)%	42
+%(ans4)%	29
+%(ans5)%	11
+	
+%(q1_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q1_hint2)%	The question is asking about the largest flock. What line in the graph represents the largest flock?
+%(q1_hint3)%	The largest flock is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.
+%(q1_hint4)%	The maximum is 58. Please enter '58' in the highlighted field.
+	
+%(q2_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q2_hint2)%	The question is asking you to identify a percentage from the graph. If 25% of flocks had at least a certain number of geese, we know that 75% of the flocks had less than that number. What line in the graph separates the upper 25% from the bottom 75%?
+%(q2_hint3)%	The upper end of the box represents the 3rd quartile. That is the line that separates the smaller 75% from the larger 25%. What number on the scale matches that mark?
+%(q2_hint4)%	The right of the box marks 25%. The right lines up with 51. Please enter '51' in the highlighted field.
+	
+%(q3_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q3_hint2)%	The question is asking you to identify a percentage of the graph. What line marks the median of the numbers of geese in the flocks?
+%(q3_hint3)%	Saying that '50% of the flocks have at least' some number of geese means that exactly 50% of the flocks have more than some number of geese. Which line marks half of the distribution?
+%(q3_hint4)%	The line in the middle of the box marks half of the distribution. 50% of the values are above 42. Please enter '42' in the highlighted field.
+	
+%(q4_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q4_hint2)%	The question is asking you to identify a percentage from the graph. If 75% of flocks had at least a certain number of geese, we know that 25% of flocks had less than that number. What line in the graph separates the bottom 25% from the upper 75%? 
+%(q4_hint3)%	The lower end of the box represents the 1st quartile. That is the line that separates the smaller 25% from the larger 75%. What number on the scale matches that mark?
+%(q4_hint4)%	The left of the box marks 25%. The left lines up with 29. Please enter '29' in the highlighted field.
+	
+%(q5_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q5_hint2)%	The question is asking about the smallest flock. What line in the graph represents the smallest flock?
+%(q5_hint3)%	The smallest flock is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.
+%(q5_hint4)%	The minimum is 11. Please enter '11' in the highlighted field.
+	
+%(skill1)%	Identify_value_for_max_or_min
+%(skill2)%	Identify_value_given_quartile
+%(skill3)%	Identify_value_given_quartile
+%(skill4)%	Identify_value_given_quartile
+%(skill5)%	Identify_value_for_max_or_min
+	
+%(skill1_label)%	Identify value for maximum or minimum
+%(skill2_label)%	Identify value given a quartile
+%(skill3_label)%	Identify value given a quartile
+%(skill4_label)%	Identify value given a quartile
+%(skill5_label)%	Identify value for maximum or minimum
+%(2080210792202059750)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(-5909584844149505375)%	The lower end of the box represents the 1st quartile. That is the line that separates the smaller 25% from the larger 75%. What number on the scale matches that mark?
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(2542760092829795444)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682246523489399003)%	The maximum is 58. Please enter '58' in the highlighted field.
+%(2542765092921795693)%	The line in the middle of the box marks half of the distribution. 50% of the values are above 42. Please enter '42' in the highlighted field.
+%(-5909586844177505425)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682241523477398994)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(883899699975334140)%	The right of the box marks 25%. The right lines up with 51. Please enter '51' in the highlighted field.
+%(2542758092817795426)%	Saying that '50% of the flocks have at least' some number of geese means that exactly 50% of the flocks have more than some number of geese. Which line marks half of the distribution?
+%(682243523489399076)%	The largest flock is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.
+%(2542759092821795431)%	The question is asking you to identify a percentage of the graph. What line marks the median of the numbers of geese in the flocks?
+%(2080207792198059767)%	The minimum is 11. Please enter '11' in the highlighted field.
+%(883902700007334195)%	The upper end of the box represents the 3rd quartile. That is the line that separates the smaller 75% from the larger 25%. What number on the scale matches that mark?
+%(-5909585844169505412)%	The question is asking you to identify a percentage from the graph. If 75% of flocks had at least a certain number of geese, we know that 25% of flocks had less than that number. What line in the graph separates the bottom 25% from the upper 75%? 
+%(2080213792234059837)%	The question is asking about the smallest flock. What line in the graph represents the smallest flock?
+%(883904700003334101)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682244523477398985)%	The question is asking about the largest flock. What line in the graph represents the largest flock?
+%(-5909583844141505346)%	The left of the box marks 25%. The left lines up with 29. Please enter '29' in the highlighted field.
+%(2080212792230059832)%	The smallest flock is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.
+%(883901700003334206)%	The question is asking you to identify a percentage from the graph. If 25% of flocks had at least a certain number of geese, we know that 75% of the flocks had less than that number. What line in the graph separates the upper 25% from the bottom 75%?
+Problem Name	8.26.3
+%(startStateNodeName)%	state2
+%(image)%	Assets/bp-interp-3.PNG
+%(problem_statement)%	The students in the eighth grade at Morrowfield School counted how many pets of all kinds they had at home. This box-and-whisker plot shows how many pets each student had:
+%(instructions)%	Please use the box-and-whisker plot to answer the questions below.
+	
+%(question1)%	25% of students had no more than
+%(question2)%	The fewest pets any student had was
+%(question3)%	75% of students had at least
+%(question4)%	25% of students had at least
+%(question5)%	The most pets any student had was
+	
+%(label1)%	pets.
+%(label2)%	pets.
+%(label3)%	pets.
+%(label4)%	pets.
+%(label5)%	pets.
+	
+%(ans1)%	2
+%(ans2)%	1
+%(ans3)%	2
+%(ans4)%	7
+%(ans5)%	12
+	
+%(q1_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q1_hint2)%	The question is asking you to identify a percentage from the graph. If 25% of students had no more than a certain of pets, we know that 75% of students had more than that number. What line in the graph separates the lower 25% from the upper 75%? 
+%(q1_hint3)%	The lower end of the box represents the 1st quartile. That is the line that separates the 25% fewer number of pets from the 75% greater number of pets. What number on the scale matches that mark?
+%(q1_hint4)%	The left of the box marks 25%. The left lines up with 2. Please enter '2' in the highlighted field.
+	
+%(q2_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q2_hint2)%	The question is asking about the fewest number of pets. What line in the graph represents the fewest pets?
+%(q2_hint3)%	The fewest pets is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.
+%(q2_hint4)%	The minimum is 1. Please enter '1' in the highlighted field.
+	
+%(q3_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q3_hint2)%	The question is asking you to identify a percentage from the graph. If 75% of students had at least a certain number of pets, we know that 25% of students had less than that number. What line in the graph separates the bottom 25% from the upper 75%? 
+%(q3_hint3)%	The lower end of the box represents the 1st quartile. That is the line that separates the 25% fewer number of pets from the 75% greater number of pets. What number on the scale matches that mark?
+%(q3_hint4)%	The left of the box marks 25%. The bottom lines up with 2. Please enter '2' in the highlighted field.
+	
+%(q4_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q4_hint2)%	The question is asking you to identify a percentage from the graph. If 25% of students had at least a certain number of pets, we know that 75% of students had less than that number. What line in the graph separates the upper 25% from the bottom 75%?
+%(q4_hint3)%	The upper end of the box represents the 3rd quartile. That is the line that separates the 75% fewer number of pets from the 25% greater number of pets. What number on the scale matches that mark?
+%(q4_hint4)%	The right of the box marks 25%. The right lines up with 7. Please enter '7' in the highlighted field.
+	
+%(q5_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q5_hint2)%	The question is asking about the most pets. What line in the graph represents the most pets?
+%(q5_hint3)%	The most pets is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.
+%(q5_hint4)%	The maximum is 12. Please enter '12' in the highlighted field.
+	
+%(skill1)%	Identify_value_given_quartile
+%(skill2)%	Identify_value_for_max_or_min
+%(skill3)%	Identify_value_given_quartile
+%(skill4)%	Identify_value_given_quartile
+%(skill5)%	Identify_value_for_max_or_min
+	
+%(skill1_label)%	Identify value given a quartile
+%(skill2_label)%	Identify value for maximum or minimum
+%(skill3_label)%	Identify value given a quartile
+%(skill4_label)%	Identify value given a quartile
+%(skill5_label)%	Identify value for maximum or minimum
+%(2080210792202059750)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(-5909584844149505375)%	The upper end of the box represents the 3rd quartile. That is the line that separates the 75% fewer number of pets from the 25% greater number of pets. What number on the scale matches that mark?
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(2542760092829795444)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682246523489399003)%	The left of the box marks 25%. The left lines up with 2. Please enter '2' in the highlighted field.
+%(2542765092921795693)%	The left of the box marks 25%. The bottom lines up with 2. Please enter '2' in the highlighted field.
+%(-5909586844177505425)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682241523477398994)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(883899699975334140)%	The minimum is 1. Please enter '1' in the highlighted field.
+%(2542758092817795426)%	The lower end of the box represents the 1st quartile. That is the line that separates the 25% fewer number of pets from the 75% greater number of pets. What number on the scale matches that mark?
+%(682243523489399076)%	The lower end of the box represents the 1st quartile. That is the line that separates the 25% fewer number of pets from the 75% greater number of pets. What number on the scale matches that mark?
+%(2542759092821795431)%	The question is asking you to identify a percentage from the graph. If 75% of students had at least a certain number of pets, we know that 25% of students had less than that number. What line in the graph separates the bottom 25% from the upper 75%? 
+%(2080207792198059767)%	The maximum is 12. Please enter '12' in the highlighted field.
+%(883902700007334195)%	The fewest pets is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.
+%(-5909585844169505412)%	The question is asking you to identify a percentage from the graph. If 25% of students had at least a certain number of pets, we know that 75% of students had less than that number. What line in the graph separates the upper 25% from the bottom 75%?
+%(2080213792234059837)%	The question is asking about the most pets. What line in the graph represents the most pets?
+%(883904700003334101)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682244523477398985)%	The question is asking you to identify a percentage from the graph. If 25% of students had no more than a certain of pets, we know that 75% of students had more than that number. What line in the graph separates the lower 25% from the upper 75%? 
+%(-5909583844141505346)%	The right of the box marks 25%. The right lines up with 7. Please enter '7' in the highlighted field.
+%(2080212792230059832)%	The most pets is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.
+%(883901700003334206)%	The question is asking about the fewest number of pets. What line in the graph represents the fewest pets?
+Problem Name	8.26.4
+%(startStateNodeName)%	state1
+%(image)%	Assets/bp-interp-4.PNG
+%(problem_statement)%	One of the events at the Spring Sports Carnival is the Flying Disc throwing contest, in which each contestant tried to throw a Flying Disc as far as possible. After the competition, the Carnival record keeper made this box-and-whisker diagram:
+%(instructions)%	Please use the box-and-whisker plot to answer the questions below.
+	
+%(question1)%	25% of contestants threw the Flying Disc at least
+%(question2)%	The farthest any contestant threw the Flying Disc was
+%(question3)%	75% of contestants threw the Flying Disc no more than
+%(question4)%	50% of contestants threw a Flying Disc at least
+%(question5)%	25% of contestants threw the Flying Disc no more than
+	
+%(label1)%	feet.
+%(label2)%	feet.
+%(label3)%	feet.
+%(label4)%	feet.
+%(label5)%	feet.
+	
+%(ans1)%	120
+%(ans2)%	130
+%(ans3)%	120
+%(ans4)%	105
+%(ans5)%	84
+	
+%(q1_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q1_hint2)%	The question is asking you to identify a percentage from the graph. If 25% of contestants threw the Flying Disc at least some distance, we know that 75% of contestants threw less than that distance. What line in the graph separates the upper 25% from the bottom 75%?
+%(q1_hint3)%	The upper end of the box represents the 3rd quartile. That is the line that separates the shorter 75% from the longer 25%. What number on the scale matches that mark?
+%(q1_hint4)%	The right of the box marks 25%. The right lines up with 120. Please enter '120' in the highlighted field.
+	
+%(q2_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q2_hint2)%	The question is asking about the farthest throw. What line in the graph represents the farthest distance?
+%(q2_hint3)%	The farthest distance is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.
+%(q2_hint4)%	The maximum is 130. Please enter '130' in the highlighted field.
+	
+%(q3_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q3_hint2)%	The question is asking you to identify a percentage from the graph. If 75% of contestants threw the Flying Disc no more than some distance, we know that 25% of contestants threw the Flying Disc farther than that distance. What line in the graph separates the bottom 75% from the upper 25%? 
+%(q3_hint3)%	The upper end of the box represents the 3rd quartile. That is the line that separates the shorter 75% from the longer 25%. What number on the scale matches that mark?
+%(q3_hint4)%	The right of the box marks 25%. The right lines up with 120. Please enter '120' in the highlighted field.
+	
+%(q4_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q4_hint2)%	The question is asking you to identify a percentage of the graph. What line marks the median of the distances of Flying Disc throws?
+%(q4_hint3)%	Saying that '50% of the throws went least' some distance means that exactly 50% of the throws went more than some distance. Which line marks half of the distribution?
+%(q4_hint4)%	The line in the middle of the box marks half of the distribution. 50% of the values are above 105. Please enter '105' in the highlighted field.
+	
+%(q5_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q5_hint2)%	The question is asking you to identify a percentage from the graph. If 25% of contestants threw the Flying Disc no more than some distance, we know that 75% of contestants threw more than that distance. What line in the graph separates the upper 75% from the lower 25%? 
+%(q5_hint3)%	The lower end of the box represents the 1st quartile. That is the line that separates the shorter 25% from the longer 75%. What number on the scale matches that mark?
+%(q5_hint4)%	The left of the box marks 25%. The left lines up with 84. Please enter '84' in the highlighted field.
+	
+%(skill1)%	Identify_value_given_quartile
+%(skill2)%	Identify_value_for_max_or_min
+%(skill3)%	Identify_value_given_quartile
+%(skill4)%	Identify_value_given_quartile
+%(skill5)%	Identify_value_given_quartile
+	
+%(skill1_label)%	Identify value given a quartile
+%(skill2_label)%	Identify value for maximum or minimum
+%(skill3_label)%	Identify value given a quartile
+%(skill4_label)%	Identify value given a quartile
+%(skill5_label)%	Identify value given a quartile
+%(2080210792202059750)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(-5909584844149505375)%	Saying that '50% of the throws went least' some distance means that exactly 50% of the throws went more than some distance. Which line marks half of the distribution?
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(2542760092829795444)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682246523489399003)%	The right of the box marks 25%. The right lines up with 120. Please enter '120' in the highlighted field.
+%(2542765092921795693)%	The right of the box marks 25%. The right lines up with 120. Please enter '120' in the highlighted field.
+%(-5909586844177505425)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682241523477398994)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(883899699975334140)%	The maximum is 130. Please enter '130' in the highlighted field.
+%(2542758092817795426)%	The upper end of the box represents the 3rd quartile. That is the line that separates the shorter 75% from the longer 25%. What number on the scale matches that mark?
+%(682243523489399076)%	The upper end of the box represents the 3rd quartile. That is the line that separates the shorter 75% from the longer 25%. What number on the scale matches that mark?
+%(2542759092821795431)%	The question is asking you to identify a percentage from the graph. If 75% of contestants threw the Flying Disc no more than some distance, we know that 25% of contestants threw the Flying Disc farther than that distance. What line in the graph separates the bottom 75% from the upper 25%? 
+%(2080207792198059767)%	The left of the box marks 25%. The left lines up with 84. Please enter '84' in the highlighted field.
+%(883902700007334195)%	The farthest distance is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.
+%(-5909585844169505412)%	The question is asking you to identify a percentage of the graph. What line marks the median of the distances of Flying Disc throws?
+%(2080213792234059837)%	The question is asking you to identify a percentage from the graph. If 25% of contestants threw the Flying Disc no more than some distance, we know that 75% of contestants threw more than that distance. What line in the graph separates the upper 75% from the lower 25%? 
+%(883904700003334101)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682244523477398985)%	The question is asking you to identify a percentage from the graph. If 25% of contestants threw the Flying Disc at least some distance, we know that 75% of contestants threw less than that distance. What line in the graph separates the upper 25% from the bottom 75%?
+%(-5909583844141505346)%	The line in the middle of the box marks half of the distribution. 50% of the values are above 105. Please enter '105' in the highlighted field.
+%(2080212792230059832)%	The lower end of the box represents the 1st quartile. That is the line that separates the shorter 25% from the longer 75%. What number on the scale matches that mark?
+%(883901700003334206)%	The question is asking about the farthest throw. What line in the graph represents the farthest distance?
+Problem Name	8.26.5
+%(startStateNodeName)%	
+%(image)%	Assets/bp-interp-5.PNG
+%(problem_statement)%	Students in Mrs. Peters seventh grade class recorded temperatures for two weeks in February. They then used the data to make the box-and-whisker plot below:
+%(instructions)%	Please use the box-and-whisker plot to answer the questions below.
+	
+%(question1)%	50% of the days were above
+%(question2)%	The coldest day was
+%(question3)%	The warmest day was
+%(question4)%	75% of the days were below
+%(question5)%	25% of the days were above
+	
+%(label1)%	degrees.
+%(label2)%	degrees.
+%(label3)%	degrees.
+%(label4)%	degrees.
+%(label5)%	degrees.
+	
+%(ans1)%	12
+%(ans2)%	0
+%(ans3)%	26
+%(ans4)%	19
+%(ans5)%	19
+	
+%(q1_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q1_hint2)%	The question is asking you to identify a percentage of the graph. What line marks the median of the temperatures that students measured?
+%(q1_hint3)%	Saying that '50% of the days have at least' some temperature means that exactly 50% of the days have more than some temperature. Which line marks half of the distribution?
+%(q1_hint4)%	The line in the middle of the box marks half of the distribution. 50% of the values are above 12. Please enter '12' in the highlighted field.
+	
+%(q2_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q2_hint2)%	The question is asking about the coldest temperature. What line in the graph represents the coldest temperature?
+%(q2_hint3)%	The coldest temperature is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.
+%(q2_hint4)%	The minimum is 0. Please enter '0' in the highlighted field.
+	
+%(q3_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q3_hint2)%	The question is asking about the warmest temperature. What line in the graph represents the warmest temperature?
+%(q3_hint3)%	The warmest temperature is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.
+%(q3_hint4)%	The maximum is 26. Please enter '26' in the highlighted field.
+	
+%(q4_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q4_hint2)%	The question is asking you to identify a percentage from the graph. If 75% of days are below some temperature, we know that 25% of days are warmer than that temperature. What line in the graph separates the bottom 75% from the upper 25%? 
+%(q4_hint3)%	The upper end of the box represents the 3rd quartile. That is the line that separates the colder 75% from the warmer 25%. What number on the scale matches that mark?
+%(q4_hint4)%	The left of the box marks 25%. The bottom lines up with 19. Please enter '19' in the highlighted field.
+	
+%(q5_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q5_hint2)%	The question is asking you to identify a percentage from the graph. If 25% of days were above a certain temperature, we know that 75% of days were less than that number. What line in the graph separates the lower 75% from the upper 25%? 
+%(q5_hint3)%	The upper end of the box represents the 3rd quartile. That is the line that separates the warmer 25% from the colder 75%. What number on the scale matches that mark?
+%(q5_hint4)%	The right of the box marks 25%. The right lines up with 19. Please enter '19' in the highlighted field.
+	
+%(skill1)%	Identify_value_given_quartile
+%(skill2)%	Identify_value_for_max_or_min
+%(skill3)%	Identify_value_for_max_or_min
+%(skill4)%	Identify_value_given_quartile
+%(skill5)%	Identify_value_given_quartile
+	
+%(skill1_label)%	Identify value given a quartile
+%(skill2_label)%	Identify value for maximum or minimum
+%(skill3_label)%	Identify value for maximum or minimum
+%(skill4_label)%	Identify value given a quartile
+%(skill5_label)%	Identify value given a quartile
+%(2080210792202059750)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(-5909584844149505375)%	The upper end of the box represents the 3rd quartile. That is the line that separates the colder 75% from the warmer 25%. What number on the scale matches that mark?
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(2542760092829795444)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682246523489399003)%	The line in the middle of the box marks half of the distribution. 50% of the values are above 12. Please enter '12' in the highlighted field.
+%(2542765092921795693)%	The maximum is 26. Please enter '26' in the highlighted field.
+%(-5909586844177505425)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682241523477398994)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(883899699975334140)%	The minimum is 0. Please enter '0' in the highlighted field.
+%(2542758092817795426)%	The warmest temperature is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.
+%(682243523489399076)%	Saying that '50% of the days have at least' some temperature means that exactly 50% of the days have more than some temperature. Which line marks half of the distribution?
+%(2542759092821795431)%	The question is asking about the warmest temperature. What line in the graph represents the warmest temperature?
+%(2080207792198059767)%	The right of the box marks 25%. The right lines up with 19. Please enter '19' in the highlighted field.
+%(883902700007334195)%	The coldest temperature is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.
+%(-5909585844169505412)%	The question is asking you to identify a percentage from the graph. If 75% of days are below some temperature, we know that 25% of days are warmer than that temperature. What line in the graph separates the bottom 75% from the upper 25%? 
+%(2080213792234059837)%	The question is asking you to identify a percentage from the graph. If 25% of days were above a certain temperature, we know that 75% of days were less than that number. What line in the graph separates the lower 75% from the upper 25%? 
+%(883904700003334101)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682244523477398985)%	The question is asking you to identify a percentage of the graph. What line marks the median of the temperatures that students measured?
+%(-5909583844141505346)%	The left of the box marks 25%. The bottom lines up with 19. Please enter '19' in the highlighted field.
+%(2080212792230059832)%	The upper end of the box represents the 3rd quartile. That is the line that separates the warmer 25% from the colder 75%. What number on the scale matches that mark?
+%(883901700003334206)%	The question is asking about the coldest temperature. What line in the graph represents the coldest temperature?
+Problem Name	8.26.6
+%(startStateNodeName)%	
+%(image)%	Assets/bp-interp-6.PNG
+%(problem_statement)%	Graduating seniors at a local university were asked how many interviews they were invited to attend. This box-and-whisker plot displays the results:
+%(instructions)%	Please use the box-and-whisker plot to answer the questions below.
+	
+%(question1)%	25% of the seniors had less than
+%(question2)%	The most interviews received was
+%(question3)%	25% of seniors received at least
+%(question4)%	50% of the senior received between 3 and 
+%(question5)%	The fewest number of interviews received was
+	
+%(label1)%	interview(s).
+%(label2)%	interview(s).
+%(label3)%	interview(s).
+%(label4)%	interview(s).
+%(label5)%	interview(s).
+	
+%(ans1)%	3
+%(ans2)%	16
+%(ans3)%	8
+%(ans4)%	8
+%(ans5)%	1
+	
+%(q1_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q1_hint2)%	The question is asking you to identify a percentage from the graph. If 25% of seniors had no more than some number of interviews, we know that 75% of seniors had more than that number. What line in the graph separates the upper 75% from the bottom 25%? 
+%(q1_hint3)%	The lower end of the box represents the 1st quartile. That is the line that separates the 25% fewer number of interviews from the 75% greater number of interviews. What number on the scale matches that mark?
+%(q1_hint4)%	The bottom of the box marks 25%. The bottom lines up with 3. Please enter '3' in the highlighted field.
+	
+%(q2_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q2_hint2)%	The question is asking about the most interviews. What line in the graph represents the most interviews?
+%(q2_hint3)%	The most interviews is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.
+%(q2_hint4)%	The maximum is 16. Please enter '16' in the highlighted field.
+	
+%(q3_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q3_hint2)%	The question is asking you to identify a percentage from the graph. If 25% of seniors had at least some number of interviews, we know that 75% of seniors had less than that number. What line in the graph separates the upper 25% from the bottom 75%?
+%(q3_hint3)%	The upper end of the box represents the 3rd quartile. That is the line that separates the 75% fewer number of interviews from the 25% greater number of interviews. What number on the scale matches that mark?
+%(q3_hint4)%	The right of the box marks 25%. The right lines up with 8. Please enter '8' in the highlighted field.
+	
+%(q4_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q4_hint2)%	Which line does 3 represent? You need to find the line that is 50% higher.
+%(q4_hint3)%	3 represents the 25 percentile. 50% more is 75%. Which line represents 75%?
+%(q4_hint4)%	The right of the box represents the 75th percentile. The right lines up with 8. Please enter 8 in the highlighted field.
+	
+%(q5_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q5_hint2)%	The question is asking about the fewest number of interviews. What line in the graph represents the fewest interviews?
+%(q5_hint3)%	The fewest interviews is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.
+%(q5_hint4)%	The minimum is 1. Please enter '1' in the highlighted field.
+	
+%(skill1)%	Identify_value_given_quartile
+%(skill2)%	Identify_value_for_max_or_min
+%(skill3)%	Identify_value_given_quartile
+%(skill4)%	Identify_value_given_end_of_range
+%(skill5)%	Identify_value_for_max_or_min
+	
+%(skill1_label)%	Identify value given a quartile
+%(skill2_label)%	Identify value for maximum or minimum
+%(skill3_label)%	Identify value given a quartile
+%(skill4_label)%	Identify value given an end of a range
+%(skill5_label)%	Identify value for maximum or minimum
+%(2080210792202059750)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(-5909584844149505375)%	3 represents the 25 percentile. 50% more is 75%. Which line represents 75%?
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(2542760092829795444)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682246523489399003)%	The bottom of the box marks 25%. The bottom lines up with 3. Please enter '3' in the highlighted field.
+%(2542765092921795693)%	The right of the box marks 25%. The right lines up with 8. Please enter '8' in the highlighted field.
+%(-5909586844177505425)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682241523477398994)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(883899699975334140)%	The maximum is 16. Please enter '16' in the highlighted field.
+%(2542758092817795426)%	The upper end of the box represents the 3rd quartile. That is the line that separates the 75% fewer number of interviews from the 25% greater number of interviews. What number on the scale matches that mark?
+%(682243523489399076)%	The lower end of the box represents the 1st quartile. That is the line that separates the 25% fewer number of interviews from the 75% greater number of interviews. What number on the scale matches that mark?
+%(2542759092821795431)%	The question is asking you to identify a percentage from the graph. If 25% of seniors had at least some number of interviews, we know that 75% of seniors had less than that number. What line in the graph separates the upper 25% from the bottom 75%?
+%(2080207792198059767)%	The minimum is 1. Please enter '1' in the highlighted field.
+%(883902700007334195)%	The most interviews is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.
+%(-5909585844169505412)%	Which line does 3 represent? You need to find the line that is 50% higher.
+%(2080213792234059837)%	The question is asking about the fewest number of interviews. What line in the graph represents the fewest interviews?
+%(883904700003334101)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682244523477398985)%	The question is asking you to identify a percentage from the graph. If 25% of seniors had no more than some number of interviews, we know that 75% of seniors had more than that number. What line in the graph separates the upper 75% from the bottom 25%? 
+%(-5909583844141505346)%	The right of the box represents the 75th percentile. The right lines up with 8. Please enter 8 in the highlighted field.
+%(2080212792230059832)%	The fewest interviews is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.
+%(883901700003334206)%	The question is asking about the most interviews. What line in the graph represents the most interviews?
+Problem Name	8.26.7
+%(startStateNodeName)%	
+%(image)%	Assets/bp-interp-7.PNG
+%(problem_statement)%	A community yoga class has members of all ages recorded below in the box-and-whisker plot:
+%(instructions)%	Please use the box-and-whisker plot to answer the questions below.
+	
+%(question1)%	The youngest member of the class is
+%(question2)%	50% of the members are between 28 and
+%(question3)%	25% of the members are younger than
+%(question4)%	25% of the members are older than
+%(question5)%	75% of the members are older than
+	
+%(label1)%	years old.
+%(label2)%	years old.
+%(label3)%	years old.
+%(label4)%	years old.
+%(label5)%	years old.
+	
+%(ans1)%	22
+%(ans2)%	38
+%(ans3)%	28
+%(ans4)%	38
+%(ans5)%	28
+	
+%(q1_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q1_hint2)%	The question is asking about the youngest class member. What line in the graph represents the youngest member?
+%(q1_hint3)%	The youngest member is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.
+%(q1_hint4)%	The minimum is 22. Please enter '22' in the highlighted field.
+	
+%(q2_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q2_hint2)%	Which line does 28 represent? You need to find the line that is 50% higher.
+%(q2_hint3)%	28 represents the 25 percentile. 50% more is 75%. Which line represents 75%?
+%(q2_hint4)%	The right of the box represents the 75th percentile. The right lines up with 38. Please enter 38 in the highlighted field.
+	
+%(q3_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q3_hint2)%	The question is asking you to identify a percentage from the graph. If 25% of members are younger than some age, we know that 75% of members are older than that number. What line in the graph separates the upper 75% from the bottom 25%? 
+%(q3_hint3)%	The lower end of the box represents the 1st quartile. That is the line that separates the younger 25% from the older 75%. What number on the scale matches that mark?
+%(q3_hint4)%	The left of the box marks 25%. The bottom lines up with 28. Please enter '28' in the highlighted field.
+	
+%(q4_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q4_hint2)%	The question is asking you to identify a percentage from the graph. If 25% of members are older than some age, we know that 75% of members are younger than that number. What line in the graph separates the upper 25% from the bottom 75%?
+%(q4_hint3)%	The upper end of the box represents the 3rd quartile. That is the line that separates the 75% younger students from the 25% older students. What number on the scale matches that mark?
+%(q4_hint4)%	The right of the box marks 25%. The right lines up with 38. Please enter '38' in the highlighted field.
+	
+%(q5_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q5_hint2)%	The question is asking you to identify a percentage from the graph. If 75% of members are older than some age, we know that 25% of members are younger than that number. What line in the graph separates the lower 25% from the upper 75%? 
+%(q5_hint3)%	The lower end of the box represents the 1st quartile. That is the line that separates the 25% younger students from the 75% older students. What number on the scale matches that mark?
+%(q5_hint4)%	The left of the box marks 25%. The left lines up with 28. Please enter '28' in the highlighted field.
+	
+%(skill1)%	Identify_value_for_max_or_min
+%(skill2)%	Identify_value_given_end_of_range
+%(skill3)%	Identify_value_given_quartile
+%(skill4)%	Identify_value_given_quartile
+%(skill5)%	Identify_value_given_quartile
+	
+%(skill1_label)%	Identify value for maximum or minimum
+%(skill2_label)%	Identify value given an end of a range
+%(skill3_label)%	Identify value given a quartile
+%(skill4_label)%	Identify value given a quartile
+%(skill5_label)%	Identify value given a quartile
+%(2080210792202059750)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(-5909584844149505375)%	The upper end of the box represents the 3rd quartile. That is the line that separates the 75% younger students from the 25% older students. What number on the scale matches that mark?
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(2542760092829795444)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682246523489399003)%	The minimum is 22. Please enter '22' in the highlighted field.
+%(2542765092921795693)%	The left of the box marks 25%. The bottom lines up with 28. Please enter '28' in the highlighted field.
+%(-5909586844177505425)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682241523477398994)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(883899699975334140)%	The right of the box represents the 75th percentile. The right lines up with 38. Please enter 38 in the highlighted field.
+%(2542758092817795426)%	The lower end of the box represents the 1st quartile. That is the line that separates the younger 25% from the older 75%. What number on the scale matches that mark?
+%(682243523489399076)%	The youngest member is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.
+%(2542759092821795431)%	The question is asking you to identify a percentage from the graph. If 25% of members are younger than some age, we know that 75% of members are older than that number. What line in the graph separates the upper 75% from the bottom 25%? 
+%(2080207792198059767)%	The left of the box marks 25%. The left lines up with 28. Please enter '28' in the highlighted field.
+%(883902700007334195)%	28 represents the 25 percentile. 50% more is 75%. Which line represents 75%?
+%(-5909585844169505412)%	The question is asking you to identify a percentage from the graph. If 25% of members are older than some age, we know that 75% of members are younger than that number. What line in the graph separates the upper 25% from the bottom 75%?
+%(2080213792234059837)%	The question is asking you to identify a percentage from the graph. If 75% of members are older than some age, we know that 25% of members are younger than that number. What line in the graph separates the lower 25% from the upper 75%? 
+%(883904700003334101)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682244523477398985)%	The question is asking about the youngest class member. What line in the graph represents the youngest member?
+%(-5909583844141505346)%	The right of the box marks 25%. The right lines up with 38. Please enter '38' in the highlighted field.
+%(2080212792230059832)%	The lower end of the box represents the 1st quartile. That is the line that separates the 25% younger students from the 75% older students. What number on the scale matches that mark?
+%(883901700003334206)%	Which line does 28 represent? You need to find the line that is 50% higher.
+Problem Name	8.26.8
+%(startStateNodeName)%	
+%(image)%	Assets/bp-interp-8.PNG
+%(problem_statement)%	High school seniors are planning for prom by comparing menu options at area buffets. The number of food items included in each buffet are plotted in this box-and-whisker plot:
+%(instructions)%	Please use the box-and-whisker plot to answer the questions below.
+	
+%(question1)%	The largest buffet has
+%(question2)%	75% of the buffets have less than
+%(question3)%	The smallest buffet has
+%(question4)%	50% of the buffets have between 18 and
+%(question5)%	50% of the buffets have more than
+	
+%(label1)%	food items.
+%(label2)%	food items.
+%(label3)%	food items.
+%(label4)%	food items.
+%(label5)%	food items.
+	
+%(ans1)%	35
+%(ans2)%	28
+%(ans3)%	10
+%(ans4)%	28
+%(ans5)%	22
+	
+%(q1_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q1_hint2)%	The question is asking about the largest buffet. What line in the graph represents the largest buffet?
+%(q1_hint3)%	The largest buffet is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.
+%(q1_hint4)%	The maximum is 35. Please enter '35' in the highlighted field.
+	
+%(q2_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q2_hint2)%	The question is asking you to identify a percentage from the graph. If 75% of buffets have less than some number of food items, we know that 25% of buffets have more than that many food items. What line in the graph separates the bottom 75% from the upper 25%? 
+%(q2_hint3)%	The upper end of the box represents the 3rd quartile. That is the line that separates the smaller 75% buffets from the larger 25% of buffets. What number on the scale matches that mark?
+%(q2_hint4)%	The left of the box marks 25%. The bottom lines up with 28. Please enter '28' in the highlighted field.
+	
+%(q3_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q3_hint2)%	The question is asking about the smallest buffet. What line in the graph represents the smallest buffet?
+%(q3_hint3)%	The smallest buffet is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.
+%(q3_hint4)%	The minimum is 10. Please enter '10' in the highlighted field.
+	
+%(q4_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q4_hint2)%	Which line does 18 represent? You need to find the line that is 50% higher.
+%(q4_hint3)%	18 represents the 25 percentile. 50% more is 75%. Which line represents 75%?
+%(q4_hint4)%	The right of the box represents the 75th percentile. The right lines up with 28. Please enter 28 in the highlighted field.
+	
+%(q5_hint1)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(q5_hint2)%	The question is asking you to identify a percentage of the graph. What line marks the median size buffet?
+%(q5_hint3)%	Saying that '50% of the days have more than' so many food items means that at least 50% of the buffets have so many food items. Which line marks half of the distribution?
+%(q5_hint4)%	The line in the middle of the box marks half of the distribution. 50% of the values are above 22. Please enter '22' in the highlighted field.
+	
+%(skill1)%	Identify_value_for_max_or_min
+%(skill2)%	Identify_value_given_quartile
+%(skill3)%	Identify_value_for_max_or_min
+%(skill4)%	Identify_value_given_end_of_range
+%(skill5)%	Identify_value_given_quartile
+	
+%(skill1_label)%	Identify value for maximum or minimum
+%(skill2_label)%	Identify value given a quartile
+%(skill3_label)%	Identify value for maximum or minimum
+%(skill4_label)%	Identify value given an end of a range
+%(skill5_label)%	Identify value given a quartile 
+%(2080210792202059750)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(-5909584844149505375)%	18 represents the 25 percentile. 50% more is 75%. Which line represents 75%?
+%(-5166532556208710060)%	No, this is not correct.
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(2542760092829795444)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682246523489399003)%	The maximum is 35. Please enter '35' in the highlighted field.
+%(2542765092921795693)%	The minimum is 10. Please enter '10' in the highlighted field.
+%(-5909586844177505425)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682241523477398994)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(883899699975334140)%	The left of the box marks 25%. The bottom lines up with 28. Please enter '28' in the highlighted field.
+%(2542758092817795426)%	The smallest buffet is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.
+%(682243523489399076)%	The largest buffet is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.
+%(2542759092821795431)%	The question is asking about the smallest buffet. What line in the graph represents the smallest buffet?
+%(2080207792198059767)%	The line in the middle of the box marks half of the distribution. 50% of the values are above 22. Please enter '22' in the highlighted field.
+%(883902700007334195)%	The upper end of the box represents the 3rd quartile. That is the line that separates the smaller 75% buffets from the larger 25% of buffets. What number on the scale matches that mark?
+%(-5909585844169505412)%	Which line does 18 represent? You need to find the line that is 50% higher.
+%(2080213792234059837)%	The question is asking you to identify a percentage of the graph. What line marks the median size buffet?
+%(883904700003334101)%	In order to solve this question, you need to figure out which line(s) in the graph it is referring to.
+%(682244523477398985)%	The question is asking about the largest buffet. What line in the graph represents the largest buffet?
+%(-5909583844141505346)%	The right of the box represents the 75th percentile. The right lines up with 28. Please enter 28 in the highlighted field.
+%(2080212792230059832)%	Saying that '50% of the days have more than' so many food items means that at least 50% of the buffets have so many food items. Which line marks half of the distribution?
+%(883901700003334206)%	The question is asking you to identify a percentage from the graph. If 75% of buffets have less than some number of food items, we know that 25% of buffets have more than that many food items. What line in the graph separates the bottom 75% from the upper 25%? 

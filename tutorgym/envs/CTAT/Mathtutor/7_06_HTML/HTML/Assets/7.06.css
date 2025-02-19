@@ -1,0 +1,50 @@
+th[scope="row"] {
+  width: 85px;
+}
+.no-placeholder input::placeholder {
+  opacity: 0;
+}
+#variable {
+  border: none;
+  padding-right: 5px;
+  text-align: right;
+}
+.CTATGroupingComponent {
+  margin: 0 !important;
+}
+.CTATSolution .CTATTextField {
+  min-height: 32px;
+  display: none !important;
+  animation: fade-out 2s;
+}
+.CTATSolution .CTATTextField.visible {
+  display: block !important;
+  animation: fade-in 2s;
+}
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.CTATGrapher {
+  width: 100%;
+  grid-template-columns: minmax(60px, 1fr) minmax(200px, 5fr);
+}
+.CTATChart {
+  width: 100%;
+  min-width: 400px;
+  min-height: 300px;
+}
+.CTATGrapher-x .CTATNumericStepper {
+  flex: none;
+}
+.CTATGrapher-x .CTATTextInput {
+  width: auto;
+}
+.CTATGrapher-y .CTATTextInput {
+  width: auto;
+  max-width: 100px;
+}

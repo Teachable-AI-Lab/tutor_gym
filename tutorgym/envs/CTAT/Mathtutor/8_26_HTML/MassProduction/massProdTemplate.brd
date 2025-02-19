@@ -1,0 +1,912 @@
+<?xml version="1.0" standalone="yes"?>
+
+<stateGraph firstCheckAllStates="true" caseInsensitive="true" unordered="true" lockWidget="true" version="2.1" suppressStudentFeedback="false" highlightRightSelection="true" startStateNodeName="%(startStateNodeName)%">
+    <startNodeMessages>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartProblem</MessageType>
+                <ProblemName>massProdTemplate</ProblemName>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceIdentification</MessageType>
+                <Guid>7A8498A3B4280DA8E7EEE6056717A2AD73F14A8</Guid>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>label5</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name label5)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>label4</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name label4)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>label3</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name label3)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>label2</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name label2)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>label1</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name label1)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommImage</WidgetType>
+                <DorminName>problempicture</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate Button (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (Button (name problempicture) (value "%(image)%" )))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>q5</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name q5)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>ans5</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name ans5)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>q4</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name q4)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>ans4</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name ans4)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>q3</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name q3)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>ans3</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name ans3)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>q2</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name q2)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>ans2</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name ans2)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>q1</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name q1)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>instructions</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name instructions)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>ans1</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name ans1)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>problemstatement</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name problemstatement)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommDoneButton</WidgetType>
+                <DorminName>done</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate button (slot name))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (button (name done)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommDoneButton</WidgetType>
+                <DorminName>done</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate button (slot name))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (button (name done)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>A371AFAEE8FE4F278615591242E6EA37D31839E</transaction_id>
+                <Selection>
+                    <value>problemstatement</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(problem_statement)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0CE09880D35643A6ECE64CFEF798E10CCC7860E</transaction_id>
+                <Selection>
+                    <value>instructions</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(instructions)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>6433B3784F4784BE241BCC4BBDD7B3E52777B62</transaction_id>
+                <Selection>
+                    <value>q1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(question1)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>A73FD2FD7C173BB9D0957549A1A48D13F603D3F</transaction_id>
+                <Selection>
+                    <value>label1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(label1)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>839679FED64AEAB23E40ED175AD0913A071A769</transaction_id>
+                <Selection>
+                    <value>q2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(question2)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>3A999134FEDCE19B4C2C9BFA60D56067F385D2F</transaction_id>
+                <Selection>
+                    <value>label2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(label2)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>77F48449DC83EDFBF89699E11C8EA3C7A33FF95</transaction_id>
+                <Selection>
+                    <value>q3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(question3)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>B75B4F0813595ABAED662F6E359637C327C9F52</transaction_id>
+                <Selection>
+                    <value>label3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(label3)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>BF6E3FD9FF4E1309535EC809E197167A7FEF8B1</transaction_id>
+                <Selection>
+                    <value>q4</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(question4)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>AFA512FEFF4C3FC812ED6B1BC576B112B6311AD</transaction_id>
+                <Selection>
+                    <value>label4</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(label4)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>6615D3114879DB83E97FBB6E02A890776220A5D</transaction_id>
+                <Selection>
+                    <value>q5</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(question5)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>D7AD0BB5E2E739C70ABE5C28AA65152E7C4A677</transaction_id>
+                <Selection>
+                    <value>label5</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(label5)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartStateEnd</MessageType>
+            </properties>
+        </message>
+    </startNodeMessages>
+    <node locked="false" doneState="false">
+        <text>8_26</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>282</x>
+            <y>30</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state1</text>
+        <uniqueID>2</uniqueID>
+        <dimension>
+            <x>278</x>
+            <y>140</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state2</text>
+        <uniqueID>3</uniqueID>
+        <dimension>
+            <x>278</x>
+            <y>250</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state3</text>
+        <uniqueID>4</uniqueID>
+        <dimension>
+            <x>278</x>
+            <y>360</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state4</text>
+        <uniqueID>5</uniqueID>
+        <dimension>
+            <x>278</x>
+            <y>470</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state5</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>278</x>
+            <y>580</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="true">
+        <text>Done</text>
+        <uniqueID>7</uniqueID>
+        <dimension>
+            <x>281</x>
+            <y>690</y>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>1</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>68C0549FB8BB2A95D60609E47438D8532631D49</transaction_id>
+                    <Selection>
+                        <value>ans1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(ans1)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(q1_hint1)%</hintMessage>
+            <hintMessage>%(q1_hint2)%</hintMessage>
+            <hintMessage>%(q1_hint3)%</hintMessage>
+            <hintMessage>%(q1_hint4)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">ans1</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">%(ans1)%</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>%(skill1)% Box_and_Whisker_Plots</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>3</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>30AAE3C7E468C64FBFB7344F7045DC5E364D5D1</transaction_id>
+                    <Selection>
+                        <value>ans2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(ans2)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(q2_hint1)%</hintMessage>
+            <hintMessage>%(q2_hint2)%</hintMessage>
+            <hintMessage>%(q2_hint3)%</hintMessage>
+            <hintMessage>%(q2_hint4)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">ans2</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">%(ans2)%</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>%(skill2)% Box_and_Whisker_Plots</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>5</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>B219AC9D5350C5F5DDE56607D81B3AF1AC956E9</transaction_id>
+                    <Selection>
+                        <value>ans3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(ans3)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(q3_hint1)%</hintMessage>
+            <hintMessage>%(q3_hint2)%</hintMessage>
+            <hintMessage>%(q3_hint3)%</hintMessage>
+            <hintMessage>%(q3_hint4)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">ans3</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">%(ans3)%</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>%(skill3)% Box_and_Whisker_Plots</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>3</sourceID>
+        <destID>4</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>7</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>C891D999A0E1A3C1FBE651455CB765D85B71F3E</transaction_id>
+                    <Selection>
+                        <value>ans4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(ans4)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(q4_hint1)%</hintMessage>
+            <hintMessage>%(q4_hint2)%</hintMessage>
+            <hintMessage>%(q4_hint3)%</hintMessage>
+            <hintMessage>%(q4_hint4)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">ans4</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">%(ans4)%</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>%(skill4)% Box_and_Whisker_Plots</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>4</sourceID>
+        <destID>5</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>9</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>E5C9DB85F4F5C32D7FD184ADE660D09CF13B188</transaction_id>
+                    <Selection>
+                        <value>ans5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(ans5)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(q5_hint1)%</hintMessage>
+            <hintMessage>%(q5_hint2)%</hintMessage>
+            <hintMessage>%(q5_hint3)%</hintMessage>
+            <hintMessage>%(q5_hint4)%</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">ans5</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">%(ans5)%</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>%(skill5)% Box_and_Whisker_Plots</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>11</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>DC9FC1AF47312AD3CC8DD2DF3B08CDE3D4FC79E</transaction_id>
+                    <Selection>
+                        <value>done</value>
+                    </Selection>
+                    <Action>
+                        <value>ButtonPressed</value>
+                    </Action>
+                    <Input>
+                        <value>-1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please click on the highlighted button.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">done</matcherParameter>
+                <matcherParameter name="action">ButtonPressed</matcherParameter>
+                <matcherParameter name="input">-1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>6</sourceID>
+        <destID>7</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <productionRule opportunities="1">
+        <ruleName>%(skill4)%</ruleName>
+        <productionSet>Box_and_Whisker_Plots</productionSet>
+        <label>%(skill4_label)%</label>
+        <hintMessage>%(q4_hint1)%</hintMessage>
+        <hintMessage>%(q4_hint2)%</hintMessage>
+        <hintMessage>%(q4_hint3)%</hintMessage>
+        <hintMessage>%(q4_hint4)%</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>%(skill1)%</ruleName>
+        <productionSet>Box_and_Whisker_Plots</productionSet>
+        <label>%(skill1_label)%</label>
+        <hintMessage>%(q1_hint1)%</hintMessage>
+        <hintMessage>%(q1_hint2)%</hintMessage>
+        <hintMessage>%(q1_hint3)%</hintMessage>
+        <hintMessage>%(q1_hint4)%</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>%(skill2)%</ruleName>
+        <productionSet>Box_and_Whisker_Plots</productionSet>
+        <label>%(skill2_label)%</label>
+        <hintMessage>%(q2_hint1)%</hintMessage>
+        <hintMessage>%(q2_hint2)%</hintMessage>
+        <hintMessage>%(q2_hint3)%</hintMessage>
+        <hintMessage>%(q2_hint4)%</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>%(skill5)%</ruleName>
+        <productionSet>Box_and_Whisker_Plots</productionSet>
+        <label>%(skill5_label)%</label>
+        <hintMessage>%(q5_hint1)%</hintMessage>
+        <hintMessage>%(q5_hint2)%</hintMessage>
+        <hintMessage>%(q5_hint3)%</hintMessage>
+        <hintMessage>%(q5_hint4)%</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>%(skill3)%</ruleName>
+        <productionSet>Box_and_Whisker_Plots</productionSet>
+        <label>%(skill3_label)%</label>
+        <hintMessage>%(q3_hint1)%</hintMessage>
+        <hintMessage>%(q3_hint2)%</hintMessage>
+        <hintMessage>%(q3_hint3)%</hintMessage>
+        <hintMessage>%(q3_hint4)%</hintMessage>
+    </productionRule>
+    <EdgesGroups ordered="false"></EdgesGroups>
+</stateGraph>
+

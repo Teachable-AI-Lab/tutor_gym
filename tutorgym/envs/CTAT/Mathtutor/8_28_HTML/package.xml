@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="8.28 Comparing Box-and-Whisker Graphs" description="Student will compare data displayed on two box and whisker graphs." save_state="true">
+  <Problems>
+    <Problem name="8.28.1" label="Planning vacation" description="The Smiths are going on vacation in July. They are choosing between boating at a lake or hiking in the mountains and wonder how hot it gets in each place." tutor_flag="tutor" model_file="8.28.1.brd" student_interface="8.28.html">
+      <Skills>
+        <Skill name="Identify_value_given_end_of_range" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_quartile_between_distributions" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_distribution_given_criteria" category="Box_and_Whisker_Plots" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="8.28.2" label="Halloween pumpkins" description="Two supermarkets in the area are selling pumpkins for Halloween. The ShopWell supermarket gets its pumpkins from a single local farm. The Apex supermarket gets its pumpkins from many small farms in the area." tutor_flag="tutor" model_file="8.28.2.brd" selection_features="()" student_interface="8.28.html">
+      <Skills>
+        <Skill name="Identify_value_given_end_of_range" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_quartile_between_distributions" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_distribution_given_criteria" category="Box_and_Whisker_Plots" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="8.28.3" label="Bowler team" description="The Strikers bowling team needs to add one new member and is choosing between bowlers, Alisha and Karen." tutor_flag="tutor" model_file="8.28.3.brd" selection_features="()" student_interface="8.28.html">
+      <Skills>
+        <Skill name="Identify_value_given_quartile" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_quartile_between_distributions" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_distribution_given_criteria" category="Box_and_Whisker_Plots" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="8.28.4" label="Taxi driving" description="Sam is going to start driving a taxi for the Reliable cab company. He needs to decide if he will work the daytime shift or the night shift." tutor_flag="tutor" model_file="8.28.4.brd" selection_features="()" student_interface="8.28.html">
+      <Skills>
+        <Skill name="Identify_value_given_quartile" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_quartile_between_distributions" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_distribution_given_criteria" category="Box_and_Whisker_Plots" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="8.28.5" label="Coffee shop location" description="Anita is going to open a coffee shop in town and is deciding between two locations. One is on 8th Street and the other is on 12th Street." tutor_flag="tutor" model_file="8.28.5.brd" selection_features="()" student_interface="8.28.html">
+      <Skills>
+        <Skill name="Identify_value_given_end_of_range" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_quartile_between_distributions" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_distribution_given_criteria" category="Box_and_Whisker_Plots" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="8.28.6" label="Surfing context" description="The WaveRiders surf club is planning a surfing contest. They are deciding between two locations, Sunset Beach and Sandy Point to hold the contest." tutor_flag="tutor" model_file="8.28.6.brd" selection_features="()" student_interface="8.28.html">
+      <Skills>
+        <Skill name="Identify_value_given_end_of_range" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_quartile_between_distributions" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_distribution_given_criteria" category="Box_and_Whisker_Plots" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="8.28.7" label="Celebrity hockey" description="Springfield hosts a celebrity hockey tournament every year with local celebrities playing against a high school hockey team. They are trying to decide which high school team they should invite to play." tutor_flag="tutor" model_file="8.28.7.brd" selection_features="()" student_interface="8.28.html">
+      <Skills>
+        <Skill name="Identify_quartile_between_distributions" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_distribution_given_criteria" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_value_given_end_of_range" category="Box_and_Whisker_Plots" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="8.28.8" label="Movie theater advertising" description="A marketing specialist is planning on advertising at a local movie theater. She has reviewed the daily attendance at each theater for a month." tutor_flag="tutor" model_file="8.28.8.brd" selection_features="()" student_interface="8.28.html">
+      <Skills>
+        <Skill name="Identify_quartile_between_distributions" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_value_given_quartile" category="Box_and_Whisker_Plots" occurrences="1"/>
+        <Skill name="Identify_distribution_given_criteria" category="Box_and_Whisker_Plots" occurrences="1"/>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="8.28 HTML" label="8.28 Comparing Box-and-Whisker Graphs" description="Student will compare data displayed on two box and whisker graphs." status="active" picture="8.28.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="8.28.2" position="1" role="0"/>
+        <Problem name="8.28.3" position="2" role="0"/>
+        <Problem name="8.28.4" position="3" role="0"/>
+        <Problem name="8.28.5" position="4" role="0"/>
+        <Problem name="8.28.6" position="5" role="0"/>
+        <Problem name="8.28.7" position="6" role="0"/>
+        <Problem name="8.28.8" position="7" role="0"/>
+        <Problem name="8.28.1" position="8" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="Identify_distribution_given_criteria" category="Box_and_Whisker_Plots" label="Identify distribution that meets a given criteria" description="Identify distribution that meets a given criteria" position="0"/>
+        <Skill name="Identify_value_given_end_of_range" category="Box_and_Whisker_Plots" label="Identify value given an end of a range" description="Identify value given an end of a range" position="1"/>
+        <Skill name="Identify_quartile_between_distributions" category="Box_and_Whisker_Plots" label="Identify quartile of one distribution with same value as quartile of another distribution" description="Identify quartile of one distribution with same value as quartile of another distribution" position="2"/>
+        <Skill name="Identify_value_given_quartile" category="Box_and_Whisker_Plots" label="Identify value given a quartile" description="Identify value given a quartile" position="3"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.E" label="E. Data Analysis and Probability" description="E. Data Analysis and Probability" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.E.1" label="E.1. Collect, Organize, Display, Interpret" description="E.1. Formulate questions that can be addressed with data and/or collect, organize, display, and analyze data." standard_level="assessment_anchor" parent_name="PA.E" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.E" label="E. Data Analysis and Probability" description="E. Data Analysis and Probability" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="8th" label="8th Grade" description="8th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Collection name="independent" label="Independent Student Problem Sets" description="Independent Student Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.BWP" label="Box and Whisker Plots" description="Box and Whisker Plots" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.8" label="8th Grade" description="8th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.8.SP" label="8.SP. Statistics and Probability" description="8.SP. Statistics and Probability" standard_level="strand" parent_name="CommonCore.8" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="8.28.png" path="Assets"/>
+    <Asset name="mathtutor_8.28_full.png" path="Assets"/>
+    <Asset name="8.28.1.brd" path="FinalBRDs"/>
+    <Asset name="8.28.2.brd" path="FinalBRDs"/>
+    <Asset name="8.28.3.brd" path="FinalBRDs"/>
+    <Asset name="8.28.4.brd" path="FinalBRDs"/>
+    <Asset name="8.28.5.brd" path="FinalBRDs"/>
+    <Asset name="8.28.6.brd" path="FinalBRDs"/>
+    <Asset name="8.28.7.brd" path="FinalBRDs"/>
+    <Asset name="8.28.8.brd" path="FinalBRDs"/>
+    <Asset name="vacation.brd" path="FinalBRDs"/>
+    <Asset name="vacation2.brd" path="FinalBRDs"/>
+    <Asset name="8.28.html" path="HTML"/>
+    <Asset name="8.28.css" path="HTML/Assets"/>
+    <Asset name="bp-comp-1_edit.PNG" path="HTML/Assets"/>
+    <Asset name="bp-comp-1.PNG" path="HTML/Assets"/>
+    <Asset name="bp-comp-2_edit.PNG" path="HTML/Assets"/>
+    <Asset name="bp-comp-2.PNG" path="HTML/Assets"/>
+    <Asset name="bp-comp-3_edit.PNG" path="HTML/Assets"/>
+    <Asset name="bp-comp-3.PNG" path="HTML/Assets"/>
+    <Asset name="bp-comp-4_edit.PNG" path="HTML/Assets"/>
+    <Asset name="bp-comp-4.PNG" path="HTML/Assets"/>
+    <Asset name="bp-comp-5_edit.PNG" path="HTML/Assets"/>
+    <Asset name="bp-comp-5.PNG" path="HTML/Assets"/>
+    <Asset name="bp-comp-6_edit.PNG" path="HTML/Assets"/>
+    <Asset name="bp-comp-6.PNG" path="HTML/Assets"/>
+    <Asset name="bp-comp-7_edit.PNG" path="HTML/Assets"/>
+    <Asset name="bp-comp-7.PNG" path="HTML/Assets"/>
+    <Asset name="bp-comp-8_edit.PNG" path="HTML/Assets"/>
+    <Asset name="bp-comp-8.PNG" path="HTML/Assets"/>
+    <Asset name="8-28_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="8-28_finalTemplate.brd" path="MassProduction"/>
+    <Asset name="8-28_translatable.txt" path="MassProduction"/>
+    <Asset name="compareTemplate.brd" path="MassProduction"/>
+    <Asset name="MassProTemplate.txt" path="MassProduction"/>
+  </Assets>
+</Package>

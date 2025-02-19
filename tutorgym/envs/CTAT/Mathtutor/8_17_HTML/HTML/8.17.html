@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>8.17 Combinations</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/CTAT.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/Mathtutor.css">
+    <link rel="stylesheet" type="text/css" href="Assets/8.17.css">
+
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/jquery.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctat.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctatloader.js"></script>
+  </head>
+
+  <body>
+    <main class="CTATTutor">
+      <h1>Tutor</h1>
+
+      <section class="CTATProblemSolving">
+        <h2>Problem Solving</h2>
+
+        <section class="CTATProblem">
+          <h3>Problem</h3>
+
+          <div id="problem_statement">
+            <div id="statement" class="CTATTextField"></div>
+
+            <ul>
+              <li id="item1" class="CTATTextField"></li>
+              <li id="item2" class="CTATTextField"></li>
+              <li id="item3" class="CTATTextField"></li>
+              <li id="item4" class="CTATTextField"></li>
+              <li id="item5" class="CTATTextField"></li>
+            </ul>
+          </div>
+
+          <div id="problem_questions">
+            <div id="Q1" class="CTATTextField"></div>
+            <div id="Q2" class="CTATTextField"></div>
+            <div id="Q3" class="CTATTextField"></div>
+          </div>
+        </section>
+
+        <section class="CTATSolution">
+          <h3>Solution</h3>
+
+          <div id="option_table" class="threefifths">
+            <table>
+              <thead>
+                <th scope="row">Number of available</th>
+                <th scope="col" id="CellTC1"><div id="TC1" class="CTATTextField"></div></th>
+                <th scope="col" id="CellTC2"><div id="TC2" class="CTATTextField"></div></th>
+                <th scope="col" id="CellTC3"><div id="TC3" class="CTATTextField"></div></th>
+                <th scope="col" id="CellTC4" class="CTATElement"><div id="TC4" class="CTATTextField"></div></th>
+                <th scope="col" id="CellTC5" class="CTATElement"><div id="TC5" class="CTATTextField"></div></th>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td><div id="Q1C1" class="CTATTextInput" tabindex="1"></div></td>
+                  <td><div id="Q1C2" class="CTATTextInput" tabindex="2"></div></td>
+                  <td><div id="Q1C3" class="CTATTextInput" tabindex="3"></div></td>
+                  <td id="CellQ1C4" class="CTATElement"><div id="Q1C4" class="CTATTextInput" tabindex="4"></div></td>
+                  <td id="CellQ1C5" class="CTATElement"><div id="Q1C5" class="CTATTextInput" tabindex="5"></div></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td><div id="Q2C1" class="CTATTextInput" tabindex="8"></div></td>
+                  <td><div id="Q2C2" class="CTATTextInput" tabindex="9"></div></td>
+                  <td><div id="Q2C3" class="CTATTextInput" tabindex="10"></div></td>
+                  <td id="CellQ2C4" class="CTATElement"><div id="Q2C4" class="CTATTextInput" tabindex="11"></div></td>
+                  <td id="CellQ2C5" class="CTATElement"><div id="Q2C5" class="CTATTextInput" tabindex="12"></div></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td><div id="Q3C1" class="CTATTextInput" tabindex="15"></div></td>
+                  <td><div id="Q3C2" class="CTATTextInput" tabindex="16"></div></td>
+                  <td><div id="Q3C3" class="CTATTextInput" tabindex="17"></div></td>
+                  <td id="CellQ3C4" class="CTATElement"><div id="Q3C4" class="CTATTextInput" tabindex="18"></div></td>
+                  <td id="CellQ3C5" class="CTATElement"><div id="Q3C5" class="CTATTextInput" tabindex="19"></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div id="result_table" class="twofifths">
+            <table>
+              <thead>
+                <th scope="col"><div id="TC6" class="CTATTextField"></div></th>
+                <th scope="col" class="operator"></th>
+                <th scope="col"><div id="TC7" class="CTATTextField"></div></th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><div id="Ans1" class="CTATTextInput" tabindex="6"></div></td>
+                  <td class="operator">=</td>
+                  <td><div id="Ans4" class="CTATTextInput" tabindex="7"></div></td>
+                </tr>
+                <tr>
+                  <td><div id="Ans2" class="CTATTextInput" tabindex="13"></div></td>
+                  <td class="operator">=</td>
+                  <td><div id="Ans5" class="CTATTextInput" tabindex="14"></div></td>
+                </tr>
+                <tr>
+                  <td><div id="Ans3" class="CTATTextInput" tabindex="20"></div></td>
+                  <td class="operator">=</td>
+                  <td><div id="Ans6" class="CTATTextInput" tabindex="21"></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <section class="CTATTools">
+        <h2>Tools</h2>
+
+        <div class="CTATButtons">
+          <div class="CTATDoneButton"></div>
+          <div class="CTATHintButton"></div>
+        </div>
+
+        <section class="CTATHints">
+          <h3>Hints</h3>
+          <div class="CTATHintWindow"></div>
+        </section>
+
+        <section class="CTATSkills">
+          <h3>Skills</h3>
+          <div class="CTATSkillWindow"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

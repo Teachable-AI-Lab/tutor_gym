@@ -1,0 +1,92 @@
+<html lang="en-US">
+  <head>
+    <title>Tutor</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/beta/CTAT.css">
+    <link rel="stylesheet" type="text/css" href="Assets/slope_intercept-styles.css">
+
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/jquery.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/ctat.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/ctatloader.js"></script>
+    <script src="Assets/slope_intercept-styles.js"></script>
+  </head>
+
+  <body>
+    <main class="CTATTutor">
+      <h1>Tutor</h1>
+
+      <section class="CTATProblemSolving">
+        <h2>Problem Solving</h2>
+
+        <section class="CTATProblem">
+          <h3>Problem</h3>
+          <div id="problemtext" class="CTATTextField"></div>
+          <div class="Tab"></div>
+          <div id="problem_function" class="CTATTextField" align="center"></div>
+        </section>
+
+        <section id="solution" class="CTATSolution">
+          <h3>Solution</h3>
+          <div id="instructions" class="CTATInstructionsText">Please fill in the left-hand blanks with the mathematical expressions and the right-hand blanks with English descriptions of the expressions.</div>
+          <div class="Tab"></div>
+          <div id="expressions" class="CTATSolutionExpression">
+            <div id="expression" class="CTATTextField">Expression</div>
+            <div class="TabSmaller"></div>
+            <div id="exp1" class="CTATTextInput"></div>
+            <div class="TabSmaller"></div>
+            <div id="exp2" class="CTATTextInput"></div>
+            <div class="TabSmaller"></div>
+            <div id="exp3" class="CTATTextInput"></div>
+            <div class="TabSmaller"></div>
+            <div id="exp4" class="CTATTextInput"></div>
+            <div class="TabSmaller"></div>
+            <div id="exp5" class="CTATTextInput"></div>
+            <div class="TabSmaller"></div>
+            <div id="exp6" class="CTATTextInput"></div>
+          </div>
+          <div id="definitions" class="CTATSolutionDescription">
+            <div id="description" class="CTATTextField">English Description</div>
+            <div class="TabSmaller"></div>
+            <div id="def1" class="CTATComboBox"></div>
+            <div class="TabSmaller"></div>
+            <div id="def2" class="CTATComboBox"></div>
+            <div class="TabSmaller"></div>
+            <div id="def3" class="CTATComboBox"></div>
+            <div class="TabSmaller"></div>
+            <div id="def4" class="CTATComboBox"></div>
+            <div class="TabSmaller"></div>
+            <div id="def5" class="CTATComboBox"></div>
+            <div class="TabSmaller"></div>
+            <div id="def6" class="CTATComboBox"></div>
+          </div>
+       </section>
+      </section>
+
+      <section class="CTATTools">
+        <h2>Tools</h2>
+
+        <section class="CTATHints">
+          <h3>Hints</h3>
+          <div class="CTATButtons">
+            <div class="CTATHintButton"></div>
+            <div class="CTATInstructionsButton">
+              <button class="unselectable CTAT-instructions-button">
+                <div class="CTAT-instructions-button--icon">i</div>
+                <div class="CTAT-instructions-button--text">Instructions</div>
+              </button>
+            </div>
+          </div>
+          <div class="CTATHintWindow" id="hint"></div>
+        </section>
+
+        <section class="CTATSkills">
+          <h3>Skills</h3>
+          <div class="CTATSkillWindow" id="skills"></div>
+          <div class="CTATButtons">
+            <div class="CTATDoneButton"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

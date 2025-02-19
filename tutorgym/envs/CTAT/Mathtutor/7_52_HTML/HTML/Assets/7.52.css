@@ -1,0 +1,33 @@
+.CTATProblemSolving {
+  flex-direction: column;
+}
+.CTATProblem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.CTATSolution {
+  display: flex;
+  flex-direction: column;
+  min-height: 255px;
+  flex: none;
+}
+.CTATSolution .solution {
+  align-self: flex-end;
+  margin-top: auto;
+}
+.CTATTextInput {
+  width: 20%;
+}
+.CTATTextInput > input[type="text"] {
+  width: 100%;
+}
+.CTATComboBox {
+  width: calc(60% - 77px);
+}
+.CTATComboBox > select {
+  width: 100%;
+}
+#answer, #answer1, #answer3, #answer5 {
+  width: 50px;
+}

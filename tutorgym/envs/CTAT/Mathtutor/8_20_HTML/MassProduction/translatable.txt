@@ -1,0 +1,399 @@
+Problem Name	Problem 1
+%(startStateNodeName)%	
+%(start-state-selection)%	expression
+%(start-state-value)%	(4x^2 y^4)(3x^3 y^3)
+%(secondTermDesc)%	second set of parentheses
+%(inSecondTermParens)%	inside the second set of parentheses
+%(constant-1)%	4
+%(constant-2)%	3
+%(missingConst)%	 
+%(x-1)%	x^2
+%(x-2)%	x^3
+%(missingX)%	 
+%(y-1)%	y^4
+%(y-2)%	y^3
+%(missingY)%	 
+%(constant-f)%	12
+%(x-f)%	x^5
+%(y-f)%	y^7
+%(xexp-1)%	2
+%(xexp-2)%	3
+%(yexp-1)%	4
+%(yexp-2)%	3
+%(final-expression)%	12x\\^5\\s*y\\^7
+%(final-expressionh)%	12x^5 y^7
+%(buggy-message)%	No, this is not correct.
+%(highlight)%	Please click on the highlighted button.
+%(coefficient)%	The expression contains two terms (in parentheses). Each term has a coefficient (a number) and one or two variable factors (x or y, possibly with an exponent). You want the coefficient from the first term.
+%(coefficient2)%	Now you want to look at the second term (second set of parentheses) in the expression. You want the coefficient (a number, not a variable or exponent) from the second term.
+%(leading-num)%	The first term's coefficient is the leading number in the first set of parentheses.
+%(leading-num2)%	The second term's coefficient is the leading number in the second set of parentheses.  
+%(enter-val)%	Please enter '4' in the highlighted field.
+%(enter-val2)%	Please enter '3' in the highlighted field.
+%(factor)%	Now you want the factor from the first term that is some power of the variable y. Remember, factors can include exponents.
+%(find-var)%	Try to find the variable y, possibly with an exponent, inside the first set of parentheses.
+%(enter-val3)%	Please enter 'y^4' in the highlighted field.
+%(factor2)%	Now you want the factor from the second term that is some power of the variable y. Remember, factors can include exponents.
+%(find-var)%	Try to find the variable y, possibly with an exponent, inside the second set of parentheses.  
+%(enter-val4)%	Please enter 'y^3' in the highlighted field.
+%(simplify)%	You have 4*3. Simplify this expression.
+%(simplify2)%	To simplify, multiply the numbers together.
+%(mult-consts)%	Multiplying 4*3 yields 12.
+%(factor3)%	Now you want the factor from the second term that is some power of the variable x. Remember, factors can include exponents.
+%(find-x)%	Try to find the variable x, possibly with an exponent, inside the second set of parentheses.  
+%(enter-val4)%	Please enter 'x^3' in the highlighted field.
+%(factor4)%	Now you want the factor from the first term that is some power of the variable x. Remember, factors can include exponents.
+%(another-var)%	Try to find the variable x, possibly with an exponent, inside the first set of parentheses.  
+%(enter-val5)%	Please enter 'x^2' in the highlighted field.
+%(mult-var)%	x^2 and x^3 can be multiplied by adding the exponent of each factor.
+%(exps)%	The exponents in x^2 and x^3 are 2 and 3.
+%(mult-result)%	Multiplying x^2 and x^3 by adding the exponents results in x^5.
+%(mult-exps)%	y^4 and y^3 can be multiplied by adding the exponent of each factor.
+%(exponentsY)%	The exponents in y^4 and y^3 are 4 and 3.
+%(mult-result2)%	Multiplying y^4 and y^3 by adding the exponents results in y^7.
+%(combo)%	Combine the simplified terms above into one expression.
+%(type-result)%	Type 12x^5 y^7 in the Result field. Simplify the expression if necessary.
+%(second-coeff)%	The expression contains two terms (in parentheses). Each term has a coefficient (a number) and one or two variable factors (x or y, possibly with an exponent). You want the coefficient from the second term.
+%(first-coeff)%	Now you want to look at the first term (first set of parentheses) in the expression. You want the coefficient (a number, not a variable or exponent) from the first term.
+Problem Name	Problem 2
+%(startStateNodeName)%	state11
+%(start-state-selection)%	expression
+%(start-state-value)%	(3x^5 y^4)(2y^4)
+%(secondTermDesc)%	second set of parentheses
+%(inSecondTermParens)%	inside the second set of parentheses
+%(constant-1)%	3
+%(constant-2)%	2
+%(missingConst)%	 
+%(x-1)%	x^5
+%(x-2)%	1
+%(missingX)%	If no x is present, then the number 1 will hold the place and keep the same value.
+%(y-1)%	y^4
+%(y-2)%	y^4
+%(missingY)%	 
+%(constant-f)%	6
+%(x-f)%	x^5
+%(y-f)%	y^8
+%(xexp-1)%	5
+%(xexp-2)%	0 (x^0 is always 1)
+%(yexp-1)%	4
+%(yexp-2)%	4
+%(final-expression)%	6x\\^5\\s*y\\^8
+%(final-expressionh)%	6x^5 y^8
+%(buggy-message)%	No, this is not correct.
+%(highlight)%	Please click on the highlighted button.
+%(coefficient)%	The expression contains two terms (in parentheses). Each term has a coefficient (a number) and one or two variable factors (x or y, possibly with an exponent). You want the coefficient from the first term.
+%(coefficient2)%	Now you want to look at the second term (second set of parentheses) in the expression. You want the coefficient (a number, not a variable or exponent) from the second term.
+%(leading-num)%	The first term's coefficient is the leading number in the first set of parentheses.
+%(leading-num2)%	The second term's coefficient is the leading number in the second set of parentheses.  
+%(enter-val)%	Please enter '3' in the highlighted field.
+%(enter-val2)%	Please enter '2' in the highlighted field.
+%(factor)%	Now you want the factor from the first term that is some power of the variable y. Remember, factors can include exponents.
+%(find-var)%	Try to find the variable y, possibly with an exponent, inside the first set of parentheses.
+%(enter-val3)%	Please enter 'y^4' in the highlighted field.
+%(factor2)%	Now you want the factor from the second term that is some power of the variable y. Remember, factors can include exponents.
+%(find-var)%	Try to find the variable y, possibly with an exponent, inside the second set of parentheses.  
+%(enter-val4)%	Please enter 'y^4' in the highlighted field.
+%(simplify)%	You have 3*2. Simplify this expression.
+%(simplify2)%	To simplify, multiply the numbers together.
+%(mult-consts)%	Multiplying 3*2 yields 6.
+%(factor3)%	Now you want the factor from the second term that is some power of the variable x. Remember, factors can include exponents.
+%(find-x)%	Try to find the variable x, possibly with an exponent, inside the second set of parentheses. If no x is present, then the number 1 will hold the place and keep the same value.
+%(enter-val4)%	Please enter '1' in the highlighted field.
+%(factor4)%	Now you want the factor from the first term that is some power of the variable x. Remember, factors can include exponents.
+%(another-var)%	Try to find the variable x, possibly with an exponent, inside the first set of parentheses. If no x is present, then the number 1 will hold the place and keep the same value.
+%(enter-val5)%	Please enter 'x^5' in the highlighted field.
+%(mult-var)%	x^5 and 1 can be multiplied by adding the exponent of each factor.
+%(exps)%	The exponents in x^5 and 1 are 5 and 0 (x^0 is always 1).
+%(mult-result)%	Multiplying x^5 and 1 by adding the exponents results in x^5.
+%(mult-exps)%	y^4 and y^4 can be multiplied by adding the exponent of each factor.
+%(exponentsY)%	The exponents in y^4 and y^4 are 4 and 4.
+%(mult-result2)%	Multiplying y^4 and y^4 by adding the exponents results in y^8.
+%(combo)%	Combine the simplified terms above into one expression.
+%(type-result)%	Type 6x^5 y^8 in the Result field. Simplify the expression if necessary.
+%(second-coeff)%	The expression contains two terms (in parentheses). Each term has a coefficient (a number) and one or two variable factors (x or y, possibly with an exponent). You want the coefficient from the second term.
+%(first-coeff)%	Now you want to look at the first term (first set of parentheses) in the expression. You want the coefficient (a number, not a variable or exponent) from the first term.
+Problem Name	Problem 3
+%(startStateNodeName)%	state7
+%(start-state-selection)%	expression
+%(start-state-value)%	(4x^5 y^5)(y^2)
+%(secondTermDesc)%	part of the expression outside the parentheses ()
+%(inSecondTermParens)%	in the part of the expression outside the parentheses ()
+%(constant-1)%	4
+%(constant-2)%	1
+%(missingConst)%	If no coefficient is present, then the coefficient is 1.
+%(x-1)%	x^5
+%(x-2)%	1
+%(missingX)%	If no x is present, then the number 1 will hold the place and keep the same value.
+%(y-1)%	y^5
+%(y-2)%	y^2
+%(missingY)%	 
+%(constant-f)%	4
+%(x-f)%	x^5
+%(y-f)%	y^7
+%(xexp-1)%	5
+%(xexp-2)%	0 (x^0 is always 1)
+%(yexp-1)%	5
+%(yexp-2)%	2
+%(final-expression)%	4x\\^5\\s*y\\^7
+%(final-expressionh)%	4x^5 y^7
+%(buggy-message)%	No, this is not correct.
+%(highlight)%	Please click on the highlighted button.
+%(coefficient)%	The expression contains two terms (in parentheses). Each term has a coefficient (a number) and one or two variable factors (x or y, possibly with an exponent). You want the coefficient from the first term.
+%(coefficient2)%	Now you want to look at the second term (second set of parentheses) in the expression. You want the coefficient (a number, not a variable or exponent) from the second term.
+%(leading-num)%	The first term's coefficient is the leading number in the first set of parentheses.
+%(leading-num2)%	The second term's coefficient is the leading number in the part of the expression outside the parentheses (). If no coefficient is present, then the coefficient is 1.
+%(enter-val)%	Please enter '4' in the highlighted field.
+%(enter-val2)%	Please enter '1' in the highlighted field.
+%(factor)%	Now you want the factor from the first term that is some power of the variable y. Remember, factors can include exponents.
+%(find-var)%	Try to find the variable y, possibly with an exponent, inside the first set of parentheses.
+%(enter-val3)%	Please enter 'y^5' in the highlighted field.
+%(factor2)%	Now you want the factor from the second term that is some power of the variable y. Remember, factors can include exponents.
+%(find-var)%	Try to find the variable y, possibly with an exponent, in the part of the expression outside the parentheses ().  
+%(enter-val4)%	Please enter 'y^2' in the highlighted field.
+%(simplify)%	You have 4*1. Simplify this expression.
+%(simplify2)%	To simplify, multiply the numbers together.
+%(mult-consts)%	Multiplying 4*1 yields 4.
+%(factor3)%	Now you want the factor from the second term that is some power of the variable x. Remember, factors can include exponents.
+%(find-x)%	Try to find the variable x, possibly with an exponent, in the part of the expression outside the parentheses (). If no x is present, then the number 1 will hold the place and keep the same value.
+%(enter-val4)%	Please enter '1' in the highlighted field.
+%(factor4)%	Now you want the factor from the first term that is some power of the variable x. Remember, factors can include exponents.
+%(another-var)%	Try to find the variable x, possibly with an exponent, inside the first set of parentheses. If no x is present, then the number 1 will hold the place and keep the same value.
+%(enter-val5)%	Please enter 'x^5' in the highlighted field.
+%(mult-var)%	x^5 and 1 can be multiplied by adding the exponent of each factor.
+%(exps)%	The exponents in x^5 and 1 are 5 and 0 (x^0 is always 1).
+%(mult-result)%	Multiplying x^5 and 1 by adding the exponents results in x^5.
+%(mult-exps)%	y^5 and y^2 can be multiplied by adding the exponent of each factor.
+%(exponentsY)%	The exponents in y^5 and y^2 are 5 and 2.
+%(mult-result2)%	Multiplying y^5 and y^2 by adding the exponents results in y^7.
+%(combo)%	Combine the simplified terms above into one expression.
+%(type-result)%	Type 4x^5 y^7 in the Result field. Simplify the expression if necessary.
+%(second-coeff)%	The expression contains two terms (in parentheses). Each term has a coefficient (a number) and one or two variable factors (x or y, possibly with an exponent). You want the coefficient from the second term.
+%(first-coeff)%	Now you want to look at the first term (first set of parentheses) in the expression. You want the coefficient (a number, not a variable or exponent) from the first term.
+Problem Name	Problem 4
+%(startStateNodeName)%	state2
+%(start-state-selection)%	expression
+%(start-state-value)%	(5x^2 y^3)(2x^4 y^4)
+%(secondTermDesc)%	second set of parentheses
+%(inSecondTermParens)%	inside the second set of parentheses
+%(constant-1)%	5
+%(constant-2)%	2
+%(missingConst)%	 
+%(x-1)%	x^2
+%(x-2)%	x^4
+%(missingX)%	 
+%(y-1)%	y^3
+%(y-2)%	y^4
+%(missingY)%	 
+%(constant-f)%	10
+%(x-f)%	x^6
+%(y-f)%	y^7
+%(xexp-1)%	2
+%(xexp-2)%	4
+%(yexp-1)%	3
+%(yexp-2)%	4
+%(final-expression)%	10x\\^6\\s*y\\^7
+%(final-expressionh)%	10x^6 y^7
+%(buggy-message)%	No, this is not correct.
+%(highlight)%	Please click on the highlighted button.
+%(coefficient)%	The expression contains two terms (in parentheses). Each term has a coefficient (a number) and one or two variable factors (x or y, possibly with an exponent). You want the coefficient from the first term.
+%(coefficient2)%	Now you want to look at the second term (second set of parentheses) in the expression. You want the coefficient (a number, not a variable or exponent) from the second term.
+%(leading-num)%	The first term's coefficient is the leading number in the first set of parentheses.
+%(leading-num2)%	The second term's coefficient is the leading number in the second set of parentheses.  
+%(enter-val)%	Please enter '5' in the highlighted field.
+%(enter-val2)%	Please enter '2' in the highlighted field.
+%(factor)%	Now you want the factor from the first term that is some power of the variable y. Remember, factors can include exponents.
+%(find-var)%	Try to find the variable y, possibly with an exponent, inside the first set of parentheses.
+%(enter-val3)%	Please enter 'y^3' in the highlighted field.
+%(factor2)%	Now you want the factor from the second term that is some power of the variable y. Remember, factors can include exponents.
+%(find-var)%	Try to find the variable y, possibly with an exponent, inside the second set of parentheses.  
+%(enter-val4)%	Please enter 'y^4' in the highlighted field.
+%(simplify)%	You have 5*2. Simplify this expression.
+%(simplify2)%	To simplify, multiply the numbers together.
+%(mult-consts)%	Multiplying 5*2 yields 10.
+%(factor3)%	Now you want the factor from the second term that is some power of the variable x. Remember, factors can include exponents.
+%(find-x)%	Try to find the variable x, possibly with an exponent, inside the second set of parentheses.  
+%(enter-val4)%	Please enter 'x^4' in the highlighted field.
+%(factor4)%	Now you want the factor from the first term that is some power of the variable x. Remember, factors can include exponents.
+%(another-var)%	Try to find the variable x, possibly with an exponent, inside the first set of parentheses.  
+%(enter-val5)%	Please enter 'x^2' in the highlighted field.
+%(mult-var)%	x^2 and x^4 can be multiplied by adding the exponent of each factor.
+%(exps)%	The exponents in x^2 and x^4 are 2 and 4.
+%(mult-result)%	Multiplying x^2 and x^4 by adding the exponents results in x^6.
+%(mult-exps)%	y^3 and y^4 can be multiplied by adding the exponent of each factor.
+%(exponentsY)%	The exponents in y^3 and y^4 are 3 and 4.
+%(mult-result2)%	Multiplying y^3 and y^4 by adding the exponents results in y^7.
+%(combo)%	Combine the simplified terms above into one expression.
+%(type-result)%	Type 10x^6 y^7 in the Result field. Simplify the expression if necessary.
+%(second-coeff)%	The expression contains two terms (in parentheses). Each term has a coefficient (a number) and one or two variable factors (x or y, possibly with an exponent). You want the coefficient from the second term.
+%(first-coeff)%	Now you want to look at the first term (first set of parentheses) in the expression. You want the coefficient (a number, not a variable or exponent) from the first term.
+Problem Name	Problem 5
+%(startStateNodeName)%	
+%(start-state-selection)%	expression
+%(start-state-value)%	(5x^4 y^3)(4x^4 y^2)
+%(secondTermDesc)%	second set of parentheses
+%(inSecondTermParens)%	inside the second set of parentheses
+%(constant-1)%	5
+%(constant-2)%	4
+%(missingConst)%	 
+%(x-1)%	x^4
+%(x-2)%	x^4
+%(missingX)%	 
+%(y-1)%	y^3
+%(y-2)%	y^2
+%(missingY)%	 
+%(constant-f)%	20
+%(x-f)%	x^8
+%(y-f)%	y^5
+%(xexp-1)%	4
+%(xexp-2)%	4
+%(yexp-1)%	3
+%(yexp-2)%	2
+%(final-expression)%	20x\\^8\\s*y\\^5
+%(final-expressionh)%	20x^8 y^5
+%(buggy-message)%	No, this is not correct.
+%(highlight)%	Please click on the highlighted button.
+%(coefficient)%	The expression contains two terms (in parentheses). Each term has a coefficient (a number) and one or two variable factors (x or y, possibly with an exponent). You want the coefficient from the first term.
+%(coefficient2)%	Now you want to look at the second term (second set of parentheses) in the expression. You want the coefficient (a number, not a variable or exponent) from the second term.
+%(leading-num)%	The first term's coefficient is the leading number in the first set of parentheses.
+%(leading-num2)%	The second term's coefficient is the leading number in the second set of parentheses.  
+%(enter-val)%	Please enter '5' in the highlighted field.
+%(enter-val2)%	Please enter '4' in the highlighted field.
+%(factor)%	Now you want the factor from the first term that is some power of the variable y. Remember, factors can include exponents.
+%(find-var)%	Try to find the variable y, possibly with an exponent, inside the first set of parentheses.
+%(enter-val3)%	Please enter 'y^3' in the highlighted field.
+%(factor2)%	Now you want the factor from the second term that is some power of the variable y. Remember, factors can include exponents.
+%(find-var)%	Try to find the variable y, possibly with an exponent, inside the second set of parentheses.  
+%(enter-val4)%	Please enter 'y^2' in the highlighted field.
+%(simplify)%	You have 5*4. Simplify this expression.
+%(simplify2)%	To simplify, multiply the numbers together.
+%(mult-consts)%	Multiplying 5*4 yields 20.
+%(factor3)%	Now you want the factor from the second term that is some power of the variable x. Remember, factors can include exponents.
+%(find-x)%	Try to find the variable x, possibly with an exponent, inside the second set of parentheses.  
+%(enter-val4)%	Please enter 'x^4' in the highlighted field.
+%(factor4)%	Now you want the factor from the first term that is some power of the variable x. Remember, factors can include exponents.
+%(another-var)%	Try to find the variable x, possibly with an exponent, inside the first set of parentheses.  
+%(enter-val5)%	Please enter 'x^4' in the highlighted field.
+%(mult-var)%	x^4 and x^4 can be multiplied by adding the exponent of each factor.
+%(exps)%	The exponents in x^4 and x^4 are 4 and 4.
+%(mult-result)%	Multiplying x^4 and x^4 by adding the exponents results in x^8.
+%(mult-exps)%	y^3 and y^2 can be multiplied by adding the exponent of each factor.
+%(exponentsY)%	The exponents in y^3 and y^2 are 3 and 2.
+%(mult-result2)%	Multiplying y^3 and y^2 by adding the exponents results in y^5.
+%(combo)%	Combine the simplified terms above into one expression.
+%(type-result)%	Type 20x^8 y^5 in the Result field. Simplify the expression if necessary.
+%(second-coeff)%	The expression contains two terms (in parentheses). Each term has a coefficient (a number) and one or two variable factors (x or y, possibly with an exponent). You want the coefficient from the second term.
+%(first-coeff)%	Now you want to look at the first term (first set of parentheses) in the expression. You want the coefficient (a number, not a variable or exponent) from the first term.
+Problem Name	Problem 6
+%(startStateNodeName)%	
+%(start-state-selection)%	expression
+%(start-state-value)%	(4x^6 y^5)(6y^4)
+%(secondTermDesc)%	second set of parentheses
+%(inSecondTermParens)%	inside the second set of parentheses
+%(constant-1)%	4
+%(constant-2)%	6
+%(missingConst)%	 
+%(x-1)%	x^6
+%(x-2)%	1
+%(missingX)%	If no x is present, then the number 1 will hold the place and keep the same value.
+%(y-1)%	y^5
+%(y-2)%	y^4
+%(missingY)%	 
+%(constant-f)%	24
+%(x-f)%	x^6
+%(y-f)%	y^9
+%(xexp-1)%	6
+%(xexp-2)%	0 (x^0 is always 1)
+%(yexp-1)%	5
+%(yexp-2)%	4
+%(final-expression)%	24x\\^6\\s*y\\^9
+%(final-expressionh)%	24x^6 y^9
+%(buggy-message)%	No, this is not correct.
+%(highlight)%	Please click on the highlighted button.
+%(coefficient)%	The expression contains two terms (in parentheses). Each term has a coefficient (a number) and one or two variable factors (x or y, possibly with an exponent). You want the coefficient from the first term.
+%(coefficient2)%	Now you want to look at the second term (second set of parentheses) in the expression. You want the coefficient (a number, not a variable or exponent) from the second term.
+%(leading-num)%	The first term's coefficient is the leading number in the first set of parentheses.
+%(leading-num2)%	The second term's coefficient is the leading number in the second set of parentheses.  
+%(enter-val)%	Please enter '4' in the highlighted field.
+%(enter-val2)%	Please enter '6' in the highlighted field.
+%(factor)%	Now you want the factor from the first term that is some power of the variable y. Remember, factors can include exponents.
+%(find-var)%	Try to find the variable y, possibly with an exponent, inside the first set of parentheses.
+%(enter-val3)%	Please enter 'y^5' in the highlighted field.
+%(factor2)%	Now you want the factor from the second term that is some power of the variable y. Remember, factors can include exponents.
+%(find-var)%	Try to find the variable y, possibly with an exponent, inside the second set of parentheses.  
+%(enter-val4)%	Please enter 'y^4' in the highlighted field.
+%(simplify)%	You have 4*6. Simplify this expression.
+%(simplify2)%	To simplify, multiply the numbers together.
+%(mult-consts)%	Multiplying 4*6 yields 24.
+%(factor3)%	Now you want the factor from the second term that is some power of the variable x. Remember, factors can include exponents.
+%(find-x)%	Try to find the variable x, possibly with an exponent, inside the second set of parentheses. If no x is present, then the number 1 will hold the place and keep the same value.
+%(enter-val4)%	Please enter '1' in the highlighted field.
+%(factor4)%	Now you want the factor from the first term that is some power of the variable x. Remember, factors can include exponents.
+%(another-var)%	Try to find the variable x, possibly with an exponent, inside the first set of parentheses. If no x is present, then the number 1 will hold the place and keep the same value.
+%(enter-val5)%	Please enter 'x^6' in the highlighted field.
+%(mult-var)%	x^6 and 1 can be multiplied by adding the exponent of each factor.
+%(exps)%	The exponents in x^6 and 1 are 6 and 0 (x^0 is always 1).
+%(mult-result)%	Multiplying x^6 and 1 by adding the exponents results in x^6.
+%(mult-exps)%	y^5 and y^4 can be multiplied by adding the exponent of each factor.
+%(exponentsY)%	The exponents in y^5 and y^4 are 5 and 4.
+%(mult-result2)%	Multiplying y^5 and y^4 by adding the exponents results in y^9.
+%(combo)%	Combine the simplified terms above into one expression.
+%(type-result)%	Type 24x^6 y^9 in the Result field. Simplify the expression if necessary.
+%(second-coeff)%	The expression contains two terms (in parentheses). Each term has a coefficient (a number) and one or two variable factors (x or y, possibly with an exponent). You want the coefficient from the second term.
+%(first-coeff)%	Now you want to look at the first term (first set of parentheses) in the expression. You want the coefficient (a number, not a variable or exponent) from the first term.
+Problem Name	Problem 7
+%(startStateNodeName)%	
+%(start-state-selection)%	expression
+%(start-state-value)%	(7xy^5)(x^5)
+%(secondTermDesc)%	second set of parentheses
+%(inSecondTermParens)%	inside the second set of parentheses
+%(constant-1)%	7
+%(constant-2)%	1
+%(missingConst)%	If no coefficient is present, then the coefficient is 1.
+%(x-1)%	x
+%(x-2)%	x^5
+%(missingX)%	 
+%(y-1)%	y^5
+%(y-2)%	1
+%(missingY)%	If no y is present, then the number 1 will hold the place and keep the same value.
+%(constant-f)%	7
+%(x-f)%	x^6
+%(y-f)%	y^5
+%(xexp-1)%	1 (1 is implied when no exponent is written)
+%(xexp-2)%	5
+%(yexp-1)%	5
+%(yexp-2)%	0 (y^0 is always 1)
+%(final-expression)%	7x\\^6\\s*y\\^5
+%(final-expressionh)%	7x^6 y^5
+%(buggy-message)%	No, this is not correct.
+%(highlight)%	Please click on the highlighted button.
+%(coefficient)%	The expression contains two terms (in parentheses). Each term has a coefficient (a number) and one or two variable factors (x or y, possibly with an exponent). You want the coefficient from the first term.
+%(coefficient2)%	Now you want to look at the second term (second set of parentheses) in the expression. You want the coefficient (a number, not a variable or exponent) from the second term.
+%(leading-num)%	The first term's coefficient is the leading number in the first set of parentheses.
+%(leading-num2)%	The second term's coefficient is the leading number in the second set of parentheses. If no coefficient is present, then the coefficient is 1.
+%(enter-val)%	Please enter '7' in the highlighted field.
+%(enter-val2)%	Please enter '1' in the highlighted field.
+%(factor)%	Now you want the factor from the first term that is some power of the variable y. Remember, factors can include exponents.
+%(find-var)%	Try to find the variable y, possibly with an exponent, inside the first set of parentheses.
+%(enter-val3)%	Please enter 'y^5' in the highlighted field.
+%(factor2)%	Now you want the factor from the second term that is some power of the variable y. Remember, factors can include exponents.
+%(find-var)%	Try to find the variable y, possibly with an exponent, inside the second set of parentheses. If no y is present, then the number 1 will hold the place and keep the same value.
+%(enter-val4)%	Please enter '1' in the highlighted field.
+%(simplify)%	You have 7*1. Simplify this expression.
+%(simplify2)%	To simplify, multiply the numbers together.
+%(mult-consts)%	Multiplying 7*1 yields 7.
+%(factor3)%	Now you want the factor from the second term that is some power of the variable x. Remember, factors can include exponents.
+%(find-x)%	Try to find the variable x, possibly with an exponent, inside the second set of parentheses.  
+%(enter-val4)%	Please enter 'x^5' in the highlighted field.
+%(factor4)%	Now you want the factor from the first term that is some power of the variable x. Remember, factors can include exponents.
+%(another-var)%	Try to find the variable x, possibly with an exponent, inside the first set of parentheses.  
+%(enter-val5)%	Please enter 'x' in the highlighted field.
+%(mult-var)%	x and x^5 can be multiplied by adding the exponent of each factor.
+%(exps)%	The exponents in x and x^5 are 1 (1 is implied when no exponent is written) and 5.
+%(mult-result)%	Multiplying x and x^5 by adding the exponents results in x^6.
+%(mult-exps)%	y^5 and 1 can be multiplied by adding the exponent of each factor.
+%(exponentsY)%	The exponents in y^5 and 1 are 5 and 0 (y^0 is always 1).
+%(mult-result2)%	Multiplying y^5 and 1 by adding the exponents results in y^5.
+%(combo)%	Combine the simplified terms above into one expression.
+%(type-result)%	Type 7x^6 y^5 in the Result field. Simplify the expression if necessary.
+%(second-coeff)%	The expression contains two terms (in parentheses). Each term has a coefficient (a number) and one or two variable factors (x or y, possibly with an exponent). You want the coefficient from the second term.
+%(first-coeff)%	Now you want to look at the first term (first set of parentheses) in the expression. You want the coefficient (a number, not a variable or exponent) from the first term.

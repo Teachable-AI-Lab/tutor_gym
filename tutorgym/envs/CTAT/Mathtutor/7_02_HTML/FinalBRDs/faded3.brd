@@ -1,0 +1,1029 @@
+<?xml version="1.0" standalone="yes"?>
+
+<stateGraph firstCheckAllStates="true" caseInsensitive="true" unordered="true" lockWidget="true" version="2.1" suppressStudentFeedback="false" highlightRightSelection="true" startStateNodeName="state1">
+    <startNodeMessages>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartProblem</MessageType>
+                <ProblemName>faded3</ProblemName>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceIdentification</MessageType>
+                <Guid>D14EBF455B9A06732B4BAFC4E5A9C62CFDED208</Guid>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>problem_function</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name problem_function)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommComboBox</WidgetType>
+                <DorminName>def6</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate comboBox (slot name) (slot value) (multislot values))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (comboBox (name def6) (values "-----Select a Definition-----" "the total amount from his paycheck that is saved" "the amount of money" "the cost of the skateboard" "the amount of money Raymond gets paid" "the amount he has in savings right now" "the amount he'll have in savings after he's paid" "the portion of his paycheck that goes into savings" )))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommComboBox</WidgetType>
+                <DorminName>def5</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate comboBox (slot name) (slot value) (multislot values))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (comboBox (name def5)  (values "-----Select a Definition-----" "the total amount from his paycheck that is saved" "the amount of money" "the cost of the skateboard" "the amount of money Raymond gets paid" "the amount he has in savings right now" "the amount he'll have in savings after he's paid" "the portion of his paycheck that goes into savings" )))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommComboBox</WidgetType>
+                <DorminName>def4</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate comboBox (slot name) (slot value) (multislot values))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (comboBox (name def4) (values "-----Select a Definition-----" "the total amount from his paycheck that is saved" "the amount of money" "the cost of the skateboard" "the amount of money Raymond gets paid" "the amount he has in savings right now" "the amount he'll have in savings after he's paid" "the portion of his paycheck that goes into savings" )))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommComboBox</WidgetType>
+                <DorminName>def3</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate comboBox (slot name) (slot value) (multislot values))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (comboBox (name def3) (values "-----Select a Definition-----" "the total amount from his paycheck that is saved" "the amount of money" "the cost of the skateboard" "the amount of money Raymond gets paid" "the amount he has in savings right now" "the amount he'll have in savings after he's paid" "the portion of his paycheck that goes into savings" )))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommComboBox</WidgetType>
+                <DorminName>def2</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate comboBox (slot name) (slot value) (multislot values))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (comboBox (name def2)  (values "-----Select a Definition-----" "the total amount from his paycheck that is saved" "the amount of money" "the cost of the skateboard" "the amount of money Raymond gets paid" "the amount he has in savings right now" "the amount he'll have in savings after he's paid" "the portion of his paycheck that goes into savings" )))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommComboBox</WidgetType>
+                <DorminName>def1</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate comboBox (slot name) (slot value) (multislot values))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (comboBox (name def1) (values "-----Select a Definition-----" "the total amount from his paycheck that is saved" "the amount of money" "the cost of the skateboard" "the amount of money Raymond gets paid" "the amount he has in savings right now" "the amount he'll have in savings after he's paid" "the portion of his paycheck that goes into savings" )))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>exp6</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name exp6)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>exp5</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name exp5)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>exp4</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name exp4)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>exp3</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name exp3)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>exp2</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name exp2)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>exp1</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name exp1)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>instructions</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name instructions)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>problemtext</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name problemtext)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommDoneButton</WidgetType>
+                <DorminName>done</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate button (slot name))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (button (name done)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommDoneButton</WidgetType>
+                <DorminName>done</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate button (slot name))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (button (name done)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>4D4DDA465C235D18EDACCCAB109BF9873E97E43</transaction_id>
+                <Selection>
+                    <value>problemtext</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Raymond has been saving up to buy a new skateboard. Right now, he has $75 in savings and he almost has enough to afford the one he wants the most. Since Raymond always saves 1/5 of his paycheck from work, he hopes to have enough for the skateboard the next time he gets paid. Using x and y as your variables, you can represent this situation with this equation:</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>222F92ECCBF79B6570EF3F9A2E752C04271BFC9</transaction_id>
+                <Selection>
+                    <value>problem_function</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>y=(1/5)x+75</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7EF7943191BFD35928EC8372597AD28B37A3F00</transaction_id>
+                <Selection>
+                    <value>instructions</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Please fill in the left-hand blanks with the mathematical expressions and the right-hand blanks with English descriptions of the expressions.</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>8550D6B92E69B878F960429CBE931F53A0B8D5F</transaction_id>
+                <Selection>
+                    <value>def1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the total amount from his paycheck that is saved</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>3692D91907DB785BEEA8C4A46EEC6794D81FA2C</transaction_id>
+                <Selection>
+                    <value>def2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the amount of money Raymond gets paid</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>22B0FEB1C51D19464A1E98ED2F59FBD4467372D</transaction_id>
+                <Selection>
+                    <value>def3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the portion of his paycheck that goes into savings</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>BA67FED6ED97CA420F76501CA2A94538A3C0A1E</transaction_id>
+                <Selection>
+                    <value>exp4</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextField</value>
+                </Action>
+                <Input>
+                    <value>y</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>AF20155D30B4F140A0318093D2B4C5AE2788E5C</transaction_id>
+                <Selection>
+                    <value>def5</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the amount he has in savings right now</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>83E439DA574C7A0774CC5AC52D8D0F24F362880</transaction_id>
+                <Selection>
+                    <value>def6</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the amount he'll have in savings after he's paid</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartStateEnd</MessageType>
+            </properties>
+        </message>
+    </startNodeMessages>
+    <node locked="false" doneState="false">
+        <text>faded3</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>162</x>
+            <y>28</y>
+            <width>37</width>
+            <height>25</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state1</text>
+        <uniqueID>2</uniqueID>
+        <dimension>
+            <x>157</x>
+            <y>138</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state2</text>
+        <uniqueID>3</uniqueID>
+        <dimension>
+            <x>157</x>
+            <y>248</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state3</text>
+        <uniqueID>4</uniqueID>
+        <dimension>
+            <x>157</x>
+            <y>358</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state4</text>
+        <uniqueID>5</uniqueID>
+        <dimension>
+            <x>157</x>
+            <y>468</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state5</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>157</x>
+            <y>578</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state6</text>
+        <uniqueID>7</uniqueID>
+        <dimension>
+            <x>157</x>
+            <y>688</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="true">
+        <text>Done</text>
+        <uniqueID>8</uniqueID>
+        <dimension>
+            <x>160</x>
+            <y>798</y>
+            <width>31</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>1</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>E1E68934817A81AFC98B8EB521C07FDACF487E7</transaction_id>
+                    <Selection>
+                        <value>exp1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>(1/5)x</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=(1/5)x+75. What part of the equation does the given definition describe?</hintMessage>
+            <hintMessage>The given definition describes the product of a coefficient and a variable. What term in the equation represents the total amount from his paycheck that is saved?</hintMessage>
+            <hintMessage>Try entering '(1/5)x' in the Expression column.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp1</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(&quot;(1/5)x&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>150</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Identify-Coefficient-and-Variable-Expression Slope-Intercept-Form</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>169</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>3</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>8F2D4FC8D5A1B86F3BF7E01110A526AAE749036</transaction_id>
+                    <Selection>
+                        <value>exp2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value></value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=(1/5)x+75. What part of the equation does the given definition describe?</hintMessage>
+            <hintMessage>The given definition describes a variable term in the problem. Which variable in the problem represents the amount of money Raymond gets paid?</hintMessage>
+            <hintMessage>Try entering 'x' in the Expression column.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp2</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(&quot;x&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>150</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Identify-Variable Slope-Intercept-Form</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>169</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>5</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>A8D16EF9FFF15B5F7580C54C408DC0239558C23</transaction_id>
+                    <Selection>
+                        <value>exp3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value></value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=(1/5)x+75. What part of the equation does the given definition describe?</hintMessage>
+            <hintMessage>The given definition describes a coefficient in the problem. What value given in the problem represents the portion of his paycheck that goes into savings?</hintMessage>
+            <hintMessage>Try entering '1/5' in the Expression column.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp3</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(&quot;1/5&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>150</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Identify-Coefficient Slope-Intercept-Form</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>169</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>3</sourceID>
+        <destID>4</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>7</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>B324A144AE8A84249234A6A692B5565E800D2D0</transaction_id>
+                    <Selection>
+                        <value>def4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateComboBox</value>
+                    </Action>
+                    <Input>
+                        <value></value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>You need to choose the definition from the menu that best defines the expression given.</hintMessage>
+            <hintMessage>A variable represents a quantity whose value is not given in the problem statement. Look at the equation and the problem statement to determine what y represents.</hintMessage>
+            <hintMessage>Try choosing 'the amount he'll have in savings after he's paid' from the list of definitions.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">def4</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateComboBox</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">equals(&quot;the amount he'll have in savings after he's paid&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>150</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Define-Variable Slope-Intercept-Form</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>169</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>4</sourceID>
+        <destID>5</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>9</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>5173E9B6674BE20710C022C6102A7C1E295E772</transaction_id>
+                    <Selection>
+                        <value>exp5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value></value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=(1/5)x+75. What part of the equation does the given definition describe?</hintMessage>
+            <hintMessage>The given definition describes a constant in the problem. What value given in the problem represents the amount he has in savings right now?</hintMessage>
+            <hintMessage>Try entering '75' in the Expression column.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp5</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(&quot;75&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>150</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Identify-Constant-Term Slope-Intercept-Form</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>169</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>11</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>309F6C1DBB842EEF1E7AF1DDDFB68169D125531</transaction_id>
+                    <Selection>
+                        <value>exp6</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>expressionMatches(&quot;(1/5)x+75&quot;,input)</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=(1/5)x+75. What part of the equation does the given definition describe?</hintMessage>
+            <hintMessage>The given definition describes the sum of two terms. What term(s) in the equation represents the amount he'll have in savings after he's paid?</hintMessage>
+            <hintMessage>Try entering '(1/5)x+75' in the Expression column.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp6</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(&quot;(1/5)x+75&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>155</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Identify-Sum-Two-Terms Slope-Intercept-Form</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>169</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>6</sourceID>
+        <destID>7</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>13</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>4B165213485289246F4F1B392CFBB730EF6C668</transaction_id>
+                    <Selection>
+                        <value>done</value>
+                    </Selection>
+                    <Action>
+                        <value>ButtonPressed</value>
+                    </Action>
+                    <Input>
+                        <value>-1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please click on the highlighted button.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">done</matcherParameter>
+                <matcherParameter name="action">ButtonPressed</matcherParameter>
+                <matcherParameter name="input">-1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>72</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>7</sourceID>
+        <destID>8</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <productionRule opportunities="1">
+        <ruleName>Identify-Coefficient</ruleName>
+        <productionSet>Slope-Intercept-Form</productionSet>
+        <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=(1/5)x+75. What part of the equation does the given definition describe?</hintMessage>
+        <hintMessage>The given definition describes a coefficient in the problem. What value given in the problem represents the portion of his paycheck that goes into savings?</hintMessage>
+        <hintMessage>Try entering '1/5' in the Expression column.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Define-Variable</ruleName>
+        <productionSet>Slope-Intercept-Form</productionSet>
+        <hintMessage>You need to choose the definition from the menu that best defines the expression given.</hintMessage>
+        <hintMessage>A variable represents a quantity whose value is not given in the problem statement. Look at the equation and the problem statement to determine what y represents.</hintMessage>
+        <hintMessage>Try choosing 'the amount he'll have in savings after he's paid' from the list of definitions.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Identify-Sum-Two-Terms</ruleName>
+        <productionSet>Slope-Intercept-Form</productionSet>
+        <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=(1/5)x+75. What part of the equation does the given definition describe?</hintMessage>
+        <hintMessage>The given definition describes the sum of two terms. What term(s) in the equation represents the amount he'll have in savings after he's paid?</hintMessage>
+        <hintMessage>Try entering '(1/5)x+75' in the Expression column.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Identify-Constant-Term</ruleName>
+        <productionSet>Slope-Intercept-Form</productionSet>
+        <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=(1/5)x+75. What part of the equation does the given definition describe?</hintMessage>
+        <hintMessage>The given definition describes a constant in the problem. What value given in the problem represents the amount he has in savings right now?</hintMessage>
+        <hintMessage>Try entering '75' in the Expression column.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Identify-Variable</ruleName>
+        <productionSet>Slope-Intercept-Form</productionSet>
+        <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=(1/5)x+75. What part of the equation does the given definition describe?</hintMessage>
+        <hintMessage>The given definition describes a variable term in the problem. Which variable in the problem represents the amount of money Raymond gets paid?</hintMessage>
+        <hintMessage>Try entering 'x' in the Expression column.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Identify-Coefficient-and-Variable-Expression</ruleName>
+        <productionSet>Slope-Intercept-Form</productionSet>
+        <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation y=(1/5)x+75. What part of the equation does the given definition describe?</hintMessage>
+        <hintMessage>The given definition describes the product of a coefficient and a variable. What term in the equation represents the total amount from his paycheck that is saved?</hintMessage>
+        <hintMessage>Try entering '(1/5)x' in the Expression column.</hintMessage>
+    </productionRule>
+    <EdgesGroups ordered="false"></EdgesGroups>
+</stateGraph>
+

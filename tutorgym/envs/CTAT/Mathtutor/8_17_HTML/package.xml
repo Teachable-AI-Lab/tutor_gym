@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="8.17 Combinations" description="Provides varying numbers of different categories of objects and asks student to compute the number of possible combinations." save_state="true">
+  <Problems>
+    <Problem name="01Automobile" label="Automobile" description="The Apex company makes one automobile, the Borealis." tutor_flag="tutor" model_file="01Automobile.brd" student_interface="8.17.html">
+      <Skills>
+        <Skill name="solve-component" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="changed-given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" occurrences="3"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" occurrences="3"/>
+      </Skills>
+    </Problem>
+    <Problem name="02Banquet" label="Banquet" description="Your class banquet is being held at fancy restaurant." tutor_flag="tutor" model_file="02Banquet.brd" student_interface="8.17.html">
+      <Skills>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" occurrences="3"/>
+        <Skill name="changed-given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" occurrences="3"/>
+      </Skills>
+    </Problem>
+    <Problem name="03Goodies" label="Goodies" description="Martha is making goodie bags for trick-or-treaters in her neighborhood. She is going to put a chocolate bar, a lollipop, a cookie, and a piece of fruit in each bag." tutor_flag="tutor" model_file="03Goodies.brd" student_interface="8.17.html">
+      <Skills>
+        <Skill name="changed-given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" occurrences="3"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" occurrences="3"/>
+      </Skills>
+    </Problem>
+    <Problem name="04Disguises" label="Disguises" description="Sam the private detective is famous for his disguises. It is important for him to never be seen in the same disguise more than once." tutor_flag="tutor" model_file="04Disguises.brd" student_interface="8.17.html">
+      <Skills>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="changed-given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" occurrences="3"/>
+        <Skill name="solve-component" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" occurrences="3"/>
+      </Skills>
+    </Problem>
+    <Problem name="05College" label="05 College" description="At the Newfield College summer camp, each day is divided into a program that consists of an academic class, a team sport, a handicraft, and a water activity." tutor_flag="tutor" model_file="05College.brd" student_interface="8.17.html">
+      <Skills>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="changed-given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" occurrences="3"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" occurrences="3"/>
+      </Skills>
+    </Problem>
+    <Problem name="06Clothes" label="Clothes" description="Fred is packing some t-shirts, shorts and baseball caps for a two week vacation. He is wondering how many different outfits he can make." tutor_flag="tutor" model_file="06Clothes.brd" student_interface="8.17.html">
+      <Skills>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" occurrences="3"/>
+        <Skill name="changed-given-entered" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="solve-component" category="8-17-permutations-and-combinations1" occurrences="1"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" occurrences="3"/>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="8.17 HTML" label="8.17 Combinations" description="Provides varying numbers of different categories of objects and asks student to compute the number of possible combinations." status="active" picture="8.17.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="01Automobile" position="1" role="0"/>
+        <Problem name="02Banquet" position="2" role="0"/>
+        <Problem name="03Goodies" position="3" role="0"/>
+        <Problem name="04Disguises" position="4" role="0"/>
+        <Problem name="05College" position="5" role="0"/>
+        <Problem name="06Clothes" position="6" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="given-entered" category="8-17-permutations-and-combinations1" label="Enter given" description="Enter given" position="0"/>
+        <Skill name="find-outcome" category="8-17-permutations-and-combinations1" label="Find outcome" description="Find outcome" position="1"/>
+        <Skill name="find-outcome-expression" category="8-17-permutations-and-combinations1" label="Find outcome expression" description="Find outcome expression" position="2"/>
+        <Skill name="solve-component" category="8-17-permutations-and-combinations1" label="Solve component" description="Solve component" position="3"/>
+        <Skill name="changed-given-entered" category="8-17-permutations-and-combinations1" label="Enter changed given" description="Enter changed given" position="4"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.E" label="E. Data Analysis and Probability" description="E. Data Analysis and Probability" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.E.3" label="E.3. Concepts of Probability" description="E.3. Understand and apply basic concepts of probability." standard_level="assessment_anchor" parent_name="PA.E" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="6th" label="6th Grade" description="6th Grade"/>
+        <Grade name="7th" label="7th Grade" description="7th Grade"/>
+        <Grade name="8th" label="8th Grade" description="8th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.PC" label="Permutations and Combinations" description="Permutations and Combinations" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.7" label="7th Grade" description="7th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.7.SP" label="7.SP. Statistics and Probability" description="7.SP. Statistics and Probability" standard_level="strand" parent_name="CommonCore.7" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="8.17.png" path="Assets"/>
+    <Asset name="00Intro.brd" path="FinalBRDs"/>
+    <Asset name="01Automobile.brd" path="FinalBRDs"/>
+    <Asset name="02Banquet.brd" path="FinalBRDs"/>
+    <Asset name="03Goodies.brd" path="FinalBRDs"/>
+    <Asset name="04Disguises.brd" path="FinalBRDs"/>
+    <Asset name="05College.brd" path="FinalBRDs"/>
+    <Asset name="06Clothes.brd" path="FinalBRDs"/>
+    <Asset name="8.17.html" path="HTML"/>
+    <Asset name="8.17.css" path="HTML/Assets"/>
+    <Asset name="finalMassProdtable.txt" path="MassProduction"/>
+    <Asset name="finalTemplate.brd" path="MassProduction"/>
+    <Asset name="translatable.txt" path="MassProduction"/>
+  </Assets>
+</Package>

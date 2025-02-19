@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="8.22 Area of Polygons and Circles" description="Student will work with area, perimeter, or circumference." save_state="true">
+  <Problems>
+    <Problem name="00intro" label="Circle review" description="Circle review" tutor_flag="tutor" model_file="00intro.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="Find-circumference-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="00intro-pretest" label="00intro Pretest" description="00intro Pretest" tutor_flag="test" model_file="00intro-pretest.brd" selection_features="()" student_interface="8.22.html">
+      <Skills>
+        <Skill name="Find-circumference-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="01circleArea" label="Find the area of a circle." description="Find the area of a circle." tutor_flag="tutor" model_file="01circleArea.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="02circleCirc" label="Find the circumference of a circle." description="Find the circumference of a circle." tutor_flag="tutor" model_file="02circleCirc.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-perimeter-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="03square" label="Square review" description="Square review" tutor_flag="tutor" model_file="03square.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Apply-inverse-operation" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-perimeter-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="03square-pretest" label="03square Pretest" description="03square Pretest" tutor_flag="test" model_file="03square-pretest.brd" selection_features="()" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Apply-inverse-operation" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-perimeter-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="04circle" label="Calculate the circle's area backwards" description="Calculate the circle's area backwards" tutor_flag="tutor" model_file="04circle.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Apply-inverse-operation" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="04circle-pretest" label="04circle Pretest" description="04circle Pretest" tutor_flag="test" model_file="04circle-pretest.brd" selection_features="()" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Apply-inverse-operation" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="05circle" label="Calculate the circle's circumference backwards" description="Calculate the circle's circumference backwards" tutor_flag="tutor" model_file="05circle.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-circumference-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Apply-inverse-operation" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="06circle" label="Circle review" description="Circle review" tutor_flag="tutor" model_file="06circle.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-circumference-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="07circle" label="Circle review" description="Circle review" tutor_flag="tutor" model_file="07circle.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="Find-circumference-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="07circle-pretest" label="07circle Pretest" description="07circle Pretest" tutor_flag="test" model_file="07circle-pretest.brd" selection_features="()" student_interface="8.22.html">
+      <Skills>
+        <Skill name="Find-circumference-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="08circle" label="Circle review without the table guide" description="Circle review without the table guide" tutor_flag="tutor" model_file="08circle.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="Find-circumference-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="09fence" label="Fence" description="Cocoa is Chris's dog who is tied to a tree in the backyard." tutor_flag="tutor" model_file="09fence.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-circumference-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="10pool" label="Pool cover" description="Jeff's circular baby pool does not have a cover to keep the water clean when it is not in use." tutor_flag="tutor" model_file="10pool.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="11semicircle" label="Semicircle" description="Shape B is a semicircle. It is made by cutting a full circle (shape A) in half." tutor_flag="tutor" model_file="11semicircle.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-length-of-arc" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-circumference-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="12add" label="Square and semicircle" description="SShape C is formed by adding two shapes together, shape A and shape B. Shape A is a square ABCD, and shape B is a semicircle." tutor_flag="tutor" model_file="12add.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="13add" label="Square and semicircle" description="The diagram above is composed of a square and a semicircle." tutor_flag="tutor" model_file="13add.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="14subtract" label="Circle and square" description="Shape C is formed by subtracting the circle (shape B) from the square (shape A)." tutor_flag="tutor" model_file="14subtract.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="15subtract" label="Rectangle and circle" description="A lawn sprinkler spins 360 degrees and has a 6 ft spray. It's placed in a rectangular lawn that is 14 feet by 18 feet." tutor_flag="tutor" model_file="15subtract.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="16quarterCircle" label="Quarter circle" description="The diagram you see on the left side is a quarter of a circle." tutor_flag="tutor" model_file="16quarterCircle.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-perimeter-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-length-of-arc" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-circumference-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="17star" label="Square and quarter circles" description="The diagram you see on the left side is composed of a square and 4 quarter circles." tutor_flag="tutor" model_file="17star.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="18shaded" label="Square and circle" description="Circle O has a radius, OE, of 1.5 inches. It is enclosed in Square ABCD." tutor_flag="tutor" model_file="18shaded.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="18shaded-pretest" label="18shaded Pretest" description="18shaded Pretest" tutor_flag="test" model_file="18shaded-pretest.brd" selection_features="()" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="19shaded" label="Circle and square" description="You are cutting out a biggest circle possible from a square-shaped paper." tutor_flag="tutor" model_file="19shaded.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-length-of-a-side" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="20pill" label="Pill" description="The diagram above is composed of a rectangle and two semicircles." tutor_flag="tutor" model_file="20pill.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="20pill-pretest" label="20pill Pretest" description="20pill Pretest" tutor_flag="test" model_file="20pill-pretest.brd" selection_features="()" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="21mix" label="Square and triangle" description="The figure shown on the left is composed of a square, and a triangle." tutor_flag="tutor" model_file="21mix.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-length-of-a-side" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="22mix" label="Square and 3 semicircles" description="The diagram shown on the left is composed of a square and three semicircles." tutor_flag="tutor" model_file="22mix.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="23shaded" label="Square and triangle" description="You are cutting out a right triangle out of a square ABCD." tutor_flag="tutor" model_file="23shaded.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-length-of-a-side" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="24tail" label="Airplane tail" description="Jack is cutting out pieces of wood that will be the tail of his airplane model." tutor_flag="tutor" model_file="24tail.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="24tail-pretest" label="24tail Pretest" description="24tail Pretest" tutor_flag="test" model_file="24tail-pretest.brd" selection_features="()" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="25shaded" label="Rectangle and semicircle" description="The figure shown on the left is the result of a rectangle after a semicircle has been cut out from it." tutor_flag="tutor" model_file="25shaded.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-perimeter-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-length-of-arc" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+    <Problem name="26icecream" label="Ice cream" description="Anna is making an ice-cream-shaped poster for decorating her uncle's new ice cream shop." tutor_flag="tutor" model_file="26icecream.brd" student_interface="8.22.html">
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" occurrences="1"/>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="8.22 HTML" label="8.22 Area of Polygons and Circles" description="Student will work with area, perimeter, or circumference." status="active" picture="8.22.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="01circleArea" position="1" role="0"/>
+        <Problem name="02circleCirc" position="2" role="0"/>
+        <Problem name="03square" position="3" role="0"/>
+        <Problem name="04circle" position="4" role="0"/>
+        <Problem name="05circle" position="5" role="0"/>
+        <Problem name="06circle" position="6" role="0"/>
+        <Problem name="07circle" position="7" role="0"/>
+        <Problem name="00intro" position="8" role="0"/>
+        <Problem name="08circle" position="9" role="0"/>
+        <Problem name="09fence" position="10" role="0"/>
+        <Problem name="10pool" position="11" role="0"/>
+        <Problem name="11semicircle" position="12" role="0"/>
+        <Problem name="12add" position="13" role="0"/>
+        <Problem name="13add" position="14" role="0"/>
+        <Problem name="14subtract" position="15" role="0"/>
+        <Problem name="15subtract" position="16" role="0"/>
+        <Problem name="16quarterCircle" position="17" role="0"/>
+        <Problem name="17star" position="18" role="0"/>
+        <Problem name="18shaded" position="19" role="0"/>
+        <Problem name="19shaded" position="20" role="0"/>
+        <Problem name="20pill" position="21" role="0"/>
+        <Problem name="21mix" position="22" role="0"/>
+        <Problem name="22mix" position="23" role="0"/>
+        <Problem name="23shaded" position="24" role="0"/>
+        <Problem name="24tail" position="25" role="0"/>
+        <Problem name="25shaded" position="26" role="0"/>
+        <Problem name="26icecream" position="27" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="Apply-inverse-operation" category="8-22_area-of-polygons-and-circles" label="Apply inverse operation" description="Apply inverse operation" position="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" label="Enter given" description="Enter given" position="2"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" label="Find area of circle" description="Find area of circle" position="3"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" label="Find area of complex shape" description="Find area of complex shape" position="4"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" label="Find area of simple polygon/shape" description="Find area of simple polygon/shape" position="5"/>
+        <Skill name="Find-circumference-of-circle" category="8-22_area-of-polygons-and-circles" label="Find circumference of circle" description="Find circumference of circle" position="6"/>
+        <Skill name="Find-length-of-a-side" category="8-22_area-of-polygons-and-circles" label="Find length of a side" description="Find length of a side" position="7"/>
+        <Skill name="Find-length-of-arc" category="8-22_area-of-polygons-and-circles" label="Find length of arc" description="Find length of arc" position="8"/>
+        <Skill name="Find-perimeter-of-complex-shape" category="8-22_area-of-polygons-and-circles" label="Find perimeter of complex shape" description="Find perimeter of complex shape" position="9"/>
+        <Skill name="Find-perimeter-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" label="Find perimeter of simple polygon/shape" description="Find perimeter of simple polygon/shape" position="10"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" label="Find radius/diameter" description="Find radius/diameter" position="11"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.B" label="B. Measurement" description="B. Measurement" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.B.2" label="B.2. Techniques, Tools and Formulas" description="B.2. Apply appropriate techniques, tools and formulas to determine measurements." standard_level="assessment_anchor" parent_name="PA.B" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.D" label="D. Measurement" description="D. Measurement" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="6th" label="6th Grade" description="6th Grade"/>
+        <Grade name="7th" label="7th Grade" description="7th Grade"/>
+        <Grade name="8th" label="8th Grade" description="8th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.APC" label="Area, Perimeter, Circumference" description="Area, Perimeter, Circumference" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.6" label="6th Grade" description="6th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.6.G" label="6.G. Geometry" description="6.G. Geometry" standard_level="strand" parent_name="CommonCore.6" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+    <ProblemSet name="8.22 HTML Posttest" label="8.22 HTML Posttest" description="8.22 HTML Posttest" status="active" image_height="0" filler_height="0" team_size="1" selection_algorithm="random" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="03square-pretest" position="1" role="0"/>
+        <Problem name="07circle-pretest" position="2" role="0"/>
+        <Problem name="18shaded-pretest" position="3" role="0"/>
+        <Problem name="24tail-pretest" position="4" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" label="-" description="-" position="0"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" label="Enter given" description="Enter given" position="1"/>
+        <Skill name="Apply-inverse-operation" category="8-22_area-of-polygons-and-circles" label="Apply inverse operation" description="Apply inverse operation" position="2"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" label="Find area of simple polygon/shape" description="Find area of simple polygon/shape" position="3"/>
+        <Skill name="Find-perimeter-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" label="Find perimeter of simple polygon/shape" description="Find perimeter of simple polygon/shape" position="4"/>
+        <Skill name="Find-circumference-of-circle" category="8-22_area-of-polygons-and-circles" label="Find circumference of circle" description="Find circumference of circle" position="5"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" label="Find radius/diameter" description="Find radius/diameter" position="6"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" label="Find area of circle" description="Find area of circle" position="7"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" label="Find area of complex shape" description="Find area of complex shape" position="8"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+      </Categories>
+    </ProblemSet>
+    <ProblemSet name="8.22 HTML Practice" label="8.22 Area of Polygons and Circles - Practice" description="Student will work with area, perimeter, or circumference." status="active" picture="8.22.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="random" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="01circleArea" position="1" role="0"/>
+        <Problem name="02circleCirc" position="2" role="0"/>
+        <Problem name="05circle" position="3" role="0"/>
+        <Problem name="06circle" position="4" role="0"/>
+        <Problem name="08circle" position="5" role="0"/>
+        <Problem name="09fence" position="6" role="0"/>
+        <Problem name="10pool" position="7" role="0"/>
+        <Problem name="11semicircle" position="8" role="0"/>
+        <Problem name="12add" position="9" role="0"/>
+        <Problem name="13add" position="10" role="0"/>
+        <Problem name="14subtract" position="11" role="0"/>
+        <Problem name="15subtract" position="12" role="0"/>
+        <Problem name="16quarterCircle" position="13" role="0"/>
+        <Problem name="17star" position="14" role="0"/>
+        <Problem name="19shaded" position="15" role="0"/>
+        <Problem name="21mix" position="16" role="0"/>
+        <Problem name="22mix" position="17" role="0"/>
+        <Problem name="23shaded" position="18" role="0"/>
+        <Problem name="25shaded" position="19" role="0"/>
+        <Problem name="26icecream" position="20" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="Apply-inverse-operation" category="8-22_area-of-polygons-and-circles" label="Apply inverse operation" description="Apply inverse operation" position="0"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" label="Enter given" description="Enter given" position="1"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" label="Find area of circle" description="Find area of circle" position="2"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" label="Find area of complex shape" description="Find area of complex shape" position="3"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" label="Find area of simple polygon/shape" description="Find area of simple polygon/shape" position="4"/>
+        <Skill name="Find-circumference-of-circle" category="8-22_area-of-polygons-and-circles" label="Find circumference of circle" description="Find circumference of circle" position="5"/>
+        <Skill name="Find-length-of-a-side" category="8-22_area-of-polygons-and-circles" label="Find length of a side" description="Find length of a side" position="6"/>
+        <Skill name="Find-length-of-arc" category="8-22_area-of-polygons-and-circles" label="Find length of arc" description="Find length of arc" position="7"/>
+        <Skill name="Find-perimeter-of-complex-shape" category="8-22_area-of-polygons-and-circles" label="Find perimeter of complex shape" description="Find perimeter of complex shape" position="8"/>
+        <Skill name="Find-perimeter-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" label="Find perimeter of simple polygon/shape" description="Find perimeter of simple polygon/shape" position="9"/>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" label="-" description="-" position="10"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" label="Find radius/diameter" description="Find radius/diameter" position="11"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.B" label="B. Measurement" description="B. Measurement" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.B.2" label="B.2. Techniques, Tools and Formulas" description="B.2. Apply appropriate techniques, tools and formulas to determine measurements." standard_level="assessment_anchor" parent_name="PA.B" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.D" label="D. Measurement" description="D. Measurement" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="6th" label="6th Grade" description="6th Grade"/>
+        <Grade name="7th" label="7th Grade" description="7th Grade"/>
+        <Grade name="8th" label="8th Grade" description="8th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.APC" label="Area, Perimeter, Circumference" description="Area, Perimeter, Circumference" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.6" label="6th Grade" description="6th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.6.G" label="6.G. Geometry" description="6.G. Geometry" standard_level="strand" parent_name="CommonCore.6" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+    <ProblemSet name="8.22 HTML Pretest" label="8.22 HTML Pretest" description="8.22 HTML Pretest" status="active" image_height="0" filler_height="0" team_size="1" selection_algorithm="random" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="00intro-pretest" position="1" role="0"/>
+        <Problem name="04circle-pretest" position="2" role="0"/>
+        <Problem name="20pill-pretest" position="3" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="Find-circumference-of-circle" category="8-22_area-of-polygons-and-circles" label="Find circumference of circle" description="Find circumference of circle" position="0"/>
+        <Skill name="-" category="8-22_area-of-polygons-and-circles" label="-" description="-" position="1"/>
+        <Skill name="Enter-given" category="8-22_area-of-polygons-and-circles" label="Enter given" description="Enter given" position="2"/>
+        <Skill name="Find-radius/diameter" category="8-22_area-of-polygons-and-circles" label="Find radius/diameter" description="Find radius/diameter" position="3"/>
+        <Skill name="Find-area-of-circle" category="8-22_area-of-polygons-and-circles" label="Find area of circle" description="Find area of circle" position="4"/>
+        <Skill name="Apply-inverse-operation" category="8-22_area-of-polygons-and-circles" label="Apply inverse operation" description="Apply inverse operation" position="5"/>
+        <Skill name="Find-area-of-simple-polygon/shape" category="8-22_area-of-polygons-and-circles" label="Find area of simple polygon/shape" description="Find area of simple polygon/shape" position="6"/>
+        <Skill name="Find-area-of-complex-shape" category="8-22_area-of-polygons-and-circles" label="Find area of complex shape" description="Find area of complex shape" position="7"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="8.22.png" path="Assets"/>
+    <Asset name="mathtutor_8.22_full.png" path="Assets"/>
+    <Asset name="00intro-pretest.brd" path="FinalBRDs"/>
+    <Asset name="00intro.brd" path="FinalBRDs"/>
+    <Asset name="01circleArea.brd" path="FinalBRDs"/>
+    <Asset name="02circleCirc.brd" path="FinalBRDs"/>
+    <Asset name="03square-pretest.brd" path="FinalBRDs"/>
+    <Asset name="03square.brd" path="FinalBRDs"/>
+    <Asset name="04circle-pretest.brd" path="FinalBRDs"/>
+    <Asset name="04circle.brd" path="FinalBRDs"/>
+    <Asset name="05circle.brd" path="FinalBRDs"/>
+    <Asset name="06circle.brd" path="FinalBRDs"/>
+    <Asset name="07circle-pretest.brd" path="FinalBRDs"/>
+    <Asset name="07circle.brd" path="FinalBRDs"/>
+    <Asset name="08circle.brd" path="FinalBRDs"/>
+    <Asset name="09fence.brd" path="FinalBRDs"/>
+    <Asset name="10pool.brd" path="FinalBRDs"/>
+    <Asset name="11semicircle.brd" path="FinalBRDs"/>
+    <Asset name="12add.brd" path="FinalBRDs"/>
+    <Asset name="13add.brd" path="FinalBRDs"/>
+    <Asset name="14subtract.brd" path="FinalBRDs"/>
+    <Asset name="15subtract.brd" path="FinalBRDs"/>
+    <Asset name="16quarterCircle.brd" path="FinalBRDs"/>
+    <Asset name="17star.brd" path="FinalBRDs"/>
+    <Asset name="18shaded-pretest.brd" path="FinalBRDs"/>
+    <Asset name="18shaded.brd" path="FinalBRDs"/>
+    <Asset name="19shaded.brd" path="FinalBRDs"/>
+    <Asset name="20pill-pretest.brd" path="FinalBRDs"/>
+    <Asset name="20pill.brd" path="FinalBRDs"/>
+    <Asset name="21mix.brd" path="FinalBRDs"/>
+    <Asset name="22mix.brd" path="FinalBRDs"/>
+    <Asset name="23shaded.brd" path="FinalBRDs"/>
+    <Asset name="24tail-pretest.brd" path="FinalBRDs"/>
+    <Asset name="24tail.brd" path="FinalBRDs"/>
+    <Asset name="25shaded.brd" path="FinalBRDs"/>
+    <Asset name="26icecream.brd" path="FinalBRDs"/>
+    <Asset name="PRETEST_Circle1.brd" path="FinalBRDs"/>
+    <Asset name="PRETEST_Circle2.brd" path="FinalBRDs"/>
+    <Asset name="PRETEST_Circle3.brd" path="FinalBRDs"/>
+    <Asset name="PRETEST_Composite1.brd" path="FinalBRDs"/>
+    <Asset name="PRETEST_Composite2.brd" path="FinalBRDs"/>
+    <Asset name="PRETEST_Composite3.brd" path="FinalBRDs"/>
+    <Asset name="PRETEST_Composite4.brd" path="FinalBRDs"/>
+    <Asset name="PRETEST_Composite5.brd" path="FinalBRDs"/>
+    <Asset name="PRETEST_Square1.brd" path="FinalBRDs"/>
+    <Asset name="PRETEST_Square2.brd" path="FinalBRDs"/>
+    <Asset name="PRETEST_Triangle1.brd" path="FinalBRDs"/>
+    <Asset name="PRETEST_Triangle2.brd" path="FinalBRDs"/>
+    <Asset name="8.22.html" path="HTML"/>
+    <Asset name="00.png" path="HTML/Assets"/>
+    <Asset name="01.png" path="HTML/Assets"/>
+    <Asset name="02.png" path="HTML/Assets"/>
+    <Asset name="03.png" path="HTML/Assets"/>
+    <Asset name="04.png" path="HTML/Assets"/>
+    <Asset name="05.png" path="HTML/Assets"/>
+    <Asset name="06.png" path="HTML/Assets"/>
+    <Asset name="07.png" path="HTML/Assets"/>
+    <Asset name="08.png" path="HTML/Assets"/>
+    <Asset name="09.png" path="HTML/Assets"/>
+    <Asset name="10.png" path="HTML/Assets"/>
+    <Asset name="11.png" path="HTML/Assets"/>
+    <Asset name="12.png" path="HTML/Assets"/>
+    <Asset name="13.png" path="HTML/Assets"/>
+    <Asset name="14.png" path="HTML/Assets"/>
+    <Asset name="15.png" path="HTML/Assets"/>
+    <Asset name="16.png" path="HTML/Assets"/>
+    <Asset name="17.png" path="HTML/Assets"/>
+    <Asset name="18.png" path="HTML/Assets"/>
+    <Asset name="19.png" path="HTML/Assets"/>
+    <Asset name="20.png" path="HTML/Assets"/>
+    <Asset name="21.png" path="HTML/Assets"/>
+    <Asset name="22.png" path="HTML/Assets"/>
+    <Asset name="23.png" path="HTML/Assets"/>
+    <Asset name="24.png" path="HTML/Assets"/>
+    <Asset name="25.png" path="HTML/Assets"/>
+    <Asset name="26.png" path="HTML/Assets"/>
+    <Asset name="27.png" path="HTML/Assets"/>
+    <Asset name="8.22.css" path="HTML/Assets"/>
+    <Asset name="sqrt_icon.png" path="HTML/Assets"/>
+    <Asset name="sqrt.png" path="HTML/Assets"/>
+    <Asset name="8-22_calc.xlsx" path="MassProduction"/>
+    <Asset name="8-22_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="8-22_finalTemplate.brd" path="MassProduction"/>
+    <Asset name="8-22_noGlossary.txt" path="MassProduction"/>
+    <Asset name="8-22_translatable.txt" path="MassProduction"/>
+    <Asset name="8-22.brd" path="MassProduction"/>
+    <Asset name="8-22.txt" path="MassProduction"/>
+    <Asset name="DOC_What is 8_22 calc.txt" path="MassProduction"/>
+    <Asset name="DOC_When the time has come for the glossary component.txt" path="MassProduction"/>
+    <Asset name="translatable.txt" path="MassProduction"/>
+    <Asset name="Warning_WHEN YOU IMPORT OR RERELEASE.txt" path="MassProduction"/>
+  </Assets>
+</Package>

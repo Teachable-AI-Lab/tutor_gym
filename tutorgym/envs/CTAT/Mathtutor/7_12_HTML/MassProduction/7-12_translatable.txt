@@ -1,0 +1,1386 @@
+Problem Name	01Garden
+%(startStateNodeName)%	Given Finished
+%(statement)%	You're planting a vegetable garden in your backyard. Last year, you had 3 tomato plants, which produced a total of 20 tomatoes. If you have 27 tomato plants this year, how many tomatoes should you expect your plants to produce?
+%(final_statement)%	You should expect your plants to produce _____ tomatoes this year.
+%(final_unit)%	tomatoes.
+%(inverseProb)%	0
+%(from)%	Last Year
+%(to)%	This Year
+%(item1)%	Plants
+%(item2)%	Tomatoes
+%(gvn1)%	3
+%(gvn1-h1)%	Do you remember what you planted last year and how many tomatoes grew? What was the number of tomatoes you planted?
+%(gvn1-h2)%	Read this part of the statement carefully: Last year, you had 3 tomato plants, which produced a total of 20 tomatoes.
+%(gvn2)%	20
+%(gvn2-h1)%	Do you remember what you planted last year and how many tomatoes grew? What was the number of tomatoes that were produced?
+%(gvn2-h2)%	Read this part of the statement carefully: Last year, you had 3 tomato plants, which produced a total of 20 tomatoes.
+%(item1_word)%	number of plants
+%(item2_word)%	number of tomatoes
+%(oper-on)%	1
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of tomatoes. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%> 
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of plants. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%> 
+%(oper-h2)%	How do you get from 3 plants to 27 plants?
+%(fac)%	9
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of tomatoes. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of plants. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to multiply 3 by to get 27?
+%(gvn3)%	27
+%(gvn3-h1)%	You are looking for the number of tomatos this year, but first, you need to know the number of tomato plants planted this year.
+%(gvn3-h2)%	What is the one last thing that is known? Do you remember how many tomato plants you have this year?
+%(gvn3-h3)%	Read this part of the statement carefully: If you have 27 tomato plants this year...
+%(ans)%	180
+%(ans-h1)%	Use the operation and operator to convert the original number of tomatoes that grew last year into the number of tomatoes that will grow this year.
+%(ans-h2)%	The number of tomatoes expected is the number of tomatoes from last year multiplied by the operator you found.
+%(ans-h3)%	You are scaling the number of tomatoes from last year UP using the operator, 9, like this: 20 * 9 = ?
+%(ansF-h)%	How many tomatoes do you have this year?
+%(good_job)%	Great job! You predicted how many tomatoes you would get this year. 
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: Last year, you had 3 tomato plants, which produced a total of 20 tomatoes.
+%(-6411276830810430815)%	Do you remember what you planted last year and how many tomatoes grew? What was the number of tomatoes that were produced?
+%(-2130351708502667082)%	Great job! You predicted how many tomatoes you would get this year. 
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of tomatoes. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%> 
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Last Year" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the original number of tomatoes that grew last year into the number of tomatoes that will grow this year.
+%(77047411939768651)%	How do you get from 3 plants to 27 plants?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of tomatoes. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "This Year" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '27' for the highlighted field.
+%(4071995692167234857)%	You are scaling the number of tomatoes from last year UP using the operator, 9, like this: 20 %(oper)% 9 = ?
+%(-4961902392298573881)%	Try typing '20' for the highlighted field.
+%(153812049528734435)%	Please enter '3' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of plants. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of plants. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%> 
+%(8384133930955196225)%	Please enter '27' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 3 by to get 27?
+%(-4034242170371889659)%	Try typing '3' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of tomatoes? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '20' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: Last year, you had 3 tomato plants, which produced a total of 20 tomatoes.
+%(4071994692163234860)%	The number of tomatoes expected is the number of tomatoes from last year multiplied by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? Do you remember how many tomato plants you have this year?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of plants? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '180' in the highlighted field.
+%(-3965522334249819822)%	You are looking for the number of tomatos this year, but first, you need to know the number of tomato plants planted this year.
+%(-8126397755713529732)%	Do you remember what you planted last year and how many tomatoes grew? What was the number of tomatoes you planted?
+%(4788299410304215500)%	Try typing in '9' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: If you have 27 tomato plants this year...
+%(-4254770397239570902)%	How many tomatoes do you have this year?
+Problem Name	02Water
+%(startStateNodeName)%	Half Done
+%(statement)%	Last week you purchased 12 bottles of water, on which you spent for $6.00. If the price of water has stayed the same and you purchased 24 bottles of water today, how much money did you spend on water today?
+%(final_statement)%	You spent $_____ on water today.
+%(final_unit)%	dollars.
+%(inverseProb)%	0
+%(from)%	Last Week
+%(to)%	Today
+%(item1)%	Bottles
+%(item2)%	Cost ($)
+%(gvn1)%	12
+%(gvn1-h1)%	Do you remember what you purchased last week? How many water bottles did you buy?
+%(gvn1-h2)%	Read this part of the statement carefully: Last week you purchased 12 bottles of water, on which you spent $6.00.
+%(gvn2)%	6
+%(gvn2-h1)%	Do you remember what you purchased last week? What was the cost of the water bottles you bought?
+%(gvn2-h2)%	Read this part of the statement carefully: Last week you purchased 12 bottles of water, on which you spent $6.00.
+%(item1_word)%	number of bottles
+%(item2_word)%	cost
+%(oper-on)%	1
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the cost of bottles. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of bottles. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h2)%	How do you get from 12 bottles to 24 bottles?
+%(fac)%	2
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the cost of bottles. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of bottles. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to multiply 12 by to get 24?
+%(gvn3)%	24
+%(gvn3-h1)%	You are looking for the cost of water bottles you bought today, but first, you need to know how many water bottles you bought today.
+%(gvn3-h2)%	What is the one last thing that is known? Do you remember how many bottles you bought today?
+%(gvn3-h3)%	Read this part of the statement carefully: ...and you purchased 24 bottles of water today...
+%(ans)%	12
+%(ans-h1)%	Use the operation and operator to convert the cost of the water bottles from last week into the cost of water bottles today.
+%(ans-h2)%	The money you spent on the water bottles is the cost of water bottles from yesterday multiplied by the operator you found.
+%(ans-h3)%	You are scaling the cost of water bottles from yesterday UP using the operator, 2, like this: 6 * 2 = ?
+%(ansF-h)%	How much money did you spend on water today?
+%(good_job)%	Good job! You figured out how much 24 water bottles would cost.
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: Last week you purchased 12 bottles of water, on which you spent $6.00.
+%(-6411276830810430815)%	Do you remember what you purchased last week? What was the cost of the water bottles you bought?
+%(-2130351708502667082)%	Good job! You figured out how much 24 water bottles would cost.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the cost of bottles. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Last Week" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the cost of the water bottles from last week into the cost of water bottles today.
+%(77047411939768651)%	How do you get from 12 bottles to 24 bottles?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the cost of bottles. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "Today" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '24' for the highlighted field.
+%(4071995692167234857)%	You are scaling the cost of water bottles from yesterday UP using the operator, 2, like this: 6 %(oper)% 2 = ?
+%(-4961902392298573881)%	Try typing '6' for the highlighted field.
+%(153812049528734435)%	Please enter '12' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of bottles. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of bottles. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(8384133930955196225)%	Please enter '24' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 12 by to get 24?
+%(-4034242170371889659)%	Try typing '12' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the cost? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '6' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: Last week you purchased 12 bottles of water, on which you spent $6.00.
+%(4071994692163234860)%	The money you spent on the water bottles is the cost of water bottles from yesterday multiplied by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? Do you remember how many bottles you bought today?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of bottles? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '12' in the highlighted field.
+%(-3965522334249819822)%	You are looking for the cost of water bottles you bought today, but first, you need to know how many water bottles you bought today.
+%(-8126397755713529732)%	Do you remember what you purchased last week? How many water bottles did you buy?
+%(4788299410304215500)%	Try typing in '2' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: ...and you purchased 24 bottles of water today...
+%(-4254770397239570902)%	How much money did you spend on water today?
+Problem Name	03Cookies
+%(startStateNodeName)%	Given Entered
+%(statement)%	Last year, 60 people attended Henry's New Year's Eve party, for which Henry baked 120 gingerbread cookies. This year, Henry's New Year's Eve party is tomorrow. Henry wants to have the same ratio of cookies to people at his party this year as last year. If 15 people are going to attend Henry's party this year, how many gingerbread cookies should Henry bake for his New Year's Eve party?
+%(final_statement)%	Henry should bake _____ gingerbread cookies.
+%(final_unit)%	gingerbread cookies.
+%(inverseProb)%	1
+%(from)%	Last Year
+%(to)%	This Year
+%(item1)%	Cookies
+%(item2)%	People
+%(gvn1)%	120
+%(gvn1-h1)%	Do you remember what Henry did for his New Year's Eve party last year? How many gingerbread cookies did he bake?
+%(gvn1-h2)%	Read this part of the statement carefully: Last year, 60 people attended Henry's New Year's Eve party, for which Henry baked 120 gingerbread cookies.
+%(gvn2)%	60
+%(gvn2-h1)%	Do you remember what Henry did for his New Year's Eve part last year? How many people attended Henry's party last year?
+%(gvn2-h2)%	Read this part of the statement carefully: Last year, 60 people attended Henry's New Year's Eve party, for which Henry baked 120 gingerbread cookies.
+%(item1_word)%	number of cookies
+%(item2_word)%	number of people
+%(oper-on)%	1
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of people. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of cookies. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h2)%	How do you get from 60 people to 15 people?
+%(fac)%	4
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of people. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of cookies. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to divide 60 by to get 15?
+%(gvn3)%	15
+%(gvn3-h1)%	Henry wants to know how many gingerbread cookies he should bake this year, but first, he needs to now how many people are coming this year.
+%(gvn3-h2)%	What is the one last thing that is known? Do you remember how many people are coming this year to Henry's party?
+%(gvn3-h3)%	Read this part of the statement carefully: If 15 people are going to attend Henry's party this year...
+%(ans)%	30
+%(ans-h1)%	Use the operation and operator to convert number of cookies Henry baked last year into number of cookies he must bake this year.
+%(ans-h2)%	The number of cookies Henry must bake for this year's party is the number cookies baked last year divided by the operator you found.
+%(ans-h3)%	You are scaling the number of cookies baked from last year DOWN using the operator, 4, like this: 120 / 4 = ?
+%(ansF-h)%	How many gingerbread cookies does Henry need to make this year?
+%(good_job)%	Great job! You helped Henry figure out how many cookies he must bake this year.
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: Last year, 60 people attended Henry's New Year's Eve party, for which Henry baked 120 gingerbread cookies.
+%(-6411276830810430815)%	Do you remember what Henry did for his New Year's Eve part last year? How many people attended Henry's party last year?
+%(-2130351708502667082)%	Great job! You helped Henry figure out how many cookies he must bake this year.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of people. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Last Year" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert number of cookies Henry baked last year into number of cookies he must bake this year.
+%(77047411939768651)%	How do you get from 60 people to 15 people?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of people. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "This Year" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '15' for the highlighted field.
+%(4071995692167234857)%	You are scaling the number of cookies baked from last year DOWN using the operator, 4, like this: 120 %(oper)% 4 = ?
+%(-4961902392298573881)%	Try typing '60' for the highlighted field.
+%(153812049528734435)%	Please enter '120' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of cookies. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of cookies. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(8384133930955196225)%	Please enter '15' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 60 by to get 15?
+%(-4034242170371889659)%	Try typing '120' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of people? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '60' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: Last year, 60 people attended Henry's New Year's Eve party, for which Henry baked 120 gingerbread cookies.
+%(4071994692163234860)%	The number of cookies Henry must bake for this year's party is the number cookies baked last year divided by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? Do you remember how many people are coming this year to Henry's party?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of cookies? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '30' in the highlighted field.
+%(-3965522334249819822)%	Henry wants to know how many gingerbread cookies he should bake this year, but first, he needs to now how many people are coming this year.
+%(-8126397755713529732)%	Do you remember what Henry did for his New Year's Eve party last year? How many gingerbread cookies did he bake?
+%(4788299410304215500)%	Try typing in '4' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: If 15 people are going to attend Henry's party this year...
+%(-4254770397239570902)%	How many gingerbread cookies does Henry need to make this year?
+Problem Name	04Bicyclist
+%(startStateNodeName)%	start
+%(statement)%	A bicyclist likes to practice for a race by riding a distance of 30 miles in 50 minutes every morning. On the day of the race, she must ride at the same speed but for 1 hour and 40 minutes. What is the distance that the bicyclist must race?
+%(final_statement)%	The bicyclist can ride a total of _____ miles.
+%(final_unit)%	miles.
+%(inverseProb)%	0
+%(from)%	Practice
+%(to)%	Race
+%(item1)%	Minutes
+%(item2)%	Miles
+%(gvn1)%	50
+%(gvn1-h1)%	Do you remember what the bicyclist likes to do when she practices for a race? How much time does she practice racing every morning?
+%(gvn1-h2)%	Read this part of the statement carefully: A bicyclist likes to practice for a race by riding a distance of 30 miles in 50 minutes every morning.
+%(gvn2)%	30
+%(gvn2-h1)%	Do you remember what the bicyclist likes to do when she practices for a race? How far does she bike every morning when practicing for a race?
+%(gvn2-h2)%	Read this part of the statement carefully: A bicyclist likes to practice for a race by riding a distance of 30 miles in 50 minutes every morning.
+%(item1_word)%	number of minutes
+%(item2_word)%	number of miles
+%(oper-on)%	1
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the distance in miles. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the time in minutes. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h2)%	How do you get from 50 minutes to 100 minutes?
+%(fac)%	2
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the distance in miles. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the time in minutes. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to multiply 50 by to get 100?
+%(gvn3)%	100
+%(gvn3-h1)%	The bicyclist wants to know how far she will be traveling in the actual race, but first, she needs to know how long she is racing.
+%(gvn3-h2)%	What is the one last thing that is known? Read this part of the statement carefully: On the day of the race, she must ride at the same speed but for 1 hour and 40 minutes.
+%(gvn3-h3)%	Make sure you convert the hour into minutes; 1 hour and 40 minutes is equal to 60 minutes and 40 minutes. How many minutes is it in total?
+%(ans)%	60
+%(ans-h1)%	Use the operation and operator to convert the miles of distance for the practice into miles of distance for the race.
+%(ans-h2)%	The miles of distance the bicyclist must travel during the race is distance she traveled for practice multiplied by the operator you found.
+%(ans-h3)%	You are scaling the distance the bicyclist traveled for practice UP using the operator, 2, like this: 30 * 2 = ?
+%(ansF-h)%	How many total miles can the bicyclist ride?
+%(good_job)%	Great work! You found out the distance the bicyclist must race.
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: A bicyclist likes to practice for a race by riding a distance of 30 miles in 50 minutes every morning.
+%(-6411276830810430815)%	Do you remember what the bicyclist likes to do when she practices for a race? How far does she bike every morning when practicing for a race?
+%(-2130351708502667082)%	Great work! You found out the distance the bicyclist must race.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the distance in miles. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Practice" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the miles of distance for the practice into miles of distance for the race.
+%(77047411939768651)%	How do you get from 50 minutes to 100 minutes?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the distance in miles. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "Race" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '100' for the highlighted field.
+%(4071995692167234857)%	You are scaling the distance the bicyclist traveled for practice UP using the operator, 2, like this: 30 %(oper)% 2 = ?
+%(-4961902392298573881)%	Try typing '30' for the highlighted field.
+%(153812049528734435)%	Please enter '50' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the time in minutes. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the time in minutes. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(8384133930955196225)%	Please enter '100' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 50 by to get 100?
+%(-4034242170371889659)%	Try typing '50' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of miles? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '30' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: A bicyclist likes to practice for a race by riding a distance of 30 miles in 50 minutes every morning.
+%(4071994692163234860)%	The miles of distance the bicyclist must travel during the race is distance she traveled for practice multiplied by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? Read this part of the statement carefully: On the day of the race, she must ride at the same speed but for 1 hour and 40 minutes.
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of minutes? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '60' in the highlighted field.
+%(-3965522334249819822)%	The bicyclist wants to know how far she will be traveling in the actual race, but first, she needs to know how long she is racing.
+%(-8126397755713529732)%	Do you remember what the bicyclist likes to do when she practices for a race? How much time does she practice racing every morning?
+%(4788299410304215500)%	Try typing in '2' in the highlighted field.
+%(-3965524334245819724)%	Make sure you convert the hour into minutes; 1 hour and 40 minutes is equal to 60 minutes and 40 minutes. How many minutes is it in total?
+%(-4254770397239570902)%	How many total miles can the bicyclist ride?
+Problem Name	05Map
+%(startStateNodeName)%	start
+%(statement)%	Bill is planning a car trip with a road map on which there is a 2 inch-long scale that represents 50.5 miles. If he measures the distance of his trip to be 8 inches on the map, how many miles will Bill have to drive on his trip?
+%(final_statement)%	Bill will have to drive _____ miles on his trip.
+%(final_unit)%	miles.
+%(inverseProb)%	1
+%(from)%	Scale
+%(to)%	Trip
+%(item1)%	Miles
+%(item2)%	Inches
+%(gvn1)%	50.5
+%(gvn1-h1)%	Do you remember what the scale on the map is supposed to represent? What distance in miles does the scale represent?
+%(gvn1-h2)%	Read this part of the statement carefully: ...there is a 2 inch-long scale that represents 50.5 miles.
+%(gvn2)%	2
+%(gvn2-h1)%	Do you remember what the scale on the map is supposed to represent? How many inches long is the scale?
+%(gvn2-h2)%	Read this part of the statement carefully: ...there is a 2 inch-long scale that represents 50.5 miles.
+%(item1_word)%	distance in miles
+%(item2_word)%	number of inches
+%(oper-on)%	1
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the miles of the trip. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the distance in inches. Since you need to scale both numbers equally, you should use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h2)%	How do you get from 2 inches to 200 inches?
+%(fac)%	4
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the miles of the trip. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the distance in inches. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to multiply 2 by to get 8?
+%(gvn3)%	8
+%(gvn3-h1)%	Bill wants to know how much distance he must drive for his trip, but first, he needs to know how much distance the the map tells him.
+%(gvn3-h2)%	What is the one last thing that is known? Do you remember the distance Bill measured on the map for his trip?
+%(gvn3-h3)%	Read this part of the statement carefully: If he measures the distance of his trip to be 200 inches on the map...
+%(ans)%	202
+%(ans-h1)%	Use the operation and operator to convert the inches of distance on the map into the miles of trip.
+%(ans-h2)%	The number of miles Bill must travel for his trip is miles represented by the scale on the map multiplied by the operator you found.
+%(ans-h3)%	You are scaling the distance measured on the map UP using the operator, 4, like this: 50.5 * 4 = ?
+%(ansF-h)%	How many miles does Bill drive on his trip?
+%(good_job)%	Great job! You helped Bill figure out how far he will be travelling on his trip.
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: ...there is a 2 inch-long scale that represents 50.5 miles.
+%(-6411276830810430815)%	Do you remember what the scale on the map is supposed to represent? How many inches long is the scale?
+%(-2130351708502667082)%	Great job! You helped Bill figure out how far he will be travelling on his trip.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the miles of the trip. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Scale" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the inches of distance on the map into the miles of trip.
+%(77047411939768651)%	How do you get from 2 inches to 200 inches?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the miles of the trip. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "Trip" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '8' for the highlighted field.
+%(4071995692167234857)%	You are scaling the distance measured on the map UP using the operator, 4, like this: 50.5 %(oper)% 4 = ?
+%(-4961902392298573881)%	Try typing '2' for the highlighted field.
+%(153812049528734435)%	Please enter '50.5' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the distance in inches. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the distance in inches. Since you need to scale both numbers equally, you should use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(8384133930955196225)%	Please enter '8' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 2 by to get 8?
+%(-4034242170371889659)%	Try typing '50.5' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of inches? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '2' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: ...there is a 2 inch-long scale that represents 50.5 miles.
+%(4071994692163234860)%	The number of miles Bill must travel for his trip is miles represented by the scale on the map multiplied by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? Do you remember the distance Bill measured on the map for his trip?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the distance in miles? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '202' in the highlighted field.
+%(-3965522334249819822)%	Bill wants to know how much distance he must drive for his trip, but first, he needs to know how much distance the the map tells him.
+%(-8126397755713529732)%	Do you remember what the scale on the map is supposed to represent? What distance in miles does the scale represent?
+%(4788299410304215500)%	Try typing in '4' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: If he measures the distance of his trip to be 200 inches on the map...
+%(-4254770397239570902)%	How many miles does Bill drive on his trip?
+Problem Name	06Lemonade
+%(startStateNodeName)%	start
+%(statement)%	Your little sister is running a lemonade stand outside your house. The day that she started the stand, she sold 25 glasses of lemonade and made $2.25. If she has now sold a total of 75 glasses of lemonade, what is the total amount of money that she has made?
+%(final_statement)%	Your little sister has made a total of $_____.
+%(final_unit)%	dollars.
+%(inverseProb)%	0
+%(from)%	Start
+%(to)%	Now
+%(item1)%	Glasses
+%(item2)%	Earnings ($)
+%(gvn1)%	25
+%(gvn1-h1)%	Do you remember how well she was doing the day she started running her lemonade stand? How many glasses did she sell during that time?
+%(gvn1-h2)%	Read this part of the statement carefully: The day that she started the stand, she sold 25 glasses of lemonade and made $2.25.
+%(gvn2)%	2.25
+%(gvn2-h1)%	Do you remember how well she was doing the day she started running her lemonade stand? How much money did she earn during that time?
+%(gvn2-h2)%	Read this part of the statement carefully: The day that she started the stand, she sold 25 glasses of lemonade and made $2.25.
+%(item1_word)%	number of glasses of lemonade
+%(item2_word)%	amount of earnings
+%(oper-on)%	1
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the amount of earnings. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of glasses of lemonade. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h2)%	How do you get from 25 glasses to 75 glasses of lemonade?
+%(fac)%	3
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the amount of earnings. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of glasses of lemonade. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to multiply 25 by to get 75?
+%(gvn3)%	75
+%(gvn3-h1)%	You are looking for how much money your sister has earned in total, but first, you need to know how many cups of lemonade she sold so far.
+%(gvn3-h2)%	What is the one last thing that is known? Do you remember how many glasses of lemonade she sold just now?
+%(gvn3-h3)%	Read this part of the statement carefully: If she has now sold a total of 75 glasses of lemonade...
+%(ans)%	6.75
+%(ans-h1)%	Use the operation and operator to convert the amount of earnings at the beginning into the amount of earning at the end.
+%(ans-h2)%	The amount of earning is amount of money your little sister earned in the beginning multiplied by the operator you found.
+%(ans-h3)%	You are scaling the amount of money your sister earned in the beginning UP using the operator, 3, like this: 2.25 * 3 = ?
+%(ansF-h)%	How much money has your little sister made?
+%(good_job)%	Good job! You helped your little sister calculate the earnings she made from selling 75 glasses of lemonade.
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: The day that she started the stand, she sold 25 glasses of lemonade and made $2.25.
+%(-6411276830810430815)%	Do you remember how well she was doing the day she started running her lemonade stand? How much money did she earn during that time?
+%(-2130351708502667082)%	Good job! You helped your little sister calculate the earnings she made from selling 75 glasses of lemonade.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the amount of earnings. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Start" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the amount of earnings at the beginning into the amount of earning at the end.
+%(77047411939768651)%	How do you get from 25 glasses to 75 glasses of lemonade?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the amount of earnings. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "Now" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '75' for the highlighted field.
+%(4071995692167234857)%	You are scaling the amount of money your sister earned in the beginning UP using the operator, 3, like this: 2.25 %(oper)% 3 = ?
+%(-4961902392298573881)%	Try typing '2.25' for the highlighted field.
+%(153812049528734435)%	Please enter '25' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of glasses of lemonade. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of glasses of lemonade. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(8384133930955196225)%	Please enter '75' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 25 by to get 75?
+%(-4034242170371889659)%	Try typing '25' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the amount of earnings? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '2.25' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: The day that she started the stand, she sold 25 glasses of lemonade and made $2.25.
+%(4071994692163234860)%	The amount of earning is amount of money your little sister earned in the beginning multiplied by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? Do you remember how many glasses of lemonade she sold just now?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of glasses of lemonade? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '6.75' in the highlighted field.
+%(-3965522334249819822)%	You are looking for how much money your sister has earned in total, but first, you need to know how many cups of lemonade she sold so far.
+%(-8126397755713529732)%	Do you remember how well she was doing the day she started running her lemonade stand? How many glasses did she sell during that time?
+%(4788299410304215500)%	Try typing in '3' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: If she has now sold a total of 75 glasses of lemonade...
+%(-4254770397239570902)%	How much money has your little sister made?
+Problem Name	07Driving
+%(startStateNodeName)%	start
+%(statement)%	Bill is driving 400 miles from Pittsburgh to New York City. If he drives at a speed of 50 miles per hour and has no road troubles, how many hours will he have to drive to complete his trip?
+%(final_statement)%	Bill's will have to drive for _____ hours.
+%(final_unit)%	hours.
+%(inverseProb)%	0
+%(from)%	Speed
+%(to)%	Trip
+%(item1)%	Miles
+%(item2)%	Hours
+%(gvn1)%	50
+%(gvn1-h1)%	Can you write the speed (miles per hour) as the distance traveled in a given amount of time? Think about what 'per hour' means.
+%(gvn1-h2)%	50 miles per hour means Bill can travel 50 miles in one hour. 
+%(gvn2)%	1
+%(gvn2-h1)%	Can you write the speed (miles per hour) as the distance traveled in a given amount of time? Think about what 'per hour' means.
+%(gvn2-h2)%	50 miles per hour means Bill can travel 50 miles in one hour. 
+%(item1_word)%	distance in miles
+%(item2_word)%	number of hours
+%(oper-on)%	1
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the hours of the trip. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the miles of the trip. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h2)%	How do you get from 50 miles to 400 miles?
+%(fac)%	8
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the hours of the trip. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of miles of the trip. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to multiply 50 by to get 400?
+%(gvn3)%	400
+%(gvn3-h1)%	Bill wants to know how long he must drive to get to New York City, but first, he needs to know how far New York City is from Pittsburgh.
+%(gvn3-h2)%	What is the one last thing that is known? Do you remember how far New York City is from Pittsburgh?
+%(gvn3-h3)%	Read this part of the statement carefully: Bill is driving 400 miles from Pittsburgh to New York City.
+%(ans)%	8
+%(ans-h1)%	Use the operation and operator to convert the speed of Bill's driving into the hours of Bill's trip
+%(ans-h2)%	The number of hours of Bill's trip is one times the operator. One is from the number of hours in his driving speed.
+%(ans-h3)%	You are scaling the number of hours of travel UP using the operator, 8, like this: 1 * 8 = ?
+%(ansF-h)%	How many hours does Bill have to drive?
+%(good_job)%	Great work! Now you know how much time it would take for Bill to drive from Pittsburgh to New York City.
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-per1
+%(gvn2-skill-label)%	Recognize unit rate
+%(-8126396755689529665)%	50 miles per hour means Bill can travel 50 miles in one hour. 
+%(-6411276830810430815)%	Can you write the speed (miles per hour) as the distance traveled in a given amount of time? Think about what 'per hour' means.
+%(-2130351708502667082)%	Great work! Now you know how much time it would take for Bill to drive from Pittsburgh to New York City.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the hours of the trip. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Speed" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the speed of Bill's driving into the hours of Bill's trip
+%(77047411939768651)%	How do you get from 50 miles to 400 miles?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the hours of the trip. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "Trip" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '400' for the highlighted field.
+%(4071995692167234857)%	You are scaling the number of hours of travel UP using the operator, 8, like this: 1 %(oper)% 8 = ?
+%(-4961902392298573881)%	Try typing '1' for the highlighted field.
+%(153812049528734435)%	Please enter '50' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of miles of the trip. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the miles of the trip. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(8384133930955196225)%	Please enter '400' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 50 by to get 400?
+%(-4034242170371889659)%	Try typing '50' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of hours? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '1' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	50 miles per hour means Bill can travel 50 miles in one hour. 
+%(4071994692163234860)%	The number of hours of Bill's trip is one times the operator. One is from the number of hours in his driving speed.
+%(-3965525334249819719)%	What is the one last thing that is known? Do you remember how far New York City is from Pittsburgh?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the distance in miles? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '8' in the highlighted field.
+%(-3965522334249819822)%	Bill wants to know how long he must drive to get to New York City, but first, he needs to know how far New York City is from Pittsburgh.
+%(-8126397755713529732)%	Can you write the speed (miles per hour) as the distance traveled in a given amount of time? Think about what 'per hour' means.
+%(4788299410304215500)%	Try typing in '8' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: Bill is driving 400 miles from Pittsburgh to New York City.
+%(-4254770397239570902)%	How many hours does Bill have to drive?
+Problem Name	08Saturn
+%(startStateNodeName)%	start
+%(statement)%	You visited a friend on Planet Saturn. Saturn rotates faster than Planet Earth, making a day on Saturn shorter than a day on Earth. After 24 days passed on Saturn, you returned home to find that only 10 days had passed on Earth. This time, your friend will be visiting earth by himself, but he must come back before 12 Saturn days have passed. How long can he stay on Earth before his time runs out?
+%(final_statement)%	Your friend can stay on earth for _____ Earth days.
+%(final_unit)%	Earth Days.
+%(inverseProb)%	0
+%(from)%	Your visit
+%(to)%	Friend's Visit
+%(item1)%	Saturn Days
+%(item2)%	Earth Days
+%(gvn1)%	24
+%(gvn1-h1)%	Do you remember how long you stayed in Saturn while visiting your friend in Saturn?
+%(gvn1-h2)%	Read this part of the statement carefully: After 24 days passed on Saturn, you returned home to find that only 10 days had passed on Earth.
+%(gvn2)%	10
+%(gvn2-h1)%	Do you remember how much time passed on Earth while you visited your friend in Saturn?
+%(gvn2-h2)%	Read this part of the statement carefully: After 24 days passed on Saturn, you returned home to find that only 10 days had passed on Earth.
+%(item1_word)%	number of Saturn days
+%(item2_word)%	number of Earth days
+%(oper-on)%	1
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of Earth days. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of Saturn days. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h2)%	How do you get from 24 Saturn days to 12 Saturn days?
+%(fac)%	2
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of Earth days. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of Saturn days. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to divide 24 by to get 12?
+%(gvn3)%	12
+%(gvn3-h1)%	You are trying to figure out how long your Saturnian friend can stay on Earth, but first, you need to know how much time in Saturn days your friend has.
+%(gvn3-h2)%	What is the one last thing that is known? What did your friend say about how long he can stay?
+%(gvn3-h3)%	Read this part of the statement carefully: ...but he must come back before 12 Saturn days have passed.
+%(ans)%	5
+%(ans-h1)%	Use the operation and operator to convert the original number of Earth days.
+%(ans-h2)%	The number of Earth days your friend can spend with you is number of Saturn days he can stay divided by the operator you found.
+%(ans-h3)%	You are scaling the number of Earth days DOWN using the operator, 2, like this: 10 / 2 = ?
+%(ansF-h)%	How many days can your friend stay on Earth?
+%(good_job)%	Great job! Now you can tell your friend how long he can stay on Earth. 
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: After 24 days passed on Saturn, you returned home to find that only 10 days had passed on Earth.
+%(-6411276830810430815)%	Do you remember how much time passed on Earth while you visited your friend in Saturn?
+%(-2130351708502667082)%	Great job! Now you can tell your friend how long he can stay on Earth. 
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of Earth days. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Your visit" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the original number of Earth days.
+%(77047411939768651)%	How do you get from 24 Saturn days to 12 Saturn days?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of Earth days. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "Friend's Visit" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '12' for the highlighted field.
+%(4071995692167234857)%	You are scaling the number of Earth days DOWN using the operator, 2, like this: 10 %(oper)% 2 = ?
+%(-4961902392298573881)%	Try typing '10' for the highlighted field.
+%(153812049528734435)%	Please enter '24' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of Saturn days. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of Saturn days. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(8384133930955196225)%	Please enter '12' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 24 by to get 12?
+%(-4034242170371889659)%	Try typing '24' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of Earth days? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '10' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: After 24 days passed on Saturn, you returned home to find that only 10 days had passed on Earth.
+%(4071994692163234860)%	The number of Earth days your friend can spend with you is number of Saturn days he can stay divided by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? What did your friend say about how long he can stay?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of Saturn days? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '5' in the highlighted field.
+%(-3965522334249819822)%	You are trying to figure out how long your Saturnian friend can stay on Earth, but first, you need to know how much time in Saturn days your friend has.
+%(-8126397755713529732)%	Do you remember how long you stayed in Saturn while visiting your friend in Saturn?
+%(4788299410304215500)%	Try typing in '2' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: ...but he must come back before 12 Saturn days have passed.
+%(-4254770397239570902)%	How many days can your friend stay on Earth?
+Problem Name	09Donation
+%(startStateNodeName)%	start
+%(statement)%	The radio station KMDX is donating dog food to help a local pet shelter. The people at the radio station offered to give the shelter 2 small bags of dog food for every 7 cans of pet food that are donated to the shelter. If the radio station has given the shelter a total of 8 small bags of dog food, how many cans of pet food have been donated to the shelter?
+%(final_statement)%	The shelter received _____ bags of dog food.
+%(final_unit)%	bags of dog food.
+%(inverseProb)%	0
+%(from)%	Offer
+%(to)%	Total
+%(item1)%	Bags of Dog Food
+%(item2)%	Cans of Pet Food
+%(gvn1)%	2
+%(gvn1-h1)%	Do you remember what the radio station offered? What was the number of bags of dog food they would give for the offer?
+%(gvn1-h2)%	Read this part of the statement carefully: The people at the radio station offered to give the shelter 2 small bags of dog food...
+%(gvn2)%	7
+%(gvn2-h1)%	Do you remember what the radio station offered? What was the number of cans of pet food they wanted for the offer?
+%(gvn2-h2)%	Read this part of the statement carefully: 2 small bags of dog food for every 7 cans of pet food that are donated to the shelter.
+%(item1_word)%	number of bags of dog food
+%(item2_word)%	number of cans of pet food
+%(oper-on)%	1
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of cans of pet food. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of bags of dog food. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h2)%	How do you get from 2 bags to 8 bags of dog food?
+%(fac)%	4
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of cans of pet food. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of bags of dog food. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to multiply 2 by to get 8?
+%(gvn3)%	8
+%(gvn3-h1)%	The radio station wants to know how many cans of pet food have been donated, but first, they need to know how many bags of dog food they have given out.
+%(gvn3-h2)%	What is the one last thing that is known? Do you remember how many bags of dog food the radio station gave to the shelter?
+%(gvn3-h3)%	Read this part of the statement carefully: If the radio station has given the shelter a total of 8 small bags of dog food...
+%(ans)%	28
+%(ans-h1)%	Use the operation and operator to convert the original number of bags of dog food.
+%(ans-h2)%	The number of cans of pet food donated to shelter is the original number of cans of pet food that must be donated for the offer from the radio station multiplied by the operator you found.
+%(ans-h3)%	You are scaling the number of bags of dog food UP using the operator, 4, like this: 7 * 4 = ?
+%(ansF-h)%	How many bags of dog food did the shelter receive?
+%(good_job)%	Good job! You figured out how many cans of pet food were donated to the shelter.
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: The people at the radio station offered to give the shelter 2 small bags of dog food...
+%(-6411276830810430815)%	Do you remember what the radio station offered? What was the number of cans of pet food they wanted for the offer?
+%(-2130351708502667082)%	Good job! You figured out how many cans of pet food were donated to the shelter.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of cans of pet food. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Offer" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the original number of bags of dog food.
+%(77047411939768651)%	How do you get from 2 bags to 8 bags of dog food?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of cans of pet food. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "Total" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '8' for the highlighted field.
+%(4071995692167234857)%	You are scaling the number of bags of dog food UP using the operator, 4, like this: 7 %(oper)% 4 = ?
+%(-4961902392298573881)%	Try typing '7' for the highlighted field.
+%(153812049528734435)%	Please enter '2' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of bags of dog food. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of bags of dog food. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(8384133930955196225)%	Please enter '8' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 2 by to get 8?
+%(-4034242170371889659)%	Try typing '2' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of cans of pet food? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '7' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: 2 small bags of dog food for every 7 cans of pet food that are donated to the shelter.
+%(4071994692163234860)%	The number of cans of pet food donated to shelter is the original number of cans of pet food that must be donated for the offer from the radio station multiplied by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? Do you remember how many bags of dog food the radio station gave to the shelter?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of bags of dog food? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '28' in the highlighted field.
+%(-3965522334249819822)%	The radio station wants to know how many cans of pet food have been donated, but first, they need to know how many bags of dog food they have given out.
+%(-8126397755713529732)%	Do you remember what the radio station offered? What was the number of bags of dog food they would give for the offer?
+%(4788299410304215500)%	Try typing in '4' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: If the radio station has given the shelter a total of 8 small bags of dog food...
+%(-4254770397239570902)%	How many bags of dog food did the shelter receive?
+Problem Name	10Haircuts
+%(startStateNodeName)%	start
+%(statement)%	Hair-Be-Gone Hair Salon has a special offer where for every 6 haircuts that a customer pays for at the salon, the customer will receive 2 free bottles of shampoo. If Mandy's mom pays for her family to receive a total of 24 haircuts at Hair-Be-Gone Hair Salon during the course of a year, how many free bottles of shampoo will Mandy's mom receive?
+%(final_statement)%	Mandy's mom will receive _____ free bottles of shampoo.
+%(final_unit)%	free bottles of shampoo.
+%(inverseProb)%	0
+%(from)%	Offer
+%(to)%	Year
+%(item1)%	Haircuts
+%(item2)%	Bottles of Shampoo
+%(gvn1)%	6
+%(gvn1-h1)%	Do you remember what Hair-Be-Gone Hair Salon's special offer was? What was the number of haircuts needed to get this offer?
+%(gvn1-h2)%	Read this part of the statement carefully: ...for every 6 haircuts that a customer pays for at the salon, the customer will receive 2 free bottles of shampoo.
+%(gvn2)%	2
+%(gvn2-h1)%	Do you remember what Hair-Be-Gone Hair Salon's special offer was? What was the number of free bottles of shampoo the salon will give for the offer?
+%(gvn2-h2)%	Read this part of the statement carefully: ...for every 6 haircuts that a customer pays for at the salon, the customer will receive 2 free bottles of shampoo.
+%(item1_word)%	number of haircuts
+%(item2_word)%	number of bottles of shampoo
+%(oper-on)%	1
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of bottle of shampoo. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of haircuts. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h2)%	How do you get from 6 haircus to 24 haircuts?
+%(fac)%	4
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number bottles of shampoo. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of hair cuts. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to multiply 6 by to get 24?
+%(gvn3)%	24
+%(gvn3-h1)%	You are looking for the number of shampoo bottles Mandy's mother will receive, but first, you need to know how many haircuts Mandy's mother paid for.
+%(gvn3-h2)%	What is the one last thing that is known? Do you remember how many hair cuts Mandy's family got for the year?
+%(gvn3-h3)%	Read this part of the statement carefully: If Mandy's mom pays for her family to receive a total of 24 haircuts...
+%(ans)%	8
+%(ans-h1)%	Use the operation and operator to convert the number of offered bottles of shampoo into the number of bottles of shampoo Mandy's mother will receive.
+%(ans-h2)%	The number of free bottles of shampoo received is the original number of bottles of shampoo offered by the salon multiplied by the operator you found.
+%(ans-h3)%	You are scaling the number of bottles of shampoo UP using the operator, 4, like this: 2 * 4 = ?
+%(ansF-h)%	How many free bottles of shampoo does Mandy's mom receive?
+%(good_job)%	Great job! You helped Mandy's mom figure out how many free bottles of shampoo her family will receive this year. 
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: ...for every 6 haircuts that a customer pays for at the salon, the customer will receive 2 free bottles of shampoo.
+%(-6411276830810430815)%	Do you remember what Hair-Be-Gone Hair Salon's special offer was? What was the number of free bottles of shampoo the salon will give for the offer?
+%(-2130351708502667082)%	Great job! You helped Mandy's mom figure out how many free bottles of shampoo her family will receive this year. 
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of bottle of shampoo. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Offer" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the number of offered bottles of shampoo into the number of bottles of shampoo Mandy's mother will receive.
+%(77047411939768651)%	How do you get from 6 haircus to 24 haircuts?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number bottles of shampoo. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "Year" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '24' for the highlighted field.
+%(4071995692167234857)%	You are scaling the number of bottles of shampoo UP using the operator, 4, like this: 2 %(oper)% 4 = ?
+%(-4961902392298573881)%	Try typing '2' for the highlighted field.
+%(153812049528734435)%	Please enter '6' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of hair cuts. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of haircuts. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(8384133930955196225)%	Please enter '24' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 6 by to get 24?
+%(-4034242170371889659)%	Try typing '6' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of bottles of shampoo? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '2' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: ...for every 6 haircuts that a customer pays for at the salon, the customer will receive 2 free bottles of shampoo.
+%(4071994692163234860)%	The number of free bottles of shampoo received is the original number of bottles of shampoo offered by the salon multiplied by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? Do you remember how many hair cuts Mandy's family got for the year?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of haircuts? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '8' in the highlighted field.
+%(-3965522334249819822)%	You are looking for the number of shampoo bottles Mandy's mother will receive, but first, you need to know how many haircuts Mandy's mother paid for.
+%(-8126397755713529732)%	Do you remember what Hair-Be-Gone Hair Salon's special offer was? What was the number of haircuts needed to get this offer?
+%(4788299410304215500)%	Try typing in '4' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: If Mandy's mom pays for her family to receive a total of 24 haircuts...
+%(-4254770397239570902)%	How many free bottles of shampoo does Mandy's mom receive?
+Problem Name	11Lemonade-2
+%(startStateNodeName)%	start
+%(statement)%	Billy and Suzzy are running a lemonade stand in their local park. The recipe that they are using to make the lemonade requires 8 cups of sugar for every 5 pitchers of lemonade that is made. If they have followed the recipe and have sold 30 pitchers of lemonade, how many cups of sugar have they used?
+%(final_statement)%	Billy and Suzzy have used _____ cups of sugar.
+%(final_unit)%	cups of sugar.
+%(inverseProb)%	0
+%(from)%	Recipe
+%(to)%	Used
+%(item1)%	Pitchers of Lemonade
+%(item2)%	Cups of Sugar
+%(gvn1)%	5
+%(gvn1-h1)%	Do you remember the recipe Billy and Suzzy followed? How many pitchers can the recipe make using 8 cups of sugar?
+%(gvn1-h2)%	Read this part of the statement carefully: The recipe that they are using to make the lemonade requires 8 cups of sugar for every 5 pitchers of lemonade that is made.
+%(gvn2)%	8
+%(gvn2-h1)%	Do you remember the recipe Billy and Suzzy followed? How many cups of sugar is needed to make 5 pitchers of lemonade?
+%(gvn2-h2)%	Read this part of the statement carefully: The recipe that they are using to make the lemonade requires 8 cups of sugar for every 5 pitchers of lemonade that is made.
+%(item1_word)%	number of pitchers of lemonade
+%(item2_word)%	number of cups of sugar
+%(oper-on)%	1
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the cups of sugar. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of pitchers of lemonade. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h2)%	How do you get from 5 pitchers to 30 pitchers of lemonade?
+%(fac)%	6
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number cups of sugar. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of pitchers of lemonade. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to multiply 5 by to get 30?
+%(gvn3)%	30
+%(gvn3-h1)%	You are trying to figure out how many cups of sugar Billy and Suzy used, but first, you need to know how many pitchers of lemonade they have made.
+%(gvn3-h2)%	What is the one last thing that is known? Do you remember how many pitchers of lemonade Billy and Suzzy sold?
+%(gvn3-h3)%	Read this part of the statement carefully: If they have followed the recipe and have sold 30 pitchers of lemonade...
+%(ans)%	48
+%(ans-h1)%	Use the operation and operator to convert the number of cups of sugar in the recipe into then number of cups of sugar that was actually used.
+%(ans-h2)%	The number of cups of sugar used is the recipe's number of cups of sugar multiplied by the operator you found.
+%(ans-h3)%	You are scaling the number of cups of sugar UP using the operator, 6, like this: 8 * 6 = ?
+%(ansF-h)%	How many cups of sugar do Billy and Suzzy use?
+%(good_job)%	Good job! You helped Billy and Suzzy figure out how many cups of sugar they used to make the 30 pitchers of lemonade.
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: The recipe that they are using to make the lemonade requires 8 cups of sugar for every 5 pitchers of lemonade that is made.
+%(-6411276830810430815)%	Do you remember the recipe Billy and Suzzy followed? How many cups of sugar is needed to make 5 pitchers of lemonade?
+%(-2130351708502667082)%	Good job! You helped Billy and Suzzy figure out how many cups of sugar they used to make the 30 pitchers of lemonade.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the cups of sugar. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Recipe" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the number of cups of sugar in the recipe into then number of cups of sugar that was actually used.
+%(77047411939768651)%	How do you get from 5 pitchers to 30 pitchers of lemonade?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number cups of sugar. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "Used" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '30' for the highlighted field.
+%(4071995692167234857)%	You are scaling the number of cups of sugar UP using the operator, 6, like this: 8 %(oper)% 6 = ?
+%(-4961902392298573881)%	Try typing '8' for the highlighted field.
+%(153812049528734435)%	Please enter '5' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of pitchers of lemonade. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of pitchers of lemonade. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(8384133930955196225)%	Please enter '30' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 5 by to get 30?
+%(-4034242170371889659)%	Try typing '5' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of cups of sugar? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '8' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: The recipe that they are using to make the lemonade requires 8 cups of sugar for every 5 pitchers of lemonade that is made.
+%(4071994692163234860)%	The number of cups of sugar used is the recipe's number of cups of sugar multiplied by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? Do you remember how many pitchers of lemonade Billy and Suzzy sold?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of pitchers of lemonade? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '48' in the highlighted field.
+%(-3965522334249819822)%	You are trying to figure out how many cups of sugar Billy and Suzy used, but first, you need to know how many pitchers of lemonade they have made.
+%(-8126397755713529732)%	Do you remember the recipe Billy and Suzzy followed? How many pitchers can the recipe make using 8 cups of sugar?
+%(4788299410304215500)%	Try typing in '6' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: If they have followed the recipe and have sold 30 pitchers of lemonade...
+%(-4254770397239570902)%	How many cups of sugar do Billy and Suzzy use?
+Problem Name	12Eggs
+%(startStateNodeName)%	start
+%(statement)%	The town of Eggsville is having its yearly Easter Egg Hunt, during which the town's residents search around the town for pink colored eggs that can be exchanged for special prizes. One of the town's special prize offers states that for every 10 pink colored eggs a resident finds, he or she can win 3 Nokemop cards. If Jenny wants to win 27 Nokemop cards at the Easter Egg Hunt, how many pink colored eggs will she need to find?
+%(final_statement)%	Jenny will need to find _____ pink colored eggs.
+%(final_unit)%	pink colored eggs.
+%(inverseProb)%	1
+%(from)%	Prize Offer
+%(to)%	Need
+%(item1)%	Pink Eggs
+%(item2)%	Cards
+%(gvn1)%	10
+%(gvn1-h1)%	Do you remember what the special prize offer was? How many eggs do you need to receive 3 Nokemop cards?
+%(gvn1-h2)%	Read this part of the statement carefully: One of the town's special prize offers states that for every 10 pink colored eggs a resident finds, he or she can win 3 Nokemop cards.
+%(gvn2)%	3
+%(gvn2-h1)%	Do you remember what the special prize offer was? How many cards do you receive for 10 pink colored eggs?
+%(gvn2-h2)%	Read this part of the statement carefully: One of the town's special prize offers states that for every 10 pink colored eggs a resident finds, he or she can win 3 Nokemop cards.
+%(item1_word)%	number of pink eggs
+%(item2_word)%	number of cards
+%(oper-on)%	1
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the pink eggs. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of Nokemop cards. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h2)%	How do you convert from 3 cards to 27 cards?
+%(fac)%	9
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of pink eggs. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of Nokemop cards. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to multiply 3 by to get 27?
+%(gvn3)%	27
+%(gvn3-h1)%	You are looking for number of pink eggs Jenny needs to get the Nokemop cards, but first, you need to know how many Nokemop cards Jenny wants. 
+%(gvn3-h2)%	What is the one last thing that is known? Do you remember how many Nokemop cards Jenny wanted to win?
+%(gvn3-h3)%	Read this part of the statement carefully: If Jenny wants to win 27 Nokemop cards at the Easter Egg Hunt...
+%(ans)%	90
+%(ans-h1)%	Use the operation and operator to convert the offered number of pink eggs into the number of pink eggs Jenny needs.
+%(ans-h2)%	The number of pink eggs Jenny needs is the original number of pink eggs multiplied by the operator you found.
+%(ans-h3)%	You are scaling the number of pink eggs UP using the operator, 9, like this: 10 * 9 = ?
+%(ansF-h)%	How many pink colored eggs does Jenny need to find?
+%(good_job)%	Great work! You helped Jenny figure out how many pink eggs she needs in order to get 27 Nokemop cards. 
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: One of the town's special prize offers states that for every 10 pink colored eggs a resident finds, he or she can win 3 Nokemop cards.
+%(-6411276830810430815)%	Do you remember what the special prize offer was? How many cards do you receive for 10 pink colored eggs?
+%(-2130351708502667082)%	Great work! You helped Jenny figure out how many pink eggs she needs in order to get 27 Nokemop cards. 
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the pink eggs. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Prize Offer" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the offered number of pink eggs into the number of pink eggs Jenny needs.
+%(77047411939768651)%	How do you convert from 3 cards to 27 cards?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of pink eggs. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "Need" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '27' for the highlighted field.
+%(4071995692167234857)%	You are scaling the number of pink eggs UP using the operator, 9, like this: 10 %(oper)% 9 = ?
+%(-4961902392298573881)%	Try typing '3' for the highlighted field.
+%(153812049528734435)%	Please enter '10' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of Nokemop cards. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of Nokemop cards. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(8384133930955196225)%	Please enter '27' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 3 by to get 27?
+%(-4034242170371889659)%	Try typing '10' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of cards? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '3' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: One of the town's special prize offers states that for every 10 pink colored eggs a resident finds, he or she can win 3 Nokemop cards.
+%(4071994692163234860)%	The number of pink eggs Jenny needs is the original number of pink eggs multiplied by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? Do you remember how many Nokemop cards Jenny wanted to win?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of pink eggs? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '90' in the highlighted field.
+%(-3965522334249819822)%	You are looking for number of pink eggs Jenny needs to get the Nokemop cards, but first, you need to know how many Nokemop cards Jenny wants. 
+%(-8126397755713529732)%	Do you remember what the special prize offer was? How many eggs do you need to receive 3 Nokemop cards?
+%(4788299410304215500)%	Try typing in '9' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: If Jenny wants to win 27 Nokemop cards at the Easter Egg Hunt...
+%(-4254770397239570902)%	How many pink colored eggs does Jenny need to find?
+Problem Name	13Running
+%(startStateNodeName)%	start
+%(statement)%	Amelia can run around her school's track at a speed of 3 laps every 12.5 minutes. One day, she decided to give herself a challenge and ran at the same speed for total of 37.5 minutes. How many laps did she run?
+%(final_statement)%	Amelia could run a total of _____ laps.
+%(final_unit)%	laps.
+%(inverseProb)%	0
+%(from)%	Speed
+%(to)%	Challenge
+%(item1)%	Minutes
+%(item2)%	Laps
+%(gvn1)%	12.5
+%(gvn1-h1)%	Do you remember how fast Amelia can run? How long did it take to run 3 laps?
+%(gvn1-h2)%	Read this part of the statement carefully: Amelia can run around her school's track at a speed of 3 laps every 12.5 minutes.
+%(gvn2)%	3
+%(gvn2-h1)%	Do you remember how fast Amelia can run? How many laps can she run in 12.5 minutes?
+%(gvn2-h2)%	Read this part of the statement carefully: Amelia can run around her school's track at a speed of 3 laps every 12.5 minutes.
+%(item1_word)%	number of minutes
+%(item2_word)%	number of laps
+%(oper-on)%	1
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of laps. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the time in minutes. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h2)%	How do you get from 12.5 minutes to 37.5 minutes?
+%(fac)%	3
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of laps. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the time in minutes. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to multiply 12.5 by to get 37.5?
+%(gvn3)%	37.5
+%(gvn3-h1)%	Amelia wants to know how many laps she ran in her challenge, but first, she needs to know how long she have been running.
+%(gvn3-h2)%	What is the one last thing that is known? Do you remember how long Amelia ran for her challenge?
+%(gvn3-h3)%	Read this part of the statement carefully: One day, she decided to give herself a challenge and ran at the same speed for total of 37.5 minutes.
+%(ans)%	9
+%(ans-h1)%	Use the operation and operator to convert the original number of laps into number of laps Amelia did for the challenge.
+%(ans-h2)%	The number of laps Amelia did for challenge is the number of practice laps multiplied by the operator you found.
+%(ans-h3)%	You are scaling the number of practice laps UP using the operator, 3, like this: 3 * 3 = ?
+%(ansF-h)%	How many laps can Amelia run?
+%(good_job)%	Good job! Now you know how many laps Amelia ran for her challenge.
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: Amelia can run around her school's track at a speed of 3 laps every 12.5 minutes.
+%(-6411276830810430815)%	Do you remember how fast Amelia can run? How many laps can she run in 12.5 minutes?
+%(-2130351708502667082)%	Good job! Now you know how many laps Amelia ran for her challenge.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of laps. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Speed" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the original number of laps into number of laps Amelia did for the challenge.
+%(77047411939768651)%	How do you get from 12.5 minutes to 37.5 minutes?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of laps. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "Challenge" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '37.5' for the highlighted field.
+%(4071995692167234857)%	You are scaling the number of practice laps UP using the operator, 3, like this: 3 %(oper)% 3 = ?
+%(-4961902392298573881)%	Try typing '3' for the highlighted field.
+%(153812049528734435)%	Please enter '12.5' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the time in minutes. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the time in minutes. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(8384133930955196225)%	Please enter '37.5' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 12.5 by to get 37.5?
+%(-4034242170371889659)%	Try typing '12.5' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of laps? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '3' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: Amelia can run around her school's track at a speed of 3 laps every 12.5 minutes.
+%(4071994692163234860)%	The number of laps Amelia did for challenge is the number of practice laps multiplied by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? Do you remember how long Amelia ran for her challenge?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of minutes? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '9' in the highlighted field.
+%(-3965522334249819822)%	Amelia wants to know how many laps she ran in her challenge, but first, she needs to know how long she have been running.
+%(-8126397755713529732)%	Do you remember how fast Amelia can run? How long did it take to run 3 laps?
+%(4788299410304215500)%	Try typing in '3' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: One day, she decided to give herself a challenge and ran at the same speed for total of 37.5 minutes.
+%(-4254770397239570902)%	How many laps can Amelia run?
+Problem Name	14Snail
+%(startStateNodeName)%	start
+%(statement)%	The fastest snail ever recorded could travel at a speed of 39.6 inches in 6 minutes. If you could watch this snail for just 2 minutes, how long would the snail travel as you watch?
+%(final_statement)%	The snail would travel _____ inches.
+%(final_unit)%	inches.
+%(inverseProb)%	0
+%(from)%	Speed
+%(to)%	Total
+%(item1)%	Minutes
+%(item2)%	Inches
+%(gvn1)%	6
+%(gvn1-h1)%	Do you remember the speed recorded for the fastest snail? How long did it take the snail to travel 39.6 inches?
+%(gvn1-h2)%	Read this part of the statement carefully: The fastest snail ever recorded could travel at a speed of 39.6 inches in 6 minutes.
+%(gvn2)%	39.6
+%(gvn2-h1)%	Do you remember the speed recorded for the fastest snail? What was the distance the snail travelled in 6 minutes?
+%(gvn2-h2)%	Read this part of the statement carefully: The fastest snail ever recorded could travel at a speed of 39.6 inches in 6 minutes.
+%(item1_word)%	number of minutes
+%(item2_word)%	distance in inches
+%(oper-on)%	1
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the inches traveled. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the minutes of travel. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h2)%	How do you get from 6 minutes to 2 minutes?
+%(fac)%	3
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the inches traveled. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the minutes of travel. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to divide 6 by to get 2?
+%(gvn3)%	2
+%(gvn3-h1)%	You are looking for how far the snail would travel while you are watching it, but first, you need to know for how long you would be watching the snail. 
+%(gvn3-h2)%	What is the one last thing that is known? Do you remember for how long you will be watching the snail?
+%(gvn3-h3)%	Read this part of the statement carefully: If you could watch this snail for just 2 minutes...
+%(ans)%	13.2
+%(ans-h1)%	Use the operation and operator to convert the speed of the snail into the inches of trip while you watched.
+%(ans-h2)%	The distance the snail would travel in 2 minutes is inches of travel from the record divided by the operator you found.
+%(ans-h3)%	You are scaling the distance of travel in the record DOWN using the operator, 3, like this: 39.6 / 3 = ?
+%(ansF-h)%	How many inches does the snail travel?
+%(good_job)%	Great job! You found out how much distance the fastest snail would travel in 2 minutes. 
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: The fastest snail ever recorded could travel at a speed of 39.6 inches in 6 minutes.
+%(-6411276830810430815)%	Do you remember the speed recorded for the fastest snail? What was the distance the snail travelled in 6 minutes?
+%(-2130351708502667082)%	Great job! You found out how much distance the fastest snail would travel in 2 minutes. 
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the inches traveled. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Speed" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the speed of the snail into the inches of trip while you watched.
+%(77047411939768651)%	How do you get from 6 minutes to 2 minutes?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the inches traveled. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "Total" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '2' for the highlighted field.
+%(4071995692167234857)%	You are scaling the distance of travel in the record DOWN using the operator, 3, like this: 39.6 %(oper)% 3 = ?
+%(-4961902392298573881)%	Try typing '39.6' for the highlighted field.
+%(153812049528734435)%	Please enter '6' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the minutes of travel. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the minutes of travel. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(8384133930955196225)%	Please enter '2' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 6 by to get 2?
+%(-4034242170371889659)%	Try typing '6' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the distance in inches? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '39.6' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: The fastest snail ever recorded could travel at a speed of 39.6 inches in 6 minutes.
+%(4071994692163234860)%	The distance the snail would travel in 2 minutes is inches of travel from the record divided by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? Do you remember for how long you will be watching the snail?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of minutes? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '13.2' in the highlighted field.
+%(-3965522334249819822)%	You are looking for how far the snail would travel while you are watching it, but first, you need to know for how long you would be watching the snail. 
+%(-8126397755713529732)%	Do you remember the speed recorded for the fastest snail? How long did it take the snail to travel 39.6 inches?
+%(4788299410304215500)%	Try typing in '3' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: If you could watch this snail for just 2 minutes...
+%(-4254770397239570902)%	How many inches does the snail travel?
+Problem Name	15Lemonade-3
+%(startStateNodeName)%	start
+%(statement)%	Andrew is in charge of providing ice chips for his town's lemonade stand. Andrew has planned to give 9 ice chips for every 3 glasses of lemonade that the owner of the stand wants to sell. If the owner of the stand wants to sell a total of 300 glasses of lemonade, what is the total number of ice chips that Andrew needs to provide for the stand?
+%(final_statement)%	Andrew needs to provide a total of _____ ice chips.
+%(final_unit)%	ice chips.
+%(inverseProb)%	1
+%(from)%	Plan
+%(to)%	Total
+%(item1)%	Ice Chips
+%(item2)%	Glasses
+%(gvn1)%	9
+%(gvn1-h1)%	Do you remember what Andrew planned to do? How many ice chips was Andrew planning to give for every 3 glasses of lemonade?
+%(gvn1-h2)%	Read this part of the statement carefully: Andrew has planned to give 9 ice chips for every 3 glasses of lemonade...
+%(gvn2)%	3
+%(gvn2-h1)%	Do you remember what Andrew planned to do? How many glasses of lemonade was Andrew planning to provide for 9 chips of ice?
+%(gvn2-h2)%	Read this part of the statement carefully: Andrew has planned to give 9 ice chips for every 3 glasses of lemonade...
+%(item1_word)%	number of ice chips
+%(item2_word)%	number of glasses of lemonade
+%(oper-on)%	1
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of glasses of lemonade. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of ice chips. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h2)%	How do you get from 3 glasses to 300 glasses of lemonade?
+%(fac)%	100
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of glasses of lemonade. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of ice chips. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to multiply 3 by to get 300?
+%(gvn3)%	300
+%(gvn3-h1)%	You are trying to figure out how many ice chips Andrew needs so that he won't run out of ice today, but first, you need to know how many cups of lemonade Andrew must sell.
+%(gvn3-h2)%	What is the one last thing that is known? Do you remember how many glasses of lemonade the owner of the stand wants to sell?
+%(gvn3-h3)%	Read this part of the statement carefully: If the owner of the stand wants to sell a total of 300 glasses of lemonade...
+%(ans)%	900
+%(ans-h1)%	Use the operation and operator to convert the planned number of ice chips into the total number of ice chips Andrew must provide.
+%(ans-h2)%	The number of ice chips Andrew must provide to the owner is planned number of ice chips multiplied by the operator you found.
+%(ans-h3)%	You are scaling the number of ice chips for each cups of lemonade UP using the operator, 100, like this: 9 * 100 = ?
+%(ansF-h)%	How many ice chips does Andrew need to provide?
+%(good_job)%	Good work! You figured out how many ice chips Andrew needs for 300 glasses of lemonade.
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: Andrew has planned to give 9 ice chips for every 3 glasses of lemonade...
+%(-6411276830810430815)%	Do you remember what Andrew planned to do? How many glasses of lemonade was Andrew planning to provide for 9 chips of ice?
+%(-2130351708502667082)%	Good work! You figured out how many ice chips Andrew needs for 300 glasses of lemonade.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of glasses of lemonade. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Plan" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the planned number of ice chips into the total number of ice chips Andrew must provide.
+%(77047411939768651)%	How do you get from 3 glasses to 300 glasses of lemonade?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of glasses of lemonade. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "Total" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '300' for the highlighted field.
+%(4071995692167234857)%	You are scaling the number of ice chips for each cups of lemonade UP using the operator, 100, like this: 9 %(oper)% 100 = ?
+%(-4961902392298573881)%	Try typing '3' for the highlighted field.
+%(153812049528734435)%	Please enter '9' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of ice chips. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of ice chips. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(8384133930955196225)%	Please enter '300' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 3 by to get 300?
+%(-4034242170371889659)%	Try typing '9' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of glasses of lemonade? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '3' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: Andrew has planned to give 9 ice chips for every 3 glasses of lemonade...
+%(4071994692163234860)%	The number of ice chips Andrew must provide to the owner is planned number of ice chips multiplied by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? Do you remember how many glasses of lemonade the owner of the stand wants to sell?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of ice chips? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '900' in the highlighted field.
+%(-3965522334249819822)%	You are trying to figure out how many ice chips Andrew needs so that he won't run out of ice today, but first, you need to know how many cups of lemonade Andrew must sell.
+%(-8126397755713529732)%	Do you remember what Andrew planned to do? How many ice chips was Andrew planning to give for every 3 glasses of lemonade?
+%(4788299410304215500)%	Try typing in '100' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: If the owner of the stand wants to sell a total of 300 glasses of lemonade...
+%(-4254770397239570902)%	How many ice chips does Andrew need to provide?
+Problem Name	16Clock
+%(startStateNodeName)%	start
+%(statement)%	Uncle Sam's clock is the weirdest clock. The clock's minute hand loops around the clock at a rate of 3 loops every 20 minutes. If the clock has been running for 120 minutes, what is the total number of times that the minute hand looped around the clock?
+%(final_statement)%	The minute hand has looped around the clock _____ times.
+%(final_unit)%	times.
+%(inverseProb)%	0
+%(from)%	Rate
+%(to)%	Total
+%(item1)%	Minutes
+%(item2)%	Loops
+%(gvn1)%	20
+%(gvn1-h1)%	Do you remember how long it takes for Uncle Sam's clock to make 3 loops?
+%(gvn1-h2)%	Read this part of the statement carefully: The clock's minute hand loops around the clock at a rate of 3 loops every 20 minutes.
+%(gvn2)%	3
+%(gvn2-h1)%	Do you remember how many loops Uncle Sam's clock makes in 20 minutes?
+%(gvn2-h2)%	Read this part of the statement carefully: The clock's minute hand loops around the clock at a rate of 3 loops every 20 minutes.
+%(item1_word)%	number of minutes
+%(item2_word)%	number of loops
+%(oper-on)%	1
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of number of loops. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the time in minutes. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(oper-h2)%	How do you get from 20 minutes to 120 minutes?
+%(fac)%	6
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of loops. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the time in minutes. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to multiply 20 by to get 120?
+%(gvn3)%	120
+%(gvn3-h1)%	You are looking for the number of loops Uncle Sam's weird clock has made so far, but first, you need to know for how long the clock has been running.
+%(gvn3-h2)%	What is the one last thing that is known? Do you remember how many minutes Uncle Sam's clock had been running?
+%(gvn3-h3)%	Read this part of the statement carefully: If the clock has been running for 120 minutes...
+%(ans)%	18
+%(ans-h1)%	Use the operation and operator to convert the original number of loops into the total number of loops.
+%(ans-h2)%	The number of loops Uncle Sam's clock made in 120 minutes is original number of loops multiplied by the operator you found.
+%(ans-h3)%	You are scaling the original number of loops UP using the operator, 6, like this: 3 * 6 = ?
+%(ansF-h)%	How many times has the minute hand looped around the clock?
+%(good_job)%	Great job! You figured out how many loops Uncle Sam's strange clock would make in 120 minutes.
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: The clock's minute hand loops around the clock at a rate of 3 loops every 20 minutes.
+%(-6411276830810430815)%	Do you remember how many loops Uncle Sam's clock makes in 20 minutes?
+%(-2130351708502667082)%	Great job! You figured out how many loops Uncle Sam's strange clock would make in 120 minutes.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the number of number of loops. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "Rate" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the original number of loops into the total number of loops.
+%(77047411939768651)%	How do you get from 20 minutes to 120 minutes?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the number of loops. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "Total" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '120' for the highlighted field.
+%(4071995692167234857)%	You are scaling the original number of loops UP using the operator, 6, like this: 3 %(oper)% 6 = ?
+%(-4961902392298573881)%	Try typing '3' for the highlighted field.
+%(153812049528734435)%	Please enter '20' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the time in minutes. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the time in minutes. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%>
+%(8384133930955196225)%	Please enter '120' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 20 by to get 120?
+%(-4034242170371889659)%	Try typing '20' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the number of loops? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '3' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: The clock's minute hand loops around the clock at a rate of 3 loops every 20 minutes.
+%(4071994692163234860)%	The number of loops Uncle Sam's clock made in 120 minutes is original number of loops multiplied by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? Do you remember how many minutes Uncle Sam's clock had been running?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of minutes? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '18' in the highlighted field.
+%(-3965522334249819822)%	You are looking for the number of loops Uncle Sam's weird clock has made so far, but first, you need to know for how long the clock has been running.
+%(-8126397755713529732)%	Do you remember how long it takes for Uncle Sam's clock to make 3 loops?
+%(4788299410304215500)%	Try typing in '6' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: If the clock has been running for 120 minutes...
+%(-4254770397239570902)%	How many times has the minute hand looped around the clock?
+Problem Name	17Balloons
+%(startStateNodeName)%	start
+%(statement)%	Salma is buying balloons for her little brother's birthday party. In a store in Salma's neighborhood, each pack of 12 balloons costs $4.25, and she needs to buy 36 balloons. How much will Salma have to spend on balloons?
+%(final_statement)%	Salma will have to spend $_____ on balloons.
+%(final_unit)%	dollars.
+%(inverseProb)%	0
+%(from)%	They sell
+%(to)%	Salma wants
+%(item1)%	Balloons
+%(item2)%	Cost ($)
+%(gvn1)%	12
+%(gvn1-h1)%	Do you remember what the store sells? What was the number of balloons they sell?
+%(gvn1-h2)%	Read this part of the statement carefully: ...each pack of 12 balloons costs $4.25.
+%(gvn2)%	4.25
+%(gvn2-h1)%	Do you remember what the store sells? What was the cost of balloons they sell?
+%(gvn2-h2)%	Read this part of the statement carefully: ...each pack of 12 balloons costs $4.25.
+%(item1_word)%	number of balloons
+%(item2_word)%	cost
+%(oper-on)%	1
+%(oper)%	*
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the cost of balloons. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%> 
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of balloons. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%> 
+%(oper-h2)%	How do you get from 12 balloons to 36 balloons?
+%(fac)%	3
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the cost of balloons. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of balloons. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(fac-h2)%	What do you have to multiply 12 by to get 36?
+%(gvn3)%	36
+%(gvn3-h1)%	Salma wants to know how much money she must spend on the balloons, but first, she needs to know how many balloons she must buy.
+%(gvn3-h2)%	What is the one last thing that is known? Do you remember what Salma wanted to buy?
+%(gvn3-h3)%	Read this part of the statement carefully: ...and she needs to buy 36 balloons.
+%(ans)%	12.75
+%(ans-h1)%	Use the operation and operator to convert the cost of the balloons the store sells into the amount of money Salma must spend.
+%(ans-h2)%	The amont of money Salma must spend is the cost of the balloons sold in the store multiplied by the operator you found.
+%(ans-h3)%	You are scaling the store's cost of balloons UP using the operator, 3, like this: 4.25 * 3 = ?
+%(ansF-h)%	How much money will Salma spend on her balloons?
+%(good_job)%	Good job! You helped Salma figure out how much 36 balloons would cost.
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from)
+%(-8126396755689529665)%	Read this part of the statement carefully: ...each pack of 12 balloons costs $4.25.
+%(-6411276830810430815)%	Do you remember what the store sells? What was the cost of balloons they sell?
+%(-2130351708502667082)%	Good job! You helped Salma figure out how much 36 balloons would cost.
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct operation for the cost of balloons. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%> 
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "They sell" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the operation and operator to convert the cost of the balloons the store sells into the amount of money Salma must spend.
+%(77047411939768651)%	How do you get from 12 balloons to 36 balloons?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct operator for the cost of balloons. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(5796526918932587988)%	Incorrect! This number belongs to "Salma wants" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '*' for the highlighted field.
+%(4197862601484892294)%	Try typing '36' for the highlighted field.
+%(4071995692167234857)%	You are scaling the store's cost of balloons UP using the operator, 3, like this: 4.25 %(oper)% 3 = ?
+%(-4961902392298573881)%	Try typing '4.25' for the highlighted field.
+%(153812049528734435)%	Please enter '12' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct operator for the number of balloons. Since you need to scale both numbers equally, use the same operator here.,What number do you have to use so that the starting numbers will be converted into the numbers you want?)%> 
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct operation for the number of balloons. Since you need to scale both numbers equally, use the same operation here.,Are you trying to convert to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%> 
+%(8384133930955196225)%	Please enter '36' in the highlighted field.
+%(-7057441371827225106)%	What do you have to multiply 12 by to get 36?
+%(-4034242170371889659)%	Try typing '12' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the cost? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '4.25' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	Read this part of the statement carefully: ...each pack of 12 balloons costs $4.25.
+%(4071994692163234860)%	The amont of money Salma must spend is the cost of the balloons sold in the store multiplied by the operator you found.
+%(-3965525334249819719)%	What is the one last thing that is known? Do you remember what Salma wanted to buy?
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the number of balloons? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '12.75' in the highlighted field.
+%(-3965522334249819822)%	Salma wants to know how much money she must spend on the balloons, but first, she needs to know how many balloons she must buy.
+%(-8126397755713529732)%	Do you remember what the store sells? What was the number of balloons they sell?
+%(4788299410304215500)%	Try typing in '3' in the highlighted field.
+%(-3965524334245819724)%	Read this part of the statement carefully: ...and she needs to buy 36 balloons.
+%(-4254770397239570902)%	How much money will Salma spend on her balloons?
+Problem Name	00Bubble
+%(startStateNodeName)%	Actual Completion
+%(statement)%	In a store, marbles are 39 for $10.50. How much would 13 marbles cost?
+%(final_statement)%	13 marbles would cost ____ dollars.
+%(final_unit)%	dollars.
+%(inverseProb)%	0
+%(from)%	They sell
+%(to)%	You want
+%(item1)%	Marbles
+%(item2)%	Cost ($)
+%(gvn1)%	39
+%(gvn1-h1)%	Do you remember what the store sells? What was the number of marbles they sell?
+%(gvn1-h2)%	-
+%(gvn2)%	10.50
+%(gvn2-h1)%	Do you remember what the store sells? What was the cost of marbles they sell?
+%(gvn2-h2)%	- 
+%(item1_word)%	-
+%(item2_word)%	- 
+%(oper-on)%	1
+%(oper)%	/
+%(oper-h-top)%	<%=ifThen(hasValue(SO2),You've already chosen a correct scaling operation for the cost. Since you need to scale both numbers equally, you should use the same operation here.,Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%> 
+%(oper-h-bott)%	<%=ifThen(hasValue(SO1),You've already chosen a correct scaling operation for the number of marbles. Since you need to scale both numbers equally, you should use the same operation here.,Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%> 
+%(oper-h2)%	How do you get from 20 marbles to 10 marbles?
+%(fac)%	3
+%(fac-top)%	<%=ifThen(hasValue(SF2),You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.,Are you trying to scale to a bigger or a smaller number? Remember, multiplying an integer will increase the original number while multiplying a fraction will decrease the original number.)%>
+%(fac-bott)%	<%=ifThen(hasValue(SF1),You've already found the correct scaling factor for the number of marbles. Since you need to scale both numbers equally, you should use the same scaling factor here.,Are you trying to scale to a bigger or a smaller number? Remember, multiplying an integer will increase the original number while multiplying a fraction will decrease the original number.)%>
+%(fac-h2)%	What do you have to divide 39 by to get 13? How would you express this division as a multiplication of a fraction? 
+%(gvn3)%	13
+%(gvn3-h1)%	-
+%(gvn3-h2)%	-
+%(gvn3-h3)%	- 
+%(ans)%	3.50
+%(ans-h1)%	Use the scaling operation and scaling factor to scale down the original cost of the marbles.
+%(ans-h2)%	The cost of the marbles you want to buy is the selling cost of marbles multiplied by the scaling factor you found.
+%(ans-h3)%	-
+%(ansF-h)%	How much are 13 marbles?
+%(good_job)%	Great job! You figured out how much 10 marbles would cost. 
+%(operation)%	Operation
+%(factor)%	Operator
+%(skillset)%	7-12-conversion-factors
+%(gvn2-entered)%	enter-given-from
+%(gvn2-skill-label)%	Enter given (from) 
+%(-8126396755689529665)%	-
+%(-6411276830810430815)%	Do you remember what the store sells? What was the cost of marbles they sell?
+%(-2130351708502667082)%	Great job! You figured out how much 10 marbles would cost. 
+%(-1934125337180675039)%	Please provide your answer 'No_Value' in the highlighted element.
+%(5828329217989614366)%	<%=ifThen(hasValue(SO2),You've already chosen a correct scaling operation for the cost. Since you need to scale both numbers equally, you should use the same operation here.,Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%> 
+%(-5166532556208710060)%	No, this is not correct.
+%(2294776620999457305)%	Wrong! This number belongs to "They sell" side of the boxes. For this side of the box, try finding the number that can be obtained after scaling.
+%(4071997692195234919)%	Use the scaling operation and scaling factor to scale down the original cost of the marbles.
+%(77047411939768651)%	How do you get from 20 marbles to 10 marbles?
+%(-7538229578606087202)%	Please click on the highlighted button.
+%(-7501258278394530908)%	<%=ifThen(hasValue(SF2),You've already found the correct scaling factor for the cost. Since you need to scale both numbers equally, you should use the same scaling factor here.,Are you trying to scale to a bigger or a smaller number? Remember, multiplying an integer will increase the original number while multiplying a fraction will decrease the original number.)%>
+%(5796526918932587988)%	Incorrect! This number belongs to "You want" side of the boxes. For this side of the box, try finding the number that is to be scaled.
+%(1562243972684693989)%	Try choosing '/' for the highlighted field.
+%(4197862601484892294)%	Try typing '13' for the highlighted field.
+%(4071995692167234857)%	-
+%(-4961902392298573881)%	Try typing '10.50' for the highlighted field.
+%(153812049528734435)%	Please enter '39' in the highlighted field.
+%(-2905257487951838285)%	<%=ifThen(hasValue(SF1),You've already found the correct scaling factor for the number of marbles. Since you need to scale both numbers equally, you should use the same scaling factor here.,Are you trying to scale to a bigger or a smaller number? Remember, multiplying an integer will increase the original number while multiplying a fraction will decrease the original number.)%>
+%(6191938023665250609)%	<%=ifThen(hasValue(SO1),You've already chosen a correct scaling operation for the number of marbles. Since you need to scale both numbers equally, you should use the same operation here.,Are you trying to scale to a bigger number or a smaller number? Remember that multiplication will increase the original number while division will decrease the original number.)%> 
+%(8384133930955196225)%	Please enter '13' in the highlighted field.
+%(-7057441371827225106)%	What do you have to divide 39 by to get 13? How would you express this division as a multiplication of a fraction? 
+%(-4034242170371889659)%	Try typing '39' in the highlighted field.
+%(-6366642409363831965)%	That number does belong on the left side, but does it really represent the - ? Place the number in the box with the correct label!
+%(-6260672562857419714)%	Please enter '10.50' in the highlighted field.
+%(4433704812401454964)%	What have you figured out in this problem?
+%(-6411273830778430726)%	- 
+%(4071994692163234860)%	The cost of the marbles you want to buy is the selling cost of marbles multiplied by the scaling factor you found.
+%(-3965525334249819719)%	-
+%(6911154482326715788)%	That number does belong on the left side, but does it really represent the -? Place the number in the box with the correct label!
+%(6610707971249723146)%	Try typing in '3.50' in the highlighted field.
+%(-3965522334249819822)%	-
+%(-8126397755713529732)%	Do you remember what the store sells? What was the number of marbles they sell?
+%(4788299410304215500)%	Try typing in '3' in the highlighted field.
+%(-3965524334245819724)%	- 
+%(-4254770397239570902)%	How much are 13 marbles?

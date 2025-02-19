@@ -1,0 +1,868 @@
+<?xml version="1.0" standalone="yes"?>
+
+<stateGraph firstCheckAllStates="true" caseInsensitive="true" unordered="false" lockWidget="true" version="2.1" suppressStudentFeedback="false" highlightRightSelection="true" startStateNodeName="%(startStateNodeName)%">
+    <startNodeMessages>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartProblem</MessageType>
+                <ProblemName>football</ProblemName>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceIdentification</MessageType>
+                <Guid>4A6820DA951D72FB535612EEEB6EF68CCCBA948</Guid>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>SetPreferences</MessageType>
+                <log_to_remote_server>false</log_to_remote_server>
+                <log_to_disk>false</log_to_disk>
+                <CommShellVersion>2.11.0</CommShellVersion>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommComboBox</WidgetType>
+                <DorminName>label5</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate comboBox (slot name) (slot value) (multislot values))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (comboBox (name label5) (values )))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>q5</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name q5)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>ans5</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name ans5)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommComboBox</WidgetType>
+                <DorminName>label4</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate comboBox (slot name) (slot value) (multislot values))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (comboBox (name label4) (values )))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>q4</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name q4)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>ans4</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name ans4)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommComboBox</WidgetType>
+                <DorminName>label3</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate comboBox (slot name) (slot value) (multislot values))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (comboBox (name label3) (values )))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>q3</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name q3)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>ans3</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name ans3)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommComboBox</WidgetType>
+                <DorminName>label2</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate comboBox (slot name) (slot value) (multislot values))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (comboBox (name label2) (values )))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>q2</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name q2)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>ans2</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name ans2)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommComboBox</WidgetType>
+                <DorminName>label1</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate comboBox (slot name) (slot value) (multislot values))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (comboBox (name label1) (values )))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>q1</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name q1)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>instructions</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name instructions)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextInput</WidgetType>
+                <DorminName>ans1</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textInput (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textInput (name ans1)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommImage</WidgetType>
+                <DorminName>problempicture</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate Button (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (Button (name problempicture) (value "" )))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>commTextArea</WidgetType>
+                <DorminName>problemstatement</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate textArea (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert ( textArea (name problemstatement)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommImageButton</WidgetType>
+                <DorminName>back_to_problem</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate Button (slot name) (slot value))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (Button (name back_to_problem) (value "" )))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommDoneButton</WidgetType>
+                <DorminName>done</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate button (slot name))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (button (name done)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CommDoneButton</WidgetType>
+                <DorminName>done</DorminName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate button (slot name))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (button (name done)))</value>
+                </jessInstances>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>3EFCDF0F737EEE06FA6037A4DE5A27F01A7EA69</transaction_id>
+                <Selection>
+                    <value>q5</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>The tallest player is</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>B951C0C03AE8140826529B85360FD67D0C8474D</transaction_id>
+                <Selection>
+                    <value>q4</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>75% of players are no taller than</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>496407752CEDE043DD3F114B47FBD548D8AE078</transaction_id>
+                <Selection>
+                    <value>problemstatement</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>This box-and-whisker plot shows the height of the players on a football team.</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>8E6420F289F981F8A372ECADF08C3FFC1DC656D</transaction_id>
+                <Selection>
+                    <value>instructions</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Please use the box-and-whisker plot to answer the questions</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>BC83D223482C700C0CAF43A4075C0CF7CC49B37</transaction_id>
+                <Selection>
+                    <value>q1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>The shortest player is</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7A415C5D0BA090E17D70030B6F6B9027BF6FB8D</transaction_id>
+                <Selection>
+                    <value>q2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>75% of players are at least</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>4471962E045C81157DB189CB22DCD5C820CB290</transaction_id>
+                <Selection>
+                    <value>q3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>50% of players are at least</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>E4DDCBF8D31B48AB13322B7EC258B84C903F230</transaction_id>
+                <Selection>
+                    <value>label1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>undefined</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartStateEnd</MessageType>
+            </properties>
+        </message>
+    </startNodeMessages>
+    <node locked="false" doneState="false">
+        <text>football</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>409</x>
+            <y>30</y>
+            <width>46</width>
+            <height>22</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state1</text>
+        <uniqueID>2</uniqueID>
+        <dimension>
+            <x>414</x>
+            <y>140</y>
+            <width>40</width>
+            <height>22</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state2</text>
+        <uniqueID>3</uniqueID>
+        <dimension>
+            <x>414</x>
+            <y>250</y>
+            <width>40</width>
+            <height>22</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state3</text>
+        <uniqueID>4</uniqueID>
+        <dimension>
+            <x>414</x>
+            <y>360</y>
+            <width>40</width>
+            <height>22</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state4</text>
+        <uniqueID>5</uniqueID>
+        <dimension>
+            <x>414</x>
+            <y>470</y>
+            <width>40</width>
+            <height>22</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state5</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>414</x>
+            <y>580</y>
+            <width>40</width>
+            <height>22</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="true">
+        <text>Done</text>
+        <uniqueID>7</uniqueID>
+        <dimension>
+            <x>417</x>
+            <y>690</y>
+            <width>41</width>
+            <height>25</height>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>1</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>E72DF4433D179720CC23052D2CCF741E0BDA0DF</transaction_id>
+                    <Selection>
+                        <value>ans1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>66</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please enter '66' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">ans1</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">66</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>69</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>3</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>E7118B43DE3B65C8D05C3000E136E54C1D4C5CA</transaction_id>
+                    <Selection>
+                        <value>ans2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>68</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please enter '68' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">ans2</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">68</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>69</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>5</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>5E1C29454B4178E643DAB2304B04510D660E1DA</transaction_id>
+                    <Selection>
+                        <value>ans3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>71</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please enter '71' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">ans3</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">71</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>69</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>3</sourceID>
+        <destID>4</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>7</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>B7647CDFB79CCCA5E1D41715124977055A9B26E</transaction_id>
+                    <Selection>
+                        <value>ans4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>73</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please enter '73' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">ans4</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">73</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>69</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>4</sourceID>
+        <destID>5</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>9</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>A124B61A7DCFA319A40D456453977FDFA4442B1</transaction_id>
+                    <Selection>
+                        <value>ans5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>78</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please enter '78' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">ans5</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">78</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>69</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>11</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>2463448F363F3AE4364FA31FBCD442AA6FB63E8</transaction_id>
+                    <Selection>
+                        <value>done</value>
+                    </Selection>
+                    <Action>
+                        <value>ButtonPressed</value>
+                    </Action>
+                    <Input>
+                        <value>-1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please click on the highlighted button.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">done</matcherParameter>
+                <matcherParameter name="action">ButtonPressed</matcherParameter>
+                <matcherParameter name="input">-1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>72</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>6</sourceID>
+        <destID>7</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <EdgesGroups ordered="true"></EdgesGroups>
+</stateGraph>
+

@@ -1,0 +1,1129 @@
+<?xml version="1.0" standalone="yes"?>
+
+<stateGraph firstCheckAllStates="true" caseInsensitive="true" unordered="true" lockWidget="true" version="2.1" suppressStudentFeedback="false" highlightRightSelection="true" startStateNodeName="">
+    <startNodeMessages>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartProblem</MessageType>
+                <ProblemName>04internet</ProblemName>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceIdentification</MessageType>
+                <Guid>D14EBF455B9A06732B4BAFC4E5A9C62CFDED208</Guid>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <Selection>
+                    <value>def1</value>
+                </Selection>
+                <Action>
+                    <value>setLabels</value>
+                </Action>
+                <Input>
+                    <value>----Select a Definition----,the fixed fee for monthly service,the number of hours of free connect time,the hourly cost for connect time,the total hours of connect time,the hours of connect time after the first connect time,the total cost for the hours of connect time,the actual total monthly cost for internet use,-,-</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <Selection>
+                    <value>def2</value>
+                </Selection>
+                <Action>
+                    <value>setLabels</value>
+                </Action>
+                <Input>
+                    <value>----Select a Definition----,the fixed fee for monthly service,the number of hours of free connect time,the hourly cost for connect time,the total hours of connect time,the hours of connect time after the first connect time,the total cost for the hours of connect time,the actual total monthly cost for internet use,-,-</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <Selection>
+                    <value>def3</value>
+                </Selection>
+                <Action>
+                    <value>setLabels</value>
+                </Action>
+                <Input>
+                    <value>----Select a Definition----,the fixed fee for monthly service,the number of hours of free connect time,the hourly cost for connect time,the total hours of connect time,the hours of connect time after the first connect time,the total cost for the hours of connect time,the actual total monthly cost for internet use,-,-</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <Selection>
+                    <value>def4</value>
+                </Selection>
+                <Action>
+                    <value>setLabels</value>
+                </Action>
+                <Input>
+                    <value>----Select a Definition----,the fixed fee for monthly service,the number of hours of free connect time,the hourly cost for connect time,the total hours of connect time,the hours of connect time after the first connect time,the total cost for the hours of connect time,the actual total monthly cost for internet use,-,-</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <Selection>
+                    <value>def5</value>
+                </Selection>
+                <Action>
+                    <value>setLabels</value>
+                </Action>
+                <Input>
+                    <value>----Select a Definition----,the fixed fee for monthly service,the number of hours of free connect time,the hourly cost for connect time,the total hours of connect time,the hours of connect time after the first connect time,the total cost for the hours of connect time,the actual total monthly cost for internet use,-,-</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <Selection>
+                    <value>def6</value>
+                </Selection>
+                <Action>
+                    <value>setLabels</value>
+                </Action>
+                <Input>
+                    <value>----Select a Definition----,the fixed fee for monthly service,the number of hours of free connect time,the hourly cost for connect time,the total hours of connect time,the hours of connect time after the first connect time,the total cost for the hours of connect time,the actual total monthly cost for internet use,-,-</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <Selection>
+                    <value>def7</value>
+                </Selection>
+                <Action>
+                    <value>setLabels</value>
+                </Action>
+                <Input>
+                    <value>----Select a Definition----,the fixed fee for monthly service,the number of hours of free connect time,the hourly cost for connect time,the total hours of connect time,the hours of connect time after the first connect time,the total cost for the hours of connect time,the actual total monthly cost for internet use,-,-</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>4D4DDA465C235D18EDACCCAB109BF9873E97E43</transaction_id>
+                <Selection>
+                    <value>problemtext</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Antoine has signed up with the GetConnected internet company. He pays a fixed fee of $15 per month for internet access. The first hour of connect time each month is free, and he pays $2 for each additional hour. Antoine wrote this equation to compute how much it will cost him for different total amounts of connect time in a month. Using X and Y as your variablees, you can represent this situation with the function:</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>222F92ECCBF79B6570EF3F9A2E752C04271BFC9</transaction_id>
+                <Selection>
+                    <value>problem_function</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Y = 15 + 2 * ( X - 1 )</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7EF7943191BFD35928EC8372597AD28B37A3F00</transaction_id>
+                <Selection>
+                    <value>instructions</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Please fill in the left-hand blanks with the mathematical expressions and the right-hand blanks with English descriptions of the expressions.</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>8550D6B92E69B878F960429CBE931F53A0B8D5F</transaction_id>
+                <Selection>
+                    <value>def1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the fixed fee for monthly service</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>3692D91907DB785BEEA8C4A46EEC6794D81FA2C</transaction_id>
+                <Selection>
+                    <value>def2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the number of hours of free connect time</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>22B0FEB1C51D19464A1E98ED2F59FBD4467372D</transaction_id>
+                <Selection>
+                    <value>def3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the hourly cost for connect time</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>BA67FED6ED97CA420F76501CA2A94538A3C0A1E</transaction_id>
+                <Selection>
+                    <value>def4</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the total hours of connect time</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>AF20155D30B4F140A0318093D2B4C5AE2788E5C</transaction_id>
+                <Selection>
+                    <value>def5</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the hours of connect time after the first connect time</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>83E439DA574C7A0774CC5AC52D8D0F24F362880</transaction_id>
+                <Selection>
+                    <value>def6</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the total cost for the hours of connect time</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>83E439DA574C7A0774CC5AC52D8D0F24F362880</transaction_id>
+                <Selection>
+                    <value>def7</value>
+                </Selection>
+                <Action>
+                    <value>UpdateComboBox</value>
+                </Action>
+                <Input>
+                    <value>the actual total monthly cost for internet use</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartStateEnd</MessageType>
+            </properties>
+        </message>
+    </startNodeMessages>
+    <node locked="false" doneState="false">
+        <text>04internet</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>227</x>
+            <y>28</y>
+            <width>37</width>
+            <height>25</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>example3</text>
+        <uniqueID>2</uniqueID>
+        <dimension>
+            <x>222</x>
+            <y>138</y>
+            <width>52</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>example2</text>
+        <uniqueID>3</uniqueID>
+        <dimension>
+            <x>222</x>
+            <y>248</y>
+            <width>52</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state3</text>
+        <uniqueID>4</uniqueID>
+        <dimension>
+            <x>222</x>
+            <y>358</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>example1</text>
+        <uniqueID>5</uniqueID>
+        <dimension>
+            <x>222</x>
+            <y>468</y>
+            <width>52</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state5</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>222</x>
+            <y>578</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state6</text>
+        <uniqueID>7</uniqueID>
+        <dimension>
+            <x>222</x>
+            <y>688</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="true">
+        <text>Done</text>
+        <uniqueID>8</uniqueID>
+        <dimension>
+            <x>235</x>
+            <y>944</y>
+            <width>31</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state8</text>
+        <uniqueID>9</uniqueID>
+        <dimension>
+            <x>26</x>
+            <y>79</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state9</text>
+        <uniqueID>10</uniqueID>
+        <dimension>
+            <x>407</x>
+            <y>90</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state7</text>
+        <uniqueID>11</uniqueID>
+        <dimension>
+            <x>228</x>
+            <y>799</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>1</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>E1E68934817A81AFC98B8EB521C07FDACF487E7</transaction_id>
+                    <Selection>
+                        <value>exp1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation 'Y = 15 + 2 * ( X - 1 )'. What part of the equation does the given definition describe?</hintMessage>
+            <hintMessage>The given definition describes a constant in the problem. What value given in the problem represents the fixed fee for monthly service?</hintMessage>
+            <hintMessage>Read this part of the statement carefully: &quot;He pays a fixed fee of $15 per month for internet access.&quot;</hintMessage>
+            <hintMessage>Try entering '15' in the blank.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp1</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(&quot;15&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>150</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Define-constant-term 8-05-variables-expressions-distributive-law</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>258</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>3</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>8F2D4FC8D5A1B86F3BF7E01110A526AAE749036</transaction_id>
+                    <Selection>
+                        <value>exp2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation 'Y = 15 + 2 * ( X - 1 )'. What part of the equation does the given definition describe?</hintMessage>
+            <hintMessage>The given definition describes a constant in the problem. What value given in the problem represents the number of hours of free connect time?</hintMessage>
+            <hintMessage>Read this part of the statement carefully: &quot;The first hour of connect time each month is free.&quot;</hintMessage>
+            <hintMessage>Try entering '1' in the blank.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp2</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(&quot;1&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>150</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Define-constant-term 8-05-variables-expressions-distributive-law</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>258</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>5</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>A8D16EF9FFF15B5F7580C54C408DC0239558C23</transaction_id>
+                    <Selection>
+                        <value>exp3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation 'Y = 15 + 2 * ( X - 1 )'. What part of the equation does the given definition describe?</hintMessage>
+            <hintMessage>The given definition describes a constant in the problem. What value given in the problem represents the hourly cost for connect time?</hintMessage>
+            <hintMessage>Read this part of the statement carefully: &quot;The first hour of connect time each month is free and he pays $2 for each additional hour.&quot;</hintMessage>
+            <hintMessage>Try entering '2' in the blank.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp3</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(&quot;2&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>150</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Define-coefficient 8-05-variables-expressions-distributive-law</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>258</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>3</sourceID>
+        <destID>4</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>7</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>B324A144AE8A84249234A6A692B5565E800D2D0</transaction_id>
+                    <Selection>
+                        <value>exp4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Blanks in the Expression column should be filled with mathematical expressions drawn from the equation 'Y = 15 + 2 * ( X - 1 )'. What part of the equation does the given definition describe?</hintMessage>
+            <hintMessage>Look at the problem statement. Does it ever define &quot;the total hours of connect time&quot; for you? If not, it may mean the expression is not a constant.</hintMessage>
+            <hintMessage>There is no given value for &quot;the total hours of connect time&quot;, therefore this is describing a variable term in the problem.</hintMessage>
+            <hintMessage>Try entering 'x' in the blank.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp4</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(&quot;x&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>150</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Define-variable 8-05-variables-expressions-distributive-law</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>258</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>4</sourceID>
+        <destID>5</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>9</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>5173E9B6674BE20710C022C6102A7C1E295E772</transaction_id>
+                    <Selection>
+                        <value>exp5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>This description suggests a change on &quot;the hours of connect time&quot;, which you defined as X. Think about what is different from &quot;the total hours of connect time&quot; to &quot;the hours of connect time after the first connect time&quot;. </hintMessage>
+            <hintMessage>You can make changes to a variable, X, in many ways; add, subtract, multiply or divide. But what kind of change will X have &quot;after the first connect time&quot;?</hintMessage>
+            <hintMessage>Remember, Antoine will only pay for the connect times minus the amount of connect times that are free. So the variable, X, must be subtracted by the hours of free connect time!</hintMessage>
+            <hintMessage>Try entering 'x-1' in the blank.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp5</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">polyTermsEqual(&quot;x-1&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>150</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Define-variable-expression 8-05-variables-expressions-distributive-law</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>258</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>11</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>309F6C1DBB842EEF1E7AF1DDDFB68169D125531</transaction_id>
+                    <Selection>
+                        <value>exp6</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>It is important to note that this statement is describing &quot;total cost&quot; of something. You already defined total hours of connect time as an expression. Then, how could you write an expression for &quot;the total cost for the hours of connect time&quot;? </hintMessage>
+            <hintMessage>Think of a time when you bought several of the same items; you do (price for each) x (number of the items you buy) to get the total price. </hintMessage>
+            <hintMessage>The total cost can be obtained by multiplying '2', the hourly cost for connect time by 'x-1', the hours of connect time after the first connect time.</hintMessage>
+            <hintMessage>Try entering '2*(x-1)' in the blank.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp6</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">polyTermsEqual(&quot;2*(x-1)&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>155</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Define-product-of-coefficient-and-variable-expression 8-05-variables-expressions-distributive-law</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>258</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>6</sourceID>
+        <destID>7</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="false" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>17</uniqueID>
+            <message>
+                <verb>SendNoteProperty</verb>
+                <properties>
+                    <MessageType>CorrectAction</MessageType>
+                    <Selection>
+                        <value>*</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>-</buggyMessage>
+            <successMessage></successMessage>
+            <actionType>Buggy Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>AnyMatcher</matcherType>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">-</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>111</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>9</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="false" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>23</uniqueID>
+            <message>
+                <verb>SendNoteProperty</verb>
+                <properties>
+                    <MessageType>CorrectAction</MessageType>
+                    <Selection>
+                        <value>*
+</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(defAns8)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>-</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please provide your answer 'No_Value' in the highlighted element.</hintMessage>
+            <actionType>Buggy Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>AnyMatcher</matcherType>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">-</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>111</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>10</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>32</uniqueID>
+            <message>
+                <verb>SendNoteProperty</verb>
+                <properties>
+                    <MessageType>CorrectAction</MessageType>
+                    <Selection>
+                        <value>exp7</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>This description suggests a change on the total cost. Think about what is different from &quot;the total cost for the hours of connect time&quot; to&quot;the actual total monthly cost for internet use&quot;. </hintMessage>
+            <hintMessage>You can make changes to an expression too! You can add, subtract, multiply or divide. But what kind of change would 2*(x-1) need to  turn it into &quot;the actual monthly cost&quot;? </hintMessage>
+            <hintMessage>Remember, there is a certain fee that is added to Antoine's bill each month. So the total cost, 2*(x-1), must be added with this extra fee! </hintMessage>
+            <hintMessage>Try entering '15+2*(x-1)' in the blank.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">exp7</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">polyTermsEqual(&quot;15+2*(x-1)&quot;,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>155</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Define-sum-of-two-terms 8-05-variables-expressions-distributive-law</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>258</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>7</sourceID>
+        <destID>11</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>13</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>4B165213485289246F4F1B392CFBB730EF6C668</transaction_id>
+                    <Selection>
+                        <value>done</value>
+                    </Selection>
+                    <Action>
+                        <value>ButtonPressed</value>
+                    </Action>
+                    <Input>
+                        <value>-1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please click on the highlighted button.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">done</matcherParameter>
+                <matcherParameter name="action">ButtonPressed</matcherParameter>
+                <matcherParameter name="input">-1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>72</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>11</sourceID>
+        <destID>8</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <productionRule opportunities="1">
+        <ruleName>Define-coefficient</ruleName>
+        <productionSet>8-05-variables-expressions-distributive-law</productionSet>
+        <label>Define coefficient</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Define-product-of-coefficient-and-variable-expression</ruleName>
+        <productionSet>8-05-variables-expressions-distributive-law</productionSet>
+        <label>Define product of coefficient and variable expression</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Define-sum-of-two-terms</ruleName>
+        <productionSet>8-05-variables-expressions-distributive-law</productionSet>
+        <label>Define sum of two terms</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Define-variable-expression</ruleName>
+        <productionSet>8-05-variables-expressions-distributive-law</productionSet>
+        <label>Define variable expression</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Define-variable</ruleName>
+        <productionSet>8-05-variables-expressions-distributive-law</productionSet>
+        <label>Define variable</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Define-constant-term</ruleName>
+        <productionSet>8-05-variables-expressions-distributive-law</productionSet>
+        <label>Define constant term</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Define-constant-term</ruleName>
+        <productionSet>8-05-variables-expressions-distributive-law</productionSet>
+        <label>Define constant term</label>
+    </productionRule>
+    <EdgesGroups ordered="false"></EdgesGroups>
+</stateGraph>
+

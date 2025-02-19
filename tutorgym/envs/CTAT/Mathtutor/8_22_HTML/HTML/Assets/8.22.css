@@ -1,0 +1,67 @@
+.CTATProblemSolving {
+  flex: none;
+  flex-flow: column;
+  align-items: stretch;
+}
+.CTATProblem {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.CTATProblem * + div {
+  margin-top: 8px;
+}
+#graphs {
+  flex: 1;
+  min-width: 300px;
+}
+.CTATImageButton img {
+  max-height: 300px;
+}
+#questions {
+  flex: 1;
+  min-width: 300px;
+}
+#sqrt_instructions {
+  position: relative;
+  border: none;
+  padding: 0;
+  display: inline-block;
+  cursor: pointer;
+  background: transparent;
+}
+#sqrt_instructions::before {
+  content: "";
+  display: none;
+  position: absolute;
+  left: 50px;
+  bottom: 0px;
+  width: 233px;
+  height: 285px;
+  background: url('sqrt.png') left center;
+}
+#sqrt_instructions:hover::before, #sqrt_instructions:focus::before, #sqrt_instructions:active::before {
+  display: block;
+  animation: play 5s steps(76) infinite;
+}
+@keyframes play {
+  100% {
+    background-position: -17708px;
+  }
+}
+tbody th {
+  font-weight: bold;
+}
+th[scope="row"] {
+  width: 15%;
+}
+.formula {
+  /*height: 32px;*/
+  line-height: 20px;
+  font-size: 20px;
+  color: blue;
+}
+.pi {
+  line-height: 20px;
+  font-size: 30px;
+}

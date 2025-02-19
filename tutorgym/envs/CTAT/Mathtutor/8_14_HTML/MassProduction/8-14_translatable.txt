@@ -1,0 +1,1800 @@
+Problem Name	01Bank
+%(problem_statement)%	Read these questions carefully. The original value in questions 2 and 3 is the final value in the previous question. Damien is looking at some of his bank statements.
+%(startStateNodeName)%	state20
+	
+%(q1a1-select)%	q1c1
+%(q1a1-input)%	500
+%(q1a2-select)%	q1c3
+%(q1a2-input)%	300
+%(q1a3-select)%	q1c4
+%(q1a3-input)%	800
+%(q1a4-select)%	q1c2
+%(q1a4-input)%	60
+%(q1a1-expression)%	expressionMatches(input, 500)
+%(q1a2-expression)%	expressionMatches(input, 300)
+%(q1a3-expression)%	expressionMatches(input, 800)
+%(q1a4-expression)%	expressionMatches(input, 60)
+	
+%(q2a1-select)%	q2c1
+%(q2a1-input)%	800
+%(q2a2-select)%	q2c2
+%(q2a2-input)%	-84
+%(q2a3-select)%	q2c3
+%(q2a3-input)%	-672
+%(q2a4-select)%	q2c4
+%(q2a4-input)%	128
+%(q2a1-expression)%	expressionMatches(input, 800)
+%(q2a2-expression)%	expressionMatches(input, -84)
+%(q2a3-expression)%	expressionMatches(input, -672)
+%(q2a4-expression)%	expressionMatches(input, 128)
+	
+%(q3a1-select)%	q3c1
+%(q3a1-input)%	128
+%(q3a2-select)%	q3c4
+%(q3a2-input)%	160
+%(q3a3-select)%	q3c3
+%(q3a3-input)%	32
+%(q3a4-select)%	q3c2
+%(q3a4-input)%	25
+%(q3a1-expression)%	expressionMatches(input, 128)
+%(q3a2-expression)%	expressionMatches(input, 160)
+%(q3a3-expression)%	expressionMatches(input, 32)
+%(q3a4-expression)%	expressionMatches(input, 25)
+	
+%(q4a1-select)%	q4c4
+%(q4a1-input)%	124
+%(q4a2-select)%	q4c3
+%(q4a2-input)%	-76
+%(q4a3-select)%	q4c1
+%(q4a3-input)%	200
+%(q4a4-select)%	q4c2
+%(q4a4-input)%	-38
+%(q4a1-expression)%	expressionMatches(input, 124)
+%(q4a2-expression)%	expressionMatches(input, -76)
+%(q4a3-expression)%	expressionMatches(input, 200)
+%(q4a4-expression)%	expressionMatches(input, -38)
+	
+%(q1)%	He opened his savings account with $500.00 and had $300.00 more by the end of the First month. How much money did he have at the close of that month? What was the percent change for his bank statement?
+%(q2)%	By the end of the Second month, Damien had 84% less than he did at the end of the First month. How much money did he have at the close of that month? What was the amount of change for that month?
+%(q3)%	At the end of the Third month, he had $160 in his savings account. What was the amount of change? What was the percent change from the end of the Second month?
+%(q4)%	Damien had $124 left in his checking account after he wrote a check for $76. What was the starting balance of his checking account? What was the percent change in his checking account?
+	
+%(c1)%	Account Balance at Start of Month
+%(c2)%	Percent Change
+%(c3)%	Amount of Change
+%(c4)%	Account Balance at End of Month
+	
+%(c1u1)%	$
+%(c2u2)%	%
+%(c3u3)%	$
+%(c4u4)%	$
+	
+%(q1c1)%	500
+%(q1c2)%	60
+%(q1c3)%	300
+%(q1c4)%	800
+	
+%(q2c1)%	800
+%(q2c2)%	-84
+%(q2c3)%	-672
+%(q2c4)%	128
+	
+%(q3c1)%	128
+%(q3c2)%	25
+%(q3c3)%	32
+%(q3c4)%	160
+	
+%(q4c1)%	200
+%(q4c2)%	-38
+%(q4c3)%	-76
+%(q4c4)%	124
+	
+%(q1a1-h1)%	What do you already know from the question? A value given in the question represents Damien's savings at the beginning of the month.
+%(q1a1-h2)%	How much money does Damien open his account with?
+	
+%(q1a2-h1)%	What do you already know from the question? A value given in the question represents the amount of money Damien's account changed by.
+%(q1a2-h2)%	How much money was added to Damien's account by the end of the month?
+	
+%(q1a3-h1)%	The savings at the end of the month is the savings at the beginning of the month plus the amount the account changed by.
+%(q1a3-h2)%	What is 500 plus 300?
+	
+%(q1a4-h1)%	The value for the amount of change in Damien's account is 300. The value for the savings at the beginning of the month is 500. What is the percent change in Damien's account?
+%(q1a4-h2)%	You can find the percent change by dividing the amount of change, 300, by the savings at the beginning of the month, 500, then multiplying by 100.
+	
+%(q2a1-h1)%	What do you already know from the previous question? The savings at the end of the FIRST month is the same amount as the savings at the beginning of the SECOND month.
+%(q2a1-h2)%	How much money was in Damien's account at the end of the FIRST month? This is the same amount as he has at the beginning of the SECOND month.
+	
+%(q2a2-h1)%	What do you already know from the question? A value given in the question represents the percent change in Damine's account from the beginning of the month to the end.
+%(q2a2-h2)%	What percent did Damien's savings change by from the beginning of the montht to the end?
+	
+%(q2a3-h1)%	You can find the amount of change by multiplying the savings at the beginning of the month, 800, by the decimal form of the percent change, -.84.
+%(q2a3-h2)%	What is 800 multiplied by -.84?
+	
+%(q2a4-h1)%	The savings at the end of the month is the savings at the beginning of the month plus the amount the account changed by.
+%(q2a4-h2)%	What is 800 plus -672?
+	
+%(q3a1-h1)%	What do you already know from the previous question? The savings at the end of the SECOND month is the same amount as the savings at the beginning of the THIRD month.
+%(q3a1-h2)%	How much money was in Damien's account at the end of the SECOND month? This is the same amount as he has at the beginning of the THIRD month.
+	
+%(q3a2-h1)%	What do you already know from the question? A given value in the question represents the amount of savings at the end of the month.
+%(q3a2-h2)%	How much money was in Damien's account at the end of the third month?
+	
+%(q3a3-h1)%	You can find the amount of change by subtracting the savings at the beginning of the month from the savings at the end of the month.
+%(q3a3-h2)%	What is 160 minus 128?
+	
+%(q3a4-h1)%	The value for the amount of change in Damien's account is 32. The value for the savings at the beginning of the month is 128. What is the percent change in Damien's account?
+%(q3a4-h2)%	You can find the percent change by dividing the amount of change, 32, by the savings at the beginning of the month, 128, then multiplying by 100.
+	
+%(q4a1-h1)%	What do you already know from the question? A given value in the question represents the amount of savings at the end of the month.
+%(q4a1-h2)%	How much money was left in Damien's account after he wrote the check?
+	
+%(q4a2-h1)%	What do you already know from the question? A value given in the question represents the amount of money Damien's account changed by.
+%(q4a2-h2)%	How much money  did Damien's savings change by after writing the check?
+	
+%(q4a3-h1)%	The savings at the beginning of the month is the savings at the end of the month minus the amount of change.
+%(q4a3-h2)%	What is 124 minus -76?
+	
+%(q4a4-h1)%	The value for the amount of change in Damien's account is -76. The value for the savings at the beginning of the month is 200. What is the percent change in Damien's account?
+%(q4a4-h2)%	You can find the percent change by dividing the amount of change, -76, by the savings at the beginning of the month, 200, then multiplying by 100.
+	
+	
+%(q1a_skName)%	Gvn
+%(q1a_skLabel)%	Enter given
+%(q1b_skName)%	Gvn
+%(q1b_skLabel)%	Enter given
+%(q1c_skName)%	Gvn
+%(q1c_skLabel)%	Enter given
+%(q1d_skName)%	Gvn
+%(q1d_skLabel)%	Enter given
+	
+%(q2a_skName)%	Gvn
+%(q2a_skLabel)%	Enter given
+%(q2b_skName)%	Gvn
+%(q2b_skLabel)%	Enter given
+%(q2c_skName)%	Gvn
+%(q2c_skLabel)%	Enter given
+%(q2d_skName)%	Gvn
+%(q2d_skLabel)%	Enter given
+	
+%(q3a_skName)%	Gvn
+%(q3a_skLabel)%	Enter given
+%(q3b_skName)%	Gvn
+%(q3b_skLabel)%	Enter given
+%(q3c_skName)%	Gvn
+%(q3c_skLabel)%	Enter given
+%(q3d_skName)%	Gvn
+%(q3d_skLabel)%	Enter given
+	
+%(q4a_skName)%	Gvn
+%(q4a_skLabel)%	Enter given
+%(q4b_skName)%	Gvn
+%(q4b_skLabel)%	Enter given
+%(q4c_skName)%	Gvn
+%(q4c_skLabel)%	Enter given
+%(q4d_skName)%	Gvn
+%(q4d_skLabel)%	Enter given
+%(6335264876927898617)%	What do you already know from the previous question? The savings at the end of the FIRST month is the same amount as the savings at the beginning of the SECOND month.
+%(7006782424596175291)%	Please enter '60' in the highlighted field.
+%(1212606202619573556)%	Please enter '-84' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(-6037573056806900789)%	You can find the percent change by dividing the amount of change, -76, by the savings at the beginning of the month, 200, then multiplying by 100.
+%(9181909178510600657)%	The savings at the beginning of the month is the savings at the end of the month minus the amount of change.
+%(4950157615033292627)%	What is 160 minus 128?
+%(1407818244992993668)%	How much money was in Damien's account at the end of the third month?
+%(6335267876927898514)%	How much money was in Damien's account at the end of the FIRST month? This is the same amount as he has at the beginning of the SECOND month.
+%(-6799437508088616844)%	What do you already know from the question? A value given in the question represents the percent change in Damine's account from the beginning of the month to the end.
+%(5600699584637037129)%	What do you already know from the question? A value given in the question represents the amount of money Damien's account changed by.
+%(-5310642191601425799)%	The value for the amount of change in Damien's account is 32. The value for the savings at the beginning of the month is 128. What is the percent change in Damien's account?
+%(-3001974658168261941)%	You can find the amount of change by multiplying the savings at the beginning of the month, 800, by the decimal form of the percent change, -.84.
+%(-3001975658176261896)%	What is 800 multiplied by -.84?
+%(-6788597792476091650)%	Please enter '128' in the highlighted field.
+%(-9197792957286495875)%	Please enter '200' in the highlighted field.
+%(6664332962603450509)%	How much money was in Damien's account at the end of the SECOND month? This is the same amount as he has at the beginning of the THIRD month.
+%(1407819244984993703)%	What do you already know from the question? A given value in the question represents the amount of savings at the end of the month.
+%(-136504042576776691)%	What is 800 plus -672?
+%(2967316894535865129)%	How much money  did Damien's savings change by after writing the check?
+%(8184105222835174662)%	Please enter '128' in the highlighted field.
+%(9181912178606601002)%	What is 124 minus -76?
+%(-5507060845796800799)%	What is 500 plus 300?
+%(6664335962635450566)%	What do you already know from the previous question? The savings at the end of the SECOND month is the same amount as the savings at the beginning of the THIRD month.
+%(-155202355849558781)%	What do you already know from the question? A given value in the question represents the amount of savings at the end of the month.
+%(-7157658688327724521)%	Please enter '-672' in the highlighted field.
+%(5600702584637037154)%	How much money was added to Damien's account by the end of the month?
+%(-6107211067367675494)%	Please enter '-76' in the highlighted field.
+%(-5507057845764800710)%	The savings at the end of the month is the savings at the beginning of the month plus the amount the account changed by.
+%(2818709654125368021)%	Please enter '25' in the highlighted field.
+%(-5113205742669385737)%	The value for the amount of change in Damien's account is 300. The value for the savings at the beginning of the month is 500. What is the percent change in Damien's account?
+%(-8357683073983968813)%	Please enter '160' in the highlighted field.
+%(-2261770659870763875)%	Please enter '300' in the highlighted field.
+%(-1761368347661505916)%	Please enter '500' in the highlighted field.
+%(-5281889775357762620)%	What do you already know from the question? A value given in the question represents Damien's savings at the beginning of the month.
+%(-345715678789289856)%	Please enter '32' in the highlighted field.
+%(4950156615025292608)%	You can find the amount of change by subtracting the savings at the beginning of the month from the savings at the end of the month.
+%(1671677253122178253)%	Please enter '800' in the highlighted field.
+%(7184726608544415560)%	Please enter '-38' in the highlighted field.
+%(-6037574056814900744)%	The value for the amount of change in Damien's account is -76. The value for the savings at the beginning of the month is 200. What is the percent change in Damien's account?
+%(-6158839041781797702)%	Please enter '800' in the highlighted field.
+%(2967319894535865026)%	What do you already know from the question? A value given in the question represents the amount of money Damien's account changed by.
+%(-1385397859903290937)%	Please enter '124' in the highlighted field.
+%(-5310639191601425902)%	You can find the percent change by dividing the amount of change, 32, by the savings at the beginning of the month, 128, then multiplying by 100.
+%(-5281888775365762585)%	How much money does Damien open his account with?
+%(-5113206742661385772)%	You can find the percent change by dividing the amount of change, 300, by the savings at the beginning of the month, 500, then multiplying by 100.
+%(-136501042544776634)%	The savings at the end of the month is the savings at the beginning of the month plus the amount the account changed by.
+%(-6799436508096616937)%	What percent did Damien's savings change by from the beginning of the montht to the end?
+%(831792927884722819)%	You have completed the problem correctly! Click on the 'done' button to move on.
+%(-155203355857558736)%	How much money was left in Damien's account after he wrote the check?
+Problem Name	02Highway
+%(problem_statement)%	Imagine that you are driving your car on the highway to the mall. The speed limit is 50 miles per hour. You are driving at the speed limit. Please answer these questions:
+%(startStateNodeName)%	state14
+	
+%(q1a1-select)%	q1c1
+%(q1a1-input)%	50
+%(q1a2-select)%	q1c4
+%(q1a2-input)%	20
+%(q1a3-select)%	q1c3
+%(q1a3-input)%	-30
+%(q1a4-select)%	q1c2
+%(q1a4-input)%	-60
+%(q1a1-expression)%	expressionMatches(input, 50)
+%(q1a2-expression)%	expressionMatches(input, 20)
+%(q1a3-expression)%	expressionMatches(input, -30)
+%(q1a4-expression)%	expressionMatches(input, -60)
+	
+%(q2a1-select)%	q2c1
+%(q2a1-input)%	20
+%(q2a2-select)%	q2c2
+%(q2a2-input)%	25
+%(q2a3-select)%	q2c3
+%(q2a3-input)%	5
+%(q2a4-select)%	q2c4
+%(q2a4-input)%	25
+%(q2a1-expression)%	expressionMatches(input, 20)
+%(q2a2-expression)%	expressionMatches(input, 25)
+%(q2a3-expression)%	expressionMatches(input, 5)
+%(q2a4-expression)%	expressionMatches(input, 25)
+	
+%(q3a1-select)%	q3c1
+%(q3a1-input)%	25
+%(q3a2-select)%	q3c3
+%(q3a2-input)%	-10
+%(q3a3-select)%	q3c4
+%(q3a3-input)%	15
+%(q3a4-select)%	q3c2
+%(q3a4-input)%	-40
+%(q3a1-expression)%	expressionMatches(input, 25)
+%(q3a2-expression)%	expressionMatches(input, -10)
+%(q3a3-expression)%	expressionMatches(input, 15)
+%(q3a4-expression)%	expressionMatches(input, -40)
+	
+%(q4a1-select)%	q4c4
+%(q4a1-input)%	50
+%(q4a2-select)%	q4c3
+%(q4a2-input)%	10
+%(q4a3-select)%	q4c1
+%(q4a3-input)%	40
+%(q4a4-select)%	q4c2
+%(q4a4-input)%	25
+%(q4a1-expression)%	expressionMatches(input, 50)
+%(q4a2-expression)%	expressionMatches(input, 10)
+%(q4a3-expression)%	expressionMatches(input, 40)
+%(q4a4-expression)%	expressionMatches(input, 25)
+	
+%(q1)%	If the speed limit on the exit ramp is 20 miles per hour, and it is 50 miles per hour on the highway, what is the amount of change between the two speeds? What is the percent change between the highway speed and exit ramp speed?
+%(q2)%	At the end of the exit ramp, you enter a residential neighborhood. The speed limit is 25% more than the 20 mph limit on the exit ramp. What is the speed limit now? What is the amount of change between the exit ramp speed limit and the residential area speed limit?
+%(q3)%	You drive into a school zone, so you have to reduce your speed by 10 miles per hour. What is the school zone speed limit? What is the percentage change between the neighborhood speed limit and the school zone speed limit?
+%(q4)%	As you are driving home, you need to pass someone. You speed up 10 mph for a new speed of 50 mph. How fast were you going? What is the percent change between your old speed and the new one?
+	
+%(c1)%	Original Speed
+%(c2)%	Percent Change
+%(c3)%	Change in mph
+%(c4)%	New Speed
+	
+%(c1u1)%	mph
+%(c2u2)%	%
+%(c3u3)%	mph
+%(c4u4)%	mph
+	
+%(q1c1)%	50
+%(q1c2)%	-60
+%(q1c3)%	-30
+%(q1c4)%	20
+	
+%(q2c1)%	20
+%(q2c2)%	25
+%(q2c3)%	5
+%(q2c4)%	25
+	
+%(q3c1)%	25
+%(q3c2)%	-40
+%(q3c3)%	-10
+%(q3c4)%	15
+	
+%(q4c1)%	40
+%(q4c2)%	25
+%(q4c3)%	10
+%(q4c4)%	50
+	
+%(q1a1-h1)%	What do you already know from the question? A value given in the question represents the original speed of the car.
+%(q1a1-h2)%	How many miles per hour is the car going on the highway?
+	
+%(q1a2-h1)%	What do you already know from the question? A value given in the question represents the new speed limit.
+%(q1a2-h2)%	What is the new speed limit on the exit ramp?
+	
+%(q1a3-h1)%	You can find the change in mph by subtracting the original speed from the new speed.
+%(q1a3-h2)%	What is 20 minus 50?
+	
+%(q1a4-h1)%	The value for the change in mph is -30. The value for the original mph is 50. What is the percent change in mph?
+%(q1a4-h2)%	You can find the percent change by dividing the change in mph, -30,  by the orginal speed, 50,  then multiplying by 100.
+	
+%(q2a1-h1)%	What do you already know from the question? A value given in the question represents the original speed of the car.
+%(q2a1-h2)%	How many miles per hour is the car going on the exit ramp?
+	
+%(q2a2-h1)%	What do you already know from the question? A value given in the question represents the percent change in mph.
+%(q2a2-h2)%	What percent does the speed limit increase by?
+	
+%(q2a3-h1)%	You can find the change in mph by multiplying the original speed by the percent change in its decimal form.
+%(q2a3-h2)%	What is 20 multiplied by .25?
+	
+%(q2a4-h1)%	The new speed is the original speed plus the change in mph.
+%(q2a4-h2)%	What is 20 plus 5?
+	
+%(q3a1-h1)%	What do you already know from the question? A value given in the question represents the original speed of the car.
+%(q3a1-h2)%	How many miles per hour is the car going in the residential area?
+	
+%(q3a2-h1)%	What do you already know from the question? A value given in the question represents the change in mph.
+%(q3a2-h2)%	How many mph is the speed limit changed by?
+	
+%(q3a3-h1)%	The new speed is the original speed plus the change in mph.
+%(q3a3-h2)%	What is 25 plus -10?
+	
+%(q3a4-h1)%	The value for the change in mph is -10. The value for the original mph is 25. What is the percent change in mph?
+%(q3a4-h2)%	You can find the percent change by dividing the change in mph, -10,  by the orginal speed, 25, then multiplying by 100.
+	
+%(q4a1-h1)%	What do you already know from the question? A value given in the question represents the change in mph.
+%(q4a1-h2)%	How many mph is the speed limit changed by?
+	
+%(q4a2-h1)%	What do you already know from the question? A value given in the question represents the new speed.
+%(q4a2-h2)%	What is the new speed as you pass someone on the highway?
+	
+%(q4a3-h1)%	The original speed is the new speed minus the change in speed.
+%(q4a3-h2)%	What is 50 minus 10?
+	
+%(q4a4-h1)%	The value for the change in mph is 10. The value for the original mph is 40. What is the percent change in mph?
+%(q4a4-h2)%	You can find the percent change by dividing the change in mph, 10,  by the orginal speed, 40, then multiplying by 100.
+	
+	
+%(q1a_skName)%	Gvn
+%(q1a_skLabel)%	Enter given
+%(q1b_skName)%	Gvn
+%(q1b_skLabel)%	Enter given
+%(q1c_skName)%	Gvn
+%(q1c_skLabel)%	Enter given
+%(q1d_skName)%	Gvn
+%(q1d_skLabel)%	Enter given
+	
+%(q2a_skName)%	Gvn
+%(q2a_skLabel)%	Enter given
+%(q2b_skName)%	Gvn
+%(q2b_skLabel)%	Enter given
+%(q2c_skName)%	Gvn
+%(q2c_skLabel)%	Enter given
+%(q2d_skName)%	Gvn
+%(q2d_skLabel)%	Enter given
+	
+%(q3a_skName)%	Gvn
+%(q3a_skLabel)%	Enter given
+%(q3b_skName)%	Gvn
+%(q3b_skLabel)%	Enter given
+%(q3c_skName)%	Gvn
+%(q3c_skLabel)%	Enter given
+%(q3d_skName)%	Gvn
+%(q3d_skLabel)%	Enter given
+	
+%(q4a_skName)%	Gvn
+%(q4a_skLabel)%	Enter given
+%(q4b_skName)%	Gvn
+%(q4b_skLabel)%	Enter given
+%(q4c_skName)%	FindOrgVal
+%(q4c_skLabel)%	Find original value
+%(q4d_skName)%	FindPercent
+%(q4d_skLabel)%	Find percent change
+%(6335264876927898617)%	What do you already know from the question? A value given in the question represents the original speed of the car.
+%(7006782424596175291)%	Please enter '-60' in the highlighted field.
+%(1212606202619573556)%	Please enter '25' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(-6037573056806900789)%	You can find the percent change by dividing the change in mph, 10,  by the orginal speed, 40, then multiplying by 100.
+%(9181909178510600657)%	The original speed is the new speed minus the change in speed.
+%(4950157615033292627)%	What is 25 plus -10?
+%(1407818244992993668)%	How many mph is the speed limit changed by?
+%(6335267876927898514)%	How many miles per hour is the car going on the exit ramp?
+%(-6799437508088616844)%	What do you already know from the question? A value given in the question represents the percent change in mph.
+%(5600699584637037129)%	What do you already know from the question? A value given in the question represents the new speed limit.
+%(-5310642191601425799)%	The value for the change in mph is -10. The value for the original mph is 25. What is the percent change in mph?
+%(-3001974658168261941)%	You can find the change in mph by multiplying the original speed by the percent change in its decimal form.
+%(-3001975658176261896)%	What is 20 multiplied by .25?
+%(-6788597792476091650)%	Please enter '25' in the highlighted field.
+%(-9197792957286495875)%	Please enter '40' in the highlighted field.
+%(6664332962603450509)%	How many miles per hour is the car going in the residential area?
+%(1407819244984993703)%	What do you already know from the question? A value given in the question represents the change in mph.
+%(-136504042576776691)%	What is 20 plus 5?
+%(2967316894535865129)%	What is the new speed as you pass someone on the highway?
+%(8184105222835174662)%	Please enter '25' in the highlighted field.
+%(9181912178606601002)%	What is 50 minus 10?
+%(-5507060845796800799)%	What is 20 minus 50?
+%(6664335962635450566)%	What do you already know from the question? A value given in the question represents the original speed of the car.
+%(-155202355849558781)%	What do you already know from the question? A value given in the question represents the change in mph.
+%(-7157658688327724521)%	Please enter '5' in the highlighted field.
+%(5600702584637037154)%	What is the new speed limit on the exit ramp?
+%(-6107211067367675494)%	Please enter '10' in the highlighted field.
+%(-5507057845764800710)%	You can find the change in mph by subtracting the original speed from the new speed.
+%(2818709654125368021)%	Please enter '-40' in the highlighted field.
+%(-5113205742669385737)%	The value for the change in mph is -30. The value for the original mph is 50. What is the percent change in mph?
+%(-8357683073983968813)%	Please enter '-10' in the highlighted field.
+%(-2261770659870763875)%	Please enter '20' in the highlighted field.
+%(-1761368347661505916)%	Please enter '50' in the highlighted field.
+%(-5281889775357762620)%	What do you already know from the question? A value given in the question represents the original speed of the car.
+%(-345715678789289856)%	Please enter '15' in the highlighted field.
+%(4950156615025292608)%	The new speed is the original speed plus the change in mph.
+%(1671677253122178253)%	Please enter '20' in the highlighted field.
+%(7184726608544415560)%	Please enter '25' in the highlighted field.
+%(-6037574056814900744)%	The value for the change in mph is 10. The value for the original mph is 40. What is the percent change in mph?
+%(-6158839041781797702)%	Please enter '-30' in the highlighted field.
+%(2967319894535865026)%	What do you already know from the question? A value given in the question represents the new speed.
+%(-1385397859903290937)%	Please enter '50' in the highlighted field.
+%(-5310639191601425902)%	You can find the percent change by dividing the change in mph, -10,  by the orginal speed, 25, then multiplying by 100.
+%(-5281888775365762585)%	How many miles per hour is the car going on the highway?
+%(-5113206742661385772)%	You can find the percent change by dividing the change in mph, -30,  by the orginal speed, 50,  then multiplying by 100.
+%(-136501042544776634)%	The new speed is the original speed plus the change in mph.
+%(-6799436508096616937)%	What percent does the speed limit increase by?
+%(831792927884722819)%	You have completed the problem correctly! Click on the 'done' button to move on.
+%(-155203355857558736)%	How many mph is the speed limit changed by?
+Problem Name	03Farmer
+%(problem_statement)%	A farmer is using a new growing technique this year for the first time. He wants to compare the amount of crops he grew this year to the amount he grew last year to see which technique produced better results.
+%(startStateNodeName)%	state8
+	
+%(q1a1-select)%	q1c1
+%(q1a1-input)%	85
+%(q1a2-select)%	q1c3
+%(q1a2-input)%	-17
+%(q1a3-select)%	q1c4
+%(q1a3-input)%	68
+%(q1a4-select)%	q1c2
+%(q1a4-input)%	-20
+%(q1a1-expression)%	expressionMatches(input, 85)
+%(q1a2-expression)%	expressionMatches(input, -17)
+%(q1a3-expression)%	expressionMatches(input, 68)
+%(q1a4-expression)%	expressionMatches(input, -20)
+	
+%(q2a1-select)%	q2c4
+%(q2a1-input)%	195
+%(q2a2-select)%	q2c3
+%(q2a2-input)%	45
+%(q2a3-select)%	q2c1
+%(q2a3-input)%	150
+%(q2a4-select)%	q2c2
+%(q2a4-input)%	30
+%(q2a1-expression)%	expressionMatches(input, 195)
+%(q2a2-expression)%	expressionMatches(input, 45)
+%(q2a3-expression)%	expressionMatches(input, 150)
+%(q2a4-expression)%	expressionMatches(input, 30)
+	
+%(q3a1-select)%	q3c1
+%(q3a1-input)%	180
+%(q3a2-select)%	q3c2
+%(q3a2-input)%	15
+%(q3a3-select)%	q3c3
+%(q3a3-input)%	27
+%(q3a4-select)%	q3c4
+%(q3a4-input)%	207
+%(q3a1-expression)%	expressionMatches(input, 180)
+%(q3a2-expression)%	expressionMatches(input, 15)
+%(q3a3-expression)%	expressionMatches(input, 27)
+%(q3a4-expression)%	expressionMatches(input, 207)
+	
+%(q4a1-select)%	q4c1
+%(q4a1-input)%	200
+%(q4a2-select)%	q4c4
+%(q4a2-input)%	104
+%(q4a3-select)%	q4c3
+%(q4a3-input)%	-96
+%(q4a4-select)%	q4c2
+%(q4a4-input)%	-48
+%(q4a1-expression)%	expressionMatches(input, 200)
+%(q4a2-expression)%	expressionMatches(input, 104)
+%(q4a3-expression)%	expressionMatches(input, -96)
+%(q4a4-expression)%	expressionMatches(input, -48)
+	
+%(q1)%	Last year the farmer had 85 healthy pepper plants. This year he had 17 fewer plants. How many plants did the farmer have this year and what was the percent change from last year?
+%(q2)%	This year was a good year for tomatoes. The farmer shipped 195 tomato plants to market, which is 45 more than last year. How many total plants did the farmer ship last year, and what was the percent change from last year?
+%(q3)%	It was a good year for corn as well. The farmer had 180 plants last year and 15% more this year. How many more corn plants were there this year than last year and how many total corn plants were there this year?
+%(q4)%	The pumpkin field produced 200 pumpkins plants last year and 104 this year. How many fewer pumpkin plants were there? What was the percent change since last year? 
+	
+%(c1)%	Last Year's Crops
+%(c2)%	Percent Change
+%(c3)%	Change in Plants
+%(c4)%	This Year's Crops
+	
+%(c1u1)%	plants
+%(c2u2)%	%
+%(c3u3)%	plants
+%(c4u4)%	plants
+	
+%(q1c1)%	85
+%(q1c2)%	-20
+%(q1c3)%	-17
+%(q1c4)%	68
+	
+%(q2c1)%	150
+%(q2c2)%	30
+%(q2c3)%	45
+%(q2c4)%	195
+	
+%(q3c1)%	180
+%(q3c2)%	15
+%(q3c3)%	27
+%(q3c4)%	207
+	
+%(q4c1)%	200
+%(q4c2)%	-48
+%(q4c3)%	-96
+%(q4c4)%	104
+	
+%(q1a1-h1)%	What do you already know from the question? A given value in this question represents last year's crops.
+%(q1a1-h2)%	How many pepper plants did the farmer have last year?
+	
+%(q1a2-h1)%	What do you already know from the question? A given value in the question represents the change in plants from last year to this year.
+%(q1a2-h2)%	How many fewer plants did the farmer have this year?
+	
+%(q1a3-h1)%	This year's crops is last years crops plus the change in number of plants.
+%(q1a3-h2)%	What is 85 plus -17?
+	
+%(q1a4-h1)%	The value for the change in plants is -17. The value for last year's crops is 85. What is the percentage of change?
+%(q1a4-h2)%	You can find the percent change by dividing change in plants, -17, by last year's crops, 85, then multiplying by 100.
+	
+%(q2a1-h1)%	What do you already know from the question? A value in the question represents this year's crop.
+%(q2a1-h2)%	How many tomato plants were shipped this year?
+	
+%(q2a2-h1)%	What do you already know from the question? A value in the question represents the change in plants from last year to this year.
+%(q2a2-h2)%	How many more tomato plants did the farmer ship this year?
+	
+%(q2a3-h1)%	Last year's crop is this year's crop minus the change in plants.
+%(q2a3-h2)%	What is 195 minus 45?
+	
+%(q2a4-h1)%	The value for the change in plants is 45. The value for last year's crops is 150. What is the percentage of change?
+%(q2a4-h2)%	You can find the percent change by dividing the change in plants, 45,  by last year's crops, 150, then multiplying by 100.
+	
+%(q3a1-h1)%	What do you already know from the question? A given value in this question represents last year's crops.
+%(q3a1-h2)%	How many plants did the farmer have last year?
+	
+%(q3a2-h1)%	What do you already know from the question? A given value in this question represents the percent change of crops from last year to this year.
+%(q3a2-h2)%	What percent did the number of crops increase by?
+	
+%(q3a3-h1)%	You can use last year's crops and the percent change to find the change in plants. Multiply last year's crops, 180, by the percent change in decimal form, .15.
+%(q3a3-h2)%	What is 180 multiplied by .15?
+	
+%(q3a4-h1)%	This year's crops is last years crops plus the change in number of plants.
+%(q3a4-h2)%	What is 180 plus 27?
+	
+%(q4a1-h1)%	What do you already know from the question? A given value in this question represents last year's crops.
+%(q4a1-h2)%	How many pumpkins did the farmer have last year?
+	
+%(q4a2-h1)%	What do you already know from the question? A value in the question represents this year's crop.
+%(q4a2-h2)%	How many pumpkins were shipped this year?
+	
+%(q4a3-h1)%	You can use last year's crops and this year's crops to find the change in plants. Subtract last year's crops from this year's.
+%(q4a3-h2)%	What is 104 minus 200?
+	
+%(q4a4-h1)%	The value for the change in plants is -96. The value for last year's crops is 200. What is the percentage of change?
+%(q4a4-h2)%	You can find the percent change by dividing the change in plants, -96, by last year's crops, 200, then multiplying by 100.
+	
+	
+%(q1a_skName)%	Gvn
+%(q1a_skLabel)%	Enter given
+%(q1b_skName)%	Gvn
+%(q1b_skLabel)%	Enter given
+%(q1c_skName)%	Gvn
+%(q1c_skLabel)%	Enter given
+%(q1d_skName)%	Gvn
+%(q1d_skLabel)%	Enter given
+	
+%(q2a_skName)%	Gvn
+%(q2a_skLabel)%	Enter given
+%(q2b_skName)%	Gvn
+%(q2b_skLabel)%	Enter given
+%(q2c_skName)%	Gvn
+%(q2c_skLabel)%	Enter given
+%(q2d_skName)%	Gvn
+%(q2d_skLabel)%	Enter given
+	
+%(q3a_skName)%	Gvn
+%(q3a_skLabel)%	Enter given
+%(q3b_skName)%	Gvn
+%(q3b_skLabel)%	Enter given
+%(q3c_skName)%	FindChngVal
+%(q3c_skLabel)%	Find change in value
+%(q3d_skName)%	FindNewVal
+%(q3d_skLabel)%	Find new changed value
+	
+%(q4a_skName)%	Gvn
+%(q4a_skLabel)%	Enter given
+%(q4b_skName)%	Gvn
+%(q4b_skLabel)%	Enter given
+%(q4c_skName)%	FindChngVal
+%(q4c_skLabel)%	Find change in value
+%(q4d_skName)%	FindPercent
+%(q4d_skLabel)%	Find percent change
+%(6335264876927898617)%	What do you already know from the question? A value in the question represents this year's crop.
+%(7006782424596175291)%	Please enter '-20' in the highlighted field.
+%(1212606202619573556)%	Please enter '45' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(-6037573056806900789)%	You can find the percent change by dividing the change in plants, -96, by last year's crops, 200, then multiplying by 100.
+%(9181909178510600657)%	You can use last year's crops and this year's crops to find the change in plants. Subtract last year's crops from this year's.
+%(4950157615033292627)%	What is 180 multiplied by .15?
+%(1407818244992993668)%	What percent did the number of crops increase by?
+%(6335267876927898514)%	How many tomato plants were shipped this year?
+%(-6799437508088616844)%	What do you already know from the question? A value in the question represents the change in plants from last year to this year.
+%(5600699584637037129)%	What do you already know from the question? A given value in the question represents the change in plants from last year to this year.
+%(-5310642191601425799)%	This year's crops is last years crops plus the change in number of plants.
+%(-3001974658168261941)%	Last year's crop is this year's crop minus the change in plants.
+%(-3001975658176261896)%	What is 195 minus 45?
+%(-6788597792476091650)%	Please enter '30' in the highlighted field.
+%(-9197792957286495875)%	Please enter '-96' in the highlighted field.
+%(6664332962603450509)%	How many plants did the farmer have last year?
+%(1407819244984993703)%	What do you already know from the question? A given value in this question represents the percent change of crops from last year to this year.
+%(-136504042576776691)%	You can find the percent change by dividing the change in plants, 45,  by last year's crops, 150, then multiplying by 100.
+%(2967316894535865129)%	How many pumpkins were shipped this year?
+%(8184105222835174662)%	Please enter '180' in the highlighted field.
+%(9181912178606601002)%	What is 104 minus 200?
+%(-5507060845796800799)%	What is 85 plus -17?
+%(6664335962635450566)%	What do you already know from the question? A given value in this question represents last year's crops.
+%(-155202355849558781)%	What do you already know from the question? A given value in this question represents last year's crops.
+%(-7157658688327724521)%	Please enter '150' in the highlighted field.
+%(5600702584637037154)%	How many fewer plants did the farmer have this year?
+%(-6107211067367675494)%	Please enter '104' in the highlighted field.
+%(-5507057845764800710)%	This year's crops is last years crops plus the change in number of plants.
+%(2818709654125368021)%	Please enter '207' in the highlighted field.
+%(-5113205742669385737)%	The value for the change in plants is -17. The value for last year's crops is 85. What is the percentage of change?
+%(-8357683073983968813)%	Please enter '15' in the highlighted field.
+%(-2261770659870763875)%	Please enter '-17' in the highlighted field.
+%(-1761368347661505916)%	Please enter '85' in the highlighted field.
+%(-5281889775357762620)%	What do you already know from the question? A given value in this question represents last year's crops.
+%(-345715678789289856)%	Please enter '27' in the highlighted field.
+%(4950156615025292608)%	You can use last year's crops and the percent change to find the change in plants. Multiply last year's crops, 180, by the percent change in decimal form, .15.
+%(1671677253122178253)%	Please enter '195' in the highlighted field.
+%(7184726608544415560)%	Please enter '-48' in the highlighted field.
+%(-6037574056814900744)%	The value for the change in plants is -96. The value for last year's crops is 200. What is the percentage of change?
+%(-6158839041781797702)%	Please enter '68' in the highlighted field.
+%(2967319894535865026)%	What do you already know from the question? A value in the question represents this year's crop.
+%(-1385397859903290937)%	Please enter '200' in the highlighted field.
+%(-5310639191601425902)%	What is 180 plus 27?
+%(-5281888775365762585)%	How many pepper plants did the farmer have last year?
+%(-5113206742661385772)%	You can find the percent change by dividing change in plants, -17, by last year's crops, 85, then multiplying by 100.
+%(-136501042544776634)%	The value for the change in plants is 45. The value for last year's crops is 150. What is the percentage of change?
+%(-6799436508096616937)%	How many more tomato plants did the farmer ship this year?
+%(831792927884722819)%	You have completed the problem correctly! Click on the 'done' button to move on.
+%(-155203355857558736)%	How many pumpkins did the farmer have last year?
+Problem Name	04Stocks
+%(problem_statement)%	Here is what happened with your favorite stocks today. Please answer these questions:
+%(startStateNodeName)%	state2
+	
+%(q1a1-select)%	q1c1
+%(q1a1-input)%	15
+%(q1a2-select)%	q1c2
+%(q1a2-input)%	15
+%(q1a3-select)%	q1c3
+%(q1a3-input)%	2.25
+%(q1a4-select)%	q1c4
+%(q1a4-input)%	17.25
+%(q1a1-expression)%	expressionMatches(input, 15)
+%(q1a2-expression)%	expressionMatches(input, 15)
+%(q1a3-expression)%	expressionMatches(input, 2.25)
+%(q1a4-expression)%	expressionMatches(input, 17.25)
+	
+%(q2a1-select)%	q2c1
+%(q2a1-input)%	200
+%(q2a2-select)%	q2c4
+%(q2a2-input)%	180
+%(q2a3-select)%	q2c3
+%(q2a3-input)%	-20
+%(q2a4-select)%	q2c2
+%(q2a4-input)%	-10
+%(q2a1-expression)%	expressionMatches(input, 200)
+%(q2a2-expression)%	expressionMatches(input, 180)
+%(q2a3-expression)%	expressionMatches(input, -20)
+%(q2a4-expression)%	expressionMatches(input, -10)
+	
+%(q3a1-select)%	q3c4
+%(q3a1-input)%	39
+%(q3a2-select)%	q3c3
+%(q3a2-input)%	-21
+%(q3a3-select)%	q3c1
+%(q3a3-input)%	60
+%(q3a4-select)%	q3c2
+%(q3a4-input)%	-35
+%(q3a1-expression)%	expressionMatches(input, 39)
+%(q3a2-expression)%	expressionMatches(input, -21)
+%(q3a3-expression)%	expressionMatches(input, 60)
+%(q3a4-expression)%	expressionMatches(input, -35)
+	
+%(q4a1-select)%	q4c1
+%(q4a1-input)%	100
+%(q4a2-select)%	q4c3
+%(q4a2-input)%	80
+%(q4a3-select)%	q4c4
+%(q4a3-input)%	180
+%(q4a4-select)%	q4c2
+%(q4a4-input)%	80
+%(q4a1-expression)%	expressionMatches(input, 100)
+%(q4a2-expression)%	expressionMatches(input, 80)
+%(q4a3-expression)%	expressionMatches(input, 180)
+%(q4a4-expression)%	expressionMatches(input, 80)
+	
+%(q1)%	Acme Inc opened at $15.00 and went up 15%. What is the amount of change and what is the closing price?
+%(q2)%	Apex Inc opened at $200 and closed at $180. What was the change in price and what was the percent change of price?
+%(q3)%	Zenith Inc closed at $39 after its price went down $21. What was the opening price and what was the percent change?
+%(q4)%	Azimuth Inc opened at $100 and went up $80. What was the closing price and what was the percent change?
+	
+%(c1)%	Opening Price
+%(c2)%	Percent Change
+%(c3)%	Change in Price
+%(c4)%	Closing Price
+	
+%(c1u1)%	$
+%(c2u2)%	%
+%(c3u3)%	$
+%(c4u4)%	$
+	
+%(q1c1)%	15
+%(q1c2)%	15
+%(q1c3)%	2.25
+%(q1c4)%	17.25
+	
+%(q2c1)%	200
+%(q2c2)%	-10
+%(q2c3)%	-20
+%(q2c4)%	180
+	
+%(q3c1)%	60
+%(q3c2)%	-35
+%(q3c3)%	-21
+%(q3c4)%	39
+	
+%(q4c1)%	100
+%(q4c2)%	80
+%(q4c3)%	80
+%(q4c4)%	180
+	
+%(q1a1-h1)%	What do you already know from the question? A given value in this question represents the opening price of Acme Inc.
+%(q1a1-h2)%	At what price does Acme Inc open?
+	
+%(q1a2-h1)%	What do you already know from the question? A given value in this question represents the percent change of Acme Inc stock.
+%(q1a2-h2)%	What percent does Acme Inc stock go up by?
+	
+%(q1a3-h1)%	You can find the change in price by multiplying the opening price, 15, by the decimal form of the percent change, .15.
+%(q1a3-h2)%	What is 15 multiplied by .15?
+	
+%(q1a4-h1)%	You can compute the closing price for Acme Inc stock by adding the change in price for Acme Inc stock to the opening price of Acme Inc.
+%(q1a4-h2)%	The value for the change in price for Acme Inc stock is $2.25. The value for the opening price of Acme Inc is $15. What is the closing price for Acme Inc stock?
+	
+%(q2a1-h1)%	What do you already know from the question? A given value in this question represents the opening price of Apex Inc.
+%(q2a1-h2)%	At what price does Apex Inc open?
+	
+%(q2a2-h1)%	What do you already know from the question? A given value in this question represents the closing price of Apex Inc.
+%(q2a2-h2)%	At what price does Apex Inc close?
+	
+%(q2a3-h1)%	The change in price is the close price minus the opening price.
+%(q2a3-h2)%	What is 180 minus 200?
+	
+%(q2a4-h1)%	The value for the change in price is $-20. The value for the opening price is $200. What is the percentage of change?
+%(q2a4-h2)%	You can find the percent change by dividing the change in price, -20, by the opening price, 200, then multiplying by 100.
+	
+%(q3a1-h1)%	What do you already know from the question? A given value in this question represents the closing price of Zenith Inc.
+%(q3a1-h2)%	At what price does Zenith Inc close?
+	
+%(q3a2-h1)%	What do you already know from the question? A given value in this question represents the change in price of Zenith Inc.
+%(q3a2-h2)%	What is the change in price for Zenith Inc?
+	
+%(q3a3-h1)%	The opening price is the close price minus the change in price.
+%(q3a3-h2)%	What is 39 minus -21?
+	
+%(q3a4-h1)%	The value for the change in price is $-21. The value for the opening price is $60. What is the percentage of change?
+%(q3a4-h2)%	You find the percent change by dividing the change in price, -21, by the opening price, 60, then multiplying by 100.
+	
+%(q4a1-h1)%	What do you alrady know from the question? A given value in this question represents the opening price of Azimuth Inc.
+%(q4a1-h2)%	At what price does Azimuth Inc open?
+	
+%(q4a2-h1)%	What do you already know from the question? A given value in this question represents the change in price in Azimuth Inc stock.
+%(q4a2-h2)%	What amount does the price of Azimuth increase by?
+	
+%(q4a3-h1)%	The closing price is the opening price plus the change in price.
+%(q4a3-h2)%	What is 100 plus 80?
+	
+%(q4a4-h1)%	The value for the change in price is $80. The value for the opening price is $100. What is the percentage of change?
+%(q4a4-h2)%	You can find the percent change by dividing the change in price, 80, by the opening price, 100, then multiplying by 100.
+	
+	
+%(q1a_skName)%	Gvn
+%(q1a_skLabel)%	Enter given
+%(q1b_skName)%	Gvn
+%(q1b_skLabel)%	Enter given
+%(q1c_skName)%	FindChngVal
+%(q1c_skLabel)%	Find change in value
+%(q1d_skName)%	FindNewVal
+%(q1d_skLabel)%	Find new changed value
+	
+%(q2a_skName)%	Gvn
+%(q2a_skLabel)%	Enter given
+%(q2b_skName)%	Gvn
+%(q2b_skLabel)%	Enter given
+%(q2c_skName)%	FindChngVal
+%(q2c_skLabel)%	Find change in value
+%(q2d_skName)%	FindPercent
+%(q2d_skLabel)%	Find percent change
+	
+%(q3a_skName)%	Gvn
+%(q3a_skLabel)%	Enter given
+%(q3b_skName)%	Gvn
+%(q3b_skLabel)%	Enter given
+%(q3c_skName)%	FindOrgVal
+%(q3c_skLabel)%	Find original value
+%(q3d_skName)%	FindPercent
+%(q3d_skLabel)%	Find percent change
+	
+%(q4a_skName)%	Gvn
+%(q4a_skLabel)%	Enter given
+%(q4b_skName)%	Gvn
+%(q4b_skLabel)%	Enter given
+%(q4c_skName)%	FindNewVal
+%(q4c_skLabel)%	Find new changed value
+%(q4d_skName)%	FindPercent
+%(q4d_skLabel)%	Find percent change
+%(6335264876927898617)%	What do you already know from the question? A given value in this question represents the opening price of Apex Inc.
+%(7006782424596175291)%	Please enter '17.25' in the highlighted field.
+%(1212606202619573556)%	Please enter '180' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(-6037573056806900789)%	You can find the percent change by dividing the change in price, 80, by the opening price, 100, then multiplying by 100.
+%(9181909178510600657)%	The closing price is the opening price plus the change in price.
+%(4950157615033292627)%	What is 39 minus -21?
+%(1407818244992993668)%	What is the change in price for Zenith Inc?
+%(6335267876927898514)%	At what price does Apex Inc open?
+%(-6799437508088616844)%	What do you already know from the question? A given value in this question represents the closing price of Apex Inc.
+%(5600699584637037129)%	What do you already know from the question? A given value in this question represents the percent change of Acme Inc stock.
+%(-5310642191601425799)%	The value for the change in price is $-21. The value for the opening price is $60. What is the percentage of change?
+%(-3001974658168261941)%	The change in price is the close price minus the opening price.
+%(-3001975658176261896)%	What is 180 minus 200?
+%(-6788597792476091650)%	Please enter '-10' in the highlighted field.
+%(-9197792957286495875)%	Please enter '180' in the highlighted field.
+%(6664332962603450509)%	At what price does Zenith Inc close?
+%(1407819244984993703)%	What do you already know from the question? A given value in this question represents the change in price of Zenith Inc.
+%(-136504042576776691)%	You can find the percent change by dividing the change in price, -20, by the opening price, 200, then multiplying by 100.
+%(2967316894535865129)%	What amount does the price of Azimuth increase by?
+%(8184105222835174662)%	Please enter '39' in the highlighted field.
+%(9181912178606601002)%	What is 100 plus 80?
+%(-5507060845796800799)%	What is 15 multiplied by .15?
+%(6664335962635450566)%	What do you already know from the question? A given value in this question represents the closing price of Zenith Inc.
+%(-155202355849558781)%	What do you alrady know from the question? A given value in this question represents the opening price of Azimuth Inc.
+%(-7157658688327724521)%	Please enter '-20' in the highlighted field.
+%(5600702584637037154)%	What percent does Acme Inc stock go up by?
+%(-6107211067367675494)%	Please enter '80' in the highlighted field.
+%(-5507057845764800710)%	You can find the change in price by multiplying the opening price, 15, by the decimal form of the percent change, .15.
+%(2818709654125368021)%	Please enter '-35' in the highlighted field.
+%(-5113205742669385737)%	You can compute the closing price for Acme Inc stock by adding the change in price for Acme Inc stock to the opening price of Acme Inc.
+%(-8357683073983968813)%	Please enter '-21' in the highlighted field.
+%(-2261770659870763875)%	Please enter '15' in the highlighted field.
+%(-1761368347661505916)%	Please enter '15' in the highlighted field.
+%(-5281889775357762620)%	What do you already know from the question? A given value in this question represents the opening price of Acme Inc.
+%(-345715678789289856)%	Please enter '60' in the highlighted field.
+%(4950156615025292608)%	The opening price is the close price minus the change in price.
+%(1671677253122178253)%	Please enter '200' in the highlighted field.
+%(7184726608544415560)%	Please enter '80' in the highlighted field.
+%(-6037574056814900744)%	The value for the change in price is $80. The value for the opening price is $100. What is the percentage of change?
+%(-6158839041781797702)%	Please enter '2.25' in the highlighted field.
+%(2967319894535865026)%	What do you already know from the question? A given value in this question represents the change in price in Azimuth Inc stock.
+%(-1385397859903290937)%	Please enter '100' in the highlighted field.
+%(-5310639191601425902)%	You find the percent change by dividing the change in price, -21, by the opening price, 60, then multiplying by 100.
+%(-5281888775365762585)%	At what price does Acme Inc open?
+%(-5113206742661385772)%	The value for the change in price for Acme Inc stock is $2.25. The value for the opening price of Acme Inc is $15. What is the closing price for Acme Inc stock?
+%(-136501042544776634)%	The value for the change in price is $-20. The value for the opening price is $200. What is the percentage of change?
+%(-6799436508096616937)%	At what price does Apex Inc close?
+%(831792927884722819)%	You have completed the problem correctly! Click on the 'done' button to move on.
+%(-155203355857558736)%	At what price does Azimuth Inc open?
+Problem Name	05Vitamins
+%(problem_statement)%	Dr. Xu switched your multivitamin. You are comparing the amounts of vitamin B 12, vitamin E, potassium, and vitamin C in your old pills and your new pills.
+%(startStateNodeName)%	
+	
+%(q1a1-select)%	q1c1
+%(q1a1-input)%	30
+%(q1a2-select)%	q1c3
+%(q1a2-input)%	9
+%(q1a3-select)%	q1c4
+%(q1a3-input)%	39
+%(q1a4-select)%	q1c2
+%(q1a4-input)%	30
+%(q1a1-expression)%	expressionMatches(input, 30)
+%(q1a2-expression)%	expressionMatches(input, 9)
+%(q1a3-expression)%	expressionMatches(input, 39)
+%(q1a4-expression)%	expressionMatches(input, 30)
+	
+%(q2a1-select)%	q2c4
+%(q2a1-input)%	150
+%(q2a2-select)%	q2c3
+%(q2a2-input)%	-100
+%(q2a3-select)%	q2c1
+%(q2a3-input)%	250
+%(q2a4-select)%	q2c2
+%(q2a4-input)%	-40
+%(q2a1-expression)%	expressionMatches(input, 150)
+%(q2a2-expression)%	expressionMatches(input, -100)
+%(q2a3-expression)%	expressionMatches(input, 250)
+%(q2a4-expression)%	expressionMatches(input, -40)
+	
+%(q3a1-select)%	q3c1
+%(q3a1-input)%	30
+%(q3a2-select)%	q3c2
+%(q3a2-input)%	-10
+%(q3a3-select)%	q3c3
+%(q3a3-input)%	-3
+%(q3a4-select)%	q3c4
+%(q3a4-input)%	27
+%(q3a1-expression)%	expressionMatches(input, 30)
+%(q3a2-expression)%	expressionMatches(input, -10)
+%(q3a3-expression)%	expressionMatches(input, -3)
+%(q3a4-expression)%	expressionMatches(input, 27)
+	
+%(q4a1-select)%	q4c4
+%(q4a1-input)%	299
+%(q4a2-select)%	q4c1
+%(q4a2-input)%	1300
+%(q4a3-select)%	q4c3
+%(q4a3-input)%	-1001
+%(q4a4-select)%	q4c2
+%(q4a4-input)%	-77
+%(q4a1-expression)%	expressionMatches(input, 299)
+%(q4a2-expression)%	expressionMatches(input, 1300)
+%(q4a3-expression)%	expressionMatches(input, -1001)
+%(q4a4-expression)%	expressionMatches(input, -77)
+	
+%(q1)%	The original dose of B12 was 30 mg(milligrams). Your new vitamins have an extra 9 mg of B12. What is the new dosage of B12? What is the percent change of B12?
+%(q2)%	The new vitamins have 150 mg of vitamin E. This is 100 mg less than your old vitamin. How much vitamin E did your old vitamin have? What is the percent change for vitamin E?
+%(q3)%	Your old vitamin had 30 mg of potassium. Your new vitamin has 10% less. What is the change in milligrams of potassium? What is your new potassium dosage? 
+%(q4)%	Your new dosage of vitamin C is 299 mg. This is much lower than your old dosage of 1300 mg. What is the amount of change of vitamin C? What is the percent change of vitamin C?
+	
+%(c1)%	Original Dosage
+%(c2)%	Percent Change
+%(c3)%	Change in Milligrams
+%(c4)%	New Dosage
+	
+%(c1u1)%	mg
+%(c2u2)%	%
+%(c3u3)%	mg
+%(c4u4)%	mg
+	
+%(q1c1)%	30
+%(q1c2)%	30
+%(q1c3)%	9
+%(q1c4)%	39
+	
+%(q2c1)%	250
+%(q2c2)%	-40
+%(q2c3)%	-100
+%(q2c4)%	150
+	
+%(q3c1)%	30
+%(q3c2)%	-10
+%(q3c3)%	-3
+%(q3c4)%	27
+	
+%(q4c1)%	1300
+%(q4c2)%	-77
+%(q4c3)%	-1001
+%(q4c4)%	299
+	
+%(q1a1-h1)%	What do you already know from the question? A given value in this question represents the original dose of B12.
+%(q1a1-h2)%	How many milligrams of B12 were in your old multivitamin?
+	
+%(q1a2-h1)%	What do you already know from the question? A given value in this question represents the change in milligrams of B12.
+%(q1a2-h2)%	How many more milligrams of B12 does your new multivitamin have?
+	
+%(q1a3-h1)%	You can find the new dosage of B12 by adding the original dosage and the change in milligrams.
+%(q1a3-h2)%	What is 30 plus 9?
+	
+%(q1a4-h1)%	The value for the change in milligrams is 9. The value for the original dosage is 30. What is the percent change in milligrams?
+%(q1a4-h2)%	You can find percent change by dividing change in milligrams, 9, by original dosage, 30, then multiplying by 100.
+	
+%(q2a1-h1)%	What do you already know from the question? A given value in this question represents the new dosage of E.
+%(q2a1-h2)%	How many milligrams of E are in your new multivitamin?
+	
+%(q2a2-h1)%	What do you already know from the question? A given value in this question represents the change in milligrams of E.
+%(q2a2-h2)%	How many fewer milligrams of E does your new multivitamin have?
+	
+%(q2a3-h1)%	You can find the original dosage by adding the change in milligrams to the new dosage.
+%(q2a3-h2)%	What is 100 plus 150?
+	
+%(q2a4-h1)%	The value for the change in milligrams is -100. The value for the original dosage is 250. What is the percent change in milligrams?
+%(q2a4-h2)%	You can find percent change by dividing change in milligrams, -100, by original dosage, 250, then multiplying by 100.
+	
+%(q3a1-h1)%	What do you already know from the question? A given value in this question represents the original dose of potassium.
+%(q3a1-h2)%	How many milligrams of potassium were in your old multivitamin?
+	
+%(q3a2-h1)%	What do you already know from the question? A given value in this question represents the percent change of milligrams from your old multivitamin to your new one.
+%(q3a2-h2)%	What percent did the dosage in milligrams decrease by?
+	
+%(q3a3-h1)%	You can find the change in milligrams of potassium by multiplying the original dosage by the decimal form of the percent change.
+%(q3a3-h2)%	What is 30 multiplied by -.10?
+	
+%(q3a4-h1)%	The new dosage is the original dosage plus the change in milligrams.
+%(q3a4-h2)%	What is 30 plus -3?
+	
+%(q4a1-h1)%	What do you already know from the question? A given value in this question represents the new dosage of C.
+%(q4a1-h2)%	How many milligrams of C are in your new multivitamin?
+	
+%(q4a2-h1)%	What do you already know from the question? A given value in this question represents the original dose of vitamin C.
+%(q4a2-h2)%	How many milligrams of C were in your old multivitamin?
+	
+%(q4a3-h1)%	You can find the change in milligrams of C by subtracting the new dosage from the original dosage.
+%(q4a3-h2)%	What is 1300 minus 299?
+	
+%(q4a4-h1)%	The value for the change in milligrams is -1001. The value for the original dosage is 1300. What is the percent change in milligrams?
+%(q4a4-h2)%	You can find percent change by dividing change in milligrams, -1001, by original dosage, 1300, then multiplying by 100.
+	
+	
+%(q1a_skName)%	Gvn
+%(q1a_skLabel)%	Enter given
+%(q1b_skName)%	Gvn
+%(q1b_skLabel)%	Enter given
+%(q1c_skName)%	FindNewVal
+%(q1c_skLabel)%	Find new changed value
+%(q1d_skName)%	FindPercent
+%(q1d_skLabel)%	Find percent change
+	
+%(q2a_skName)%	Gvn
+%(q2a_skLabel)%	Enter given
+%(q2b_skName)%	Gvn
+%(q2b_skLabel)%	Enter given
+%(q2c_skName)%	FindOrgVal
+%(q2c_skLabel)%	Find original value
+%(q2d_skName)%	FindPercent
+%(q2d_skLabel)%	Find percent change
+	
+%(q3a_skName)%	Gvn
+%(q3a_skLabel)%	Enter given
+%(q3b_skName)%	Gvn
+%(q3b_skLabel)%	Enter given
+%(q3c_skName)%	FindChngVal
+%(q3c_skLabel)%	Find change in value
+%(q3d_skName)%	FindNewVal
+%(q3d_skLabel)%	Find new changed value
+	
+%(q4a_skName)%	Gvn
+%(q4a_skLabel)%	Enter given
+%(q4b_skName)%	Gvn
+%(q4b_skLabel)%	Enter given
+%(q4c_skName)%	FindChngVal
+%(q4c_skLabel)%	Find change in value
+%(q4d_skName)%	FindPercent
+%(q4d_skLabel)%	Find percent change
+%(6335264876927898617)%	What do you already know from the question? A given value in this question represents the new dosage of E.
+%(7006782424596175291)%	Please enter '30' in the highlighted field.
+%(1212606202619573556)%	Please enter '-100' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(-6037573056806900789)%	You can find percent change by dividing change in milligrams, -1001, by original dosage, 1300, then multiplying by 100.
+%(9181909178510600657)%	You can find the change in milligrams of C by subtracting the new dosage from the original dosage.
+%(4950157615033292627)%	What is 30 multiplied by -.10?
+%(1407818244992993668)%	What percent did the dosage in milligrams decrease by?
+%(6335267876927898514)%	How many milligrams of E are in your new multivitamin?
+%(-6799437508088616844)%	What do you already know from the question? A given value in this question represents the change in milligrams of E.
+%(5600699584637037129)%	What do you already know from the question? A given value in this question represents the change in milligrams of B12.
+%(-5310642191601425799)%	The new dosage is the original dosage plus the change in milligrams.
+%(-3001974658168261941)%	You can find the original dosage by adding the change in milligrams to the new dosage.
+%(-3001975658176261896)%	What is 100 plus 150?
+%(-6788597792476091650)%	Please enter '-40' in the highlighted field.
+%(-9197792957286495875)%	Please enter '-1001' in the highlighted field.
+%(6664332962603450509)%	How many milligrams of potassium were in your old multivitamin?
+%(1407819244984993703)%	What do you already know from the question? A given value in this question represents the percent change of milligrams from your old multivitamin to your new one.
+%(-136504042576776691)%	You can find percent change by dividing change in milligrams, -100, by original dosage, 250, then multiplying by 100.
+%(2967316894535865129)%	How many milligrams of C were in your old multivitamin?
+%(8184105222835174662)%	Please enter '30' in the highlighted field.
+%(9181912178606601002)%	What is 1300 minus 299?
+%(-5507060845796800799)%	What is 30 plus 9?
+%(6664335962635450566)%	What do you already know from the question? A given value in this question represents the original dose of potassium.
+%(-155202355849558781)%	What do you already know from the question? A given value in this question represents the new dosage of C.
+%(-7157658688327724521)%	Please enter '250' in the highlighted field.
+%(5600702584637037154)%	How many more milligrams of B12 does your new multivitamin have?
+%(-6107211067367675494)%	Please enter '1300' in the highlighted field.
+%(-5507057845764800710)%	You can find the new dosage of B12 by adding the original dosage and the change in milligrams.
+%(2818709654125368021)%	Please enter '27' in the highlighted field.
+%(-5113205742669385737)%	The value for the change in milligrams is 9. The value for the original dosage is 30. What is the percent change in milligrams?
+%(-8357683073983968813)%	Please enter '-10' in the highlighted field.
+%(-2261770659870763875)%	Please enter '9' in the highlighted field.
+%(-1761368347661505916)%	Please enter '30' in the highlighted field.
+%(-5281889775357762620)%	What do you already know from the question? A given value in this question represents the original dose of B12.
+%(-345715678789289856)%	Please enter '-3' in the highlighted field.
+%(4950156615025292608)%	You can find the change in milligrams of potassium by multiplying the original dosage by the decimal form of the percent change.
+%(1671677253122178253)%	Please enter '150' in the highlighted field.
+%(7184726608544415560)%	Please enter '-77' in the highlighted field.
+%(-6037574056814900744)%	The value for the change in milligrams is -1001. The value for the original dosage is 1300. What is the percent change in milligrams?
+%(-6158839041781797702)%	Please enter '39' in the highlighted field.
+%(2967319894535865026)%	What do you already know from the question? A given value in this question represents the original dose of vitamin C.
+%(-1385397859903290937)%	Please enter '299' in the highlighted field.
+%(-5310639191601425902)%	What is 30 plus -3?
+%(-5281888775365762585)%	How many milligrams of B12 were in your old multivitamin?
+%(-5113206742661385772)%	You can find percent change by dividing change in milligrams, 9, by original dosage, 30, then multiplying by 100.
+%(-136501042544776634)%	The value for the change in milligrams is -100. The value for the original dosage is 250. What is the percent change in milligrams?
+%(-6799436508096616937)%	How many fewer milligrams of E does your new multivitamin have?
+%(831792927884722819)%	You have completed the problem correctly! Click on the 'done' button to move on.
+%(-155203355857558736)%	How many milligrams of C are in your new multivitamin?
+Problem Name	06Widgets
+%(problem_statement)%	Natasha has been keeping track of the month-by-month production of her widget factory. Read these questions carefully. The beginning value for questions 2 and 3 are the final value of the preceding question.
+%(startStateNodeName)%	
+	
+%(q1a1-select)%	q1c1
+%(q1a1-input)%	4500
+%(q1a2-select)%	q1c2
+%(q1a2-input)%	-20
+%(q1a3-select)%	q1c3
+%(q1a3-input)%	-900
+%(q1a4-select)%	q1c4
+%(q1a4-input)%	3600
+%(q1a1-expression)%	expressionMatches(input, 4500)
+%(q1a2-expression)%	expressionMatches(input, -20)
+%(q1a3-expression)%	expressionMatches(input, -900)
+%(q1a4-expression)%	expressionMatches(input, 3600)
+	
+%(q2a1-select)%	q2c1
+%(q2a1-input)%	3600
+%(q2a2-select)%	q2c3
+%(q2a2-input)%	-1512
+%(q2a3-select)%	q2c4
+%(q2a3-input)%	2088
+%(q2a4-select)%	q2c2
+%(q2a4-input)%	-42
+%(q2a1-expression)%	expressionMatches(input, 3600)
+%(q2a2-expression)%	expressionMatches(input, -1512)
+%(q2a3-expression)%	expressionMatches(input, 2088)
+%(q2a4-expression)%	expressionMatches(input, -42)
+	
+%(q3a1-select)%	q3c1
+%(q3a1-input)%	2088
+%(q3a2-select)%	q3c4
+%(q3a2-input)%	5220
+%(q3a3-select)%	q3c3
+%(q3a3-input)%	3132
+%(q3a4-select)%	q3c2
+%(q3a4-input)%	150
+%(q3a1-expression)%	expressionMatches(input, 2088)
+%(q3a2-expression)%	expressionMatches(input, 5220)
+%(q3a3-expression)%	expressionMatches(input, 3132)
+%(q3a4-expression)%	expressionMatches(input, 150)
+	
+%(q4a1-select)%	q4c4
+%(q4a1-input)%	5643
+%(q4a2-select)%	q4c3
+%(q4a2-input)%	2673
+%(q4a3-select)%	q4c1
+%(q4a3-input)%	2970
+%(q4a4-select)%	q4c2
+%(q4a4-input)%	90
+%(q4a1-expression)%	expressionMatches(input, 5643)
+%(q4a2-expression)%	expressionMatches(input, 2673)
+%(q4a3-expression)%	expressionMatches(input, 2970)
+%(q4a4-expression)%	expressionMatches(input, 90)
+	
+%(q1)%	In December, her factory produced 4500 widgets. In January, her factory produced 20% fewer widgets. What was the amount of change in production? How many widgets did the factory produce in January?
+%(q2)%	In February, production went down again. The factory made 1512 fewer widgets than in January. How many total widgets were made in February? What was the percent change of widget production?
+%(q3)%	In March, Natasha gave bonuses to her employees and they produced 5220 widgets that month. What was the amount of change in widget production? What was the percent change of widget production? 
+%(q4)%	Natasha hired more people in November. The factory made 5643 widgets that month, which was 2673 more than the previous month. How many widgets were made in October? What was the percent change in widget production from October to November?
+	
+%(c1)%	Start value of Widgets
+%(c2)%	Percent Change
+%(c3)%	Change in Widgets
+%(c4)%	End Value of Widgets
+	
+%(c1u1)%	widgets
+%(c2u2)%	%
+%(c3u3)%	widgets
+%(c4u4)%	widgets
+	
+%(q1c1)%	4500
+%(q1c2)%	-20
+%(q1c3)%	-900
+%(q1c4)%	3600
+	
+%(q2c1)%	3600
+%(q2c2)%	-42
+%(q2c3)%	-1512
+%(q2c4)%	2088
+	
+%(q3c1)%	2088
+%(q3c2)%	150
+%(q3c3)%	3132
+%(q3c4)%	5220
+	
+%(q4c1)%	2970
+%(q4c2)%	90
+%(q4c3)%	2673
+%(q4c4)%	5643
+	
+%(q1a1-h1)%	What do you already know from the question? A given value in this question represents starting number of widgets.
+%(q1a1-h2)%	How many widgets were produced in December?
+	
+%(q1a2-h1)%	What do you already know from the question? A given value in this question represents the percent change in widget production.
+%(q1a2-h2)%	What percent does widget production decrease by?
+	
+%(q1a3-h1)%	You can find the change in widgets produced by multiplying starting number by the decimal form of percent change.
+%(q1a3-h2)%	What is 4500 multiplied by -.20?
+	
+%(q1a4-h1)%	You can find end value of widgets by adding change in widgets to starting number of widgets.
+%(q1a4-h2)%	What is 4500 plus -900?
+	
+%(q2a1-h1)%	What do you already know from the previous question? The start value for February is the same as the end value for January.
+%(q2a1-h2)%	How many widgets were produced in January?
+	
+%(q2a2-h1)%	What do you already know from the question? A given value in this question represents the change in widgets produced.
+%(q2a2-h2)%	How many fewer widgets were produced in February?
+	
+%(q2a3-h1)%	You can find end value of widgets by adding start value and change in widgets.
+%(q2a3-h2)%	What is 3600 plus -1512?
+	
+%(q2a4-h1)%	The value for change in widgets is -1512. The value for starting number of widgets in 3600. What is percent change of widgets?
+%(q2a4-h2)%	You can find percent change by dividing change in widgets, -1512, by starting number, 3600, then multiplying by 100.
+	
+%(q3a1-h1)%	What do you already know from the previous question? The start value for March is the same as the end value for February.
+%(q3a1-h2)%	How many widgets were produced in February?
+	
+%(q3a2-h1)%	What do you already know from the question? A given value in this question represents end value of widgets produced.
+%(q3a2-h2)%	How many widgets were produced in March?
+	
+%(q3a3-h1)%	You can find change in widgets produced by subtracting starting value from end value.
+%(q3a3-h2)%	What is 5220 minus 2088?
+	
+%(q3a4-h1)%	The value for change in widgets is 3132. The starting value of widgets is 2088. What is percent change of widgets?
+%(q3a4-h2)%	You can find percent change by dividing change in widgets, 3132, by starting number, 2088, then multiplying by 100.
+	
+%(q4a1-h1)%	What do you already know from the question? A value in the question represents the end value of widgets produced.
+%(q4a1-h2)%	How many widgets were produced in November?
+	
+%(q4a2-h1)%	What do you already know from the question? A value in the question represents the change in widgets produced.
+%(q4a2-h2)%	How many more widgets were produced in November than October?
+	
+%(q4a3-h1)%	You can find starting value of widgets by subtracting change in widgets by end value.
+%(q4a3-h2)%	What is 5643 minus 2673?
+	
+%(q4a4-h1)%	The value for change in widgets is 2673. The value for starting value is 2970. What is percent change of widgets?
+%(q4a4-h2)%	You can find percent change by dividing change in widgets, 2673, by starting value, 2970, then multiplying by 100.
+	
+	
+%(q1a_skName)%	Gvn
+%(q1a_skLabel)%	Enter given
+%(q1b_skName)%	Gvn
+%(q1b_skLabel)%	Enter given
+%(q1c_skName)%	FindChngVal
+%(q1c_skLabel)%	Find change in value
+%(q1d_skName)%	FindNewVal
+%(q1d_skLabel)%	Find new changed value
+	
+%(q2a_skName)%	Gvn
+%(q2a_skLabel)%	Enter given
+%(q2b_skName)%	Gvn
+%(q2b_skLabel)%	Enter given
+%(q2c_skName)%	FindNewVal
+%(q2c_skLabel)%	Find new changed value
+%(q2d_skName)%	FindPercent
+%(q2d_skLabel)%	Find percent change
+	
+%(q3a_skName)%	Gvn
+%(q3a_skLabel)%	Enter given
+%(q3b_skName)%	Gvn
+%(q3b_skLabel)%	Enter given
+%(q3c_skName)%	FindChngVal
+%(q3c_skLabel)%	Find change in value
+%(q3d_skName)%	FindPercent
+%(q3d_skLabel)%	Find percent change
+	
+%(q4a_skName)%	Gvn
+%(q4a_skLabel)%	Enter given
+%(q4b_skName)%	Gvn
+%(q4b_skLabel)%	Enter given
+%(q4c_skName)%	FindOrgVal
+%(q4c_skLabel)%	Find original value
+%(q4d_skName)%	FindPercent
+%(q4d_skLabel)%	Find percent change
+%(6335264876927898617)%	What do you already know from the previous question? The start value for February is the same as the end value for January.
+%(7006782424596175291)%	Please enter '3600' in the highlighted field.
+%(1212606202619573556)%	Please enter '-1512' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(-6037573056806900789)%	You can find percent change by dividing change in widgets, 2673, by starting value, 2970, then multiplying by 100.
+%(9181909178510600657)%	You can find starting value of widgets by subtracting change in widgets by end value.
+%(4950157615033292627)%	What is 5220 minus 2088?
+%(1407818244992993668)%	How many widgets were produced in March?
+%(6335267876927898514)%	How many widgets were produced in January?
+%(-6799437508088616844)%	What do you already know from the question? A given value in this question represents the change in widgets produced.
+%(5600699584637037129)%	What do you already know from the question? A given value in this question represents the percent change in widget production.
+%(-5310642191601425799)%	The value for change in widgets is 3132. The starting value of widgets is 2088. What is percent change of widgets?
+%(-3001974658168261941)%	You can find end value of widgets by adding start value and change in widgets.
+%(-3001975658176261896)%	What is 3600 plus -1512?
+%(-6788597792476091650)%	Please enter '-42' in the highlighted field.
+%(-9197792957286495875)%	Please enter '2970' in the highlighted field.
+%(6664332962603450509)%	How many widgets were produced in February?
+%(1407819244984993703)%	What do you already know from the question? A given value in this question represents end value of widgets produced.
+%(-136504042576776691)%	You can find percent change by dividing change in widgets, -1512, by starting number, 3600, then multiplying by 100.
+%(2967316894535865129)%	How many more widgets were produced in November than October?
+%(8184105222835174662)%	Please enter '2088' in the highlighted field.
+%(9181912178606601002)%	What is 5643 minus 2673?
+%(-5507060845796800799)%	What is 4500 multiplied by -.20?
+%(6664335962635450566)%	What do you already know from the previous question? The start value for March is the same as the end value for February.
+%(-155202355849558781)%	What do you already know from the question? A value in the question represents the end value of widgets produced.
+%(-7157658688327724521)%	Please enter '2088' in the highlighted field.
+%(5600702584637037154)%	What percent does widget production decrease by?
+%(-6107211067367675494)%	Please enter '2673' in the highlighted field.
+%(-5507057845764800710)%	You can find the change in widgets produced by multiplying starting number by the decimal form of percent change.
+%(2818709654125368021)%	Please enter '150' in the highlighted field.
+%(-5113205742669385737)%	You can find end value of widgets by adding change in widgets to starting number of widgets.
+%(-8357683073983968813)%	Please enter '5220' in the highlighted field.
+%(-2261770659870763875)%	Please enter '-20' in the highlighted field.
+%(-1761368347661505916)%	Please enter '4500' in the highlighted field.
+%(-5281889775357762620)%	What do you already know from the question? A given value in this question represents starting number of widgets.
+%(-345715678789289856)%	Please enter '3132' in the highlighted field.
+%(4950156615025292608)%	You can find change in widgets produced by subtracting starting value from end value.
+%(1671677253122178253)%	Please enter '3600' in the highlighted field.
+%(7184726608544415560)%	Please enter '90' in the highlighted field.
+%(-6037574056814900744)%	The value for change in widgets is 2673. The value for starting value is 2970. What is percent change of widgets?
+%(-6158839041781797702)%	Please enter '-900' in the highlighted field.
+%(2967319894535865026)%	What do you already know from the question? A value in the question represents the change in widgets produced.
+%(-1385397859903290937)%	Please enter '5643' in the highlighted field.
+%(-5310639191601425902)%	You can find percent change by dividing change in widgets, 3132, by starting number, 2088, then multiplying by 100.
+%(-5281888775365762585)%	How many widgets were produced in December?
+%(-5113206742661385772)%	What is 4500 plus -900?
+%(-136501042544776634)%	The value for change in widgets is -1512. The value for starting number of widgets in 3600. What is percent change of widgets?
+%(-6799436508096616937)%	How many fewer widgets were produced in February?
+%(831792927884722819)%	You have completed the problem correctly! Click on the 'done' button to move on.
+%(-155203355857558736)%	How many widgets were produced in November?
+Problem Name	07Gold
+%(problem_statement)%	During the California Gold Rush of the 1800s, thousands of people moved to San Francisco hoping to find gold and get rich. The original population in question 2 is the same as the final population in question 1.
+%(startStateNodeName)%	
+	
+%(q1a1-select)%	q1c1
+%(q1a1-input)%	10000
+%(q1a2-select)%	q1c4
+%(q1a2-input)%	15000
+%(q1a3-select)%	q1c3
+%(q1a3-input)%	5000
+%(q1a4-select)%	q1c2
+%(q1a4-input)%	50
+%(q1a1-expression)%	expressionMatches(input, 10000)
+%(q1a2-expression)%	expressionMatches(input, 15000)
+%(q1a3-expression)%	expressionMatches(input, 5000)
+%(q1a4-expression)%	expressionMatches(input, 50)
+	
+%(q2a1-select)%	q2c1
+%(q2a1-input)%	15000
+%(q2a2-select)%	q2c3
+%(q2a2-input)%	75000
+%(q2a3-select)%	q2c4
+%(q2a3-input)%	90000
+%(q2a4-select)%	q2c2
+%(q2a4-input)%	500
+%(q2a1-expression)%	expressionMatches(input, 15000)
+%(q2a2-expression)%	expressionMatches(input, 75000)
+%(q2a3-expression)%	expressionMatches(input, 90000)
+%(q2a4-expression)%	expressionMatches(input, 500)
+	
+%(q3a1-select)%	q3c3
+%(q3a1-input)%	-4000
+%(q3a2-select)%	q3c4
+%(q3a2-input)%	76000
+%(q3a3-select)%	q3c1
+%(q3a3-input)%	80000
+%(q3a4-select)%	q3c2
+%(q3a4-input)%	-5
+%(q3a1-expression)%	expressionMatches(input, -4000)
+%(q3a2-expression)%	expressionMatches(input, 76000)
+%(q3a3-expression)%	expressionMatches(input, 80000)
+%(q3a4-expression)%	expressionMatches(input, -5)
+	
+%(q4a1-select)%	q4c1
+%(q4a1-input)%	95000
+%(q4a2-select)%	q4c2
+%(q4a2-input)%	-28
+%(q4a3-select)%	q4c3
+%(q4a3-input)%	-26600
+%(q4a4-select)%	q4c4
+%(q4a4-input)%	68400
+%(q4a1-expression)%	expressionMatches(input, 95000)
+%(q4a2-expression)%	expressionMatches(input, -28)
+%(q4a3-expression)%	expressionMatches(input, -26600)
+%(q4a4-expression)%	expressionMatches(input, 68400)
+	
+%(q1)%	Before the Gold Rush, San Francisco was a new city, but growing steadily. In 1845, its population was 10,000. By 1847 there were 15,000 people living in the city. By what amount had the population grown and what was the percent change in population?
+%(q2)%	Gold was first discovered during 1848, and the population grew by 75,000 that year. How many people lived in San Francisco by the end of 1848? What was the percent change in population of the city from 1847 to 1848?
+%(q3)%	During the year 1852, San Francisco's population decreased by 4,000. At the end of the year, the city's population was 76,000. What was the population at the beginning of 1852? What was the percent change during the year?
+%(q4)%	When the Gold Rush was over, many people stayed in San Francisco, but some moved on to try their luck elsewhere. The 1850 census had reported 95,000; the 1860 census reported that the city's population had decreased by 28%. By what amount had the population decreased? What was the population in 1860?
+	
+%(c1)%	Original Population
+%(c2)%	Percent Change
+%(c3)%	Change in Population
+%(c4)%	New Population
+	
+%(c1u1)%	people
+%(c2u2)%	%
+%(c3u3)%	people
+%(c4u4)%	people
+	
+%(q1c1)%	10000
+%(q1c2)%	50
+%(q1c3)%	5000
+%(q1c4)%	15000
+	
+%(q2c1)%	15000
+%(q2c2)%	500
+%(q2c3)%	75000
+%(q2c4)%	90000
+	
+%(q3c1)%	80000
+%(q3c2)%	-5
+%(q3c3)%	-4000
+%(q3c4)%	76000
+	
+%(q4c1)%	95000
+%(q4c2)%	-28
+%(q4c3)%	-26600
+%(q4c4)%	68400
+	
+%(q1a1-h1)%	What do you already know from the question? A value given in the question represents the original population of San Francisco in 1845.
+%(q1a1-h2)%	How many people lived in San Francisco in 1845?
+	
+%(q1a2-h1)%	What do you already know from the question? A value given in the question represents the new population.
+%(q1a2-h2)%	What was the new population of San Francisco in 1847?
+	
+%(q1a3-h1)%	You can find the change in population by subtracting the original population from the new population.
+%(q1a3-h2)%	What is 15000 minus 10000?
+	
+%(q1a4-h1)%	The value for the change in population is 5000. The value for the original population is 10000. What was the percent change in population?
+%(q1a4-h2)%	You can find percent change by dividing change in population, 5000, by original population, 10000, then multiplying by 100.
+	
+%(q2a1-h1)%	What do you already know from the previous question? The original population is the new population for 1847.
+%(q2a1-h2)%	What was the population of San Francisco in 1847?
+	
+%(q2a2-h1)%	What do you already know from the question? A value given in the question represents the change in population.
+%(q2a2-h2)%	How many more people lived in San Francisco in 1848 than in 1847?
+	
+%(q2a3-h1)%	You can find the new population by adding the change in population to the original population.
+%(q2a3-h2)%	What is 15000 plus 75000?
+	
+%(q2a4-h1)%	The value for the change in population is 75000. The value for the original population is 15000. What was the percent change in population?
+%(q2a4-h2)%	You can find percent change by dividing change in population, 75000, by original population, 15000, then multiplying by 100.
+	
+%(q3a1-h1)%	What do you already know from the question? A value given in the question represents the change in population.
+%(q3a1-h2)%	How many fewer people lived in San Francisco in 1852 than in 1851?
+	
+%(q3a2-h1)%	What do you already know from the question? A value given in the question represents the new population in 1852.
+%(q3a2-h2)%	What was the population of San Francisco in 1852?
+	
+%(q3a3-h1)%	You can find the original population by subtracting the change in population from the new population.
+%(q3a3-h2)%	What is 76000 - (-4000)?
+	
+%(q3a4-h1)%	The value for the change in population is -4000. The value for the original population is 80000. What was the percent change in population?
+%(q3a4-h2)%	You can find percent change by dividing change in population, -4000, by original population, 80000, then multiplying by 100.
+	
+%(q4a1-h1)%	What do you already know from the question? A value given in the question represents the original population of San Francisco in 1850.
+%(q4a1-h2)%	How many people lived in San Francisco in 1850?
+	
+%(q4a2-h1)%	What do you already know from the question? A value given in the question represents the percent change in population.
+%(q4a2-h2)%	What percent did the population decrease by from 1850 to 1860?
+	
+%(q4a3-h1)%	You can find the amount of change of population by multiplying the original population by the decimal form of percent change.
+%(q4a3-h2)%	What is 95000 multiplied by -.28?
+	
+%(q4a4-h1)%	You can find the new population by adding the amount of change to the original population.
+%(q4a4-h2)%	What is 95000 plus -26600?
+	
+	
+%(q1a_skName)%	Gvn
+%(q1a_skLabel)%	Enter given
+%(q1b_skName)%	Gvn
+%(q1b_skLabel)%	Enter given
+%(q1c_skName)%	FindChngVal
+%(q1c_skLabel)%	Find change in value
+%(q1d_skName)%	FindPercent
+%(q1d_skLabel)%	Find percent change
+	
+%(q2a_skName)%	Gvn
+%(q2a_skLabel)%	Enter given
+%(q2b_skName)%	Gvn
+%(q2b_skLabel)%	Enter given
+%(q2c_skName)%	FindNewVal
+%(q2c_skLabel)%	Find new changed value
+%(q2d_skName)%	FindPercent
+%(q2d_skLabel)%	Find percent change
+	
+%(q3a_skName)%	Gvn
+%(q3a_skLabel)%	Enter given
+%(q3b_skName)%	Gvn
+%(q3b_skLabel)%	Enter given
+%(q3c_skName)%	FindOrgVal
+%(q3c_skLabel)%	Find original value
+%(q3d_skName)%	FindPercent
+%(q3d_skLabel)%	Find percent change
+	
+%(q4a_skName)%	Gvn
+%(q4a_skLabel)%	Enter given
+%(q4b_skName)%	Gvn
+%(q4b_skLabel)%	Enter given
+%(q4c_skName)%	FindChngVal
+%(q4c_skLabel)%	Find change in value
+%(q4d_skName)%	FindNewVal
+%(q4d_skLabel)%	Find new changed value
+%(6335264876927898617)%	What do you already know from the previous question? The original population is the new population for 1847.
+%(7006782424596175291)%	Please enter '50' in the highlighted field.
+%(1212606202619573556)%	Please enter '75000' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(-6037573056806900789)%	What is 95000 plus -26600?
+%(9181909178510600657)%	You can find the amount of change of population by multiplying the original population by the decimal form of percent change.
+%(4950157615033292627)%	What is 76000 - (-4000)?
+%(1407818244992993668)%	What was the population of San Francisco in 1852?
+%(6335267876927898514)%	What was the population of San Francisco in 1847?
+%(-6799437508088616844)%	What do you already know from the question? A value given in the question represents the change in population.
+%(5600699584637037129)%	What do you already know from the question? A value given in the question represents the new population.
+%(-5310642191601425799)%	The value for the change in population is -4000. The value for the original population is 80000. What was the percent change in population?
+%(-3001974658168261941)%	You can find the new population by adding the change in population to the original population.
+%(-3001975658176261896)%	What is 15000 plus 75000?
+%(-6788597792476091650)%	Please enter '500' in the highlighted field.
+%(-9197792957286495875)%	Please enter '-26600' in the highlighted field.
+%(6664332962603450509)%	How many fewer people lived in San Francisco in 1852 than in 1851?
+%(1407819244984993703)%	What do you already know from the question? A value given in the question represents the new population in 1852.
+%(-136504042576776691)%	You can find percent change by dividing change in population, 75000, by original population, 15000, then multiplying by 100.
+%(2967316894535865129)%	What percent did the population decrease by from 1850 to 1860?
+%(8184105222835174662)%	Please enter '-4000' in the highlighted field.
+%(9181912178606601002)%	What is 95000 multiplied by -.28?
+%(-5507060845796800799)%	What is 15000 minus 10000?
+%(6664335962635450566)%	What do you already know from the question? A value given in the question represents the change in population.
+%(-155202355849558781)%	What do you already know from the question? A value given in the question represents the original population of San Francisco in 1850.
+%(-7157658688327724521)%	Please enter '90000' in the highlighted field.
+%(5600702584637037154)%	What was the new population of San Francisco in 1847?
+%(-6107211067367675494)%	Please enter '-28' in the highlighted field.
+%(-5507057845764800710)%	You can find the change in population by subtracting the original population from the new population.
+%(2818709654125368021)%	Please enter '-5' in the highlighted field.
+%(-5113205742669385737)%	The value for the change in population is 5000. The value for the original population is 10000. What was the percent change in population?
+%(-8357683073983968813)%	Please enter '76000' in the highlighted field.
+%(-2261770659870763875)%	Please enter '15000' in the highlighted field.
+%(-1761368347661505916)%	Please enter '10000' in the highlighted field.
+%(-5281889775357762620)%	What do you already know from the question? A value given in the question represents the original population of San Francisco in 1845.
+%(-345715678789289856)%	Please enter '80000' in the highlighted field.
+%(4950156615025292608)%	You can find the original population by subtracting the change in population from the new population.
+%(1671677253122178253)%	Please enter '15000' in the highlighted field.
+%(7184726608544415560)%	Please enter '68400' in the highlighted field.
+%(-6037574056814900744)%	You can find the new population by adding the amount of change to the original population.
+%(-6158839041781797702)%	Please enter '5000' in the highlighted field.
+%(2967319894535865026)%	What do you already know from the question? A value given in the question represents the percent change in population.
+%(-1385397859903290937)%	Please enter '95000' in the highlighted field.
+%(-5310639191601425902)%	You can find percent change by dividing change in population, -4000, by original population, 80000, then multiplying by 100.
+%(-5281888775365762585)%	How many people lived in San Francisco in 1845?
+%(-5113206742661385772)%	You can find percent change by dividing change in population, 5000, by original population, 10000, then multiplying by 100.
+%(-136501042544776634)%	The value for the change in population is 75000. The value for the original population is 15000. What was the percent change in population?
+%(-6799436508096616937)%	How many more people lived in San Francisco in 1848 than in 1847?
+%(831792927884722819)%	You have completed the problem correctly! Click on the 'done' button to move on.
+%(-155203355857558736)%	How many people lived in San Francisco in 1850?
+Problem Name	08Store
+%(problem_statement)%	The Acme Department Store is getting ready for the fall by adjusting the prices of its merchandise. There will be a discount (a decrease in cost) for most of the spring and summer wear, and a markup (an increase in cost) for the new winter fashions.
+%(startStateNodeName)%	
+	
+%(q1a1-select)%	q1c3
+%(q1a1-input)%	24
+%(q1a2-select)%	q1c4
+%(q1a2-input)%	174
+%(q1a3-select)%	q1c1
+%(q1a3-input)%	150
+%(q1a4-select)%	q1c2
+%(q1a4-input)%	16
+%(q1a1-expression)%	expressionMatches(input, 24)
+%(q1a2-expression)%	expressionMatches(input, 174)
+%(q1a3-expression)%	expressionMatches(input, 150)
+%(q1a4-expression)%	expressionMatches(input, 16)
+	
+%(q2a1-select)%	q2c1
+%(q2a1-input)%	120
+%(q2a2-select)%	q2c4
+%(q2a2-input)%	150
+%(q2a3-select)%	q2c3
+%(q2a3-input)%	30
+%(q2a4-select)%	q2c2
+%(q2a4-input)%	25
+%(q2a1-expression)%	expressionMatches(input, 120)
+%(q2a2-expression)%	expressionMatches(input, 150)
+%(q2a3-expression)%	expressionMatches(input, 30)
+%(q2a4-expression)%	expressionMatches(input, 25)
+	
+%(q3a1-select)%	q3c1
+%(q3a1-input)%	32
+%(q3a2-select)%	q3c3
+%(q3a2-input)%	-24
+%(q3a3-select)%	q3c4
+%(q3a3-input)%	8
+%(q3a4-select)%	q3c2
+%(q3a4-input)%	-75
+%(q3a1-expression)%	expressionMatches(input, 32)
+%(q3a2-expression)%	expressionMatches(input, -24)
+%(q3a3-expression)%	expressionMatches(input, 8)
+%(q3a4-expression)%	expressionMatches(input, -75)
+	
+%(q4a1-select)%	q4c1
+%(q4a1-input)%	40
+%(q4a2-select)%	q4c2
+%(q4a2-input)%	-55
+%(q4a3-select)%	q4c3
+%(q4a3-input)%	-22
+%(q4a4-select)%	q4c4
+%(q4a4-input)%	18
+%(q4a1-expression)%	expressionMatches(input, 40)
+%(q4a2-expression)%	expressionMatches(input, -55)
+%(q4a3-expression)%	expressionMatches(input, -22)
+%(q4a4-expression)%	expressionMatches(input, 18)
+	
+%(q1)%	After a price increase of $24, snow boots will now cost $174. What was the original cost of the boots and by what percent did the price change?
+%(q2)%	Men's wool parkas have been marked up from $120 to $150. What is the change in price and what is the percent change?
+%(q3)%	Beach towels were $32, but were reduced in price by $24. What is the new price and what is the percent change of price?
+%(q4)%	The original cost of women's bathing suits was $40, but there will be a 55% discount. What is the change in price and what is the new price?
+	
+%(c1)%	Original Price
+%(c2)%	Percent Change
+%(c3)%	Change in Price
+%(c4)%	New Price
+	
+%(c1u1)%	$
+%(c2u2)%	%
+%(c3u3)%	$
+%(c4u4)%	$
+	
+%(q1c1)%	150
+%(q1c2)%	16
+%(q1c3)%	24
+%(q1c4)%	174
+	
+%(q2c1)%	120
+%(q2c2)%	25
+%(q2c3)%	30
+%(q2c4)%	150
+	
+%(q3c1)%	32
+%(q3c2)%	-75
+%(q3c3)%	-24
+%(q3c4)%	8
+	
+%(q4c1)%	40
+%(q4c2)%	-55
+%(q4c3)%	-22
+%(q4c4)%	18
+	
+%(q1a1-h1)%	What do you already know from the question? A value given in the question represents the change in price.
+%(q1a1-h2)%	What is the markup value?
+	
+%(q1a2-h1)%	What do you already know from the question? A value given in the question represents the new price?
+%(q1a2-h2)%	What is the new cost of the boots?
+	
+%(q1a3-h1)%	You can find the original price by subtracting the change in price from the new price.
+%(q1a3-h2)%	What is 174 minus 24?
+	
+%(q1a4-h1)%	The value for change in price is 24. The value for the original price is 150. What is the percent change in price?
+%(q1a4-h2)%	You can find the percent change by dividing change in price, 24, by original price, 150, then multiplying by 100.
+	
+%(q2a1-h1)%	What do you already know from the question? A value given in the question represents the original price.
+%(q2a1-h2)%	What was the price before the markup?
+	
+%(q2a2-h1)%	What do you already know from the question? A value given in the question represents the new price?
+%(q2a2-h2)%	What is the new cost of the parkas?
+	
+%(q2a3-h1)%	You can find the change in price by subtracting the original price from the new price.
+%(q2a3-h2)%	What is 150 minus 120?
+	
+%(q2a4-h1)%	The value for change in price is 30. The value for the original price is 120. What is the percent change in price?
+%(q2a4-h2)%	You can find the percent change by dividing change in price, 30, by original price, 120, then multiplying by 100.
+	
+%(q3a1-h1)%	What do you already know from the question? A value given in the question represents the original price.
+%(q3a1-h2)%	What was the price before the discount?
+	
+%(q3a2-h1)%	What do you already know from the question? A value given in the question represents the change in price.
+%(q3a2-h2)%	What is the discount value?
+	
+%(q3a3-h1)%	You can find the new price by adding the change in price to the original price.
+%(q3a3-h2)%	What is 32 plus -24?
+	
+%(q3a4-h1)%	The value for change in price is -24. The value for the original price is 32. What is the percent change in price?
+%(q3a4-h2)%	You can find the percent change by dividing change in price, -24, by original price, 32, then multiplying by 100.
+	
+%(q4a1-h1)%	What do you already know from the question? A value given in the question represents the original price.
+%(q4a1-h2)%	What was the price before the discount?
+	
+%(q4a2-h1)%	What do you already know from the question? A value given in the question represents the percent change.
+%(q4a2-h2)%	What is the percent value of the discount?
+	
+%(q4a3-h1)%	You can find the change in price by multiplying the original price by the decimal form of the percent change.
+%(q4a3-h2)%	What is 40 multiplied by -.55?
+	
+%(q4a4-h1)%	You can find the new price by adding the change in price to the original price.
+%(q4a4-h2)%	What is 40 plus -22?
+	
+	
+%(q1a_skName)%	Gvn
+%(q1a_skLabel)%	Enter given
+%(q1b_skName)%	Gvn
+%(q1b_skLabel)%	Enter given
+%(q1c_skName)%	FindOrgVal
+%(q1c_skLabel)%	Find original value
+%(q1d_skName)%	FindPercent
+%(q1d_skLabel)%	Find percent change
+	
+%(q2a_skName)%	Gvn
+%(q2a_skLabel)%	Enter given
+%(q2b_skName)%	Gvn
+%(q2b_skLabel)%	Enter given
+%(q2c_skName)%	FindChngVal
+%(q2c_skLabel)%	Find change in value
+%(q2d_skName)%	FindPercent
+%(q2d_skLabel)%	Find percent change
+	
+%(q3a_skName)%	Gvn
+%(q3a_skLabel)%	Enter given
+%(q3b_skName)%	Gvn
+%(q3b_skLabel)%	Enter given
+%(q3c_skName)%	FindNewVal
+%(q3c_skLabel)%	Find new changed value
+%(q3d_skName)%	FindPercent
+%(q3d_skLabel)%	Find percent change
+	
+%(q4a_skName)%	Gvn
+%(q4a_skLabel)%	Enter given
+%(q4b_skName)%	Gvn
+%(q4b_skLabel)%	Enter given
+%(q4c_skName)%	FindChngVal
+%(q4c_skLabel)%	Find change in value
+%(q4d_skName)%	FindNewVal
+%(q4d_skLabel)%	Find new changed value 
+%(6335264876927898617)%	What do you already know from the question? A value given in the question represents the original price.
+%(7006782424596175291)%	Please enter '16' in the highlighted field.
+%(1212606202619573556)%	Please enter '150' in the highlighted field.
+%(-5166532556208710060)%	No, this is not correct.
+%(-6037573056806900789)%	What is 40 plus -22?
+%(9181909178510600657)%	You can find the change in price by multiplying the original price by the decimal form of the percent change.
+%(4950157615033292627)%	What is 32 plus -24?
+%(1407818244992993668)%	What is the discount value?
+%(6335267876927898514)%	What was the price before the markup?
+%(-6799437508088616844)%	What do you already know from the question? A value given in the question represents the new price?
+%(5600699584637037129)%	What do you already know from the question? A value given in the question represents the new price?
+%(-5310642191601425799)%	The value for change in price is -24. The value for the original price is 32. What is the percent change in price?
+%(-3001974658168261941)%	You can find the change in price by subtracting the original price from the new price.
+%(-3001975658176261896)%	What is 150 minus 120?
+%(-6788597792476091650)%	Please enter '25' in the highlighted field.
+%(-9197792957286495875)%	Please enter '-22' in the highlighted field.
+%(6664332962603450509)%	What was the price before the discount?
+%(1407819244984993703)%	What do you already know from the question? A value given in the question represents the change in price.
+%(-136504042576776691)%	You can find the percent change by dividing change in price, 30, by original price, 120, then multiplying by 100.
+%(2967316894535865129)%	What is the percent value of the discount?
+%(8184105222835174662)%	Please enter '32' in the highlighted field.
+%(9181912178606601002)%	What is 40 multiplied by -.55?
+%(-5507060845796800799)%	What is 174 minus 24?
+%(6664335962635450566)%	What do you already know from the question? A value given in the question represents the original price.
+%(-155202355849558781)%	What do you already know from the question? A value given in the question represents the original price.
+%(-7157658688327724521)%	Please enter '30' in the highlighted field.
+%(5600702584637037154)%	What is the new cost of the boots?
+%(-6107211067367675494)%	Please enter '-55' in the highlighted field.
+%(-5507057845764800710)%	You can find the original price by subtracting the change in price from the new price.
+%(2818709654125368021)%	Please enter '-75' in the highlighted field.
+%(-5113205742669385737)%	The value for change in price is 24. The value for the original price is 150. What is the percent change in price?
+%(-8357683073983968813)%	Please enter '-24' in the highlighted field.
+%(-2261770659870763875)%	Please enter '174' in the highlighted field.
+%(-1761368347661505916)%	Please enter '24' in the highlighted field.
+%(-5281889775357762620)%	What do you already know from the question? A value given in the question represents the change in price.
+%(-345715678789289856)%	Please enter '8' in the highlighted field.
+%(4950156615025292608)%	You can find the new price by adding the change in price to the original price.
+%(1671677253122178253)%	Please enter '120' in the highlighted field.
+%(7184726608544415560)%	Please enter '18' in the highlighted field.
+%(-6037574056814900744)%	You can find the new price by adding the change in price to the original price.
+%(-6158839041781797702)%	Please enter '150' in the highlighted field.
+%(2967319894535865026)%	What do you already know from the question? A value given in the question represents the percent change.
+%(-1385397859903290937)%	Please enter '40' in the highlighted field.
+%(-5310639191601425902)%	You can find the percent change by dividing change in price, -24, by original price, 32, then multiplying by 100.
+%(-5281888775365762585)%	What is the markup value?
+%(-5113206742661385772)%	You can find the percent change by dividing change in price, 24, by original price, 150, then multiplying by 100.
+%(-136501042544776634)%	The value for change in price is 30. The value for the original price is 120. What is the percent change in price?
+%(-6799436508096616937)%	What is the new cost of the parkas?
+%(831792927884722819)%	You have completed the problem correctly! Click on the 'done' button to move on.
+%(-155203355857558736)%	What was the price before the discount?

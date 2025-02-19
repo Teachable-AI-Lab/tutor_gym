@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="7.53 Solving Multi-Step Linear Equations containing Variables and Constants on both sides" description="Student solves equations that have variables on both sides of the equation (contains parentheses and negative numbers)." save_state="true">
+  <Problems>
+    <Problem name="varcons1" label="5x+2=2x+8" description="5x+2=2x+8" tutor_flag="tutor" model_file="varcons1.brd" student_interface="7.53.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="varcons10" label="x-3=5x-7" description="x-3=5x-7" tutor_flag="tutor" model_file="varcons10.brd" student_interface="7.53.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="varcons11" label="-1-7x=-1-4x" description="-1-7x=-1-4x" tutor_flag="tutor" model_file="varcons11.brd" student_interface="7.53.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="varcons2" label="7x+5=3x+9" description="7x+5=3x+9" tutor_flag="tutor" model_file="varcons2.brd" student_interface="7.53.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="varcons3" label="4x+11=x+2" description="4x+11=x+2" tutor_flag="tutor" model_file="varcons3.brd" student_interface="7.53.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="varcons4" label="6x-6=x-1" description="6x-6=x-1" tutor_flag="tutor" model_file="varcons4.brd" student_interface="7.53.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="varcons5" label="-2x+2=-5x+8" description="-2x+2=-5x+8" tutor_flag="tutor" model_file="varcons5.brd" student_interface="7.53.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="varcons6" label="-7-3x=-3-5x" description="-7-3x=-3-5x" tutor_flag="tutor" model_file="varcons6.brd" student_interface="7.53.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="varcons7" label="4x+11=7x+2" description="4x+11=7x+2" tutor_flag="tutor" model_file="varcons7.brd" student_interface="7.53.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="varcons8" label="x+15=5x+3" description="x+15=5x+3" tutor_flag="tutor" model_file="varcons8.brd" student_interface="7.53.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="varcons9" label="3x+3=5x+11" description="3x+3=5x+11" tutor_flag="tutor" model_file="varcons9.brd" student_interface="7.53.html">
+      <Skills>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="7.53 HTML" label="7.53 Solving Multi-Step Linear Equations containing Variables and Constants on both sides" description="Student solves equations that have variables on both sides of the equation (contains parentheses and negative numbers)." status="active" picture="7.53.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="varcons1" position="1" role="0"/>
+        <Problem name="varcons2" position="2" role="0"/>
+        <Problem name="varcons3" position="3" role="0"/>
+        <Problem name="varcons4" position="4" role="0"/>
+        <Problem name="varcons5" position="5" role="0"/>
+        <Problem name="varcons6" position="6" role="0"/>
+        <Problem name="varcons7" position="7" role="0"/>
+        <Problem name="varcons8" position="8" role="0"/>
+        <Problem name="varcons9" position="9" role="0"/>
+        <Problem name="varcons10" position="10" role="0"/>
+        <Problem name="varcons11" position="11" role="0"/>
+      </Problems>
+      <Skills>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.D" label="D. Algebraic Concepts" description="D. Algebraic Concepts" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.D.2" label="D.2. Represent Situations and Structures" description="D.2. Represent and/or analyze mathematical situations and structures using algebraic symbols, words, tables, and graphs." standard_level="assessment_anchor" parent_name="PA.D" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.B" label="B. Algebra" description="B. Algebra" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="8th" label="8th Grade" description="8th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.SE" label="Solving Equations" description="Solving Equations" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.8" label="8th Grade" description="8th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.8.EE" label="8.EE. Expressions and Equations" description="8.EE. Expressions and Equations" standard_level="strand" parent_name="CommonCore.8" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="7.53.png" path="Assets"/>
+    <Asset name="mathtutor_7.53_full.png" path="Assets"/>
+    <Asset name="varcons1.brd" path="FinalBRDs"/>
+    <Asset name="varcons10.brd" path="FinalBRDs"/>
+    <Asset name="varcons11.brd" path="FinalBRDs"/>
+    <Asset name="varcons2.brd" path="FinalBRDs"/>
+    <Asset name="varcons3.brd" path="FinalBRDs"/>
+    <Asset name="varcons4.brd" path="FinalBRDs"/>
+    <Asset name="varcons5.brd" path="FinalBRDs"/>
+    <Asset name="varcons6.brd" path="FinalBRDs"/>
+    <Asset name="varcons7.brd" path="FinalBRDs"/>
+    <Asset name="varcons8.brd" path="FinalBRDs"/>
+    <Asset name="varcons9.brd" path="FinalBRDs"/>
+    <Asset name="7.53.html" path="HTML"/>
+    <Asset name="7.53.css" path="HTML/Assets"/>
+  </Assets>
+</Package>

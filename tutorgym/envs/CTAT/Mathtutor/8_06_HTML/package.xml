@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="8.06 Expressions, Values, and Distributive Law" description="Gives student a variable and an expression, and then asks student to apply that information to solve for different scenarios and values of the variable." save_state="true">
+  <Problems>
+    <Problem name="8.6 intro" label="Book store" description="You went to the book store to buy fiction books. Each book costs $15 and you have a $20 discount coupon." tutor_flag="tutor" model_file="8.6 intro.brd" student_interface="8.06.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="8.6.1" label="First album" description="Danny and the Algebraics are recording their first demo album. They plan to send 15 CDs to record companies to try to land a recording contract." tutor_flag="tutor" model_file="8.6.1.brd" student_interface="8.06.html">
+      <Skills>
+        <Skill name="Calculate_Y_value_from_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+        <Skill name="Enter_given_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+      </Skills>
+    </Problem>
+    <Problem name="8.6.2" label="Firewood" description="Marcus has a fireplace that he uses to build cheery fires on cold winter days. He cut and split 200 pieces of firewood in the fall. It has been a warm winter and he has only made 10 fires so far." tutor_flag="tutor" model_file="8.6.2.brd" student_interface="8.06.html">
+      <Skills>
+        <Skill name="Calculate_Y_value_from_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+        <Skill name="Enter_given_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+      </Skills>
+    </Problem>
+    <Problem name="8.6.3" label="Charity contribution" description="The best-selling novelist Cindy Shelton and her publishing company have made a generous offer to help out the World Famine Relief effort." tutor_flag="tutor" model_file="8.6.3.brd" student_interface="8.06.html">
+      <Skills>
+        <Skill name="Calculate_Y_value_from_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+        <Skill name="Enter_given_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+      </Skills>
+    </Problem>
+    <Problem name="8.6.4" label="Candy dish" description="At Autumn Ball, everyone who attends receives a leaf-shaped candy dish as a party favor. These dishes cost $5.25 each, but the committee has 15 candy dishes left over from last year and a $21 gift certificate they will put toward the price for new dishes." tutor_flag="tutor" model_file="8.6.4.brd" student_interface="8.06.html">
+      <Skills>
+        <Skill name="Calculate_Y_value_from_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+        <Skill name="Enter_given_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+      </Skills>
+    </Problem>
+    <Problem name="8.6.5" label="Delivery truck" description="Scott drives a delivery truck. It takes him 20 minutes to travel back and forth from the warehouse to downtown and then each delivery takes him an average of 5 minutes." tutor_flag="tutor" model_file="8.6.5.brd" student_interface="8.06.html">
+      <Skills>
+        <Skill name="Calculate_Y_value_from_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+        <Skill name="Enter_given_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+      </Skills>
+    </Problem>
+    <Problem name="8.6.6" label="Beach umbrella" description="Reggie rented a beach umbrella from the Shady-Oasis stand on the boardwalk. The stand charges $10 for the first 2 hours of use, and $3 for each additional hour." tutor_flag="tutor" model_file="8.6.6.brd" student_interface="8.06.html">
+      <Skills>
+        <Skill name="Calculate_Y_value_from_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+        <Skill name="Enter_given_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+      </Skills>
+    </Problem>
+    <Problem name="8.6.7" label="Century Book Club" description="When you join the Century Book Club, you pay a $24.50 membership fee every year that covers the cost of 8 books. There is a $6.75 charge for each additional book you buy." tutor_flag="tutor" model_file="8.6.7.brd" student_interface="8.06.html">
+      <Skills>
+        <Skill name="Calculate_Y_value_from_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+        <Skill name="Enter_given_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+      </Skills>
+    </Problem>
+    <Problem name="8.6.8" label="Circus job" description="Michael is joining the circus as a roustabout who helps raise and lower the tents. He will earn $1500 his first month as a trainee. He will earn $2000 each month for the rest of his first year." tutor_flag="tutor" model_file="8.6.8.brd" student_interface="8.06.html">
+      <Skills>
+        <Skill name="Calculate_Y_value_from_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+        <Skill name="Enter_given_X_value" category="Problem_Solving_and_Linear_Equations_I" occurrences="4"/>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="8.06 HTML" label="8.06 Expressions, Values, and Distributive Law" description="Gives student a variable and an expression, and then asks student to apply that information to solve for different scenarios and values of the variable." status="active" picture="8.06.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="8.6.1" position="1" role="0"/>
+        <Problem name="8.6.2" position="2" role="0"/>
+        <Problem name="8.6.3" position="3" role="0"/>
+        <Problem name="8.6.4" position="4" role="0"/>
+        <Problem name="8.6.5" position="5" role="0"/>
+        <Problem name="8.6.6" position="6" role="0"/>
+        <Problem name="8.6.7" position="7" role="0"/>
+        <Problem name="8.6.8" position="8" role="0"/>
+      </Problems>
+      <Skills>
+        <Skill name="Calculate_Y_value_from_X_value" category="Problem_Solving_and_Linear_Equations_I" label="Calculate Y value from X value" description="Calculate an X value from a Y value" position="2"/>
+        <Skill name="Enter_given_X_value" category="Problem_Solving_and_Linear_Equations_I" label="Enter given X value" description="Enter a given X value" position="3"/>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.D" label="D. Algebraic Concepts" description="D. Algebraic Concepts" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.D.2" label="D.2. Represent Situations and Structures" description="D.2. Represent and/or analyze mathematical situations and structures using algebraic symbols, words, tables, and graphs." standard_level="assessment_anchor" parent_name="PA.D" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.B" label="B. Algebra" description="B. Algebra" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="6th" label="6th Grade" description="6th Grade"/>
+        <Grade name="7th" label="7th Grade" description="7th Grade"/>
+        <Grade name="8th" label="8th Grade" description="8th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.PET" label="Patterns and Expressions in Tables" description="Patterns and Expressions in Tables" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.6" label="6th Grade" description="6th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.6.NS" label="6.NS. The Number System" description="6.NS. The Number System" standard_level="strand" parent_name="CommonCore.6" parent_level="grade_level"/>
+        <Standard name="CommonCore.6.EE" label="6.EE. Expressions and Equations" description="6.EE. Expressions and Equations" standard_level="strand" parent_name="CommonCore.6" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="8.06.png" path="Assets"/>
+    <Asset name="mathtutor_8.06_full.png" path="Assets"/>
+    <Asset name="8.6 intro.brd" path="FinalBRDs"/>
+    <Asset name="8.6.1.brd" path="FinalBRDs"/>
+    <Asset name="8.6.2.brd" path="FinalBRDs"/>
+    <Asset name="8.6.3.brd" path="FinalBRDs"/>
+    <Asset name="8.6.4.brd" path="FinalBRDs"/>
+    <Asset name="8.6.5.brd" path="FinalBRDs"/>
+    <Asset name="8.6.6.brd" path="FinalBRDs"/>
+    <Asset name="8.6.7.brd" path="FinalBRDs"/>
+    <Asset name="8.6.8.brd" path="FinalBRDs"/>
+    <Asset name="8.06.html" path="HTML"/>
+    <Asset name="8-06_finalMassProduction.txt" path="MassProduction"/>
+    <Asset name="8-06_finalTemplate.brd" path="MassProduction"/>
+    <Asset name="8-06_translatable.txt" path="MassProduction"/>
+    <Asset name="8.6.brd" path="MassProduction"/>
+    <Asset name="8.6.txt" path="MassProduction"/>
+  </Assets>
+</Package>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>7.10 Equations, Graphs, and Negative Slope</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/CTAT.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/CTATChart.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/Mathtutor.css">
+    <link rel="stylesheet" type="text/css" href="Assets/7.10.css">
+
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/jquery.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctat.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/CTATChart.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctatloader.js"></script>
+  </head>
+
+  <body>
+    <main class="CTATTutor">
+      <h1>Tutor</h1>
+
+      <section class="CTATProblemSolving">
+        <h2>Problem Solving</h2>
+
+        <div class="left twofifths">
+          <section class="CTATProblem">
+            <h3>Problem</h3>
+
+            <div id="problem_statement" class="CTATTextField"></div>
+            <div id="group_1" class="CTATGroupingComponent" data-ctat-componentlist="question_1,question_2,question_3"></div>
+            <div id="group_2" class="CTATGroupingComponent" data-ctat-componentlist="instructions_1,question_4,question_5"></div>
+            <div id="question_1" class="CTATTextField"></div>
+            <div id="question_2" class="CTATTextField"></div>
+            <div id="question_3" class="CTATTextField"></div>
+            <div id="instructions_1" class="CTATTextField"></div>
+            <div id="question_4" class="CTATTextField"></div>
+            <div id="question_5" class="CTATTextField"></div>
+          </section>
+
+          <section class="CTATSolution">
+            <h3>Solution</h3>
+
+            <div id="group_3" class="CTATGroupingComponent" data-ctat-componentlist="q1,q2,q3"></div>
+            <div id="group_4" class="CTATGroupingComponent" data-ctat-componentlist="q4,q5,equation"></div>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="row">Quantity Name</th>
+                  <th scope="col"><div id="quantity1" class="CTATTextInput"></div></th>
+                  <th scope="col"><div id="quantity2" class="CTATTextInput"></div></th>
+                </tr>
+                <tr>
+                  <th scope="row">Unit</th>
+                  <th scope="col"><div id="unit1" class="CTATTextInput"></div></th>
+                  <th scope="col"><div id="unit2" class="CTATTextInput"></div></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="q1" class="CTATElement">
+                  <th scope="row">Question 1</th>
+                  <td><div id="q1_1" class="CTATTextInput"></div></td>
+                  <td>
+                    <div id="q1_2" class="CTATTextInput CTATCalculatorInput" placeholder="Value or expression"></div>
+                    <button class="CTATCalculator" type="button" tabindex="-1"></button>
+                  </td>
+                </tr>
+                <tr id="q2" class="CTATElement">
+                  <th scope="row">Question 2</th>
+                  <td><div id="q2_1" class="CTATTextInput"></div></td>
+                  <td>
+                    <div id="q2_2" class="CTATTextInput CTATCalculatorInput" placeholder="Value or expression"></div>
+                    <button class="CTATCalculator" type="button" tabindex="-1"></button>
+                  </td>
+                </tr>
+                <tr id="q3" class="CTATElement">
+                  <th scope="row">Question 3</th>
+                  <td><div id="q3_1" class="CTATTextInput"></div></td>
+                  <td>
+                    <div id="q3_2" class="CTATTextInput CTATCalculatorInput" placeholder="Value or expression"></div>
+                    <button class="CTATCalculator" type="button" tabindex="-1"></button>
+                  </td>
+                </tr>
+                <tr id="q4" class="CTATElement">
+                  <th scope="row">Question 4</th>
+                  <td><div id="q4_1" class="CTATTextInput" placeholder="Place a point first"></div></td>
+                  <td><div id="q4_2" class="CTATTextInput"></div></td>
+                </tr>
+                <tr id="q5" class="CTATElement">
+                  <th scope="row">Question 5</th>
+                  <td><div id="q5_1" class="CTATTextInput" placeholder="Place a point first"></div></td>
+                  <td><div id="q5_2" class="CTATTextInput"></div></td>
+                </tr>
+                <tr id="equation" class="CTATElement">
+                  <th scope="row">Equation</th>
+                  <td id="variable">y =</td>
+                  <td><div id="expression" class="CTATTextInput"></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+
+        <section class="CTATSolution threefifths">
+          <h3>Grapher</h3>
+
+          <div id="instructions_2" class="CTATTextField"></div>
+          <div id="instructions_3" class="CTATTextField"></div>
+          <div id="instructions_4" class="CTATTextField"></div>
+          <div id="instructions_5" class="CTATTextField"></div>
+          <div id="instructions_6" class="CTATTextField"></div>
+          <div class="CTATGrapher">
+            <div class="CTATGrapher-top">
+              <div>
+                <span>X-axis Scale:</span>
+                <div id="graphStepX" class="CTATNumericStepper" data-ctat-tutor="false" value="1"></div>
+              </div>
+              <div>
+                <span>Y-axis Scale:</span>
+                <div id="graphStepY" class="CTATNumericStepper" data-ctat-tutor="false" value="1"></div>
+              </div>
+            </div>
+            <div class="CTATGrapher-y">
+              <div id="graphMaxY" class="CTATNumericStepper" data-ctat-tutor="false" value="10"></div>
+              <div id="graphLabelY" class="CTATTextInput" placeholder="Quantity"></div>
+              <div id="graphUnitY" class="CTATTextInput" placeholder="Unit"></div>
+              <div id="graphMinY" class="CTATNumericStepper" data-ctat-tutor="false" value="0"></div>
+            </div>
+            <div id="graph" class="CTATChart" aria-label="Tutorable interactive two dimension data chart" role="img"
+                 data-ctat-disable-on-correct="false" data-ctat-snap="false" data-ctat-line-snap="false"
+                 data-ctat-ctrl-minimum-x="graphMinX" data-ctat-ctrl-maximum-x="graphMaxX" data-ctat-ctrl-step-x="graphStepX"
+                 data-ctat-ctrl-minimum-y="graphMinY" data-ctat-ctrl-maximum-y="graphMaxY" data-ctat-ctrl-step-y="graphStepY"></div>
+            <div class="CTATGrapher-x">
+              <div id="graphMinX" class="CTATNumericStepper" data-ctat-tutor="false" value="0"></div>
+              <div id="graphLabelX" class="CTATTextInput" placeholder="Quantity"></div>
+              <div id="graphUnitX" class="CTATTextInput" placeholder="Unit"></div>
+              <div id="graphMaxX" class="CTATNumericStepper" data-ctat-tutor="false" value="10"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="CTATTools">
+        <h2>Tools</h2>
+
+        <div class="CTATButtons">
+          <div class="CTATHintButton"></div>
+          <div class="CTATDoneButton"></div>
+        </div>
+
+        <section class="CTATHints">
+          <h3>Hints</h3>
+          <div class="CTATHintWindow"></div>
+        </section>
+
+        <section class="CTATSkills">
+          <h3>Skills</h3>
+          <div class="CTATSkillWindow"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

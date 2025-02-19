@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en-US">
+  <head>
+    <title>Tutor</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/beta/CTAT.css">
+    <link rel="stylesheet" type="text/css" href="Assets/single.css">
+
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/jquery.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/ctat.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/ctatloader.js"></script>
+    <style>
+      .cell {
+        width: 25%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+          .not_last {
+            border-right:inherit;
+          }
+      .CTATTextInput {
+        width: 80%;
+      }
+      .CTATTextInput > input {
+        text-align: center;
+      }
+      .CTATHints, .CTATSkills{
+        display: flex;
+        flex-grow: 1;
+        flex-flow: row;
+      }
+      .CTATSolution {
+        margin: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="CTATTutor">
+      <h1>Tutor</h1>
+
+      <section class="CTATProblemSolving">
+
+        <section class="CTATProblem">
+          <h3>Problem</h3>
+          <div id="problemstatement" class="CTATTextField">Problem Statement</div>
+        </section>
+
+        <section id="solution" class="CTATSolution">
+          <h3>Solution</h3>
+          <div style="display: flex; flex-direction:column; text-align:center; border-top: medium solid; border-left: medium solid">
+            <div style="display:flex; border-bottom: medium solid; border-right:medium solid">
+              <div id="Empty" class="CTATTextField cell not_last">Empty</div>
+              <div id="label1" class="CTATTextField cell not_last">Label 1</div>
+              <div id="label3" class="CTATTextField cell not_last">Label 3</div>
+              <div id="label2" class="CTATTextField cell">Label 2</div>
+            </div>
+            <div style="display:flex; border-bottom: medium solid; border-right:medium solid">
+              <div id="label4" class="CTATTextField cell not_last">Label 4</div>
+              <div id="unit1" class="CTATTextField cell not_last">Unit 1</div>
+              <div id="na1" class="CTATTextField cell not_last">NA 1</div>
+              <div id="unit2" class="CTATTextField cell">Unit 2</div>
+            </div>
+            <div style="display:flex; border-bottom: medium solid; border-right:medium solid">
+              <div id="label5" class="CTATTextField cell not_last">Label 5</div>
+              <div class="cell not_last">
+                <div id="answer11" class="CTATTextInput"></div>
+              </div>
+              <div class="cell not_last">
+                <div id="workout1" class="CTATTextInput"></div>
+              </div>
+              <div class="cell">
+                <div id="answer12" class="CTATTextInput"></div>
+              </div>
+            </div>
+            <div style="display:flex; border-bottom: medium solid; border-right:medium solid">
+              <div id="label6" class="CTATTextField cell not_last">Label 6</div>
+              <div class="cell not_last">
+                <div id="answer21" class="CTATTextInput"></div>
+              </div>
+              <div class="cell not_last">
+                <div id="workout2" class="CTATTextInput"></div>
+              </div>
+              <div class="cell">
+                <div id="answer22" class="CTATTextInput"></div>
+              </div>
+            </div>
+            <div style="display:flex; border-bottom: medium solid; border-right:medium solid">
+              <div id="label7" class="CTATTextField cell not_last">Label 7</div>
+              <div class="cell not_last">
+                <div id="exp1" class="CTATTextInput"></div>
+              </div>
+              <div class="cell not_last">
+                <div id="na2" class="CTATTextInput"></div>
+              </div>
+              <div class="cell">
+                <div id="exp2" class="CTATTextInput"></div>
+              </div>
+            </div>
+            <div style="display:flex; border-bottom: medium solid; border-right:medium solid">
+              <div id="label8" class="CTATTextField cell not_last">Label 8</div>
+              <div class="cell not_last">
+                <div id="answer31" class="CTATTextInput"></div>
+              </div>
+              <div class="cell not_last">
+                <div id="workout3" class="CTATTextInput"></div>
+              </div>
+              <div class="cell">
+                <div id="answer32" class="CTATTextInput"></div>
+              </div>
+            </div>
+            <div style="display:flex; border-bottom: medium solid; border-right:medium solid">
+              <div id="label9" class="CTATTextField cell not_last">Label 9</div>
+              <div class="cell not_last">
+                <div id="answer42" class="CTATTextInput"></div>
+              </div>
+              <div class="cell not_last">
+                <div id="workout4" class="CTATTextInput"></div>
+              </div>
+              <div class="cell">
+                <div id="answer41" class="CTATTextInput"></div>
+              </div>
+            </div>
+          </div>
+       </section>
+      </section>
+
+      <section class="CTATTools">
+
+        <section class="CTATHints">
+          <div class="CTATButtons">
+            <div class="CTATHintButton"></div>
+            <div class="CTATDoneButton"></div>
+          </div>
+          <div class="CTATHintWindow"></div>
+        </section>
+
+        <section class="CTATSkills">
+          <div class="CTATSkillWindow"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

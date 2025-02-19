@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>7.15 Proportional Reasoning</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/CTAT.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/Mathtutor.css">
+    <link rel="stylesheet" type="text/css" href="Assets/7.15.css">
+
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/jquery.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctat.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctatloader.js"></script>
+  </head>
+
+  <body>
+    <main class="CTATTutor">
+      <h1>Tutor</h1>
+
+      <section class="CTATProblemSolving">
+        <h2>Problem Solving</h2>
+
+        <section class="CTATProblem third">
+          <h3>Problem</h3>
+
+          <div id="Question" class="CTATTextField"></div>
+        </section>
+
+        <section class="CTATSolution twothirds">
+          <h3>Solution</h3>
+
+          <section class="option">
+            <h4>Option One</h4>
+
+            <table class="outer_table">
+              <caption>Option 1</caption>
+              <thead>
+                <tr>
+                  <th scope="col"><div id="nameLeft1" class="CTATTextField"></div></th>
+                  <th scope="col"><div id="nameMid1" class="CTATTextField"></div></th>
+                  <th scope="col">
+                    <div id="nameRight1" class="CTATTextField"></div>
+                    <div class="nextButton">
+                      <div id="nextButton1_1" class="CTATButton" tabindex="1" data-ctat-disable-on-correct="false" data-ctat-show-feedback="false">>></div>
+                      <div id="nextButton2_1" class="CTATButton" tabindex="8" data-ctat-disable-on-correct="false" data-ctat-show-feedback="false">>></div>
+                      <div id="nextButton3_1" class="CTATButton" tabindex="15" data-ctat-disable-on-correct="false" data-ctat-show-feedback="false">>></div>
+                      <div id="nextButton4_1" class="CTATButton" data-ctat-enabled="false" data-ctat-show-feedback="false">>></div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><div id="firstLeft1" class="CTATTextInput"></div></td>
+                  <td><div id="firstMid1" class="CTATTextInput"></div></td>
+                  <td rowspan="4">
+                    <div id="row1_1" class="CTATGroupingComponent"
+                    data-ctat-componentlist="row1_1_originalTickets1_1,row1_1_operationTickets1_1,row1_1_multiplierDivisorTickets1_1,row1_1_totalTickets1_1,row1_1_originalCost1_1,row1_1_operationCost1_1,row1_1_multiplierDivisorCost1_1,row1_1_totalCost1_1"></div>
+                    <div id="row2_1" class="CTATGroupingComponent"
+                    data-ctat-componentlist="row2_1_originalTickets1_2,row2_1_operationTickets1_2,row2_1_multiplierDivisorTickets1_2,row2_1_totalTickets1_2,row2_1_originalCost1_2,row2_1_operationCost1_2,row2_1_multiplierDivisorCost1_2,row2_1_totalCost1_2"></div>
+                    <div id="row3_1" class="CTATGroupingComponent"
+                    data-ctat-componentlist="row3_1_originalTickets1_3,row3_1_operationTickets1_3,row3_1_multiplierDivisorTickets1_3,row3_1_totalTickets1_3,row3_1_originalCost1_3,row3_1_operationCost1_3,row3_1_multiplierDivisorCost1_3,row3_1_totalCost1_3"></div>
+                    <div id="row4_1" class="CTATGroupingComponent"
+                    data-ctat-componentlist="row4_1_originalTickets1_4,row4_1_operationTickets1_4,row4_1_multiplierDivisorTickets1_4,row4_1_totalTickets1_4,row4_1_originalCost1_4,row4_1_operationCost1_4,row4_1_multiplierDivisorCost1_4,row4_1_totalCost1_4"></div>
+                    <div id="row1_1" class="inner_table">
+                      <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell">Operation</div>
+                        <div class="cell">Multiplier/Divisor</div>
+                        <div class="cell">Total</div>
+                      </div>
+                      <div class="row">
+                        <div class="cell"><div id="row1_title1" class="CTATTextField"></div></div>
+                        <div class="cell">
+                          <div id="row1_1_originalTickets1_1" class="CTATTextField"></div>
+                          <div id="row2_1_originalTickets1_2" class="CTATTextField"></div>
+                          <div id="row3_1_originalTickets1_3" class="CTATTextField"></div>
+                          <div id="row4_1_originalTickets1_4" class="CTATTextField"></div>
+                        </div>
+                        <div class="cell">
+                          <div id="row1_1_operationTickets1_1" class="CTATComboBox"></div>
+                          <div id="row2_1_operationTickets1_2" class="CTATComboBox" tabindex="2"></div>
+                          <div id="row3_1_operationTickets1_3" class="CTATComboBox" tabindex="9"></div>
+                          <div id="row4_1_operationTickets1_4" class="CTATComboBox" tabindex="16"></div>
+                        </div>
+                        <div class="cell span">
+                          <div id="row1_1_multiplierDivisorTickets1_1" class="CTATTextInput"></div>
+                          <div id="row2_1_multiplierDivisorTickets1_2" class="CTATTextInput" tabindex="3"></div>
+                          <div id="row3_1_multiplierDivisorTickets1_3" class="CTATTextInput" tabindex="10"></div>
+                          <div id="row4_1_multiplierDivisorTickets1_4" class="CTATTextInput" tabindex="17"></div>
+                          <span>=</span>
+                        </div>
+                        <div class="cell">
+                          <div id="row1_1_totalTickets1_1" class="CTATTextField"></div>
+                          <div id="row2_1_totalTickets1_2" class="CTATTextField"></div>
+                          <div id="row3_1_totalTickets1_3" class="CTATTextField"></div>
+                          <div id="row4_1_totalTickets1_4" class="CTATTextField"></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="cell"><div id="row2_title1" class="CTATTextField"></div></div>
+                        <div class="cell">
+                          <div id="row1_1_originalCost1_1" class="CTATTextField"></div>
+                          <div id="row2_1_originalCost1_2" class="CTATTextField"></div>
+                          <div id="row3_1_originalCost1_3" class="CTATTextField"></div>
+                          <div id="row4_1_originalCost1_4" class="CTATTextField"></div>
+                        </div>
+                        <div class="cell">
+                          <div id="row1_1_operationCost1_1" class="CTATComboBox"></div>
+                          <div id="row2_1_operationCost1_2" class="CTATComboBox" tabindex="4"></div>
+                          <div id="row3_1_operationCost1_3" class="CTATComboBox" tabindex="11"></div>
+                          <div id="row4_1_operationCost1_4" class="CTATComboBox" tabindex="18"></div>
+                        </div>
+                        <div class="cell span">
+                          <div id="row1_1_multiplierDivisorCost1_1" class="CTATTextInput"></div>
+                          <div id="row2_1_multiplierDivisorCost1_2" class="CTATTextInput" tabindex="5"></div>
+                          <div id="row3_1_multiplierDivisorCost1_3" class="CTATTextInput" tabindex="12"></div>
+                          <div id="row4_1_multiplierDivisorCost1_4" class="CTATTextInput" tabindex="19"></div>
+                          <span>=</span>
+                        </div>
+                        <div class="cell">
+                          <div id="row1_1_totalCost1_1" class="CTATTextInput"></div>
+                          <div id="row2_1_totalCost1_2" class="CTATTextInput" tabindex="6"></div>
+                          <div id="row3_1_totalCost1_3" class="CTATTextInput" tabindex="13"></div>
+                          <div id="row4_1_totalCost1_4" class="CTATTextInput" tabindex="20"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div id="secondLeft1" class="CTATTextInput"></div></td>
+                  <td><div id="secondMid1" class="CTATTextInput" tabindex="7"></div></td>
+                </tr>
+                <tr>
+                  <td><div id="thirdLeft1" class="CTATTextInput"></div></td>
+                  <td><div id="thirdMid1" class="CTATTextInput" tabindex="14"></div></td>
+                </tr>
+                <tr>
+                  <td><div id="fourthLeft1" class="CTATTextInput"></div></td>
+                  <td><div id="fourthMid1" class="CTATTextInput" tabindex="21"></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="option">
+            <h4>Option Two</h4>
+
+            <table class="outer_table">
+              <caption>Option 2</caption>
+              <thead>
+                <tr>
+                  <th scope="col"><div id="nameLeft2" class="CTATTextField"></div></th>
+                  <th scope="col"><div id="nameMid2" class="CTATTextField"></div></th>
+                  <th scope="col">
+                    <div id="nameRight2" class="CTATTextField"></div>
+                    <div class="nextButton">
+                      <div id="nextButton1_2" class="CTATButton" tabindex="22" data-ctat-disable-on-correct="false" data-ctat-show-feedback="false">>></div>
+                      <div id="nextButton2_2" class="CTATButton" tabindex="29" data-ctat-disable-on-correct="false" data-ctat-show-feedback="false">>></div>
+                      <div id="nextButton3_2" class="CTATButton" tabindex="36" data-ctat-disable-on-correct="false" data-ctat-show-feedback="false">>></div>
+                      <div id="nextButton4_2" class="CTATButton" data-ctat-enabled="false" data-ctat-show-feedback="false">>></div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><div id="firstLeft2" class="CTATTextInput"></div></td>
+                  <td><div id="firstMid2" class="CTATTextInput"></div></td>
+                  <td rowspan="4">
+                    <div id="row1_2" class="CTATGroupingComponent"
+                    data-ctat-componentlist="row1_2_originalTickets2_1,row1_2_operationTickets2_1,row1_2_multiplierDivisorTickets2_1,row1_2_totalTickets2_1,row1_2_originalCost2_1,row1_2_operationCost2_1,row1_2_multiplierDivisorCost2_1,row1_2_totalCost2_1"></div>
+                    <div id="row2_2" class="CTATGroupingComponent"
+                    data-ctat-componentlist="row2_2_originalTickets2_2,row2_2_operationTickets2_2,row2_2_multiplierDivisorTickets2_2,row2_2_totalTickets2_2,row2_2_originalCost2_2,row2_2_operationCost2_2,row2_2_multiplierDivisorCost2_2,row2_2_totalCost2_2"></div>
+                    <div id="row3_2" class="CTATGroupingComponent"
+                    data-ctat-componentlist="row3_2_originalTickets2_3,row3_2_operationTickets2_3,row3_2_multiplierDivisorTickets2_3,row3_2_totalTickets2_3,row3_2_originalCost2_3,row3_2_operationCost2_3,row3_2_multiplierDivisorCost2_3,row3_2_totalCost2_3"></div>
+                    <div id="row4_2" class="CTATGroupingComponent"
+                    data-ctat-componentlist="row4_2_originalTickets2_4,row4_2_operationTickets2_4,row4_2_multiplierDivisorTickets2_4,row4_2_totalTickets2_4,row4_2_originalCost2_4,row4_2_operationCost2_4,row4_2_multiplierDivisorCost2_4,row4_2_totalCost2_4"></div>
+                    <div class="inner_table">
+                      <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell">Operation</div>
+                        <div class="cell">Multiplier/Divisor</div>
+                        <div class="cell">Total</div>
+                      </div>
+                      <div class="row">
+                        <div class="cell"><div id="row1_title2" class="CTATTextField"></div></div>
+                        <div class="cell">
+                          <div id="row1_2_originalTickets2_1" class="CTATTextField"></div>
+                          <div id="row2_2_originalTickets2_2" class="CTATTextField"></div>
+                          <div id="row3_2_originalTickets2_3" class="CTATTextField"></div>
+                          <div id="row4_2_originalTickets2_4" class="CTATTextField"></div>
+                        </div>
+                        <div class="cell">
+                          <div id="row1_2_operationTickets2_1" class="CTATComboBox"></div>
+                          <div id="row2_2_operationTickets2_2" class="CTATComboBox" tabindex="23"></div>
+                          <div id="row3_2_operationTickets2_3" class="CTATComboBox" tabindex="30"></div>
+                          <div id="row4_2_operationTickets2_4" class="CTATComboBox" tabindex="37"></div>
+                        </div>
+                        <div class="cell span">
+                          <div id="row1_2_multiplierDivisorTickets2_1" class="CTATTextInput"></div>
+                          <div id="row2_2_multiplierDivisorTickets2_2" class="CTATTextInput" tabindex="24"></div>
+                          <div id="row3_2_multiplierDivisorTickets2_3" class="CTATTextInput" tabindex="31"></div>
+                          <div id="row4_2_multiplierDivisorTickets2_4" class="CTATTextInput" tabindex="38"></div>
+                          <span>=</span>
+                        </div>
+                       <div class="cell">
+                          <div id="row1_2_totalTickets2_1" class="CTATTextField"></div>
+                          <div id="row2_2_totalTickets2_2" class="CTATTextField"></div>
+                          <div id="row3_2_totalTickets2_3" class="CTATTextField"></div>
+                          <div id="row4_2_totalTickets2_4" class="CTATTextField"></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="cell"><div id="row2_title2" class="CTATTextField"></div></div>
+                        <div class="cell">
+                          <div id="row1_2_originalCost2_1" class="CTATTextField"></div>
+                          <div id="row2_2_originalCost2_2" class="CTATTextField"></div>
+                          <div id="row3_2_originalCost2_3" class="CTATTextField"></div>
+                          <div id="row4_2_originalCost2_4" class="CTATTextField"></div>
+                        </div>
+                        <div class="cell">
+                          <div id="row1_2_operationCost2_1" class="CTATComboBox"></div>
+                          <div id="row2_2_operationCost2_2" class="CTATComboBox" tabindex="25"></div>
+                          <div id="row3_2_operationCost2_3" class="CTATComboBox" tabindex="32"></div>
+                          <div id="row4_2_operationCost2_4" class="CTATComboBox" tabindex="39"></div>
+                        </div>
+                        <div class="cell span">
+                          <div id="row1_2_multiplierDivisorCost2_1" class="CTATTextInput"></div>
+                          <div id="row2_2_multiplierDivisorCost2_2" class="CTATTextInput" tabindex="26"></div>
+                          <div id="row3_2_multiplierDivisorCost2_3" class="CTATTextInput" tabindex="33"></div>
+                          <div id="row4_2_multiplierDivisorCost2_4" class="CTATTextInput" tabindex="40"></div>
+                          <span>=</span>
+                        </div>
+                        <div class="cell">
+                          <div id="row1_2_totalCost2_1" class="CTATTextInput"></div>
+                          <div id="row2_2_totalCost2_2" class="CTATTextInput" tabindex="27"></div>
+                          <div id="row3_2_totalCost2_3" class="CTATTextInput" tabindex="34"></div>
+                          <div id="row4_2_totalCost2_4" class="CTATTextInput" tabindex="41"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div id="secondLeft2" class="CTATTextInput"></div></td>
+                  <td><div id="secondMid2" class="CTATTextInput" tabindex="28"></div></td>
+                </tr>
+                <tr>
+                  <td><div id="thirdLeft2" class="CTATTextInput"></div></td>
+                  <td><div id="thirdMid2" class="CTATTextInput" tabindex="35"></div></td>
+                </tr>
+                <tr>
+                  <td><div id="fourthLeft2" class="CTATTextInput"></div></td>
+                  <td><div id="fourthMid2" class="CTATTextInput" tabindex="42"></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <div id="whichOption" class="CTATTextField">Which is the better Option?</div>
+          <div class="CTATGroupingComponent">
+            <div id="MovieClip614" class="CTATRadioButton" name="chooseOption">Option 1</div>
+            <div id="MovieClip615" class="CTATRadioButton" name="chooseOption">Option 2</div>
+          </div>
+        </section>
+      </section>
+
+      <section class="CTATTools">
+        <h2>Tools</h2>
+
+        <div class="CTATButtons">
+          <div class="CTATDoneButton"></div>
+          <div class="CTATHintButton"></div>
+        </div>
+
+        <section class="CTATHints">
+          <h3>Hints</h3>
+          <div class="CTATHintWindow"></div>
+        </section>
+
+        <section class="CTATSkills">
+          <h3>Skills</h3>
+          <div class="CTATSkillWindow"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+File named "8-22_calc" is for calculating values from 8_22.txt.
+
+Originally, all the answers/values [variables like "%(ansQ2d)%" or "%(ansQ4a)%"] are written as expressions due to ease of entering answers that contain pi, which is replaced with "3.14" in this unit. 
+
+In order to avoid errors, 8_22.txt originally had all the answers as expression if it has '3.14' in it, but it seems CTAT cannot properly replace the answer as a simplified number. This is not the only issue; for answers that uses "|", the square root operator, replaces itself in an unacceptable expression. 
+
+Therefore, I decided to replace all the expressions in 8_22.txt with numbers by using another spreadsheet, and that is 8-22_calc. 
+
+Having 8-22_calc excel spreadsheet in the subversion becomes unnecessary once the unit is complete, but it is uploaded to subversion in case there is a future need to change any of the values/expression.
+
+Meehyun
+04/13/2011

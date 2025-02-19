@@ -1,0 +1,71 @@
+#diagram {
+  display: grid;
+  grid: 1fr 50px 30px 0 30px 50px / auto 2fr repeat(2, 1fr) 2fr;
+  row-gap: 5px;
+  justify-items: center;
+  align-items: center;
+}
+#from, #to, #SO, #SF {
+  padding: 0 5px;
+  font-weight: bold;
+}
+#item1, #item2 {
+  width: 100%;
+  padding-right: 5px;
+  text-align: right;
+  font-weight: bold;
+}
+img {
+  width: 50%;
+  height: 25px;
+}
+hr {
+  width: 70%;
+  min-width: 50px;
+}
+#from, #topLeft, #bottomLeft, #fraction1 {
+  grid-column: 2;
+}
+#topLeft, #topRight {
+  align-self: flex-end;
+}
+#bottomLeft, #bottomRight {
+  align-self: flex-start;
+}
+#topLeft, #bottomLeft {
+  justify-self: flex-end;
+}
+#topRight, #bottomRight {
+  justify-self: flex-start;
+}
+#CV1, #CV2 {
+  grid-column: 5;
+}
+#SO1, #SO2, #SF1, #SF2 {
+  width: 45px;
+}
+#CV1, #CV2, #OV1, #OV2 {
+  width: 65%;
+  min-width: 45px;
+}
+#equal {
+  grid-column: 3 / 5;
+  font-size: 30px;
+  font-weight: bold;
+}
+#solution {
+  margin-top: 30px;
+  text-align: center;
+}
+#final_statement {
+  margin-bottom: 15px;
+}
+#answer {
+  font-weight: bold;
+}
+#final_unit {
+  display: inline-block;
+}
+.CTATTextInput > input[type="text"] {
+  width: 100%;
+}

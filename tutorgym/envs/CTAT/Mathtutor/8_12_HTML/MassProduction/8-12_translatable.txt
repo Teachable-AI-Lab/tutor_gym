@@ -1,0 +1,1862 @@
+Problem Name	deer in garden
+%(startStateNodeName)%	
+%(problemstatement)%	A deer rampages through your neighbor's garden containing 25 stalks of corn.<br><br>Part 1) If the deer eats 15 stalks, what percentage has the deer eaten?<br><br>Part 2) If the deer eats 7 stalks instead, what percentage has it now eaten?
+%(problemstatementparts)%	Part 1) If the deer eats 15 stalks, what percentage has the deer eaten?<br>Part 2) If the deer eats 7 stalks instead, what percentage has it now eaten?
+%(totaldenomprescaling)%	25
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many stalks are available for the deer to eat?
+%(totalprescalingnumber)%	25
+%(totaldenomoperator)%	*
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 25 to 100?
+%(hintoperatorvariable)%	*
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	multiply
+%(hintfactor)%	4
+%(totalnumfactor)%	4
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	4
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	15
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	stalks eaten
+%(part1numprescalingnumber)%	15
+%(part1denomoperator)%	*
+%(part1numfactor)%	4
+%(part1denomfactor)%	4
+%(part1percent)%	60
+%(part1numpercentnumber)%	60
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	7
+%(objectnamepart2)%	stalks eaten
+%(part2numprescalingnumber)%	7
+%(part2denomoperator)%	*
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	/
+%(part1numprescalingerror)%	60
+%(part1denomoperatorerror)%	/
+%(part2numprescalingerror)%	28
+%(part2denomoperatorerror)%	/
+%(totalnumprescaling)%	25
+%(part1numpercent)%	60
+%(part2numpercentnumber)%	28
+%(part2numpercent)%	28
+%(part2denomfactor)%	4
+%(part2numfactor)%	4
+%(part2percent)%	28
+%(part1denomprescaling)%	25
+%(part1numoperator)%	*
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	/
+%(part2denomprescaling)%	25
+%(totalnumoperator)%	*
+%(totalnumoperatorerror)%	/
+%(part2numoperator)%	*
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	/
+%(3828965240384434128)%	How many stalks eaten are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 7 * 4?
+%(9124325061673033557)%	Please enter '25' in the highlighted field.
+%(4821483485439661655)%	What do you have to multiply 25 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	60 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 25 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 25 to 100?
+%(-1965163513967356544)%	How many stalks are available for the deer to eat?
+%(5364077982269946228)%	Which operation do you use to scale 25 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 25 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many stalks eaten are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 25 * 4?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '*' in the highlighted field.
+%(-3323778468535052321)%	Please enter '7' in the highlighted field.
+%(-1096534679222917409)%	What is 15 * 4?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '4' in the highlighted field.
+%(-2715048532308265476)%	Please enter '15' in the highlighted field.
+%(3016515421039777855)%	28 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '28' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '60' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '*' in the highlighted field.
+Problem Name	office picnic
+%(startStateNodeName)%	state43
+%(problemstatement)%	At the office picnic, your team tries to make a record-winning key lime pie that serves 400. It's a team-building exercise that improves morale. Then everybody eats it.<br><br>Part 1) If the children eat 163 slices, what percentage have they eaten?<br><br>Part 2) If the C.E.O. donates 78 slices to the local homeless shelter at the end of the day, what percentage did he donate?
+%(problemstatementparts)%	Part 1) If the children eat 163 slices, what percentage have they eaten?<br>Part 2) If the C.E.O. donates 78 slices to the local homeless shelter at the end of the day, what percentage did he donate?
+%(totaldenomprescaling)%	400
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many slices are available for people to eat?
+%(totalprescalingnumber)%	400
+%(totaldenomoperator)%	/
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 400 to 100?
+%(hintoperatorvariable)%	/
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	divide
+%(hintfactor)%	4
+%(totalnumfactor)%	4
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	4
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	163
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	slices eaten
+%(part1numprescalingnumber)%	163
+%(part1denomoperator)%	/
+%(part1numfactor)%	4
+%(part1denomfactor)%	4
+%(part1percent)%	40.75
+%(part1numpercentnumber)%	40.75
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	78
+%(objectnamepart2)%	donated slices
+%(part2numprescalingnumber)%	78
+%(part2denomoperator)%	/
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	*
+%(part1numprescalingerror)%	40.75
+%(part1denomoperatorerror)%	*
+%(part2numprescalingerror)%	19.5
+%(part2denomoperatorerror)%	*
+%(totalnumprescaling)%	400
+%(part1numpercent)%	40.75
+%(part2numpercentnumber)%	19.5
+%(part2numpercent)%	19.5
+%(part2denomfactor)%	4
+%(part2numfactor)%	4
+%(part2percent)%	19.5
+%(part1denomprescaling)%	400
+%(part1numoperator)%	/
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	*
+%(part2denomprescaling)%	400
+%(totalnumoperator)%	/
+%(totalnumoperatorerror)%	*
+%(part2numoperator)%	/
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	*
+%(3828965240384434128)%	How many donated slices are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 78 / 4?
+%(9124325061673033557)%	Please enter '400' in the highlighted field.
+%(4821483485439661655)%	What do you have to divide 400 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	40.75 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 400 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 400 to 100?
+%(-1965163513967356544)%	How many slices are available for people to eat?
+%(5364077982269946228)%	Which operation do you use to scale 400 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 400 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many slices eaten are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 400 / 4?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '/' in the highlighted field.
+%(-3323778468535052321)%	Please enter '78' in the highlighted field.
+%(-1096534679222917409)%	What is 163 / 4?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '4' in the highlighted field.
+%(-2715048532308265476)%	Please enter '163' in the highlighted field.
+%(3016515421039777855)%	19.5 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '19.5' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '40.75' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '/' in the highlighted field.
+Problem Name	widgets
+%(startStateNodeName)%	state14
+%(problemstatement)%	A factory makes 20,000 widgets every week.<br><br>Part 1) If 15 of the widgets one week are defective, what is the rate of defects?<br><br>Part 2) If the next week 100 of the widgets are defective, what percentage of the widgets are defective?
+%(problemstatementparts)%	Part 1) If 15 of the widgets one week are defective, what is the rate of defects?<br>Part 2) If the next week 100 of the widgets are defective, what percentage of the widgets are defective?
+%(totaldenomprescaling)%	20000
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many widgets did the factory produce?
+%(totalprescalingnumber)%	20000
+%(totaldenomoperator)%	/
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 20000 to 100?
+%(hintoperatorvariable)%	/
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	divide
+%(hintfactor)%	200
+%(totalnumfactor)%	200
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	200
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	15
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	defective widgets
+%(part1numprescalingnumber)%	15
+%(part1denomoperator)%	/
+%(part1numfactor)%	200
+%(part1denomfactor)%	200
+%(part1percent)%	0.08
+%(part1numpercentnumber)%	0.08
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	100
+%(objectnamepart2)%	defective widgets
+%(part2numprescalingnumber)%	100
+%(part2denomoperator)%	/
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	*
+%(part1numprescalingerror)%	0.08
+%(part1denomoperatorerror)%	*
+%(part2numprescalingerror)%	0.5
+%(part2denomoperatorerror)%	*
+%(totalnumprescaling)%	20000
+%(part1numpercent)%	0.08
+%(part2numpercentnumber)%	0.5
+%(part2numpercent)%	0.5
+%(part2denomfactor)%	200
+%(part2numfactor)%	200
+%(part2percent)%	0.5
+%(part1denomprescaling)%	20000
+%(part1numoperator)%	/
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	*
+%(part2denomprescaling)%	20000
+%(totalnumoperator)%	/
+%(totalnumoperatorerror)%	*
+%(part2numoperator)%	/
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	*
+%(3828965240384434128)%	How many defective widgets are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 100 / 200?
+%(9124325061673033557)%	Please enter '20000' in the highlighted field.
+%(4821483485439661655)%	What do you have to divide 20000 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	0.08 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 20000 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 20000 to 100?
+%(-1965163513967356544)%	How many widgets did the factory produce?
+%(5364077982269946228)%	Which operation do you use to scale 20000 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 20000 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many defective widgets are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 20000 / 200?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '/' in the highlighted field.
+%(-3323778468535052321)%	Please enter '100' in the highlighted field.
+%(-1096534679222917409)%	What is 15 / 200?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '200' in the highlighted field.
+%(-2715048532308265476)%	Please enter '15' in the highlighted field.
+%(3016515421039777855)%	0.5 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '0.5' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '0.08' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '/' in the highlighted field.
+Problem Name	tree height
+%(startStateNodeName)%	state4
+%(problemstatement)%	Mr. Thompson is adding two more trees in his front yard. He already has a tree that measures 10 feet tall.<br><br>Part 1) He is considering a maple tree that is 30 feet tall. What percentage of his tree's height is the proposed maple tree?<br><br>Part 2) He is considering a young pine tree that is currently 8 feet tall. What percentage of his tree's height is the proposed baby pine tree?
+%(problemstatementparts)%	Part 1) He is considering a maple tree that is 30 feet tall. What percentage of his tree's height is the proposed maple tree?<br>Part 2) He is considering a young pine tree that is currently 8 feet tall. What percentage of his tree's height is the proposed baby pine tree?
+%(totaldenomprescaling)%	10
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How tall is the tree already in the front yard?
+%(totalprescalingnumber)%	10
+%(totaldenomoperator)%	*
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 10 to 100?
+%(hintoperatorvariable)%	*
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	multiply
+%(hintfactor)%	10
+%(totalnumfactor)%	10
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	10
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	30
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	maple tree feet 
+%(part1numprescalingnumber)%	30
+%(part1denomoperator)%	*
+%(part1numfactor)%	10
+%(part1denomfactor)%	10
+%(part1percent)%	300
+%(part1numpercentnumber)%	300
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	8
+%(objectnamepart2)%	pine tree feet 
+%(part2numprescalingnumber)%	8
+%(part2denomoperator)%	*
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	/
+%(part1numprescalingerror)%	300
+%(part1denomoperatorerror)%	/
+%(part2numprescalingerror)%	80
+%(part2denomoperatorerror)%	/
+%(totalnumprescaling)%	10
+%(part1numpercent)%	300
+%(part2numpercentnumber)%	80
+%(part2numpercent)%	80
+%(part2denomfactor)%	10
+%(part2numfactor)%	10
+%(part2percent)%	80
+%(part1denomprescaling)%	10
+%(part1numoperator)%	*
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	/
+%(part2denomprescaling)%	10
+%(totalnumoperator)%	*
+%(totalnumoperatorerror)%	/
+%(part2numoperator)%	*
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	/
+%(3828965240384434128)%	How many pine tree feet  are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 8 * 10?
+%(9124325061673033557)%	Please enter '10' in the highlighted field.
+%(4821483485439661655)%	What do you have to multiply 10 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	300 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 10 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 10 to 100?
+%(-1965163513967356544)%	How tall is the tree already in the front yard?
+%(5364077982269946228)%	Which operation do you use to scale 10 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 10 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many maple tree feet  are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 10 * 10?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '*' in the highlighted field.
+%(-3323778468535052321)%	Please enter '8' in the highlighted field.
+%(-1096534679222917409)%	What is 30 * 10?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '10' in the highlighted field.
+%(-2715048532308265476)%	Please enter '30' in the highlighted field.
+%(3016515421039777855)%	80 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '80' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '300' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '*' in the highlighted field.
+Problem Name	animal shelter
+%(startStateNodeName)%	
+%(problemstatement)%	Juana volunteers at the local animal shelter where the room for cats holds 50 cages.<br><br>Part 1) This week the overcrowded shelter has 76 recovered cats. What percentage of capacity is the room?<br><br>Part 2) Later, 44 of those cats remain. What percentage of capacity are they?
+%(problemstatementparts)%	Part 1) This week the overcrowded shelter has 76 recovered cats. What percentage of capacity is the room?<br>Part 2) Later, 44 of those cats remain. What percentage of capacity are they?
+%(totaldenomprescaling)%	50
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many cages does the cat room hold?
+%(totalprescalingnumber)%	50
+%(totaldenomoperator)%	*
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 50 to 100?
+%(hintoperatorvariable)%	*
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	multiply
+%(hintfactor)%	2
+%(totalnumfactor)%	2
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	2
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	76
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	cats
+%(part1numprescalingnumber)%	76
+%(part1denomoperator)%	*
+%(part1numfactor)%	2
+%(part1denomfactor)%	2
+%(part1percent)%	152
+%(part1numpercentnumber)%	152
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	44
+%(objectnamepart2)%	new cats
+%(part2numprescalingnumber)%	44
+%(part2denomoperator)%	*
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	/
+%(part1numprescalingerror)%	152
+%(part1denomoperatorerror)%	/
+%(part2numprescalingerror)%	88
+%(part2denomoperatorerror)%	/
+%(totalnumprescaling)%	50
+%(part1numpercent)%	152
+%(part2numpercentnumber)%	88
+%(part2numpercent)%	88
+%(part2denomfactor)%	2
+%(part2numfactor)%	2
+%(part2percent)%	88
+%(part1denomprescaling)%	50
+%(part1numoperator)%	*
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	/
+%(part2denomprescaling)%	50
+%(totalnumoperator)%	*
+%(totalnumoperatorerror)%	/
+%(part2numoperator)%	*
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	/
+%(3828965240384434128)%	How many new cats are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 44 * 2?
+%(9124325061673033557)%	Please enter '50' in the highlighted field.
+%(4821483485439661655)%	What do you have to multiply 50 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	152 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 50 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 50 to 100?
+%(-1965163513967356544)%	How many cages does the cat room hold?
+%(5364077982269946228)%	Which operation do you use to scale 50 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 50 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many cats are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 50 * 2?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '*' in the highlighted field.
+%(-3323778468535052321)%	Please enter '44' in the highlighted field.
+%(-1096534679222917409)%	What is 76 * 2?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '2' in the highlighted field.
+%(-2715048532308265476)%	Please enter '76' in the highlighted field.
+%(3016515421039777855)%	88 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '88' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '152' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '*' in the highlighted field.
+Problem Name	toy robot
+%(startStateNodeName)%	
+%(problemstatement)%	A toy robot has 230 functions of three types: walks, light patterns, and sounds.<br><br>Part 1) If the robot has 69 different light patterns, what percentage of all the functions is this?<br><br>Part 2) If the robot has 23 different walks, what percentage of all the functions is walks?
+%(problemstatementparts)%	Part 1) If the robot has 69 different light patterns, what percentage of all the functions is this?<br>Part 2) If the robot has 23 different walks, what percentage of all the functions is walks?
+%(totaldenomprescaling)%	230
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many functions does the robot have in all?
+%(totalprescalingnumber)%	230
+%(totaldenomoperator)%	/
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 230 to 100?
+%(hintoperatorvariable)%	/
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	divide
+%(hintfactor)%	2.3
+%(totalnumfactor)%	2.3
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	2.3
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	69
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	light patterns
+%(part1numprescalingnumber)%	69
+%(part1denomoperator)%	/
+%(part1numfactor)%	2.3
+%(part1denomfactor)%	2.3
+%(part1percent)%	30
+%(part1numpercentnumber)%	30
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	23
+%(objectnamepart2)%	light patterns and sounds
+%(part2numprescalingnumber)%	23
+%(part2denomoperator)%	/
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	*
+%(part1numprescalingerror)%	30
+%(part1denomoperatorerror)%	*
+%(part2numprescalingerror)%	10
+%(part2denomoperatorerror)%	*
+%(totalnumprescaling)%	230
+%(part1numpercent)%	30
+%(part2numpercentnumber)%	10
+%(part2numpercent)%	10
+%(part2denomfactor)%	2.3
+%(part2numfactor)%	2.3
+%(part2percent)%	10
+%(part1denomprescaling)%	230
+%(part1numoperator)%	/
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	*
+%(part2denomprescaling)%	230
+%(totalnumoperator)%	/
+%(totalnumoperatorerror)%	*
+%(part2numoperator)%	/
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	*
+%(3828965240384434128)%	How many light patterns and sounds are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 23 / 2.3?
+%(9124325061673033557)%	Please enter '230' in the highlighted field.
+%(4821483485439661655)%	What do you have to divide 230 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	30 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 230 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 230 to 100?
+%(-1965163513967356544)%	How many functions does the robot have in all?
+%(5364077982269946228)%	Which operation do you use to scale 230 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 230 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many light patterns are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 230 / 2.3?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '/' in the highlighted field.
+%(-3323778468535052321)%	Please enter '23' in the highlighted field.
+%(-1096534679222917409)%	What is 69 / 2.3?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '2.3' in the highlighted field.
+%(-2715048532308265476)%	Please enter '69' in the highlighted field.
+%(3016515421039777855)%	10 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '10' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '30' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '/' in the highlighted field.
+Problem Name	kennel
+%(startStateNodeName)%	
+%(problemstatement)%	Abhi works at a kennel that has cages for 25 dogs, assuming one dog per cage. Sometimes, it gets very busy and he has to put multiple dogs in the cages as needed.<br><br>Part 1) If 28 dogs were dropped off, the kennel was filled to what percent capacity?<br><br>Part 2) If instead 7 puppies were boarded, how busy was the kennel in terms of percent capacity?
+%(problemstatementparts)%	Part 1) If 28 dogs were dropped off, the kennel was filled to what percent capacity?<br>Part 2) If instead 7 puppies were boarded, how busy was the kennel in terms of percent capacity?
+%(totaldenomprescaling)%	25
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many cages are in the kennel?
+%(totalprescalingnumber)%	25
+%(totaldenomoperator)%	*
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 25 to 100?
+%(hintoperatorvariable)%	*
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	multiply
+%(hintfactor)%	4
+%(totalnumfactor)%	4
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	4
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	28
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	dogs
+%(part1numprescalingnumber)%	28
+%(part1denomoperator)%	*
+%(part1numfactor)%	4
+%(part1denomfactor)%	4
+%(part1percent)%	112
+%(part1numpercentnumber)%	112
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	7
+%(objectnamepart2)%	puppies
+%(part2numprescalingnumber)%	7
+%(part2denomoperator)%	*
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	/
+%(part1numprescalingerror)%	112
+%(part1denomoperatorerror)%	/
+%(part2numprescalingerror)%	28
+%(part2denomoperatorerror)%	/
+%(totalnumprescaling)%	25
+%(part1numpercent)%	112
+%(part2numpercentnumber)%	28
+%(part2numpercent)%	28
+%(part2denomfactor)%	4
+%(part2numfactor)%	4
+%(part2percent)%	28
+%(part1denomprescaling)%	25
+%(part1numoperator)%	*
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	/
+%(part2denomprescaling)%	25
+%(totalnumoperator)%	*
+%(totalnumoperatorerror)%	/
+%(part2numoperator)%	*
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	/
+%(3828965240384434128)%	How many puppies are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 7 * 4?
+%(9124325061673033557)%	Please enter '25' in the highlighted field.
+%(4821483485439661655)%	What do you have to multiply 25 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	112 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 25 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 25 to 100?
+%(-1965163513967356544)%	How many cages are in the kennel?
+%(5364077982269946228)%	Which operation do you use to scale 25 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 25 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many dogs are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 25 * 4?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '*' in the highlighted field.
+%(-3323778468535052321)%	Please enter '7' in the highlighted field.
+%(-1096534679222917409)%	What is 28 * 4?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '4' in the highlighted field.
+%(-2715048532308265476)%	Please enter '28' in the highlighted field.
+%(3016515421039777855)%	28 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '28' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '112' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '*' in the highlighted field.
+Problem Name	concert
+%(startStateNodeName)%	
+%(problemstatement)%	At the RockFest concert, there were 6000 screaming fans in the amphitheater.<br><br>Part 1) If 30 lucky fans were given backstage passes, what percentage of the concert goers went backstage?<br><br>Part 2) If 1800 were given a free T-shirt, what percentage of the concert goers received a free T-shirt?
+%(problemstatementparts)%	Part 1) If 30 lucky fans were given backstage passes, what percentage of the concert goers went backstage?<br>Part 2) If 1800 were given a free T-shirt, what percentage of the concert goers received a free T-shirt?
+%(totaldenomprescaling)%	6000
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many fans attended the concert?
+%(totalprescalingnumber)%	6000
+%(totaldenomoperator)%	/
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 6000 to 100?
+%(hintoperatorvariable)%	/
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	divide
+%(hintfactor)%	60
+%(totalnumfactor)%	60
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	60
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	30
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	fans who went backstage
+%(part1numprescalingnumber)%	30
+%(part1denomoperator)%	/
+%(part1numfactor)%	60
+%(part1denomfactor)%	60
+%(part1percent)%	0.5
+%(part1numpercentnumber)%	0.5
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	1800
+%(objectnamepart2)%	fans with free T-shirts
+%(part2numprescalingnumber)%	1800
+%(part2denomoperator)%	/
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	*
+%(part1numprescalingerror)%	0.5
+%(part1denomoperatorerror)%	*
+%(part2numprescalingerror)%	30
+%(part2denomoperatorerror)%	*
+%(totalnumprescaling)%	6000
+%(part1numpercent)%	0.5
+%(part2numpercentnumber)%	30
+%(part2numpercent)%	30
+%(part2denomfactor)%	60
+%(part2numfactor)%	60
+%(part2percent)%	30
+%(part1denomprescaling)%	6000
+%(part1numoperator)%	/
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	*
+%(part2denomprescaling)%	6000
+%(totalnumoperator)%	/
+%(totalnumoperatorerror)%	*
+%(part2numoperator)%	/
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	*
+%(3828965240384434128)%	How many fans with free T-shirts are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 1800 / 60?
+%(9124325061673033557)%	Please enter '6000' in the highlighted field.
+%(4821483485439661655)%	What do you have to divide 6000 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	0.5 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 6000 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 6000 to 100?
+%(-1965163513967356544)%	How many fans attended the concert?
+%(5364077982269946228)%	Which operation do you use to scale 6000 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 6000 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many fans who went backstage are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 6000 / 60?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '/' in the highlighted field.
+%(-3323778468535052321)%	Please enter '1800' in the highlighted field.
+%(-1096534679222917409)%	What is 30 / 60?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '60' in the highlighted field.
+%(-2715048532308265476)%	Please enter '30' in the highlighted field.
+%(3016515421039777855)%	30 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '30' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '0.5' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '/' in the highlighted field.
+Problem Name	stick house
+%(startStateNodeName)%	
+%(problemstatement)%	Malila is building a model house out of 4000 craft sticks.<br><br>Part 1)If 8 of the sticks have a chip in them and cannot be used, what percentage of the craft sticks are chipped?<br><br>Part 2) If she decides to add another floor, requiring 5000 sticks in total, what percentage of the original amount of sticks is needed?
+%(problemstatementparts)%	Part 1)If 8 of the sticks have a chip in them and cannot be used, what percentage of the craft sticks are chipped?<br>Part 2) If she decides to add another floor, requiring 5000 sticks in total, what percentage of the original amount of sticks is needed?
+%(totaldenomprescaling)%	4000
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many craft sticks was Malila using in the building initially?
+%(totalprescalingnumber)%	4000
+%(totaldenomoperator)%	/
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 4000 to 100?
+%(hintoperatorvariable)%	/
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	divide
+%(hintfactor)%	40
+%(totalnumfactor)%	40
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	40
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	8
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	chipped craft sticks
+%(part1numprescalingnumber)%	8
+%(part1denomoperator)%	/
+%(part1numfactor)%	40
+%(part1denomfactor)%	40
+%(part1percent)%	0.2
+%(part1numpercentnumber)%	0.2
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	5000
+%(objectnamepart2)%	total craft sticks
+%(part2numprescalingnumber)%	5000
+%(part2denomoperator)%	/
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	*
+%(part1numprescalingerror)%	0.2
+%(part1denomoperatorerror)%	*
+%(part2numprescalingerror)%	125
+%(part2denomoperatorerror)%	*
+%(totalnumprescaling)%	4000
+%(part1numpercent)%	0.2
+%(part2numpercentnumber)%	125
+%(part2numpercent)%	125
+%(part2denomfactor)%	40
+%(part2numfactor)%	40
+%(part2percent)%	125
+%(part1denomprescaling)%	4000
+%(part1numoperator)%	/
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	*
+%(part2denomprescaling)%	4000
+%(totalnumoperator)%	/
+%(totalnumoperatorerror)%	*
+%(part2numoperator)%	/
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	*
+%(3828965240384434128)%	How many total craft sticks are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 5000 / 40?
+%(9124325061673033557)%	Please enter '4000' in the highlighted field.
+%(4821483485439661655)%	What do you have to divide 4000 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	0.2 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 4000 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 4000 to 100?
+%(-1965163513967356544)%	How many craft sticks was Malila using in the building initially?
+%(5364077982269946228)%	Which operation do you use to scale 4000 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 4000 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many chipped craft sticks are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 4000 / 40?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '/' in the highlighted field.
+%(-3323778468535052321)%	Please enter '5000' in the highlighted field.
+%(-1096534679222917409)%	What is 8 / 40?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '40' in the highlighted field.
+%(-2715048532308265476)%	Please enter '8' in the highlighted field.
+%(3016515421039777855)%	125 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '125' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '0.2' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '/' in the highlighted field.
+Problem Name	bracelets
+%(startStateNodeName)%	
+%(problemstatement)%	Angelique makes beaded friendship bracelets that she has decided to sell at the local craft show. She hopes to sell the 40 she has already made.<br><br>Part 1) If 42 people want to buy her bracelets, what percentage of her supply would that represent?<br><br>Part 2) If 108 people want to buy her bracelets, what percentage of her supply would that represent?
+%(problemstatementparts)%	Part 1) If 42 people want to buy her bracelets, what percentage of her supply would that represent?<br><br>Part 2) If 108 people want to buy her bracelets, what percentage of her supply would that represent?
+%(totaldenomprescaling)%	40
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many bracelets did Anqelique actually make?
+%(totalprescalingnumber)%	40
+%(totaldenomoperator)%	*
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 40 to 100?
+%(hintoperatorvariable)%	*
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	multiply
+%(hintfactor)%	2.5
+%(totalnumfactor)%	2.5
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	2.5
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	42
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	buyers
+%(part1numprescalingnumber)%	42
+%(part1denomoperator)%	*
+%(part1numfactor)%	2.5
+%(part1denomfactor)%	2.5
+%(part1percent)%	105
+%(part1numpercentnumber)%	105
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	108
+%(objectnamepart2)%	buyers
+%(part2numprescalingnumber)%	108
+%(part2denomoperator)%	*
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	/
+%(part1numprescalingerror)%	105
+%(part1denomoperatorerror)%	/
+%(part2numprescalingerror)%	270
+%(part2denomoperatorerror)%	/
+%(totalnumprescaling)%	40
+%(part1numpercent)%	105
+%(part2numpercentnumber)%	270
+%(part2numpercent)%	270
+%(part2denomfactor)%	2.5
+%(part2numfactor)%	2.5
+%(part2percent)%	270
+%(part1denomprescaling)%	40
+%(part1numoperator)%	*
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	/
+%(part2denomprescaling)%	40
+%(totalnumoperator)%	*
+%(totalnumoperatorerror)%	/
+%(part2numoperator)%	*
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	/
+%(3828965240384434128)%	How many buyers are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 108 * 2.5?
+%(9124325061673033557)%	Please enter '40' in the highlighted field.
+%(4821483485439661655)%	What do you have to multiply 40 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	105 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 40 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 40 to 100?
+%(-1965163513967356544)%	How many bracelets did Anqelique actually make?
+%(5364077982269946228)%	Which operation do you use to scale 40 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 40 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many buyers are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 40 * 2.5?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '*' in the highlighted field.
+%(-3323778468535052321)%	Please enter '108' in the highlighted field.
+%(-1096534679222917409)%	What is 42 * 2.5?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '2.5' in the highlighted field.
+%(-2715048532308265476)%	Please enter '42' in the highlighted field.
+%(3016515421039777855)%	270 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '270' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '105' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '*' in the highlighted field.
+Problem Name	CD sales
+%(startStateNodeName)%	
+%(problemstatement)%	Bruce Springtime has just released a new CD. In the first hour, 5000 were sold.<br><br>Part 1) If BuyMart sold 25 copies, what percentage of the first hour sales did they sell?<br><br>Part 2) If Trina bought 4 CDs to share with her friends, what percentage of the first hour sales did she buy?
+%(problemstatementparts)%	Part 1) If BuyMart sold out its 25 copies, what percentage of the sales did the store have in stock?<br><br>Part 2) If Trina bought 4 CDs to share with her friends, what percentage of the first hour sales did she buy?
+%(totaldenomprescaling)%	5000
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many CD copies sold in the first hour after release?
+%(totalprescalingnumber)%	5000
+%(totaldenomoperator)%	/
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 5000 to 100?
+%(hintoperatorvariable)%	/
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	divide
+%(hintfactor)%	50
+%(totalnumfactor)%	50
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	50
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	25
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	CD sales at BuyMart
+%(part1numprescalingnumber)%	25
+%(part1denomoperator)%	/
+%(part1numfactor)%	50
+%(part1denomfactor)%	50
+%(part1percent)%	0.5
+%(part1numpercentnumber)%	0.5
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	4
+%(objectnamepart2)%	CDs sold
+%(part2numprescalingnumber)%	4
+%(part2denomoperator)%	/
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	*
+%(part1numprescalingerror)%	0.5
+%(part1denomoperatorerror)%	*
+%(part2numprescalingerror)%	0.08
+%(part2denomoperatorerror)%	*
+%(totalnumprescaling)%	5000
+%(part1numpercent)%	0.5
+%(part2numpercentnumber)%	0.08
+%(part2numpercent)%	0.08
+%(part2denomfactor)%	50
+%(part2numfactor)%	50
+%(part2percent)%	0.08
+%(part1denomprescaling)%	5000
+%(part1numoperator)%	/
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	*
+%(part2denomprescaling)%	5000
+%(totalnumoperator)%	/
+%(totalnumoperatorerror)%	*
+%(part2numoperator)%	/
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	*
+%(3828965240384434128)%	How many CDs sold are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 4 / 50?
+%(9124325061673033557)%	Please enter '5000' in the highlighted field.
+%(4821483485439661655)%	What do you have to divide 5000 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	0.5 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 5000 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 5000 to 100?
+%(-1965163513967356544)%	How many CD copies sold in the first hour after release?
+%(5364077982269946228)%	Which operation do you use to scale 5000 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 5000 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many CD sales at BuyMart are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 5000 / 50?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '/' in the highlighted field.
+%(-3323778468535052321)%	Please enter '4' in the highlighted field.
+%(-1096534679222917409)%	What is 25 / 50?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '50' in the highlighted field.
+%(-2715048532308265476)%	Please enter '25' in the highlighted field.
+%(3016515421039777855)%	0.08 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '0.08' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '0.5' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '/' in the highlighted field.
+Problem Name	double-booked plane
+%(startStateNodeName)%	
+%(problemstatement)%	A Cheapo Airlines' plane can carry 150 passengers.<br><br>Part 1) On Saturday the airline double-booked a number of seats, making 180 reservations. What percentage of the plane's seats did the airline sell ?<br><br>Part 2) On Tuesday, Cheapo Airlines repeated its shameful behavior and took 225 reservations. What percentage of the plane's seats were sold?
+%(problemstatementparts)%	Part 1) On Saturday the airline double-booked a number of seats, making 180 reservations. What percentage of the plane's seats did the airline sell ?<br>Part 2) On Tuesday, Cheapo Airlines repeated its shameful behavior and took 225 reservations . What percentage of the plane's seats were sold?
+%(totaldenomprescaling)%	150
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many passengers can the plane carry?
+%(totalprescalingnumber)%	150
+%(totaldenomoperator)%	/
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 150 to 100?
+%(hintoperatorvariable)%	/
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	divide
+%(hintfactor)%	1.5
+%(totalnumfactor)%	1.5
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	1.5
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	180
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	seats sold
+%(part1numprescalingnumber)%	180
+%(part1denomoperator)%	/
+%(part1numfactor)%	1.5
+%(part1denomfactor)%	1.5
+%(part1percent)%	120
+%(part1numpercentnumber)%	120
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	225
+%(objectnamepart2)%	seats sold
+%(part2numprescalingnumber)%	225
+%(part2denomoperator)%	/
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	*
+%(part1numprescalingerror)%	120
+%(part1denomoperatorerror)%	*
+%(part2numprescalingerror)%	150
+%(part2denomoperatorerror)%	*
+%(totalnumprescaling)%	150
+%(part1numpercent)%	120
+%(part2numpercentnumber)%	150
+%(part2numpercent)%	150
+%(part2denomfactor)%	1.5
+%(part2numfactor)%	1.5
+%(part2percent)%	150
+%(part1denomprescaling)%	150
+%(part1numoperator)%	/
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	*
+%(part2denomprescaling)%	150
+%(totalnumoperator)%	/
+%(totalnumoperatorerror)%	*
+%(part2numoperator)%	/
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	*
+%(3828965240384434128)%	How many seats sold are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 225 / 1.5?
+%(9124325061673033557)%	Please enter '150' in the highlighted field.
+%(4821483485439661655)%	What do you have to divide 150 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	120 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 150 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 150 to 100?
+%(-1965163513967356544)%	How many passengers can the plane carry?
+%(5364077982269946228)%	Which operation do you use to scale 150 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 150 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many seats sold are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 150 / 1.5?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '/' in the highlighted field.
+%(-3323778468535052321)%	Please enter '225' in the highlighted field.
+%(-1096534679222917409)%	What is 180 / 1.5?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '1.5' in the highlighted field.
+%(-2715048532308265476)%	Please enter '180' in the highlighted field.
+%(3016515421039777855)%	150 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '150' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '120' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '/' in the highlighted field.
+Problem Name	shed
+%(startStateNodeName)%	
+%(problemstatement)%	Abdul is building a shed. He buys 25 planks for the project.<br><br>Part 1) If he later realizes he needs 30 planks, what percentage of his purchase does he need?<br><br>Part 2) The 5 planks he is short is what percentage of his purchase?
+%(problemstatementparts)%	Part 1) If he later realizes he needs 30 planks, what percentage of his purchase does he need?<br>Part 2) The 5 planks he is short is what percentage of his purchase?
+%(totaldenomprescaling)%	25
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	With how many planks did Abdul start work on the shed?
+%(totalprescalingnumber)%	25
+%(totaldenomoperator)%	*
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 25 to 100?
+%(hintoperatorvariable)%	*
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	multiply
+%(hintfactor)%	4
+%(totalnumfactor)%	4
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	4
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	30
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	total planks needed
+%(part1numprescalingnumber)%	30
+%(part1denomoperator)%	*
+%(part1numfactor)%	4
+%(part1denomfactor)%	4
+%(part1percent)%	120
+%(part1numpercentnumber)%	120
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	5
+%(objectnamepart2)%	additional planks needed
+%(part2numprescalingnumber)%	5
+%(part2denomoperator)%	*
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	/
+%(part1numprescalingerror)%	120
+%(part1denomoperatorerror)%	/
+%(part2numprescalingerror)%	20
+%(part2denomoperatorerror)%	/
+%(totalnumprescaling)%	25
+%(part1numpercent)%	120
+%(part2numpercentnumber)%	20
+%(part2numpercent)%	20
+%(part2denomfactor)%	4
+%(part2numfactor)%	4
+%(part2percent)%	20
+%(part1denomprescaling)%	25
+%(part1numoperator)%	*
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	/
+%(part2denomprescaling)%	25
+%(totalnumoperator)%	*
+%(totalnumoperatorerror)%	/
+%(part2numoperator)%	*
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	/
+%(3828965240384434128)%	How many additional planks needed are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 5 * 4?
+%(9124325061673033557)%	Please enter '25' in the highlighted field.
+%(4821483485439661655)%	What do you have to multiply 25 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	120 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 25 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 25 to 100?
+%(-1965163513967356544)%	With how many planks did Abdul start work on the shed?
+%(5364077982269946228)%	Which operation do you use to scale 25 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 25 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many total planks needed are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 25 * 4?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '*' in the highlighted field.
+%(-3323778468535052321)%	Please enter '5' in the highlighted field.
+%(-1096534679222917409)%	What is 30 * 4?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '4' in the highlighted field.
+%(-2715048532308265476)%	Please enter '30' in the highlighted field.
+%(3016515421039777855)%	20 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '20' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '120' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '*' in the highlighted field.
+Problem Name	bands collection
+%(startStateNodeName)%	
+%(problemstatement)%	David loves to collect Funny Bands. He currently has 175 bands in his collection. He is trying to figure out what percentage of each kind he has.<br><br>Part 1) Since blue is his favorite color, he has traded bands to obtain 84 blue bands. What percentage of his collection is now blue?<br><br>Part 2) He already had 42 animal skin bands. His 126 blue and animal skin bands make up what percentage of his collection?
+%(problemstatementparts)%	Part 1) Since blue is his favorite color, he has traded bands to obtain 84 blue bands. What percentage of his collection is now blue?<br>Part 2) He already had 42 animal skin bands. His 126 blue and animal skin bands make up what percentage of his collection?
+%(totaldenomprescaling)%	175
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many Funny Bands does David's collection contain?
+%(totalprescalingnumber)%	175
+%(totaldenomoperator)%	/
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 175 to 100?
+%(hintoperatorvariable)%	/
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	divide
+%(hintfactor)%	1.75
+%(totalnumfactor)%	1.75
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	1.75
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	84
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	blue bands
+%(part1numprescalingnumber)%	84
+%(part1denomoperator)%	/
+%(part1numfactor)%	1.75
+%(part1denomfactor)%	1.75
+%(part1percent)%	48
+%(part1numpercentnumber)%	48
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	126
+%(objectnamepart2)%	blue and animal skin bands
+%(part2numprescalingnumber)%	126
+%(part2denomoperator)%	/
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	*
+%(part1numprescalingerror)%	48
+%(part1denomoperatorerror)%	*
+%(part2numprescalingerror)%	72
+%(part2denomoperatorerror)%	*
+%(totalnumprescaling)%	175
+%(part1numpercent)%	48
+%(part2numpercentnumber)%	72
+%(part2numpercent)%	72
+%(part2denomfactor)%	1.75
+%(part2numfactor)%	1.75
+%(part2percent)%	72
+%(part1denomprescaling)%	175
+%(part1numoperator)%	/
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	*
+%(part2denomprescaling)%	175
+%(totalnumoperator)%	/
+%(totalnumoperatorerror)%	*
+%(part2numoperator)%	/
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	*
+%(3828965240384434128)%	How many blue and animal skin bands are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 126 / 1.75?
+%(9124325061673033557)%	Please enter '175' in the highlighted field.
+%(4821483485439661655)%	What do you have to divide 175 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	48 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 175 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 175 to 100?
+%(-1965163513967356544)%	How many Funny Bands does David's collection contain?
+%(5364077982269946228)%	Which operation do you use to scale 175 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 175 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many blue bands are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 175 / 1.75?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '/' in the highlighted field.
+%(-3323778468535052321)%	Please enter '126' in the highlighted field.
+%(-1096534679222917409)%	What is 84 / 1.75?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '1.75' in the highlighted field.
+%(-2715048532308265476)%	Please enter '84' in the highlighted field.
+%(3016515421039777855)%	72 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '72' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '48' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '/' in the highlighted field.
+Problem Name	mileage
+%(startStateNodeName)%	
+%(problemstatement)%	Ivan and Ada have decided to spend their summer driving 5000 miles from Florida to Alaska by car. They periodically checked their odometer to see how far they traveled.<br><br>Part 1) If they have driven 1200 miles, what percentage of their trip have they completed?<br><br>Part 2) What percentage of their trip have they compIeted if they then drive another 2850 miles, making a total of 4050 miles?
+%(problemstatementparts)%	Part 1) If they have driven 1200 miles, what percentage of their<br>trip have they completed?<br>Part 2) What percentage of their trip have they compIeted if they<br>then drive another 2850 miles, making a total of 4050 miles?
+%(totaldenomprescaling)%	5000
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many miles is the drive from Florida to Alaska?
+%(totalprescalingnumber)%	5000
+%(totaldenomoperator)%	/
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 5000 to 100?
+%(hintoperatorvariable)%	/
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	divide
+%(hintfactor)%	50
+%(totalnumfactor)%	50
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	50
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	1200
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	miles driven
+%(part1numprescalingnumber)%	1200
+%(part1denomoperator)%	/
+%(part1numfactor)%	50
+%(part1denomfactor)%	50
+%(part1percent)%	24
+%(part1numpercentnumber)%	24
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	4050
+%(objectnamepart2)%	total miles driven
+%(part2numprescalingnumber)%	4050
+%(part2denomoperator)%	/
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	*
+%(part1numprescalingerror)%	24
+%(part1denomoperatorerror)%	*
+%(part2numprescalingerror)%	81
+%(part2denomoperatorerror)%	*
+%(totalnumprescaling)%	5000
+%(part1numpercent)%	24
+%(part2numpercentnumber)%	81
+%(part2numpercent)%	81
+%(part2denomfactor)%	50
+%(part2numfactor)%	50
+%(part2percent)%	81
+%(part1denomprescaling)%	5000
+%(part1numoperator)%	/
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	100
+%(part2denomprescaling)%	5000
+%(totalnumoperator)%	/
+%(totalnumoperatorerror)%	*
+%(part2numoperator)%	/
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	*
+%(3828965240384434128)%	How many total miles driven are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 4050 / 50?
+%(9124325061673033557)%	Please enter '5000' in the highlighted field.
+%(4821483485439661655)%	What do you have to divide 5000 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	24 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 5000 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 5000 to 100?
+%(-1965163513967356544)%	How many miles is the drive from Florida to Alaska?
+%(5364077982269946228)%	Which operation do you use to scale 5000 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 5000 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many miles driven are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 5000 / 50?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '/' in the highlighted field.
+%(-3323778468535052321)%	Please enter '4050' in the highlighted field.
+%(-1096534679222917409)%	What is 1200 / 50?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '50' in the highlighted field.
+%(-2715048532308265476)%	Please enter '1200' in the highlighted field.
+%(3016515421039777855)%	81 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '81' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '24' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '/' in the highlighted field.
+Problem Name	texting
+%(startStateNodeName)%	
+%(problemstatement)%	The world record for texting is about 6100 messages per day. Miki decided to see if she could beat that record. Please help her figure out how close she came.<br><br>Part 1) One day in July, Miki sent 2257 messages. This is what percentage of the record?<br><br>Part 2) One hot day in August Miki sent 1159 messages. What percentage of the record is this?
+%(problemstatementparts)%	Part 1) One day in July, Miki sent 2257 messages. This is what percentage of the record?<br>Part 2) One hot day in August Miki sent 1159 messages. What percentage of the record is this?
+%(totaldenomprescaling)%	6100
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	What is the world record for texting in a day?
+%(totalprescalingnumber)%	6100
+%(totaldenomoperator)%	/
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 6100 to 100?
+%(hintoperatorvariable)%	/
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	divide
+%(hintfactor)%	61
+%(totalnumfactor)%	61
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	61
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	2257
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	sent texts
+%(part1numprescalingnumber)%	2257
+%(part1denomoperator)%	/
+%(part1numfactor)%	61
+%(part1denomfactor)%	61
+%(part1percent)%	37
+%(part1numpercentnumber)%	37
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	1159
+%(objectnamepart2)%	sent texts
+%(part2numprescalingnumber)%	1159
+%(part2denomoperator)%	/
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	*
+%(part1numprescalingerror)%	37
+%(part1denomoperatorerror)%	*
+%(part2numprescalingerror)%	19
+%(part2denomoperatorerror)%	*
+%(totalnumprescaling)%	6100
+%(part1numpercent)%	37
+%(part2numpercentnumber)%	19
+%(part2numpercent)%	19
+%(part2denomfactor)%	61
+%(part2numfactor)%	61
+%(part2percent)%	19
+%(part1denomprescaling)%	6100
+%(part1numoperator)%	/
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	*
+%(part2denomprescaling)%	6100
+%(totalnumoperator)%	/
+%(totalnumoperatorerror)%	*
+%(part2numoperator)%	/
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	*
+%(3828965240384434128)%	How many sent texts are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 1159 / 61?
+%(9124325061673033557)%	Please enter '6100' in the highlighted field.
+%(4821483485439661655)%	What do you have to divide 6100 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	37 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 6100 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 6100 to 100?
+%(-1965163513967356544)%	What is the world record for texting in a day?
+%(5364077982269946228)%	Which operation do you use to scale 6100 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 6100 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many sent texts are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 6100 / 61?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '/' in the highlighted field.
+%(-3323778468535052321)%	Please enter '1159' in the highlighted field.
+%(-1096534679222917409)%	What is 2257 / 61?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '61' in the highlighted field.
+%(-2715048532308265476)%	Please enter '2257' in the highlighted field.
+%(3016515421039777855)%	19 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '19' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '37' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '/' in the highlighted field.
+Problem Name	pizza party
+%(startStateNodeName)%	
+%(problemstatement)%	You are throwing a pizza party for yourself and 19 friends. You serve an extra large 20 slice chocolate pizza for dessert.<br><br>Part 1) If John really pigs out and eats 6 slices all by himself, what percentage of the pizza has he eaten?<br><br>Part 2) If Hayim eats half a slice, what percentage has he eaten?
+%(problemstatementparts)%	Part 1) If John really pigs out and eats 6 slices all by himself, what percentage of the pizza has he eaten?<br>Part 2) If Hayim eats half a slice, what percentage has he eaten?
+%(totaldenomprescaling)%	20
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many slices are available for people to eat?
+%(totalprescalingnumber)%	20
+%(totaldenomoperator)%	*
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 20 to 100?
+%(hintoperatorvariable)%	*
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	multiply
+%(hintfactor)%	5
+%(totalnumfactor)%	5
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	5
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	6
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	slices eaten
+%(part1numprescalingnumber)%	6
+%(part1denomoperator)%	*
+%(part1numfactor)%	5
+%(part1denomfactor)%	5
+%(part1percent)%	30
+%(part1numpercentnumber)%	30
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	0.5
+%(objectnamepart2)%	slices eaten
+%(part2numprescalingnumber)%	0.5
+%(part2denomoperator)%	*
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	/
+%(part1numprescalingerror)%	30
+%(part1denomoperatorerror)%	/
+%(part2numprescalingerror)%	2.5
+%(part2denomoperatorerror)%	/
+%(totalnumprescaling)%	20
+%(part1numpercent)%	30
+%(part2numpercentnumber)%	2.5
+%(part2numpercent)%	2.5
+%(part2denomfactor)%	5
+%(part2numfactor)%	5
+%(part2percent)%	2.5
+%(part1denomprescaling)%	20
+%(part1numoperator)%	*
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	/
+%(part2denomprescaling)%	20
+%(totalnumoperator)%	*
+%(totalnumoperatorerror)%	/
+%(part2numoperator)%	*
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	/
+%(3828965240384434128)%	How many slices eaten are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 0.5 * 5?
+%(9124325061673033557)%	Please enter '20' in the highlighted field.
+%(4821483485439661655)%	What do you have to multiply 20 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	30 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 20 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 20 to 100?
+%(-1965163513967356544)%	How many slices are available for people to eat?
+%(5364077982269946228)%	Which operation do you use to scale 20 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 20 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many slices eaten are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 20 * 5?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '*' in the highlighted field.
+%(-3323778468535052321)%	Please enter '0.5' in the highlighted field.
+%(-1096534679222917409)%	What is 6 * 5?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '5' in the highlighted field.
+%(-2715048532308265476)%	Please enter '6' in the highlighted field.
+%(3016515421039777855)%	2.5 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '2.5' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '30' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '*' in the highlighted field.
+Problem Name	cookies
+%(startStateNodeName)%	
+%(problemstatement)%	Adisa has a booth at the county fair. She baked 200 cookies, but supply does not meet demand.<br><br>Part 1) If 310 people each want to buy one of her cookies, what percentage of her supply is in demand?<br><br>Part 2) If 283 people go elsewhere, what percentage of her original supply is NOT in demand? 
+%(problemstatementparts)%	Part 1) If 310 people each want to buy one of her cookies, what percentage of her supply is in demand?<br>Part 2) If 283 people go elsewhere, what percentage of her original supply is NOT in demand? 
+%(totaldenomprescaling)%	200
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many cookies did Adisa bake initially?
+%(totalprescalingnumber)%	200
+%(totaldenomoperator)%	/
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 200 to 100?
+%(hintoperatorvariable)%	/
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	divide
+%(hintfactor)%	2
+%(totalnumfactor)%	2
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	2
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	310
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	buyers
+%(part1numprescalingnumber)%	310
+%(part1denomoperator)%	/
+%(part1numfactor)%	2
+%(part1denomfactor)%	2
+%(part1percent)%	155
+%(part1numpercentnumber)%	155
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	283
+%(objectnamepart2)%	buyers waiting
+%(part2numprescalingnumber)%	283
+%(part2denomoperator)%	/
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	*
+%(part1numprescalingerror)%	155
+%(part1denomoperatorerror)%	*
+%(part2numprescalingerror)%	141.5
+%(part2denomoperatorerror)%	*
+%(totalnumprescaling)%	200
+%(part1numpercent)%	155
+%(part2numpercentnumber)%	141.5
+%(part2numpercent)%	141.5
+%(part2denomfactor)%	2
+%(part2numfactor)%	2
+%(part2percent)%	141.5
+%(part1denomprescaling)%	200
+%(part1numoperator)%	/
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	*
+%(part2denomprescaling)%	200
+%(totalnumoperator)%	/
+%(totalnumoperatorerror)%	*
+%(part2numoperator)%	/
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	*
+%(3828965240384434128)%	How many buyers waiting are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 283 / 2?
+%(9124325061673033557)%	Please enter '200' in the highlighted field.
+%(4821483485439661655)%	What do you have to divide 200 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	155 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 200 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 200 to 100?
+%(-1965163513967356544)%	How many cookies did Adisa bake initially?
+%(5364077982269946228)%	Which operation do you use to scale 200 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 200 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many buyers are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 200 / 2?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '/' in the highlighted field.
+%(-3323778468535052321)%	Please enter '283' in the highlighted field.
+%(-1096534679222917409)%	What is 310 / 2?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '2' in the highlighted field.
+%(-2715048532308265476)%	Please enter '310' in the highlighted field.
+%(3016515421039777855)%	141.5 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '141.5' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '155' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '/' in the highlighted field.
+Problem Name	chemical solution
+%(startStateNodeName)%	
+%(problemstatement)%	Dr. Abdullah is mixing chemicals to develop a new medication. He creates a solution that measures 870 ml. Please help him calculate different amounts of this solution.<br><br>Part 1) If the doctor needs to make 1218 ml of the solution for a new experiment, what percentage of the original solution is needed?<br><br>Part 2) If he instead requires only 348 ml of the solution, what percentage of the original solution does that represent?
+%(problemstatementparts)%	Part 1) If the doctor needs to make 1218 ml of the<br>solution for a new experiment, what percentage of the original solution is needed?<br>Part 2) If he instead requires only 348 ml of the solution,<br>what percentage of the original solution does that represent?
+%(totaldenomprescaling)%	870
+%(hint1totalprescaling)%	Use the total amount given in the question.
+%(hint2totalprescaling)%	How many milliliters is the original solution?
+%(totalprescalingnumber)%	870
+%(totaldenomoperator)%	/
+%(hint1totaldenomoperator)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(hint2totaldenomoperator)%	Which operation do you use to scale 870 to 100?
+%(hintoperatorvariable)%	/
+%(hint1denomfactor)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(operation)%	divide
+%(hintfactor)%	8.7
+%(totalnumfactor)%	8.7
+%(hint1numfactor)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(totaldenomfactor)%	8.7
+%(hint1numpercent)%	Use the operation and the scale factor to convert the numerator.
+%(totalnumpercentnumber)%	100
+%(totalnumpercent)%	100
+%(totalpercent)%	100
+%(hint2percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part1numprescaling)%	1218
+%(hint1part1prescaling)%	Use the value given in the question.
+%(objectnamepart1)%	milliliters
+%(part1numprescalingnumber)%	1218
+%(part1denomoperator)%	/
+%(part1numfactor)%	8.7
+%(part1denomfactor)%	8.7
+%(part1percent)%	140
+%(part1numpercentnumber)%	140
+%(hint2part1percent)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(part2numprescaling)%	348
+%(objectnamepart2)%	milliliters
+%(part2numprescalingnumber)%	348
+%(part2denomoperator)%	/
+%(totaldenomprescalingerror)%	100
+%(totalnumprescalingerror)%	100
+%(totaldenomoperatorerror)%	*
+%(part1numprescalingerror)%	140
+%(part1denomoperatorerror)%	*
+%(part2numprescalingerror)%	40
+%(part2denomoperatorerror)%	*
+%(totalnumprescaling)%	870
+%(part1numpercent)%	140
+%(part2numpercentnumber)%	40
+%(part2numpercent)%	40
+%(part2denomfactor)%	8.7
+%(part2numfactor)%	8.7
+%(part2percent)%	40
+%(part1denomprescaling)%	870
+%(part1numoperator)%	/
+%(hint1totalnumoperator)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(part1numoperatorerror)%	*
+%(part2denomprescaling)%	870
+%(totalnumoperator)%	/
+%(totalnumoperatorerror)%	*
+%(part2numoperator)%	/
+%(hint2totaloperator)%	Which operation did you already choose?
+%(part2numoperatorerror)%	* 
+%(3828965240384434128)%	How many milliliters are there as stated in Part 2?
+%(-5969644001277761826)%	Good job!
+%(-5166532556208710060)%	No, this is not correct.
+%(-845031638950638732)%	What is 348 / 8.7?
+%(9124325061673033557)%	Please enter '870' in the highlighted field.
+%(4821483485439661655)%	What do you have to divide 870 by to get 100?
+%(-7674251561070898746)%	You have already found the correct scale factor for the denominator. Since you have to scale both the numerator and denominator equally, use the same scale factor here.
+%(-3556985066265101286)%	140 out of 100 is what percentage?
+%(-1437475183061649825)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-5644287729147410232)%	Which operation did you already choose?
+%(-5198566598458179167)%	What number do you have to use so that the starting total number of objects will be converted into 100?
+%(1780499701251522308)%	Any operation applied to the denominator of a fraction must also be used on the numerator. Then you are just multiplying by a form of 1.
+%(-8016244494008826231)%	No, this is not correct.  Which operation do you have to use to scale 870 to 100?
+%(-296662419975626700)%	Which operation do you use to scale 870 to 100?
+%(-1965163513967356544)%	How many milliliters is the original solution?
+%(5364077982269946228)%	Which operation do you use to scale 870 to 100?
+%(-4816064157739995522)%	No, this is not correct.  Which operation do you have to use to scale 870 to 100?  Remember, it should be the same operation as for the total.
+%(6558021963670194632)%	How many milliliters are there as stated in Part 1?
+%(5070431007526413338)%	Please enter '100' in the highlighted field.
+%(4882963832892145872)%	What is 870 / 8.7?
+%(7055250515810319753)%	You have completed the problem.  Please click on the Done button to move to the next problem.
+%(8979121065954588973)%	Use the total amount given in the question.
+%(5311515328158987503)%	Please select '/' in the highlighted field.
+%(-3323778468535052321)%	Please enter '348' in the highlighted field.
+%(-1096534679222917409)%	What is 1218 / 8.7?
+%(-6393332544123370389)%	No, this is not correct.  You are meant to use the number before any scaling to make it into a percentage and not the final percentage.
+%(-1853844807025435026)%	Since a percent written as a fraction will have a denominator of 100, look at your fraction with the denominator of 100. What is the numerator?
+%(-2376084692640206697)%	Please enter '8.7' in the highlighted field.
+%(-2715048532308265476)%	Please enter '1218' in the highlighted field.
+%(3016515421039777855)%	40 out of 100 is what percentage?
+%(2627029763237348041)%	Please enter '40' in the highlighted field.
+%(-276151019380700421)%	Use the operation and the scale factor to convert the numerator.
+%(1053794646399452940)%	100 out of 100 is what percentage?
+%(3629932559233728708)%	Please enter '140' in the highlighted field.
+%(-621829839543793413)%	Which operation do you have to use to scale the denominator to help you find the percent?
+%(-8515524359141451225)%	Use the value given in the question.
+%(3346032671129887218)%	Please enter '/' in the highlighted field.

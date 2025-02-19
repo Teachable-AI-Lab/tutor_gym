@@ -1,0 +1,51 @@
+.CTATSolution {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+h4 {
+  display: none;
+}
+.option {
+  flex: 1;
+  min-width: 390px;
+}
+.nextButton {
+  width: 100%;
+  text-align: right;
+}
+.inner_table {
+  display: table;
+  border-collapse: separate;
+}
+.row {
+  display: table-row;
+}
+.cell {
+  display: table-cell;
+}
+.cell:first-child {
+  width: 65px;
+}
+.cell .CTATTextInput {
+  display: inline-block;
+  width: 100%;
+  max-width: 100px;
+  height: 25px;
+}
+.cell.span .CTATTextInput {
+  width: 85%;
+}
+#whichOption {
+  width: 100%;
+  text-align: center;
+}
+.CTATGroupingComponent {
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+.CTATRadioButton {
+  flex: 1;
+  justify-content: center;
+}

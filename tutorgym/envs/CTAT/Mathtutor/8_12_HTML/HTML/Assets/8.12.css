@@ -1,0 +1,32 @@
+.CTATSolution {
+  display: flex;
+  flex-wrap: wrap;
+}
+.table {
+  display: table;
+}
+.row {
+  display: table-row;
+  text-align: center;
+}
+.row:first-child {
+  font-weight: bold;
+}
+.cell {
+  display: table-cell;
+  padding: 10px 3px;
+  vertical-align: middle;
+}
+.cell:first-child {
+  width: 10%;
+  font-weight: bold;
+}
+.CTATTextInput {
+  width: 100%;
+}
+.cell .CTATTextInput, .cell .CTATTextField {
+  height: 22px;
+}
+hr {
+  width: 100%;
+}

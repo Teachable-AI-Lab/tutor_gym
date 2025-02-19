@@ -1,0 +1,1706 @@
+<?xml version="1.0" standalone="yes"?>
+
+<stateGraph caseInsensitive="true" firstCheckAllStates="true" highlightRightSelection="true" lockWidget="true" startStateNodeName="" suppressStudentFeedback="false" unordered="false" version="2.1">
+    <startNodeMessages>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartProblem</MessageType>
+                <ProblemName>07Gold</ProblemName>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceIdentification</MessageType>
+                <Guid>24827D23-292D-32F9-AB51-4181823F0004</Guid>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>2E119D81-F717-ADE8-B8F1-174049F94E04</transaction_id>
+                <Selection>
+                    <value>problem_statement</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>During the California Gold Rush of the 1800s, thousands of people moved to San Francisco hoping to find gold and get rich. The original population in question 2 is the same as the final population in question 1.</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>01FE693F-32B4-4B23-3DB6-AEC635C7A7E9</transaction_id>
+                <Selection>
+                    <value>q1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>(1) Before the Gold Rush, San Francisco was a new city, but growing steadily. In 1845, its population was 10,000. By 1847 there were 15,000 people living in the city. By what amount had the population grown and what was the percent change in population?</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>56BEFF87-3863-C352-2269-D9866D67C20C</transaction_id>
+                <Selection>
+                    <value>q2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>(2) Gold was first discovered during 1848, and the population grew by 75,000 that year. How many people lived in San Francisco by the end of 1848? What was the percent change in population of the city from 1847 to 1848?</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0D543411-5BEF-F801-4D12-667B36AB7FE3</transaction_id>
+                <Selection>
+                    <value>q3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>(3) During the year 1852, San Francisco's population decreased by 4,000. At the end of the year, the city's population was 76,000. What was the population at the beginning of 1852? What was the percent change during the year?</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0489C68B-1487-DCA9-6509-7708EECE0887</transaction_id>
+                <Selection>
+                    <value>q4</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>(4) When the Gold Rush was over, many people stayed in San Francisco, but some moved on to try their luck elsewhere. The 1850 census had reported 95,000; the 1860 census reported that the city's population had decreased by 28%. By what amount had the population decreased? What was the population in 1860?</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>06C8EAED-4224-0112-4791-76B20BB94D7F</transaction_id>
+                <Selection>
+                    <value>c1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Original Population</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7A746163-1517-C33C-EE44-5A9FE54A41AB</transaction_id>
+                <Selection>
+                    <value>c2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Percent Change</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0AC4B1C1-1416-3F5E-4CD5-5955008C38AA</transaction_id>
+                <Selection>
+                    <value>c3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Change in Population</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0FF00C3F-FE3D-FC24-D6C7-645CA12CD45A</transaction_id>
+                <Selection>
+                    <value>c4</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>New Population</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0DB67979-5D90-E4EB-B1A7-BC9AD643E3E0</transaction_id>
+                <Selection>
+                    <value>c1u1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextField</value>
+                </Action>
+                <Input>
+                    <value>people</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>3C80A98F-971C-0F01-649F-714835A62342</transaction_id>
+                <Selection>
+                    <value>c2u2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextField</value>
+                </Action>
+                <Input>
+                    <value>%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>02011CFD-9F6B-A84F-7853-F154D174BBBE</transaction_id>
+                <Selection>
+                    <value>c3u3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextField</value>
+                </Action>
+                <Input>
+                    <value>people</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>02F0AEEF-06B4-5D4F-202E-20960B111F27</transaction_id>
+                <Selection>
+                    <value>c4u4</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextField</value>
+                </Action>
+                <Input>
+                    <value>people</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartStateEnd</MessageType>
+            </properties>
+        </message>
+    </startNodeMessages>
+    <node doneState="false" locked="false">
+        <text>07Gold</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>418</x>
+            <y>30</y>
+            <width>38</width>
+            <height>25</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state1</text>
+        <uniqueID>2</uniqueID>
+        <dimension>
+            <x>415</x>
+            <y>112</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state2</text>
+        <uniqueID>3</uniqueID>
+        <dimension>
+            <x>415</x>
+            <y>194</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state3</text>
+        <uniqueID>4</uniqueID>
+        <dimension>
+            <x>415</x>
+            <y>276</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state4</text>
+        <uniqueID>5</uniqueID>
+        <dimension>
+            <x>415</x>
+            <y>358</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state5</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>536</x>
+            <y>436</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state6</text>
+        <uniqueID>7</uniqueID>
+        <dimension>
+            <x>532</x>
+            <y>518</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state7</text>
+        <uniqueID>8</uniqueID>
+        <dimension>
+            <x>537</x>
+            <y>603</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state8</text>
+        <uniqueID>9</uniqueID>
+        <dimension>
+            <x>537</x>
+            <y>683</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state9</text>
+        <uniqueID>10</uniqueID>
+        <dimension>
+            <x>387</x>
+            <y>781</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state10</text>
+        <uniqueID>11</uniqueID>
+        <dimension>
+            <x>384</x>
+            <y>861</y>
+            <width>43</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state11</text>
+        <uniqueID>12</uniqueID>
+        <dimension>
+            <x>384</x>
+            <y>941</y>
+            <width>43</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state12</text>
+        <uniqueID>13</uniqueID>
+        <dimension>
+            <x>384</x>
+            <y>1021</y>
+            <width>43</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state13</text>
+        <uniqueID>14</uniqueID>
+        <dimension>
+            <x>533</x>
+            <y>1102</y>
+            <width>43</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state14</text>
+        <uniqueID>15</uniqueID>
+        <dimension>
+            <x>533</x>
+            <y>1182</y>
+            <width>43</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state15</text>
+        <uniqueID>16</uniqueID>
+        <dimension>
+            <x>533</x>
+            <y>1262</y>
+            <width>43</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state20</text>
+        <uniqueID>21</uniqueID>
+        <dimension>
+            <x>531</x>
+            <y>1349</y>
+            <width>43</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="true" locked="false">
+        <text>Done</text>
+        <uniqueID>22</uniqueID>
+        <dimension>
+            <x>537</x>
+            <y>1429</y>
+            <width>31</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>1</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>656FC507-0A1B-F065-A0B1-07716BD9F2AB</transaction_id>
+                    <Selection>
+                        <value>q1c1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>10000</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What do you already know from the question? A value given in the question represents the original population of San Francisco in 1845.</hintMessage>
+            <hintMessage>How many people lived in San Francisco in 1845?</hintMessage>
+            <hintMessage>Please enter '10000' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q1c1</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;10000&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, 10000)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>187</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Gvn 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>3</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>785D55A5-1532-32EF-59D7-001FA5A272C8</transaction_id>
+                    <Selection>
+                        <value>q1c4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>15000</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What do you already know from the question? A value given in the question represents the new population.</hintMessage>
+            <hintMessage>What was the new population of San Francisco in 1847?</hintMessage>
+            <hintMessage>Please enter '15000' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q1c4</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;15000&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, 15000)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>187</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Gvn 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>5</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>0644BCB7-8BF0-E9D5-378F-90BF39173D39</transaction_id>
+                    <Selection>
+                        <value>q1c3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>5000</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>You can find the change in population by subtracting the original population from the new population.</hintMessage>
+            <hintMessage>What is 15000 minus 10000?</hintMessage>
+            <hintMessage>Please enter '5000' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q1c3</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;5000&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, 5000)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>187</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>FindChngVal 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>3</sourceID>
+        <destID>4</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>7</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>7450742D-6598-AF50-6D21-616B00818417</transaction_id>
+                    <Selection>
+                        <value>q1c2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>50</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>The value for the change in population is 5000. The value for the original population is 10000. What was the percent change in population?</hintMessage>
+            <hintMessage>You can find percent change by dividing change in population, 5000, by original population, 10000, then multiplying by 100.</hintMessage>
+            <hintMessage>Please enter '50' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q1c2</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;50&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, 50)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>187</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>FindPercent 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>4</sourceID>
+        <destID>5</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>9</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>06266E63-05AC-5403-49F7-457274CB37A1</transaction_id>
+                    <Selection>
+                        <value>q2c1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>15000</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What do you already know from the previous question? The original population is the new population for 1847.</hintMessage>
+            <hintMessage>What was the population of San Francisco in 1847?</hintMessage>
+            <hintMessage>Please enter '15000' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q2c1</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;15000&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, 15000)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>187</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Gvn 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>11</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>19B62359-AE15-7A0E-A6C1-8C6A917900D6</transaction_id>
+                    <Selection>
+                        <value>q2c3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>75000</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What do you already know from the question? A value given in the question represents the change in population.</hintMessage>
+            <hintMessage>How many more people lived in San Francisco in 1848 than in 1847?</hintMessage>
+            <hintMessage>Please enter '75000' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q2c3</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;75000&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, 75000)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>192</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Gvn 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>6</sourceID>
+        <destID>7</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>13</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>09BB5AD7-DDF7-0643-963E-135E6B99B6DA</transaction_id>
+                    <Selection>
+                        <value>q2c4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>90000</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>You can find the new population by adding the change in population to the original population.</hintMessage>
+            <hintMessage>What is 15000 plus 75000?</hintMessage>
+            <hintMessage>Please enter '90000' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q2c4</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;90000&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, 90000)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>192</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>FindNewVal 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>7</sourceID>
+        <destID>8</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>15</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>55385997-008D-0E3E-4003-66BFB96915CE</transaction_id>
+                    <Selection>
+                        <value>q2c2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>500</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>The value for the change in population is 75000. The value for the original population is 15000. What was the percent change in population?</hintMessage>
+            <hintMessage>You can find percent change by dividing change in population, 75000, by original population, 15000, then multiplying by 100.</hintMessage>
+            <hintMessage>Please enter '500' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q2c2</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;500&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, 500)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>192</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>FindPercent 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>8</sourceID>
+        <destID>9</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>17</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>73EEF5A3-94F1-9135-15F8-B3DC186085CB</transaction_id>
+                    <Selection>
+                        <value>q3c3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-4000</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What do you already know from the question? A value given in the question represents the change in population.</hintMessage>
+            <hintMessage>How many fewer people lived in San Francisco in 1852 than in 1851?</hintMessage>
+            <hintMessage>Please enter '-4000' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q3c3</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;-4000&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, -4000)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>192</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Gvn 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>9</sourceID>
+        <destID>10</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>19</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>1BB359D7-1D55-A53B-DBDE-7EBDE3724F37</transaction_id>
+                    <Selection>
+                        <value>q3c4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>76000</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What do you already know from the question? A value given in the question represents the new population in 1852.</hintMessage>
+            <hintMessage>What was the population of San Francisco in 1852?</hintMessage>
+            <hintMessage>Please enter '76000' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q3c4</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;76000&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, 76000)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>192</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Gvn 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>10</sourceID>
+        <destID>11</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>21</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>1A80AAE5-2C21-B413-BB92-477B769E9602</transaction_id>
+                    <Selection>
+                        <value>q3c1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>80000</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>You can find the original population by subtracting the change in population from the new population.</hintMessage>
+            <hintMessage>What is 76000 - (-4000)?</hintMessage>
+            <hintMessage>Please enter '80000' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q3c1</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;80000&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, 80000)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>192</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>FindOrgVal 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>11</sourceID>
+        <destID>12</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>23</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>128D3A1D-3B7D-5BB7-518B-1A95C5C7A70B</transaction_id>
+                    <Selection>
+                        <value>q3c2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-5</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>The value for the change in population is -4000. The value for the original population is 80000. What was the percent change in population?</hintMessage>
+            <hintMessage>You can find percent change by dividing change in population, -4000, by original population, 80000, then multiplying by 100.</hintMessage>
+            <hintMessage>Please enter '-5' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q3c2</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;-5&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, -5)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>192</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>FindPercent 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>12</sourceID>
+        <destID>13</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>25</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>444D9187-EA96-6AF8-34BB-3A66624A5924</transaction_id>
+                    <Selection>
+                        <value>q4c1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>95000</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What do you already know from the question? A value given in the question represents the original population of San Francisco in 1850.</hintMessage>
+            <hintMessage>How many people lived in San Francisco in 1850?</hintMessage>
+            <hintMessage>Please enter '95000' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q4c1</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;95000&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, 95000)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>192</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Gvn 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>13</sourceID>
+        <destID>14</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>27</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>031566E9-4F5E-004D-7BEB-B87B2BFAB28A</transaction_id>
+                    <Selection>
+                        <value>q4c2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-28</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What do you already know from the question? A value given in the question represents the percent change in population.</hintMessage>
+            <hintMessage>What percent did the population decrease by from 1850 to 1860?</hintMessage>
+            <hintMessage>Please enter '-28' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q4c2</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;-28&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, -28)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>192</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Gvn 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>14</sourceID>
+        <destID>15</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>29</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>0B6F1047-14FC-C8E7-1CAE-2268FCF1D73E</transaction_id>
+                    <Selection>
+                        <value>q4c3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-26600</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>You can find the amount of change of population by multiplying the original population by the decimal form of percent change.</hintMessage>
+            <hintMessage>What is 95000 multiplied by -.28?</hintMessage>
+            <hintMessage>Please enter '-26600' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q4c3</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;-26600&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, -26600)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>192</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>FindChngVal 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>15</sourceID>
+        <destID>16</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>31</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>74C5391D-447C-1106-7C94-046EECB4C01A</transaction_id>
+                    <Selection>
+                        <value>q4c4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>68400</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>You can find the new population by adding the amount of change to the original population.</hintMessage>
+            <hintMessage>What is 95000 plus -26600?</hintMessage>
+            <hintMessage>Please enter '68400' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">q4c4</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="&quot;68400&quot;">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, 68400)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>192</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>FindNewVal 8-14_Percent_Change</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>125</width>
+                <height>22</height>
+            </dimension>
+        </rule>
+        <sourceID>16</sourceID>
+        <destID>21</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>41</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>4A79ACD5-22C2-ED62-4901-FA64F20DD312</transaction_id>
+                    <Selection>
+                        <value>done</value>
+                    </Selection>
+                    <Action>
+                        <value>ButtonPressed</value>
+                    </Action>
+                    <Input>
+                        <value>-1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>You have completed the problem correctly! Click on the 'done' button to move on.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">done</matcherParameter>
+                <matcherParameter name="action">ButtonPressed</matcherParameter>
+                <matcherParameter name="input">-1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>72</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>21</sourceID>
+        <destID>22</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <productionRule opportunities="1">
+        <ruleName>Gvn</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Enter given</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Gvn</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Enter given</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Gvn</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Enter given</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>FindPercent</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Find percent change</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Gvn</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Enter given</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>FindChngVal</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Find change in value</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Gvn</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Enter given</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>FindPercent</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Find percent change</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Gvn</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Enter given</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>FindNewVal</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Find new changed value</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>FindChngVal</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Find change in value</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>FindNewVal</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Find new changed value</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Gvn</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Enter given</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Gvn</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Enter given</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>FindPercent</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Find percent change</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>FindOrgVal</ruleName>
+        <productionSet>8-14_Percent_Change</productionSet>
+        <label>Find original value</label>
+    </productionRule>
+    <EdgesGroups ordered="true">
+        <group name="row2" ordered="false" reenterable="true">
+            <link id="9" />
+            <link id="15" />
+            <link id="13" />
+            <link id="11" /></group>
+        <group name="row4" ordered="false" reenterable="true">
+            <link id="25" />
+            <link id="27" />
+            <link id="31" />
+            <link id="29" /></group>
+        <group name="row3" ordered="false" reenterable="true">
+            <link id="17" />
+            <link id="21" />
+            <link id="23" />
+            <link id="19" /></group>
+        <group name="row1" ordered="false" reenterable="true">
+            <link id="7" />
+            <link id="5" />
+            <link id="3" />
+            <link id="1" /></group>
+    </EdgesGroups>
+</stateGraph>

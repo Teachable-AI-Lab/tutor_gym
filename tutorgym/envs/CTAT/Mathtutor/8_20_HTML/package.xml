@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package label="8.20 Exponent Product Rule" description="Student applies exponent product rule to multiply two exponent expressions." save_state="true">
+  <Problems>
+    <Problem name="Problem 1" label="4x^2 y^4)(3x^3 y^3)" description="(4x^2 y^4)(3x^3 y^3)" tutor_flag="tutor" model_file="Problem 1.brd" student_interface="8.20.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 2" label="(3x^5 y^4)(2y^4)" description="(3x^5 y^4)(2y^4)" tutor_flag="tutor" model_file="Problem 2.brd" student_interface="8.20.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 3" label="(4x^5 y^5)(y^2)" description="(4x^5 y^5)(y^2)" tutor_flag="tutor" model_file="Problem 3.brd" student_interface="8.20.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 4" label="(5x^2 y^3)(2x^4 y^4)" description="(5x^2 y^3)(2x^4 y^4)" tutor_flag="tutor" model_file="Problem 4.brd" student_interface="8.20.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 5" label="(5x^4 y^3)(4x^4 y^2)" description="(5x^4 y^3)(4x^4 y^2)" tutor_flag="tutor" model_file="Problem 5.brd" student_interface="8.20.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 6" label="(4x^6 y^5)(6y^4)" description="(4x^6 y^5)(6y^4)" tutor_flag="tutor" model_file="Problem 6.brd" student_interface="8.20.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="Problem 7" label="(7xy^5)(x^5)" description="(7xy^5)(x^5)" tutor_flag="tutor" model_file="Problem 7.brd" student_interface="8.20.html">
+      <Skills>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="8.20 HTML" label="8.20 Exponent Product Rule" description="Student applies exponent product rule to multiply two exponent expressions." status="active" picture="8.20.png" image_height="0" filler_height="0" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="Problem 2" position="1" role="0"/>
+        <Problem name="Problem 3" position="2" role="0"/>
+        <Problem name="Problem 4" position="3" role="0"/>
+        <Problem name="Problem 5" position="4" role="0"/>
+        <Problem name="Problem 6" position="5" role="0"/>
+        <Problem name="Problem 7" position="6" role="0"/>
+        <Problem name="Problem 1" position="7" role="0"/>
+      </Problems>
+      <Skills>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" standard_level="standard"/>
+        <Standard name="PA.A" label="A. Numbers and Operations" description="A. Numbers and Operations" standard_level="reporting_category" parent_name="PA" parent_level="standard"/>
+        <Standard name="PA.A.2" label="A.2. Operations: Meanings, Uses and Relationships" description="A.2. Understand the meanings of operations, use operations and understand how they relate to each other." standard_level="assessment_anchor" parent_name="PA.A" parent_level="reporting_category"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" standard_level="standard"/>
+        <Standard name="NCTM.B" label="B. Algebra" description="B. Algebra" standard_level="strand" parent_name="NCTM" parent_level="standard"/>
+        <Grade name="8th" label="8th Grade" description="8th Grade"/>
+        <Collection name="general" label="Released Problem Sets" description="Released Problem Sets"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" standard_level="standard"/>
+        <Standard name="Student.WE" label="Working with Exponents" description="Working with Exponents" standard_level="strand" parent_name="Student" parent_level="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" standard_level="standard"/>
+        <Standard name="CommonCore.8" label="8th Grade" description="8th Grade" standard_level="grade_level" parent_name="CommonCore" parent_level="standard"/>
+        <Standard name="CommonCore.8.EE" label="8.EE. Expressions and Equations" description="8.EE. Expressions and Equations" standard_level="strand" parent_name="CommonCore.8" parent_level="grade_level"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="8.20.png" path="Assets"/>
+    <Asset name="mathtutor_8.20_full.png" path="Assets"/>
+    <Asset name="Problem 1.brd" path="FinalBRDs"/>
+    <Asset name="Problem 2.brd" path="FinalBRDs"/>
+    <Asset name="Problem 3.brd" path="FinalBRDs"/>
+    <Asset name="Problem 4.brd" path="FinalBRDs"/>
+    <Asset name="Problem 5.brd" path="FinalBRDs"/>
+    <Asset name="Problem 6.brd" path="FinalBRDs"/>
+    <Asset name="Problem 7.brd" path="FinalBRDs"/>
+    <Asset name="8.20.html" path="HTML"/>
+    <Asset name="8.20.css" path="HTML/Assets"/>
+    <Asset name="finalMassProdtable.txt" path="MassProduction"/>
+    <Asset name="finalTemplate.brd" path="MassProduction"/>
+    <Asset name="translatable.txt" path="MassProduction"/>
+  </Assets>
+</Package>

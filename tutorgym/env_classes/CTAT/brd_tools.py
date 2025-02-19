@@ -198,8 +198,27 @@ def parse_start_node_messages(messages, verbosity=1):
 # : parse_edges()
 import re 
 polyTermsEqual_re = re.compile(r"polyTermsEqual\((.*),\"([^\)\"]*)\"\)")
-expr_matches_re = re.compile(r"expressionMatches\((.*),(\"[^\)\"]*)\)\"")
-number_re = re.compile(r"expressionMatches\((.*),(.*)\)")
+expr_matches_re = re.compile(r"expressionMatches\((.*),([^\)\"]*)\)")
+# number_re = re.compile(r"expressionMatches\((.*),(.*)\)")
+
+def resolve_input_from_matcher(matcher, matcher_action):
+    sel, at, inps = matcher_action.sai
+    epxr_match = expr_matches_re.search(matcher.value)
+    poly_match = polyTermsEqual_re.search(matcher.value)
+    # print(matcher)
+    if(epxr_match):
+        a,b = epxr_match.group(1), epxr_match.group(2)
+        if(b == 'input'): a,b = b,a
+        if(matcher.relation == "boolean"):
+            print(f"Expr matcher({sel}):", b)
+            return b
+
+    elif(poly_match):
+        print(f"Poly matcher({sel}):", poly_match.group(2))
+    elif(matcher.relation in ("=", "<=", ">=")):
+        return matcher.value
+    return None
+
 
 def resolve_action(message_action, matcher_action):
     ''' Uses information from the message_action and matcher_action to resolve the 
@@ -218,13 +237,10 @@ def resolve_action(message_action, matcher_action):
     matcher = checker.inputs_matcher
     if(isinstance(matcher, ExpressionMatcher)):
         # print("<< ExpressionMatcher")
-        epxr_match = expr_matches_re.search(matcher.value)
-        poly_match = polyTermsEqual_re.search(matcher.value)
-        print(matcher)
-        if(epxr_match):
-            print(f"Expr matcher({sel}):", epxr_match.group(2))
-        elif(poly_match):
-            print(f"Poly matcher({sel}):", poly_match.group(2))
+        inp = resolve_input_from_matcher(matcher, matcher_action)
+
+        if(inp is not None):
+            return Action((sel, at, {"value" : inp}), **matcher_action.annotations)   
         else:
             print(f"? matcher({sel}):", matcher)
         print()

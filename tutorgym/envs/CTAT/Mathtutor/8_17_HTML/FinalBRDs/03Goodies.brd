@@ -1,0 +1,2529 @@
+<?xml version="1.0" standalone="yes"?>
+
+<stateGraph caseInsensitive="true" firstCheckAllStates="true" highlightRightSelection="true" lockWidget="true" startStateNodeName="Third filled" suppressStudentFeedback="false" unordered="true" version="2.1">
+    <startNodeMessages>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartProblem</MessageType>
+                <ProblemName>03Goodies</ProblemName>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>610262FB-5074-FF05-37C6-99B9A77E397C</transaction_id>
+                <Selection>
+                    <value>statement</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Martha is making goodie bags for a party in her neighborhood. She is going to put a chocolate bar, a lollipop, a cookie, and a piece of fruit in each bag. Please help Martha figure out how many different goodie bags she can make. Martha has the following number and types of goodies.</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0126BFB5-DE97-2372-2204-3BA98D12A62D</transaction_id>
+                <Selection>
+                    <value>x</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextField</value>
+                </Action>
+                <Input>
+                    <value>x</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0126BFB5-DE97-2372-2204-3BA98D12A62D</transaction_id>
+                <Selection>
+                    <value>x</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextField</value>
+                </Action>
+                <Input>
+                    <value>x</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0DC2FD8D-B47D-FC16-4632-B4F5D58A608E</transaction_id>
+                <Selection>
+                    <value>item1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>2 types of chocolate bars</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>054EBE1B-9FCE-CA18-91DC-07BA2CBBA1FE</transaction_id>
+                <Selection>
+                    <value>item2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>2 flavors of lollipops</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0BD459E9-4659-BCC3-9418-C7D84A8A869C</transaction_id>
+                <Selection>
+                    <value>item3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>2 types of cookies</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0DE1FEF7-7E0E-9F1C-F8C2-8B9FFE38EAE5</transaction_id>
+                <Selection>
+                    <value>item4</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>2 different types of fruit</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00FCC25F-0697-9CAB-554C-FCEAE7D8A9F3</transaction_id>
+                <Selection>
+                    <value>item5</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>-</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7D3CE6AD-A375-02CC-282C-A6C759E8287F</transaction_id>
+                <Selection>
+                    <value>Q1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>1. If she use all of the items shown above, how many different goodie bags can she make?</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0D034BFB-85C3-4D5E-B03A-B3F8BD173179</transaction_id>
+                <Selection>
+                    <value>Q2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>2. If she has 2 more flavors of lollipops, and 2 more types of cookies, how many different goodie bags can she make?</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0BA14D25-9BD3-1DC3-BB41-97414EA2686F</transaction_id>
+                <Selection>
+                    <value>Q3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>3. If she has 1 more of each type of the items she originally had, how many different goodie bags can she make?</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0095D2A1-59C4-55CE-6062-4914E9D83689</transaction_id>
+                <Selection>
+                    <value>TQ1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>1</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0298F6CD-93AB-6D16-9B24-F059DEF8F182</transaction_id>
+                <Selection>
+                    <value>TQ2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>2</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>1E7623FD-A849-2867-0359-02687A1A1C4A</transaction_id>
+                <Selection>
+                    <value>TQ3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>3</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7957F9FB-1F57-9865-13F2-181575806FF3</transaction_id>
+                <Selection>
+                    <value>TC1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Types of chocolate bars</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0741DD73-0726-01AB-8656-5367C765DFEB</transaction_id>
+                <Selection>
+                    <value>TC2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Flavors of lollipops</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0F7E7EBB-25A5-392B-DF8F-F7308FD7F683</transaction_id>
+                <Selection>
+                    <value>TC3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Types of cookies</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00CE65C5-4872-F145-DDED-EE937C746992</transaction_id>
+                <Selection>
+                    <value>TC4</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Types of fruit</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>070B1901-839B-B9E0-B9BB-53367E8D8668</transaction_id>
+                <Selection>
+                    <value>TC5</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>-</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>1C6099EF-911F-B811-6D41-8F3AE46093B8</transaction_id>
+                <Selection>
+                    <value>TC6</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Expression for number of different goodie bags</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>1C6099EF-911F-B811-6D41-8F3AE46093B8</transaction_id>
+                <Selection>
+                    <value>TC7</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Number of different goodie bags</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00CE65C5-4872-F145-DDED-EE9 37C746992</transaction_id>
+                <Selection>
+                    <value>item4</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00CE65C5-4872-F145-DDED-EE9 37C746992</transaction_id>
+                <Selection>
+                    <value>CellTC4</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00CE65C5-4872-F145-DDED-EE9	37C746992</transaction_id>
+                <Selection>
+                    <value>CellQ1C4</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00CE65C5-4872-F145-DDED-EE9	37C746992</transaction_id>
+                <Selection>
+                    <value>CellQ2C4</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00CE65C5-4872-F145-DDED-EE9	37C746992</transaction_id>
+                <Selection>
+                    <value>CellQ3C4</value>
+                </Selection>
+                <Action>
+                    <value>removeClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00CE65C5-4872-F145-DDED-EE9 37C746992</transaction_id>
+                <Selection>
+                    <value>item5</value>
+                </Selection>
+                <Action>
+                    <value>addClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00CE65C5-4872-F145-DDED-EE9 37C746992</transaction_id>
+                <Selection>
+                    <value>CellTC5</value>
+                </Selection>
+                <Action>
+                    <value>addClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00CE65C5-4872-F145-DDED-EE9	37C746992</transaction_id>
+                <Selection>
+                    <value>CellQ1C5</value>
+                </Selection>
+                <Action>
+                    <value>addClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00CE65C5-4872-F145-DDED-EE9	37C746992</transaction_id>
+                <Selection>
+                    <value>CellQ2C5</value>
+                </Selection>
+                <Action>
+                    <value>addClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00CE65C5-4872-F145-DDED-EE9	37C746992</transaction_id>
+                <Selection>
+                    <value>CellQ3C5</value>
+                </Selection>
+                <Action>
+                    <value>addClass</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartStateEnd</MessageType>
+            </properties>
+        </message>
+    </startNodeMessages>
+    <node doneState="false" locked="false">
+        <text>03Goodies</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>200</x>
+            <y>27</y>
+            <width>85</width>
+            <height>25</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state3</text>
+        <uniqueID>4</uniqueID>
+        <dimension>
+            <x>233</x>
+            <y>176</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state4</text>
+        <uniqueID>5</uniqueID>
+        <dimension>
+            <x>233</x>
+            <y>256</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>Third filled</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>224</x>
+            <y>336</y>
+            <width>55</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state6</text>
+        <uniqueID>7</uniqueID>
+        <dimension>
+            <x>233</x>
+            <y>416</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>Row 1 answer</text>
+        <uniqueID>8</uniqueID>
+        <dimension>
+            <x>214</x>
+            <y>496</y>
+            <width>74</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>Row 1 Complete</text>
+        <uniqueID>9</uniqueID>
+        <dimension>
+            <x>336</x>
+            <y>635</y>
+            <width>84</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state9</text>
+        <uniqueID>10</uniqueID>
+        <dimension>
+            <x>360</x>
+            <y>715</y>
+            <width>37</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state10</text>
+        <uniqueID>11</uniqueID>
+        <dimension>
+            <x>357</x>
+            <y>795</y>
+            <width>43</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state11</text>
+        <uniqueID>12</uniqueID>
+        <dimension>
+            <x>357</x>
+            <y>875</y>
+            <width>43</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state12</text>
+        <uniqueID>13</uniqueID>
+        <dimension>
+            <x>357</x>
+            <y>955</y>
+            <width>43</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>Row 2 answer</text>
+        <uniqueID>14</uniqueID>
+        <dimension>
+            <x>341</x>
+            <y>1035</y>
+            <width>74</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>Row 2 Complete</text>
+        <uniqueID>15</uniqueID>
+        <dimension>
+            <x>187</x>
+            <y>1196</y>
+            <width>84</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state15</text>
+        <uniqueID>16</uniqueID>
+        <dimension>
+            <x>208</x>
+            <y>1276</y>
+            <width>43</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state16</text>
+        <uniqueID>17</uniqueID>
+        <dimension>
+            <x>208</x>
+            <y>1356</y>
+            <width>43</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state17</text>
+        <uniqueID>18</uniqueID>
+        <dimension>
+            <x>208</x>
+            <y>1436</y>
+            <width>43</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state18</text>
+        <uniqueID>19</uniqueID>
+        <dimension>
+            <x>208</x>
+            <y>1516</y>
+            <width>43</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>Row 3 Answer</text>
+        <uniqueID>20</uniqueID>
+        <dimension>
+            <x>192</x>
+            <y>1596</y>
+            <width>75</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>Row 3 Complete</text>
+        <uniqueID>21</uniqueID>
+        <dimension>
+            <x>321</x>
+            <y>1749</y>
+            <width>84</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="true" locked="false">
+        <text>Done</text>
+        <uniqueID>22</uniqueID>
+        <dimension>
+            <x>348</x>
+            <y>2012</y>
+            <width>31</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>New99</text>
+        <uniqueID>99</uniqueID>
+        <dimension>
+            <x>232</x>
+            <y>576</y>
+            <width>39</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>New98</text>
+        <uniqueID>98</uniqueID>
+        <dimension>
+            <x>359</x>
+            <y>1115</y>
+            <width>39</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>New97</text>
+        <uniqueID>97</uniqueID>
+        <dimension>
+            <x>210</x>
+            <y>1676</y>
+            <width>39</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state101</text>
+        <uniqueID>102</uniqueID>
+        <dimension>
+            <x>346</x>
+            <y>1912</y>
+            <width>49</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>example1</text>
+        <uniqueID>103</uniqueID>
+        <dimension>
+            <x>350</x>
+            <y>1833</y>
+            <width>52</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>start</text>
+        <uniqueID>104</uniqueID>
+        <dimension>
+            <x>102</x>
+            <y>120</y>
+            <width>29</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state104</text>
+        <uniqueID>105</uniqueID>
+        <dimension>
+            <x>595</x>
+            <y>1899</y>
+            <width>49</width>
+            <height>20</height>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>8</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>0A58084F-4FE2-A807-72B5-B576CC329D90</transaction_id>
+                    <Selection>
+                        <value>Q1C2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>2</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What was the original number of flavors of lollipops? Was any change in this number mentioned in the question?</hintMessage>
+            <hintMessage>Please enter '2' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">Q1C2</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">2</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>100</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>given-entered 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>226</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>4</sourceID>
+        <destID>5</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>10</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>010FDB5F-4637-7D87-4871-8BB81967530D</transaction_id>
+                    <Selection>
+                        <value>Q1C3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>2</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What was the original number of types of cookies? Was any change in this number mentioned in the question?</hintMessage>
+            <hintMessage>Please enter '2' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">Q1C3</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">2</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>105</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>given-entered 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>226</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>12</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>09E9AC83-C964-80D8-62E3-5F88A373F9C7</transaction_id>
+                    <Selection>
+                        <value>Q1C4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>2</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What was the original number of types of fruits? Was any change in this number mentioned in the question?</hintMessage>
+            <hintMessage>Please enter '2' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">Q1C4</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">2</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>105</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>given-entered 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>226</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>6</sourceID>
+        <destID>7</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="0" minTraversals="0" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>14</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>0C624B8F-318E-0EBE-4BFD-3571F1D200F8</transaction_id>
+                    <Selection>
+                        <value>Q1C5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>-</hintMessage>
+            <hintMessage>Please enter '-' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">Q1C5</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">-</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>105</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>given-entered 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>226</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>7</sourceID>
+        <destID>8</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>16</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>7341D0AF-30DC-D0CC-FDDD-60CB08B445BE</transaction_id>
+                    <Selection>
+                        <value>Ans1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>2*2*2*2</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What mathematical expression should you use to solve this problem?</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(Q1C1,Q1C2,Q1C3,Q1C4),&quot;Try multiplying all types of goodies.&quot;,&quot;Are you sure you are ready to do this part?&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(Q1C1,Q1C2,Q1C3,Q1C4),&quot;Please enter '2*2*2*2' in the highlighted field.&quot;,&quot;You are missing the number of items for one or more categories. Fill in the numbers for the rest of the categories in this row, and then come back to the highlighted field!&quot;)%&gt;</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">Ans1</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(2*2*2*2,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>144</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>find-outcome-expression 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>272</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>8</sourceID>
+        <destID>99</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>18</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>7A338A03-91F4-7CA4-A499-64F04606BCAA</transaction_id>
+                    <Selection>
+                        <value>Q2C1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>2</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What was the original number of types of chocolate bars? Was any change in this number mentioned in the question?</hintMessage>
+            <hintMessage>Please enter '2' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">Q2C1</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">2</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>105</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>given-entered 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>221</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>9</sourceID>
+        <destID>10</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>20</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>0CACDB1B-ADF4-C75B-A2B1-D77E9FDD7C2F</transaction_id>
+                    <Selection>
+                        <value>Q2C2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>4</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What was the original number of flavors of lollipops? Was any change in this number mentioned in the question?</hintMessage>
+            <hintMessage>Please enter '4' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">Q2C2</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">4</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>105</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>changed-given-entered 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>221</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>10</sourceID>
+        <destID>11</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>22</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>0CEFBC07-855E-0515-1042-E73F11C402A5</transaction_id>
+                    <Selection>
+                        <value>Q2C3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>4</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What was the original number of types of cookies? Was any change in this number mentioned in the question?</hintMessage>
+            <hintMessage>Please enter '4' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">Q2C3</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">4</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>105</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>changed-given-entered 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>221</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>11</sourceID>
+        <destID>12</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>24</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>45371037-1189-8178-241F-8E35A2C0FE61</transaction_id>
+                    <Selection>
+                        <value>Q2C4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>2</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What was the original number of types of fruits? Was any change in this number mentioned in the question?</hintMessage>
+            <hintMessage>Please enter '2' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">Q2C4</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">2</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>105</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>given-entered 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>221</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>12</sourceID>
+        <destID>13</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="0" minTraversals="0" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>26</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>4FC1101B-FBD1-67F8-4482-6AB639F52B58</transaction_id>
+                    <Selection>
+                        <value>Q2C5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>-</hintMessage>
+            <hintMessage>Please enter '-' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">Q2C5</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">-</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>105</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>given-entered 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>221</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>13</sourceID>
+        <destID>14</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>28</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>054A407D-D87A-84D9-CBD3-09B81977FE75</transaction_id>
+                    <Selection>
+                        <value>Ans2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>2*4*4*2</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What mathematical expression should you use to solve this problem?</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(Q2C1,Q2C2,Q2C3,Q2C4),&quot;Try multiplying all types of goodies. &quot;,&quot;Are you sure you are ready to do this part?&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(Q2C1,Q2C2,Q2C3,Q2C4),&quot;Please enter '2*4*4*2' in the highlighted field.&quot;,&quot;You are missing the number of items for one or more categories. Fill in the numbers for the rest of the categories in this row, and then come back to the highlighted field!&quot;)%&gt;</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">Ans2</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(2*4*4*2,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>144</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>find-outcome-expression 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>272</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>14</sourceID>
+        <destID>98</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>30</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>0AA9A3B3-C2B3-1EB2-DC5E-65FCBD87FB5A</transaction_id>
+                    <Selection>
+                        <value>Q3C1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>3</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>Did the question tell you any changes in the original list of items?</hintMessage>
+            <hintMessage>What was the original number of types of chocolate bars? Was any change in this number mentioned in the question?</hintMessage>
+            <hintMessage>Please enter '3' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">Q3C1</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">3</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>143</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>changed-given-entered 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>221</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>15</sourceID>
+        <destID>16</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>32</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>00558813-3C5B-8895-DD9D-B6C304939378</transaction_id>
+                    <Selection>
+                        <value>Q3C2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>3</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>Did the question tell you any changes in the original list of items?</hintMessage>
+            <hintMessage>What was the original number of flavors of lollipops? Was any change in this number mentioned in the question?</hintMessage>
+            <hintMessage>Please enter '3' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">Q3C2</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">3</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>143</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>changed-given-entered 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>221</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>16</sourceID>
+        <destID>17</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>34</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>11CE93B5-CB67-B859-36A8-5B80592A4092</transaction_id>
+                    <Selection>
+                        <value>Q3C3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>3</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>Did the question tell you any changes in the original list of items?</hintMessage>
+            <hintMessage>What was the original number of types of cookies? Was any change in this number mentioned in the question?</hintMessage>
+            <hintMessage>Please enter '3' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">Q3C3</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">3</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>143</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>changed-given-entered 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>221</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>17</sourceID>
+        <destID>18</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>36</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>7904DD67-41A7-2FC5-FB86-DE3226F5A9B7</transaction_id>
+                    <Selection>
+                        <value>Q3C4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>3</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>Did the question tell you any changes in the original list of items?</hintMessage>
+            <hintMessage>What was the original number of types of fruits? Was any change in this number mentioned in the question?</hintMessage>
+            <hintMessage>Please enter '3' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">Q3C4</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">3</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>143</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>changed-given-entered 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>221</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>18</sourceID>
+        <destID>19</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="0" minTraversals="0" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>38</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>74124799-A459-21D9-15A1-2354ED4A5D11</transaction_id>
+                    <Selection>
+                        <value>Q3C5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>Did the question tell you any changes in the original list of items?</hintMessage>
+            <hintMessage>-</hintMessage>
+            <hintMessage>Please enter '-' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">Q3C5</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">-</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>105</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>given-entered 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>221</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>19</sourceID>
+        <destID>20</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>40</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>3B939A6F-2E69-E274-B168-EC80DF1A5AF5</transaction_id>
+                    <Selection>
+                        <value>Ans3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>3*3*3*3</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What mathematical expression should you use to solve this problem?</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(Q3C1,Q3C2,Q3C3,Q3C4),&quot;Try multiplying all available types of goodies.  The number of available variations is equal to the product of the number of types or flavors of chocolate bars, lollipops, cookies, and fruits.&quot;,&quot;Are you sure you are ready to do this part?&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(Q3C1,Q3C2,Q3C3,Q3C4),&quot;Please enter '3*3*3*3' in the highlighted field.&quot;,&quot;You are missing the number of items for one or more categories. Fill in the numbers for the rest of the categories in this row, and then come back to the highlighted field!&quot;)%&gt;</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">Ans3</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(3*3*3*3,input)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>144</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>find-outcome-expression 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>272</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>20</sourceID>
+        <destID>97</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>80</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>5AD759CB-542B-1CCD-EAF2-84095DE1B416</transaction_id>
+                    <Selection>
+                        <value>Ans4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>16</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>The number of possible goodie bags is equal to the product of the number of types or flavors of chocolate bars, lollipops, cookies, and fruits.</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(Ans1),&quot;Remember: Product is the answer you get when you multiply.&quot;,&quot;You have not figured out the correct expression for the total number of possibilities. Are you sure you are ready to do this part?&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(Ans1),&quot;Please enter '16' in the highlighted field.&quot;,&quot;Enter the correct expression under 'Expression for number of different goodie bags', and then come back to the highlighted field to evaluate it!&quot;)%&gt;</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">Ans4</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">16</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>121</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>find-outcome 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>224</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>99</sourceID>
+        <destID>9</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>81</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>5AD759CB-542B-1CCD-EAF2-84095DE1B416</transaction_id>
+                    <Selection>
+                        <value>Ans5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>64</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>The number of possible goodie bags is equal to the product of the number of types or flavors of chocolate bars, lollipops, cookies, and fruits.</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(Ans2),&quot;Remember: Product is the answer you get when you multiply.&quot;,&quot;You have not figured out the correct expression for the total number of possibilities. Are you sure you are ready to do this part?&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(Ans2),&quot;Please enter '64' in the highlighted field.&quot;,&quot;Enter the correct expression under 'Expression for number of different goodie bags', and then come back to the highlighted field to evaluate it!&quot;)%&gt;</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">Ans5</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">64</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>121</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>find-outcome 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>224</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>98</sourceID>
+        <destID>15</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>82</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>5AD759CB-542B-1CCD-EAF2-84095DE1B416</transaction_id>
+                    <Selection>
+                        <value>Ans6</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>81</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>The number of possible goodie bags is equal to the product of the number of types or flavors of chocolate bars, lollipops, cookies, and fruits.</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(Ans3),&quot;Remember: Product is the answer you get when you multiply.&quot;,&quot;You have not figured out the correct expression for the total number of possibilities. Are you sure you are ready to do this part?&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(Ans3),&quot;Please enter '81' in the highlighted field.&quot;,&quot;Enter the correct expression under 'Expression for number of different goodie bags', and then come back to the highlighted field to evaluate it!&quot;)%&gt;</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">Ans6</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">81</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>121</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>find-outcome 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>224</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>97</sourceID>
+        <destID>21</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>42</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>5AD759CB-542B-1CCD-EAF2-84095DE1B416</transaction_id>
+                    <Selection>
+                        <value>done</value>
+                    </Selection>
+                    <Action>
+                        <value>ButtonPressed</value>
+                    </Action>
+                    <Input>
+                        <value>-1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage>Good job!</successMessage>
+            <hintMessage>You've done everything correctly. Click on the &quot;done&quot; button to move on!</hintMessage>
+            <hintMessage>Please click on the highlighted button.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">done</matcherParameter>
+                <matcherParameter name="action">ButtonPressed</matcherParameter>
+                <matcherParameter name="input">-1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>72</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>102</sourceID>
+        <destID>22</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="0" minTraversals="0" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>92</uniqueID>
+            <message>
+                <verb>SendNoteProperty</verb>
+                <properties>
+                    <MessageType>CorrectAction</MessageType>
+                    <Selection>
+                        <value>Ans6</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>81</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>This time you already know the total number of combinations! Read the question carefully to find the total combination given.</hintMessage>
+            <hintMessage>Read this part of question 3 carefully: &quot;-&quot;.</hintMessage>
+            <hintMessage>Please enter '81' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">Ans6</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">81</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>121</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>21</sourceID>
+        <destID>103</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="0" minTraversals="0" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>84</uniqueID>
+            <message>
+                <verb>SendNoteProperty</verb>
+                <properties>
+                    <MessageType>CorrectAction</MessageType>
+                    <Selection>
+                        <value>-</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>-</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage>-</successMessage>
+            <hintMessage>-</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(-),&quot;Think about the expression with the unknown: - = 81. Can you solve for the unknown?&quot;,&quot;Are you sure you are ready to do this part?&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(-),&quot;If it is still difficult, simplify it!: -*? = 81. You can solve for the number you want by dividing total combinations by the product of already known items: 81/- = ?&quot;,&quot;You have not filled in the rest of the knowns yet. You can't solve for the unknown without knowing all of the givens.&quot;)%&gt;</hintMessage>
+            <hintMessage>&lt;%=ifThen(hasValue(-),&quot;81/- = -. Please enter '-' in the highlighted field.&quot;,&quot;Make sure you have filled in the rest of fields in this row before coming back to this highlighted field!&quot;)%&gt;</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">-</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="simplify(input)">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input,-)</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>188</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>103</sourceID>
+        <destID>102</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>95</uniqueID>
+            <message>
+                <verb>SendNoteProperty</verb>
+                <properties>
+                    <MessageType>CorrectAction</MessageType>
+                    <Selection>
+                        <value>_root</value>
+                    </Selection>
+                    <Action>
+                        <value>initProblem</value>
+                    </Action>
+                    <Input>
+                        <value>4</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>Please provide your answer 'No_Value' in the highlighted element.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">_root</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">initProblem</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">4</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>144</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>104</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>6</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>23F18E71-2713-DFD4-FDE8-FCA3D62C9B2A</transaction_id>
+                    <Selection>
+                        <value>Q1C1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>2</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>What was the original number of types of chocolate bars? Was any change in this number mentioned in the question?</hintMessage>
+            <hintMessage>Please enter '2' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">Q1C1</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">2</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+            <dimension>
+                <width>100</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>given-entered 8-17-permutations-and-combinations1</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>226</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>104</sourceID>
+        <destID>4</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="false">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>99</uniqueID>
+            <message>
+                <verb>SendNoteProperty</verb>
+                <properties>
+                    <MessageType>CorrectAction</MessageType>
+                    <Selection>
+                        <value>-</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>*</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>&lt;%=ifThen(hasValue(-),&quot;No, that is not correct. Click on the 'hint' button to get more help solving for this field!&quot;,&quot;Are you sure you are ready to do this part? This row is filled a little differently. Read question 3 again to find out what to do.&quot;)%&gt;</buggyMessage>
+            <successMessage />
+            <hintMessage>Please provide your answer 'No_Value' in the highlighted element.</hintMessage>
+            <actionType>Buggy Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">-</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>AnyMatcher</matcherType>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+            <dimension>
+                <width>113</width>
+                <height>16</height>
+            </dimension>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+            <dimension>
+                <width>48</width>
+                <height>16</height>
+            </dimension>
+        </rule>
+        <sourceID>103</sourceID>
+        <destID>105</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <productionRule opportunities="1">
+        <ruleName>changed-given-entered</ruleName>
+        <productionSet>8-17-permutations-and-combinations1</productionSet>
+        <label>Enter changed given</label>
+        <hintMessage />
+        <hintMessage />
+        <hintMessage />
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>changed-given-entered</ruleName>
+        <productionSet>8-17-permutations-and-combinations1</productionSet>
+        <label>Enter changed given</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>given-entered</ruleName>
+        <productionSet>8-17-permutations-and-combinations1</productionSet>
+        <label>Enter given</label>
+    </productionRule>
+    <productionRule opportunities="3">
+        <ruleName>find-outcome</ruleName>
+        <productionSet>8-17-permutations-and-combinations1</productionSet>
+        <label>Find outcome</label>
+        <hintMessage />
+        <hintMessage />
+        <hintMessage />
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>given-entered</ruleName>
+        <productionSet>8-17-permutations-and-combinations1</productionSet>
+        <label>Enter given</label>
+        <hintMessage />
+        <hintMessage />
+        <hintMessage />
+    </productionRule>
+    <productionRule opportunities="5">
+        <ruleName>given-entered</ruleName>
+        <productionSet>8-17-permutations-and-combinations1</productionSet>
+        <label>Enter given</label>
+        <hintMessage>What was the original number of types of chocolate bars? Was any change in this number mentioned in the question?</hintMessage>
+        <hintMessage />
+        <hintMessage>Please enter '2' in the highlighted field.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>changed-given-entered</ruleName>
+        <productionSet>8-17-permutations-and-combinations1</productionSet>
+        <label>Enter changed given</label>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>changed-given-entered</ruleName>
+        <productionSet>8-17-permutations-and-combinations1</productionSet>
+        <label>Enter changed given</label>
+        <hintMessage />
+        <hintMessage />
+        <hintMessage />
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>changed-given-entered</ruleName>
+        <productionSet>8-17-permutations-and-combinations1</productionSet>
+        <label>Enter changed given</label>
+        <hintMessage />
+        <hintMessage />
+        <hintMessage />
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>given-entered</ruleName>
+        <productionSet>8-17-permutations-and-combinations1</productionSet>
+        <label>Enter given</label>
+    </productionRule>
+    <productionRule opportunities="3">
+        <ruleName>find-outcome-expression</ruleName>
+        <productionSet>8-17-permutations-and-combinations1</productionSet>
+        <label>Find outcome expression</label>
+        <hintMessage />
+        <hintMessage />
+        <hintMessage />
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>changed-given-entered</ruleName>
+        <productionSet>8-17-permutations-and-combinations1</productionSet>
+        <label>Enter changed given</label>
+        <hintMessage>What was the original number of types of chocolate bars? Was any change in this number mentioned in the question?</hintMessage>
+        <hintMessage />
+        <hintMessage>Please enter '3' in the highlighted field.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>given-entered</ruleName>
+        <productionSet>8-17-permutations-and-combinations1</productionSet>
+        <label>Enter given</label>
+        <hintMessage>What was the original number of types of chocolate bars? Was any change in this number mentioned in the question?</hintMessage>
+        <hintMessage />
+        <hintMessage>Please enter '2' in the highlighted field.</hintMessage>
+    </productionRule>
+    <EdgesGroups ordered="false" />
+</stateGraph>

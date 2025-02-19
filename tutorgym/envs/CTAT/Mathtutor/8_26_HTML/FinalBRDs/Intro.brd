@@ -1,0 +1,627 @@
+<?xml version="1.0" standalone="yes"?>
+
+<stateGraph caseInsensitive="true" firstCheckAllStates="true" highlightRightSelection="true" lockWidget="true" startStateNodeName="" suppressStudentFeedback="false" unordered="true" version="2.1">
+    <startNodeMessages>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartProblem</MessageType>
+                <ProblemName>Intro</ProblemName>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceIdentification</MessageType>
+                <Guid>7A8498A3B4280DA8E7EEE6056717A2AD73F14A8</Guid>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>A371AFAEE8FE4F278615591242E6EA37D31839E</transaction_id>
+                <Selection>
+                    <value>problemstatement</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>This box-and-whisker plot shows the height of the players on a football team.</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>T692470b2-e2cb-435d-b879-24b1c9b42127</transaction_id>
+                <Selection>
+                    <value>problempicture</value>
+                </Selection>
+                <Action>
+                    <value>assignImage</value>
+                </Action>
+                <Input>
+                    <value>Assets/bp-interp-1.PNG</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0CE09880D35643A6ECE64CFEF798E10CCC7860E</transaction_id>
+                <Selection>
+                    <value>instructions</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>Please use the box-and-whisker plot to answer the questions below.</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>6433B3784F4784BE241BCC4BBDD7B3E52777B62</transaction_id>
+                <Selection>
+                    <value>q1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>The shortest player is</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>A73FD2FD7C173BB9D0957549A1A48D13F603D3F</transaction_id>
+                <Selection>
+                    <value>label1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>inches tall.</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>839679FED64AEAB23E40ED175AD0913A071A769</transaction_id>
+                <Selection>
+                    <value>q2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>75% of players are at least</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>3A999134FEDCE19B4C2C9BFA60D56067F385D2F</transaction_id>
+                <Selection>
+                    <value>label2</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>inches tall.</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>77F48449DC83EDFBF89699E11C8EA3C7A33FF95</transaction_id>
+                <Selection>
+                    <value>q3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>50% of players are at least</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>B75B4F0813595ABAED662F6E359637C327C9F52</transaction_id>
+                <Selection>
+                    <value>label3</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>inches tall.</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>BF6E3FD9FF4E1309535EC809E197167A7FEF8B1</transaction_id>
+                <Selection>
+                    <value>q4</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>75% of players are no taller than</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>AFA512FEFF4C3FC812ED6B1BC576B112B6311AD</transaction_id>
+                <Selection>
+                    <value>label4</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>inches tall.</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>6615D3114879DB83E97FBB6E02A890776220A5D</transaction_id>
+                <Selection>
+                    <value>q5</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>The tallest player is</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>D7AD0BB5E2E739C70ABE5C28AA65152E7C4A677</transaction_id>
+                <Selection>
+                    <value>label5</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>inches tall.</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartStateEnd</MessageType>
+            </properties>
+        </message>
+    </startNodeMessages>
+    <node doneState="false" locked="false">
+        <text>Intro</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>282</x>
+            <y>30</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state1</text>
+        <uniqueID>2</uniqueID>
+        <dimension>
+            <x>278</x>
+            <y>140</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state2</text>
+        <uniqueID>3</uniqueID>
+        <dimension>
+            <x>278</x>
+            <y>250</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state3</text>
+        <uniqueID>4</uniqueID>
+        <dimension>
+            <x>278</x>
+            <y>360</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state4</text>
+        <uniqueID>5</uniqueID>
+        <dimension>
+            <x>278</x>
+            <y>470</y>
+        </dimension>
+    </node>
+    <node doneState="false" locked="false">
+        <text>state5</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>278</x>
+            <y>580</y>
+        </dimension>
+    </node>
+    <node doneState="true" locked="false">
+        <text>Done</text>
+        <uniqueID>7</uniqueID>
+        <dimension>
+            <x>281</x>
+            <y>690</y>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>1</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>68C0549FB8BB2A95D60609E47438D8532631D49</transaction_id>
+                    <Selection>
+                        <value>ans1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>66</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>In order to solve this question, you need to figure out which line(s) in the graph it is referring to.</hintMessage>
+            <hintMessage>The question is asking about the shortest player. What line in the graph represents the shortest height?</hintMessage>
+            <hintMessage>The shortest player is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.</hintMessage>
+            <hintMessage>The minimum is 66. Please enter '66' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">ans1</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">66</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Identify_value_for_max_or_min Box_and_Whisker_Plots</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>3</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>30AAE3C7E468C64FBFB7344F7045DC5E364D5D1</transaction_id>
+                    <Selection>
+                        <value>ans2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>68</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>In order to solve this question, you need to figure out which line(s) in the graph it is referring to.</hintMessage>
+            <hintMessage>The question is asking you to identify a percentage from the graph. If 75% of players are at least a certain height, we know that 25% of the players are less than that height. What line in the graph separates the bottom 25% from the upper 75%? </hintMessage>
+            <hintMessage>The left end of the box represents the 1st quartile. That is the line that separates the shorter 25% from the taller 75%. What number on the scale matches that mark?</hintMessage>
+            <hintMessage>The left of the box marks 25%. The left lines up with 68. Please enter '68' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">ans2</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">68</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Identify_value_given_quartile Box_and_Whisker_Plots</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>5</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>B219AC9D5350C5F5DDE56607D81B3AF1AC956E9</transaction_id>
+                    <Selection>
+                        <value>ans3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>71</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>In order to solve this question, you need to figure out which line(s) in the graph it is referring to.</hintMessage>
+            <hintMessage>The question is asking you to identify a percentage of the graph. What line marks the median of the players' heights?</hintMessage>
+            <hintMessage>Saying that '50% of the players are at least' some height means that exactly 50% of the players are taller than some height. Which line marks half of the distribution?</hintMessage>
+            <hintMessage>The line in the middle of the box marks half of the distribution. 50% of the values are above 71. Please enter '71' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">ans3</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">71</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Identify_value_given_quartile Box_and_Whisker_Plots</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>3</sourceID>
+        <destID>4</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>7</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>C891D999A0E1A3C1FBE651455CB765D85B71F3E</transaction_id>
+                    <Selection>
+                        <value>ans4</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>73</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>In order to solve this question, you need to figure out which line(s) in the graph it is referring to.</hintMessage>
+            <hintMessage>The question is asking you to identify a percentage from the graph. If 75% of players are no taller than a certain height, we know that 25% of the players are taller than that height. What line in the graph separates the bottom 75% from the upper 25%? </hintMessage>
+            <hintMessage>The right end of the box represents the 3rd quartile. That is the line that separates the shorter 75% from the taller 25%. What number on the scale matches that mark?</hintMessage>
+            <hintMessage>The right of the box marks 75%. The right lines up with 73. Please enter '73' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">ans4</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">73</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Identify_value_given_quartile Box_and_Whisker_Plots</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>4</sourceID>
+        <destID>5</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>9</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>E5C9DB85F4F5C32D7FD184ADE660D09CF13B188</transaction_id>
+                    <Selection>
+                        <value>ans5</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>78</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>In order to solve this question, you need to figure out which line(s) in the graph it is referring to.</hintMessage>
+            <hintMessage>The question is asking about the tallest player. What line in the graph represents the tallest height?</hintMessage>
+            <hintMessage>The tallest player is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.</hintMessage>
+            <hintMessage>The maximum is 78. Please enter '78' in the highlighted field.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">ans5</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">78</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Identify_value_for_max_or_min Box_and_Whisker_Plots</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <edge>
+        <actionLabel maxTraversals="1" minTraversals="1" preferPathMark="true">
+            <studentHintRequest />
+            <stepSuccessfulCompletion />
+            <stepStudentError />
+            <uniqueID>11</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>DC9FC1AF47312AD3CC8DD2DF3B08CDE3D4FC79E</transaction_id>
+                    <Selection>
+                        <value>done</value>
+                    </Selection>
+                    <Action>
+                        <value>ButtonPressed</value>
+                    </Action>
+                    <Input>
+                        <value>-1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage />
+            <hintMessage>Please click on the highlighted button.</hintMessage>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">done</matcherParameter>
+                <matcherParameter name="action">ButtonPressed</matcherParameter>
+                <matcherParameter name="input">-1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>6</sourceID>
+        <destID>7</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt />
+    </edge>
+    <productionRule opportunities="1">
+        <ruleName>Identify_value_given_quartile</ruleName>
+        <productionSet>Box_and_Whisker_Plots</productionSet>
+        <label>Identify value given a quartile</label>
+        <hintMessage>In order to solve this question, you need to figure out which line(s) in the graph it is referring to.</hintMessage>
+        <hintMessage>The question is asking you to identify a percentage from the graph. If 75% of players are no taller than a certain height, we know that 25% of the players are taller than that height. What line in the graph separates the bottom 75% from the upper 25%? </hintMessage>
+        <hintMessage>The right end of the box represents the 3rd quartile. That is the line that separates the shorter 75% from the taller 25%. What number on the scale matches that mark?</hintMessage>
+        <hintMessage>The right of the box marks 75%. The right lines up with 73. Please enter '73' in the highlighted field.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Identify_value_for_max_or_min</ruleName>
+        <productionSet>Box_and_Whisker_Plots</productionSet>
+        <label>Identify value for maximum or minimum</label>
+        <hintMessage>In order to solve this question, you need to figure out which line(s) in the graph it is referring to.</hintMessage>
+        <hintMessage>The question is asking about the shortest player. What line in the graph represents the shortest height?</hintMessage>
+        <hintMessage>The shortest player is equal to the minimum value represented in the graph. Locate the minimum and identify the corresponding value on the bottom scale.</hintMessage>
+        <hintMessage>The minimum is 66. Please enter '66' in the highlighted field.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Identify_value_given_quartile</ruleName>
+        <productionSet>Box_and_Whisker_Plots</productionSet>
+        <label>Identify value given a quartile</label>
+        <hintMessage>In order to solve this question, you need to figure out which line(s) in the graph it is referring to.</hintMessage>
+        <hintMessage>The question is asking you to identify a percentage from the graph. If 75% of players are at least a certain height, we know that 25% of the players are less than that height. What line in the graph separates the bottom 25% from the upper 75%? </hintMessage>
+        <hintMessage>The left end of the box represents the 1st quartile. That is the line that separates the shorter 25% from the taller 75%. What number on the scale matches that mark?</hintMessage>
+        <hintMessage>The left of the box marks 25%. The left lines up with 68. Please enter '68' in the highlighted field.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Identify_value_for_max_or_min</ruleName>
+        <productionSet>Box_and_Whisker_Plots</productionSet>
+        <label>Identify value for maximum or minimum</label>
+        <hintMessage>In order to solve this question, you need to figure out which line(s) in the graph it is referring to.</hintMessage>
+        <hintMessage>The question is asking about the tallest player. What line in the graph represents the tallest height?</hintMessage>
+        <hintMessage>The tallest player is equal to the maximum value represented in the graph. Locate the maximum and identify the corresponding value on the bottom scale.</hintMessage>
+        <hintMessage>The maximum is 78. Please enter '78' in the highlighted field.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Identify_value_given_quartile</ruleName>
+        <productionSet>Box_and_Whisker_Plots</productionSet>
+        <label>Identify value given a quartile</label>
+        <hintMessage>In order to solve this question, you need to figure out which line(s) in the graph it is referring to.</hintMessage>
+        <hintMessage>The question is asking you to identify a percentage of the graph. What line marks the median of the players' heights?</hintMessage>
+        <hintMessage>Saying that '50% of the players are at least' some height means that exactly 50% of the players are taller than some height. Which line marks half of the distribution?</hintMessage>
+        <hintMessage>The line in the middle of the box marks half of the distribution. 50% of the values are above 71. Please enter '71' in the highlighted field.</hintMessage>
+    </productionRule>
+    <EdgesGroups ordered="false" />
+</stateGraph>

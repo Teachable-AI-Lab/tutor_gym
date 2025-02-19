@@ -1,0 +1,1451 @@
+<?xml version="1.0" standalone="yes"?>
+
+<stateGraph firstCheckAllStates="true" caseInsensitive="true" unordered="true" lockWidget="true" hintPolicy="Use Both Kinds of Bias" version="4.0" suppressStudentFeedback="Show All Feedback" highlightRightSelection="true" startStateNodeName="%(startStateNodeName)%" tutorType="Example-tracing Tutor">
+    <startNodeMessages>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartProblem</MessageType>
+                <ProblemName>8-7</ProblemName>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>E0B2C3E2B917FD4D4B4985376466A0F6561055C</transaction_id>
+                <Selection>
+                    <value>unit2name</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(unit2name)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00CE65C5-4872-F145-DDED-EE937C746992</transaction_id>
+                <Selection>
+                    <value>fifthrow</value>
+                </Selection>
+                <Action>
+                    <value>%(visRow5)%</value>
+                </Action>
+                <Input>
+                    <value>hidden</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>A904534AA9799D731DDCC691D019E69A9B2A24E</transaction_id>
+                <Selection>
+                    <value>textone</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(problemtext)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>E0B2C3E2B917FD4D4B4985376466A0F6561054C</transaction_id>
+                <Selection>
+                    <value>unitname</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(unitname)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>54F379D205E8163FA9E959CF8887A558CE988BE</transaction_id>
+                <Selection>
+                    <value>unitleft</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(unitleft)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>CCBA404AF96B39B963C84AFE0B8C00BD6A429B3</transaction_id>
+                <Selection>
+                    <value>unitmid</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(unitmid)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>01D6D39F05F6986C04C44F60E3354CE2BA6B170</transaction_id>
+                <Selection>
+                    <value>unit2left</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(unit2left)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>009C76268A95BA1673FB62AE1337578BE19FBCE</transaction_id>
+                <Selection>
+                    <value>unit2mid</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(unit2mid)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>C71F225A0839DDFF0B83EEF5CFEEBE00564F38F</transaction_id>
+                <Selection>
+                    <value>secondname</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>2</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>C71F225A0839DDFF0B83EEF5CFEEBE00564F35F</transaction_id>
+                <Selection>
+                    <value>firstname</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>1</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>55666BF136ED8951027852D71B509C043D2A2B5</transaction_id>
+                <Selection>
+                    <value>thirdname</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>3</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>929799BDAD3DD66FC64F3C7291DAB2BC81DCEA0</transaction_id>
+                <Selection>
+                    <value>fourthname</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(fourthname)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>D849F1D829AFDA5014B6D11A42ACBEB5C925CFA</transaction_id>
+                <Selection>
+                    <value>fifthname</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(fifthname)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>050AEF736FB6BBC26804210794651F79215FB68</transaction_id>
+                <Selection>
+                    <value>nameleft</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(nameleft)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>DF14F9DDDD8F7D2E277500A220F9D88A5E23BBA</transaction_id>
+                <Selection>
+                    <value>namemid</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(namemid)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>C0E566E638F2EDC079EEAC84C6BCB4CC7735028</transaction_id>
+                <Selection>
+                    <value>nameright</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(nameright)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>963E8BB7ECA344B087ED649B59ECB2D9D86957F</transaction_id>
+                <Selection>
+                    <value>unitright</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(unitright)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>00ABCFBBCAD898A8C0C183ED621203693C1D551</transaction_id>
+                <Selection>
+                    <value>unit2right</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>%(unit2right)%</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0126BFB5-DE97-2372-2204-3BA98D12A62D</transaction_id>
+                <Selection>
+                    <value>%(dash)%</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextField</value>
+                </Action>
+                <Input>
+                    <value>---</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartStateEnd</MessageType>
+            </properties>
+        </message>
+    </startNodeMessages>
+    <node locked="false" doneState="false">
+        <text>8-7</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>195</x>
+            <y>30</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state1</text>
+        <uniqueID>2</uniqueID>
+        <dimension>
+            <x>185</x>
+            <y>128</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state2</text>
+        <uniqueID>3</uniqueID>
+        <dimension>
+            <x>193</x>
+            <y>228</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state3</text>
+        <uniqueID>4</uniqueID>
+        <dimension>
+            <x>192</x>
+            <y>321</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state4</text>
+        <uniqueID>5</uniqueID>
+        <dimension>
+            <x>194</x>
+            <y>400</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state5</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>198</x>
+            <y>490</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state6</text>
+        <uniqueID>7</uniqueID>
+        <dimension>
+            <x>198</x>
+            <y>584</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state7</text>
+        <uniqueID>8</uniqueID>
+        <dimension>
+            <x>199</x>
+            <y>674</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state8</text>
+        <uniqueID>9</uniqueID>
+        <dimension>
+            <x>199</x>
+            <y>756</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state9</text>
+        <uniqueID>10</uniqueID>
+        <dimension>
+            <x>202</x>
+            <y>859</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state10</text>
+        <uniqueID>11</uniqueID>
+        <dimension>
+            <x>196</x>
+            <y>946</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state11</text>
+        <uniqueID>12</uniqueID>
+        <dimension>
+            <x>196</x>
+            <y>1044</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state12</text>
+        <uniqueID>13</uniqueID>
+        <dimension>
+            <x>208</x>
+            <y>1149</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state13</text>
+        <uniqueID>14</uniqueID>
+        <dimension>
+            <x>208</x>
+            <y>1228</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state14</text>
+        <uniqueID>15</uniqueID>
+        <dimension>
+            <x>210</x>
+            <y>1301</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="true">
+        <text>Done</text>
+        <uniqueID>16</uniqueID>
+        <dimension>
+            <x>216</x>
+            <y>1384</y>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>1</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>877E8E7FC03148248353689187980B267C91A81</transaction_id>
+                    <Selection>
+                        <value>firstleft</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(firstleft)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(792793084441510216)%</hintMessage>
+            <hintMessage>%(792790084441510227)%</hintMessage>
+            <hintMessage>%(-453518294639506693)%</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">firstleft</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">%(firstleft)%</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_given_X_value Problem_Solving_And_Linear_Equations_I</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>3</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>9D303F16387D0A739EAB80EBE0DE13A9D5F0505</transaction_id>
+                    <Selection>
+                        <value>firstmid</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(firstmid)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(8796587289776407051)%</hintMessage>
+            <hintMessage>%(8796590289808407104)%</hintMessage>
+            <hintMessage>%(-1626753558730997953)%</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">firstmid</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">polyTermsEqual(input,"%(firstmid)%")</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Show_Your_Work Problem_Solving_And_Linear_Equations_I</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>5</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>25BE7F88248EB0D62B4614CE94F02B0730A3B2E</transaction_id>
+                    <Selection>
+                        <value>firstright</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(firstright)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(7907085348084200858)%</hintMessage>
+            <hintMessage>%(7907086348108200921)%</hintMessage>
+            <hintMessage>%(7907087348112200924)%</hintMessage>
+            <hintMessage>%(-8163690229027443259)%</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">firstright</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="simplify(input)">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input,"%(firstright)%")</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Calculate_Y_value_from_X_value Problem_Solving_And_Linear_Equations_I</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>3</sourceID>
+        <destID>4</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>7</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>114AA64C0456E3ADCBDD24FFF44EB8419744773</transaction_id>
+                    <Selection>
+                        <value>secondleft</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(secondleft)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(-6341710987623058929)%</hintMessage>
+            <hintMessage>%(-6341707987623058908)%</hintMessage>
+            <hintMessage>%(-8809890632388366728)%</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">secondleft</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">%(secondleft)%</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_given_X_value Problem_Solving_And_Linear_Equations_I</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>4</sourceID>
+        <destID>5</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>9</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>857FA1A0077AF042562209B069C24C2164309E3</transaction_id>
+                    <Selection>
+                        <value>secondmid</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(secondmid)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(8994503027754699052)%</hintMessage>
+            <hintMessage>%(8994500027658698711)%</hintMessage>
+            <hintMessage>%(6662676508735564506)%</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">secondmid</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">polyTermsEqual(input,"%(secondmid)%")</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Show_Your_Work Problem_Solving_And_Linear_Equations_I</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>11</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>77FA711FEE5C93B3232E5AD841EA7ACA98FC874</transaction_id>
+                    <Selection>
+                        <value>secondright</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(secondright)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(-3009299177580197835)%</hintMessage>
+            <hintMessage>%(-3009300177588197850)%</hintMessage>
+            <hintMessage>%(-3009301177592197853)%</hintMessage>
+            <hintMessage>%(-965563154238965700)%</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">secondright</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="simplify(input)">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input,"%(secondright)%")</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Calculate_Y_value_from_X_value Problem_Solving_And_Linear_Equations_I</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>6</sourceID>
+        <destID>7</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>13</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>C879FC209DF8E3C3E60603B8705289CE2C82CE4</transaction_id>
+                    <Selection>
+                        <value>%(thirdfirst)%</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(thirdleft)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(-4309026559528414754)%</hintMessage>
+            <hintMessage>%(-4309025559520414675)%</hintMessage>
+            <hintMessage>%(-5525545716246350564)%</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">%(thirdfirst)%</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">%(thirdleft)%</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Calculate_X_value_from_Y_value Problem_Solving_And_Linear_Equations_I</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>7</sourceID>
+        <destID>8</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>15</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>2197E3D65A81A2C65E8A10BBAB9C850A859F54A</transaction_id>
+                    <Selection>
+                        <value>thirdmid</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(thirdmid)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(3679966825882896453)%</hintMessage>
+            <hintMessage>%(3679965825874896502)%</hintMessage>
+            <hintMessage>%(-1217587432769992042)%</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">thirdmid</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">polyTermsEqual(input,"%(thirdmid)%")</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Show_Your_Work Problem_Solving_And_Linear_Equations_I</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>8</sourceID>
+        <destID>9</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>17</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>1345A16EC1E812285CD2F8A912884A72B637D93</transaction_id>
+                    <Selection>
+                        <value>%(thirdsecond)%</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(thirdright)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(-2762975042555758404)%</hintMessage>
+            <hintMessage>%(-2762978042587758489)%</hintMessage>
+            <hintMessage>%(-2762977042583758470)%</hintMessage>
+            <hintMessage>%(-194123767307438700)%</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">%(thirdsecond)%</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="simplify(input)">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input,"%(thirdright)%")</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_given_Y_value Problem_Solving_And_Linear_Equations_I</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>9</sourceID>
+        <destID>10</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="%(hideRow)%" maxTraversals="%(hideRow)%">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>19</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>A5CE222F45CDBDC5AE46E4665583276CFFE4F0C</transaction_id>
+                    <Selection>
+                        <value>%(fourthfirst)%</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(fourthleft)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(-6550298484717880875)%</hintMessage>
+            <hintMessage>%(-6550299484725880890)%</hintMessage>
+            <hintMessage>%(4920608439303684340)%</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">%(fourthfirst)%</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">%(fourthleft)%</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Calculate_X_value_from_Y_value Problem_Solving_And_Linear_Equations_I</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>10</sourceID>
+        <destID>11</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="%(hideRow)%" maxTraversals="%(hideRow)%">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>21</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>8B2AAE3331717F4D84D113368CEF35BA330A6EE</transaction_id>
+                    <Selection>
+                        <value>fourthmid</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(fourthmid)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(-5878948089593845330)%</hintMessage>
+            <hintMessage>%(-5878947089585845315)%</hintMessage>
+            <hintMessage>%(-9076630315400485826)%</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">fourthmid</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">polyTermsEqual(input,"%(fourthmid)%")</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Show_Your_Work Problem_Solving_And_Linear_Equations_I</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>11</sourceID>
+        <destID>12</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="%(hideRow)%" maxTraversals="%(hideRow)%">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>23</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>3352D6FE730C160BE5494D9BF02745C2DB7A257</transaction_id>
+                    <Selection>
+                        <value>%(fourthsecond)%</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(fourthright)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(8564033778948809775)%</hintMessage>
+            <hintMessage>%(8564036778948809668)%</hintMessage>
+            <hintMessage>%(8564035778944809665)%</hintMessage>
+            <hintMessage>%(4630426011187870568)%</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">%(fourthsecond)%</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="simplify(input)">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">expressionMatches(input, "%(fourthright)%")</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_given_Y_value Problem_Solving_And_Linear_Equations_I</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>12</sourceID>
+        <destID>13</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>25</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>D78BFCF9CA5D40066DF76BDCBDFDCF2D19C3C1C</transaction_id>
+                    <Selection>
+                        <value>%(variableField)%</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(variable)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(-3381328427690014508)%</hintMessage>
+            <hintMessage>%(-294082848867817741)%</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">%(variableField)%</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>RegexMatcher</matcherType>
+                        <matcherParameter name="single">[a-z]</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_variable Problem_Solving_And_Linear_Equations_I</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>13</sourceID>
+        <destID>14</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>27</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>B9C46B66BA56A5EE3061B795759040141689AB4</transaction_id>
+                    <Selection>
+                        <value>%(expressionField)%</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>%(expression)%</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(4622433777516882295)%</hintMessage>
+            <hintMessage>%(4622436777484882124)%</hintMessage>
+            <hintMessage>%(5732745791233359618)%</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">%(expressionField)%</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextField</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression">%(expressionMatch)%</matcherParameter>
+                        <matcherParameter name="relation">boolean</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Enter_formula Problem_Solving_And_Linear_Equations_I</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>14</sourceID>
+        <destID>15</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>29</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>5CFB89321D63F1802A55EA4EC1B5811F2512813</transaction_id>
+                    <Selection>
+                        <value>done</value>
+                    </Selection>
+                    <Action>
+                        <value>ButtonPressed</value>
+                    </Action>
+                    <Input>
+                        <value>-1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>%(-5166532556208710060)%</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>%(-7538229578606087202)%</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">done</matcherParameter>
+                <matcherParameter name="action">ButtonPressed</matcherParameter>
+                <matcherParameter name="input">-1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>15</sourceID>
+        <destID>16</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <productionRule opportunities="2">
+        <ruleName>Calculate_Y_value_from_X_value</ruleName>
+        <productionSet>Problem_Solving_And_Linear_Equations_I</productionSet>
+        <label>Calculate Y value from X value</label>
+        <hintMessage>You need to compute the total amount of money she budgets for her garden. This answer depends on: the cost of a bunch of pansies(7), the number of bunches of pansies she buys(3) AND the cost of a rose bush(30). Can you figure out the total amount of money she budgets for her garden from these numbers?</hintMessage>
+        <hintMessage>The total amount of money she budgets for her garden is the cost of a bunch of pansies(7) TIMES the number of bunches of pansies she buys(3) PLUS the cost of a rose bush(30).</hintMessage>
+        <hintMessage>The total amount of money she budgets for her garden equals to (3*7)+30</hintMessage>
+        <hintMessage>Please enter '51' in the highlighted field.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Enter_formula</ruleName>
+        <productionSet>Problem_Solving_And_Linear_Equations_I</productionSet>
+        <label>Enter formula</label>
+        <hintMessage>When the number of bunches of pansies she buys was 3, the total amount of money she budges was  (3*7) +30. When the number of bunches of pansies she buys is now link25.input, how do you find the total amount of money she budgets for her garden?</hintMessage>
+        <hintMessage>If the number of bunches of pansies she buys is 3 then the total amount of money she budgets for her garden is (3*7)+30. If the number of bunches of pansies she buys = x, then what is the total amount of money she budgets for her garden?</hintMessage>
+        <hintMessage>Please enter 'expressionMatches(input,concat("30+","10*",link25.input))' in the highlighted field.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Enter_variable</ruleName>
+        <productionSet>Problem_Solving_And_Linear_Equations_I</productionSet>
+        <label>Enter variable</label>
+        <hintMessage>Read the last sentence in the problem statement. How do you represent the number of bunches of pansies she buys as a variable or an expression?</hintMessage>
+        <hintMessage>Please enter 'x' in the highlighted field.</hintMessage>
+        <hintMessage></hintMessage>
+    </productionRule>
+    <productionRule opportunities="2">
+        <ruleName>Enter_given_Y_value</ruleName>
+        <productionSet>Problem_Solving_And_Linear_Equations_I</productionSet>
+        <label>Enter given Y value</label>
+    </productionRule>
+    <productionRule opportunities="2">
+        <ruleName>Calculate_X_value_from_Y_value</ruleName>
+        <productionSet>Problem_Solving_And_Linear_Equations_I</productionSet>
+        <label>Calculate X value from Y value</label>
+    </productionRule>
+    <productionRule opportunities="4">
+        <ruleName>Show_Your_Work</ruleName>
+        <productionSet>Problem_Solving_And_Linear_Equations_I</productionSet>
+        <label>Show Your Work</label>
+        <hintMessage>Please write a numerical expression that shows how to compute %(quan2)% when %(quan1)% is %(Ans11)% %(UnitLabel1)%.</hintMessage>
+        <hintMessage>%(HintWorkout1)%</hintMessage>
+        <hintMessage>Please enter '%(WorkOut1)%' in the highlighted field.</hintMessage>
+    </productionRule>
+    <productionRule opportunities="2">
+        <ruleName>Enter_given_X_value</ruleName>
+        <productionSet>Problem_Solving_And_Linear_Equations_I</productionSet>
+        <label>Enter given X value</label>
+        <hintMessage>For question 1, you have not yet entered a given value. Look at the question on the left. What do you already know from the question?</hintMessage>
+        <hintMessage>A given value in this question represents %(quan1)%. Please type this given value into the correct place in the table.</hintMessage>
+        <hintMessage>Please enter '%(Ans11)%' in the highlighted field.</hintMessage>
+    </productionRule>
+    <EdgesGroups ordered="false">
+        <group name="3" ordered="true" reenterable="true">
+            <link id="13"/>
+            <link id="15"/>
+            <link id="17"/></group>
+        <group name="2" ordered="true" reenterable="true">
+            <link id="11"/>
+            <link id="9"/>
+            <link id="7"/></group>
+        <group name="4" ordered="true" reenterable="true">
+            <link id="21"/>
+            <link id="19"/>
+            <link id="23"/></group>
+        <group name="1" ordered="true" reenterable="true">
+            <link id="3"/>
+            <link id="5"/>
+            <link id="1"/></group>
+        <group name="expression" ordered="true" reenterable="true">
+            <link id="25"/>
+            <link id="27"/></group>
+    </EdgesGroups>
+</stateGraph>
+

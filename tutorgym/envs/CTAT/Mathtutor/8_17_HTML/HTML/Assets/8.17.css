@@ -1,0 +1,58 @@
+.CTATProblemSolving {
+  flex-direction: column;
+}
+.CTATProblem, .CTATSolution {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.CTATProblem .CTATTextField + .CTATTextField {
+  margin-top: 8px;
+}
+#problem_statement, #problem_questions {
+  flex: 1;
+  min-width: 390px;
+}
+@media (max-width: 420px) and (max-height: 900px) {
+  #problem_statement, #problem_questions {
+    min-width: 300px;
+  }
+}
+#problem_statement + #problem_questions {
+  margin-left: 20px;
+}
+@media (max-width: 420px) and (max-height: 900px) {
+  #problem_statement + #problem_questions {
+    margin-left: 0px;
+  }
+}
+#option_table {
+  padding-right: 9px;
+  border-right: 2px solid gray;
+}
+#result_table {
+  padding-left: 9px;
+  border: none;
+}
+@media (max-width: 420px) and (max-height: 900px) {
+  #option_table, #result_table {
+    border: 0px;
+    padding: 0px;
+  }
+}
+th[scope="row"] {
+  width: 18%;
+}
+th[scope="col"] {
+  height: 47px;
+}
+@media (max-width: 420px) and (max-height: 900px) {
+  th[scope="col"] {
+    height: 25px;
+  }
+}
+.operator {
+  border: none;
+  width: 20px;
+  background: white
+}
