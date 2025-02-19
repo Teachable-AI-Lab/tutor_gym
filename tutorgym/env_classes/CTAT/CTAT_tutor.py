@@ -77,6 +77,24 @@ class CTAT_Tutor(StateMachineTutor):
                 return False
         return True
 
+    def _filter_state(self, state):
+
+        f_state = {}
+        # Ignore any fields marked as anonamous
+        for k,obj in state.items():
+            # Ignore any fields marked as anonamous
+            if k[:4] == 'anon':
+                continue 
+
+            if("x" in obj): obj["x"] = int(obj["x"])
+            if("y" in obj): obj["y"] = int(obj["y"])
+            if("width" in obj): obj["width"] = int(obj["width"])
+            if("height" in obj): obj["height"] = int(obj["height"])
+
+            f_state[k] = obj
+        return f_state
+
+
     def set_start_state(self, html_path, model_path, **kwargs):
         # Render the HTML converted the DOM to JSON and snap a picture
         configs = self.html_proc.process_htmls(
@@ -86,17 +104,24 @@ class CTAT_Tutor(StateMachineTutor):
 
         print(html_path)
         print(model_path)
+        print("KW", kwargs)
+
+
 
         # Load the HTML converted to JSON
         with open(configs[0]['json_path']) as f:
             start_state = json.load(f)
 
-            # Ignore any fields marked as anonamous
-            start_state = {k:v for k,v in start_state.items() if k[:4] != 'anon'}
+            start_state = self._filter_state(start_state)
 
             self.start_actions, self.edges, self.groups = \
                 parse_brd(model_path)
 
+        dir_list = os.path.split(model_path)[0].split(os.sep)
+
+        self.domain_dir = "/".join(dir_list[:-1])
+        self.domain = (dir_list[-3], dir_list[-2])
+        print("domain_dir", self.domain_dir, self.domain)
         self.problem_name = os.path.split(model_path)[-1]
 
         start_state = ProblemState(start_state)

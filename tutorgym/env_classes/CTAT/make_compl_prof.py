@@ -83,14 +83,21 @@ def make_compl_prof(self, filename, problems, problem_line_limit=50):
             #         and 'ctatdiv' not in obj['id']
             #         ):
             #         print(" ", obj['id'], obj.get('value', None))
-
-            line = json.dumps({
+            line_dict = {
                 "problem" : self.get_problem(),
                 'state' : state.objs,
                 'action_hist' : action_hist,
                 'correct_actions' : action_dicts,
                 'incorrect_actions' : []
-            })+"\n"
+            }
+            if(hasattr(self,'domain')):
+                line_dict = {
+                    'domain' : self.domain,
+                    **line_dict
+                }
+
+            line = json.dumps(line_dict)+"\n"
+            # print(line)
             profile_lines.append(line)
             n_problem_lines += 1
             # profile.write()
