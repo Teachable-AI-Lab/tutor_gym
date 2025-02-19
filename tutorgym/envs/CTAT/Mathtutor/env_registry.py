@@ -70,7 +70,7 @@ WORKING_DOMAINS = [
     # Values [x]: All simple values 
     '6_30_HTML',
     
-    # Values [x]: All simple values # 
+    # Values [x]: All simple values, but uses images # 
     '6_34_HTML',
 
     # Values [0]: Expressions                       

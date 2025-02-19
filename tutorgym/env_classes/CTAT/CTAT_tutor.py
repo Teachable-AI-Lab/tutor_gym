@@ -220,7 +220,7 @@ if __name__ == '__main__':
 
     # Values [x]:
     # Order [?]: 
-    problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_09_HTML/")
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_09_HTML/")
 
     # Values [0]:Complicated, mostly dynamic (Highly custom similar to 05) 
     # Order [?]: 
@@ -272,7 +272,7 @@ if __name__ == '__main__':
     # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_26_HTML/")
 
     # Values [x]: Just ExpressionMatches
-    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_27_HTML/")
+    problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_34_HTML/")
 
     # Values [-]: Complicated Expressions, but not that complex
     # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_28_HTML/")
@@ -299,7 +299,7 @@ if __name__ == '__main__':
              # print(problem)
             
             agent = OracleAgent(tutor)
-            trainer = AuthorTrainer(agent, tutor, problem_set=[problem])
+            trainer = Trainer(agent, tutor, problem_set=[problem])
             try:
                 trainer.start()
             except Exception as e:

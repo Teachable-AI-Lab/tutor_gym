@@ -1,0 +1,137 @@
+
+
+prompts = {
+    "6_02_HTML" : 
+        "For these problems you are given a word problem description \
+        with an equation. Fields Question1 through Question4 ask about the  \
+        value of applying this equation with various inputs. \
+        If it is not already there, copy the input value into the corresponding \
+        table cells that end in 'a'. For instance, the input value stated in Question1 \
+        should go in Question1a. The output value from applying the equation will \
+        go in table cells that end in 'b', like Question1b. \
+        Use Question1 through Question4 to fill in each table cell. \
+        Cells can be filled in any order. \
+        ",
+
+    "6_07_HTML" : 
+        "For these problems you are given a word problem description \
+         with two numbers that must be added. In any order, fill in each  \
+         cell of the table (like r1c3) for (row 1, column 3) with the digits of these values. \
+         The first number in the goes in the first row element prefixed with 'r1', and the second \
+         goes in the second row prefixed with 'r2'. Each digit goes in the correct \
+         cell. The hundres digit should go in the c1 column, the tens digit goes in the c2 column, \
+         the ones digit goes in the c3 column, the decimal point goes in the dp1 and dp2 boxes, \
+         the tenths digit goes in the c4 column, the hundreths digit goes in the c5 column. \
+         A trailing 0 can be optionally put in the tenths, hundreths or thousands columns. " +
+        "You must also place the + in the 'sign' box. \
+         After placing the digits in any order, add the numbers together. \
+         Use the boxes c1 through c5 to carry the tens digits of partial sums of 10 or greater. \
+         Put each digit of the sum \
+         in the boxes of row 3, which are prefixed with 'r3'. \
+        ",
+
+    "6_09_HTML" : 
+        "For these problems you are given a word problem description \
+         with two numbers that must either added or subtracted. In any order, fill in each  \
+         cell of the table (like r1c3) for (row 1, column 3) with the digits of these values. \
+         The first number in the goes in the first row element prefixed with 'r1', and the second \
+         goes in the second row prefixed with `r2`. Each digit goes in the correct \
+         cell. The hundres digit should go in the c1 column, the tens digit goes in the c2 column, \
+         the ones digit goes in the c3 column, the decimal point goes in the dp1 and dp2 boxes, \
+         the tenths digit goes in the c4 column, the hundreths digit goes in the c5 column. \
+          A trailing 0 can be optionally put in the tenths, hundreths or thousands columns. " +
+        "You must also place the correct operand + or - in the 'sign' box. \
+         After placing the digits in any order, add the numbers together. \
+         If adding use the boxes c1 through c5 to carry the tensdigits of partial sums of 10 or greater, \
+         If subtracting use the boxes c1 through c5 to borrow across columns. \
+         Put each digit of the sum or difference \
+         in the boxes of row 3, which are prefixed with 'r3'. \
+        ",
+
+    "6_11_HTML" : 
+        "For these problems you are given a word problem description \
+         with two numbers that must be added. In any order, fill in each  \
+         cell of the table (like r1c3) for (row 1, column 3) with the digits of these values. \
+         The first number in the goes in the first row element prefixed with 'r1', and the second \
+         goes in the second row prefixed with 'r2'. Each digit goes in the correct \
+         cell. The hundres digit should go in the c1 column, the tens digit goes in the c2 column, \
+         the ones digit goes in the c3 column, the decimal point goes in the dp1 and dp2 boxes, \
+         the tenths digit goes in the c4 column, the hundreths digit goes in the c5 column. \
+         A trailing 0 can be optionally put in the tenths, hundreths or thousands columns. " +
+        "You must also place the + in the 'sign' box. \
+         After placing the digits in any order, add the numbers together. \
+         Use the boxes c1 through c5 to carry the tens digits of partial sums of 10 or greater. \
+         Put each digit of the sum \
+         in the boxes of row 3, which are prefixed with 'r3'. \
+        ",
+
+    "6_15_HTML" : 
+        "For these problems you are given two large values to divide in OV1 and OV2 \
+         If the O1 box is empty select '/' from the combobox \
+         You must find the largest common power of 10 between the two values and place this  \
+         value in boxes M1 and M2. Divide OV1 and OV2 by M1 and M2 and place \
+         the result in S1 and S2. Finally divide S1 by S2 and put the result in A1. \
+        ",
+
+    "6_27_HTML" : 
+        "For these problems you are given a word problem on scaling factors.\
+         Express the ratio as a fraction and put the numerator in OV1 \
+         and the denominator in OV1 \
+         place the desired quantity requested in the problem statement in CV1. \
+         state the ratio as a fraction like 1/12 between the given value and the desired value in SF1. \
+         scale the denominator value in OV2 by this value and place it in CV2. \
+         Then copy the value of CV2 to A3. \
+        ",   
+
+    "6_30_HTML" : 
+        "You are given a word problem in the D field. \
+         Determine if the problem is a Least Common Multiple (LCM) \
+         or Greatest Common Factor (GCF) problem, and fill the combo box O3 with \
+         LCM or GCF or depending on your choice. \
+         Form a ratio between the two values in the problem statement in box D \
+         and copy the numerator to OV1 and the denominator to OV2. \
+         Fill in the operand * or / into combo boxes O1 and O2. Fill the \
+         common multiple or common factor into M1 and M2. \
+         Apply the operation between OV1 and M1 to get the result numerator and place it in S1. \
+         Apply the operation between OV2 and M2 to get the result numerator and place it in S2. \
+         The pairs of boxes (A1, A2), (A3, A4), (A4, A5) ask fill in the blank questions like \
+         '<A1 value> <blank> <A2 value>' fill in the blank that goes with each of these \
+         into S3 for (A1, A2), (A3, A4) for S4, and (A4, A5) for S5. \
+        ",
+
+    "6_34_HTML" :
+        "You need to find the sides of two like triangles. \
+         The name of the smaller triangle (like Triange ABC) is in box label1. \
+         The name of the larger triangle (like Triange CDE) is in box label5. \
+         The names of the sides of the smaller triangle go in boxes label6, label7, and label8. \
+         The sides of the smaller triangle go in boxes st1, st2, and st3. \
+         The names of the sides of the larger triangle go in boxes label9, label10, and label11. \
+         The sides of the larger triangle go in boxes larget1, larget2, and larget3. \
+         First find the scale factor between the two triangles and copy it into sf1, sf2 and sf3. \
+         Then fill in the remaining unlocked boxes with the correct side length and side name. \
+        ",
+
+    "8_19_HTML" :
+        "You are given a grid with an Exponent column, an Expansion column and a value column. \
+         Fill out the missing values. Each cell in a row has the same number postix like in \
+         Exponent-2, Expansion-2, and Value-2. For reach row \
+         fill in the Exponent or Exansion field and then the Value field. \
+         For instance, if Exponent-1 has 2^3 then fill Expansion-1 with 2*2*2, and value with 8 \
+         and, if Expansion-3 has 3^2 then fill in Exponent-3 with 3*3 then value with 9. \
+        ",
+
+    "8_20_HTML" :
+        "The expression box holds an expression with two terms in parentheses. \
+         Take the leading coefficient of the first term and put in box 'cf number 1'. \
+         Take the leading coefficient of the second term and put in box 'cf number 2'. \
+         Take the x part of the first term with its exponent and put in box 'cf x1'. \
+         Take the x part of the second term with its exponent and put in box 'cf x2'. \
+         Take the y part of the first term with its exponent and put in box 'cf y1'. \
+         Take the y part of the second term with its exponent and put in box 'cf y2'. \
+         If there is no coefficient for any of the above steps then just place a 1 in the box. \
+         Multiply the values in 'cf number 1' and 'cf number 1', put the result in 'cf number 3'. \
+         Multiply the values in 'cf x1' and 'cf x2', put the result in 'cf x3'. \
+         Multiply the values in 'cf y1' and 'cf y2', put the result in 'cf y3'. \
+         Multiply the values in 'cf number 3', 'cf x3', and 'cf y3', put the result in simplified_expression. \
+        ",
+}
