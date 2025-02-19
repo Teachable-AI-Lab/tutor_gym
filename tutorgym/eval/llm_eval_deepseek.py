@@ -42,7 +42,7 @@ Avoid additional text.
         'prompt': next_action_message,
         'stream': False,
         'options': {
-            'num_ctx': 20000
+            'num_ctx': int(len(next_action_message)/3)
         }
     })
     return response.json()['response']
@@ -64,7 +64,7 @@ Answer only with 'yes' or 'no'.
         'prompt': verify_message,
         'stream': False,
         'options': {
-            'num_ctx': 20000
+            'num_ctx': int(len(verify_message)/3)
         }
     })
     return action_type, actions, response.json()['response']
