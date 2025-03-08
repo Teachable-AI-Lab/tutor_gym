@@ -1,0 +1,18 @@
+next_action:
+  template: |
+    I need your help solving this {domain_name} problem. This is the problem state:
+    {state}
+
+    I need you to give me the next action for this problem state. You are only only allowed to changed a field with 'locked' as False. I need your response in this format: field;action_type;value, where:
+    1. field is name of the field. 
+    2. action_type can either be either "PressButton" or "input change"
+    3. The value is the value to enter that field.
+    Avoid additional text.
+
+verify_action:
+  template: |
+    Given this problem state for {domain_name}:
+    {state}
+    Is this action correct (format: selection, action_type, input)?
+    {action}
+    Answer only with 'yes' or 'no'. 
