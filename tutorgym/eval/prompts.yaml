@@ -5,14 +5,20 @@ next_action:
 
     I need you to give me the next action for this problem state. You are only only allowed to changed a field with 'locked' as False. I need your response in this format: field;action_type;value, where:
     1. field is name of the field. 
-    2. action_type can either be either "PressButton" or "input change"
-    3. The value is the value to enter that field.
+    2. action_type can be: {action_types}.
+    3. The value is the corresponding input for the associated field and action_type.
     Avoid additional text.
 
 verify_action:
   template: |
-    Given this problem state for {domain_name}:
+    I need your evaluating a student action taken to solving this {domain_name} problem. This is the problem state:
     {state}
-    Is this action correct (format: selection, action_type, input)?
+
+    The student is only allowed to changed a field with 'locked' as False. Their actions are in the format: `field, action_type, value`, where:
+    1. field is name of the field. 
+    2. action_type can be: {action_types}.
+    3. The value is the corresponding input for the associated field and action_type.
+    
+    Is this student action correct?
     {action}
     Answer only with 'yes' or 'no'. 
