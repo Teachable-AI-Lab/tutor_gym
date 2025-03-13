@@ -71,18 +71,24 @@ def make_compl_prof(self, filename, problems, problem_line_limit=50):
             demos = self.get_all_demos(state)
             action_dicts = [demo.get_info() for demo in demos]
             action_hist = [a.get_info() for a in state.action_hist]
-            print(state.unique_id, state.longhash[:5], f"N DEMOS: {len(demos)}")
+            # print(state.unique_id, state.longhash[:5], f"N DEMOS: {len(demos)}")
 
-            # for _, obj in state.objs.items():
-            #     if(obj['id'] != "ProblemStatement"
-            #         and 'anon' not in obj['id']
-            #         # and not ('Question' in obj['id'] and len())
-            #         and 'Formula' not in obj['id']
-            #         and 'Unit' not in obj['id']
-            #         and 'Heading' not in obj['id']
-            #         and 'ctatdiv' not in obj['id']
-            #         ):
-            #         print(" ", obj['id'], obj.get('value', None))
+            for demo in demos:
+            #     if(demo.sai[1] == "UpdateRadioButton"):
+            #         for _, obj in state.objs.items():
+            #             print(" ", obj['id'], obj.get('value', None))
+                        # if(obj['id'] != "ProblemStatement"
+                        #     and 'anon' not in obj['id']
+                        #     # and not ('Question' in obj['id'] and len())
+                        #     and 'Formula' not in obj['id']
+                        #     and 'Unit' not in obj['id']
+                        #     and 'Heading' not in obj['id']
+                        #     and 'ctatdiv' not in obj['id']
+                        #     ):
+                        #     print(" ", obj['id'], obj.get('value', None))
+                print(demo.sai)
+
+            
             line_dict = {
                 "problem" : self.get_problem(),
                 'state' : state.objs,

@@ -21,34 +21,31 @@ def make_next_state(state, sai):
     return next_state
 
 class CogModel:
-    def __init__(self, start_state, action_list):
+    def __init__(self, start_state, step_actions):
         self.start_state = ProblemState(start_state)
-        self.action_list = action_list  
+        self.step_actions = step_actions  
+        # print("action_list:", self.action_list)
 
     def get_next_actions(self, state):
+
+        # Get all unlocked fields like step0, step1, etc. 
         step_keys = [
             key for key in state.objs.keys()
             if re.match(r'step\d+_', key) and 
             not state.objs[key]['locked']
         ]
-        
-        # Sort keys based on step number
-        sorted_keys = sorted(step_keys, 
-            key=lambda x: int(re.match(r'step(\d+)_', x).group(1))
-        )
-        
 
-        if len(sorted_keys) == 0:
+        # If no unlocked step fields return 'done'
+        if len(step_keys) == 0:
             return [Action(('done', 'PressButton', {'value': -1}))]
+        
+        # Sort keys based on step number to find min unlocked step
+        sorted_keys = sorted(
+            [(int(re.match(r'step(\d+)_', x).group(1)), x) for x in step_keys]
+        )
+        min_unlocked_step = f'step{sorted_keys[0][0]}'
 
-        answer_key, answer_type = sorted_keys[0].split('_')
-        return [
-            Action((sorted_keys[0],
-                   "UpdateRadioButton" if "choice" in answer_type else "UpdateTextField",
-                   {"value": self.action_list[answer_key]}),
-                   how_str=state.objs[f"{answer_key}_title"]['value']
-            )
-        ]
+        return self.step_actions[min_unlocked_step]
 
 
 
@@ -60,14 +57,15 @@ class OATutor(TutorEnvBase):
         with open(problem_names_path, 'r') as file:
             self.problem_names = [line.strip() for line in file if line.strip()]
 
-        print(self.problem_names)
+        # print(self.problem_names)
 
         super().__init__(**kwargs)     
         if(problem_name is not None):
             self.set_problem(problem_name)
             # self.set_random_problem()
 
-    def set_random_problem(self):
+    def set_random_problem(self, problem_name=None):
+        
         problem_name = random.choice(self.problem_names)
         self.set_problem(problem_name)        
         # self.problem_state, self.action_list = process_problem_pool(self.problem_name)
@@ -75,13 +73,13 @@ class OATutor(TutorEnvBase):
 
     def create_cog_model(self, state):
         curr_state = state.copy()
-        return CogModel(curr_state, self.action_list)
+        return CogModel(curr_state, self.step_actions)
     
     def set_start_state(self, problem_name, **kwargs):
         ''' Domain implementation: Used by ApprenticeTutor.set_problem() 
             to initialize a start state.'''
         self.problem_name = problem_name
-        self.problem_state, self.action_list = process_problem_pool(self.problem_name)
+        self.problem_state, self.step_actions = process_problem_pool(self.problem_name)
         # print(self.problem_state)
 
         for key, obj in self.problem_state.items():
@@ -90,7 +88,7 @@ class OATutor(TutorEnvBase):
         step_fields = [self.problem_state[k]['field'] for k in self.problem_state.keys() if k.startswith('step')]
         self.possible_selections = step_fields
         self.possible_args = step_fields
-        self.start_state = ProblemState(self.problem_state)
+        self.start_state = ProblemState(self.problem_state, step_ind=0)
     
     def _standardize_config(self, *args, **kwargs):
         sig = inspect.signature(self.set_start_state)

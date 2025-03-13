@@ -3,6 +3,7 @@ import json
 from typing import Dict, Optional
 import random
 from pathlib import Path
+from tutorgym.shared import Action
 
 current_dir = Path(__file__).parent
 problem_pool_path = current_dir / "ProblemPool"  
@@ -22,29 +23,47 @@ def create_state_item(field: str, item_type: str, value: str, x: int, y: int, lo
 def process_step_json(step_idx: int, step_json: dict, y: int) -> tuple[Dict, int]:
         
     state = {}
+    correct_actions = []
     field_prefix = f'step{step_idx}'
     
     # Add step title
     state[f'{field_prefix}_title'] = create_state_item(
         f'{field_prefix}_title', 'Label', step_json['stepTitle'], 50, y * 100
     )
+
+    # print(step_json)
     
     if step_json.get('problemType') == 'TextBox':
         # Handle TextBox type
-        state[f'{field_prefix}_field'] = create_state_item(
-            f'{field_prefix}_field', 'TextField', step_json['stepAnswer'][0], 50, (y + 1) * 100, False
+
+        field_name = f'{field_prefix}_field'
+        state[field_name] = create_state_item(
+            field_name, 'TextField', "", 50, (y + 1) * 100, False
         )
         y += 2
-    else:
+
+        for ans in step_json['stepAnswer']:
+            correct_actions.append(
+                Action((field_name, "UpdateTextField", {'value' : ans}))
+            )
+    elif step_json.get('problemType') == 'MultipleChoice':
         # Handle RadioButton type
         for choice_idx, choice in enumerate(step_json['choices']):
-            state[f'{field_prefix}_choice{choice_idx}'] = {
-                **create_state_item(f'{field_prefix}_choice{choice_idx}', 'RadioButton', choice, 50, (y + 1) * 100, False),
+            field_name = f'{field_prefix}_choice{choice_idx}'
+            state[field_name] = {
+                **create_state_item(field_name, 'RadioButton', choice, 50, (y + 1) * 100, False),
                 'selected': False
             }
             y += 2
+
+        for ans in step_json['stepAnswer']:
+            ans_ind = step_json['choices'].index(ans)
+            field_name = f'{field_prefix}_choice{ans_ind}'
+            correct_actions.append(
+                Action((field_name, "UpdateRadioButton", {'value' : ans}))
+            )
     
-    return state, y
+    return state, correct_actions, y
 
 def process_problem_pool(problem_name: str) -> tuple[dict, dict]:
 
@@ -53,10 +72,13 @@ def process_problem_pool(problem_name: str) -> tuple[dict, dict]:
     if not matching_dirs:
         print(f"No directories found containing '{problem_name}'")
         return
+
+    print(matching_dirs)
         
     problem_dir = random.choice(matching_dirs)
     state: dict[str, dict] = {}
-    answers: dict[str, str] = {}
+    step_actions: dict[str, Action] = {}
+    # answers: 
 
     y = 0
     problem_dir_path = os.path.join(problem_pool_path, problem_dir)
@@ -79,9 +101,15 @@ def process_problem_pool(problem_name: str) -> tuple[dict, dict]:
             if not os.path.isdir(step_dir_path):
                 continue
             
+            # print("step_dir_path", step_dir_path)
             for json_file in [f for f in os.listdir(step_dir_path) if f.endswith('.json')]:
                 if step_json := read_json_file(os.path.join(step_dir_path, json_file)):
-                    step_state, y = process_step_json(step_idx, step_json, y)
+                    step_state, correct_actions, y = \
+                        process_step_json(step_idx, step_json, y)
                     state.update(step_state)
-                    answers[f'step{step_idx}'] = step_json['stepAnswer'][0]
-    return state, answers
+                    step_actions[f'step{step_idx}'] = correct_actions
+                    # answers[f'step{step_idx}'] = step_json['stepAnswer'][0]
+
+
+    # print("state", state)
+    return state, step_actions

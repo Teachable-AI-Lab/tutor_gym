@@ -86,10 +86,20 @@ class CTAT_Tutor(StateMachineTutor):
             if k[:4] == 'anon':
                 continue 
 
-            if("x" in obj): obj["x"] = int(obj["x"])
-            if("y" in obj): obj["y"] = int(obj["y"])
-            if("width" in obj): obj["width"] = int(obj["width"])
-            if("height" in obj): obj["height"] = int(obj["height"])
+            if "ctatdiv" in k:
+                continue 
+
+            # if("x" in obj): obj["x"] = int(obj["x"])
+            # if("y" in obj): obj["y"] = int(obj["y"])
+            # if("width" in obj): obj["width"] = int(obj["width"])
+            # if("height" in obj): obj["height"] = int(obj["height"])
+
+            if("x" in obj): del obj["x"]
+            if("y" in obj): del obj["y"]
+            if("width" in obj): del obj["width"]
+            if("height" in obj): del obj["height"]
+            if("child_ids" in obj): del obj["child_ids"]
+
 
             f_state[k] = obj
         return f_state
@@ -214,6 +224,14 @@ if __name__ == '__main__':
     from tutorgym.trainer import Trainer, AuthorTrainer
     from tutorgym.agents.oracle_agent import OracleAgent
     from random import choice
+
+    sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/")
+
+    n = 0
+    for s in sets:
+        n += len(list(s))
+    print("N", n)
+    raise ValueError()
 
 
 
