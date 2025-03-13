@@ -64,7 +64,8 @@ class LLMEvaluator(ABC):
             verify_message = self.prompts['verify_action']['template'].format(
                 domain_name=domain_name,
                 state=state,
-                action_types=self.action_types
+                action_types=self.action_types,
+                action=action.sai
             )
             print(verify_message)
             response = self.get_completion(verify_message)
