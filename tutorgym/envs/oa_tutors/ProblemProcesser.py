@@ -67,21 +67,21 @@ def process_step_json(step_idx: int, step_json: dict, y: int) -> tuple[Dict, int
 
 def process_problem_pool(problem_name: str) -> tuple[dict, dict]:
 
-    matching_dirs = [d for d in os.listdir(problem_pool_path) 
-                    if problem_name in d and os.path.isdir(os.path.join(problem_pool_path, d))]
-    if not matching_dirs:
-        print(f"No directories found containing '{problem_name}'")
-        return
+    # matching_dirs = [d for d in os.listdir(problem_pool_path) 
+    #                 if problem_name in d and os.path.isdir(os.path.join(problem_pool_path, d))]
+    # if not matching_dirs:
+    #     print(f"No directories found containing '{problem_name}'")
+    #     return
 
-    print(matching_dirs)
+    # print(matching_dirs)
         
-    problem_dir = random.choice(matching_dirs)
+    # problem_dir = random.choice(matching_dirs)
     state: dict[str, dict] = {}
     step_actions: dict[str, Action] = {}
     # answers: 
 
     y = 0
-    problem_dir_path = os.path.join(problem_pool_path, problem_dir)
+    problem_dir_path = os.path.join(problem_pool_path, problem_name)
     
     for json_file in [f for f in os.listdir(problem_dir_path) if f.endswith('.json')]:
         json_path = os.path.join(problem_dir_path, json_file)

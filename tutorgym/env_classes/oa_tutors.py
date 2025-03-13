@@ -51,23 +51,42 @@ class CogModel:
 
 
 class OATutor(TutorEnvBase):
-    def __init__(self, problem_name=None, **kwargs):
+    def __init__(self, **kwargs):
+        
         self_dir, _ = os.path.split(__file__)
-        problem_names_path = os.path.join(self_dir, '../envs/oa_tutors/ProblemNames.txt')
-        with open(problem_names_path, 'r') as file:
-            self.problem_names = [line.strip() for line in file if line.strip()]
+        domain_names_path = os.path.join(self_dir, '../envs/oa_tutors/ProblemNames.txt')
+        with open(domain_names_path, 'r') as file:
+            self.domains = [line.strip() for line in file if line.strip()]
+
+        problem_pool_dir = os.path.join(self_dir, '../envs/oa_tutors/ProblemPool')
+
+        self.problem_domains = {}
+        self.domain_problems = {}
+        for domain in self.domains:
+            problems = [d for d in os.listdir(problem_pool_dir) 
+                        if domain in d and os.path.isdir(os.path.join(problem_pool_dir, d))]
+            self.domain_problems[domain] = problems
+            for problem in problems:
+                self.problem_domains[problem] = domain
+
+        # if not matching_dirs:
+        #     print(f"No directories found containing '{problem_name}'")
+        #     return
 
         # print(self.problem_names)
 
-        super().__init__(**kwargs)     
-        if(problem_name is not None):
-            self.set_problem(problem_name)
-            # self.set_random_problem()
+        super().__init__(**kwargs)
 
-    def set_random_problem(self, problem_name=None):
-        
-        problem_name = random.choice(self.problem_names)
-        self.set_problem(problem_name)        
+        # self.set_random_problem(domain)
+            
+
+    def set_random_problem(self, domain=None):
+        if(domain is None):
+            problem_name = random.choice(list(self.problem_domains.keys()))
+        else:
+            problem_name = random.choice(self.domain_problems[domain])
+
+        self.set_problem(problem_name)
         # self.problem_state, self.action_list = process_problem_pool(self.problem_name)
         # self.set_problem(self.problem_state['title']['value'])
 
@@ -80,6 +99,7 @@ class OATutor(TutorEnvBase):
             to initialize a start state.'''
         self.problem_name = problem_name
         self.problem_state, self.step_actions = process_problem_pool(self.problem_name)
+        self.domain = self.problem_domains[problem_name]
         # print(self.problem_state)
 
         for key, obj in self.problem_state.items():
