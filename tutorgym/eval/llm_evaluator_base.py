@@ -8,7 +8,8 @@ import yaml
 from pathlib import Path
 import argparse
 from typing import Type, Dict
-
+import datetime
+import os
 
 action_types_by_tutor_kind = {
     "apprentice" : ["input change", "PressButton"],
@@ -21,6 +22,7 @@ class LLMEvaluator(ABC):
         self.model_name = model_name
         self.tutor_kind = tutor_kind
         self.action_types = action_types_by_tutor_kind[tutor_kind]
+
         
         # Load prompts from YAML
         prompts_path = Path(__file__).parent / "prompts.yaml"
@@ -32,17 +34,31 @@ class LLMEvaluator(ABC):
         """Get completion from LLM model"""
         pass
 
-    def initialize_csv_files(self, tutor_name):
+    def initialize_csv_files(self, log_start_time=False):
         """Initialize CSV files with headers"""
-        with open(f'{tutor_name}_action_check_{self.model_name}.csv', 'w', newline='') as f:
+        # tutor_kind, model = self.tutor_kind, self.model_name
+
+        now_str = ""
+        if(log_start_time):
+            now = datetime.now().timestamp()
+            now_str = "_" + now.strftime('%Y-%m-%d-%H-%M-%S')
+
+        tutor_kind, model = self.tutor_kind, self.model_name
+        self.action_csv = f'tutor_eval_logs/{tutor_kind}_action_check_{model}{now_str}.csv'
+        self.corr_csv = f'tutor_eval_logs/{tutor_kind}_correct_check_{model}{now_str}.csv'
+        self.incorr_csv = f'tutor_eval_logs/{tutor_kind}_incorrect_check_{model}{now_str}.csv'
+
+        os.makedirs("tutor_eval_logs", exist_ok=True)
+
+        with open(self.action_csv, 'w', newline='') as f:
             writer = csv.writer(f)
             writer.writerow(['hash_id', 'domain', 'action', 'action_correct'])
         
-        with open(f'{tutor_name}_correctness_check_{self.model_name}.csv', 'w', newline='') as f:
+        with open(self.corr_csv, 'w', newline='') as f:
             writer = csv.writer(f)
             writer.writerow(['hash_id', 'domain', 'correct'])
         
-        with open(f'{tutor_name}_incorrectness_check_{self.model_name}.csv', 'w', newline='') as f:
+        with open(self.incorr_csv, 'w', newline='') as f:
             writer = csv.writer(f)
             writer.writerow(['hash_id', 'domain', 'incorrect'])
 
@@ -73,11 +89,11 @@ class LLMEvaluator(ABC):
             print(verify_message)
             response = self.get_completion(verify_message)
             responses.append((true_correctness, act_d, response))
+            print(true_correctness, response)
         return responses
     
-    def evaluate(self, profile_path="apprentince_compl.prof"):
-        self.tutor_name = profile_path.split('_')[0]
-        self.initialize_csv_files(self.tutor_name)
+    def evaluate(self, profile_path="apprentince_compl.prof", log_start_time=False):
+        self.initialize_csv_files(log_start_time)
         
         with open(profile_path, 'r') as profile:
             total_lines = sum(1 for _ in profile)
@@ -92,7 +108,7 @@ class LLMEvaluator(ABC):
         obj = json.loads(line)
         hash_id = unique_hash(line)
         
-        if self.tutor_name == "apprentice":
+        if self.tutor_kind == "apprentice":
             current_scaffold_level = int(obj['scaffold'].split('_')[-1])
             filtered_state = {
                 k: v for k, v in obj['state'].items()
@@ -114,36 +130,37 @@ class LLMEvaluator(ABC):
         except Exception:
             selection, action_type, input = 'incorrect_format', 'incorrect_format', 'incorrect_format'
 
-        correct_verified = self.verify_actions(filtered_state, obj['domain'], obj['correct_actions'], True)
-        incorrect_verified = self.verify_actions(filtered_state, obj['domain'], obj['incorrect_actions'], False)
-
-        is_correct = False
+        next_action_correct = False
         if selection != 'incorrect_format':
-            is_correct = any(
+            next_action_correct = any(
                 action['selection'] == selection and 
                 action['action_type'] == action_type and 
                 action['inputs']['value'] == input
                 for action in obj['correct_actions']
             )
-        
+
+        correct_verified = self.verify_actions(filtered_state, obj['domain'], obj['correct_actions'], True)
+        incorrect_verified = self.verify_actions(filtered_state, obj['domain'], obj['incorrect_actions'], False)
+
         try:
-            self._write_results(hash_id, obj['domain'], selection, action_type, input, is_correct, correct_verified, incorrect_verified)
+            self._write_results(hash_id, obj['domain'], selection, action_type, input, next_action_correct, correct_verified, incorrect_verified)
         except Exception as e:
             print(f"Error writing to CSV: {str(e)}")
         
         progress_bar.update(1)
 
-    def _write_results(self, hash_id, domain, selection, action_type, input, is_correct, correct_verified, incorrect_verified):
-        with open(f'{self.tutor_name}_action_check_{self.model_name}.csv', 'a', newline='', encoding='utf-8') as f:
+    def _write_results(self, hash_id, domain, selection, action_type, input, next_action_correct, correct_verified, incorrect_verified):
+        with open(self.action_csv, 'a', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
-            writer.writerow([hash_id, domain, (selection, action_type, input), is_correct])
+            writer.writerow([hash_id, domain, (selection, action_type, input), next_action_correct])
         
         for result in [*correct_verified, *incorrect_verified]:
-            action_type, action, response = result
-            filename = f'{self.tutor_name}_{"correctness" if action_type == "Correct" else "incorrectness"}_check_{self.model_name}.csv'
+            correctness, action, response = result
+
+            filename = self.corr_csv if correctness == "Correct" else self.incorr_csv #f'{self.tutor_name}_{"correctness" if correctness == "Correct" else "incorrectness"}_check_{self.model_name}.csv'
             with open(filename, 'a', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
-                writer.writerow([hash_id, domain, response.lower() == ('yes' if action_type == "Correct" else 'no')])
+                writer.writerow([hash_id, domain, response.lower() == ('yes' if correctness == "Correct" else 'no')])
 
 def get_evaluator_class(model: str) -> Type[LLMEvaluator]:
     """Get the appropriate evaluator class based on model name"""
