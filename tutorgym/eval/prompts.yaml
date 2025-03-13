@@ -14,7 +14,7 @@ verify_action:
     I need your evaluating a student action taken to solving this {domain_name} problem. This is the problem state:
     {state}
 
-    The student is only allowed to changed a field with 'locked' as False. Their actions are in the format: `field, action_type, value`, where:
+    The student is only allowed to changed a field with 'locked' as False. Their actions are in the format: `field;action_type;value`, where:
     1. field is name of the field. 
     2. action_type can be: {action_types}.
     3. The value is the corresponding input for the associated field and action_type.

@@ -72,7 +72,7 @@ class LLMEvaluator(ABC):
             )
             print(verify_message)
             response = self.get_completion(verify_message)
-            responses.append((true_correctness, action, response))
+            responses.append((true_correctness, act_d, response))
         return responses
     
     def evaluate(self, profile_path="apprentince_compl.prof"):
