@@ -56,20 +56,23 @@ class LLMEvaluator(ABC):
         return self.get_completion(next_action_message)
 
     def verify_actions(self, state, domain, actions, is_correct=True):
-        action_type = "Correct" if is_correct else "Incorrect"
+        true_correctness = "Correct" if is_correct else "Incorrect"
         domain_name = ' '.join(domain.replace('htn_', '').split('_'))
 
         responses = []
-        for action in actions:
+        for act_d in actions:
+
+            action_str = f"{act_d['selection']};{act_d['action_type']};{act_d['inputs']['value']}"
+
             verify_message = self.prompts['verify_action']['template'].format(
                 domain_name=domain_name,
                 state=state,
                 action_types=self.action_types,
-                action=action.sai
+                action=action_str
             )
             print(verify_message)
             response = self.get_completion(verify_message)
-            responses.append((action_type, action, response))
+            responses.append((true_correctness, action, response))
         return responses
     
     def evaluate(self, profile_path="apprentince_compl.prof"):
