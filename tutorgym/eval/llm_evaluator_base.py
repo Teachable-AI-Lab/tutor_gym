@@ -9,10 +9,18 @@ from pathlib import Path
 import argparse
 from typing import Type, Dict
 
+
+action_types_by_tutor_kind = {
+    "apprentice" : ["input change", "PressButton"],
+    "oatutor" : ["UpdateTextField", "PressButton"] ,
+    "ctat" : ["UpdateTextField", "UpdateRadioButton", "PressButton"] ,
+}
+
 class LLMEvaluator(ABC):
-    def __init__(self, model_name):
+    def __init__(self, model_name, tutor_kind):
         self.model_name = model_name
-        self.tutor_name = "apprentice"
+        self.tutor_kind = tutor_kind
+        self.action_types = action_types_by_tutor_kind[tutor_kind]
         
         # Load prompts from YAML
         prompts_path = Path(__file__).parent / "prompts.yaml"
@@ -42,7 +50,8 @@ class LLMEvaluator(ABC):
         domain_name = ' '.join(domain.replace('htn_', '').split('_'))
         next_action_message = self.prompts['next_action']['template'].format(
             domain_name=domain_name,
-            state=state
+            state=state,
+            action_types=self.action_types
         )
         return self.get_completion(next_action_message)
 
@@ -55,8 +64,9 @@ class LLMEvaluator(ABC):
             verify_message = self.prompts['verify_action']['template'].format(
                 domain_name=domain_name,
                 state=state,
-                action=Action(action).sai
+                action_types=self.action_types
             )
+            print(verify_message)
             response = self.get_completion(verify_message)
             responses.append((action_type, action, response))
         return responses
@@ -148,6 +158,13 @@ def get_evaluator_class(model: str) -> Type[LLMEvaluator]:
     
     return evaluators[model]
 
+def guess_tutor_kind(profile_name):
+    for tutor_kind in action_types_by_tutor_kind:
+        if(tutor_kind in profile_name):
+            return tutor_kind
+    return None
+
+
 def main():
     parser = argparse.ArgumentParser(description='Run LLM evaluation with different models')
     parser.add_argument('--model', type=str, required=True, 
@@ -155,12 +172,16 @@ def main():
                        help='The LLM model to use for evaluation')
     parser.add_argument('--profile', type=str, default="apprentice_compl.prof",
                        help='Path to the profile file (default: apprentice_compl.prof)')
+    parser.add_argument('--tutor_kind', type=str, default=None,
+                       help='The tutor tutor_kind: "apprentice", "oatutor" or "ctat"')
     
     args = parser.parse_args()
+    tutor_kind = args.tutor_kind
+    tutor_kind = tutor_kind if tutor_kind else guess_tutor_kind(args.profile)
     
     # Get and instantiate the appropriate evaluator
     evaluator_class = get_evaluator_class(args.model)
-    evaluator = evaluator_class()
+    evaluator = evaluator_class(tutor_kind)
     
     # Run evaluation
     evaluator.evaluate(args.profile)

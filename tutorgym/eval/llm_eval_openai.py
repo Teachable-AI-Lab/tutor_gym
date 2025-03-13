@@ -2,8 +2,8 @@ from openai import OpenAI
 from tutorgym.eval.llm_evaluator_base import LLMEvaluator
 
 class OpenAIEvaluator(LLMEvaluator):
-    def __init__(self):
-        super().__init__("openai")
+    def __init__(self, tutor_kind):
+        super().__init__("openai", tutor_kind)
         self.client = OpenAI()
         
     def get_completion(self, prompt, max_tokens=100):
@@ -16,5 +16,5 @@ class OpenAIEvaluator(LLMEvaluator):
         return response.choices[0].message.content
 
 if __name__ == "__main__":
-    evaluator = OpenAIEvaluator()
+    evaluator = OpenAIEvaluator("apprentice")
     evaluator.evaluate("apprentice_compl.prof")
