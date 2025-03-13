@@ -86,7 +86,7 @@ class LLMEvaluator(ABC):
                 action_types=self.action_types,
                 action=action_str
             )
-            print(verify_message)
+            print(verify_message.encode(sys.stdout.encoding, 'replace'))
             response = self.get_completion(verify_message)
             responses.append((true_correctness, act_d, response))
             print(true_correctness, response)
@@ -193,12 +193,15 @@ def main():
                        help='The LLM model to use for evaluation')
     parser.add_argument('--profile', type=str, default="apprentice_compl.prof",
                        help='Path to the profile file (default: apprentice_compl.prof)')
-    parser.add_argument('--tutor_kind', type=str, default=None,
+    parser.add_argument('--tutor-kind', type=str, default=None,
                        help='The tutor tutor_kind: "apprentice", "oatutor" or "ctat"')
     
     args = parser.parse_args()
     tutor_kind = args.tutor_kind
     tutor_kind = tutor_kind if tutor_kind else guess_tutor_kind(args.profile)
+    if(tutor_kind is None):
+        raise ValueError('Could not deduce tutor kind from from profile name ' +
+         'please provide --tutor-kind="apprentice", "oatutor" or "ctat"')
     
     # Get and instantiate the appropriate evaluator
     evaluator_class = get_evaluator_class(args.model)
