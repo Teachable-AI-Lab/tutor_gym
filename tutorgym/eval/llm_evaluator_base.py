@@ -10,6 +10,7 @@ import argparse
 from typing import Type, Dict
 import datetime
 import os
+import sys
 
 action_types_by_tutor_kind = {
     "apprentice" : ["input change", "PressButton"],
