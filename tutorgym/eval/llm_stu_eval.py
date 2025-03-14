@@ -115,7 +115,7 @@ class LLMStudentAgent(ABC):
 class DeepSeekStudentAgent(LLMStudentAgent):
     def run_prompt(self, prompt):
         response = requests.post('http://localhost:11434/api/generate', json={
-            'model': 'deepseek-v2.5',
+            'model': 'deepseek-r1:latest',
             'prompt': prompt,
             'stream': False,
             'options': {
@@ -128,7 +128,7 @@ class DeepSeekStudentAgent(LLMStudentAgent):
         else:
             response = response.json()['response']
         print(prompt)
-        print("RESPOSNE:", response)
+        print("RESPOSNE:", response.encode(sys.stdout.encoding, 'replace'))
         return response
 
 
