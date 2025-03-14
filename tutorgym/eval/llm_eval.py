@@ -62,11 +62,11 @@ class LLMEvaluator(ABC):
         
         with open(self.corr_csv, 'w', newline='') as f:
             writer = csv.writer(f)
-            writer.writerow(['hash_id', 'domain', 'selection', 'action_type', 'input', 'action_is_correct', 'response', 'llm_label_is_correct'])
+            writer.writerow(['hash_id', 'domain', 'selection', 'action_type', 'input', 'action_is_correct', 'response', 'response_is_correct'])
         
         with open(self.incorr_csv, 'w', newline='') as f:
             writer = csv.writer(f)
-            writer.writerow(['hash_id', 'domain', 'selection', 'action_type', 'input', 'action_is_correct', 'response', 'llm_label_is_correct'])
+            writer.writerow(['hash_id', 'domain', 'selection', 'action_type', 'input', 'action_is_correct', 'response', 'response_is_correct'])
 
     def get_next_action(self, state, domain):
         domain_name = ' '.join(domain.replace('htn_', '').split('_'))
@@ -175,15 +175,15 @@ class LLMEvaluator(ABC):
             writer = csv.writer(f)
             writer.writerow([hash_id, domain, selection, action_type, inp_val, next_action_correct])
         
-        for result in corr_results:
-            with open(self.corr_csv, 'a', newline='', encoding='utf-8') as f:
-                writer = csv.writer(f)
-                write.writerow([hash_id, domain, *results])
+        with open(self.corr_csv, 'a', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            for result_row in corr_results:
+                write.writerow([hash_id, domain, *result_row])
 
-        for result in incorr_results:
-            with open(self.incorr_csv, 'a', newline='', encoding='utf-8') as f:
-                writer = csv.writer(f)
-                write.writerow([hash_id, domain, *results])
+        with open(self.incorr_csv, 'a', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            for result_row in incorr_results:
+                write.writerow([hash_id, domain, *result_row])
 
         # for result in incorr_results:
         #     sai, correctness, action, response = result
