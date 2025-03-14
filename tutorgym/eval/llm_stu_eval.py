@@ -13,6 +13,7 @@ import requests
 import yaml
 import time
 import traceback
+import sys
 
 action_types_by_tutor_kind = {
     "apprentice" : ["input change", "PressButton"],
