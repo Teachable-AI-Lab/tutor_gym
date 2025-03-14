@@ -89,8 +89,8 @@ class LLMStudentAgent(ABC):
         response = self.run_retry_prompt(full_prompt)
 
         # Parse response into an Action
-        action_text = response.json()['response']
-        parts = action_text.split(';')
+        # action_text = response.json()['response']
+        parts = response.split(';')
         if len(parts) == 3:                
             selection, action_type, input = parts
             if action_type == "PressButton":
@@ -113,6 +113,7 @@ class DeepSeekStudentAgent(LLMStudentAgent):
                 'num_ctx': 4096
             }
         })
+        response = response.json()['response']
         print(prompt)
         print("RESPOSNE:", response)
         return response
