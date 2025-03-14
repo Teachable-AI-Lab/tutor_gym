@@ -3,9 +3,9 @@ import glob
 import pathlib
 import os
 
-print("START")
+# print("START")
 for directory in glob.glob("./tutor_eval_logs/**/**/"):
-    print(directory)
+    # print(directory)
     path_parts = pathlib.Path(directory).parts
     # directory = os.path.sep.join(path_parts[1:-1])
     time = path_parts[-1]
@@ -18,21 +18,23 @@ for directory in glob.glob("./tutor_eval_logs/**/**/"):
 
         if("action" in f):
             counts = df['action_is_correct'].value_counts()
-            tr,fa = counts[True], counts[False]
-            print(f"Next Action Accuracy {tr}/{(tr+fa)} {100*tr/(tr+fa):.2f}%")
-        elif("correct" in f):
-            counts = df['response_is_correct'].value_counts()
-            print(counts)
-            tr,fa = counts[True], counts[False]
-            print(f"Correct Grade Accuracy {tr}/{(tr+fa)} {100*tr/(tr+fa):.2f}%")
+            # print("action counts", counts)
+            tr,fa = counts.get(True,0), counts.get(False,0)
+            print(f"Next Action Accuracy {tr}/{(tr+fa)} {100*tr/max(tr+fa,1):.2f}%")
         elif("incorrect" in f):
             counts = df['response_is_correct'].value_counts()
-            print(counts)
-            tr,fa = counts[True], counts[False]
-            print(f"Incorrect Grade Accuracy {tr}/{(tr+fa)} {100*tr/(tr+fa):.2f}%")
+            # print("incorrect counts",counts)
+            tr,fa = counts.get(True,0), counts.get(False,0)
+            print(f"Incorrect Grade Accuracy {tr}/{(tr+fa)} {100*tr/max(tr+fa,1):.2f}%")
+        elif("correct" in f):
+            counts = df['response_is_correct'].value_counts()
+            # print("correct counts", counts)
+            tr,fa = counts.get(True,0), counts.get(False,0)
+            print(f"Correct Grade Accuracy {tr}/{(tr+fa)} {100*tr/max(tr+fa,1):.2f}%")
+        
 
-        print(" ", df.columns)
+        # print(" ", df.columns)
 
 
-print("END")
+# print("END")
 

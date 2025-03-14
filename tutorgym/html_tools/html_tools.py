@@ -53,8 +53,7 @@ def open_browser(html_file, browser=None, browser_args=[]):
         import webbrowser
         webbrowser.get().open(html_file)
 
-from flask import Flask, request, jsonify, send_from_directory
-from flask_socketio import SocketIO, send, emit
+
 import json
 import os
 
@@ -87,6 +86,8 @@ import os
 #                 time.sleep(1)
 
 def build_flask_server(host, port, root_dir, auth_key):
+    from flask import Flask, request, jsonify, send_from_directory
+    from flask_socketio import SocketIO
     # message_queue = Queue()
     app = Flask("html_tools_server")
     socketio = SocketIO(app)

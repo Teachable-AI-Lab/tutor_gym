@@ -1,4 +1,3 @@
-import xmltodict
 import lxml.etree as ET
 from tutorgym.shared import Action
 from tutorgym.env_classes.fsm_tutor import ActionGroup

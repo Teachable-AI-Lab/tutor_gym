@@ -22,3 +22,13 @@ verify_action:
     Is this student action correct?
     {action}
     Answer only with 'yes' or 'no'. 
+
+student_act:
+  template: |
+    {state}
+    What should be the next action in this state for? You are only only allowed to changed a field with 'locked' as False \
+    I need your response in this format: field;action_type;value, where:
+    1. field is name of the field. 
+    2. action_type can either be either "input change" or "PressButton"
+    3. value is the value to enter that field. 
+    At tops, give a single expression for value or a single word. Avoid additional text.
