@@ -1,12 +1,12 @@
 from openai import OpenAI
-from tutorgym.eval.llm_evaluator_base import LLMEvaluator
+from tutorgym.eval.llm_eval import LLMEvaluator
 
 class OpenAIEvaluator(LLMEvaluator):
     def __init__(self, tutor_kind):
         super().__init__("openai", tutor_kind)
         self.client = OpenAI()
         
-    def get_completion(self, prompt, max_tokens=100):
+    def run_prompt(self, prompt, max_tokens=100):
         response = self.client.chat.completions.create(
             model="gpt-4",
             messages=[{"role": "user", "content": prompt}],
