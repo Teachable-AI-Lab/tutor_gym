@@ -14,6 +14,12 @@ import yaml
 import time
 import traceback
 
+action_types_by_tutor_kind = {
+    "apprentice" : ["input change", "PressButton"],
+    "oatutor" : ["UpdateTextField", "PressButton"] ,
+    "ctat" : ["UpdateTextField", "UpdateRadioButton", "PressButton"] ,
+}
+
 
 class LLMStudentAgent(ABC):
     def __init__(self, prompt_retries=10, prompt_retry_delay=5, **kwargs):
@@ -79,7 +85,10 @@ class LLMStudentAgent(ABC):
             self.conversation_log.append({"role": "user", "content": "------Now lets solve this problem!------"})
             
         # Construct prompt for next action
-        prob_prompt = self.prompts['student_act']['template'].format(state=state.objs)
+        prob_prompt = self.prompts['student_act']['template'].format(
+            state=state.objs,
+            action_types=action_types_by_tutor_kind['apprentice']
+        )
         
         self.conversation_log.append({"role": "user", "content": prob_prompt})
         self._manage_conversation_log()
