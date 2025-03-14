@@ -14,7 +14,13 @@ class DeepseekEvaluator(LLMEvaluator):
                 'num_ctx': 4096
             }
         })
-        return response.json()['response']
+
+        if(response.status_code >= 300):
+            error = response.json()['error']
+            raise ConnectionError(f"Status Code:{response.status_code}, Error: {error}")
+        else:
+            response = response.json()['response']
+        return response
 
 if __name__ == "__main__":
     evaluator = DeepseekEvaluator()
