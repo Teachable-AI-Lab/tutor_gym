@@ -78,7 +78,6 @@ class LLMEvaluator(ABC):
         return self.run_prompt(next_action_message)
 
     def verify_actions(self, state, domain, actions, action_is_correct=True):
-        # true_correctness = "Correct" if is_correct else "Incorrect"
         domain_name = ' '.join(domain.replace('htn_', '').split('_'))
 
         results = []
@@ -97,13 +96,14 @@ class LLMEvaluator(ABC):
             print(verify_message.encode(sys.stdout.encoding, 'replace'))
 
             response = self.run_prompt(verify_message)
+            ideal_response = 'yes' if action_is_correct else "no"
             results.append((
                 act_d['selection'],
                 act_d['action_type'],
                 act_d['inputs']['value'], 
                 action_is_correct,
                 response.lower(),
-                response.lower() == 'yes',
+                response.lower() == ideal_response,
             ))
 
             # responses.append((true_correctness, act_d, response))
@@ -185,15 +185,6 @@ class LLMEvaluator(ABC):
             for result_row in incorr_results:
                 writer.writerow([hash_id, domain, *result_row])
 
-        # for result in incorr_results:
-        #     sai, correctness, action, response = result
-
-        #     filename = self.corr_csv if correctness == "Correct" else self.incorr_csv #f'{self.tutor_name}_{"correctness" if correctness == "Correct" else "incorrectness"}_check_{self.model_name}.csv'
-            
-                
-        #         writer.writerow([hash_id, domain, 
-        #                         (selection, action_type, input)
-        #                         response.lower() == ('yes' if correctness == "Correct" else 'no')])
 
 def get_evaluator_class(model: str) -> Type[LLMEvaluator]:
     """Get the appropriate evaluator class based on model name"""
