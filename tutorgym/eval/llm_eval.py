@@ -178,12 +178,12 @@ class LLMEvaluator(ABC):
         with open(self.corr_csv, 'a', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             for result_row in corr_results:
-                write.writerow([hash_id, domain, *result_row])
+                writer.writerow([hash_id, domain, *result_row])
 
         with open(self.incorr_csv, 'a', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             for result_row in incorr_results:
-                write.writerow([hash_id, domain, *result_row])
+                writer.writerow([hash_id, domain, *result_row])
 
         # for result in incorr_results:
         #     sai, correctness, action, response = result
