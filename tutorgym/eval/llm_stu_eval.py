@@ -14,12 +14,19 @@ import yaml
 import time
 import traceback
 import sys
+from colorama import Back, Fore, Style
+# from colorama import init
 
 action_types_by_tutor_kind = {
     "apprentice" : ["input change", "PressButton"],
     "oatutor" : ["UpdateTextField", "PressButton"] ,
     "ctat" : ["UpdateTextField", "UpdateRadioButton", "PressButton"] ,
 }
+
+def action_semicolon_format(action):
+    selection, action_type, inp = action.sai
+    return f"{selection};{action_type};{inp['value']}"
+
 
 
 class LLMStudentAgent(ABC):
@@ -67,13 +74,15 @@ class LLMStudentAgent(ABC):
             self.conversation_log = self.conversation_log[3:]
             
     def train(self, state, action, reward, is_demo=False, is_start=False, **kwargs):
+
+        action_str = action_semicolon_format(action)
         if is_demo:
-            message = f"For this step, the correct action is: {action}"
+            message = f"For this step, the correct action is: {action_str}"
             self.conversation_log.append({"role": "user", "content": message})
         else:
-            self.conversation_log.append({"role": "assistant", "content": f"This is my action: {action}"})
+            self.conversation_log.append({"role": "assistant", "content": f"This is my action: {action_str}"})
             if reward <= 1:
-                message = f"That action was incorrect. The correct action was: {action}"
+                message = "That action was incorrect!"
             else:
                 message = "That action was correct!"
             self.conversation_log.append({"role": "user", "content": message})
@@ -113,6 +122,23 @@ class LLMStudentAgent(ABC):
 
     # def act_all(self, state, **kwargs):
 
+def extract_response(response):
+    if(response.status_code >= 300):
+        error = response.json()['error']
+        raise ConnectionError(f"Status Code:{response.status_code}, Error: {error}")
+    else:
+        response = response.json()['response']
+
+    reasoning = "\n".join(response.split("\n")[:-1])
+    last_line = response.split("\n")[-1]
+    return reasoning, last_line
+
+def print_response(reasoning, last_line):
+    print("RESPONSE:")
+    print(reasoning.encode(sys.stdout.encoding, 'replace'))
+    print(Back.WHITE + Fore.BLACK + last_line.encode(sys.stdout.encoding, 'replace')  + Style.RESET_ALL)
+
+
 class DeepSeekStudentAgent(LLMStudentAgent):
     def run_prompt(self, prompt):
         response = requests.post('http://localhost:11434/api/generate', json={
@@ -120,17 +146,13 @@ class DeepSeekStudentAgent(LLMStudentAgent):
             'prompt': prompt,
             'stream': False,
             'options': {
-                'num_ctx': 4096
+                'num_ctx': 50000
             }
         })
-        if(response.status_code >= 300):
-            error = response.json()['error']
-            raise ConnectionError(f"Status Code:{response.status_code}, Error: {error}")
-        else:
-            response = response.json()['response']
-        print(prompt)
-        print("RESPOSNE:", response.encode(sys.stdout.encoding, 'replace'))
-        return response
+        reasoning, last_line = extract_response(response)
+        print_response(reasoning, last_line)
+        
+        return last_line
 
 
 def generate_apprentice_problem_set(domains, n_problems):
