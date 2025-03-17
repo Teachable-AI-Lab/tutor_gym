@@ -120,7 +120,10 @@ class HTNCognitiveModel:
         self.scaffold = scaffold
 
     def get_expected_effects(self, state):
-        state_list: list[dict] = sorted(list(state.objs.values()), key=lambda x: x['y'])
+        # NOTE: Momin's version sorted by y value, (which Danny got rid so that bounds could,
+        #   be omitted in the state). Shouldn't cause bug sice dicts are ordered. 
+        state_list = list(state.objs.values());
+        # state_list: list[dict] = sorted(list(state.objs.values()), key=lambda x: x['y'])
         fact_state: Fact = Fact(start=True)  
 
         # print(">>>", self.domain['solve'])
@@ -203,11 +206,14 @@ class HTNCognitiveModel:
 
 
 class ApprenticeTutor(TutorEnvBase):
-    def __init__(self, domain=None, initial_problem=None, scaffold="first", **kwargs):
+    def __init__(self, domain=None, initial_problem=None, scaffold="first",
+                      include_obj_bounds=False,
+                     **kwargs):
         super().__init__(**kwargs)        
 
         self.default_domain = domain
         self.default_scaffold = scaffold
+        self.include_obj_bounds = include_obj_bounds
         # if(isinstance())
         # self.problem_types = problem_types
         if(initial_problem is None):
@@ -270,7 +276,19 @@ class ApprenticeTutor(TutorEnvBase):
         self.possible_selections = [x.name for x in self.domain_model['solve'].subtasks[0]]
         self.possible_args = ['equation', *self.possible_selections[:-2]]
 
-        return ProblemState(state)    
+        return ProblemState(state)
+
+    def _filter_state(self, state):
+        f_state = {}
+        for k,obj in state.items():
+            if(not self.include_obj_bounds):
+                if("x" in obj): del obj["x"]
+                if("y" in obj): del obj["y"]
+                if("width" in obj): del obj["width"]
+                if("height" in obj): del obj["height"]
+            f_state[k] = obj
+
+        return f_state
 
     def set_start_state(self, domain, initial_problem, scaffold="undef", **kwargs):
         from tutorgym.envs.apprentice_tutors.env_registry import ENVIRONMENTS
@@ -290,7 +308,9 @@ class ApprenticeTutor(TutorEnvBase):
         self.scaffold = scaffold
 
         #print(args, kwargs)
-        state = self._blank_state()#self.problem_types)
+        state = self._blank_state()
+        state = self._filter_state(state)
+
         self.problem_name = f"{domain}/{initial_problem}"
         self.problem = initial_problem
         state['equation']['value'] = self.problem

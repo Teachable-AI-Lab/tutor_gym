@@ -62,6 +62,7 @@ def ensure_not_early_done_filter(actions):
 
 class CTAT_Tutor(StateMachineTutor):
     def __init__(self, html_proc_config={"root_dir" : "./"},
+                       include_obj_bounds=False,
                        edge_filters=[action_not_buggy, action_not_template],
                     **kwargs):
         self.html_proc_config = html_proc_config
@@ -69,6 +70,7 @@ class CTAT_Tutor(StateMachineTutor):
         self.edge_filters = edge_filters
         super().__init__(action_model=CTAT_ActionModel,**kwargs)
         self.next_action_filters.append(ensure_not_early_done_filter)
+        self.include_obj_bounds = include_obj_bounds
 
     def _satisfies_filters(self, action):
         for fltr in self.edge_filters:
@@ -93,11 +95,12 @@ class CTAT_Tutor(StateMachineTutor):
             # if("y" in obj): obj["y"] = int(obj["y"])
             # if("width" in obj): obj["width"] = int(obj["width"])
             # if("height" in obj): obj["height"] = int(obj["height"])
-
-            if("x" in obj): del obj["x"]
-            if("y" in obj): del obj["y"]
-            if("width" in obj): del obj["width"]
-            if("height" in obj): del obj["height"]
+            if(not self.include_obj_bounds):
+                if("x" in obj): del obj["x"]
+                if("y" in obj): del obj["y"]
+                if("width" in obj): del obj["width"]
+                if("height" in obj): del obj["height"]
+                
             if("child_ids" in obj): del obj["child_ids"]
 
 

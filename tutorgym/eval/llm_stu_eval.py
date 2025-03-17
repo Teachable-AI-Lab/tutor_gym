@@ -156,7 +156,6 @@ class DeepSeekStudentAgent(LLMStudentAgent):
             }
         })
 
-
         reasoning, last_line, duration = extract_response(response)
         print_response(reasoning, last_line, duration)
         
