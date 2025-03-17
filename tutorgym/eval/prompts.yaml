@@ -4,7 +4,9 @@ next_action:
     {state}
 
     I need you to give me the next action for this problem state. You are only only allowed to changed a field with 'locked' as False. 
-    I need you to response with only one action in this format: field;action_type;value, where:
+    I need you to response with only one action in this format:
+    field;action_type;value
+
     1. field is the 'id' of the field that the action modifies. 
     2. action_type is one of: {action_types}.
     3. value is the input value of the action, this should be a single expression or word
@@ -15,7 +17,9 @@ verify_action:
     I need your evaluating a student action taken to solving this {domain_name} problem. This is the problem state:
     {state}
 
-    The student is only allowed to changed a field with 'locked' as False. Their actions are in the format: `field;action_type;value`, where:
+    The student is only allowed to changed a field with 'locked' as False. Their actions are in the format:
+    `field;action_type;value`
+
     1. field is the 'id' of the field that the action modifies. 
     2. action_type is one of: {action_types}.
     3. value is the input value of the action, this should be a single expression or word
@@ -28,7 +32,9 @@ student_act:
   template: |
     {state}
     What should be the next action in this state for? You are only only allowed to changed a field with 'locked' as False \
-    I need you to response with only one action in this format: field;action_type;value, where:
+    I need you to response with only one action in this format: 
+    field;action_type;value
+    
     1. field is the 'id' of the field that the action modifies. 
     2. action_type is one of: {action_types}.
     3. value is the input value of the action, this should be a single expression or word.
