@@ -77,10 +77,10 @@ class LLMStudentAgent(ABC):
 
         action_str = action_semicolon_format(action)
         if is_demo:
-            message = f"For this step, the correct action is: {action_str}"
+            message = f"For this step, the correct action is:\n{action_str}"
             self.conversation_log.append({"role": "user", "content": message})
         else:
-            self.conversation_log.append({"role": "assistant", "content": f"This is my action: {action_str}"})
+            self.conversation_log.append({"role": "assistant", "content": f"This is my action:\n{action_str}"})
             if reward <= 1:
                 message = "That action was incorrect!"
             else:
@@ -136,17 +136,17 @@ def extract_response(response):
 def print_response(reasoning, last_line):
     print("RESPONSE:")
     print(reasoning.encode(sys.stdout.encoding, 'replace'))
-    print(Back.WHITE + Fore.BLACK + last_line.encode(sys.stdout.encoding, 'replace')  + Style.RESET_ALL)
+    print(Back.WHITE + Fore.BLACK + str(last_line.encode(sys.stdout.encoding, 'replace'))  + Style.RESET_ALL)
 
 
 class DeepSeekStudentAgent(LLMStudentAgent):
     def run_prompt(self, prompt):
         response = requests.post('http://localhost:11434/api/generate', json={
-            'model': 'deepseek-r1:latest',
+            'model': 'deepseek-r1:70b',
             'prompt': prompt,
             'stream': False,
             'options': {
-                'num_ctx': 50000
+                'num_ctx': 15000
             }
         })
         reasoning, last_line = extract_response(response)
