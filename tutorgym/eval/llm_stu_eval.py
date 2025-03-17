@@ -127,30 +127,38 @@ def extract_response(response):
         error = response.json()['error']
         raise ConnectionError(f"Status Code:{response.status_code}, Error: {error}")
     else:
-        response = response.json()['response']
+        resp_json = response.json()
+        response = resp_json['response']
+        duration = resp_json['total_duration']
+        print("CONTEXT LENGTH:", len(resp_json['context']))
 
     reasoning = "\n".join(response.split("\n")[:-1])
     last_line = response.split("\n")[-1]
-    return reasoning, last_line
+    return reasoning, last_line, duration
 
-def print_response(reasoning, last_line):
+def print_response(reasoning, last_line, duration):
     print("RESPONSE:")
     print(reasoning.encode(sys.stdout.encoding, 'replace'))
     print(Back.WHITE + Fore.BLACK + str(last_line.encode(sys.stdout.encoding, 'replace'))  + Style.RESET_ALL)
+    print(f"Duration: {duration / 1e9:.4f} seconds")
 
 
 class DeepSeekStudentAgent(LLMStudentAgent):
     def run_prompt(self, prompt):
+        print("----  PROMPT -----")
+        print(prompt)
         response = requests.post('http://localhost:11434/api/generate', json={
             'model': 'deepseek-r1:70b',
             'prompt': prompt,
             'stream': False,
             'options': {
-                'num_ctx': 15000
+                'num_ctx': 20000
             }
         })
-        reasoning, last_line = extract_response(response)
-        print_response(reasoning, last_line)
+
+
+        reasoning, last_line, duration = extract_response(response)
+        print_response(reasoning, last_line, duration)
         
         return last_line
 
