@@ -82,7 +82,7 @@ class LLMStudentAgent():
 
     def run_prompt(self, prompt):
         """Get response from the LLM"""
-        print(prompt)
+        print("Prompt length:", len(prompt))
         response = requests.post(self.host, json={
             'model': self.model,
             'prompt': prompt,
