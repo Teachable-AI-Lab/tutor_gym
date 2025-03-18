@@ -114,7 +114,8 @@ class LLMStudentAgent():
         return last_line
         
     def _manage_conversation_log(self):
-        total_chars = sum(len(msg["content"]) for msg in self.conversation_log)
+        total_chars = len(self.action_type_examples_prompt) + \
+                      sum(len(msg["content"]) for msg in self.conversation_log)
         if total_chars > self.max_prompt_length:
             print("total_chars:", total_chars)
             self.conversation_log = self.conversation_log[3:]
@@ -127,7 +128,7 @@ class LLMStudentAgent():
             self.conversation_log.append({"role": "user", "content": message})
         else:
             self.conversation_log.append({"role": "assistant", "content": f"This is my action:\n{action_str}"})
-            if reward <= 1:
+            if reward <= 0:
                 message = "That action was incorrect!"
             else:
                 message = "That action was correct!"
