@@ -23,17 +23,35 @@ action_types_by_tutor_kind = {
     "ctat" : ["UpdateTextField", "UpdateRadioButton", "PressButton"] ,
 }
 
+agent_configs = {
+    "deepseek-v2.5" : {
+        "host" : 'http://localhost:11434/api/generate',
+        "model" : "deepseek-2.5v",
+        "context_length" : 20000,
+        "max_prompt_length" : 50000,
+    },
+    "deepseek-r1" : {
+        "host" : 'http://localhost:11434/api/generate',
+        "model" : "deepseek-r1:70b",
+        "context_length" : 20000,
+        "max_prompt_length" : 50000,
+    }
+}
+
 def action_semicolon_format(action):
     selection, action_type, inp = action.sai
     return f"{selection};{action_type};{inp['value']}"
 
 
 
-class LLMStudentAgent(ABC):
-    def __init__(self, prompt_retries=10, prompt_retry_delay=5, **kwargs):
+class LLMStudentAgent():
+    def __init__(self, config_name, prompt_retries=10, prompt_retry_delay=5, **kwargs):
+
+        for k,v in agent_configs[config_name].items():
+            setattr(self, k, v)
         # Remove Anthropic client, just keep conversation log
         self.conversation_log = []
-        self.max_chars = 100000
+        # self.max_chars = 100000
         self.prompt_retries = prompt_retries
         self.prompt_retry_delay = prompt_retry_delay
 
@@ -62,14 +80,26 @@ class LLMStudentAgent(ABC):
                     attempt_n = 0
 
 
-    @abstractmethod
     def run_prompt(self, prompt):
         """Get response from the LLM"""
-        pass
+        print(prompt)
+        response = requests.post(self.host, json={
+            'model': self.model,
+            'prompt': prompt,
+            'stream': False,
+            'options': {
+                'num_ctx': self.context_length
+            }
+        })
+
+        reasoning, last_line, duration = extract_response(response)
+        print_response(reasoning, last_line, duration)
+        
+        return last_line
         
     def _manage_conversation_log(self):
         total_chars = sum(len(msg["content"]) for msg in self.conversation_log)
-        if total_chars > self.max_chars:
+        if total_chars > self.max_prompt_length:
             print("total_chars:", total_chars)
             self.conversation_log = self.conversation_log[3:]
             
@@ -143,24 +173,6 @@ def print_response(reasoning, last_line, duration):
     print(f"Duration: {duration / 1e9:.4f} seconds")
 
 
-class DeepSeekStudentAgent(LLMStudentAgent):
-    def run_prompt(self, prompt):
-        print("----  PROMPT -----")
-        print(prompt)
-        response = requests.post('http://localhost:11434/api/generate', json={
-            'model': 'deepseek-r1:70b',
-            'prompt': prompt,
-            'stream': False,
-            'options': {
-                'num_ctx': 20000
-            }
-        })
-
-        reasoning, last_line, duration = extract_response(response)
-        print_response(reasoning, last_line, duration)
-        
-        return last_line
-
 
 def generate_apprentice_problem_set(domains, n_problems):
     problem_set = []
@@ -186,7 +198,7 @@ def run_training(problem_set, tutor_kind, model, scaffold="first"):
     env = ApprenticeTutor(scaffold=scaffold)
 
     #### Replace This w/ your LLM Agent ####
-    agent = DeepSeekStudentAgent()
+    agent = LLMStudentAgent(model)
     ####################################### 
 
     trainer = Trainer(agent, env, logger=logger,
@@ -209,5 +221,5 @@ if __name__ == "__main__":
             10,
         )      
         problem_set += tutor_set
-    run_training(problem_set, 'apprentice', 'deepseek') 
+    run_training(problem_set, 'apprentice', 'deepseek-v2.5') 
 
