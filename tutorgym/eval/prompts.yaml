@@ -1,3 +1,14 @@
+action_examples: |
+    Actions have the following format:
+    field;action_type;value
+
+    1. field is the 'id' of the field that the action modifies. 
+    2. action_type is one of: {action_types}.
+    3. value is the input value of the action, this should be a single expression or word
+
+    Here are some examples of problem states and correct actions for those states:
+    {examples}
+
 next_action:
   template: |
     I need your help solving this {domain_name} problem. 
@@ -9,9 +20,6 @@ next_action:
     I need you to response with only one action in this format:
     field;action_type;value
 
-    1. field is the 'id' of the field that the action modifies. 
-    2. action_type is one of: {action_types}.
-    3. value is the input value of the action, this should be a single expression or word
     Avoid additional text.
 
 verify_action:
@@ -20,11 +28,7 @@ verify_action:
     {state}
 
     The student is only allowed to changed a field with 'locked' as False. Their actions are in the format:
-    `field;action_type;value`
-
-    1. field is the 'id' of the field that the action modifies. 
-    2. action_type is one of: {action_types}.
-    3. value is the input value of the action, this should be a single expression or word
+    field;action_type;value
     
     Is this student action correct?
     {action}
@@ -40,8 +44,6 @@ student_act:
     I need you to response with only one action in this format:
     field;action_type;value
 
-    1. field is the 'id' of the field that the action modifies. 
-    2. action_type is one of: {action_types}.
-    3. value is the input value of the action, this should be a single expression or word.
     Avoid additional text.
     
+

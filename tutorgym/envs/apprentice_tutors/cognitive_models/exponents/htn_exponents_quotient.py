@@ -14,6 +14,7 @@ from shop2.conditions import Filter
 from shop2.common import V
 
 
+
 def htn_exponents_quotient_problem():
     constant = randint(2,1000)
     exponent_1 = randint(10,20)

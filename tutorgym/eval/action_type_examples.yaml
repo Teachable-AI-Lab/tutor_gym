@@ -1,0 +1,36 @@
+input change: |
+  Here is a problem state:
+  {'question': {'locked': True, 'type': 'TextField', 'value': 'What is 2+2?', 'id': 'question'},
+   'answer' : {'locked': False, 'type': 'TextField', 'value': '', 'id': 'answer'}}
+  What is the next action?
+  answer;input change;4
+
+UpdateTextField: |
+  Here is a problem state:
+  {'question': {'locked': True, 'type': 'TextField', 'value': 'What is 2+2?', 'id': 'question'},
+   'answer' : {'locked': False, 'type': 'TextField', 'value': '', 'id': 'answer'}}
+  What is the next action?
+  answer;UpdateTextField;4
+
+UpdateRadioButton: |
+  Here is a problem state:
+  {'question': {'locked': True, 'type': 'TextField', 'value': 'Is 2 odd?', 'id': 'question'},
+   'step0_choice0' : {'locked': False, 'type': 'TextField', 'value': 'yes', 'id': 'answer'},
+   'step0_choice1' : {'locked': False, 'type': 'TextField', 'value': 'no', 'id': 'answer'}}
+  What is the next action?
+  step0_choice1;UpdateRadioButton;no
+
+  Note: An UpdateRadioButton action's selection is the field with the correct answer for then next step. 
+  Its input value is the value of that correct answer.  
+
+PressButton: |
+  Here is a problem state:
+  {'question': {'locked': True, 'type': 'TextField', 'value': 'What is 2+2?', 'id': 'question'},
+   'answer' : {'locked': True, 'type': 'TextField', 'value': '4', 'id': 'answer'}
+   'done' : {'locked': False, 'type': 'Button', 'value': '', 'id': 'done'}}
+  What is the next action? 
+  done;PressButton;-1
+
+  Note: PressButton actions always have an input of -1. 
+
+  

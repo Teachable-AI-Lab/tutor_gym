@@ -26,9 +26,9 @@ action_types_by_tutor_kind = {
 agent_configs = {
     "deepseek-v2.5" : {
         "host" : 'http://localhost:11434/api/generate',
-        "model" : "deepseek-2.5v",
-        "context_length" : 20000,
-        "max_prompt_length" : 50000,
+        "model" : "deepseek-v2.5",
+        "context_length" : 14000,
+        "max_prompt_length" : 30000,
     },
     "deepseek-r1" : {
         "host" : 'http://localhost:11434/api/generate',
@@ -45,7 +45,7 @@ def action_semicolon_format(action):
 
 
 class LLMStudentAgent():
-    def __init__(self, config_name, prompt_retries=10, prompt_retry_delay=5, **kwargs):
+    def __init__(self, tutor_kind, config_name, prompt_retries=10, prompt_retry_delay=5, **kwargs):
 
         for k,v in agent_configs[config_name].items():
             setattr(self, k, v)
@@ -54,10 +54,26 @@ class LLMStudentAgent():
         # self.max_chars = 100000
         self.prompt_retries = prompt_retries
         self.prompt_retry_delay = prompt_retry_delay
+        self.tutor_kind = tutor_kind
+        self.config_name = config_name
 
         prompts_path = Path(__file__).parent / "prompts.yaml"
         with open(prompts_path, 'r') as f:
             self.prompts = yaml.safe_load(f)
+
+        examples_path = Path(__file__).parent / "action_type_examples.yaml"
+        with open(examples_path, 'r') as f:
+            self.action_type_examples = yaml.safe_load(f)
+
+        self.action_types = action_types_by_tutor_kind[self.tutor_kind]
+
+        example_prompts = [self.action_type_examples[a_t] for a_t in self.action_types]
+        self.action_type_examples_prompt = self.prompts['action_examples'].format(
+            action_types=self.action_types,
+            examples="\n".join(example_prompts)
+        )
+
+        print(self.action_type_examples_prompt)
 
     def run_retry_prompt(self, prompt):
         attempt_n = 0
@@ -127,14 +143,15 @@ class LLMStudentAgent():
         # Construct prompt for next action
         prob_prompt = self.prompts['student_act']['template'].format(
             state=state.objs,
-            action_types=action_types_by_tutor_kind['apprentice']
         )
         
         self.conversation_log.append({"role": "user", "content": prob_prompt})
         self._manage_conversation_log()
 
-        full_prompt = "\n\n".join([msg["content"] for msg in self.conversation_log])
+        full_prompt = self.action_type_examples_prompt + \
+                      "\n\n".join([msg["content"] for msg in self.conversation_log])
 
+        print("PROMPT:", full_prompt)
         response = self.run_retry_prompt(full_prompt)
 
         # Parse response into an Action
@@ -198,7 +215,7 @@ def run_training(problem_set, tutor_kind, model, scaffold="first"):
     env = ApprenticeTutor(scaffold=scaffold)
 
     #### Replace This w/ your LLM Agent ####
-    agent = LLMStudentAgent(model)
+    agent = LLMStudentAgent(tutor_kind, model)
     ####################################### 
 
     trainer = Trainer(agent, env, logger=logger,
