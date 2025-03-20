@@ -10,6 +10,7 @@ import json
 from copy import copy
 import re
 import os
+import yaml
 
 # -----------------------------------------------------------------
 # : Action Filters
@@ -100,7 +101,7 @@ class CTAT_Tutor(StateMachineTutor):
                 if("y" in obj): del obj["y"]
                 if("width" in obj): del obj["width"]
                 if("height" in obj): del obj["height"]
-                
+
             if("child_ids" in obj): del obj["child_ids"]
 
 
@@ -115,9 +116,9 @@ class CTAT_Tutor(StateMachineTutor):
             keep_alive=True
         )
 
-        print(html_path)
-        print(model_path)
-        print("KW", kwargs)
+        # print(html_path)
+        # print(model_path)
+        # print("KW", kwargs)
 
 
 
@@ -134,7 +135,7 @@ class CTAT_Tutor(StateMachineTutor):
 
         self.domain_dir = "/".join(dir_list[:-1])
         self.domain = (dir_list[-3], dir_list[-2])
-        print("domain_dir", self.domain_dir, self.domain)
+        # print("domain_dir", self.domain_dir, self.domain)
         self.problem_name = os.path.split(model_path)[-1]
 
         start_state = ProblemState(start_state)
@@ -234,7 +235,7 @@ if __name__ == '__main__':
     for s in sets:
         n += len(list(s))
     print("N", n)
-    raise ValueError()
+    # raise ValueError()
 
 
 
@@ -366,7 +367,8 @@ if __name__ == '__main__':
                 print(actions)
 
                 raise e
-            
+
+            print(tutor.get_domain_prompt())
 
             # tutor.set_problem(**problem)
             # for i in range(100):

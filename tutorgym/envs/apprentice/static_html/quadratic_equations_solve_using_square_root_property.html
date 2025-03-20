@@ -1,0 +1,74 @@
+
+<div style="display: flex; justify-content: center; align-items: center;">
+    <form class="" style="width: 650px;">
+
+        <div class="container" style="margin: 3%;">
+            <div class="row">
+                <div class="col-sm">
+                    <div style="text-align: center;">
+                        <h3>Finding Roots Using Square Root Property:</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                    <input disabled type="text" id="initial_problem" class="form-control" style="width: 250px; display: none;">
+                    <div style="text-align: center; width: 250px;" id="initial_problem_text"></div>
+                </div>
+                <div class="col-sm">
+                </div>      
+            </div>
+        </div>
+
+        <div class="container level_1" style="margin: 2%;">
+            <p><strong>Move constant term to right hand side:</strong></p>
+            <div class="row" style="margin-top: 1%;">
+                <div class="col-sm">
+                    <p>Rewrite Equation:</p>
+                    <math-field id="coeff0_to_rhs" virtual-keyboard-mode="onfocus" style="width: 250px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <p>Simplify Equation:</p>
+                    <math-field id="update_coeff0_on_rhs" virtual-keyboard-mode="onfocus" style="width: 250px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <button id="level_2" style="margin-left: -13px; margin-top:43px" class="btn btn-danger scaffold">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container level_2" style="margin: 2%;">
+            <p><strong>Move coefficient of \(x^2\) to the right hand side:</strong></p>
+            <div class="row" style="margin-top: 1%;">
+                <div class="col-sm">
+                    <p>Rewrite Equation:</p>
+                    <math-field id="coeff2_to_rhs" virtual-keyboard-mode="onfocus" style="width: 250px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <p>Simplify Equation:</p>
+                    <math-field id="update_coeff2_on_rhs" virtual-keyboard-mode="onfocus" style="width: 250px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                </div>
+            </div>
+        </div>
+
+        <div class="container level_0" style="margin: 2%;">
+            <div class="row" style="margin-top: 1%;">
+                <div class="col-sm">
+                    <p>Enter Positive Root</p>
+                    <math-field id="positive_root" virtual-keyboard-mode="onfocus" style="width: 250px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <p>Enter Negative Root:</p>
+                    <math-field id="negative_root" virtual-keyboard-mode="onfocus" style="width: 250px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <button id="level_1" style="margin-left: -13px; margin-top:43px" class="btn btn-danger scaffold">+</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -2,9 +2,8 @@ import argparse
 from tutorgym.trainer import AuthorTrainer
 from tutorgym.utils import DataShopLogger
 from tutorgym.agents.oracle_agent import OracleAgent
-# from tutorgym.envs.apprentice_tutors.tutor import AllTutorContainer
-from tutorgym.env_classes.apprentice_tutor import ApprenticeTutor
-from tutorgym.envs.apprentice_tutors.env_registry import ENVIRONMENTS
+from tutorgym.env_classes.apprentice.apprentice_tutor import ApprenticeTutor
+from tutorgym.envs.apprentice.env_registry import ENVIRONMENTS
 
 
 

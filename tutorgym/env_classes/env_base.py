@@ -88,6 +88,8 @@ class TutorEnvBase(ABC):
         """
         raise NotImplementedError()
 
+    def get_domain_prompt(self):
+        return None
 
     def make_compl_prof(self, filename, problems):
         """

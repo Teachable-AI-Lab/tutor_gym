@@ -1,0 +1,91 @@
+
+<div style="display: flex; justify-content: center; align-items: center;">
+    <form class="" style="width: 650px;">
+
+        <div class="container" style="margin: 3%;">
+            <div class="row">
+                <div class="col-sm">
+                    <div style="text-align: center;">
+                        <h3>Finding Roots Using Completing Square Method:</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                    <input disabled type="text" id="initial_problem" class="form-control" style="width: 250px; display: none;">
+                    <div style="text-align: center; width: 250px;" id="initial_problem_text"></div>
+                </div>
+                <div class="col-sm">
+                </div>      
+            </div>
+        </div>
+
+        <div class="container level_1" style="margin-top: 2%;">
+            <div class="row" style="margin-top: 1%;">
+                <div class="col-sm">
+                    <p>Add \((\frac{b}{2})^{2}\)  to left hand side:</p>
+                    <math-field id="b_by_2_square_lhs" virtual-keyboard-mode="onfocus" style="width: 276px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <p>Add \((\frac{b}{2})^{2}\)  to right hand side:</p>
+                    <math-field id="b_by_2_square_rhs" virtual-keyboard-mode="onfocus" style="width: 276px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <button id="level_2" style="margin-left: -13px; margin-top:43px" class="btn btn-danger scaffold">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="container level_2" style="margin-top: 2%;">
+            <div class="row" style="margin-top: 1%;">
+                <div class="col-sm">
+                    <p>Factor left hand side:</p>
+                    <math-field id="factor_lhs" virtual-keyboard-mode="onfocus" style="width: 276px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <p>Simplify to right hand side:</p>
+                    <math-field id="simplify_rhs" virtual-keyboard-mode="onfocus" style="width: 276px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                </div>
+                <div class="col-sm">
+                    <button id="level_3" style="margin-left: -13px; margin-top:43px" class="btn btn-danger scaffold">+</button>
+                </div>
+            </div>
+        </div>
+            <div class="container level_3"  style="margin-top: 2%;">
+                <div class="row" style="margin-top: 1%;">
+                    <div class="col-sm">
+                        <p><strong>Put the equations together:</strong></p>
+                        <math-field id="combine_lhs_rhs" virtual-keyboard-mode="onfocus" style="width: 575px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 1%;">
+                    <div class="col-sm">
+                        <p>Positive right hand side root equation:</p>
+                        <math-field id="positive_root_of_rhs" virtual-keyboard-mode="onfocus" style="width: 250px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                    </div>
+                    <div class="col-sm">
+                        <p>Negative right hand side root equation:</p>
+                        <math-field id="negative_root_of_rhs" virtual-keyboard-mode="onfocus" style="width: 250px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                    </div>
+                </div>
+            </div>
+            <div class="container level_0"  style="margin-top: 2%;">
+                <div class="row" style="margin-top: 1%;">
+                    <div class="col-sm">
+                        <p>Positive root of \(x\):</p>
+                        <math-field id="positive_root" virtual-keyboard-mode="onfocus" style="width: 276px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                    </div>
+                    <div class="col-sm">
+                        <p>Negative root of \(x\):</p>
+                        <math-field id="negative_root" virtual-keyboard-mode="onfocus" style="width: 276px; border: 1px solid rgba(0, 0, 0, .3);"></math-field>
+                    </div>
+                    <div class="col-sm">
+                        <button id="level_1" style="margin-left: -13px; margin-top:43px" class="btn btn-danger scaffold">+</button>
+                    </div>
+                </div>
+            </div>
+            
+        
+    </form>
+</div>
