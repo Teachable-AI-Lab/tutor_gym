@@ -1,3 +1,5 @@
+from abc import ABCMeta, abstractmethod
+from typing import Any
 from tutorgym.utils import unique_hash
 import sys
 import os
@@ -145,66 +147,112 @@ def register_annotation_equal(anno_name):
 # : Action
 
 
-def _standardize_action(inp): 
-    if(isinstance(inp, (list,tuple))):
-        selection, action_type, inputs = inp
+def _standardize_action(val):
+    if(isinstance(val, (list,tuple))):
+        selection, action_type, inp = val
         annotations = {}
-    elif(isinstance(inp, dict)):
-        selection = inp['selection']
-        action_type = inp.get('action_type', inp.get('action'))
+    elif(isinstance(val, dict)):
+        selection = val['selection']
+        action_type = val.get('action_type', val.get('action'))
         if(action_type is None):
             raise KeyError("'action_type' | 'action'")
-        inputs = inp['inputs']
-        annotations = {k:v for k,v in inp.items() if k not in ("selection", "action_type", "action", "inputs")}
 
-    elif(hasattr(inp, 'selection')):
-        selection = inp.selection
-        action_type = getattr(inp, 'action_type', None)
+        inp = val.get('input', None)
+        if(inp is None):
+            inputs = getattr(val, 'inputs', None)
+            if(inputs):
+                inp = inputs['value']
+        annotations = {k:v for k,v in val.items() if k not in ("selection", "action_type", "action", "inputs", "input")}
+
+    elif(hasattr(val, 'selection')):
+        selection = val.selection
+        action_type = getattr(val, 'action_type', None)
         if(action_type is None):
-            action_type = getattr(inp, 'action', None)
-        inputs = inp.inputs
+            action_type = getattr(val, 'action', None)
 
-        annotations = {k:v for k,v in inp.__dict__.items() if k not in ("selection", "action_type", "action", "inputs")}
+        inp = getattr(val, 'input', None)
+        if(inp is None):
+            inputs = getattr(val, 'inputs', None)
+            if(inputs):
+                inp = inputs['value']
+
+
+        annotations = {k:v for k,v in val.__dict__.items() if k not in ("selection", "action_type", "action", "inputs", "input")}
     else:
-        raise ValueError(f"Unable to translate {inp} to Action.")
+        raise ValueError(f"Unable to translate {val} to Action.")
 
-    return (selection, action_type, inputs), annotations
+    return (selection, action_type, inp), annotations
+
+# Note: this is a strict interface 
+class ActionLike(metaclass=ABCMeta): 
+    selection : str
+    action_type : str
+    input : Any
+    slots = ('selection', 'action_type', 'input')
+
+    def __init__(self, *args, **kwargs):
+        (sel, at, inp), _ = _standardize_action(*args)
+        self.selection = sel
+        self.action_type = at
+        self.input = inp
+
+    @abstractmethod
+    def as_tuple(self):
+        return (self.selection, self.action_type, self.input)
 
 
-class Action(Annotatable):
+class Action(ActionLike, Annotatable):
     ''' An object representing the ideal action taken by an agent.
         Includes Selection-ActionType-Inputs (SAI) and optional annotations 
         like the string of the how-part of the skill that produced the SAI
         and the arguments it used to produce the action.
     '''
-    def __new__(cls, sai, **annotations):        
+    selection : str
+    action_type : str
+    input : Any
+    annotations : dict[str, Any]
+    slots = ('selection', 'action_type', 'input', 'annotations')
+
+    def __init__(self, *args, **kwargs):
+        pass
+
+    def __new__(cls, *args, **annotations):
+
+        if(len(args) == 3):
+            obj = (*args,)
+        else:
+            obj = args[0]
+
         # If get an Action then make a copy
-        if(isinstance(sai, Action)):
+        if(isinstance(obj, Action)):
             self = super().__new__(cls)
-            self.sai = sai.sai
-            self.annotations = {**sai.annotations, **annotations}
-        
+            self.selection = obj.selection
+            self.action_type = obj.action_type
+            self.input = obj.input
+            self.annotations = {**obj.annotations, **annotations}
         else:
             # If get a type with an action translator then make from that
-            translator = action_translator_registry.get(type(sai), None)
+            translator = action_translator_registry.get(type(obj), None)
             if(translator):
                 # print("TRANSLATE!", sai)
-                self = translator(sai)
+                self = translator(obj)
                 self.annotations = {**self.annotations, **annotations}
-                # print("AANNO!?", self.annotations)
 
+            # Otherwise try from a 
             else:
                 self = super().__new__(cls)
-                self.sai, obj_annos = _standardize_action(sai)
+                (sel, at, inp), obj_annos = _standardize_action(obj)
+                self.selection = sel
+                self.action_type = at
+                self.input = inp
                 self.annotations = {**obj_annos, **annotations}
-
 
         return self
 
 
 
     def is_equal(self, other, check_annotations=[]):        
-        if(self.sai != other.sai):
+        if(self.as_tuple() != other.as_tuple()):
             return False
 
         for anno in check_annotations:
@@ -240,44 +288,45 @@ class Action(Annotatable):
         if(checker is not None):
             return checker(state, other) 
         else:
-            return self.sai == other.sai
+            return self.as_tuple() == other.as_tuple()
 
     def __hash__(self):
-        return hash((unique_hash(self.sai), unique_hash(self.annotations)))
+        return hash((unique_hash(self.as_tuple()), unique_hash(self.annotations)))
 
     def __str__(self):
-        return f"{self.sai[0]}->{self.sai[2]['value']}"
+        return f"{self.action_type}({self.selection}, {self.input})"
 
     def __repr__(self):
-        s = f"{self.sai[1]}({self.sai[0]}, {self.sai[2]}"
+        s = f"{self.action_type}({self.selection}, {self.input})"
 
         for anno_name, anno in self.annotations.items():
             s += f", {anno_name}={anno!r}"
         return s + ")"
 
     def copy(self, omit_annotations=[]):
-        sai = self.sai
-        # args = self.args if not omit_args else None
-        # how_str = self.how_str if not omit_how else None
         new_annos = {k:v for k,v in self.annotations.items() if k not in omit_annotations}
-        return Action(sai, **new_annos)
+        return Action(self.as_tuple(), **new_annos)
 
     def __copy__(self):
         return self.copy()
 
+    # TODO: Remove this?
     def as_train_kwargs(self):
         return {
-            "sai" : self.sai,
+            "action" : self,
             **self.annotations,
             }
 
     def get_info(self):
         return {
-            "selection" : self.sai[0],
-            "action_type" : self.sai[1],
-            "inputs" : self.sai[2],
+            "selection" : self.selection,
+            "action_type" : self.action_type,
+            "input" : self.input,
             **self.annotations,
         }
+
+    def as_tuple(self):
+        return (self.selection, self.action_type, self.input)
 
 
 # -------------------------------------------------------

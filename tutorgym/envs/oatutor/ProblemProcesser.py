@@ -44,7 +44,7 @@ def process_step_json(step_idx: int, step_json: dict, y: int) -> tuple[Dict, int
 
         for ans in step_json['stepAnswer']:
             correct_actions.append(
-                Action((field_name, "UpdateTextField", {'value' : ans}))
+                Action((field_name, "UpdateTextField", ans))
             )
     elif step_json.get('problemType') == 'MultipleChoice':
         # Handle RadioButton type
@@ -60,7 +60,7 @@ def process_step_json(step_idx: int, step_json: dict, y: int) -> tuple[Dict, int
             ans_ind = step_json['choices'].index(ans)
             field_name = f'{field_prefix}_choice{ans_ind}'
             correct_actions.append(
-                Action((field_name, "UpdateRadioButton", {'value' : ans}))
+                Action((field_name, "UpdateRadioButton", ans))
             )
     
     return state, correct_actions, y

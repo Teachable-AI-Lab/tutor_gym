@@ -21,12 +21,12 @@ from random import choice
 
 # TODO
 
-def make_next_state(state, sai, reward=1):
+def make_next_state(state, action, reward=1):
     next_state = state.copy()
-    selection, action_type, inputs = sai
+    selection, action_type, inp = action.as_tuple()
     if(action_type == "UpdateTextField" or action_type == "input change"):
         next_state[selection] = next_state.objs.get(selection, {})
-        next_state[selection]['value'] = inputs['value']
+        next_state[selection]['value'] = inp
         if(reward == 1):
             next_state[selection]['locked'] = True
         else:
@@ -77,7 +77,7 @@ def check_effect_match(effect, answer, verbosity=1):
 def effect_to_action(effect):
     if effect['field'] == 'done':
         action = Action(
-                ('done', 'PressButton', {'value': -1}), 
+                ('done', 'PressButton', -1), 
                 how_str="-1")
             
     else:
@@ -85,7 +85,7 @@ def effect_to_action(effect):
         value = str(effect['value'][0][1])
 
         action = Action(
-            (f'{effect["field"]}', 'input change', {'value': value}), 
+            (f'{effect["field"]}', 'input change', value), 
             arg_foci=[effect['arg_foci']] if 'arg_foci' in effect else [''],
             how_str=effect['how'] if 'how' in effect else '',
         )
@@ -93,7 +93,7 @@ def effect_to_action(effect):
     return action
 
 def action_to_answer(action):
-    selection, action_type, inputs = action.sai
+    selection, action_type, inp = action.as_tuple()
 
     if selection == 'done':
         answer = {
@@ -106,7 +106,7 @@ def action_to_answer(action):
         answer = {
             "field" : selection,
             "action" : action_type,
-            "value" : inputs['value']
+            "value" : inp
         }
     return answer
             
@@ -395,19 +395,19 @@ class ApprenticeTutor(TutorEnvBase):
                 return 1
         return -1
     
-    def sai_makes_done(self, sai):
-        return sai[0] == 'done'
+    def action_makes_done(self, action):
+        return action.selection == 'done'
     
     def apply(self, action, reward=1):
         """ Applies an Action. Modifying self.state. """
-        if (self.sai_makes_done(action.sai)):
+        if (self.action_makes_done(action)):
             self.state = ProblemState({}, is_done=True)
         else:
-            self.state = make_next_state(self.state, action.sai, reward)
+            self.state = make_next_state(self.state, action, reward)
         return self.state
     
     def _process_demo(self, action, **kwargs):
-        action = Action(action.sai, 
+        action = Action(action.as_tuple(), 
                 **{k:v for k,v in action.annotations.items() if k in self.demo_annotations
                 })
         return action

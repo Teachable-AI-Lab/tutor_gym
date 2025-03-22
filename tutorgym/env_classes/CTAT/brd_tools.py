@@ -13,32 +13,32 @@ class ExpressionMatcher(BaseMatcher):
         self.relation = relation
         self.kwargs = kwargs
 
-    def check(self, state, inputs):
+    def check(self, state, inp):
         # TODO actually make work
-        print('check', inputs.get('value',None),  self.value)
-        return inputs.get('value',None) == self.value
+        print('check', inp,  self.value)
+        return inp == self.value
 
 
 class ExactMatcher(BaseMatcher): 
     def __init__(self, single):
         self.value = single
 
-    def check(self, state, inputs):
-        return inputs.get('value',None) == self.value
+    def check(self, state, inp):
+        return inp == self.value
 
 class RegexMatcher(BaseMatcher): 
     def __init__(self, single, **kwargs):
         self.value = single
 
-    def check(self, state, inputs):
+    def check(self, state, inp):
         # TODO actually make work
-        return inputs.get('value',None) == self.value
+        return inp == self.value
 
 class AnyMatcher(BaseMatcher): 
     def __init__(self, **kwargs):
         self.value = None
 
-    def check(self, state, inputs):
+    def check(self, state, inp):
         return True
 
 
@@ -50,21 +50,21 @@ matcher_classes = {
 }
 
 class Checker():
-    def __init__(self, selection, action_type, inputs_matcher):
+    def __init__(self, selection, action_type, input_matcher):
         self.selection = selection
         self.action_type = action_type
-        self.inputs_matcher = inputs_matcher
+        self.input_matcher = input_matcher
 
     def __call__(self, state, action):
-        sel, act, inps = action.sai
+        sel, act, inp = action.as_tuple()
         if(sel == self.selection and
            act == self.action_type and
-           self.inputs_matcher.check(state, inps)):
+           self.input_matcher.check(state, inp)):
             return True
         return False
 
     def __str__(self):
-        return f"Checker({self.inputs_matcher})"
+        return f"Checker({self.input_matcher})"
 
     __repr__ = __str__
 
@@ -75,11 +75,12 @@ class Checker():
 def parse_sai(node):
     selection = node.find("Selection").find("value").text
     action_type = node.find("Action").find("value").text
-    inputs = {}
-    for node in node.find("Input"):
-        inputs[node.tag] = node.text
+    inp = node.find("Input").find("value").text
+    # inputs = {}
+    # for node in node.find("Input"):
+    #     inputs[node.tag] = node.text
 
-    return Action((selection, action_type, inputs))
+    return Action((selection, action_type, inp))
 
 def parse_matcher(node):
     matcher_type = node.find("matcherType").text
@@ -87,16 +88,6 @@ def parse_matcher(node):
     params = {x.attrib['name'] : x.text for x in node.iter("matcherParameter")}
     matcher = cls(**params)
     return matcher
-
-# def make_checker(selection, action_type, inp_m):
-#     def checker(state, action):
-#             sel, act, inps = action.sai
-#             if(sel == selection and
-#                act == action_type and
-#                inp_m.check(state, inps)):
-#                 return True
-#             return False
-#     return checker
 
 
 def parse_old_matcher(node):
@@ -107,7 +98,7 @@ def parse_old_matcher(node):
 
     selection = params["selection"]
     action_type = params["action"]
-    inputs = {"value" : params["input"]}
+    inp = params["input"]
     actor = params["actor"].lower()
 
     inp_m = cls(params["input"])
@@ -115,7 +106,7 @@ def parse_old_matcher(node):
     annotations = {"checker" : 
         Checker(selection, action_type, inp_m)
     }
-    return actor, Action((selection, action_type, inputs), **annotations)
+    return actor, Action((selection, action_type, inp), **annotations)
 
 
 
@@ -129,7 +120,7 @@ def parse_matchers(node):
 
     selection = sel_m.value
     action_type = act_m.value
-    inputs = {"value" : inp_m.value}
+    inp = inp_m.value
 
     actor = node.find("Actor").text.lower()
     # selection = node.find("Selection").find("matcher").text
@@ -142,7 +133,7 @@ def parse_matchers(node):
     if(not isinstance(inp_m, ExactMatcher)):
         annotations['checker'] = Checker(selection, action_type, inp_m)
 
-    return actor, Action((selection, action_type, inputs), **annotations)
+    return actor, Action((selection, action_type, inp), **annotations)
 
 
 # --------------------
@@ -202,7 +193,7 @@ expr_matches_re = re.compile(r"expressionMatches\((.*),([^\)\"]*)\)")
 # number_re = re.compile(r"expressionMatches\((.*),(.*)\)")
 
 def resolve_input_from_matcher(matcher, matcher_action):
-    sel, at, inps = matcher_action.sai
+    sel, at, inp = matcher_action.as_tuple()
     epxr_match = expr_matches_re.search(matcher.value)
     poly_match = polyTermsEqual_re.search(matcher.value)
     # print(matcher)
@@ -223,7 +214,7 @@ def resolve_input_from_matcher(matcher, matcher_action):
 
 def resolve_action(message_action, matcher_action):
     ''' Uses information from the message_action and matcher_action to resolve the 
-        'inputs' field of the SAIs.
+        'input' field of the SAIs.
     '''
     if(matcher_action.get_annotation("omitted", False) == True or
        matcher_action.get_annotation("action_type") == "Buggy Action"):
@@ -231,17 +222,17 @@ def resolve_action(message_action, matcher_action):
 
     checker = matcher_action.get_annotation('checker')
     # print("RESOLVE", checker)
-    if(not checker or isinstance(checker.inputs_matcher, ExactMatcher)):
+    if(not checker or isinstance(checker.input_matcher, ExactMatcher)):
         return matcher_action
 
-    sel, at, inps = matcher_action.sai
-    matcher = checker.inputs_matcher
+    sel, at, inp = matcher_action.as_tuple()
+    matcher = checker.input_matcher
     if(isinstance(matcher, ExpressionMatcher)):
         # print("<< ExpressionMatcher")
         inp = resolve_input_from_matcher(matcher, matcher_action)
 
         if(inp is not None):
-            return Action((sel, at, {"value" : inp}), **matcher_action.annotations)   
+            return Action((sel, at, inp), **matcher_action.annotations)   
         else:
             print(f"? matcher({sel}):", matcher)
         print()

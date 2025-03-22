@@ -50,8 +50,8 @@ agent_configs = {
 }
 
 def action_semicolon_format(action):
-    selection, action_type, inp = action.sai
-    return f"{selection};{action_type};{inp['value']}"
+    selection, action_type, inp = action.as_tuple()
+    return f"{selection};{action_type};{inp}"
 
 class LLMStudentAgent(LLMPromptable):
     def __init__(self, tutor_kind, config_name=None,
@@ -110,13 +110,16 @@ class LLMStudentAgent(LLMPromptable):
         # action_text = response.json()['response']
         parts = response.split(';')
         if len(parts) == 3:                
-            selection, action_type, input = parts
+            selection, action_type, inp = parts
             if action_type == "PressButton":
-                input = -1
+                inp = -1
         else:
-            selection, action_type, input = 'incorrect_format', 'incorrect_format', 'incorrect_format'
+            selection, action_type, inp = 'incorrect_format', 'incorrect_format', 'incorrect_format'
         
-        action = Action((selection, action_type, {'value': input.replace('\\\\', '\\') if type(input) == str else input}))        
+        if(isinstance(inp, str)):
+            inp = inp.replace('\\\\', '\\')    
+            
+        action = Action((selection, action_type, inp))        
         return action
 
 def run_training(problem_set, tutor_kind, model, scaffold="first"):    

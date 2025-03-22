@@ -65,14 +65,14 @@ def eval_completeness(agent, compl_prof, verbosity=1,
         conv_profile_actions = []#[Action(p_act) for p_act in profile_actions]
         for p_act in profile_actions:
             p_act = Action(p_act)
-            p_act = Action(p_act.sai, **{k:v for k,v in p_act.annotations.items() 
+            p_act = Action(p_act.as_tuple(), **{k:v for k,v in p_act.annotations.items() 
                                             if k in check_annotations})
             conv_profile_actions.append(p_act)
 
         conv_agent_actions = []#[Action(a_act) for a_act in agent_actions]
         for a_act in agent_actions:
             a_act = Action(a_act)
-            a_act = Action(a_act.sai, **{k:v for k,v in a_act.annotations.items() 
+            a_act = Action(a_act.as_tuple(), **{k:v for k,v in a_act.annotations.items() 
                                             if k in check_annotations})
             conv_agent_actions.append(a_act)
 
@@ -113,13 +113,13 @@ def eval_completeness(agent, compl_prof, verbosity=1,
             if(n_diffs != 0):
                 print(f"--DIFF: {diff['problem']} {diff['hist']} --")
                 for m in diff['-']:
-                    print("  -", m)# .sai[0], m.sai[2]['value'])
+                    print("  -", m)
                 for m in diff['+']:
-                    print("  +", m)#.sai[0], m.sai[2]['value'])
+                    print("  +", m)
             if(print_correct == True or 
                print_correct=="if_diff" and n_diffs > 0):
                 for m in diff['=']:
-                    print("  =", m)#.sai[0], m.sai[2]['value'])    
+                    print("  =", m)
 
     completeness = n_correct / total
     correctness = n_first_correct / total_states

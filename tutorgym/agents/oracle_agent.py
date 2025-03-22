@@ -45,7 +45,7 @@ class RandomOracleAgent:
         if(self.flip_correct()):
             return demo
         else:
-            sel, act, inp = demo.sai
+            sel, act, inp = demo.as_tuple()
             return Action((sel, act, {"value": "wrong"}))
         return demo
 

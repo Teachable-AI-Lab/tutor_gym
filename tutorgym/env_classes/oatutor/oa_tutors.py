@@ -6,11 +6,11 @@ import os
 import inspect
 import random
 
-def make_next_state(state, sai):
+def make_next_state(state, action):
     next_state = state.copy()
-    selection, action_type, inputs = sai
+    selection, action_type, inp = action.as_tuple()
     if(action_type == "UpdateTextField"):
-        next_state[selection]['value'] = inputs['value']
+        next_state[selection]['value'] = inp
         next_state[selection]['locked'] = True
     elif action_type == "UpdateRadioButton":
         step_number = selection.split('_')[0]
@@ -37,7 +37,7 @@ class CogModel:
 
         # If no unlocked step fields return 'done'
         if len(step_keys) == 0:
-            return [Action(('done', 'PressButton', {'value': -1}))]
+            return [Action(('done', 'PressButton', -1))]
         
         # Sort keys based on step number to find min unlocked step
         sorted_keys = sorted(
@@ -152,20 +152,20 @@ class OATutor(TutorEnvBase):
                 return 1
         return -1
     
-    def sai_makes_done(self, sai):
-        return sai[0] == 'done'
+    def action_makes_done(self, action):
+        return action.selection == 'done'
     
     def apply(self, action):
         """ Applies an Action. Modifying self.state. """
-        if (self.sai_makes_done(action.sai)):
+        if (self.action_makes_done(action)):
             self.is_done = True
             self.state = ProblemState({})
         else:
-            self.state = make_next_state(self.state, action.sai)
+            self.state = make_next_state(self.state, action)
         return self.state
     
     def _process_demo(self, action, **kwargs):
-        action = Action(action.sai, 
+        action = Action(action.as_tuple(), 
                 **{k:v for k,v in action.annotations.items() if k in self.demo_annotations
                 })
         return action

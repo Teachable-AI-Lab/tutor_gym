@@ -114,8 +114,6 @@ def make_compl_prof(self, filename, problems, problem_line_limit=50):
                 else:
                     has_reached_done = True
 
-                    # new_states.append((ns,hist+[(sel,inp['value'])]))
-
 
             # np.random.randint()
             # next_states = new_states

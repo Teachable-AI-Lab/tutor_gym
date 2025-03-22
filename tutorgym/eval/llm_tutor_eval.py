@@ -107,7 +107,7 @@ class LLMTutorEvaluator(LLMPromptable):
         results = []
         for act_d in actions:
 
-            action_str = f"{act_d['selection']};{act_d['action_type']};{act_d['inputs']['value']}"
+            action_str = f"{act_d['selection']};{act_d['action_type']};{act_d['input']}"
 
             verify_message = self.action_type_examples_prompt + \
                 self.prompts['verify_action']['template'].format(
@@ -126,7 +126,7 @@ class LLMTutorEvaluator(LLMPromptable):
             results.append((
                 act_d['selection'],
                 act_d['action_type'],
-                act_d['inputs']['value'], 
+                act_d['input'], 
                 action_is_correct,
                 response.lower(),
                 response.lower() == ideal_response,
@@ -181,7 +181,7 @@ class LLMTutorEvaluator(LLMPromptable):
             next_action_correct = any(
                 action['selection'] == selection and 
                 action['action_type'] == action_type and 
-                action['inputs']['value'] == inp_val
+                action['input'] == inp_val
                 for action in obj['correct_actions']
             )
 

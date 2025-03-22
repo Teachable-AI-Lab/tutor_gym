@@ -592,7 +592,7 @@ class StateMachineTutor(TutorEnvBase):
         return state
 
     def _process_demo(self, action, **kwargs):
-        action = Action(action.sai, 
+        action = Action(action.as_tuple(), 
                 **{k:v for k,v in action.annotations.items() if k in self.demo_annotations
                 })
         return action
@@ -615,6 +615,8 @@ class StateMachineTutor(TutorEnvBase):
             demo = self._process_demo(action)
             self._action_map[id(demo)] = action
             demos.append(demo)
+
+        print(demos)
         return demos
         # return [self._process_demo(a, **kwargs) for a in correct_actions]
 

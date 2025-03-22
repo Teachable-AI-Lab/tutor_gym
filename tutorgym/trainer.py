@@ -133,10 +133,10 @@ class Trainer:
         extra = ""
         
         if(isinstance(action, Action)):
-            sai = action.sai
+            sel, at, inp = action.as_tuple()
             extra = ','.join([f"{k}={v}" for k,v in action.annotations.items()])
         # elif('sai' in action):
-        #     sai = Action(action['sai']).sai
+        #     sai = Action(action['sai']).as_tuple()
         #     # print(action)
         #     arg_foci = action.get('arg_foci',['???'])
         #     if(arg_foci is None):
@@ -145,7 +145,7 @@ class Trainer:
         # elif('skill_app' in action):
         #     print("ACTION", action)
         #     skill_app = action['skill_app']
-        #     sai = Action(skill_app.sai).sai        
+        #     sai = Action(skill_app.sai).as_tuple()        
         #     extra = f'{skill_app.__repr__(add_sai=False)}'
             # how_part = getattr(getattr(skill_app,'skill'),'how_part', "???")
             # arg_foci = getattr(skill_app,'arg_foci',['???'])
@@ -155,11 +155,11 @@ class Trainer:
             # extra = f"{how_part}({','.join(arg_foci)})"
 
         if(outcome_kind == "CORRECT"):
-            print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai[0]} -> {sai[2]} {extra}" + Style.RESET_ALL)
+            print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sel} -> {inp} {extra}" + Style.RESET_ALL)
         elif(outcome_kind == "INCORRECT"):            
-            print(Back.RED + Fore.BLACK + f"INCORRECT: {sai[0]} -> {sai[2]} {extra}" + Style.RESET_ALL)
+            print(Back.RED + Fore.BLACK + f"INCORRECT: {sel} -> {inp} {extra}" + Style.RESET_ALL)
         elif(outcome_kind == "HINT"):
-            print(Back.BLUE + Fore.YELLOW + f"HINT: {sai[0]} -> {sai[2]} {extra}" + Style.RESET_ALL)
+            print(Back.BLUE + Fore.YELLOW + f"HINT: {sel} -> {inp} {extra}" + Style.RESET_ALL)
 
     def tutor_train_state(self, state, is_start=False, force_demo=False):
         ''' Tutor-train (i.e. train one action at a time) on 'state'.'''
@@ -191,9 +191,8 @@ class Trainer:
 
         # print("A ACTION:", action)
 
-        action_kwargs = action.as_train_kwargs()
-        s,a,i = action_kwargs['sai']
-        self.logger.log_step(s, a, i['value'], outcome_kind, step_name=s, kcs=[s])
+        s,a,inp = action.as_tuple()
+        self.logger.log_step(s, a, inp, outcome_kind, step_name=s, kcs=[s])
 
         self.agent.train(
             **self._to_train_kwargs(state, action, reward, 
@@ -262,9 +261,13 @@ class AuthorTrainer(Trainer):
             return_kind=self.agent_action_repr)
         demos = self.env.get_all_demos(state)
 
-        # print("demos:", len(demos))
-        # for demo in demos:
-        #     print(demo)
+        print("demos:", len(demos))
+        for demo in demos:
+            print(demo)
+
+        print("actions:", len(actions))
+        for action in actions:
+            print(action)
 
         # Annotate each proposed action with reward and add to training set
         train_set = []
@@ -300,6 +303,8 @@ class AuthorTrainer(Trainer):
                         reward=1, is_demo=True, is_start=is_start)
                 )
 
+        print("train_set", train_set)
+
         # Apply Training Set
         self.agent.train_all(train_set)
 
@@ -310,7 +315,7 @@ class AuthorTrainer(Trainer):
         if(not demo):
             demo = demos[0]
         # self.env.apply(demo)
-        print(Back.WHITE + Fore.BLACK + f"APPLY: {demo.sai[0]} -> {demo.sai[2]}" + Style.RESET_ALL)
+        print(Back.WHITE + Fore.BLACK + f"APPLY: {demo.selection} -> {demo.input}" + Style.RESET_ALL)
         return demos#[1:]
 
     def train_prob_start_to_end(self):

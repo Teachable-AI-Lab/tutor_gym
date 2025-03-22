@@ -21,11 +21,9 @@ def action_not_buggy(action):
 
 template_pattern = re.compile("\%\(.*\)\%")
 def action_not_template(action):
-    inputs = action.sai[2]
-    for k,v in inputs.items():
-        if(template_pattern.search(str(k)) or
-           template_pattern.search(str(v))):
-            return False
+    inp = action.input
+    if(template_pattern.search(str(inp))):
+        return False
     return True
 
 
@@ -36,7 +34,7 @@ def ensure_not_early_done_filter(actions):
     # Find the done action
     done_action = None
     for action in actions:
-        if(action.sai[0] == "done"):
+        if(action.selection == "done"):
             done_action = action
             break
 
@@ -186,7 +184,7 @@ class CTAT_Tutor(StateMachineTutor):
                         next_state = fsm.add_edge(node['state'], action, 
                             force_unique_id=next_unq_id)
 
-                    # print(node_unq_id, next_unq_id, action.sai)
+                    # print(node_unq_id, next_unq_id, action)
                     # print(f"{repr(action)}")
 
                     if(next_state.get_annotation("is_done", False)):
@@ -202,7 +200,7 @@ class CTAT_Tutor(StateMachineTutor):
     #     return self.problem
 
     def action_is_done(self, action):
-        if(action.sai[0] == "done"):
+        if(action.selection == "done"):
             return True
         return False
 

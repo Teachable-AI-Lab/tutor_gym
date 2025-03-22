@@ -2,7 +2,7 @@
 # from apprentice.working_memory.representation import Sai
 # from apprentice.working_memory.numba_operators import *
 
-from tutorgym.envs.misc.fraction_arith.fractions_std import FractionArithmetic
+from tutorgym.env_classes.misc.fraction_arith.fractions import FractionArithmetic
 from tutorgym.trainer import Trainer, AuthorTrainer
 from tutorgym.evaluator import CompletenessEvaluator
 from tutorgym.utils import DataShopLogger
@@ -50,12 +50,12 @@ def resolve_type(typ, logger_name):
         # env = FractionArithSymbolic(logger=logger, problem_types=ptypes, n=n_fracs)
 
 
-interleaved_problems = [("+", [("1","2"), ("1","3")]),
-                        ("+", [("1","4"), ("2","4")]),
-                        ("x", [("4","3"), ("1","2")]),
-                        ("+", [("3","3"), ("2","4")]),
-                        ("+", [("1","5"), ("2","5")]),
-                        ("x", [("2","4"), ("1","3")])        
+interleaved_problems = [{"op" : "+", "fracs" : [("1","2"), ("1","3")]},
+                        {"op" : "+", "fracs" : [("1","4"), ("2","4")]},
+                        {"op" : "x", "fracs" : [("4","3"), ("1","2")]},
+                        {"op" : "+", "fracs" : [("3","3"), ("2","4")]},
+                        {"op" : "+", "fracs" : [("1","5"), ("2","5")]},
+                        {"op" : "x", "fracs" : [("2","4"), ("1","3")]}
                         ]
 
 # def make_completeness_profile(env, n=100, name=""):

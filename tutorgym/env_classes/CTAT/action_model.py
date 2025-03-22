@@ -13,7 +13,7 @@ class CTAT_ActionModel:
             new_state = state
             new_state.action_hist.append(action)
 
-        sel, act_type, inputs = action.sai
+        sel, act_type, inp = action.as_tuple()
 
         # print(sel, act_type, inputs)
 
@@ -41,9 +41,9 @@ class CTAT_ActionModel:
 
 
         if(act_type in ("UpdateTextArea", "UpdateTextField")):
-            sel_obj['value'] = inputs['value']
+            sel_obj['value'] = inp
             sel_obj['locked'] = True
         elif(act_type == "SetDisplay"):
-            sel_obj['display'] = inputs['value']            
+            sel_obj['display'] = inp
 
         return new_state

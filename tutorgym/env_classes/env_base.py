@@ -127,7 +127,7 @@ class TutorEnvBase(ABC):
 
                         for demo in demos:
 
-                            sel,_,inp = demo.sai
+                            sel,_,inp = demo.get_tuple()
                             ns = self.apply(demo)
                             
                             self.set_state(state)
