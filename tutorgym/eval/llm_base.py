@@ -24,7 +24,7 @@ def print_white(x):
 def print_response(reasoning, last_line, duration):
     print("RESPONSE:")
     print(reasoning.encode(sys.stdout.encoding, 'replace'))
-    print_white(str(last_line.encode(sys.stdout.encoding, 'replace')).decode("utf-8"))
+    print_white(last_line.encode(sys.stdout.encoding, 'replace').decode("utf-8"))
     print(f"Duration: {duration / 1e9:.4f} seconds")
 
 class LLMPromptable():
@@ -128,7 +128,7 @@ class LLMPromptable():
 
         print_response(reasoning, response, duration)
         
-        return last_line
+        return response
 
     def run_prompt_retry(self, prompt):
         attempt_n = 0

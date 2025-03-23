@@ -12,7 +12,7 @@ from datetime import datetime
 import os
 import sys
 import pathlib
-from tutorgym.eval.llm_base import LLMPromptable, print_response, action_types_by_tutor_kind
+from tutorgym.eval.llm_base import LLMPromptable, print_response, action_types_by_tutor_kind, print_green, print_red
 from colorama import Back, Fore, Style
 
 agent_configs = {
@@ -185,8 +185,10 @@ class LLMTutorEvaluator(LLMPromptable):
                 for action in obj['correct_actions']
             )
 
-        print(Back.WHITE + Fore.BLACK + str(last_line.encode(sys.stdout.encoding, 'replace'))  + Style.RESET_ALL)
-
+        if(next_action_correct):
+            print_green(next_action_response.encode(sys.stdout.encoding, 'replace').decode('utf-8'))
+        else:
+            print_red(next_action_response.encode(sys.stdout.encoding, 'replace').decode('utf-8'))
 
         corr_results = self.verify_actions(filtered_state, obj['domain'], obj['correct_actions'], True)
         incorr_results = self.verify_actions(filtered_state, obj['domain'], obj['incorrect_actions'], False)
