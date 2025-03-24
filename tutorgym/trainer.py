@@ -106,7 +106,7 @@ class Trainer:
         s = self._state_to_kwargs(state, is_start)
 
         if(self.agent_action_repr == "skill_app" and not is_demo):
-            a = {"skill_app" : action}
+            a = {"action" : action}
         elif(self.agent_action_repr == "action"):
             a = {"action" : action}
         else:
@@ -261,13 +261,13 @@ class AuthorTrainer(Trainer):
             return_kind=self.agent_action_repr)
         demos = self.env.get_all_demos(state)
 
-        print("demos:", len(demos))
-        for demo in demos:
-            print(demo)
+        # print("demos:", len(demos))
+        # for demo in demos:
+        #     print(demo)
 
-        print("actions:", len(actions))
-        for action in actions:
-            print(action)
+        # print("actions:", len(actions))
+        # for action in actions:
+        #     print(action)
 
         # Annotate each proposed action with reward and add to training set
         train_set = []

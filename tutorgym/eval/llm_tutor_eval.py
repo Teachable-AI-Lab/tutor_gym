@@ -44,7 +44,7 @@ class LLMTutorEvaluator(LLMPromptable):
             self.domain_prompts = {}
 
 
-    def initialize_csv_files(self, profile_path):
+    def initialize_csv_files(self, profile_path, total_lines):
         """Initialize CSV files with headers"""
         prof_name = pathlib.Path(profile_path).parts[-1].split(".")[0]
 
@@ -61,8 +61,14 @@ class LLMTutorEvaluator(LLMPromptable):
         self.corr_csv = f'{directory}/correct_check.csv'
         self.incorr_csv = f'{directory}/incorrect_check.csv'
 
-        with open(f"{directory}/PROFILE_HASH", 'w') as f:
-            f.write(self.profile_hash)
+        with open(f"{directory}/profile_info.json", 'w') as f:
+            json.dump({})
+            f.write({
+                "profile_hash" : self.profile_hash,
+                "profile_name" : prof_name,
+                "profile_num_lines" : total_lines
+                }
+            , f)
 
         with open(self.action_csv, 'w', newline='') as f:
             writer = csv.writer(f)
@@ -148,7 +154,7 @@ class LLMTutorEvaluator(LLMPromptable):
             total_lines = len(lines)
             self.profile_hash = unique_hash(lines)
 
-        self.initialize_csv_files(profile_path)
+        self.initialize_csv_files(profile_path, total_lines)
                 
         with open(profile_path, 'r') as profile:
             progress_bar = tqdm(total=total_lines, desc=f"Processing examples with {self.model}")

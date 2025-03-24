@@ -101,7 +101,7 @@ class FractionArithmetic(StateMachineTutor):
         return ProblemState(state)
 
     def action_is_done(self, action):
-        return action.sai[0] == "done"
+        return action.selection == "done"
 
     def set_start_state(self, op, fracs, **kwargs):
         ''' Domain implementation: Used by StateMachineTutor.set_problem() 

@@ -3,8 +3,6 @@ from tutorgym.shared import register_action_translator, register_annotation_equa
 
 @register_action_translator(SkillApplication)
 def SkillApp_to_Action(skill_app):
-    sai = skill_app.sai.as_tuple()
-
     # print("TRANSL:", hasattr(skill_app, "match"), hasattr(skill_app, "match"))
 
     annotations = {}
@@ -21,7 +19,7 @@ def SkillApp_to_Action(skill_app):
 
     # print(annotations)
 
-    return Action(sai, **annotations)
+    return Action(skill_app.action.as_tuple(), **annotations)
 
 @register_annotation_equal("arg_foci")
 def args_unordered_equals(args1, args2):
