@@ -97,7 +97,7 @@ class LLMTutorEvaluator(LLMPromptable):
         )
 
         # Print w/ encode to avoid possible unicode errors  
-        print(next_action_message.encode(sys.stdout.encoding, 'replace').decode("utf-8"))
+        # print(next_action_message.encode(sys.stdout.encoding, 'replace').decode("utf-8"))
 
         return self.run_prompt_retry(next_action_message)
 
@@ -119,7 +119,7 @@ class LLMTutorEvaluator(LLMPromptable):
             )
 
             # Print w/ encode to avoid possible unicode errors  
-            print(verify_message.encode(sys.stdout.encoding, 'replace').decode("utf-8"))
+            # print(verify_message.encode(sys.stdout.encoding, 'replace').decode("utf-8"))
 
             response = self.run_prompt_retry(verify_message)
             ideal_response = 'yes' if action_is_correct else "no"
@@ -132,8 +132,13 @@ class LLMTutorEvaluator(LLMPromptable):
                 response.lower() == ideal_response,
             ))
 
+            if(response.lower() == ideal_response):
+                print_green(response)
+            else:
+                print_red(response)
+
             # responses.append((true_correctness, act_d, response))
-            print("RESPONSE:", action_is_correct, response)
+            # print("RESPONSE:", action_is_correct, response)
         return results
     
     def evaluate(self, profile_path="apprentince_compl.prof"):
