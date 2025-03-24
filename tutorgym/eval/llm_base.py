@@ -85,7 +85,7 @@ class LLMPromptable():
 
         if(request_resp.status_code >= 300):
             error = request_resp.json()['error']
-            raise ConnectionError(f"Status Code:{response.status_code}, Error: {error}")
+            raise ConnectionError(f"Status Code:{request_resp.status_code}, Error: {error}")
         else:
             resp_json = request_resp.json()
             response = resp_json['response']
