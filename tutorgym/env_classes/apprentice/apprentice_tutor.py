@@ -149,7 +149,7 @@ class HTNCognitiveModel:
             if value['id'] != 'equation' and value['locked']:
                 answers.append(Fact(field=value['id'], value=value['value'], answer=value['locked']))
             else:
-                fact_state = fact_state & Fact(field=value['id'], value=value['value'], answer=value['locked'])
+                fact_state = fact_state & Fact(field=value['id'], value=value['value'], answer=False)
         
         # print("FS", fact_state)
 
@@ -253,7 +253,7 @@ class ApprenticeTutor(TutorEnvBase):
 
         field_names = [x.name for x in self.domain_model['solve'].subtasks[0]]        
 
-        state: dict = { 'equation' : {'y': 10, 'locked': False,  **field_params}}
+        state: dict = { 'equation' : {'y': 10, 'locked': True,  **field_params}}
         row_count: dict[str, int] = {'factor_1_b': 1, 'factor_2_b': 1, 'sum_factor': 1, 'sum_c': 1}
         for idx, field in enumerate(field_names):            
             if field == 'done':
