@@ -62,8 +62,7 @@ class LLMTutorEvaluator(LLMPromptable):
         self.incorr_csv = f'{directory}/incorrect_check.csv'
 
         with open(f"{directory}/profile_info.json", 'w') as f:
-            json.dump({})
-            f.write({
+            json.dump({
                 "profile_hash" : self.profile_hash,
                 "profile_name" : prof_name,
                 "profile_num_lines" : total_lines
