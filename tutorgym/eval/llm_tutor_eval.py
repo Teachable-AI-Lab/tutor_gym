@@ -20,13 +20,13 @@ agent_configs = {
         "client" : "ollama",
         "client_url" : 'http://localhost:11434/api/generate',
         "model" : "deepseek-v2.5",
-        "context_length" : 4096,
+        "context_length" : 6000,
     },
     "deepseek-r1" : {
         "client" : "ollama",
         "client_url" : 'http://localhost:11434/api/generate',
         "model" : "deepseek-r1:70b",
-        "context_length" : 4096,
+        "context_length" : 6000,
     }
 }
 

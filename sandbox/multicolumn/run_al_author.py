@@ -1,6 +1,10 @@
-from tutorenvs.multicolumn_std import MultiColumnAddition, Action, ProblemState
-from tutorenvs.utils import DataShopLogger
-from tutorenvs.trainer import Trainer, AuthorTrainer
+from tutorgym.env_classes.misc.mc_addition.multicolumn import MultiColumnAddition, Action, ProblemState
+from tutorgym.trainer import Trainer, AuthorTrainer
+from tutorgym.evaluator import CompletenessEvaluator
+from tutorgym.utils import DataShopLogger
+from colorama import Back, Fore
+from tutorgym.utils import compare
+
 from colorama import Back, Fore
 import colorama
 from pprint import pprint

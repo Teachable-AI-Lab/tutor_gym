@@ -10,14 +10,14 @@ def SkillApp_to_Action(skill_app):
         arg_foci = [x if isinstance(x,str) else x.id for x in skill_app.match[1:]]
         annotations["arg_foci"] = arg_foci;
 
-    how_str = getattr(skill_app, 'how_str', None)
-    if(how_str is None):
+    how_help = getattr(skill_app, 'how_help', None)
+    if(how_help is None):
         skill = getattr(skill_app, 'skill', None)
         func = getattr(skill, 'how_part', None)
-        how_str = str(func) 
-    annotations['how_str'] = how_str;
+        how_help = str(func) 
+    annotations['how_help'] = how_help;
 
-    # print(annotations)
+    # print("annotations", annotations)
 
     return Action(skill_app.action.as_tuple(), **annotations)
 

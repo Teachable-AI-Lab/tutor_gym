@@ -105,18 +105,32 @@ class Trainer:
 
         s = self._state_to_kwargs(state, is_start)
 
-        if(self.agent_action_repr == "skill_app" and not is_demo):
-            a = {"action" : action}
-        elif(self.agent_action_repr == "action"):
-            a = {"action" : action}
+        if(isinstance(action, Action)):
+            a = {"action" : action,
+                 **action.annotations}
         else:
-            a = action.as_train_kwargs()
+            a = {"action" : action}
 
-        return {**s, 
-                **a,
-                "reward": reward,
-                "is_demo" : is_demo
-                }
+        # if(self.agent_action_repr == "skill_app" and not is_demo):
+        #     print("A")
+            
+        # elif(self.agent_action_repr == "action"):
+        #     print("B", self.agent_action_repr)
+        #     a = {"action" : action,
+        #          **action.annotations}
+        # else:
+        #     print("C")
+        #     a = action.as_train_kwargs()
+
+        d = {**s, 
+            **a,
+            "reward": reward,
+            "is_demo" : is_demo
+            }
+        # if('how_str' in d):
+        #     d['how_help'] = d.get('how_str', None)
+
+        return d
         # # if(self.agent_action_repr == "skill_app" and not is_demo):
         #     return {"state" : state,
         #             "skill_app" : action,
@@ -269,6 +283,10 @@ class AuthorTrainer(Trainer):
         # for action in actions:
         #     print(action)
 
+        # print("state: ")
+        # for k,v in state.items():
+        #     print("[L]" if v.get('locked',False) else "[ ]", k, v.get('value',""))
+
         # Annotate each proposed action with reward and add to training set
         train_set = []
         covered_demos = [False] * len(demos)
@@ -303,7 +321,7 @@ class AuthorTrainer(Trainer):
                         reward=1, is_demo=True, is_start=is_start)
                 )
 
-        print("train_set", train_set)
+        # print("train_set", train_set)
 
         # Apply Training Set
         self.agent.train_all(train_set)

@@ -245,7 +245,7 @@ if __name__ == '__main__':
 
     # Values [x]
     # Order [x]: 
-    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_02_HTML/")
+    problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_02_HTML/")
 
     # Values [0]: Complicated, mostly dynamic
     # Order [?]: 
@@ -317,7 +317,7 @@ if __name__ == '__main__':
     # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_26_HTML/")
 
     # Values [x]: Just ExpressionMatches
-    problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_34_HTML/")
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_34_HTML/")
 
     # Values [-]: Complicated Expressions, but not that complex
     # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_28_HTML/")

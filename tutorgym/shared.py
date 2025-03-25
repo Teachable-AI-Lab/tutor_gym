@@ -159,7 +159,7 @@ def _standardize_action(val):
 
         inp = val.get('input', None)
         if(inp is None):
-            inputs = getattr(val, 'inputs', None)
+            inputs = val.get('inputs', None)
             if(inputs):
                 inp = inputs['value']
         annotations = {k:v for k,v in val.items() if k not in ("selection", "action_type", "action", "inputs", "input")}

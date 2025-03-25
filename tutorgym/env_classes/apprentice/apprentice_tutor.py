@@ -78,7 +78,7 @@ def effect_to_action(effect):
     if effect['field'] == 'done':
         action = Action(
                 ('done', 'PressButton', -1), 
-                how_str="-1")
+                how_help="-1")
             
     else:
         #value = str(parse_latex(effect['value'][0][1]))
@@ -87,7 +87,7 @@ def effect_to_action(effect):
         action = Action(
             (f'{effect["field"]}', 'input change', value), 
             arg_foci=[effect['arg_foci']] if 'arg_foci' in effect else [''],
-            how_str=effect['how'] if 'how' in effect else '',
+            how_help=effect['how'] if 'how' in effect else '',
         )
 
     return action

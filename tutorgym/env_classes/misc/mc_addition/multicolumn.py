@@ -212,12 +212,12 @@ class MultiColumnAddition(StateMachineTutor):
                     foci = [f'carry{i}']
                     sai = (f'out{i+1}', 'UpdateTextField',
                             "1" if prev_carry else "0")
-                    act = Action(sai, args=foci, how_str="Copy(a)")
+                    act = Action(sai, args=foci, how_help="Copy(a)")
                     curr_state = fsm.add_edge(curr_state, act)
 
                     # a_sai = (f'out{i+1}', 'UpdateTextField',
                     #             {'value': str(partial_sum % 10)})
-                    # a_act = Action(a_sai, args=foci, how_str="OnesDigit(Add(a,b))")
+                    # a_act = Action(a_sai, args=foci, how_help="OnesDigit(Add(a,b))")
 
                 # partial_sum = to_int_safe(upper)
 
@@ -227,13 +227,13 @@ class MultiColumnAddition(StateMachineTutor):
 
                     a_sai = (f'out{i+1}', 'UpdateTextField',
                                 str(partial_sum % 10))
-                    a_act = Action(a_sai, args=foci, how_str="OnesDigit(Add(a,b))")
+                    a_act = Action(a_sai, args=foci, how_help="OnesDigit(Add(a,b))")
                     
                     if(self.carry_zero or partial_sum >= 10):
                         
                         c_sai = (f'carry{i+1}', 'UpdateTextField',
                                 str(partial_sum // 10))
-                        c_act = Action(c_sai, args=foci, how_str="TensDigit(Add(a,b))")
+                        c_act = Action(c_sai, args=foci, how_help="TensDigit(Add(a,b))")
 
                         # print("Case A:", a_act, c_act, i)
                         curr_state = fsm.add_unordered(curr_state, [a_act, c_act])
@@ -247,7 +247,7 @@ class MultiColumnAddition(StateMachineTutor):
                         foci = [f'inpA{i+1}']
                         sai = (f'out{i+1}', 'UpdateTextField',
                                 str(partial_sum))
-                        act = Action(sai, args=foci, how_str="Copy(a)")
+                        act = Action(sai, args=foci, how_help="Copy(a)")
                         curr_state = fsm.add_edge(curr_state, act)
                         # print("Case C", act, i)
                         
@@ -262,18 +262,18 @@ class MultiColumnAddition(StateMachineTutor):
                 if self.carry_zero or partial_sum >= 10:
                     a_sai = (f'out{i+1}', 'UpdateTextField', 
                                 str(partial_sum % 10))
-                    a_act = Action(a_sai, args=foci, how_str=f"OnesDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
+                    a_act = Action(a_sai, args=foci, how_help=f"OnesDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
 
                     c_sai = (f'carry{i+1}', 'UpdateTextField',
                                 str(partial_sum // 10))
-                    c_act = Action(c_sai, args=foci, how_str=f"TensDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
+                    c_act = Action(c_sai, args=foci, how_help=f"TensDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
                     # print("Case D:", a_act, c_act, i)
                     curr_state = fsm.add_unordered(curr_state, [a_act, c_act])
 
                 else:
                     sai = (f'out{i+1}', 'UpdateTextField',
                             str(partial_sum))
-                    act = Action(sai, args=foci, how_str=f"OnesDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
+                    act = Action(sai, args=foci, how_help=f"OnesDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
                     # print("Case E:", act, i)
                     curr_state = fsm.add_edge(curr_state, act)
             else:
@@ -288,7 +288,7 @@ class MultiColumnAddition(StateMachineTutor):
             foci = [f'carry{i}']
             sai = (f'out{i+1}', 'UpdateTextField',
                     "1" if prev_carry else "0")
-            act = Action(sai, args=foci, how_str="Copy(a)")
+            act = Action(sai, args=foci, how_help="Copy(a)")
             curr_state = fsm.add_edge(curr_state, act)
             # print("Case F:", act, i)
 
@@ -504,7 +504,7 @@ def test_demo_check():
     mc.set_problem("567", "689")
     nxt = mc.get_all_demos()
 
-    assert nxt[0].args is not None and nxt[0].how_str is not None
+    assert nxt[0].args is not None and nxt[0].how_help is not None
 
     # Should Fail Without args
     actA = Action(("out1", "UpdateTextField", {"value": '6'}))

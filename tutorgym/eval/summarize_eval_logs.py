@@ -46,28 +46,32 @@ for directory in glob.glob("./tutor_eval_logs/**/**/"):
         print(f"Next Action:     Accuracy {100*tr/max(tr+fa,1):02.2f}% ({tr}/{(tr+fa)})")
         a_df = None # Collect early in case big
 
-        with open(os.path.join(directory,"correct_check.csv"), 'r') as f:
-            c_df = pd.read_csv(f) 
-        counts = c_df['response_is_correct'].value_counts()
-        # print("correct counts", counts)
-        tr,fa = counts.get(True,0), counts.get(False,0)
-        print(f"Correct Grade:   Accuracy {100*tr/max(tr+fa,1):02.2f}% ({tr}/{(tr+fa)})")
-        c_df = None # Collect early in case big
+        correct_path = os.path.join(directory,"correct_check.csv")
+        if(os.path.exists(correct_path)):
+            with open(correct_path, 'r') as f:
+                c_df = pd.read_csv(f) 
+            counts = c_df['response_is_correct'].value_counts()
+            # print("correct counts", counts)
+            tr,fa = counts.get(True,0), counts.get(False,0)
+            print(f"Correct Grade:   Accuracy {100*tr/max(tr+fa,1):02.2f}% ({tr}/{(tr+fa)})")
+            c_df = None # Collect early in case big
 
-        with open(os.path.join(directory,"incorrect_check.csv"), 'r') as f:
-            i_df = pd.read_csv(f) 
-        counts = i_df['action_is_correct'].value_counts()
-        tr,fa = counts.get(True,0), counts.get(False,0)
-        print(f"Incorrect Grade: Accuracy {100*tr/max(tr+fa,1):02.2f}% ({tr}/{(tr+fa)})")
-        i_df = None # Collect early in case big
+        incorrect_path = os.path.join(directory,"incorrect_check.csv")
+        if(os.path.exists(incorrect_path)):
+            with open(incorrect_path, 'r') as f:
+                i_df = pd.read_csv(f) 
+            counts = i_df['action_is_correct'].value_counts()
+            tr,fa = counts.get(True,0), counts.get(False,0)
+            print(f"Incorrect Grade: Accuracy {100*tr/max(tr+fa,1):02.2f}% ({tr}/{(tr+fa)})")
+            i_df = None # Collect early in case big
     else:
         if(delete_incomplete):
             shutil.rmtree(directory)
         
         bad_dirs_count += 1
 
-    if(not show_all and bad_dirs_count > 0):
-        print(f"... plus {bad_dirs_count} incomplete logs. Add --show-all flag to see all logs.")
+if(not show_all and bad_dirs_count > 0):
+    print(f"... plus {bad_dirs_count} incomplete logs. Add --show-all flag to see all logs.")
 
     # for f in glob.glob(os.path.join(directory,"*.csv")):
     #     df = pd.read_csv(f)

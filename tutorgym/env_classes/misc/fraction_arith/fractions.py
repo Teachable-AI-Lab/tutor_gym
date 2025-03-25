@@ -116,6 +116,7 @@ class FractionArithmetic(StateMachineTutor):
         if(op == "+"):
             ptype = "AS" if len(set([den for num,den in fracs])) == 1 else "AD"
 
+        print("ptype", ptype)
         self.problem_name = ptype+"_" + op.join([f"{num}/{den}" for num, den in fracs])
         self.problem_type = ptype
         self.problem = (op, fracs) 
@@ -128,14 +129,14 @@ class FractionArithmetic(StateMachineTutor):
         ok = False
         ptype = choice(self.problem_types)
 
-        # print("<<", ptype, self.problem_types)
+        print("<<", ptype, self.problem_types)
 
         if(ptype == "AD" or ptype == "M"):
             while(not ok):
                 nums = [str(randint(1, 15)) for _ in range(self.n)]
                 dens = [str(randint(2, 15)) for _ in range(self.n)]
                 ok = (not any(np.array(nums)==np.array(dens))) and (len(set(dens)) > 1)
-            operator = choice(['+', '*'])
+            operator = "+" if ptype == "AD" else "*" #choice(['+', '*'])
         elif(ptype == "AS"):
             nums = [str(randint(1, 15)) for _ in range(self.n)]
             dens = [str(randint(2, 15))] * self.n
@@ -157,35 +158,35 @@ class FractionArithmetic(StateMachineTutor):
         if(self.problem_type == "M"):            
             num = str(reduce(operator.mul, init_num_vals))
             num_sai = (f'ans_num', 'UpdateTextField', num)
-            num_act = Action(num_sai, arg_foci=self.init_nums, how_str="Multiply(a,b)")
+            num_act = Action(num_sai, arg_foci=self.init_nums, how_help="Multiply(a,b)")
 
             den = str(reduce(operator.mul, init_den_vals))
             den_sai = (f'ans_den', 'UpdateTextField', den)
-            den_act = Action(den_sai, arg_foci=self.init_dens, how_str="Multiply(a,b)")
+            den_act = Action(den_sai, arg_foci=self.init_dens, how_help="Multiply(a,b)")
 
             curr_state = fsm.add_unordered(curr_state, [num_act, den_act])
         elif(self.problem_type == "AS"):
             num = str(reduce(operator.add, init_num_vals))
             num_sai = (f'ans_num', 'UpdateTextField', num)
-            num_act = Action(num_sai, arg_foci=self.init_nums, how_str="Add(a,b)")
+            num_act = Action(num_sai, arg_foci=self.init_nums, how_help="Add(a,b)")
 
             den = str(init_den_vals[0])
             den_sai = (f'ans_den', 'UpdateTextField', den)
-            den_act = Action(den_sai, arg_foci=['init_den1'], how_str="Copy(a)")
+            den_act = Action(den_sai, arg_foci=['init_den1'], how_help="Copy(a)")
 
             curr_state = fsm.add_unordered(curr_state, [num_act, den_act])
         else:
             # Addition Different
             sai = ('check_convert', 'UpdateTextField', 'x')
             curr_state = fsm.add_edge(curr_state, 
-                Action(sai, arg_foci=[], how_str="'x'"))
+                Action(sai, arg_foci=[], how_help="'x'"))
 
             # Common denominator by multiplying together
             conv_den_val = reduce(operator.mul, init_den_vals)
             den_acts = []
             for i in range(self.n):
                 sai = (f'conv_den{i+1}', 'UpdateTextField', str(conv_den_val))
-                den_acts.append(Action(sai, arg_foci=self.init_dens, how_str="Multiply(a, b)"))
+                den_acts.append(Action(sai, arg_foci=self.init_dens, how_help="Multiply(a, b)"))
             
             
 
@@ -201,29 +202,30 @@ class FractionArithmetic(StateMachineTutor):
                     # Butterfly Method
                     j = 0 if i == 1 else 1
                     arg_foci = [f"init_num{i+1}", f"init_den{j+1}"]
+                    num_acts.append(Action(sai, arg_foci=arg_foci, how_help="Multiply(a, b)"))
                 else:
                     arg_foci = [f"conv_den{i+1}", f"init_num{i+1}", f"init_den{i+1}"]
-
-                num_acts.append(Action(sai, arg_foci=arg_foci, how_str="Multiply(a, b)"))
+                    raise NotImplemented("TODO Didn't make it into the refactor")
+                
             
-            if(self.n_fracs != 2):
+            if(self.n_fracs == 2):
+                curr_state = fsm.add_unordered(curr_state, den_acts+num_acts)
+            else:
                 curr_state = fsm.add_unordered(curr_state, den_acts)
                 curr_state = fsm.add_unordered(curr_state, num_acts)
-            else:
-                curr_state = fsm.add_unordered(curr_state, den_acts+num_acts)
 
             # Add final 
             num = str(reduce(operator.add, conv_num_vals))
             num_sai = (f'ans_num', 'UpdateTextField', num)
-            num_act = Action(num_sai, arg_foci=self.conv_nums, how_str="Add(a,b)")
+            num_act = Action(num_sai, arg_foci=self.conv_nums, how_help="Add(a,b)")
 
             den = str(conv_den_val)
             den_sai = (f'ans_den', 'UpdateTextField', den)
-            den_act = Action(den_sai, arg_foci=[f'conv_den{self.n}'], how_str="Copy(a)")
+            den_act = Action(den_sai, arg_foci=[f'conv_den{self.n}'], how_help="Copy(a)")
 
             curr_state = fsm.add_unordered(curr_state, [num_act, den_act])
 
-        act = Action(('done', "PressButton", -1), how_str="-1")
+        act = Action(('done', "PressButton", -1), how_help="-1")
         curr_state = fsm.add_edge(curr_state, act)
         return fsm
 

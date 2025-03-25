@@ -75,7 +75,7 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_arg
     logger_name, problem_types = resolve_type(typ, logger_name)
     logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al_author')
 
-    env = FractionArithmetic(demo_annotations=["arg_foci", "how_str"],
+    env = FractionArithmetic(demo_annotations=["arg_foci", "how_help"],
                              check_annotations=["arg_foci"],
                              problem_types=problem_types, n_fracs=n_fracs)
 
@@ -89,7 +89,7 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_arg
 
     trainer = AuthorTrainer(agent, env, logger=logger,
                 problem_set=interleaved_problems, 
-                evaluators=[compl_evaluator],
+                # evaluators=[compl_evaluator],
                 n_problems=n)
     trainer.start()
 

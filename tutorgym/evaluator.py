@@ -84,7 +84,7 @@ def eval_completeness(agent, compl_prof, verbosity=1,
         n_diff = len(missing) + len(incorrect)
 
         # print("AGENT:", conv_agent_actions)
-        # print("PROFILE:", profile_actions)
+        # print("PROFILE:", conv_profile_actions)
         # print("-", missing)
         # print("+", incorrect)
         # print("=", correct)

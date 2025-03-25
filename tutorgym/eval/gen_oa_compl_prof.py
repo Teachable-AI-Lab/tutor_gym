@@ -16,7 +16,7 @@ import json
 import os
 
 
-PROBLEMS_PER_DOMAIN = 2
+PROBLEMS_PER_DOMAIN = 5
 RANDOM_PROBLEMS = False
 
 if __name__ == "__main__":
