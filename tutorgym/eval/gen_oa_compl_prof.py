@@ -51,7 +51,9 @@ if __name__ == "__main__":
     # print(problem_names)
 
     # problem_set = [{"problem_name" : p} for p in problem_names]
-    problem_set = collect_oatutor_problems()
+    problem_set = collect_oatutor_problems(
+        problems_per_domain=PROBLEMS_PER_DOMAIN
+    )
 
     # domain_dirs = [f"../../envs/CTAT/Mathtutor/{d}/" for d in WORKING_DOMAINS]
     # problems = collect_problems(domain_dirs)
