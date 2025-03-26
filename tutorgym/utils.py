@@ -12,6 +12,8 @@ from gym import spaces
 import numpy as np
 import hashlib
 from base64 import b64encode
+import re
+import numpy as np
 
 
 logging.basicConfig(level=logging.ERROR)
@@ -566,3 +568,19 @@ class BaseOppEnv(gym.Env):
 
     def render(self, mode='human', close=False):
         self.tutor.render()
+
+
+def as_sympy_str(value):
+    import sympy as sp
+    from sympy.parsing.latex._parse_latex_antlr import parse_latex
+
+    try:
+        sympy_value = str(value).replace('\\\\', '\\')
+        print("aft", sympy_value)
+        sympy_value = re.sub(r'sqrt(\d+)', r'sqrt{\1}', sympy_value)
+        sympy_value = sp.sstr(parse_latex(sympy_value), order='grlex')
+        return sympy_value
+    except:
+        # Return NaN so that two fails don't equal each other
+        return np.NaN
+    

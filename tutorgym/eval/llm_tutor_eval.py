@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from tutorgym.utils import unique_hash
+from tutorgym.utils import unique_hash, as_sympy_str
 from tutorgym.shared import Action
 import json
 import csv
@@ -191,7 +191,7 @@ class LLMTutorEvaluator(LLMPromptable):
             next_action_correct = any(
                 action['selection'] == selection and 
                 action['action_type'] == action_type and 
-                action['input'] == inp_val
+                (str(action['input']) == str(inp_val) or as_sympy_str(action['input']) == as_sympy_str(inp_val))
                 for action in obj['correct_actions']
             )
 
