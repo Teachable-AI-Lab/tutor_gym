@@ -584,5 +584,5 @@ def as_sympy_str(value):
         return sympy_value
     except:
         # Return NaN so that two fails don't equal each other
-        return np.NaN
+        return np.nan
     
