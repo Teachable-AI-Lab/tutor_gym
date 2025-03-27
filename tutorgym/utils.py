@@ -575,7 +575,9 @@ def as_sympy_str(value):
     from sympy.parsing.latex._parse_latex_antlr import parse_latex
 
     try:
-        sympy_value = str(value).replace('\\\\', '\\')
+        sympy_value = str(value)
+        sympy_value = sympy_value.replace('$$', '')
+        sympy_value = sympy_value.replace('\\\\', '\\')
         print("aft", sympy_value)
         sympy_value = re.sub(r'sqrt(\d+)', r'sqrt{\1}', sympy_value)
         sympy_value = sp.sstr(parse_latex(sympy_value), order='grlex')

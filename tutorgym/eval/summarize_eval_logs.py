@@ -60,7 +60,7 @@ for directory in glob.glob("./tutor_eval_logs/**/**/"):
         if(os.path.exists(incorrect_path)):
             with open(incorrect_path, 'r') as f:
                 i_df = pd.read_csv(f) 
-            counts = i_df['action_is_correct'].value_counts()
+            counts = i_df['response_is_correct'].value_counts()
             tr,fa = counts.get(True,0), counts.get(False,0)
             print(f"Incorrect Grade: Accuracy {100*tr/max(tr+fa,1):02.2f}% ({tr}/{(tr+fa)})")
             i_df = None # Collect early in case big
