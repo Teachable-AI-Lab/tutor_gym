@@ -51,7 +51,7 @@ def main(profile_path, tutor_kind):
     # Write the augmented completeness profile
     with open(out_path, 'w') as out_profile:
         for h, objs in profile_data.items():
-            out_profile.write(json.dumps(objs))
+            out_profile.write(json.dumps(objs)+"\n")
 
 
 if __name__ == "__main__":
