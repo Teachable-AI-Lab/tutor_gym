@@ -1,6 +1,9 @@
 import lxml.etree as ET
+from tutorgym.utils import norand_xeger
 from tutorgym.shared import Action
 from tutorgym.env_classes.fsm_tutor import ActionGroup
+
+
 
 # ---------------------
 class BaseMatcher:
@@ -28,11 +31,13 @@ class ExactMatcher(BaseMatcher):
 
 class RegexMatcher(BaseMatcher): 
     def __init__(self, single, **kwargs):
-        self.value = single
+        self.regex = single
+        self.value = norand_xeger(self.regex)
+        # print("R", self.regex, self.value)
+        # raise ValueError()
 
     def check(self, state, inp):
-        # TODO actually make work
-        return inp == self.value
+        return re.fullmatch(self.regex, inp) 
 
 class AnyMatcher(BaseMatcher): 
     def __init__(self, **kwargs):

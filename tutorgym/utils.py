@@ -1,6 +1,5 @@
 from typing import Union
 from typing import Callable
-
 import os
 import time
 import uuid
@@ -14,6 +13,9 @@ import hashlib
 from base64 import b64encode
 import re
 import numpy as np
+import rstr
+from typing import Any, Callable, Mapping, Pattern, Sequence, Union
+from itertools import chain
 
 
 logging.basicConfig(level=logging.ERROR)
@@ -586,3 +588,30 @@ def as_sympy_str(value):
         # Return NaN so that two fails don't equal each other
         return np.nan
     
+class NonRandomXeger(rstr.Xeger):
+    def __init__(self):
+        super().__init__()
+
+    def _handle_in(self, value: Any) -> Any:
+        candidates = list(chain(*(self._handle_state(i) for i in value)))
+        if candidates[0] is False:
+            candidates = list(set(string.printable).difference(candidates[1:]))
+        return candidates[0]#self._random.choice(candidates)
+
+    def _handle_repeat(self, start_range: int, end_range: int, value: str) -> str:
+        result = []
+
+        end_range = min(end_range, 100)
+
+        if(start_range <= 1 and 1 <= end_range):
+            times = 1
+        else:
+            times = start_range
+        # times = self._random.randint(start_range, end_range)
+        for i in range(times):
+            result.append(''.join(self._handle_state(i) for i in value))
+        return ''.join(result)
+
+_default_norand_xeger = NonRandomXeger()
+norand_xeger = _default_norand_xeger.xeger
+

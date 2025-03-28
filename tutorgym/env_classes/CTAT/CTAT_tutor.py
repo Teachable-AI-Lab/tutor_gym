@@ -245,7 +245,7 @@ if __name__ == '__main__':
 
     # Values [x]
     # Order [x]: 
-    problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_02_HTML/")
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_02_HTML/")
 
     # Values [0]: Complicated, mostly dynamic
     # Order [?]: 
@@ -326,7 +326,10 @@ if __name__ == '__main__':
     # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_30_HTML/")
 
     # Values [x]: All simple values # 
-    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_34_HTML/")
+    problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_34_HTML/")
+
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/8_19_HTML/")
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/8_20_HTML/")
 
     omit_problems = [
         "../../envs/CTAT/Mathtutor/6_16_HTML/FinalBRDs/18ABC.brd",

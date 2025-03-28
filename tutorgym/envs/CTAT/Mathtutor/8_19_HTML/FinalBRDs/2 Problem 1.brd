@@ -223,7 +223,7 @@
                 </Action>
                 <Input>
                     <matcher>
-                        <matcherType>RegexMatcher</matcherType>
+                        <matcherType>ExactMatcher</matcherType>
                         <matcherParameter name="single">5*5*c*c*c*c</matcherParameter>
                     </matcher>
                 </Input>
@@ -349,7 +349,7 @@
                 </Action>
                 <Input>
                     <matcher>
-                        <matcherType>RegexMatcher</matcherType>
+                        <matcherType>ExactMatcher</matcherType>
                         <matcherParameter name="single">1*x*x*x</matcherParameter>
                     </matcher>
                 </Input>
@@ -411,7 +411,7 @@
                 </Action>
                 <Input>
                     <matcher>
-                        <matcherType>RegexMatcher</matcherType>
+                        <matcherType>ExactMatcher</matcherType>
                         <matcherParameter name="single">x^3</matcherParameter>
                     </matcher>
                 </Input>
@@ -663,7 +663,7 @@
                 </Action>
                 <Input>
                     <matcher>
-                        <matcherType>RegexMatcher</matcherType>
+                        <matcherType>ExactMatcher</matcherType>
                         <matcherParameter name="single">ab</matcherParameter>
                     </matcher>
                 </Input>

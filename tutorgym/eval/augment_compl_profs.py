@@ -24,7 +24,7 @@ def main(profile_path, tutor_kind):
         for index, row in df.iterrows():
             correct = row['action_is_correct']
             line_hash = row['hash_id']
-            print(line_hash, correct, type(correct))
+            # print(line_hash, correct, type(correct))
             if(not correct and line_hash in profile_data):
                 obj = profile_data[line_hash]
                 incorrect_actions = obj['incorrect_actions']
