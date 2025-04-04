@@ -2,24 +2,29 @@ input change: |
   Here is a problem state:
   {'question': {'locked': True, 'type': 'TextField', 'value': 'What is 2+2?', 'id': 'question'},
    'answer' : {'locked': False, 'type': 'TextField', 'value': '', 'id': 'answer'}}
-  What is the next action?
+  What is the next correct action?
   answer;input change;4
+
+  Note: 'input change' can only be applied to elements with type 'TextField'.
 
 UpdateTextField: |
   Here is a problem state:
   {'question': {'locked': True, 'type': 'TextField', 'value': 'What is 2+2?', 'id': 'question'},
    'answer' : {'locked': False, 'type': 'TextField', 'value': '', 'id': 'answer'}}
-  What is the next action?
+  What is the next correct action?
   answer;UpdateTextField;4
+
+  Note: UpdateTextField can only be applied to elements with type 'TextField'.
 
 UpdateRadioButton: |
   Here is a problem state:
   {'question': {'locked': True, 'type': 'TextField', 'value': 'Is 2 odd?', 'id': 'question'},
-   'step0_choice0' : {'locked': False, 'type': 'TextField', 'value': 'yes', 'id': 'answer'},
-   'step0_choice1' : {'locked': False, 'type': 'TextField', 'value': 'no', 'id': 'answer'}}
-  What is the next action?
+   'step0_choice0' : {'locked': False, 'type': 'RadioButton', 'value': 'yes', 'id': 'answer'},
+   'step0_choice1' : {'locked': False, 'type': 'RadioButton', 'value': 'no', 'id': 'answer'}}
+  What is the next correct action?
   step0_choice1;UpdateRadioButton;no
 
+  Note: UpdateRadioButton can only be applied to elements with type 'RadioButton'.
   Note: An UpdateRadioButton action's selection is the field with the correct answer for then next step. 
   Its input value is the value of that correct answer.  
 
@@ -28,9 +33,10 @@ PressButton: |
   {'question': {'locked': True, 'type': 'TextField', 'value': 'What is 2+2?', 'id': 'question'},
    'answer' : {'locked': True, 'type': 'TextField', 'value': '4', 'id': 'answer'}
    'done' : {'locked': False, 'type': 'Button', 'value': '', 'id': 'done'}}
-  What is the next action? 
+  What is the next correct action? 
   done;PressButton;-1
 
+  Note: PressButton can only be applied to elements with type 'Button'.
   Note: PressButton actions always have an input of -1. 
 
   

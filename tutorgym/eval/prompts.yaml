@@ -16,8 +16,8 @@ next_action:
     This is the problem state:
     {state}
 
-    I need you to give me the next action for this problem state. You are only only allowed to changed a field with 'locked' as False. 
-    I need you to response with only one action in this format:
+    I need you to give me the next correct action for this problem state. You are only only allowed to changed a field with 'locked' as False. 
+    I need you to respond with only one action in this format:
     field;action_type;value
 
     Avoid additional text.
@@ -40,8 +40,8 @@ student_act:
     This is the problem state:
     {state}
 
-    I need you to give me the next action for this problem state. You are only only allowed to changed a field with 'locked' as False. 
-    I need you to response with only one action in this format:
+    I need you to give me the next correct action for this problem state. You are only only allowed to changed a field with 'locked' as False. 
+    I need you to respond with only one action in this format:
     field;action_type;value
 
     Avoid additional text.
