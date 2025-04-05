@@ -24,7 +24,7 @@ next_action:
 
 verify_action:
   template: |
-    I need your evaluating a student action taken to solving this {domain_name} problem. This is the problem state:
+    I need your help evaluating a student action taken to solve this {domain_name} problem. This is the problem state:
     {state}
 
     The student is only allowed to changed a field with 'locked' as False. Their actions are in the format:
