@@ -8,8 +8,8 @@ from colorama import Back, Fore, Style
 
 action_types_by_tutor_kind = {
     "apprentice" : ["input change", "PressButton"],
-    "oatutor" : ["UpdateTextField", "PressButton"] ,
-    "ctat" : ["UpdateTextField", "UpdateRadioButton", "PressButton"] ,
+    "oatutor" : ["UpdateTextField", "UpdateRadioButton", "PressButton"] ,
+    "ctat" : ["UpdateTextField", "PressButton"] ,
 }
 
 def print_green(x):
