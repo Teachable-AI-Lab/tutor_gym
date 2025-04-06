@@ -8,7 +8,7 @@ from colorama import Back, Fore, Style
 
 action_types_by_tutor_kind = {
     "apprentice" : ["input change", "PressButton"],
-    "oatutor" : ["UpdateTextField", "UpdateRadioButton", "PressButton"] ,
+    "oatutor" : ["UpdateTextField", "UpdateRadioButton"] ,
     "ctat" : ["UpdateTextField", "PressButton"] ,
 }
 
