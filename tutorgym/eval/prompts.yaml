@@ -4,7 +4,7 @@ action_examples: |
 
     1. field is the 'id' of the field that the action modifies. 
     2. action_type is one of: {action_types}.
-    3. value is the input value of the action, this should be a single expression or word
+    3. value is the associated input argument of the specified action; this could be of various types including strings, tuples, lists, expressions, etc. For example, the value might be inputs like "No solution", "12", "(12, 24)", or "$$3x + 2$$" depending on the problem state, field, and action.
 
     Here are some examples of problem states and correct actions for those states:
     {examples}
@@ -16,11 +16,9 @@ next_action:
     This is the problem state:
     {state}
 
-    I need you to give me the next correct action for this problem state. You are only only allowed to changed a field with 'locked' as False. 
-    I need you to respond with only one action in this format:
+    I need you to give me the next correct action for this problem state. You are only allowed to update a field with 'locked' as False.
+    I need you to respond with only one action in this exact format on a single line all by itself with no additional text (e.g., don't put "Answer: " before the response or any text after):
     field;action_type;value
-
-    Avoid additional text.
 
 verify_action:
   template: |
@@ -32,7 +30,7 @@ verify_action:
     
     Is this student action correct?
     {action}
-    Answer only with 'yes' or 'no'. 
+    Answer only with 'yes' or 'no' on a single line all by itself with no additional text (e.g., don't put "Answer: " before the response or any text after).
 
 student_act:
   template: |
@@ -40,10 +38,6 @@ student_act:
     This is the problem state:
     {state}
 
-    I need you to give me the next correct action for this problem state. You are only only allowed to changed a field with 'locked' as False. 
-    I need you to respond with only one action in this format:
+    I need you to give me the next correct action for this problem state. You are only allowed to changed a field with 'locked' as False.
+    I need you to respond with only one action in this exact format on a single line all by itself with no additional text (e.g., don't put "Answer: " before the response or any text after):
     field;action_type;value
-
-    Avoid additional text.
-    
-

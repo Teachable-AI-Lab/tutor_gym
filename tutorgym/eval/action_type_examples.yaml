@@ -6,6 +6,7 @@ input change: |
   answer;input change;4
 
   Note: 'input change' can only be applied to elements with type 'TextField'.
+  Note: The 'input change' action should be applied to the field and should be provided with a value argument corresponding to the correct answer for the next step.
 
 UpdateTextField: |
   Here is a problem state:
@@ -15,6 +16,7 @@ UpdateTextField: |
   answer;UpdateTextField;4
 
   Note: UpdateTextField can only be applied to elements with type 'TextField'.
+  Note: The UpdateTextField action should be applied to the field and should be provided with a value argument corresponding to the correct answer for the next step.
 
 UpdateRadioButton: |
   Here is a problem state:
@@ -25,8 +27,7 @@ UpdateRadioButton: |
   step0_choice1;UpdateRadioButton;no
 
   Note: UpdateRadioButton can only be applied to elements with type 'RadioButton'.
-  Note: An UpdateRadioButton action's selection is the field with the correct answer for then next step. 
-  Its input value is the value of that correct answer.  
+  Note: The UpdateRadioButton action should be applied to the field that has a value corresponding to the correct answer for the next step (the value provided for the action should also match the selected element's value attribute).
 
 PressButton: |
   Here is a problem state:
@@ -37,6 +38,5 @@ PressButton: |
   done;PressButton;-1
 
   Note: PressButton can only be applied to elements with type 'Button'.
-  Note: PressButton actions always have an input of -1. 
-
-  
+  Note: The PressButton action is always called with an input value of -1; this is an arbitrary constant that goes with this action and does not correspond to anything from the problem.
+  Note: The PressButton action clicks the button, but does not update the value of the element.
