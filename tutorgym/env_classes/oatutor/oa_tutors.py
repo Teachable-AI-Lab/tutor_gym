@@ -14,7 +14,6 @@ def make_next_state(state, action):
         next_state[selection]['locked'] = True
     elif action_type == "UpdateRadioButton":
         step_number = selection.split('_')[0]
-        next_state[selection]['value'] = True
         for key in next_state.objs.keys():
             if key.startswith(step_number):
                 next_state[key]['locked'] = True
@@ -35,9 +34,9 @@ class CogModel:
             not state.objs[key]['locked']
         ]
 
-        # If no unlocked step fields return 'done'
+        # Removed the `done` actions, so if we get here there is a problem.
         if len(step_keys) == 0:
-            return [Action(('done', 'PressButton', -1))]
+            raise Exception("Should not get to this, we are done.")
         
         # Sort keys based on step number to find min unlocked step
         sorted_keys = sorted(
@@ -152,16 +151,21 @@ class OATutor(TutorEnvBase):
                 return 1
         return -1
     
-    def action_makes_done(self, action):
-        return action.selection == 'done'
-    
     def apply(self, action):
         """ Applies an Action. Modifying self.state. """
-        if (self.action_makes_done(action)):
-            self.is_done = True
-            self.state = ProblemState({})
-        else:
-            self.state = make_next_state(self.state, action)
+        self.state = make_next_state(self.state, action)
+
+        step_keys = [
+            key for key in self.state.objs.keys()
+            if re.match(r'step\d+_', key) and 
+            not self.state.objs[key]['locked']
+        ]
+
+        # If no unlocked step fields then we're done.
+        if len(step_keys) == 0:
+             self.is_done = True
+             self.state = ProblemState({})
+
         return self.state
     
     def _process_demo(self, action, **kwargs):
