@@ -15,7 +15,13 @@ UpdateTextField: |
   What is the next correct action?
   answer;UpdateTextField;4
 
-  Note: UpdateTextField can only be applied to elements with type 'TextField'.
+  Here is a problem state:
+  {'question': {'locked': True, 'classList': ['CTATTextField', 'CTATComponent'], 'value': 'What is 2+2?', 'id': question},
+   'answer' : {'locked': False, 'classList': ['CTATTextInput', 'CTATComponent'], 'id': 'answer'}}
+  What is the next correct action?
+  answer;UpdateTextField;4
+
+  Note: UpdateTextField can only be applied to elements with type 'TextField' or 'CTATTextInput'.
   Note: The UpdateTextField action should be applied to the field and should be provided with a value argument corresponding to the correct answer for the next step.
 
 UpdateRadioButton: |
