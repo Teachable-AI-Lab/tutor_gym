@@ -251,7 +251,9 @@ class ApprenticeTutor(TutorEnvBase):
         label_params = {'type': 'Label', 'width' : 100, 'height' : 50, 'locked': True, }
         button_params = {'x': 0, 'type': 'Button', 'width' : 100, 'height' : 50, }
 
-        field_names = [x.name for x in self.domain_model['solve'].subtasks[0]]        
+        field_names = [x.name for x in self.domain_model['solve'].subtasks[0]]
+
+        # assert field_names.index('done') == len(field_names)-1
 
         state: dict = { 'equation' : {'y': 10, 'locked': True,  **field_params}}
         row_count: dict[str, int] = {'factor_1_b': 1, 'factor_2_b': 1, 'sum_factor': 1, 'sum_c': 1}
@@ -280,6 +282,10 @@ class ApprenticeTutor(TutorEnvBase):
 
         self.possible_selections = [x.name for x in self.domain_model['solve'].subtasks[0]]
         self.possible_args = ['equation', *self.possible_selections[:-2]]
+
+        # Check that we haven't changed the field
+        # state_ord_fieldnames = [x for x in state.keys() if x != 'equation' and 'label' not in x]
+        # assert state_ord_fieldnames == field_names
 
         return ProblemState(state)
 

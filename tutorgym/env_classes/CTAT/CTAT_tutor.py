@@ -11,6 +11,7 @@ from copy import copy
 import re
 import os
 import yaml
+import numpy as np
 
 # -----------------------------------------------------------------
 # : Action Filters
@@ -106,6 +107,30 @@ class CTAT_Tutor(StateMachineTutor):
             f_state[k] = obj
         return f_state
 
+    def _ensure_done_button(self, state):
+        if('done' in state):
+            return state
+
+        minX, maxX, minY, maxY = (np.inf,-np.inf,np.inf,-np.inf)
+        for k,obj in state.items():
+            if(all([x in obj for x in ('x', 'y', 'width', 'height')])):
+                x, y, width, height = obj['x'], obj['y'], obj['width'], obj['height']
+                _xr = x+width
+                _yr = y+height
+                if(x < minX): minX = x
+                if(y < minY): minY = y
+                if(_xr > maxX): maxX = _xr
+                if(_yr > maxY): maxY = _yr
+
+        # Put it somewhere in the bottom left
+        state['done'] =  {
+            'id': 'done', 'locked': False, 'type': 'Button', 'value': "",
+            "x" : minX + 50, "y" : maxY + 50,
+            "width" : 100, "height" : 100
+        } 
+        return state
+
+
 
     def set_start_state(self, html_path, model_path, **kwargs):
         # Render the HTML converted the DOM to JSON and snap a picture
@@ -124,6 +149,7 @@ class CTAT_Tutor(StateMachineTutor):
         with open(configs[0]['json_path']) as f:
             start_state = json.load(f)
 
+            start_state = self._ensure_done_button(start_state)
             start_state = self._filter_state(start_state)
 
             self.start_actions, self.edges, self.groups = \
@@ -136,6 +162,10 @@ class CTAT_Tutor(StateMachineTutor):
         # print("domain_dir", self.domain_dir, self.domain)
         self.problem_name = os.path.split(model_path)[-1]
 
+        for k,obj in start_state.items():
+            if(obj.get('value',"") == ""):
+                obj['locked'] = False
+
         start_state = ProblemState(start_state)
         # Apply any start state messages in the brd 
         for action in self.start_actions:
@@ -143,6 +173,8 @@ class CTAT_Tutor(StateMachineTutor):
 
         start_state.action_hist = []
         start_state.add_annotations({"is_start": True, "unique_id" : "1"})
+
+        # print('\n'.join([f"{k}:{obj['locked']}" for k, obj in start_state.objs.items()]))
 
         self.start_state = start_state
 
@@ -323,10 +355,10 @@ if __name__ == '__main__':
     # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_28_HTML/")
 
     # Values [x]: All simple values 
-    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_30_HTML/")
+    problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_30_HTML/")
 
     # Values [x]: All simple values # 
-    problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_34_HTML/")
+    # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/6_34_HTML/")
 
     # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/8_19_HTML/")
     # problem_sets = collect_CTAT_problem_sets("../../envs/CTAT/Mathtutor/8_20_HTML/")
