@@ -20,15 +20,18 @@ delete_incomplete = args.delete_incomplete
 bad_dirs_count = 0
 
 
+all_profs = []
 for directory in glob.glob("./tutor_eval_logs/**/**/"):
     # print(directory)
     path_parts = pathlib.Path(directory).parts
     # directory = os.path.sep.join(path_parts[1:-1])
     time = path_parts[-1]
     profile_dir = path_parts[-2]
+    all_profs.append((time, profile_dir, directory))
 
-    
+all_profs.sort()
 
+for time, profile_dir, directory in all_profs:
     profile_info = None
     profile_info_path = os.path.join(directory,"profile_info.json")
     if(os.path.exists(profile_info_path)):
@@ -38,7 +41,8 @@ for directory in glob.glob("./tutor_eval_logs/**/**/"):
     a_df = pd.read_csv(os.path.join(directory,"action_check.csv")) 
 
     if(show_all or profile_info and len(a_df) == profile_info['profile_num_lines']):
-        print(f"{profile_dir}({time}):")
+        dir_str = profile_dir.upper()
+        print(f"\n  {dir_str}{' '*max(0, 40-len(dir_str))}({time}):")
         print(f"{directory}")
 
         counts = a_df['action_is_correct'].value_counts()
