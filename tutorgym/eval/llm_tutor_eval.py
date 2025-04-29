@@ -27,6 +27,18 @@ agent_configs = {
         "client_url" : 'http://localhost:11434/api/generate',
         "model" : "deepseek-r1:70b",
         "context_length" : 6000,
+    },
+    "claude-3.5" : {
+        "client" : "anthropic",
+        # "host" : 'http://localhost:11434/api/generate',
+        "model" : "claude-3-5-sonnet-20241022",
+        "context_length" : 6000,
+    },
+    "gpt-4" : {
+        "client" : "openai",
+        # "host" : 'http://localhost:11434/api/generate',
+        "model" : "gpt-4",
+        "context_length" : 6000,
     }
 }
 
