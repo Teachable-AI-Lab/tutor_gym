@@ -139,7 +139,7 @@ class LLMStudentAgent(LLMPromptable):
         #               "\n\n".join([msg["content"] for msg in self.conversation_log])
 
         full_prompt = self.gen_prompt(state, is_start)
-        num_tokens = len(self.encoding.encode(full_prompt))
+        # num_tokens = len(self.encoding.encode(full_prompt))
         num_characters = len(full_prompt)
 
         # print(f"Token count: {num_tokens}")
@@ -147,12 +147,12 @@ class LLMStudentAgent(LLMPromptable):
         while num_characters > self.max_prompt_length:
             self.examples = self.examples[1:]
             full_prompt = self.gen_prompt(state, is_start)
-            num_tokens = len(self.encoding.encode(full_prompt))
+            # num_tokens = len(self.encoding.encode(full_prompt))
             num_characters = len(full_prompt)
             print("CONTEXT LIMIT REACHED - REMOVING OLDEST EXAMPLE")
 
         print(f"Character count: {num_characters}")
-        print(f"Token count: {num_tokens}")
+        # print(f"Token count: {num_tokens}")
 
         print("PROMPT:", full_prompt)
         response = self.run_prompt_retry(full_prompt)
