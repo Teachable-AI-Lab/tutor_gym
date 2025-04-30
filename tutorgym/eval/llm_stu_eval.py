@@ -23,28 +23,29 @@ agent_configs = {
         "client" : "ollama",
         "client_url" : 'http://localhost:11434/api/generate',
         "model" : "deepseek-v2.5",
-        "context_length" : 14000,
+        "context_length" : 3000,
         "max_prompt_length" : 30000,
     },
     "deepseek-r1" : {
         "client" : "ollama",
         "client_url" : 'http://localhost:11434/api/generate',
-        "model" : "deepseek-r1:70b",
+        "model" : "deepseek-r1:latest",
         "context_length" : 20000,
         "max_prompt_length" : 50000,
     },
     "claude-3.5" : {
         "client" : "anthropic",
         # "host" : 'http://localhost:11434/api/generate',
-        "model" : "claude-3-5-sonnet-20241022",
-        "context_length" : 20000,
+        # "model" : "claude-3-5-sonnet-20241022",
+        "model" : "claude-3-5-haiku-20241022",
+        "context_length" : 3000,
         "max_prompt_length" : 50000,
     },
-    "gpt-4" : {
+    "gpt-4o" : {
         "client" : "openai",
         # "host" : 'http://localhost:11434/api/generate',
-        "model" : "gpt-4",
-        "context_length" : 20000,
+        "model" : "gpt-4o",
+        "context_length" : 3000,
         "max_prompt_length" : 50000,
     }
 }
@@ -59,51 +60,101 @@ class LLMStudentAgent(LLMPromptable):
         config = agent_configs.get(config_name,{})
         super().__init__(tutor_kind, **config, **kwargs)
         
-        self.conversation_log = []
+        self.last_state = None
+        self.examples = []
         self.config_name = config_name
 
         self.max_prompt_length = config.get("max_prompt_length", max_prompt_length)
         
-    def _manage_conversation_log(self):
-        total_chars = len(self.action_type_examples_prompt) + \
+    def _manage_examples(self):
+        total_chars = self.gen_prompt
+        len(self.action_type_examples_prompt) + \
                       sum(len(msg["content"]) for msg in self.conversation_log)
-        if total_chars > self.max_prompt_length:
+                      
+        while total_chars > self.max_prompt_length:
             print("total_chars:", total_chars)
             self.conversation_log = self.conversation_log[3:]
+            total_chars = len(self.action_type_examples_prompt) + \
+                          sum(len(msg["content"]) for msg in self.conversation_log)
             
     def train(self, state, action, reward, is_demo=False, is_start=False, **kwargs):
 
+        if state != self.last_state:
+            self.last_state = state
+            self.examples.append([])
+            self.examples[-1].append("---Start Example---")
+            self.examples[-1].append(f"This is the problem state:\n{ state }\n")
+            self.examples[-1].append("These are incorrect actions in this state:")
+
         action_str = action_semicolon_format(action)
-        if is_demo:
-            message = f"For this step, the correct action is:\n{action_str}"
-            self.conversation_log.append({"role": "user", "content": message})
-        else:
-            self.conversation_log.append({"role": "assistant", "content": f"This is my action:\n{action_str}"})
-            if reward <= 0:
-                message = "That action was incorrect!"
-            else:
-                message = "That action was correct!"
-            self.conversation_log.append({"role": "user", "content": message})
-        self._manage_conversation_log()
+        if is_demo or reward > 0:
+            self.examples[-1].append("\nThese are correct actions in this state:")
+
+        if self.examples[-1][-1] != f"{action_str}":
+            self.examples[-1].append(f"{action_str}")
+
+        # action_str = action_semicolon_format(action)
+        # if is_demo:
+        #     message = f"For this step, the correct action is:\n{action_str}"
+        #     self.conversation_log.append({"role": "user", "content": message})
+        # else:
+        #     self.conversation_log.append({"role": "assistant", "content": f"This is my action:\n{action_str}"})
+        #     if reward <= 0:
+        #         message = "That action was incorrect!"
+        #     else:
+        #         message = "That action was correct!"
+        #     self.conversation_log.append({"role": "user", "content": message})
+        # self._manage_conversation_log()
 
     # def train_all(self, training_set, states={}, **kwargs):
 
-    def act(self, state, is_start=False, **kwargs):
-        if is_start:
-            self.conversation_log.append({"role": "user", "content": "------Now lets solve this problem!------"})
-            
-        # Construct prompt for next action
-        prob_prompt = self.prompts['student_act']['template'].format(
+    def gen_prompt(self, state, is_start):
+        full_prompt = self.action_type_examples_prompt
+        full_prompt += "------Here are examples of states and incorrect and correct actions for them!------\n"
+        for example in self.examples:
+            full_prompt += "\n".join(example) + "\n"
+        full_prompt += "------End of examples------\n"
+
+        full_prompt += "------Now lets solve this new problem!------\n\n"
+        full_prompt += self.prompts['student_act']['template'].format(
             state=state.objs,
         )
+
+        return full_prompt
         
-        self.conversation_log.append({"role": "user", "content": prob_prompt})
-        self._manage_conversation_log()
 
-        full_prompt = self.action_type_examples_prompt + \
-                      "\n\n".join([msg["content"] for msg in self.conversation_log])
+    def act(self, state, is_start=False, **kwargs):
+        # if is_start:
+        #     self.conversation_log.append({"role": "user", "content": "------Now lets solve this problem!------"})
+        #     
+        # # Construct prompt for next action
+        # prob_prompt = self.prompts['student_act']['template'].format(
+        #     state=state.objs,
+        # )
+        # 
+        # self.conversation_log.append({"role": "user", "content": prob_prompt})
+        # self._manage_conversation_log()
 
-        # print("PROMPT:", full_prompt)
+        # full_prompt = self.action_type_examples_prompt + \
+        #               "\n\n".join([msg["content"] for msg in self.conversation_log])
+
+        full_prompt = self.gen_prompt(state, is_start)
+        num_tokens = len(self.encoding.encode(full_prompt))
+        num_characters = len(full_prompt)
+
+        # print(f"Token count: {num_tokens}")
+
+        while num_characters > self.max_prompt_length:
+            self.examples = self.examples[1:]
+            full_prompt = self.gen_prompt(state, is_start)
+            num_tokens = len(self.encoding.encode(full_prompt))
+            num_characters = len(full_prompt)
+            print("CONTEXT LIMIT REACHED - REMOVING OLDEST EXAMPLE")
+
+        print(f"Character count: {num_characters}")
+        print(f"Token count: {num_tokens}")
+
+        print("PROMPT:", full_prompt)
         response = self.run_prompt_retry(full_prompt)
 
         # Parse response into an Action
@@ -113,6 +164,10 @@ class LLMStudentAgent(LLMPromptable):
             selection, action_type, inp = parts
             if action_type == "PressButton":
                 inp = -1
+        elif len(parts) < 3:
+            extended = parts + ['', '', '']
+            extended = extended[:3]
+            selection, action_type, inp = extended[0], extended[1], extended[2]
         else:
             selection, action_type, inp = 'incorrect_format', 'incorrect_format', 'incorrect_format'
         
