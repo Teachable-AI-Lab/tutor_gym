@@ -6,14 +6,13 @@ from apprentice.working_memory.representation import Sai
 # from apprentice.working_memory.numba_operators import *
 
 # from tutorenvs.fractions_v import FractionArithSymbolic
-from tutorgym.envs.fraction_arithmetic.fractions_std import FractionArithmetic
-from tutorenvs.trainer import Trainer
-from tutorenvs.utils import DataShopLogger
-from colorama import Back, Fore
-from tutorenvs.utils import compare
+from tutorgym.env_classes.misc.fraction_arith.fractions import FractionArithmetic
+from tutorgym.trainer import Trainer, AuthorTrainer
+from tutorgym.utils import DataShopLogger
+# from colorama import Back, Fore
 
-import colorama
-colorama.init(autoreset=True)
+# import colorama
+# colorama.init(autoreset=True)
 
 import time
 
@@ -125,8 +124,8 @@ def resolve_type(typ, logger_name):
 def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_args=False):
     logger_name, problem_types = resolve_type(typ, logger_name)
     logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al')
-    env = FractionArithmetic(problem_types=problem_types, n_fracs=n_fracs,
-                             demo_args=False)
+    env = FractionArithmetic(problem_types=problem_types, n_fracs=n_fracs)
+                             # demo_args=False)
     trainer = Trainer(agent, env, logger=logger, n_problems=n)
     trainer.start()
 
@@ -165,6 +164,7 @@ if __name__ == "__main__":
     for _ in range(args.n_agents):
         if(args.agent_type.upper() == "DIPL"):
             from apprentice.agents.cre_agents.cre_agent import CREAgent
+            import tutorgym.helpers.ai2t_helpers # Registers SkillApplication -> Action
 
             agent_args = {
                 # "function_set": ['AcrossMultiply','Multiply', 'Add'],
@@ -182,6 +182,8 @@ if __name__ == "__main__":
                 "which_learner": "when_prediction",
                 "action_chooser" : "max_which_utility",
                 "suggest_uncert_neg" : True,
+
+                "error_on_bottom_out" : False,
 
                 # "when_learner" : 'sklearndecisiontree',
                 # "when_learner" : 'decisiontree',

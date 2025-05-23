@@ -179,8 +179,9 @@ class Trainer:
         ''' Tutor-train (i.e. train one action at a time) on 'state'.'''
 
         if(not force_demo):
-            action = self.agent.act(state, return_kind=self.agent_action_repr,
-                is_start=is_start)
+            # actions = self.agent.act_all(
+            action = self.agent.act(**self._state_to_kwargs(state, is_start),
+                return_kind=self.agent_action_repr)
         else:
             action = None
 
