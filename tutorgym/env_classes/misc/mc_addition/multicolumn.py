@@ -25,7 +25,7 @@ from itertools import permutations
 
 from tutorgym.shared import ProblemState, Action
 from tutorgym.env_classes.fsm_tutor import FiniteStateMachine, StateMachineTutor
-
+from tutorgym.env_classes.CTAT.action_model import CTAT_ActionModel
 
 
 # ----------------------------------
@@ -44,7 +44,7 @@ def to_int_safe(a):
 class MultiColumnAddition(StateMachineTutor):
 
     def __init__(self, n_digits=3, pad_zeros=False, carry_zero=False, random_n_digits=False, **kwargs):
-        super().__init__(**kwargs)                
+        super().__init__(action_model=CTAT_ActionModel, **kwargs)                
         self.problem = None
         self.n_digits = n_digits
         self.pad_zeros = pad_zeros
@@ -134,7 +134,9 @@ class MultiColumnAddition(StateMachineTutor):
 
         return ProblemState(state)
 
-
+    def action_is_done(self, action):
+        return action.selection == "done"
+        
     def set_start_state(self, upper, lower, **kwargs):
         # pad_zeros = kwargs.get('pad_zeros', self.pad_zeros)
         # n_digits = kwargs.get('n_digits', self.n_digits)
@@ -169,18 +171,18 @@ class MultiColumnAddition(StateMachineTutor):
 
         self.set_problem(upper, lower, **kwargs)
 
-        return (upper, lower)
+        return {"upper" : upper, "lower" : lower}
 
     # --------------------------
     # : Problem State Machine Initialization
 
-    def create_fsm(self, state):
+    def create_fsm(self, state, **kwargs):
         ''' Domain implementation: Used by StateMachineTutor.set_problem() 
             to initialize an FSM for this domain.'''
         prev_carry = False
 
         curr_state = state.copy()
-        fsm = FiniteStateMachine(curr_state)        
+        fsm = FiniteStateMachine(curr_state, self.action_model)        
 
         # Make FSM one column at a time
         i = 0
@@ -212,7 +214,7 @@ class MultiColumnAddition(StateMachineTutor):
                     foci = [f'carry{i}']
                     sai = (f'out{i+1}', 'UpdateTextField',
                             "1" if prev_carry else "0")
-                    act = Action(sai, args=foci, how_help="Copy(a)")
+                    act = Action(sai, arg_foci=foci, how_help="Copy(a)")
                     curr_state = fsm.add_edge(curr_state, act)
 
                     # a_sai = (f'out{i+1}', 'UpdateTextField',
@@ -227,13 +229,13 @@ class MultiColumnAddition(StateMachineTutor):
 
                     a_sai = (f'out{i+1}', 'UpdateTextField',
                                 str(partial_sum % 10))
-                    a_act = Action(a_sai, args=foci, how_help="OnesDigit(Add(a,b))")
+                    a_act = Action(a_sai, arg_foci=foci, how_help="OnesDigit(Add(a,b))")
                     
                     if(self.carry_zero or partial_sum >= 10):
                         
                         c_sai = (f'carry{i+1}', 'UpdateTextField',
                                 str(partial_sum // 10))
-                        c_act = Action(c_sai, args=foci, how_help="TensDigit(Add(a,b))")
+                        c_act = Action(c_sai, arg_foci=foci, how_help="TensDigit(Add(a,b))")
 
                         # print("Case A:", a_act, c_act, i)
                         curr_state = fsm.add_unordered(curr_state, [a_act, c_act])
@@ -247,7 +249,7 @@ class MultiColumnAddition(StateMachineTutor):
                         foci = [f'inpA{i+1}']
                         sai = (f'out{i+1}', 'UpdateTextField',
                                 str(partial_sum))
-                        act = Action(sai, args=foci, how_help="Copy(a)")
+                        act = Action(sai, arg_foci=foci, how_help="Copy(a)")
                         curr_state = fsm.add_edge(curr_state, act)
                         # print("Case C", act, i)
                         
@@ -262,18 +264,18 @@ class MultiColumnAddition(StateMachineTutor):
                 if self.carry_zero or partial_sum >= 10:
                     a_sai = (f'out{i+1}', 'UpdateTextField', 
                                 str(partial_sum % 10))
-                    a_act = Action(a_sai, args=foci, how_help=f"OnesDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
+                    a_act = Action(a_sai, arg_foci=foci, how_help=f"OnesDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
 
                     c_sai = (f'carry{i+1}', 'UpdateTextField',
                                 str(partial_sum // 10))
-                    c_act = Action(c_sai, args=foci, how_help=f"TensDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
+                    c_act = Action(c_sai, arg_foci=foci, how_help=f"TensDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
                     # print("Case D:", a_act, c_act, i)
                     curr_state = fsm.add_unordered(curr_state, [a_act, c_act])
 
                 else:
                     sai = (f'out{i+1}', 'UpdateTextField',
                             str(partial_sum))
-                    act = Action(sai, args=foci, how_help=f"OnesDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
+                    act = Action(sai, arg_foci=foci, how_help=f"OnesDigit(Add({','.join(['a','b','c'][:len(foci)])}))")
                     # print("Case E:", act, i)
                     curr_state = fsm.add_edge(curr_state, act)
             else:
@@ -288,7 +290,7 @@ class MultiColumnAddition(StateMachineTutor):
             foci = [f'carry{i}']
             sai = (f'out{i+1}', 'UpdateTextField',
                     "1" if prev_carry else "0")
-            act = Action(sai, args=foci, how_help="Copy(a)")
+            act = Action(sai, arg_foci=foci, how_help="Copy(a)")
             curr_state = fsm.add_edge(curr_state, act)
             # print("Case F:", act, i)
 
@@ -514,14 +516,15 @@ def test_demo_check():
 
     # Succeed with args
     foci = ["inpA1", "inpB1"]
-    actA = Action(("out1", "UpdateTextField", {"value": '6'}), args=foci)
-    actC = Action(("carry1", "UpdateTextField", {"value": '1'}), args=foci)
+    actA = Action(("out1", "UpdateTextField", {"value": '6'}), arg_foci=foci)
+    actC = Action(("carry1", "UpdateTextField", {"value": '1'}), arg_foci=foci)
     assert mc.check(actA)==1
     assert mc.check(actC)==1
 
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and False:
+
     # mc = MultiColumnAddition()
     # mc.set_problem("567", "689")
     # for key, obj in mc.state.objs.items():
@@ -565,3 +568,15 @@ if __name__ == "__main__":
     # print(mc.check(actA), mc.check(actC))
 
 
+if __name__ == "__main__":
+
+
+    problems = [{"upper": "574", "lower": "798"},
+                {"upper": "222", "lower": "333"},]
+    # problems = [{'op': '+', 'fracs': [('11', '13'), ('13', '14')]}]
+    env = MultiColumnAddition(demo_annotations=["arg_foci", "how_help"],
+                             check_annotations=["arg_foci"], n_digits=3)
+
+
+
+    env.make_compl_prof("gt.txt", problems)

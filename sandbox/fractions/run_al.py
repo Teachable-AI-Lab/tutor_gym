@@ -178,7 +178,7 @@ if __name__ == "__main__":
                 "where_learner": "mostspecific",
 
                 # For STAND
-                "when_learner": "stand",
+                "when_learner": "decision_tree",
                 "which_learner": "when_prediction",
                 "action_chooser" : "max_which_utility",
                 "suggest_uncert_neg" : True,

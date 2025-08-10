@@ -28,6 +28,12 @@ agent_configs = {
         "model" : "deepseek-r1:70b",
         "context_length" : 6000,
     },
+    "gpt-oss" : {
+        "client" : "ollama",
+        "client_url" : 'http://localhost:11434/api/generate',
+        "model" : "gpt-oss:120b",
+        "context_length" : 6000,
+    },
     "claude-3.5" : {
         "client" : "anthropic",
         # "host" : 'http://localhost:11434/api/generate',
