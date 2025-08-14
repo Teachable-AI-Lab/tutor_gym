@@ -22,10 +22,10 @@ agent_configs = {
         "model" : "deepseek-v2.5",
         "context_length" : 6000,
     },
-    "deepseek-r1" : {
-        "client" : "ollama",
-        "client_url" : 'http://localhost:11434/api/generate',
-        "model" : "deepseek-r1:70b",
+    "gpt-oss" : {
+        "client" : "openai",
+        "client_url" : 'http://localhost:8000/v1',
+        "model" : "/models/gpt-oss-120b",
         "context_length" : 6000,
     },
     "claude-3.5" : {
@@ -115,6 +115,8 @@ class LLMTutorEvaluator(LLMPromptable):
 
         # Print w/ encode to avoid possible unicode errors  
         # print(next_action_message.encode(sys.stdout.encoding, 'replace').decode("utf-8"))
+        print(next_action_message)
+        print()
 
         return self.run_prompt_retry(next_action_message)
 
@@ -139,6 +141,7 @@ class LLMTutorEvaluator(LLMPromptable):
             # print(verify_message.encode(sys.stdout.encoding, 'replace').decode("utf-8"))
 
             response = self.run_prompt_retry(verify_message)
+            print("THE RESPONSE ==> ", response)
             ideal_response = 'yes' if action_is_correct else "no"
             results.append((
                 act_d['selection'],
@@ -188,6 +191,7 @@ class LLMTutorEvaluator(LLMPromptable):
             filtered_state = obj['state']
 
         next_action_response = self.get_next_action(filtered_state, obj['domain'])
+        print("THE RESPONSE ==> ", next_action_response)
         
         try:
             parts = next_action_response.split(';')

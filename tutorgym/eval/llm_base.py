@@ -48,7 +48,10 @@ class LLMPromptable():
             self.client_inst = Anthropic()
         elif(self.client_name == "openai"):
             from openai import OpenAI
-            self.client_inst = OpenAI()
+            if client_url:
+                self.client_inst = OpenAI(base_url=client_url, api_key="EMPTY")
+            else:
+                self.client_inst = OpenAI()
 
         self.model = model
         self.client_url = client_url
