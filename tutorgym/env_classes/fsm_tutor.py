@@ -245,6 +245,7 @@ class FiniteStateMachine:
 
 
         self.groups[action_group.name] = {
+            "start_id" : start_id,
             "group" : action_group,
             "start_state" : start_state,
             "next_state" : _state,
@@ -272,7 +273,7 @@ class FiniteStateMachine:
     # : get_next_actions
 
     def _action_satisfied(self, state, action):
-        # print("Looking for", action)
+        # print("Looking for", action, "in", len(state.action_hist))
         for hist_action in state.action_hist:
             # print("\tH", hist_action)
             if(action.check(state, hist_action)):
@@ -330,11 +331,13 @@ class FiniteStateMachine:
         next_actions = None
         state_id = state.get_annotation("unique_id")
         node = self.nodes.get(state_id, None)
-        state_groups = state.get_annotation("groups", None)
+        state_groups = state.get_annotation("groups", set())
+
         # print("gna group_name", state_id, state_groups)
 
-        if(state_groups is None and node is not None):
-            state_groups = node['state'].get_annotation("groups", None)
+        if(node is not None):
+            ns_grps = node['state'].get_annotation("groups", set())
+            state_groups = state_groups.union(ns_grps)
 
         # print("gna group_name", state_id, state_groups)
         # print("Node", node)
@@ -342,9 +345,11 @@ class FiniteStateMachine:
         all_groups_satisfied = True
         exit_actions = []
         next_actions = []
-        if(state_groups is not None):# and 
+        if(len(state_groups) > 0):# and 
             # print(' -- groups', state_groups)
             # any(gn in self.groups for gn in node['groups'])):
+            # print("Act Hist", [str(x) for x in state.action_hist])
+            # print("State Groups", state_groups)
             for group_name in state_groups:
                 # The next actions should include any unsatisfied actions
                 #   in the group
@@ -353,17 +358,36 @@ class FiniteStateMachine:
                 group_satisfied, unfinished_actions = \
                     self._group_satisfied(state, group)
                 
-                # print("unfinished_actions", unfinished_actions)
+                # print(group_name, "unfinished", [str(x) for x in unfinished_actions])
+                
                 next_actions += unfinished_actions
 
                 # If the group has been satisfied (i.e. all non-optional 
                 #   actions have been taken) then any actions that leave 
                 #   the group should also be included.
                 if(group_satisfied):
-                    
+                    # print("group.out_state_ids", group.out_state_ids)
+                    # print("group.out_state_ids", group.out_state_ids)
                     for out_state_id in group.out_state_ids:
+                        # Add all direct edges from the group's out states
                         out_edges = self.nodes[out_state_id]['edges']
                         exit_actions += list(out_edges.keys())
+                        # TODO NOTE: Add everything in the node's group
+
+                        # Add all actions that are part of groups of the out state
+                        out_node_groups = self.nodes[out_state_id].get('groups',{})
+                        for on_grp in out_node_groups:
+                            # print(self.groups[on_grp])
+                            on_unfin_sat, on_unfin_actions = \
+                                self._group_satisfied(state, self.groups[on_grp]['group'])
+
+                            # print("G E", on_grp, on_unfin_actions)
+                            if(not on_unfin_sat):
+                                exit_actions += list(on_unfin_actions)
+
+
+                        # print(self.nodes[out_state_id].get('groups',{}))
+
                     # print("GROUP SATISFIED!", group_name,  f"n_unfin={len(unfinished_actions)}", group.out_state_ids, list(out_edges.keys()))
                 else:
                     # print("GROUP NOT SATISFIED!", group_name, f"n_unfin={len(unfinished_actions)}",)
@@ -380,7 +404,8 @@ class FiniteStateMachine:
             satisfied = self._action_satisfied(state, exit_action)
             # print("exit_action", exit_action, f"id={exit_action.get_annotation('unique_id')} ({exit_action.get_annotation('src_id')}, {exit_action.get_annotation('dest_id')})", satisfied)
             if(not satisfied):
-                next_actions.append(exit_action)    
+                next_actions.append(exit_action)  
+        # print("n_actions", len(next_actions))  
 
         
             # for na in next_actions:
@@ -406,7 +431,9 @@ class FiniteStateMachine:
                     next_actions += self.get_next_actions(next_state)
 
 
-        # print("next_actions", len(next_actions))        
+        # Ensure ther are not duplicate actions
+        next_actions = list(set(next_actions))
+        # print("next_actions", [x.annotations for x in next_actions])        
         actions_sorted = sorted(next_actions, key=lambda x : x.get_annotation("optional", False))
 
         # print("actions_sorted", [a.selection for a in actions_sorted])
@@ -460,6 +487,7 @@ class StateMachineTutor(TutorEnvBase):
         # print("AFT annotations:", self.start_state.annotations)
         if(self.start_state.get_annotation("unique_id") is None):
             self.start_state.add_annotations({"unique_id" : "1"})
+        self.start_state.add_annotations({"action_hist" : []})
 
         self.set_state(self.start_state)
         # self.is_done = False
@@ -479,7 +507,7 @@ class StateMachineTutor(TutorEnvBase):
 
     def set_state(self, state):
         # print("-- SET STATE GET NEXT -- ")
-        # print("annotations:", state.annotations)
+        # print("s annotations:", state.annotations)
         state = self.state = ProblemState(state)
 
         # print("annotations:", state.annotations)
@@ -560,16 +588,27 @@ class StateMachineTutor(TutorEnvBase):
     def apply(self, action, make_copy=True):
         """ Applies an Action. Modifying self.state. """
         corr_action = self._check_w_next(action)
+        # print("APPLY", corr_action)
 
         # Apply  
         if(self.action_is_done(action)):
             state = ProblemState({}, is_done=True)
+            state.action_hist = [*self.state.action_hist, action]
+                # action_hist=self.state.get_annotation("action_hist")+action)
         else:
             state = self.action_model.apply(self.state, action, make_copy=make_copy)
+
+        # print(action, len(self.state.action_hist), len(state.action_hist))
+        assert len(self.state.action_hist) < len(state.action_hist)
         
         # Assign the destination id
         dest_id = corr_action.get_annotation("dest_id", None)
-        if(dest_id is not None):
+        group = corr_action.get_annotation("group")
+        if(group is not None):
+            gnode = self.fsm.groups[group]
+            grp_start_id = gnode['start_id']
+            state.add_annotations({"unique_id" : grp_start_id})
+        elif(dest_id is not None):
             state.add_annotations({"unique_id" : dest_id})
 
         # Set the the new state
@@ -577,14 +616,17 @@ class StateMachineTutor(TutorEnvBase):
 
         # Resolve the "groups" annotation that should be applied to the 
         #  state. This annotation specifies which groups the  
-        group = corr_action.get_annotation("group")
+        
         if(group):
             gnode = self.fsm.groups[group]
             is_satisfied, _ = self.fsm._group_satisfied(state, gnode['group'])
+            # print("APP", group, is_satisfied)
             groups = set()
             if(is_satisfied):
                 groups = set()
+                # print("gnode", gnode)
                 for a in self.next_actions:
+                # for a in gnode['group']:
                     grp = a.get_annotation("group")
                     if(grp):
                         groups.add(grp)

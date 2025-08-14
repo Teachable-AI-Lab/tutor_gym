@@ -22,6 +22,7 @@ class CTAT_ActionModel:
             if(sel == "done"):
                 # print("DONE!")
                 new_state = ProblemState({}, is_done=True)
+                new_state.action_hist = [*state.action_hist, action]
 
             # Pressing a button might do nothing
             else:

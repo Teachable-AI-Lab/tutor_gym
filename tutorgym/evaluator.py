@@ -4,10 +4,10 @@ from tutorgym.shared import Action
 def _load_profile_line(line):
     import json
     item = json.loads(line)
-    profile_actions = [Action(x) for x in item['actions']]
+    
+    profile_actions = [Action(x) for x in item['correct_actions']]
     state = item['state']
-    is_start = len(item['hist'])==0
-
+    is_start = len(item['action_hist'])==0
     # if(hasattr(agent, "standardize_state")):
     #     state = self.standardize_state(state)
         
@@ -35,6 +35,7 @@ def eval_completeness(agent, compl_prof, verbosity=1,
                         check_annotations=[],
                         **kwargs):
     ''' Evaluates an agent's correctness and completeness against a completeness profile.'''
+    # print("COMPL PROF:", compl_prof)
     import json, os
     if(verbosity > 0):
         print("--START EVAL COMPLETENESS--")
@@ -49,7 +50,8 @@ def eval_completeness(agent, compl_prof, verbosity=1,
     diffs = []
     prob_uid = None
     for state, item, profile_actions in profile_iter:
-        is_start = len(item['hist'])==0
+        # print("N profile actions", len(profile_actions))
+        is_start = len(item['action_hist'])==0
 
         # TODO: this is a bit of a hack
         if(is_start and hasattr(agent, "standardize_state")):
@@ -61,7 +63,6 @@ def eval_completeness(agent, compl_prof, verbosity=1,
 
         # Copy and filter each set of actions to only include annotations
         #  included in `check_annotations`
-
         conv_profile_actions = []#[Action(p_act) for p_act in profile_actions]
         for p_act in profile_actions:
             p_act = Action(p_act)
@@ -89,10 +90,10 @@ def eval_completeness(agent, compl_prof, verbosity=1,
         # print("+", incorrect)
         # print("=", correct)
         # print()
-
+        # print(len(set_profile_actions))
         step_score = max(0.0, len(set_profile_actions)-n_diff) / len(set_profile_actions)
 
-        diffs.append({"problem": item['problem'], 'hist' : item['hist'],
+        diffs.append({"problem": item['problem'], 'action_hist' : item['action_hist'],
                       "-": list(missing), "+": list(incorrect), "=" : list(correct),
                       "step_score" : step_score
                       })
@@ -111,7 +112,7 @@ def eval_completeness(agent, compl_prof, verbosity=1,
             n_diffs = len(diff['-']) + len(diff['+'])
             
             if(n_diffs != 0):
-                print(f"--DIFF: {diff['problem']} {diff['hist']} --")
+                print(f"--DIFF: {diff['problem']} {diff['action_hist']} --")
                 for m in diff['-']:
                     print("  -", m)
                 for m in diff['+']:
@@ -138,7 +139,8 @@ def eval_completeness(agent, compl_prof, verbosity=1,
 
 
 class CompletenessEvaluator:
-    def __init__(self, name="CompletenessEval", eval_freq="problem_end",
+    def __init__(self, name="CompletenessEval",
+            eval_freq="problem_end",
             compl_prof=None, verbosity=1,
             print_skills=False, print_htn=False,
             print_diff=True, print_correct="if_diff",
@@ -188,6 +190,7 @@ class CompletenessEvaluator:
         Called by the trainer. Runs step of evaluation according to evaluator's eval_freq 
         ("step_end", "problem_end", "train_end", etc.)
         '''
+        print("DO EVAL")
         completeness_data = eval_completeness(self.agent, 
             self.profile_iter, verbosity=self.verbosity,
             print_diff=self.print_diff, print_correct=self.print_correct,

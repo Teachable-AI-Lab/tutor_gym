@@ -10,7 +10,8 @@ import json
 
 class ProblemIterator:
     def __init__(self, problem_set=None, n_problems=None, **kwargs):
-
+        # print("problem_set", problem_set)
+        # raise ValueError()
         if(problem_set is not None):
             n_problems = 0 if n_problems is None else n_problems
             self.n_problems = max(n_problems, len(problem_set))
@@ -379,6 +380,7 @@ class AuthorTrainer(Trainer):
 
         problems_so_far = []
         for prob_args in p_iter:
+            print("P ITER", prob_args)
             if(prob_args is None):
                 prob_args = self.env.set_random_problem()
             else:

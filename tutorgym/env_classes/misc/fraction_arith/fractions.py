@@ -125,9 +125,11 @@ class FractionArithmetic(StateMachineTutor):
         # for key, obj in state.objs.items():
         #     print(key, obj)
 
-    def set_random_problem(self):
+    def set_random_problem(self, ptype=None):
         ok = False
-        ptype = choice(self.problem_types)
+        if(ptype is None):
+            ptype = choice(self.problem_types)
+        
 
         print("<<", ptype, self.problem_types)
 
@@ -143,8 +145,10 @@ class FractionArithmetic(StateMachineTutor):
             operator = "+"
         # print("NUMERATORS", nums)
         # print("DENOMINATORS", dens)
+        print("<<", list(zip(nums, dens)))
         self.set_problem(operator, list(zip(nums, dens)))
-        return (operator, list(zip(nums, dens)))
+        return {"op" : operator,
+                "fracs" : list(zip(nums, dens))}
         # print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {operator.join([f'({n}/{v})' for n,v in zip(nums,dens)])}" )
 
     def create_fsm(self, state, **kwargs):
@@ -528,3 +532,16 @@ class FractionArithmetic(StateMachineTutor):
 
 #     def render(self, mode='human', close=False):
 #         self.tutor.render()
+
+
+if __name__ == "__main__":
+    problems = [{"op" : "+", "fracs" : [("1","2"), ("1","3")]},
+                {"op" : "*", "fracs" : [("1","2"), ("1","3")]}]
+    # problems = [{'op': '+', 'fracs': [('11', '13'), ('13', '14')]}]
+    env = FractionArithmetic(demo_annotations=["arg_foci", "how_help"],
+                             check_annotations=["arg_foci"],
+                             problem_types=["AD","AS","M"], n_fracs=2)
+
+
+
+    env.make_compl_prof("gt.txt", problems)
