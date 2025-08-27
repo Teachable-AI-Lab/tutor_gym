@@ -47,6 +47,14 @@ agent_configs = {
         "model" : "gpt-4o",
         "context_length" : 3000,
         "max_prompt_length" : 50000,
+    },
+    "gpt-oss" : {
+        "client" : "openai",
+        "client_url" : 'http://localhost:8000/v1',
+        # "host" : 'http://localhost:11434/api/generate',
+        "model" : "/models/gpt-oss-120b",
+        "context_length" : 3000,
+        "max_prompt_length" : 50000,
     }
 }
 
@@ -117,7 +125,7 @@ class LLMStudentAgent(LLMPromptable):
 
         full_prompt += "------Now lets solve this new problem!------\n\n"
         full_prompt += self.prompts['student_act']['template'].format(
-            state=state.objs,
+            state=state,
         )
 
         return full_prompt
@@ -196,6 +204,7 @@ def run_training(problem_set, tutor_kind, model, scaffold="first"):
 
     trainer = Trainer(agent, env, logger=logger,
                 problem_set=problem_set,
+                agent_state_repr="obj_dicts",
                 num_incorrect_force_demo=2)
 
     # print("START", problem_set)
