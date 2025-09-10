@@ -124,7 +124,7 @@ def resolve_type(typ, logger_name):
 def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_args=False):
     logger_name, problem_types = resolve_type(typ, logger_name)
     logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al')
-    env = ApprenticeTutor(domain=domain_name, scaffold=scaffold)
+    env = FractionArithmetic(problem_types=problem_types, n_fracs=n_fracs)
                              # demo_args=False)
     trainer = Trainer(agent, env, logger=logger, n_problems=n)
     trainer.start()
