@@ -1,10 +1,17 @@
+from tutorgym.env_classes.apprentice.apprentice_tutor import ApprenticeTutor
 from apprentice.agents.ModularAgent import ModularAgent
 from apprentice.agents.RHS_LHS_Agent import RHS_LHS_Agent
 from apprentice.agents.WhereWhenHowNoFoa import WhereWhenHowNoFoa
 import apprentice
 from apprentice.working_memory.representation import Sai
 # from apprentice.working_memory.numba_operators import *
-
+from tutorgym.envs.apprentice.cognitive_models.logarithms import (
+    htn_logarithms_quotient as logarithms_quotient,
+    htn_logarithms_product as logarithms_product,
+    htn_logarithms_power as logarithms_power,
+)
+domain_name= "exponents_power"
+scaffold = "first"
 # from tutorenvs.fractions_v import FractionArithSymbolic
 from tutorgym.env_classes.misc.fraction_arith.fractions import FractionArithmetic
 from tutorgym.trainer import Trainer, AuthorTrainer
@@ -124,7 +131,7 @@ def resolve_type(typ, logger_name):
 def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_args=False):
     logger_name, problem_types = resolve_type(typ, logger_name)
     logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al')
-    env = FractionArithmetic(problem_types=problem_types, n_fracs=n_fracs)
+    env = ApprenticeTutor(domain=domain_name, scaffold=scaffold)
                              # demo_args=False)
     trainer = Trainer(agent, env, logger=logger, n_problems=n)
     trainer.start()
