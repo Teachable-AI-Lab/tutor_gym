@@ -1,3 +1,4 @@
+from sympy import latex, sstr
 import sympy as sp
 from random import randint, choice
 
@@ -12,6 +13,14 @@ from shop2.fact import Fact
 from shop2.conditions import Filter
 from shop2.common import V
 
+def _safe_parse(expr):
+    try:
+        return parse_latex(expr)
+    except Exception as e:
+        raise ValueError(f"Unable to parse expression: {expr}") from e
+
+def _regex_from_sympy(sym):
+    return re.compile(re.sub(r'([-+()*^])', r'\\\1', sstr(sym, order="grlex")))
 
 def htn_exponents_power_problem():
     constant = randint(2,1000)
@@ -22,24 +31,26 @@ def htn_exponents_power_problem():
 
 
 def multiply_values(init_value):
-    forumla = parse_latex(init_value)
-    base = forumla.args[0].args[0]
-    exp1 = forumla.args[0].args[1]
-    exp2 = forumla.args[1]
-    answer = re.compile(rf"{base}\*\*\(({exp1}\*{exp2})|({exp2}\*{exp1})\)")  
-    hint = rf"{base}^{{{exp1} \cdot {exp2}}}"  
-    value = tuple([(answer, hint)])
-    return value
+    # (a^m)^n  ->  a^(m*n)  (do NOT evaluate m*n here)
+    formula = _safe_parse(init_value)
+    base  = formula.args[0].args[0]       # a
+    exp1  = formula.args[0].args[1]       # m
+    exp2  = formula.args[1]               # n
+    answer_sym = sp.Pow(base, sp.Mul(exp1, exp2, evaluate=False), evaluate=False)
+    hint_tex   = latex(answer_sym)
+    pattern    = _regex_from_sympy(answer_sym)
+    return tuple([(pattern, hint_tex)])
 
 def simplify_exp(init_value):
-    forumla = parse_latex(init_value)
-    base = forumla.args[0].args[0]
-    exp1 = forumla.args[0].args[1]
-    exp2 = forumla.args[1]
-    answer = re.compile(rf"{base}\*\*{exp1*exp2}")
-    hint = rf"{base}^{{{exp1*exp2}}}"
-    value = tuple([(answer, hint)])
-    return value
+    # a^(m*n)  ->  a^(m*n evaluated)
+    formula = _safe_parse(init_value)
+    base  = formula.args[0].args[0]       # a
+    exp1  = formula.args[0].args[1]       # m
+    exp2  = formula.args[1]               # n
+    answer_sym = sp.Pow(base, sp.Mul(exp1, exp2, evaluate=True), evaluate=False)
+    hint_tex   = latex(answer_sym)
+    pattern    = _regex_from_sympy(answer_sym)
+    return tuple([(pattern, hint_tex)])
 
 Domain = {
     'done': Operator(head=('done', V('kc')),
