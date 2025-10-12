@@ -5,7 +5,22 @@ from random import randint, choice
 import sympy as sp
 from sympy.parsing.latex._parse_latex_antlr import parse_latex
 import re
+SPACE = r'\s*'
 
+def _pow_pat(base_str, exp_regex_fragment):
+    """Match base^(exp) or base**exp, with optional spaces/parentheses."""
+    b = re.escape(str(base_str))                # literal base
+    e = exp_regex_fragment                      # already a regex fragment
+    return re.compile(
+        rf"{b}{SPACE}(?:\^|\*\*){SPACE}(?:\({SPACE}{e}{SPACE}\)|{e})"
+    )
+
+def _mul_commutative_pat(a_str, b_str):
+    """Match a*b or b*a (also allow × or ·), with optional spaces."""
+    a = re.escape(str(a_str))
+    b = re.escape(str(b_str))
+    star = r"(?:\*|×|·)"
+    return rf"(?:{a}{SPACE}{star}{SPACE}{b}|{b}{SPACE}{star}{SPACE}{a})"
 from random import randint
 from shop2.domain import Task, Operator, Method
 # from shop2.planner import SHOP2
@@ -31,26 +46,34 @@ def htn_exponents_power_problem():
 
 
 def multiply_values(init_value):
-    # (a^m)^n  ->  a^(m*n)  (do NOT evaluate m*n here)
+    # (a^m)^n  ->  a^(m*n)  (symbolic, don't evaluate m*n)
     formula = _safe_parse(init_value)
-    base  = formula.args[0].args[0]       # a
-    exp1  = formula.args[0].args[1]       # m
-    exp2  = formula.args[1]               # n
+    base  = formula.args[0].args[0]
+    exp1  = formula.args[0].args[1]
+    exp2  = formula.args[1]
+
+    mul_pat = _mul_commutative_pat(exp1, exp2)        # matches m*n or n*m
+    pattern = _pow_pat(base, mul_pat)                  # matches ^ or **, () optional
+
     answer_sym = sp.Pow(base, sp.Mul(exp1, exp2, evaluate=False), evaluate=False)
     hint_tex   = latex(answer_sym)
-    pattern    = _regex_from_sympy(answer_sym)
-    return tuple([(pattern, hint_tex)])
+    return ((pattern, hint_tex),)
 
 def simplify_exp(init_value):
     # a^(m*n)  ->  a^(m*n evaluated)
     formula = _safe_parse(init_value)
-    base  = formula.args[0].args[0]       # a
-    exp1  = formula.args[0].args[1]       # m
-    exp2  = formula.args[1]               # n
-    answer_sym = sp.Pow(base, sp.Mul(exp1, exp2, evaluate=True), evaluate=False)
+    base  = formula.args[0].args[0]
+    exp1  = formula.args[0].args[1]
+    exp2  = formula.args[1]
+
+    prod    = sp.Mul(exp1, exp2, evaluate=True)       # evaluate m*n
+    exp_pat = re.escape(str(prod))                    # literal number (e.g., "66")
+    pattern = _pow_pat(base, exp_pat)
+
+    answer_sym = sp.Pow(base, prod, evaluate=False)
     hint_tex   = latex(answer_sym)
-    pattern    = _regex_from_sympy(answer_sym)
-    return tuple([(pattern, hint_tex)])
+    return ((pattern, hint_tex),)
+
 
 Domain = {
     'done': Operator(head=('done', V('kc')),
