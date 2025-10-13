@@ -16,11 +16,12 @@ def _pow_pat(base_str, exp_regex_fragment):
     )
 
 def _mul_commutative_pat(a_str, b_str):
-    """Match a*b or b*a (also allow × or ·), with optional spaces."""
+    """Match a*b or b*a (allows *, ×, ·, \cdot, \times) with optional spaces."""
     a = re.escape(str(a_str))
     b = re.escape(str(b_str))
-    star = r"(?:\*|×|·)"
-    return rf"(?:{a}{SPACE}{star}{SPACE}{b}|{b}{SPACE}{star}{SPACE}{a})"
+    op = r"(?:\*|×|·|\\cdot|\\times)"
+    return rf"(?:{a}{SPACE}{op}{SPACE}{b}|{b}{SPACE}{op}{SPACE}{a})"
+
 from random import randint
 from shop2.domain import Task, Operator, Method
 # from shop2.planner import SHOP2
