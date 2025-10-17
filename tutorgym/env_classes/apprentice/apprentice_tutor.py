@@ -130,7 +130,7 @@ class HTNCognitiveModel:
         # print(">>>", self.domain['solve'])
 
         if(self.scaffold == "all"):
-            # print("SCAFFOLD", self.scaffold)
+            print("SCAFFOLD", self.scaffold)
             fact_state = (fact_state 
              & Fact(scaffold='level_0') & Fact(scaffold='level_1')
              & Fact(scaffold='level_2') & Fact(scaffold='level_3') 
@@ -207,7 +207,7 @@ class HTNCognitiveModel:
 
 
 class ApprenticeTutor(TutorEnvBase):
-    def __init__(self, domain=None, initial_problem=None, scaffold="first",
+    def __init__(self, domain=None, initial_problem=None, scaffold="all",
                       include_obj_bounds=False,
                      **kwargs):
         super().__init__(**kwargs)        
@@ -234,7 +234,7 @@ class ApprenticeTutor(TutorEnvBase):
                 if(scaffold is not None):
                     break
             self.scaffold_options.append(scaffold)
-        #print("scaffold_options", self.scaffold_options)
+        print("scaffold_options", self.scaffold_options)
         return self.scaffold_options
 
     def _blank_state(self):
@@ -301,19 +301,22 @@ class ApprenticeTutor(TutorEnvBase):
 
         return f_state
 
-    def set_start_state(self, domain, initial_problem, scaffold="undef", **kwargs):
+    def set_start_state(self, domain, initial_problem, scaffold="all", **kwargs):
         from tutorgym.envs.apprentice.env_registry import ENVIRONMENTS
 
         domain_model, problem_generator = ENVIRONMENTS[domain]
 
-        if(scaffold == "undef"):
-            scaffold = self.default_scaffold
-
         self.domain = domain
         self.domain_model = deepcopy(domain_model)
         self._resolve_scaffold_options()
-        if(scaffold == "first"):
-            scaffold = list(self.scaffold_options)[0]
+        if(scaffold == "undef"):
+            scaffold = self.default_scaffold
+        elif scaffold == 'first':
+            scaffold = list(self.scaffold_options)[scaffold]
+
+        
+        # if(scaffold == 0):
+        #     scaffold = list(self.scaffold_options)[0]
 
         self.problem_generator = problem_generator
         self.scaffold = scaffold
@@ -327,7 +330,7 @@ class ApprenticeTutor(TutorEnvBase):
         state['equation']['value'] = self.problem
         self.start_state = ProblemState(state)
     
-    def set_random_problem(self, domain=None, scaffold="undef"):
+    def set_random_problem(self, domain=None, scaffold="all"):
         from tutorgym.envs.apprentice.env_registry import ENVIRONMENTS
 
         if(domain is None and self.default_domain is not None):
@@ -340,7 +343,7 @@ class ApprenticeTutor(TutorEnvBase):
 
         #print("domain", domain)
         _, problem_generator = ENVIRONMENTS[domain]        
-
+        print("SCAFFOLD", scaffold)
         initial_problem = problem_generator()
         self.set_problem(domain, initial_problem, scaffold)
 

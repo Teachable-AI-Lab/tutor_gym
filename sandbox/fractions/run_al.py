@@ -11,7 +11,7 @@ from tutorgym.envs.apprentice.cognitive_models.logarithms import (
     htn_logarithms_power as logarithms_power,
 )
 domain_name= "exponents_power"
-scaffold = "first"
+scaffold = "all"
 # from tutorenvs.fractions_v import FractionArithSymbolic
 from tutorgym.env_classes.misc.fraction_arith.fractions import FractionArithmetic
 from tutorgym.trainer import Trainer, AuthorTrainer
@@ -175,7 +175,7 @@ if __name__ == "__main__":
 
             agent_args = {
                 # "function_set": ['AcrossMultiply','Multiply', 'Add'],
-                "function_set": ['Multiply', 'Add'],
+                "function_set": ['PowerRule', 'MultiplyExponents'],
                 "feature_set": ['Equals'],
                 "planner":'set_chaining',
                 "explanation_choice" : "least_operations",
