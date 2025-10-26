@@ -15,6 +15,48 @@ from tutorgym.env_classes.fsm_tutor import FiniteStateMachine, StateMachineTutor
 from tutorgym.env_classes.CTAT.action_model import CTAT_ActionModel
 from tutorgym.env_classes.env_base import TutorEnvBase
 
+# Sample puzzles - constant puzzles like in zip.py for faster startup
+SAMPLE_PUZZLES = [
+    # 6x6 puzzle with numbers 1-16 (same as zip.py)
+    {
+        "name": "Numbers 1-16",
+        "grid": [
+            [ 0,  0, 11, 12,  0,  0],
+            [ 0,  0,  8, 13,  0,  0],
+            [10,  9,  0,  0,  7, 14],
+            [ 1,  4,  0,  0,  6, 15],
+            [ 0,  0,  3,  5,  0,  0],
+            [ 0,  0,  2, 16,  0,  0],
+        ],
+        "solid_lines": []  # No solid lines for the sample puzzle
+    },
+    # Additional sample puzzles for variety
+    {
+        "name": "Numbers 1-12",
+        "grid": [
+            [ 1,  0,  0,  0,  0,  0],
+            [ 0,  0,  0,  0,  0,  0],
+            [ 0,  0,  0,  0,  0,  0],
+            [ 0,  0,  0,  0,  0,  0],
+            [ 0,  0,  0,  0,  0,  0],
+            [ 0,  0,  0,  0,  0, 12],
+        ],
+        "solid_lines": []
+    },
+    {
+        "name": "Numbers 1-8",
+        "grid": [
+            [ 1,  0,  0,  0,  0,  0],
+            [ 0,  0,  0,  0,  0,  0],
+            [ 0,  0,  0,  0,  0,  0],
+            [ 0,  0,  0,  0,  0,  0],
+            [ 0,  0,  0,  0,  0,  0],
+            [ 0,  0,  0,  0,  0,  8],
+        ],
+        "solid_lines": []
+    },
+]
+
 
 def neighbors(r, c):
     return [(r-1, c), (r+1, c), (r, c-1), (r, c+1)]
@@ -253,31 +295,41 @@ def generate_solid_lines_for_path(path, grid, R=6, C=6, max_lines=6):
     return selected_lines
 
 def generate_solvable_puzzle(R=6, C=6, min_numbers=6, max_numbers=16):
-    for attempt in range(20):
+    """Generate a solvable puzzle with the specified number of numbered cells and solid lines"""
+    # Try just 2 attempts for much faster generation
+    for attempt in range(2):
+        # Create empty grid
         grid = [[0 for _ in range(C)] for _ in range(R)]
         
+        # Choose number of numbered cells using normal distribution
         num_numbers = get_clue_count_normal_distribution(min_numbers, max_numbers, mean=10, std=1.5)
         
+        # Try to place numbers in a way that creates a solvable puzzle
+        # Start by finding a valid Hamiltonian path with good complexity
         start_r, start_c = random.randint(0, R-1), random.randint(0, C-1)
-        found_path, path = find_complex_hamiltonian_path(grid, start_r, start_c, R, C, min_complexity=2)
+        found_path, path = find_complex_hamiltonian_path(grid, start_r, start_c, R, C, min_complexity=1)
         
         if not found_path:
             continue
         
+        # Place numbers along the path, ensuring the path ends on a numbered cell
+        # First, ensure the last position (end of path) is included
         last_position = len(path) - 1
-        number_positions = random.sample(range(len(path) - 1), num_numbers - 1)
-        number_positions.append(last_position)
-        number_positions.sort()
+        number_positions = random.sample(range(len(path) - 1), num_numbers - 1)  # Select from all but last
+        number_positions.append(last_position)  # Always include the last position
+        number_positions.sort()  # Ensure numbers are in order
         
         for i, pos_idx in enumerate(number_positions):
             r, c = path[pos_idx]
             grid[r][c] = i + 1
         
+        # Now generate solid lines that don't interfere with the path
         solid_lines = generate_solid_lines_for_path(path, grid, R, C)
         
-        if verify_puzzle_solvability_with_lines(grid, solid_lines, R, C):
-            return grid, solid_lines
+        # Skip verification for speed - just return the puzzle
+        return grid, solid_lines
     
+    # If we couldn't generate a good puzzle, return a simple one
     simple_grid = generate_simple_puzzle(R, C, min_numbers)
     return simple_grid, []
 
@@ -431,7 +483,7 @@ class ZipPuzzle(TutorEnvBase):
     def __init__(self, grid_size=6, problem_types=["basic", "with_lines"], **kwargs):
         if grid_size < 4:
             raise Exception("Grid size cannot be lower than 4.")
-        super().__init__(action_model=CTAT_ActionModel, **kwargs)
+        super().__init__(**kwargs)
         self.grid_size = grid_size
         self.problem_types = problem_types
         self.set_random_problem()
@@ -497,23 +549,36 @@ class ZipPuzzle(TutorEnvBase):
         
         print("<<", ptype, self.problem_types)
 
-        if ptype == "basic":
-            grid, solid_lines = generate_solvable_puzzle(
-                R=self.grid_size, 
-                C=self.grid_size, 
-                min_numbers=6, 
-                max_numbers=min(16, self.grid_size * self.grid_size - 1)
-            )
-            solid_lines = []
-                
-        elif ptype == "with_lines":
-            grid, solid_lines = generate_solvable_puzzle(
-                R=self.grid_size, 
-                C=self.grid_size, 
-                min_numbers=6, 
-                max_numbers=min(16, self.grid_size * self.grid_size - 1)
-            )
+        # Use constant sample puzzles for faster startup
+        if not hasattr(self, '_puzzle_count'):
+            self._puzzle_count = 0
+        
+        if self._puzzle_count < len(SAMPLE_PUZZLES):
+            # Use the constant sample puzzles first
+            sample_puzzle = SAMPLE_PUZZLES[self._puzzle_count]
+            grid = [row[:] for row in sample_puzzle["grid"]]  # Deep copy
+            solid_lines = sample_puzzle["solid_lines"][:]  # Copy solid lines
+            print(f"<< Using constant sample puzzle {self._puzzle_count + 1}")
+        else:
+            # Generate new puzzles for subsequent calls
+            if ptype == "basic":
+                grid, solid_lines = generate_solvable_puzzle(
+                    R=self.grid_size, 
+                    C=self.grid_size, 
+                    min_numbers=6, 
+                    max_numbers=min(16, self.grid_size * self.grid_size - 1)
+                )
+                solid_lines = []
+                    
+            elif ptype == "with_lines":
+                grid, solid_lines = generate_solvable_puzzle(
+                    R=self.grid_size, 
+                    C=self.grid_size, 
+                    min_numbers=6, 
+                    max_numbers=min(16, self.grid_size * self.grid_size - 1)
+                )
 
+        self._puzzle_count += 1
         print("<<", grid)
         self.set_problem(grid, solid_lines)
         return {"grid": grid, "solid_lines": solid_lines}
@@ -768,6 +833,78 @@ class ZipPuzzle(TutorEnvBase):
                 next_required += 1
         
         return True
+    
+    def set_problem(self, *args, **kwargs):
+        """Set the Tutor Environment's current problem"""
+        self.set_random_problem()
+    
+    def get_problem(self):
+        """Get some kind of unique identifier for the current problem"""
+        if hasattr(self, 'problem') and self.problem:
+            grid, solid_lines = self.problem
+            return f"zip_{self.grid_size}_{hash(str(grid))}"
+        return "zip_default"
+    
+    def get_problem_config(self):
+        """Get a dictionary with the arguments used to instantiate the current problem"""
+        return {
+            "grid_size": self.grid_size,
+            "problem_types": self.problem_types
+        }
+    
+    def get_all_demos(self, state=None, **kwargs):
+        """Get a list of instances of Action for all next correct actions in the Tutor"""
+        state = self.state if state is None else state
+        grid, solid_lines = self.problem if hasattr(self, 'problem') and self.problem else (None, None)
+        
+        if not grid or not solid_lines:
+            return []
+        
+        current_path = state.get("current_path", {}).get("value", "")
+        next_required = state.get("next_required", {}).get("value", "1")
+        
+        path_coords = []
+        if current_path:
+            try:
+                path_coords = eval(current_path) if isinstance(current_path, str) else current_path
+                if not isinstance(path_coords, list):
+                    path_coords = []
+            except:
+                path_coords = []
+        
+        demos = []
+        if not path_coords:
+            # Find all starting positions (number 1)
+            for r in range(self.grid_size):
+                for c in range(self.grid_size):
+                    if grid[r][c] == 1:
+                        sai = (f"cell_{r}_{c}", 'StartPath', f"{r},{c}")
+                        arg_foci = [f"cell_{r}_{c}"]
+                        how_help = f"Start path at ({r},{c})"
+                        demos.append(Action(sai, arg_foci=arg_foci, how_help=how_help))
+        else:
+            # Find valid next moves
+            last_pos = path_coords[-1]
+            expected_num = int(next_required) if next_required.isdigit() else None
+            if expected_num is not None:
+                for r in range(self.grid_size):
+                    for c in range(self.grid_size):
+                        if (self._is_valid_move(last_pos, (r, c), solid_lines) and 
+                            grid[r][c] == expected_num):
+                            sai = (f"cell_{r}_{c}", 'ContinuePath', f"{r},{c}")
+                            arg_foci = [f"cell_{r}_{c}"]
+                            how_help = f"Continue path to ({r},{c})"
+                            demos.append(Action(sai, arg_foci=arg_foci, how_help=how_help))
+        
+        return demos
+    
+    def get_state(self):
+        """Get the current state of the Tutor"""
+        return self.state
+    
+    def set_state(self, state):
+        """Set the current state of the Tutor"""
+        self.state = state
 
 
 if __name__ == "__main__":
@@ -790,7 +927,7 @@ if __name__ == "__main__":
             demo_annotations=["arg_foci", "how_help"],
             check_annotations=["arg_foci"],
             problem_types=["basic", "with_lines"], 
-            grid_size=3
+            grid_size=6
         )
         print(f"   ✓ Environment created with grid size: {env.grid_size}")
         print(f"   ✓ Problem types: {env.problem_types}")

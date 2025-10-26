@@ -6,8 +6,8 @@ from tutorgym.env_classes.CTAT.action_model import CTAT_ActionModel
 from tutorgym.env_classes.env_base import TutorEnvBase
 from tutorgym.env_classes.CTAT.action_model import Action
 
-import tkinter as tk
-from tkinter import messagebox
+# import tkinter as tk
+# from tkinter import messagebox
 import math
 from datetime import datetime
 
@@ -638,6 +638,61 @@ class QueensPuzzle(TutorEnvBase):
             temp_grid[r][c] = 1
         
         return validate_solution(temp_grid, regions)
+    
+    def set_problem(self, *args, **kwargs):
+        """Set the Tutor Environment's current problem"""
+        self.set_random_problem()
+    
+    def get_problem(self):
+        """Get some kind of unique identifier for the current problem"""
+        if self.problem:
+            grid, regions = self.problem
+            return f"queens_{self.grid_size}_{hash(str(regions))}"
+        return "queens_default"
+    
+    def get_problem_config(self):
+        """Get a dictionary with the arguments used to instantiate the current problem"""
+        return {
+            "grid_size": self.grid_size,
+            "problem_types": self.problem_types
+        }
+    
+    def get_all_demos(self, state=None, **kwargs):
+        """Get a list of instances of Action for all next correct actions in the Tutor"""
+        state = self.state if state is None else state
+        grid, regions = self.problem if self.problem else (None, None)
+        
+        if not grid or not regions:
+            return []
+        
+        current_queens = []
+        for r in range(self.grid_size):
+            for c in range(self.grid_size):
+                if state.get(f"cell_{r}_{c}", {}).get("value", "0") == "1":
+                    current_queens.append((r, c))
+        
+        if len(current_queens) == self.grid_size:
+            return []
+        
+        demos = []
+        for r in range(self.grid_size):
+            for c in range(self.grid_size):
+                if state.get(f"cell_{r}_{c}", {}).get("value", "0") == "0":
+                    if self._is_valid_placement(current_queens, (r, c), regions):
+                        sai = (f"cell_{r}_{c}", 'PlaceQueen', f"{r},{c}")
+                        arg_foci = [f"cell_{r}_{c}"]
+                        how_help = f"Place queen at ({r},{c})"
+                        demos.append(Action(sai, arg_foci=arg_foci, how_help=how_help))
+        
+        return demos
+    
+    def get_state(self):
+        """Get the current state of the Tutor"""
+        return self.state
+    
+    def set_state(self, state):
+        """Set the current state of the Tutor"""
+        self.state = state
 
 
 if __name__ == "__main__":

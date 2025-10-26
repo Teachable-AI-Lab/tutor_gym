@@ -397,6 +397,52 @@ class SudokuPuzzle(TutorEnvBase):
             if 0 in row:
                 return False
         return True
+    
+    def set_problem(self, *args, **kwargs):
+        """Set the Tutor Environment's current problem"""
+        self.set_random_problem()
+    
+    def get_problem(self):
+        """Get some kind of unique identifier for the current problem"""
+        if self.problem:
+            grid, solution, hint_positions = self.problem
+            return f"sudoku_{self.grid_size}_{hash(str(grid))}"
+        return "sudoku_default"
+    
+    def get_problem_config(self):
+        """Get a dictionary with the arguments used to instantiate the current problem"""
+        return {
+            "grid_size": self.grid_size,
+            "problem_types": self.problem_types
+        }
+    
+    def get_all_demos(self, state=None, **kwargs):
+        """Get a list of instances of Action for all next correct actions in the Tutor"""
+        state = self.state if state is None else state
+        grid, solution, hint_positions = self.problem if self.problem else (None, None, None)
+        
+        if not grid or not solution:
+            return []
+        
+        demos = []
+        for r in range(self.grid_size):
+            for c in range(self.grid_size):
+                if grid[r][c] == 0:  # Empty cell
+                    if solution[r][c] != 0:  # Has a solution
+                        sai = (f"cell_{r}_{c}", 'PlaceNumber', f"{r},{c},{solution[r][c]}")
+                        arg_foci = [f"cell_{r}_{c}"]
+                        how_help = f"Place {solution[r][c]} at ({r},{c})"
+                        demos.append(Action(sai, arg_foci=arg_foci, how_help=how_help))
+        
+        return demos
+    
+    def get_state(self):
+        """Get the current state of the Tutor"""
+        return self.state
+    
+    def set_state(self, state):
+        """Set the current state of the Tutor"""
+        self.state = state
 
 
 if __name__ == "__main__":
