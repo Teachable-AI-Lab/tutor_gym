@@ -50,12 +50,12 @@ Domain = {
                      effects=[Fact(field='done', value=((re.compile('x'),),), kc=V('kc'), answer=True)],
     ),
 
-    'adding_values': Operator(head=('adding_values', V('equation'), V('kc')),
+    'ProductRule': Operator(head=('ProductRule', V('equation'), V('kc')),
                                 precondition=[Fact(field=V('equation'), value=V('eq'), answer=False)],
                                 effects=[Fact(field='adding_values', value=(adding_values, V('eq')), kc=V('kc'), answer=True)],
     ),
 
-    'simplify_exp': Operator(head=('simplify_exp', V('equation'), V('kc')),
+    'SimplifyProduct': Operator(head=('SimplifyProduct', V('equation'), V('kc')),
                             precondition=[Fact(field=V('equation'), value=V('eq'), answer=False)],
                             effects=[Fact(field='simplify_exp', value=(simplify_exp, V('eq')), kc=V('kc'), answer=True)],
     ),
@@ -67,13 +67,13 @@ Domain = {
                     ],
                     subtasks=[
                         [
-                            Task(head=('adding_values', V('equation'), ('adding_values',)), primitive=True),
-                            Task(head=('simplify_exp', V('equation'), ('simplify_exp',)), primitive=True),
+                            Task(head=('ProductRule', V('equation'), ('ProductRule',)), primitive=True),
+                            Task(head=('SimplifyProduct', V('equation'), ('SimplifyProduct',)), primitive=True),
                             Task(head=('done', ('done',)), primitive=True)
                         ],
 
                         [
-                            Task(head=('simplify_exp', V('equation'), ('adding_values', 'simplify_exp')), primitive=True),
+                            Task(head=('SimplifyProduct', V('equation'), ('ProductRule', 'SimplifyProduct')), primitive=True),
                             Task(head=('done', ('done',)), primitive=True)
                         ],
                     ]
