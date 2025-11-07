@@ -457,6 +457,7 @@ class QueensPuzzle(TutorEnvBase):
         self.grid_size = grid_size
         self.problem_types = problem_types
         self.problem = None
+        self.problem_name = None
         
         super().__init__(**kwargs)
         self.set_random_problem()
@@ -478,16 +479,23 @@ class QueensPuzzle(TutorEnvBase):
     
     def set_start_state(self, grid, regions):
         self.problem = (grid, regions)
-        self.state = self._blank_state()
+        state_dict = self._blank_state()
         
         for r in range(self.grid_size):
             for c in range(self.grid_size):
                 if grid[r][c] == 1:
-                    self.state[f"cell_{r}_{c}"] = {"value": "1"}
+                    state_dict[f"cell_{r}_{c}"] = {"value": "1"}
         
-        self.state["regions"] = {"value": str(regions)}
+        state_dict["regions"] = {"value": str(regions)}
         queen_count = sum(1 for row in grid for cell in row if cell == 1)
-        self.state["queen_count"] = {"value": str(queen_count)}
+        state_dict["queen_count"] = {"value": str(queen_count)}
+        
+        # Convert to ProblemState
+        self.state = ProblemState(state_dict)
+        
+        # Set problem_name for trainer compatibility
+        ptype = self.problem_types[0] if self.problem_types else "basic"
+        self.problem_name = f"queens_{ptype}_{self.grid_size}x{self.grid_size}"
     
     def set_random_problem(self):
         ptype = random.choice(self.problem_types)
@@ -553,7 +561,7 @@ class QueensPuzzle(TutorEnvBase):
             current_queens = []
             for r in range(self.grid_size):
                 for c in range(self.grid_size):
-                    if self.state.get(f"cell_{r}_{c}", {}).get("value", "0") == "1":
+                    if self.state.objs.get(f"cell_{r}_{c}", {}).get("value", "0") == "1":
                         current_queens.append((r, c))
             
             if len(current_queens) == self.grid_size and self._is_valid_solution(current_queens, regions):
@@ -575,10 +583,10 @@ class QueensPuzzle(TutorEnvBase):
         current_queens = []
         for row in range(self.grid_size):
             for col in range(self.grid_size):
-                if self.state.get(f"cell_{row}_{col}", {}).get("value", "0") == "1":
+                if self.state.objs.get(f"cell_{row}_{col}", {}).get("value", "0") == "1":
                     current_queens.append((row, col))
         
-        if self.state.get(f"cell_{r}_{c}", {}).get("value", "0") == "1":
+        if self.state.objs.get(f"cell_{r}_{c}", {}).get("value", "0") == "1":
             return 1
         elif self._is_valid_placement(current_queens, (r, c), regions):
             return 1
@@ -608,14 +616,14 @@ class QueensPuzzle(TutorEnvBase):
         
         new_state = self.state.copy()
         
-        current_value = new_state.get(f"cell_{r}_{c}", {}).get("value", "0")
+        current_value = new_state.objs.get(f"cell_{r}_{c}", {}).get("value", "0")
         if current_value == "0":
             new_state[f"cell_{r}_{c}"] = {"value": "1"}
         else:
             new_state[f"cell_{r}_{c}"] = {"value": "0"}
         
         queen_count = sum(1 for row in range(self.grid_size) for col in range(self.grid_size) 
-                         if new_state.get(f"cell_{row}_{col}", {}).get("value", "0") == "1")
+                         if new_state.objs.get(f"cell_{row}_{col}", {}).get("value", "0") == "1")
         new_state["queen_count"] = {"value": str(queen_count)}
         
         return new_state
@@ -657,6 +665,11 @@ class QueensPuzzle(TutorEnvBase):
             "problem_types": self.problem_types
         }
     
+    @property
+    def problem_config(self):
+        """Property for trainer compatibility"""
+        return self.get_problem_config()
+    
     def get_all_demos(self, state=None, **kwargs):
         """Get a list of instances of Action for all next correct actions in the Tutor"""
         state = self.state if state is None else state
@@ -665,10 +678,13 @@ class QueensPuzzle(TutorEnvBase):
         if not grid or not regions:
             return []
         
+        # Handle both ProblemState and dict
+        state_objs = state.objs if isinstance(state, ProblemState) else state
+        
         current_queens = []
         for r in range(self.grid_size):
             for c in range(self.grid_size):
-                if state.get(f"cell_{r}_{c}", {}).get("value", "0") == "1":
+                if state_objs.get(f"cell_{r}_{c}", {}).get("value", "0") == "1":
                     current_queens.append((r, c))
         
         if len(current_queens) == self.grid_size:
@@ -677,12 +693,11 @@ class QueensPuzzle(TutorEnvBase):
         demos = []
         for r in range(self.grid_size):
             for c in range(self.grid_size):
-                if state.get(f"cell_{r}_{c}", {}).get("value", "0") == "0":
+                if state_objs.get(f"cell_{r}_{c}", {}).get("value", "0") == "0":
                     if self._is_valid_placement(current_queens, (r, c), regions):
                         sai = (f"cell_{r}_{c}", 'PlaceQueen', f"{r},{c}")
-                        arg_foci = [f"cell_{r}_{c}"]
-                        how_help = f"Place queen at ({r},{c})"
-                        demos.append(Action(sai, arg_foci=arg_foci, how_help=how_help))
+                        action = Action(sai, arg_foci=[f"cell_{r}_{c}"], how_help=f"Place queen at ({r},{c})")
+                        demos.append(action)
         
         return demos
     
@@ -692,7 +707,10 @@ class QueensPuzzle(TutorEnvBase):
     
     def set_state(self, state):
         """Set the current state of the Tutor"""
-        self.state = state
+        if isinstance(state, ProblemState):
+            self.state = state
+        else:
+            self.state = ProblemState(state)
 
 
 if __name__ == "__main__":

@@ -852,6 +852,11 @@ class ZipPuzzle(TutorEnvBase):
             "problem_types": self.problem_types
         }
     
+    @property
+    def problem_config(self):
+        """Property for trainer compatibility"""
+        return self.get_problem_config()
+    
     def get_all_demos(self, state=None, **kwargs):
         """Get a list of instances of Action for all next correct actions in the Tutor"""
         state = self.state if state is None else state
@@ -904,7 +909,10 @@ class ZipPuzzle(TutorEnvBase):
     
     def set_state(self, state):
         """Set the current state of the Tutor"""
-        self.state = state
+        if isinstance(state, ProblemState):
+            self.state = state
+        else:
+            self.state = ProblemState(state)
 
 
 if __name__ == "__main__":

@@ -1,20 +1,9 @@
 import random
 import numpy as np
-from tutorgym.shared import ProblemState
+from tutorgym.shared import ProblemState, Action
 from tutorgym.env_classes.fsm_tutor import FiniteStateMachine, StateMachineTutor
 from tutorgym.env_classes.CTAT.action_model import CTAT_ActionModel
 from tutorgym.env_classes.env_base import TutorEnvBase
-# from tutorgym.env_classes.CTAT.action_model import Action
-
-# Simple Action class for tango environment
-class Action:
-    def __init__(self, sai, arg_foci=None, how_help=None):
-        self.selection, self.action_type, self.input = sai
-        self.arg_foci = arg_foci or []
-        self.how_help = how_help
-    
-    def as_tuple(self):
-        return (self.selection, self.action_type, self.input)
 
 # === Core Tango logic (extracted to pure functions, mirrors tango.py) ===
 
@@ -300,6 +289,7 @@ class TangoPuzzle(TutorEnvBase):
         self.grid_size = grid_size
         self.problem_types = problem_types
         self.problem = None
+        self.problem_name = None
         
         super().__init__(**kwargs)
         self.set_random_problem()
@@ -322,16 +312,23 @@ class TangoPuzzle(TutorEnvBase):
     
     def set_start_state(self, grid, constraints, hint_positions):
         self.problem = (grid, constraints)
-        self.state = self._blank_state()
+        state_dict = self._blank_state()
         
         for r in range(self.grid_size):
             for c in range(self.grid_size):
                 if grid[r][c] is not None:
-                    self.state[f"cell_{r}_{c}"] = {"value": grid[r][c]}
+                    state_dict[f"cell_{r}_{c}"] = {"value": grid[r][c]}
         
-        self.state["constraints"] = {"value": str(constraints)}
+        state_dict["constraints"] = {"value": str(constraints)}
         satisfied, total = count_constraints(grid, constraints)
-        self.state["satisfied_constraints"] = {"value": str(satisfied)}
+        state_dict["satisfied_constraints"] = {"value": str(satisfied)}
+        
+        # Convert to ProblemState
+        self.state = ProblemState(state_dict)
+        
+        # Set problem_name for trainer compatibility
+        ptype = self.problem_types[0] if self.problem_types else "basic"
+        self.problem_name = f"tango_{ptype}_{self.grid_size}x{self.grid_size}"
     
     def set_random_problem(self):
         ptype = random.choice(self.problem_types)
@@ -381,22 +378,26 @@ class TangoPuzzle(TutorEnvBase):
         if not grid or not constraints:
             return None
         
+        # Handle both ProblemState and dict
+        state_objs = state.objs if isinstance(state, ProblemState) else state
+        
         for r in range(self.grid_size):
             for c in range(self.grid_size):
-                current_value = state.get(f"cell_{r}_{c}", {}).get("value", "none")
+                current_value = state_objs.get(f"cell_{r}_{c}", {}).get("value", "none")
                 if current_value == "none":
                     for symbol in ["sun", "moon"]:
                         if is_valid_placement(grid, r, c, symbol, self.grid_size):
                             sai = (f"cell_{r}_{c}", 'PlaceSymbol', symbol)
-                            arg_foci = [f"cell_{r}_{c}"]
-                            how_help = f"Place {symbol} at ({r},{c})"
-                            return Action(sai, arg_foci=arg_foci, how_help=how_help)
+                            action = Action(sai, arg_foci=[f"cell_{r}_{c}"], how_help=f"Place {symbol} at ({r},{c})")
+                            return action
         
         return None
     
     def check(self, action, **kwargs):
         if not isinstance(action, Action):
-            action = Action(action)
+            action = Action(action) if action else None
+        if action is None:
+            return -1
         grid, constraints = self.problem if self.problem else (None, None)
         
         if not grid or not constraints:
@@ -407,7 +408,7 @@ class TangoPuzzle(TutorEnvBase):
             for r in range(self.grid_size):
                 row = []
                 for c in range(self.grid_size):
-                    value = self.state.get(f"cell_{r}_{c}", {}).get("value", "none")
+                    value = self.state.objs.get(f"cell_{r}_{c}", {}).get("value", "none")
                     row.append(value if value != "none" else None)
                 current_grid.append(row)
             
@@ -427,7 +428,7 @@ class TangoPuzzle(TutorEnvBase):
         if not (0 <= r < self.grid_size and 0 <= c < self.grid_size):
             return -1
         
-        current_value = self.state.get(f"cell_{r}_{c}", {}).get("value", "none")
+        current_value = self.state.objs.get(f"cell_{r}_{c}", {}).get("value", "none")
         if current_value == "none":
             return -1
         
@@ -437,7 +438,10 @@ class TangoPuzzle(TutorEnvBase):
             return -1
     
     def apply(self, action, **kwargs):
-        action = Action(action)
+        if not isinstance(action, Action):
+            action = Action(action) if action else None
+        if action is None:
+            return self.state
         grid, constraints = self.problem if self.problem else (None, None)
         
         if not grid or not constraints:
@@ -468,7 +472,7 @@ class TangoPuzzle(TutorEnvBase):
         for row in range(self.grid_size):
             grid_row = []
             for col in range(self.grid_size):
-                value = new_state.get(f"cell_{row}_{col}", {}).get("value", "none")
+                value = new_state.objs.get(f"cell_{row}_{col}", {}).get("value", "none")
                 grid_row.append(value if value != "none" else None)
             current_grid.append(grid_row)
         
@@ -495,6 +499,11 @@ class TangoPuzzle(TutorEnvBase):
             "problem_types": self.problem_types
         }
     
+    @property
+    def problem_config(self):
+        """Property for trainer compatibility"""
+        return self.get_problem_config()
+    
     def get_all_demos(self, state=None, **kwargs):
         """Get a list of instances of Action for all next correct actions in the Tutor"""
         state = self.state if state is None else state
@@ -503,17 +512,19 @@ class TangoPuzzle(TutorEnvBase):
         if not grid or not constraints:
             return []
         
+        # Handle both ProblemState and dict
+        state_objs = state.objs if isinstance(state, ProblemState) else state
+        
         demos = []
         for r in range(self.grid_size):
             for c in range(self.grid_size):
-                if state.get(f"cell_{r}_{c}", {}).get("value", "none") == "none":
+                if state_objs.get(f"cell_{r}_{c}", {}).get("value", "none") == "none":
                     # Try each symbol
                     for symbol in ["sun", "moon"]:
                         if is_valid_placement(grid, r, c, symbol, self.grid_size):
-                            sai = (f"cell_{r}_{c}", 'PlaceSymbol', f"{r},{c},{symbol}")
-                            arg_foci = [f"cell_{r}_{c}"]
-                            how_help = f"Place {symbol} at ({r},{c})"
-                            demos.append(Action(sai, arg_foci=arg_foci, how_help=how_help))
+                            sai = (f"cell_{r}_{c}", 'PlaceSymbol', symbol)
+                            action = Action(sai, arg_foci=[f"cell_{r}_{c}"], how_help=f"Place {symbol} at ({r},{c})")
+                            demos.append(action)
         
         return demos
     
@@ -523,7 +534,10 @@ class TangoPuzzle(TutorEnvBase):
     
     def set_state(self, state):
         """Set the current state of the Tutor"""
-        self.state = state
+        if isinstance(state, ProblemState):
+            self.state = state
+        else:
+            self.state = ProblemState(state)
 
 
 if __name__ == "__main__":

@@ -194,6 +194,7 @@ class SudokuPuzzle(TutorEnvBase):
         self.grid_size = grid_size
         self.problem_types = problem_types
         self.problem = None
+        self.problem_name = None
         
         super().__init__(**kwargs)
         self.set_random_problem()
@@ -215,15 +216,22 @@ class SudokuPuzzle(TutorEnvBase):
         return action.selection == "done"
     
     def set_start_state(self, grid, solution, hint_positions):
-        self.problem = (grid, solution)
-        self.state = self._blank_state()
+        self.problem = (grid, solution, hint_positions)
+        state_dict = self._blank_state()
         
         for r in range(self.grid_size):
             for c in range(self.grid_size):
                 if grid[r][c] != 0:
-                    self.state[f"cell_{r}_{c}"] = {"value": str(grid[r][c])}
+                    state_dict[f"cell_{r}_{c}"] = {"value": str(grid[r][c])}
         
-        self.state["hint_positions"] = {"value": str(hint_positions)}
+        state_dict["hint_positions"] = {"value": str(hint_positions)}
+        
+        # Convert to ProblemState
+        self.state = ProblemState(state_dict)
+        
+        # Set problem_name for trainer compatibility
+        ptype = self.problem_types[0] if self.problem_types else "easy"
+        self.problem_name = f"sudoku_{ptype}_{self.grid_size}x{self.grid_size}"
     
     def set_random_problem(self):
         ptype = random.choice(self.problem_types)
@@ -300,7 +308,7 @@ class SudokuPuzzle(TutorEnvBase):
     
     def get_demo(self, state=None, **kwargs):
         state = self.state if state is None else state
-        grid, solution = self.problem if self.problem else (None, None)
+        grid, solution, hint_positions = self.problem if self.problem else (None, None, None)
         
         if not grid or not solution:
             return None
@@ -320,7 +328,7 @@ class SudokuPuzzle(TutorEnvBase):
     
     def check(self, action, **kwargs):
         action = Action(action)
-        grid, solution = self.problem if self.problem else (None, None)
+        grid, solution, hint_positions = self.problem if self.problem else (None, None, None)
         
         if not grid or not solution:
             return -1
@@ -362,7 +370,7 @@ class SudokuPuzzle(TutorEnvBase):
     
     def apply(self, action, **kwargs):
         action = Action(action)
-        grid, solution = self.problem if self.problem else (None, None)
+        grid, solution, hint_positions = self.problem if self.problem else (None, None, None)
         
         if not grid or not solution:
             return self.state
@@ -416,6 +424,11 @@ class SudokuPuzzle(TutorEnvBase):
             "problem_types": self.problem_types
         }
     
+    @property
+    def problem_config(self):
+        """Property for trainer compatibility"""
+        return self.get_problem_config()
+    
     def get_all_demos(self, state=None, **kwargs):
         """Get a list of instances of Action for all next correct actions in the Tutor"""
         state = self.state if state is None else state
@@ -442,7 +455,10 @@ class SudokuPuzzle(TutorEnvBase):
     
     def set_state(self, state):
         """Set the current state of the Tutor"""
-        self.state = state
+        if isinstance(state, ProblemState):
+            self.state = state
+        else:
+            self.state = ProblemState(state)
 
 
 if __name__ == "__main__":
