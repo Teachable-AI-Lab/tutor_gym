@@ -15,7 +15,6 @@ from algebra_funcs import (GetOperand, GetOperator, ReverseSign, ExprVar, EvalAr
 # raise ValueError()
 
 
-
 def run_training(agent, logger_name='Algebra', n=10,
                  n_rows=3, author_train=True):
     
@@ -23,9 +22,31 @@ def run_training(agent, logger_name='Algebra', n=10,
     env = Algebra(demo_args=True, demo_how=False, n_rows=n_rows,
                   var_denoms=True)
 
-    trainer = Trainer(agent, env, 
-        # problem_set=[('777','777')],
-        logger=logger,  n_problems=n)
+    problem_set = [
+        # ---- POWER RULE (4) ----
+        (r"(5^{3})^{4}", r"(5^{3})^{4}"),
+        (r"(2^{6})^{2}", r"(2^{6})^{2}"),
+        (r"(9^{2})^{5}", r"(9^{2})^{5}"),
+        (r"(7^{4})^{3}", r"(7^{4})^{3}"),
+
+        # ---- PRODUCT RULE (4) ----
+        (r"5^{3} \cdot 5^{7}", r"5^{3} \cdot 5^{7}"),
+        (r"3^{8} * 3^{2}", r"3^{8} * 3^{2}"),
+        (r"11^{5} \cdot 11^{4}", r"11^{5} \cdot 11^{4}"),
+        (r"6^{9} * 6^{3}", r"6^{9} * 6^{3}"),
+
+        # ---- QUOTIENT RULE (4) ----
+        (r"8^{12} / 8^{4}", r"8^{12} / 8^{4}"),
+        (r"10^{9} / 10^{3}", r"10^{9} / 10^{3}"),
+        (r"4^{7} / 4^{2}", r"4^{7} / 4^{2}"),
+        (r"12^{6} / 12^{1}", r"12^{6} / 12^{1}"),
+    ]
+
+    trainer = Trainer(agent, env,
+        logger=logger,
+        n_problems=n,
+        problem_set=problem_set   # <-- only addition
+    )
     trainer.start()
 
 
