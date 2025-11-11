@@ -45,7 +45,7 @@ def run_training(agent, logger_name='Algebra', n=10,
     trainer = Trainer(agent, env,
         logger=logger,
         n_problems=n,
-        problem_set=problem_set   # <-- only addition
+        problem_set=problem_set 
     )
     trainer.start()
 
