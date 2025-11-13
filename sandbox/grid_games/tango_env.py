@@ -269,6 +269,40 @@ def is_tango_complete(grid):
             return False
     return True
 
+def encode_tango_neighbors(state_dict, grid_size):
+    """Set spatial relationships (above, below, left, right) for cells based on row/col"""
+    for r in range(grid_size):
+        for c in range(grid_size):
+            cell_id = f"cell_{r}_{c}"
+            if cell_id not in state_dict:
+                continue
+            
+            # Set above (row - 1)
+            if r > 0:
+                state_dict[cell_id]["above"] = f"cell_{r-1}_{c}"
+            else:
+                state_dict[cell_id]["above"] = None
+            
+            # Set below (row + 1)
+            if r < grid_size - 1:
+                state_dict[cell_id]["below"] = f"cell_{r+1}_{c}"
+            else:
+                state_dict[cell_id]["below"] = None
+            
+            # Set left (col - 1)
+            if c > 0:
+                state_dict[cell_id]["left"] = f"cell_{r}_{c-1}"
+            else:
+                state_dict[cell_id]["left"] = None
+            
+            # Set right (col + 1)
+            if c < grid_size - 1:
+                state_dict[cell_id]["right"] = f"cell_{r}_{c+1}"
+            else:
+                state_dict[cell_id]["right"] = None
+    
+    return state_dict
+
 def count_constraints(grid, constraints):
     satisfied = 0
     for r1, c1, r2, c2, t in constraints:
@@ -298,12 +332,23 @@ class TangoPuzzle(TutorEnvBase):
         state = {}
         for r in range(self.grid_size):
             for c in range(self.grid_size):
-                state[f"cell_{r}_{c}"] = {"value": "none"}
+                state[f"cell_{r}_{c}"] = {
+                    "id": f"cell_{r}_{c}",
+                    "type": "Cell",
+                    "value": "none",
+                    "row": r,
+                    "col": c,
+                    "above": None,
+                    "below": None,
+                    "left": None,
+                    "right": None
+                }
         
-        state["selected_cell"] = {"value": "none"}
-        state["grid_size"] = {"value": str(self.grid_size)}
-        state["constraints"] = {"value": str([])}
-        state["satisfied_constraints"] = {"value": "0"}
+        # Set spatial relationships based on row/col
+        state = encode_tango_neighbors(state, self.grid_size)
+        
+        # Note: Removed metadata objects (grid_size, constraints, satisfied_constraints)
+        # as they don't have fact types and aren't needed for agent decision making
         
         return state
     
@@ -317,11 +362,22 @@ class TangoPuzzle(TutorEnvBase):
         for r in range(self.grid_size):
             for c in range(self.grid_size):
                 if grid[r][c] is not None:
-                    state_dict[f"cell_{r}_{c}"] = {"value": grid[r][c]}
+                    # Preserve spatial relationships from _blank_state
+                    cell_obj = state_dict.get(f"cell_{r}_{c}", {})
+                    state_dict[f"cell_{r}_{c}"] = {
+                        "id": f"cell_{r}_{c}",
+                        "type": "Cell",
+                        "value": grid[r][c],
+                        "row": r,
+                        "col": c,
+                        "above": cell_obj.get("above"),
+                        "below": cell_obj.get("below"),
+                        "left": cell_obj.get("left"),
+                        "right": cell_obj.get("right")
+                    }
         
-        state_dict["constraints"] = {"value": str(constraints)}
-        satisfied, total = count_constraints(grid, constraints)
-        state_dict["satisfied_constraints"] = {"value": str(satisfied)}
+        # Note: We don't add constraints/satisfied_constraints to state
+        # as they're metadata not needed for agent decision making
         
         # Convert to ProblemState
         self.state = ProblemState(state_dict)
@@ -464,9 +520,21 @@ class TangoPuzzle(TutorEnvBase):
         new_state = self.state.copy()
         
         if action.input in ["sun", "moon", "none"]:
-            new_state[f"cell_{r}_{c}"] = {"value": action.input}
+            # Preserve id, row, col, and spatial relationships when updating value
+            cell_obj = new_state.objs.get(f"cell_{r}_{c}", {})
+            new_state[f"cell_{r}_{c}"] = {
+                "id": f"cell_{r}_{c}",
+                "type": "Cell",
+                "value": action.input,
+                "row": r,
+                "col": c,
+                "above": cell_obj.get("above"),
+                "below": cell_obj.get("below"),
+                "left": cell_obj.get("left"),
+                "right": cell_obj.get("right")
+            }
         
-        new_state["selected_cell"] = {"value": f"{r},{c}"}
+        # Note: We don't track selected_cell in state as it's metadata not needed for agent
         
         current_grid = []
         for row in range(self.grid_size):
@@ -476,8 +544,8 @@ class TangoPuzzle(TutorEnvBase):
                 grid_row.append(value if value != "none" else None)
             current_grid.append(grid_row)
         
-        satisfied, total = count_constraints(current_grid, constraints)
-        new_state["satisfied_constraints"] = {"value": str(satisfied)}
+        # Note: We don't update satisfied_constraints in state
+        # as it's metadata not needed for agent decision making
         
         return new_state
     
