@@ -229,38 +229,110 @@ def get_strategic_hints(solution, hint_count, grid_size):
             hints.append(pos)
     return hints
 
-def is_valid_placement(grid, r, c, symbol, grid_size):
+def is_valid_placement(grid, r, c, symbol, grid_size, constraints=None):
+    """
+    Check if placing a symbol at (r, c) is valid according to Tango rules:
+    1. No more than 2 of the same symbol in a row (horizontally or vertically)
+    2. Row balance: Can't exceed grid_size/2 of one symbol, and balance must be achievable
+    3. Column balance: Can't exceed grid_size/2 of one symbol, and balance must be achievable
+    4. Constraint satisfaction: If both cells in a constraint are filled, they must satisfy it
+    """
     value = 'sun' if symbol == 'sun' else ('moon' if symbol == 'moon' else None)
     if value is None:
         return True
-    # horizontal
+    
+    # Create a temporary grid with the placement to check validity
+    temp_grid = [row[:] for row in grid]  # Deep copy
+    temp_grid[r][c] = value
+    
+    # Check 1: No more than 2 of the same symbol in a row (horizontal)
     count = 1
     for i in range(1, 3):
-        if c - i >= 0 and grid[r][c-i] == value:
+        if c - i >= 0 and temp_grid[r][c-i] == value:
             count += 1
         else:
             break
     for i in range(1, 3):
-        if c + i < grid_size and grid[r][c+i] == value:
+        if c + i < grid_size and temp_grid[r][c+i] == value:
             count += 1
         else:
             break
     if count > 2:
         return False
-    # vertical
+    
+    # Check 2: No more than 2 of the same symbol in a row (vertical)
     count = 1
     for i in range(1, 3):
-        if r - i >= 0 and grid[r-i][c] == value:
+        if r - i >= 0 and temp_grid[r-i][c] == value:
             count += 1
         else:
             break
     for i in range(1, 3):
-        if r + i < grid_size and grid[r+i][c] == value:
+        if r + i < grid_size and temp_grid[r+i][c] == value:
             count += 1
         else:
             break
     if count > 2:
         return False
+    
+    # Check 3: Row balance
+    row_values = [temp_grid[r][col] for col in range(grid_size)]
+    row_sun_count = sum(1 for v in row_values if v == 'sun')
+    row_moon_count = sum(1 for v in row_values if v == 'moon')
+    row_empty_count = sum(1 for v in row_values if v is None)
+    
+    max_allowed = grid_size // 2
+    # Can't exceed maximum allowed
+    if row_sun_count > max_allowed or row_moon_count > max_allowed:
+        return False
+    
+    # If row is full, must be balanced
+    if row_empty_count == 0:
+        if row_sun_count != row_moon_count:
+            return False
+    # If row has 1 empty cell left, the imbalance must be <= 1 (can be balanced with last cell)
+    elif row_empty_count == 1:
+        imbalance = abs(row_sun_count - row_moon_count)
+        if imbalance > 1:
+            return False
+    
+    # Check 4: Column balance
+    col_values = [temp_grid[row][c] for row in range(grid_size)]
+    col_sun_count = sum(1 for v in col_values if v == 'sun')
+    col_moon_count = sum(1 for v in col_values if v == 'moon')
+    col_empty_count = sum(1 for v in col_values if v is None)
+    
+    # Can't exceed maximum allowed
+    if col_sun_count > max_allowed or col_moon_count > max_allowed:
+        return False
+    
+    # If column is full, must be balanced
+    if col_empty_count == 0:
+        if col_sun_count != col_moon_count:
+            return False
+    # If column has 1 empty cell left, the imbalance must be <= 1 (can be balanced with last cell)
+    elif col_empty_count == 1:
+        imbalance = abs(col_sun_count - col_moon_count)
+        if imbalance > 1:
+            return False
+    
+    # Check 5: Constraint satisfaction (only check if both cells are filled)
+    if constraints:
+        for r1, c1, r2, c2, constraint_type in constraints:
+            # Check if this placement affects a constraint
+            if (r1, c1) == (r, c) or (r2, c2) == (r, c):
+                v1 = temp_grid[r1][c1]
+                v2 = temp_grid[r2][c2]
+                
+                # Both cells must be filled to check constraint
+                if v1 is not None and v2 is not None:
+                    if constraint_type == '=':
+                        if v1 != v2:
+                            return False
+                    elif constraint_type == '×':
+                        if v1 == v2:
+                            return False
+    
     return True
 
 def is_tango_complete(grid):
@@ -268,6 +340,194 @@ def is_tango_complete(grid):
         if None in row:
             return False
     return True
+
+def verify_puzzle_solvability(grid, constraints, grid_size):
+    """
+    Verify that a puzzle with hints is solvable by checking if there's at least one valid move.
+    This helps detect if hints were placed incorrectly or if the puzzle is unsolvable.
+    """
+    # Check if there's at least one valid placement available
+    for r in range(grid_size):
+        for c in range(grid_size):
+            if grid[r][c] is None:  # Empty cell
+                for symbol in ["sun", "moon"]:
+                    if is_valid_placement(grid, r, c, symbol, grid_size, constraints):
+                        return True  # Found at least one valid move
+    return False  # No valid moves found
+
+def find_next_placement_constraint_propagation(current_grid, constraints, grid_size):
+    """
+    Find the next placement using constraint propagation:
+    1. Start with fixed symbols (already placed)
+    2. Propagate through × and = constraints (these are truly forced)
+    3. Use "no 3-in-a-row" to find forced placements (only if opposite is invalid)
+    4. Use balance constraints to find forced placements (only if one symbol is invalid)
+    
+    Returns (r, c, symbol) if a forced placement is found, None otherwise.
+    """
+    # Step 1: Propagate through constraint links (× and =)
+    # These are truly forced - if one cell is filled, the other MUST be a specific symbol
+    # The constraint itself makes it forced; we just verify the forced placement is valid
+    for r1, c1, r2, c2, constraint_type in constraints:
+        v1 = current_grid[r1][c1]
+        v2 = current_grid[r2][c2]
+        
+        # If one is filled and the other is empty, propagate
+        if v1 is not None and v2 is None:
+            if constraint_type == '=':
+                # Must be equal - place same symbol (truly forced by constraint)
+                # Only suggest if placing the same symbol is valid according to all rules
+                if is_valid_placement(current_grid, r2, c2, v1, grid_size, constraints):
+                    return (r2, c2, v1)
+            elif constraint_type == '×':
+                # Must be different - place opposite symbol (truly forced by constraint)
+                opposite = "moon" if v1 == "sun" else "sun"
+                # Only suggest if placing the opposite symbol is valid according to all rules
+                if is_valid_placement(current_grid, r2, c2, opposite, grid_size, constraints):
+                    return (r2, c2, opposite)
+        elif v1 is None and v2 is not None:
+            if constraint_type == '=':
+                # Must be equal - place same symbol (truly forced by constraint)
+                # Only suggest if placing the same symbol is valid according to all rules
+                if is_valid_placement(current_grid, r1, c1, v2, grid_size, constraints):
+                    return (r1, c1, v2)
+            elif constraint_type == '×':
+                # Must be different - place opposite symbol (truly forced by constraint)
+                opposite = "moon" if v2 == "sun" else "sun"
+                # Only suggest if placing the opposite symbol is valid according to all rules
+                if is_valid_placement(current_grid, r1, c1, opposite, grid_size, constraints):
+                    return (r1, c1, opposite)
+    
+    # Step 2: Use "no 3-in-a-row" to find forced placements
+    for r in range(grid_size):
+        for c in range(grid_size):
+            if current_grid[r][c] is not None:
+                continue
+            
+            # Check horizontal: if we have 2 in a row, the third must be different
+            # Check pattern: [same][same][empty] - must place opposite
+            if c >= 2:
+                v1 = current_grid[r][c-2]
+                v2 = current_grid[r][c-1]
+                if v1 is not None and v2 is not None and v1 == v2:
+                    # Placing the same symbol here would create 3 in a row - must place opposite
+                    opposite = "moon" if v1 == "sun" else "sun"
+                    # Only return if opposite is valid AND same symbol is invalid (truly forced)
+                    if is_valid_placement(current_grid, r, c, opposite, grid_size, constraints):
+                        if not is_valid_placement(current_grid, r, c, v1, grid_size, constraints):
+                            return (r, c, opposite)
+            
+            # Check pattern: [empty][same][same] - must place opposite
+            if c < grid_size - 2:
+                v1 = current_grid[r][c+1]
+                v2 = current_grid[r][c+2]
+                if v1 is not None and v2 is not None and v1 == v2:
+                    # Placing the same symbol here would create 3 in a row - must place opposite
+                    opposite = "moon" if v1 == "sun" else "sun"
+                    # Only return if opposite is valid AND same symbol is invalid (truly forced)
+                    if is_valid_placement(current_grid, r, c, opposite, grid_size, constraints):
+                        if not is_valid_placement(current_grid, r, c, v1, grid_size, constraints):
+                            return (r, c, opposite)
+            
+            # Check pattern: [same][empty][same] - must place opposite to avoid 3 in a row
+            if c >= 1 and c < grid_size - 1:
+                v1 = current_grid[r][c-1]
+                v2 = current_grid[r][c+1]
+                if v1 is not None and v2 is not None and v1 == v2:
+                    # If we place the same symbol here, we'd have 3 in a row - must place opposite
+                    opposite = "moon" if v1 == "sun" else "sun"
+                    # Only return if opposite is valid AND same symbol is invalid (truly forced)
+                    if is_valid_placement(current_grid, r, c, opposite, grid_size, constraints):
+                        if not is_valid_placement(current_grid, r, c, v1, grid_size, constraints):
+                            return (r, c, opposite)
+            
+            # Check vertical: if we have 2 in a row, the third must be different
+            # Check pattern: [same][same][empty] - must place opposite
+            if r >= 2:
+                v1 = current_grid[r-2][c]
+                v2 = current_grid[r-1][c]
+                if v1 is not None and v2 is not None and v1 == v2:
+                    # Placing the same symbol here would create 3 in a row - must place opposite
+                    opposite = "moon" if v1 == "sun" else "sun"
+                    # Only return if opposite is valid AND same symbol is invalid (truly forced)
+                    if is_valid_placement(current_grid, r, c, opposite, grid_size, constraints):
+                        if not is_valid_placement(current_grid, r, c, v1, grid_size, constraints):
+                            return (r, c, opposite)
+            
+            # Check pattern: [empty][same][same] - must place opposite
+            if r < grid_size - 2:
+                v1 = current_grid[r+1][c]
+                v2 = current_grid[r+2][c]
+                if v1 is not None and v2 is not None and v1 == v2:
+                    # Placing the same symbol here would create 3 in a row - must place opposite
+                    opposite = "moon" if v1 == "sun" else "sun"
+                    # Only return if opposite is valid AND same symbol is invalid (truly forced)
+                    if is_valid_placement(current_grid, r, c, opposite, grid_size, constraints):
+                        if not is_valid_placement(current_grid, r, c, v1, grid_size, constraints):
+                            return (r, c, opposite)
+            
+            # Check pattern: [same][empty][same] - must place opposite to avoid 3 in a row
+            if r >= 1 and r < grid_size - 1:
+                v1 = current_grid[r-1][c]
+                v2 = current_grid[r+1][c]
+                if v1 is not None and v2 is not None and v1 == v2:
+                    # If we place the same symbol here, we'd have 3 in a row - must place opposite
+                    opposite = "moon" if v1 == "sun" else "sun"
+                    # Only return if opposite is valid AND same symbol is invalid (truly forced)
+                    if is_valid_placement(current_grid, r, c, opposite, grid_size, constraints):
+                        if not is_valid_placement(current_grid, r, c, v1, grid_size, constraints):
+                            return (r, c, opposite)
+    
+    # Step 3: Use balance constraints to find forced placements
+    max_allowed = grid_size // 2
+    for r in range(grid_size):
+        row_values = [current_grid[r][col] for col in range(grid_size)]
+        row_sun_count = sum(1 for v in row_values if v == 'sun')
+        row_moon_count = sum(1 for v in row_values if v == 'moon')
+        row_empty_count = sum(1 for v in row_values if v is None)
+        
+        # If row has 1 empty cell left and is imbalanced, must place the minority symbol
+        if row_empty_count == 1:
+            if row_sun_count < row_moon_count:
+                # Need sun to balance - only return if sun is valid AND moon is invalid (truly forced)
+                for c in range(grid_size):
+                    if current_grid[r][c] is None:
+                        if is_valid_placement(current_grid, r, c, "sun", grid_size, constraints):
+                            if not is_valid_placement(current_grid, r, c, "moon", grid_size, constraints):
+                                return (r, c, "sun")
+            elif row_moon_count < row_sun_count:
+                # Need moon to balance - only return if moon is valid AND sun is invalid (truly forced)
+                for c in range(grid_size):
+                    if current_grid[r][c] is None:
+                        if is_valid_placement(current_grid, r, c, "moon", grid_size, constraints):
+                            if not is_valid_placement(current_grid, r, c, "sun", grid_size, constraints):
+                                return (r, c, "moon")
+    
+    for c in range(grid_size):
+        col_values = [current_grid[row][c] for row in range(grid_size)]
+        col_sun_count = sum(1 for v in col_values if v == 'sun')
+        col_moon_count = sum(1 for v in col_values if v == 'moon')
+        col_empty_count = sum(1 for v in col_values if v is None)
+        
+        # If column has 1 empty cell left and is imbalanced, must place the minority symbol
+        if col_empty_count == 1:
+            if col_sun_count < col_moon_count:
+                # Need sun to balance - only return if sun is valid AND moon is invalid (truly forced)
+                for r in range(grid_size):
+                    if current_grid[r][c] is None:
+                        if is_valid_placement(current_grid, r, c, "sun", grid_size, constraints):
+                            if not is_valid_placement(current_grid, r, c, "moon", grid_size, constraints):
+                                return (r, c, "sun")
+            elif col_moon_count < col_sun_count:
+                # Need moon to balance - only return if moon is valid AND sun is invalid (truly forced)
+                for r in range(grid_size):
+                    if current_grid[r][c] is None:
+                        if is_valid_placement(current_grid, r, c, "moon", grid_size, constraints):
+                            if not is_valid_placement(current_grid, r, c, "sun", grid_size, constraints):
+                                return (r, c, "moon")
+    
+    # No forced placement found
+    return None
 
 def encode_tango_neighbors(state_dict, grid_size):
     """Set spatial relationships (above, below, left, right) for cells based on row/col"""
@@ -324,6 +584,8 @@ class TangoPuzzle(TutorEnvBase):
         self.problem_types = problem_types
         self.problem = None
         self.problem_name = None
+        # Track recently backtracked cells to avoid infinite loops
+        self.recently_backtracked = set()
         
         super().__init__(**kwargs)
         self.set_random_problem()
@@ -357,6 +619,8 @@ class TangoPuzzle(TutorEnvBase):
     
     def set_start_state(self, grid, constraints, hint_positions):
         self.problem = (grid, constraints)
+        # Store hint positions to track which cells are hints (cannot be backtracked)
+        self.hint_positions = set(hint_positions) if hint_positions else set()
         state_dict = self._blank_state()
         
         for r in range(self.grid_size):
@@ -406,6 +670,25 @@ class TangoPuzzle(TutorEnvBase):
             grid, hint_positions = create_puzzle(solution, self.grid_size)
             constraints = []
             add_constraints(solution, constraints, self.grid_size)
+            
+            # Verify puzzle is solvable after hints are placed
+            if not verify_puzzle_solvability(grid, constraints, self.grid_size):
+                # Puzzle is unsolvable with current hints - regenerate
+                print(f"Warning: Generated puzzle is unsolvable, regenerating...")
+                # Try regenerating up to 5 times
+                for retry in range(5):
+                    grid, hint_positions = create_puzzle(solution, self.grid_size)
+                    if verify_puzzle_solvability(grid, constraints, self.grid_size):
+                        break
+                else:
+                    # If still unsolvable after retries, use solution as grid (all hints)
+                    print(f"Warning: Could not generate solvable puzzle, using solution as hints")
+                    grid = [row[:] for row in solution]  # Use full solution
+                    hint_positions = set((r, c) for r in range(self.grid_size) 
+                                        for c in range(self.grid_size))
+        
+        # Store solution for debugging
+        self.solution = solution
         
         self.set_start_state(grid, constraints, hint_positions)
         return {"grid": grid, "constraints": constraints, "hint_positions": hint_positions}
@@ -427,6 +710,102 @@ class TangoPuzzle(TutorEnvBase):
         args.append("done")
         return args
     
+    def _print_puzzle_debug_info(self, current_grid, state_objs=None, is_complete=False):
+        """
+        Print debug information about the puzzle state.
+        Called when puzzle is completed or when no valid moves are found.
+        """
+        prefix = "✅ PUZZLE COMPLETED" if is_complete else "⚠️  WARNING: No valid moves found"
+        print(f"\n{prefix} for puzzle {self.problem_name}")
+        
+        # Print starting state (initial hints) with constraints
+        grid, constraints = self.problem if self.problem else (None, None)
+        if grid:
+            # Create a visual representation of constraints on the board
+            # Build constraint map: (r, c) -> list of constraint symbols and directions
+            constraint_map = {}
+            if constraints:
+                for r1, c1, r2, c2, constraint_type in constraints:
+                    # Determine direction
+                    if r2 == r1 and c2 == c1 + 1:  # Right
+                        if (r1, c1) not in constraint_map:
+                            constraint_map[(r1, c1)] = []
+                        constraint_map[(r1, c1)].append(('R', constraint_type))
+                    elif r2 == r1 and c2 == c1 - 1:  # Left
+                        if (r1, c1) not in constraint_map:
+                            constraint_map[(r1, c1)] = []
+                        constraint_map[(r1, c1)].append(('L', constraint_type))
+                    elif r2 == r1 + 1 and c2 == c1:  # Down
+                        if (r1, c1) not in constraint_map:
+                            constraint_map[(r1, c1)] = []
+                        constraint_map[(r1, c1)].append(('D', constraint_type))
+                    elif r2 == r1 - 1 and c2 == c1:  # Up
+                        if (r1, c1) not in constraint_map:
+                            constraint_map[(r1, c1)] = []
+                        constraint_map[(r1, c1)].append(('U', constraint_type))
+            
+            print(f"   Starting state (initial hints) with constraints:")
+            for r in range(self.grid_size):
+                row_parts = []
+                for c in range(self.grid_size):
+                    cell_value = str(grid[r][c] if grid[r][c] else "_")
+                    # Add constraint indicators
+                    constraint_str = ""
+                    if (r, c) in constraint_map:
+                        for direction, constraint_type in constraint_map[(r, c)]:
+                            if direction == 'R':
+                                constraint_str += f"→{constraint_type}"
+                            elif direction == 'L':
+                                constraint_str += f"←{constraint_type}"
+                            elif direction == 'D':
+                                constraint_str += f"↓{constraint_type}"
+                            elif direction == 'U':
+                                constraint_str += f"↑{constraint_type}"
+                    if constraint_str:
+                        row_parts.append(f"{cell_value}{constraint_str}")
+                    else:
+                        row_parts.append(cell_value)
+                print(f"   Row {r}: {' '.join(row_parts)}")
+            
+            # Also print constraints as a list
+            if constraints:
+                print(f"   Constraints list:")
+                for r1, c1, r2, c2, constraint_type in constraints:
+                    print(f"      ({r1},{c1}) {constraint_type} ({r2},{c2})")
+            else:
+                print(f"   Constraints: None")
+        
+        print(f"   Current grid state:")
+        for r in range(self.grid_size):
+            row_str = " ".join([str(current_grid[r][c] if current_grid[r][c] else "_") 
+                              for c in range(self.grid_size)])
+            print(f"   Row {r}: {row_str}")
+        print(f"   Empty cells: {sum(1 for r in range(self.grid_size) for c in range(self.grid_size) if current_grid[r][c] is None)}")
+        
+        # Print the solution for comparison (DEBUGGING ONLY)
+        if hasattr(self, 'solution') and self.solution:
+            print(f"   Solution (what the puzzle should be - DEBUG ONLY):")
+            for r in range(self.grid_size):
+                sol_str = " ".join([str(self.solution[r][c] if self.solution[r][c] else "_") 
+                                  for c in range(self.grid_size)])
+                print(f"   Row {r}: {sol_str}")
+            
+            # Check what should be in the empty cells (only if puzzle is not complete)
+            if not is_complete and state_objs:
+                for r in range(self.grid_size):
+                    for c in range(self.grid_size):
+                        if current_grid[r][c] is None:
+                            expected = self.solution[r][c]
+                            current_value = state_objs.get(f"cell_{r}_{c}", {}).get("value", "none")
+                            print(f"   Empty cell ({r},{c}) should be: {expected}, current: {current_value}")
+                            # Check why it's not valid
+                            if expected:
+                                print(f"      Checking validity of placing {expected} at ({r},{c})...")
+                                if not is_valid_placement(current_grid, r, c, expected, self.grid_size, constraints):
+                                    print(f"      ❌ Placing {expected} is INVALID according to rules!")
+                                else:
+                                    print(f"      ✓ Placing {expected} should be valid - this is a bug!")
+    
     def get_demo(self, state=None, **kwargs):
         state = self.state if state is None else state
         grid, constraints = self.problem if self.problem else (None, None)
@@ -437,16 +816,85 @@ class TangoPuzzle(TutorEnvBase):
         # Handle both ProblemState and dict
         state_objs = state.objs if isinstance(state, ProblemState) else state
         
+        # Check if puzzle is complete first
+        current_grid = []
+        for r in range(self.grid_size):
+            row = []
+            for c in range(self.grid_size):
+                value = state_objs.get(f"cell_{r}_{c}", {}).get("value", "none")
+                row.append(value if value != "none" else None)
+            current_grid.append(row)
+        
+        if is_tango_complete(current_grid):
+            # Puzzle is complete - print debug info and return None
+            # The state should already be marked as done in get_state()
+            self._print_puzzle_debug_info(current_grid, state_objs, is_complete=True)
+            return None
+        
+        # Use constraint propagation to find next placement
+        # This follows the strategy:
+        # 1. Start with fixed symbols (already in current_grid)
+        # 2. Propagate through × and = constraints
+        # 3. Use "no 3-in-a-row" to find forced placements
+        # 4. Use balance constraints to find forced placements
+        result = find_next_placement_constraint_propagation(current_grid, constraints, self.grid_size)
+        
+        if result:
+            r, c, symbol = result
+            sai = (f"cell_{r}_{c}", 'PlaceSymbol', symbol)
+            action = Action(sai, arg_foci=[f"cell_{r}_{c}"], 
+                          how_help=f"Place {symbol} at ({r},{c}) - constraint propagation")
+            return action
+        
+        # If constraint propagation didn't find a forced placement,
+        # fall back to finding any valid placement (but prefer placements that are more constrained)
+        # Try to find cells where only one symbol is valid
+        for r in range(self.grid_size):
+            for c in range(self.grid_size):
+                current_value = state_objs.get(f"cell_{r}_{c}", {}).get("value", "none")
+                if current_value == "none":
+                    # Check if only one symbol is valid (forced placement)
+                    sun_valid = is_valid_placement(current_grid, r, c, "sun", self.grid_size, constraints)
+                    moon_valid = is_valid_placement(current_grid, r, c, "moon", self.grid_size, constraints)
+                    
+                    if sun_valid and not moon_valid:
+                        # Only sun is valid - forced placement
+                        sai = (f"cell_{r}_{c}", 'PlaceSymbol', "sun")
+                        action = Action(sai, arg_foci=[f"cell_{r}_{c}"], 
+                                      how_help=f"Place sun at ({r},{c}) - only valid option")
+                        return action
+                    elif moon_valid and not sun_valid:
+                        # Only moon is valid - forced placement
+                        sai = (f"cell_{r}_{c}", 'PlaceSymbol', "moon")
+                        action = Action(sai, arg_foci=[f"cell_{r}_{c}"], 
+                                      how_help=f"Place moon at ({r},{c}) - only valid option")
+                        return action
+        
+        # If no forced placements found, find any valid placement
         for r in range(self.grid_size):
             for c in range(self.grid_size):
                 current_value = state_objs.get(f"cell_{r}_{c}", {}).get("value", "none")
                 if current_value == "none":
                     for symbol in ["sun", "moon"]:
-                        if is_valid_placement(grid, r, c, symbol, self.grid_size):
+                        # Check validity against current state with constraints
+                        if is_valid_placement(current_grid, r, c, symbol, self.grid_size, constraints):
                             sai = (f"cell_{r}_{c}", 'PlaceSymbol', symbol)
                             action = Action(sai, arg_foci=[f"cell_{r}_{c}"], how_help=f"Place {symbol} at ({r},{c})")
                             return action
         
+        # No valid moves found - this shouldn't happen if puzzle is solvable
+        # Debug: Print current state to understand why
+        self._print_puzzle_debug_info(current_grid, state_objs, is_complete=False)
+        
+        # Check if puzzle is actually complete (might be a state issue)
+        if is_tango_complete(current_grid):
+            if isinstance(state, ProblemState):
+                state.add_annotations({"is_done": True})
+            return None
+        
+        # Puzzle is not complete but no valid moves - mark as done to prevent infinite loop
+        if isinstance(state, ProblemState):
+            state.add_annotations({"is_done": True})
         return None
     
     def check(self, action, **kwargs):
@@ -468,7 +916,8 @@ class TangoPuzzle(TutorEnvBase):
                     row.append(value if value != "none" else None)
                 current_grid.append(row)
             
-            if is_tango_complete(current_grid):
+            # Check if puzzle is complete AND valid
+            if is_tango_complete(current_grid) and validate_solution(current_grid, self.grid_size):
                 return 1
             else:
                 return -1
@@ -484,11 +933,27 @@ class TangoPuzzle(TutorEnvBase):
         if not (0 <= r < self.grid_size and 0 <= c < self.grid_size):
             return -1
         
+        # Check if the cell is empty (required for placement)
         current_value = self.state.objs.get(f"cell_{r}_{c}", {}).get("value", "none")
-        if current_value == "none":
+        if current_value != "none":
+            # Cell is already filled, can't place here
             return -1
         
-        if is_valid_placement(grid, r, c, current_value, self.grid_size):
+        # Check if the action's input (symbol to place) is valid
+        if action.input not in ["sun", "moon"]:
+            return -1
+        
+        # Build current grid state from self.state (includes all placed symbols)
+        current_grid = []
+        for row in range(self.grid_size):
+            grid_row = []
+            for col in range(self.grid_size):
+                value = self.state.objs.get(f"cell_{row}_{col}", {}).get("value", "none")
+                grid_row.append(value if value != "none" else None)
+            current_grid.append(grid_row)
+        
+        # Check validity against CURRENT state (not initial grid) with constraints
+        if is_valid_placement(current_grid, r, c, action.input, self.grid_size, constraints):
             return 1
         else:
             return -1
@@ -519,7 +984,7 @@ class TangoPuzzle(TutorEnvBase):
         
         new_state = self.state.copy()
         
-        if action.input in ["sun", "moon", "none"]:
+        if action.input in ["sun", "moon"]:
             # Preserve id, row, col, and spatial relationships when updating value
             cell_obj = new_state.objs.get(f"cell_{r}_{c}", {})
             new_state[f"cell_{r}_{c}"] = {
@@ -536,6 +1001,7 @@ class TangoPuzzle(TutorEnvBase):
         
         # Note: We don't track selected_cell in state as it's metadata not needed for agent
         
+        # Check if puzzle is complete after this action
         current_grid = []
         for row in range(self.grid_size):
             grid_row = []
@@ -544,10 +1010,18 @@ class TangoPuzzle(TutorEnvBase):
                 grid_row.append(value if value != "none" else None)
             current_grid.append(grid_row)
         
-        # Note: We don't update satisfied_constraints in state
-        # as it's metadata not needed for agent decision making
+        # Check if puzzle is complete AND valid
+        if is_tango_complete(current_grid) and validate_solution(current_grid, self.grid_size):
+            # Mark state as done - trainer will check this annotation
+            new_state.add_annotations({"is_done": True})
+            # Print debug info when puzzle is completed (only if not already marked as done)
+            if not self.state.get_annotation("is_done"):
+                self._print_puzzle_debug_info(current_grid, new_state.objs, is_complete=True)
         
-        return new_state
+        # Update self.state with the new state (required for trainer to see changes)
+        self.state = new_state
+        
+        return self.state
     
     def set_problem(self, *args, **kwargs):
         """Set the Tutor Environment's current problem"""
@@ -583,13 +1057,23 @@ class TangoPuzzle(TutorEnvBase):
         # Handle both ProblemState and dict
         state_objs = state.objs if isinstance(state, ProblemState) else state
         
+        # Build current grid state from state (includes all placed symbols)
+        current_grid = []
+        for r in range(self.grid_size):
+            row = []
+            for c in range(self.grid_size):
+                value = state_objs.get(f"cell_{r}_{c}", {}).get("value", "none")
+                row.append(value if value != "none" else None)
+            current_grid.append(row)
+        
         demos = []
         for r in range(self.grid_size):
             for c in range(self.grid_size):
                 if state_objs.get(f"cell_{r}_{c}", {}).get("value", "none") == "none":
                     # Try each symbol
                     for symbol in ["sun", "moon"]:
-                        if is_valid_placement(grid, r, c, symbol, self.grid_size):
+                        # Check validity against current state with constraints
+                        if is_valid_placement(current_grid, r, c, symbol, self.grid_size, constraints):
                             sai = (f"cell_{r}_{c}", 'PlaceSymbol', symbol)
                             action = Action(sai, arg_foci=[f"cell_{r}_{c}"], how_help=f"Place {symbol} at ({r},{c})")
                             demos.append(action)
@@ -598,6 +1082,24 @@ class TangoPuzzle(TutorEnvBase):
     
     def get_state(self):
         """Get the current state of the Tutor"""
+        # Check if puzzle is complete and mark state accordingly
+        # This ensures the trainer can detect completion before calling get_demo()
+        if not self.state.get_annotation("is_done"):
+            current_grid = []
+            for r in range(self.grid_size):
+                row = []
+                for c in range(self.grid_size):
+                    value = self.state.objs.get(f"cell_{r}_{c}", {}).get("value", "none")
+                    row.append(value if value != "none" else None)
+                current_grid.append(row)
+            
+            # Check if puzzle is complete AND valid
+            if is_tango_complete(current_grid) and validate_solution(current_grid, self.grid_size):
+                self.state.add_annotations({"is_done": True})
+                # Print debug info when puzzle is completed
+                state_objs = self.state.objs
+                self._print_puzzle_debug_info(current_grid, state_objs, is_complete=True)
+        
         return self.state
     
     def set_state(self, state):
@@ -688,7 +1190,7 @@ if __name__ == "__main__":
     try:
         test_grid = [[None for _ in range(6)] for _ in range(6)]
         test_constraints = [(0, 0, 0, 1, 'horizontal')]
-        is_valid = is_valid_placement(test_grid, 0, 0, 'sun', 6)
+        is_valid = is_valid_placement(test_grid, 0, 0, 'sun', 6, test_constraints)
         print(f"   ✓ is_valid_tango_placement test: {is_valid}")
         
         complete_grid = [['sun' for _ in range(6)] for _ in range(6)]

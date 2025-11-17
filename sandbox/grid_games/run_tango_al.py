@@ -89,9 +89,9 @@ if __name__ == "__main__":
                 "should_find_neighbors": False,  # Tango uses row/col, not x/y coordinates
                 
                 # Use Tango fact and action types
-                "fact_set": "tango",  # or use "fact_types": "tango"
-                "action_types": "tango",  # Note: parameter is "action_types" not "action_type_set"
-                "constraint": "tango",
+                "fact_types": "tango",
+                "action_types": "tango",
+                "constraints": "tango",
             }
 
             agent = CREAgent(**agent_args)
