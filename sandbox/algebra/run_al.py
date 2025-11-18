@@ -13,6 +13,21 @@ from algebra_funcs import (GetOperand, GetOperator, ReverseSign, ExprVar, EvalAr
     AddTerm, SubTerm, DivTerm, MulTerm, ExprConst,ExprCoeff, ExprDenCoeff, 
     WriteMultiply, WriteDivide, WriteSubtract, WriteAdd, Numerator, Denominator)
 # raise ValueError()
+from random import choice
+
+class SimpleInterleaveController:
+    def __init__(self, problem_list):
+        self.problem_list = problem_list
+        self.index = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        # Just cycle through the list indefinitely
+        prob = self.problem_list[self.index]
+        self.index = (self.index + 1) % len(self.problem_list)
+        return prob
 
 
 def run_training(agent, logger_name='Algebra', n=10,

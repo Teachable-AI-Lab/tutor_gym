@@ -71,7 +71,8 @@ class Trainer:
 
         if('outer_loop_controller' in kwargs):
             self.outer_loop_controller = kwargs['outer_loop_controller']
-            self.problem_iterator = self.outer_loop_controller
+            self.problem_iterator = iter(self.outer_loop_controller)
+
         else:
             self.problem_iterator = ProblemIterator(**kwargs)
 
