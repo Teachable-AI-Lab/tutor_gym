@@ -62,7 +62,7 @@ if __name__ == "__main__":
             agent_args = {
                 "function_set": [
                     'ToggleSymbol', 'GetOppositeSymbol', 'OppositeOf', 
-                    'Sun', 'Moon', 'CopySymbol'
+                    'Sun', 'Moon', 'CopySymbol', 'Undo'
                 ],  # Functions for symbol manipulation
                 "feature_set": ['Equals'],  # For comparing cell values
                 "planner": 'set_chaining',
