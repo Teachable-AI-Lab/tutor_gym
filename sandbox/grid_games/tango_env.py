@@ -630,6 +630,10 @@ class TangoPuzzle(TutorEnvBase):
         # Track action history for undo functionality
         self.action_history = []
         self.max_history = 50
+        # Track tried symbols per cell: maps (r, c) -> set of symbols tried from this state
+        # When both {"sun", "moon"} have been tried and failed, we backtrack further
+        self.tried_cells = {}  # {(r, c): {"sun"}, {"moon"}, or {"sun", "moon"}}
+        self.undo_count = 0  # Track consecutive undos
         
         super().__init__(**kwargs)
         self.set_random_problem()
@@ -654,7 +658,13 @@ class TangoPuzzle(TutorEnvBase):
         state["undo_button"] = {
             "id": "undo_button",
             "type": "Cell",  # Use Cell type so agent can select it
-            "value": "undo"
+            "value": "undo",
+            "row": -1,  # Dummy values to satisfy Cell type
+            "col": -1,
+            "above": None,
+            "below": None,
+            "left": None,
+            "right": None
         }
         
         # Set spatial relationships based on row/col
@@ -673,19 +683,67 @@ class TangoPuzzle(TutorEnvBase):
         return len(self.action_history) > 0
     
     def undo_last_action(self):
-        """Undo the last action by reverting to the previous state"""
+        """Undo the last action by reverting to the previous state
+        Marks the undone symbol as tried for this cell"""
         if not self.can_undo():
             return self.state
         
-        # Pop the last state from history and restore it
-        previous_state = self.action_history.pop()
+        # Before undoing, find what cell was changed (current vs previous)
+        previous_state_data = self.action_history[-1]  # Peek at previous (state, tried_cells)
+        
+        # Handle both old format (just state) and new format (state, tried_cells tuple)
+        if isinstance(previous_state_data, tuple):
+            previous_state, previous_tried_cells = previous_state_data
+        else:
+            # Fallback for old format
+            previous_state = previous_state_data
+            previous_tried_cells = {}
+        
+        undone_cell = None
+        undone_symbol = None
+        
+        # Compare current state with previous to find what changed
+        for r in range(self.grid_size):
+            for c in range(self.grid_size):
+                cell_id = f"cell_{r}_{c}"
+                current_value = self.state.objs.get(cell_id, {}).get("value", "none")
+                previous_value = previous_state.objs.get(cell_id, {}).get("value", "none")
+                
+                if current_value != previous_value and current_value in ["sun", "moon"]:
+                    # This cell was filled in the action we're undoing
+                    undone_cell = (r, c)
+                    undone_symbol = current_value
+                    break
+            if undone_cell:
+                break
+        
+        # Pop the history entry and restore previous state
+        self.action_history.pop()
         self.state = previous_state.copy()
         
+        # Restore tried_cells from the previous state
+        self.tried_cells = previous_tried_cells.copy()
+        
+        # NOW mark the undone symbol as tried (after restoring previous tried_cells)
+        if undone_cell and undone_symbol:
+            if undone_cell not in self.tried_cells:
+                self.tried_cells[undone_cell] = set()
+            self.tried_cells[undone_cell].add(undone_symbol)
+            
+            # Check if both options have been tried FROM THIS STATE
+            if len(self.tried_cells[undone_cell]) == 2:
+                print(f"⚠️ UNDO: Both symbols tried at {undone_cell} - will backtrack further")
+            else:
+                opposite = "moon" if undone_symbol == "sun" else "sun"
+                print(f"📝 UNDO: Marked '{undone_symbol}' as tried at {undone_cell}, will try '{opposite}' next")
+        
+        print(f"✓ UNDO COMPLETE: Reverted to previous state (history size: {len(self.action_history)})")
         return self.state
     
     def is_stuck(self, current_grid, constraints):
         """
         Check if the current state is truly stuck (no valid moves available ANYWHERE).
+        Takes into account both rule validity AND backtracking history.
         
         Returns: True if stuck, False otherwise
         """
@@ -694,17 +752,24 @@ class TangoPuzzle(TutorEnvBase):
             return False
         
         # Check if there are any valid moves ANYWHERE in the grid
-        # Not just top-constraint cells - truly stuck means NO valid moves at all
+        # Must be rule-valid AND not already tried at this cell
         for r in range(self.grid_size):
             for c in range(self.grid_size):
                 if current_grid[r][c] is None:
-                    # Check if either symbol can be validly placed
-                    if is_valid_placement(current_grid, r, c, "sun", self.grid_size, constraints):
-                        return False
-                    if is_valid_placement(current_grid, r, c, "moon", self.grid_size, constraints):
-                        return False
+                    # Skip cells where both options have been exhausted
+                    if (r, c) in self.tried_cells and len(self.tried_cells[(r, c)]) == 2:
+                        continue  # Both symbols tried, skip this cell
+                    
+                    # Check if either symbol can be validly placed AND hasn't been tried
+                    for symbol in ["sun", "moon"]:
+                        # Skip if already tried
+                        if (r, c) in self.tried_cells and symbol in self.tried_cells[(r, c)]:
+                            continue
+                        
+                        if is_valid_placement(current_grid, r, c, symbol, self.grid_size, constraints):
+                            return False  # Found a valid untried move
         
-        # No valid moves found anywhere = truly stuck
+        # No valid untried moves found anywhere = truly stuck
         return True
     
     def calculate_cell_constraint_rank(self, r, c, current_grid, constraints):
@@ -899,6 +964,9 @@ class TangoPuzzle(TutorEnvBase):
         self.hint_positions = set(hint_positions) if hint_positions else set()
         # Clear action history when starting a new problem
         self.action_history = []
+        # Clear backtracking state
+        self.tried_cells = {}
+        self.undo_count = 0
         state_dict = self._blank_state()
         
         for r in range(self.grid_size):
@@ -972,10 +1040,54 @@ class TangoPuzzle(TutorEnvBase):
         return {"grid": grid, "constraints": constraints, "hint_positions": hint_positions}
     
     def get_possible_selections(self):
+        """
+        Return only high-constraint cells as possible selections.
+        This forces the agent to work on the most constrained cells first.
+        """
         selections = []
-        for r in range(self.grid_size):
-            for c in range(self.grid_size):
-                selections.append(f"cell_{r}_{c}")
+        
+        # Get current grid state
+        if self.state and self.problem:
+            grid, constraints = self.problem
+            current_grid = []
+            for r in range(self.grid_size):
+                row = []
+                for c in range(self.grid_size):
+                    value = self.state.objs.get(f"cell_{r}_{c}", {}).get("value", "none")
+                    row.append(value if value != "none" else None)
+                current_grid.append(row)
+            
+            # Get top-constraint cells
+            top_constraint_cells = self.get_top_constraint_cells(current_grid, constraints)
+            
+            # Check if top-constraint cells have valid moves
+            top_has_valid_moves = False
+            if top_constraint_cells:
+                for r, c in top_constraint_cells:
+                    if current_grid[r][c] is None:
+                        if is_valid_placement(current_grid, r, c, "sun", self.grid_size, constraints):
+                            top_has_valid_moves = True
+                            break
+                        if is_valid_placement(current_grid, r, c, "moon", self.grid_size, constraints):
+                            top_has_valid_moves = True
+                            break
+            
+            # If top-constraint cells exist and have valid moves, only return those
+            if top_constraint_cells and top_has_valid_moves:
+                for r, c in top_constraint_cells:
+                    selections.append(f"cell_{r}_{c}")
+            else:
+                # If no top-constraint cells with valid moves, return all empty cells
+                for r in range(self.grid_size):
+                    for c in range(self.grid_size):
+                        if current_grid[r][c] is None:
+                            selections.append(f"cell_{r}_{c}")
+        else:
+            # Fallback: return all cells if state not initialized
+            for r in range(self.grid_size):
+                for c in range(self.grid_size):
+                    selections.append(f"cell_{r}_{c}")
+        
         selections.append("done")
         selections.append("undo_button")
         return selections
@@ -1111,6 +1223,37 @@ class TangoPuzzle(TutorEnvBase):
             self._print_puzzle_debug_info(current_grid, state_objs, is_complete=True)
             return None
         
+        # PRIORITY: Check if we need to try the untried symbol at a partially-explored cell
+        for (r, c), tried_symbols in self.tried_cells.items():
+            # Skip cells where both symbols have been tried
+            if len(tried_symbols) == 2:
+                continue
+            
+            # If this cell is empty and only one symbol has been tried, suggest the other
+            if current_grid[r][c] is None:
+                tried_symbol = list(tried_symbols)[0]
+                untried_symbol = "moon" if tried_symbol == "sun" else "sun"
+                
+                # Check if the untried symbol is valid
+                if is_valid_placement(current_grid, r, c, untried_symbol, self.grid_size, constraints):
+                    print(f"🔄 RETRY after UNDO: Suggesting '{untried_symbol}' at ({r},{c}) "
+                          f"(already tried '{tried_symbol}')")
+                    sai = (f"cell_{r}_{c}", 'PlaceSymbol', untried_symbol)
+                    action = Action(sai, arg_foci=[f"cell_{r}_{c}"], 
+                                  how_help=f"Try untried symbol after backtrack")
+                    return action
+                else:
+                    # Untried symbol is also invalid - both paths exhausted from this cell
+                    print(f"⚠️ Both symbols exhausted at ({r},{c}) - need to backtrack further")
+                    # Mark this cell as fully explored
+                    self.tried_cells[(r, c)].add(untried_symbol)
+                    
+                    if self.can_undo():
+                        sai = ("undo_button", 'Undo', "undo")
+                        action = Action(sai, arg_foci=["undo_button"], 
+                                      how_help="Backtrack further - both options exhausted")
+                        return action
+        
         # Use constraint propagation to find next placement
         # This follows the strategy:
         # 1. Start with fixed symbols (already in current_grid)
@@ -1121,10 +1264,18 @@ class TangoPuzzle(TutorEnvBase):
         
         if result:
             r, c, symbol = result
-            sai = (f"cell_{r}_{c}", 'PlaceSymbol', symbol)
-            action = Action(sai, arg_foci=[f"cell_{r}_{c}"], 
-                          how_help=f"Place {symbol} at ({r},{c}) - constraint propagation")
-            return action
+            
+            # IMPORTANT: Check if this symbol has been tried at this cell already
+            # If so, skip this suggestion as it conflicts with backtracking
+            if (r, c) in self.tried_cells and symbol in self.tried_cells[(r, c)]:
+                print(f"⚠️ Constraint propagation suggested {symbol} at ({r},{c}), "
+                      f"but this was already tried - skipping")
+                # Don't return this action, continue to next strategy
+            else:
+                sai = (f"cell_{r}_{c}", 'PlaceSymbol', symbol)
+                action = Action(sai, arg_foci=[f"cell_{r}_{c}"], 
+                              how_help=f"Place {symbol} at ({r},{c}) - constraint propagation")
+                return action
         
         # If constraint propagation didn't find a forced placement,
         # use constraint ranking to find the best cell to work on
@@ -1165,6 +1316,9 @@ class TangoPuzzle(TutorEnvBase):
                 
                 if sun_valid and not moon_valid:
                     # Only sun is valid - forced placement
+                    # But check if this conflicts with backtracking
+                    if (r, c) in self.tried_cells and "sun" in self.tried_cells[(r, c)]:
+                        continue  # Skip this cell, sun was already tried here
                     rank = self.calculate_cell_constraint_rank(r, c, current_grid, constraints)
                     sai = (f"cell_{r}_{c}", 'PlaceSymbol', "sun")
                     action = Action(sai, arg_foci=[f"cell_{r}_{c}"], 
@@ -1172,6 +1326,9 @@ class TangoPuzzle(TutorEnvBase):
                     return action
                 elif moon_valid and not sun_valid:
                     # Only moon is valid - forced placement
+                    # But check if this conflicts with backtracking
+                    if (r, c) in self.tried_cells and "moon" in self.tried_cells[(r, c)]:
+                        continue  # Skip this cell, moon was already tried here
                     rank = self.calculate_cell_constraint_rank(r, c, current_grid, constraints)
                     sai = (f"cell_{r}_{c}", 'PlaceSymbol', "moon")
                     action = Action(sai, arg_foci=[f"cell_{r}_{c}"], 
@@ -1182,7 +1339,15 @@ class TangoPuzzle(TutorEnvBase):
         for r, c in cells_to_check:
             current_value = state_objs.get(f"cell_{r}_{c}", {}).get("value", "none")
             if current_value == "none":
+                # Skip cells where both symbols have been tried
+                if (r, c) in self.tried_cells and len(self.tried_cells[(r, c)]) == 2:
+                    continue  # Both options exhausted, skip this cell
+                
                 for symbol in ["sun", "moon"]:
+                    # Skip if this symbol has already been tried at this cell
+                    if (r, c) in self.tried_cells and symbol in self.tried_cells[(r, c)]:
+                        continue  # Skip this symbol for this cell
+                    
                     # Check validity against current state with constraints
                     if is_valid_placement(current_grid, r, c, symbol, self.grid_size, constraints):
                         rank = self.calculate_cell_constraint_rank(r, c, current_grid, constraints)
@@ -1292,6 +1457,13 @@ class TangoPuzzle(TutorEnvBase):
         if action.input not in ["sun", "moon"]:
             return -1
         
+        # ENFORCE BACKTRACKING: Reject symbols that have already been tried at this cell
+        if (r, c) in self.tried_cells and action.input in self.tried_cells[(r, c)]:
+            tried_str = ", ".join(sorted(self.tried_cells[(r, c)]))
+            print(f"✗ INCORRECT: Symbol '{action.input}' already tried at ({r},{c}) "
+                  f"(tried: {tried_str})")
+            return -1
+        
         # Build current grid state from self.state (includes all placed symbols)
         current_grid = []
         for row in range(self.grid_size):
@@ -1366,9 +1538,11 @@ class TangoPuzzle(TutorEnvBase):
         if not (0 <= r < self.grid_size and 0 <= c < self.grid_size):
             return self.state
         
-        # Save current state to history before making changes
+        # Save current state AND tried_cells to history before making changes
         if action.input in ["sun", "moon"]:
-            self.action_history.append(self.state.copy())
+            # Save both state and tried_cells as a tuple
+            # This allows proper backtracking - tried_cells is per-state, not global
+            self.action_history.append((self.state.copy(), self.tried_cells.copy()))
             # Limit history size to prevent memory issues
             if len(self.action_history) > self.max_history:
                 self.action_history.pop(0)
