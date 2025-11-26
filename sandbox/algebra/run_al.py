@@ -16,18 +16,27 @@ from algebra_funcs import (GetOperand, GetOperator, ReverseSign, ExprVar, EvalAr
 from random import choice
 
 class SimpleInterleaveController:
-    def __init__(self, problem_list):
+    def __init__(self, problem_list, max_cycles=1):
         self.problem_list = problem_list
         self.index = 0
+        self.max_cycles = max_cycles
+        self.count = 0  # count how many problems have been given out
 
     def __iter__(self):
         return self
 
     def __next__(self):
-        # Just cycle through the list indefinitely
+        # STOP CONDITION:
+        # stop after max_cycles * list_length
+        if self.count >= self.max_cycles * len(self.problem_list):
+            raise StopIteration   # <-- Trainer will stop early
+
         prob = self.problem_list[self.index]
         self.index = (self.index + 1) % len(self.problem_list)
+
+        self.count += 1
         return prob
+
 
 
 def run_training(agent, logger_name='Algebra', n=10,

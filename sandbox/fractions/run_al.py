@@ -23,6 +23,57 @@ from tutorgym.utils import DataShopLogger
 
 import time
 
+from random import choice       # <-- You wanted this included
+
+############################################################
+# SIMPLE INTERLEAVE CONTROLLER + EXPONENT PROBLEM SET
+############################################################
+
+class SimpleInterleaveController:
+    def __init__(self, problem_list, max_cycles=1):
+        self.problem_list = problem_list
+        self.index = 0
+        self.max_cycles = max_cycles
+        self.count = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.count >= self.max_cycles * len(self.problem_list):
+            raise StopIteration
+
+        prob = self.problem_list[self.index]
+        self.index = (self.index + 1) % len(self.problem_list)
+        self.count += 1
+        return prob
+
+
+# ------------------------ EXPONENT PROBLEM SET ------------------------
+
+POWER_PROBLEMS = [
+    {"domain": "exponents_power", "initial_problem": "(5^3)^4"},
+    {"domain": "exponents_power", "initial_problem": "(2^6)^2"},
+    {"domain": "exponents_power", "initial_problem": "(9^2)^5"},
+    {"domain": "exponents_power", "initial_problem": "(7^4)^3"},
+]
+
+PRODUCT_PROBLEMS = [
+    {"domain": "exponents_product", "initial_problem": "5^3 * 5^7"},
+    {"domain": "exponents_product", "initial_problem": "3^8 * 3^2"},
+    {"domain": "exponents_product", "initial_problem": "11^5 * 11^4"},
+    {"domain": "exponents_product", "initial_problem": "6^9 * 6^3"},
+]
+
+QUOTIENT_PROBLEMS = [
+    {"domain": "exponents_quotient", "initial_problem": "8^12 / 8^4"},
+    {"domain": "exponents_quotient", "initial_problem": "10^9 / 10^3"},
+    {"domain": "exponents_quotient", "initial_problem": "4^7 / 4^2"},
+    {"domain": "exponents_quotient", "initial_problem": "12^6 / 12^1"},
+]
+EXPONENT_PROBLEMS = POWER_PROBLEMS + PRODUCT_PROBLEMS + QUOTIENT_PROBLEMS
+
+
 # def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=3, demo_args=False):
 #     logger = DataShopLogger(logger_name, extra_kcs=['field'])
 
@@ -131,9 +182,20 @@ def resolve_type(typ, logger_name):
 def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_args=False):
     logger_name, problem_types = resolve_type(typ, logger_name)
     logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al')
+
+    # Use exponents domain
     env = ApprenticeTutor(domain=domain_name, scaffold=scaffold)
-                             # demo_args=False)
-    trainer = Trainer(agent, env, logger=logger, n_problems=n)
+
+    # Attach your custom controller and problem set
+    controller = SimpleInterleaveController(EXPONENT_PROBLEMS, max_cycles=1)
+
+    trainer = Trainer(
+        agent,
+        env,
+        logger=logger,
+        outer_loop_controller=controller
+    )
+
     trainer.start()
 
 if __name__ == "__main__":
