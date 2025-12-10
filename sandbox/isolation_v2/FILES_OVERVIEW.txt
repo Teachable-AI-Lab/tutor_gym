@@ -1,0 +1,17 @@
+isolation_v2
+
+DATASET: Train: 100 (final_tokens.json), Test: 100 (final_tokens(test).json)
+
+
+- final_tokens.json: Manifest of deterministic problems keyed by index and unknown symbol for predictable training/evaluation.
+- computed_final_tokens.json: Tutor-generated solutions captured from running the batch collector for auditing or downstream use.
+- final_tokens_unknowns_as_x.json: Version of the deterministic manifest with all variables normalized to `x` for experiments that ignore original symbols.
+- final_tokens_unknowns_as_x(test).json: Alternate unknown-normalized manifest used as the default secondary training set in the author runner.
+- whole_problem_tokens.json: Expanded manifest containing each deterministic problem followed by structure-preserving numeric variations.
+- generate_whole_problem_tokens.py: Script that builds whole_problem_tokens.json by mutating numeric literals while keeping operators/structure intact.
+- normalize_unknowns_to_x.py: Utility that rewrites final_tokens.json to final_tokens_unknowns_as_x.json by replacing variable tokens with `x`.
+- collect_final_tokens.py: Batch runner that feeds problems from final_tokens.json through IsolationTutorV2 and writes out computed_final_tokens.json.
+- demo_preview.py: Single-problem preview script that prints input tokens, widget layout, demo steps, and final tokens in a readable format.
+- demo_preview_batch.py: Batch preview tool that iterates the manifest and prints the same details for every listed problem.
+- run_al_author.py: Author-training harness that draws from the default/random problem bank to exercise the tutor policy.
+- run_al_author_final_tokens.py: Training script that first uses whole_problem_tokens.json (originals plus variations) then optionally continues on a configurable number of additional problems from final_tokens_unknowns_as_x(test).json while logging both phases.

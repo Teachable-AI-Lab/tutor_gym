@@ -1,0 +1,2035 @@
+[
+    {
+        "variables": [
+            "e",
+            "b",
+            "m",
+            "s",
+            "d"
+        ],
+        "quantities": {
+            "e": "16",
+            "b": "3",
+            "m": "4",
+            "d": "2"
+        },
+        "relationships": [
+            "s = e - b - m",
+            "x = s * d"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "b",
+            "w",
+            "t"
+        ],
+        "quantities": {
+            "b": "2"
+        },
+        "relationships": [
+            "w = 1/2 * b",
+            "t = b + w"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "b",
+            "r",
+            "i",
+            "v",
+            "p"
+        ],
+        "quantities": {
+            "b": "80000",
+            "r": "50000",
+            "i": "150/100"
+        },
+        "relationships": [
+            "v = b * (1 + i)",
+            "p = v - (b + r)"
+        ],
+        "unknowns": [
+            "p"
+        ]
+    },
+    {
+        "variables": [
+            "s",
+            "n",
+            "r",
+            "t"
+        ],
+        "quantities": {
+            "s": "3",
+            "n": "3",
+            "r": "60"
+        },
+        "relationships": [
+            "t = s * n * r"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "c",
+            "r",
+            "m",
+            "a",
+            "t",
+            "f"
+        ],
+        "quantities": {
+            "c": "20",
+            "r": "3",
+            "m": "15",
+            "a": "25"
+        },
+        "relationships": [
+            "t = r * c",
+            "f = t - m - a"
+        ],
+        "unknowns": [
+            "f"
+        ]
+    },
+    {
+        "variables": [
+            "g",
+            "p",
+            "r",
+            "f",
+            "s",
+            "d",
+            "t"
+        ],
+        "quantities": {
+            "g": "16",
+            "p": "5",
+            "r": "60/100"
+        },
+        "relationships": [
+            "f = g / 2",
+            "s = g / 2",
+            "d = r * p",
+            "t = f * p + s * d"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "s",
+            "c",
+            "t",
+            "x"
+        ],
+        "quantities": {
+            "s": "20"
+        },
+        "relationships": [
+            "c = 4 * s",
+            "t = 2 * c",
+            "x = t + c + s"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "f",
+            "r",
+            "p",
+            "u",
+            "a",
+            "t"
+        ],
+        "quantities": {
+            "f": "200",
+            "r": "2",
+            "p": "40/100",
+            "u": "20"
+        },
+        "relationships": [
+            "a = f * p / r",
+            "t = f / r + a + u"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "r"
+        ],
+        "quantities": {},
+        "relationships": [
+            "a = 60 * 3",
+            "b = 30 * 1/2",
+            "c = 80 * 3/2",
+            "d = b + c",
+            "r = a - d"
+        ],
+        "unknowns": [
+            "r"
+        ]
+    },
+    {
+        "variables": [
+            "r",
+            "s",
+            "m",
+            "h",
+            "e"
+        ],
+        "quantities": {
+            "r": "10",
+            "s": "40",
+            "m": "1.2",
+            "h": "45"
+        },
+        "relationships": [
+            "e = r * s + m * r * (h - s)"
+        ],
+        "unknowns": [
+            "e"
+        ]
+    },
+    {
+        "variables": [
+            "f",
+            "s",
+            "t",
+            "x"
+        ],
+        "quantities": {
+            "f": "60",
+            "r": "30/100"
+        },
+        "relationships": [
+            "s = 3 * f",
+            "t = (1 - r) * s",
+            "x = f + s + t"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "t"
+        ],
+        "quantities": {
+            "a": "3",
+            "b": "2",
+            "c": "6",
+            "d": "68",
+            "e": "80",
+            "f": "55"
+        },
+        "relationships": [
+            "t = a * d + b * e + c * f"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "c",
+            "g",
+            "p",
+            "w",
+            "y"
+        ],
+        "quantities": {
+            "c": "90",
+            "g": "7",
+            "p": "1.5",
+            "w": "3"
+        },
+        "relationships": [
+            "y * (g * p - w) = c"
+        ],
+        "unknowns": [
+            "y"
+        ]
+    },
+    {
+        "variables": [
+            "x",
+            "g",
+            "r",
+            "o",
+            "l"
+        ],
+        "quantities": {
+            "r": "2",
+            "l": "5"
+        },
+        "relationships": [
+            "g = 1/3 * x",
+            "o = 1/2 * (x - g - r)",
+            "l = x - g - r - o"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "t",
+            "r",
+            "s",
+            "c",
+            "m",
+            "j",
+            "h",
+            "p"
+        ],
+        "quantities": {
+            "t": "20",
+            "r": "20/100",
+            "s": "25/100"
+        },
+        "relationships": [
+            "c = r * t",
+            "m = t - c",
+            "j = s * m",
+            "h = t - c - j",
+            "p = h / t * 100"
+        ],
+        "unknowns": [
+            "p"
+        ]
+    },
+    {
+        "variables": [
+            "j",
+            "e",
+            "r",
+            "s",
+            "pj",
+            "pe",
+            "p"
+        ],
+        "quantities": {
+            "j": "5000",
+            "e": "8000",
+            "r": "2.5/100",
+            "s": "1.2/100"
+        },
+        "relationships": [
+            "pj = j * r",
+            "pe = e * s",
+            "p = pj",
+            "p = pe"
+        ],
+        "unknowns": [
+            "p"
+        ]
+    },
+    {
+        "variables": [
+            "w",
+            "n",
+            "t"
+        ],
+        "quantities": {
+            "w": "80",
+            "n": "150"
+        },
+        "relationships": [
+            "t = w + n"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "t",
+            "c",
+            "w",
+            "h",
+            "k",
+            "a"
+        ],
+        "quantities": {
+            "t": "20",
+            "c": "30",
+            "w": "50",
+            "h": "35",
+            "k": "15"
+        },
+        "relationships": [
+            "a = w * (h * t + k * c)"
+        ],
+        "unknowns": [
+            "a"
+        ]
+    },
+    {
+        "variables": [
+            "e",
+            "w",
+            "d",
+            "z"
+        ],
+        "quantities": {
+            "e": "3",
+            "w": "4",
+            "d": "12"
+        },
+        "relationships": [
+            "z = e * (w * 7) / d"
+        ],
+        "unknowns": [
+            "z"
+        ]
+    },
+    {
+        "variables": [
+            "t",
+            "x",
+            "y",
+            "u",
+            "v",
+            "r",
+            "s"
+        ],
+        "quantities": {
+            "t": "12",
+            "x": "4",
+            "y": "2",
+            "u": "1",
+            "v": "1",
+            "r": "4"
+        },
+        "relationships": [
+            "u + v + (t - x - y) / s = t / r"
+        ],
+        "unknowns": [
+            "s"
+        ]
+    },
+    {
+        "variables": [
+            "o",
+            "p",
+            "s",
+            "w1",
+            "w2",
+            "w"
+        ],
+        "quantities": {
+            "o": "10",
+            "p": "15",
+            "s": "1",
+            "r": "2/3",
+            "t": "3/5"
+        },
+        "relationships": [
+            "w1 = (o - s) * r",
+            "w2 = p * t",
+            "w = w1 + w2"
+        ],
+        "unknowns": [
+            "w"
+        ]
+    },
+    {
+        "variables": [
+            "s",
+            "d",
+            "r",
+            "a",
+            "x"
+        ],
+        "quantities": {
+            "s": "31",
+            "d": "6",
+            "a": "23"
+        },
+        "relationships": [
+            "r = s + d",
+            "x = r - a"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "b",
+            "c",
+            "x"
+        ],
+        "quantities": {
+            "a": "3",
+            "b": "1",
+            "c": "2"
+        },
+        "relationships": [
+            "x = a * b + 2 * c"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "r",
+            "t",
+            "x"
+        ],
+        "quantities": {
+            "r": "2"
+        },
+        "relationships": [
+            "t = 4",
+            "x = r * t"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "p",
+            "d",
+            "s"
+        ],
+        "quantities": {
+            "d": "25/100",
+            "s": "19.5"
+        },
+        "relationships": [
+            "s = (1 - d) * p"
+        ],
+        "unknowns": [
+            "p"
+        ]
+    },
+    {
+        "variables": [
+            "c",
+            "m",
+            "a",
+            "p",
+            "t",
+            "x"
+        ],
+        "quantities": {
+            "c": "12",
+            "m": "3",
+            "a": "1.5",
+            "p": "8.5",
+            "t": "50"
+        },
+        "relationships": [
+            "t = c + 5 * m + 4 * a + x * p"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "s",
+            "p",
+            "h",
+            "x"
+        ],
+        "quantities": {
+            "s": "16.5",
+            "p": "22.5",
+            "h": "42"
+        },
+        "relationships": [
+            "x = 3 * s + 3 * p + 3 * h"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "d",
+            "s",
+            "c",
+            "x"
+        ],
+        "quantities": {
+            "d": "60",
+            "s": "15",
+            "c": "4"
+        },
+        "relationships": [
+            "x = d / s * c"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "t",
+            "a",
+            "b",
+            "s",
+            "x"
+        ],
+        "quantities": {
+            "t": "60",
+            "a": "20",
+            "b": "15"
+        },
+        "relationships": [
+            "s = t - b",
+            "x = s - a"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "b",
+            "h",
+            "k"
+        ],
+        "quantities": {
+            "h": "33"
+        },
+        "relationships": [
+            "k = 2 * h",
+            "b = h + k + 5"
+        ],
+        "unknowns": [
+            "b"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "m",
+            "r",
+            "b",
+            "c",
+            "x"
+        ],
+        "quantities": {
+            "a": "80",
+            "m": "20",
+            "r": "25/100"
+        },
+        "relationships": [
+            "b = 1/2 * a + m",
+            "c = (1 + r) * a",
+            "x = (a + b + c) / 3"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "d",
+            "h",
+            "w",
+            "x"
+        ],
+        "quantities": {
+            "d": "10",
+            "h": "0.5",
+            "w": "7"
+        },
+        "relationships": [
+            "x = d * h * w"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "s",
+            "a",
+            "r"
+        ],
+        "quantities": {
+            "r": "40"
+        },
+        "relationships": [
+            "a = 1/2 * r + 5",
+            "s = a - 2"
+        ],
+        "unknowns": [
+            "s"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "r",
+            "b",
+            "t"
+        ],
+        "quantities": {
+            "a": "20",
+            "r": "4",
+            "b": "25/100"
+        },
+        "relationships": [
+            "t = r + r * (1 + b)"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "d",
+            "e",
+            "p",
+            "x"
+        ],
+        "quantities": {
+            "d": "30",
+            "e": "2",
+            "p": "5"
+        },
+        "relationships": [
+            "x = d * e / 4 * p"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "m",
+            "d",
+            "h",
+            "f",
+            "t",
+            "s"
+        ],
+        "quantities": {
+            "m": "60",
+            "d": "3",
+            "h": "3",
+            "f": "1/2"
+        },
+        "relationships": [
+            "t = h + 2 * (h * f)",
+            "s = m / t"
+        ],
+        "unknowns": [
+            "s"
+        ]
+    },
+    {
+        "variables": [
+            "k",
+            "t",
+            "r",
+            "w",
+            "tr",
+            "tw",
+            "x"
+        ],
+        "quantities": {
+            "k": "3",
+            "t": "6"
+        },
+        "relationships": [
+            "r = 4 * w",
+            "k = 1/2 * r",
+            "tr = 1/3 * t",
+            "tw = 2/3 * t",
+            "x = r * tr + w * tw"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "s",
+            "b",
+            "r"
+        ],
+        "quantities": {
+            "s": "1"
+        },
+        "relationships": [
+            "b = 2 * s",
+            "r = 4 * b"
+        ],
+        "unknowns": [
+            "r"
+        ]
+    },
+    {
+        "variables": [
+            "r",
+            "b",
+            "m",
+            "t",
+            "d"
+        ],
+        "quantities": {
+            "r": "1000",
+            "b": "400",
+            "m": "3"
+        },
+        "relationships": [
+            "t = m * b",
+            "d = t - r"
+        ],
+        "unknowns": [
+            "d"
+        ]
+    },
+    {
+        "variables": [
+            "p",
+            "c",
+            "r",
+            "t"
+        ],
+        "quantities": {
+            "p": "5",
+            "c": "8",
+            "r": "14"
+        },
+        "relationships": [
+            "t = p * c - r"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "c",
+            "s",
+            "g",
+            "r",
+            "x"
+        ],
+        "quantities": {
+            "c": "250",
+            "s": "5",
+            "g": "300",
+            "r": "2000"
+        },
+        "relationships": [
+            "x = (r - 1800) / c * (g / s)"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "w",
+            "c",
+            "p",
+            "n",
+            "x"
+        ],
+        "quantities": {
+            "w": "10",
+            "c": "10",
+            "p": "2",
+            "n": "20"
+        },
+        "relationships": [
+            "x = n * p - w * (n / c)"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "r",
+            "t",
+            "w",
+            "h",
+            "x"
+        ],
+        "quantities": {
+            "a": "5",
+            "r": "2/5",
+            "h": "4"
+        },
+        "relationships": [
+            "t = r * a",
+            "w = 2 * t",
+            "x = h * (a + t + w)"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "x",
+            "u",
+            "r"
+        ],
+        "quantities": {
+            "a": "80",
+            "u": "220",
+            "r": "23"
+        },
+        "relationships": [
+            "a + x - u = r"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "b",
+            "r",
+            "p",
+            "q",
+            "t"
+        ],
+        "quantities": {
+            "b": "200",
+            "p": "40",
+            "q": "50/100"
+        },
+        "relationships": [
+            "r = 2 * (b / p)",
+            "t = b + r * (p * (1 + q))"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "f",
+            "i",
+            "p",
+            "n"
+        ],
+        "quantities": {
+            "f": "4",
+            "i": "6"
+        },
+        "relationships": [
+            "p = f * 12",
+            "n = p / i"
+        ],
+        "unknowns": [
+            "n"
+        ]
+    },
+    {
+        "variables": [
+            "e",
+            "d",
+            "w",
+            "x"
+        ],
+        "quantities": {
+            "e": "252",
+            "d": "2",
+            "w": "7"
+        },
+        "relationships": [
+            "x = e / 12 * d * w"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "t",
+            "h",
+            "s",
+            "d",
+            "x"
+        ],
+        "quantities": {
+            "h": "3",
+            "s": "10"
+        },
+        "relationships": [
+            "d = h * s",
+            "x = d / 6"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "t",
+            "c",
+            "w",
+            "x"
+        ],
+        "quantities": {
+            "c": "30",
+            "w": "15"
+        },
+        "relationships": [
+            "t = w - c * 1/4",
+            "x = t / (1/2)"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "t",
+            "c",
+            "a",
+            "b",
+            "x",
+            "r",
+            "s"
+        ],
+        "quantities": {
+            "t": "60",
+            "c": "40",
+            "a": "6",
+            "b": "4"
+        },
+        "relationships": [
+            "r = a * t + b * c",
+            "s = 12 * c",
+            "x = r - s"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "p",
+            "t",
+            "x"
+        ],
+        "quantities": {
+            "a": "7",
+            "t": "12"
+        },
+        "relationships": [
+            "p = 3 * a",
+            "x = a + p + t"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "t",
+            "e",
+            "b",
+            "x"
+        ],
+        "quantities": {
+            "t": "30",
+            "e": "2",
+            "b": "2"
+        },
+        "relationships": [
+            "x = (t - e) / b"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "m",
+            "p",
+            "t",
+            "x"
+        ],
+        "quantities": {
+            "m": "7",
+            "p": "7",
+            "t": "42"
+        },
+        "relationships": [
+            "x = t / (m + p)"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "l",
+            "t",
+            "w",
+            "b"
+        ],
+        "quantities": {
+            "l": "5000",
+            "t": "3755",
+            "w": "15"
+        },
+        "relationships": [
+            "l = t + w * b"
+        ],
+        "unknowns": [
+            "b"
+        ]
+    },
+    {
+        "variables": [
+            "b",
+            "f",
+            "d",
+            "t",
+            "x"
+        ],
+        "quantities": {
+            "b": "40",
+            "f": "25/100",
+            "d": "3",
+            "t": "4"
+        },
+        "relationships": [
+            "x = b + b * f + d + t"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "c",
+            "n",
+            "i",
+            "t"
+        ],
+        "quantities": {
+            "c": "6",
+            "n": "20",
+            "i": "67"
+        },
+        "relationships": [
+            "t = c * n + i"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "t",
+            "b",
+            "u",
+            "s",
+            "g"
+        ],
+        "quantities": {
+            "t": "25",
+            "b": "1",
+            "u": "20/100",
+            "s": "2"
+        },
+        "relationships": [
+            "g = t - b - u * t - s"
+        ],
+        "unknowns": [
+            "g"
+        ]
+    },
+    {
+        "variables": [
+            "m",
+            "w",
+            "r",
+            "x"
+        ],
+        "quantities": {
+            "m": "500",
+            "w": "800",
+            "r": "10/100"
+        },
+        "relationships": [
+            "x = m + w + r * (m + w)"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "p",
+            "y",
+            "r",
+            "x"
+        ],
+        "quantities": {
+            "p": "50000",
+            "y": "30",
+            "r": "5/100"
+        },
+        "relationships": [
+            "x = (y - 20) * r * p"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "m",
+            "r",
+            "h",
+            "t"
+        ],
+        "quantities": {
+            "m": "140",
+            "r": "10/100",
+            "h": "6"
+        },
+        "relationships": [
+            "t = h * m + h * (m * (1 - r))"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "m",
+            "g",
+            "t",
+            "x"
+        ],
+        "quantities": {
+            "m": "100",
+            "g": "4",
+            "t": "12"
+        },
+        "relationships": [
+            "x = t * (m / g)"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "t",
+            "r",
+            "w",
+            "m",
+            "x"
+        ],
+        "quantities": {
+            "t": "2",
+            "r": "1/2",
+            "w": "3",
+            "m": "4"
+        },
+        "relationships": [
+            "x = m * w * (t + r * t)"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "s",
+            "t",
+            "p",
+            "c",
+            "x"
+        ],
+        "quantities": {
+            "s": "4",
+            "t": "2",
+            "p": "5",
+            "c": "2"
+        },
+        "relationships": [
+            "x = s * t * p + s * c"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "d",
+            "r",
+            "e",
+            "t"
+        ],
+        "quantities": {
+            "d": "175",
+            "r": "35"
+        },
+        "relationships": [
+            "r = d - r",
+            "e = 2 * r",
+            "t = d + r + e"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "g",
+            "b",
+            "s",
+            "t"
+        ],
+        "quantities": {
+            "g": "60",
+            "s": "5"
+        },
+        "relationships": [
+            "b = 2 * g",
+            "t = (g + b) / s"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "s",
+            "a",
+            "w",
+            "t"
+        ],
+        "quantities": {
+            "a": "5",
+            "w": "8",
+            "t": "100"
+        },
+        "relationships": [
+            "t = s + a * w"
+        ],
+        "unknowns": [
+            "s"
+        ]
+    },
+    {
+        "variables": [
+            "d",
+            "w",
+            "s",
+            "c",
+            "p",
+            "x"
+        ],
+        "quantities": {
+            "d": "5",
+            "w": "5",
+            "s": "8",
+            "c": "15",
+            "p": "15"
+        },
+        "relationships": [
+            "x = (d * w + s) * c * p"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "b",
+            "t"
+        ],
+        "quantities": {
+            "a": "20"
+        },
+        "relationships": [
+            "b = 2 * a",
+            "t = a + b"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "b",
+            "c",
+            "x"
+        ],
+        "quantities": {
+            "b": "43",
+            "c": "23"
+        },
+        "relationships": [
+            "x = b * 3 + c * 4"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "n",
+            "c",
+            "r",
+            "t",
+            "m"
+        ],
+        "quantities": {
+            "n": "5",
+            "c": "150",
+            "r": "2/100"
+        },
+        "relationships": [
+            "t = n * (c + r * c)",
+            "m = t / 3"
+        ],
+        "unknowns": [
+            "m"
+        ]
+    },
+    {
+        "variables": [
+            "m",
+            "p",
+            "b",
+            "x"
+        ],
+        "quantities": {
+            "m": "12",
+            "p": "9",
+            "b": "17"
+        },
+        "relationships": [
+            "x = m * 3 + p * 2 + b * 2"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "v"
+        ],
+        "quantities": {
+            "a": "16"
+        },
+        "relationships": [
+            "b = 2 * a",
+            "c = 2 * b",
+            "d = 2 * c",
+            "v = (a + b + c + d) / 4"
+        ],
+        "unknowns": [
+            "v"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "b",
+            "c",
+            "x"
+        ],
+        "quantities": {
+            "a": "180",
+            "b": "365",
+            "c": "110"
+        },
+        "relationships": [
+            "x = (a * 1 + (b - a) * 2) / c"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "s",
+            "r",
+            "d",
+            "x"
+        ],
+        "quantities": {
+            "s": "400"
+        },
+        "relationships": [
+            "d = s / 4",
+            "r = 1/2 * s",
+            "x = r - d"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "p",
+            "q",
+            "r",
+            "s",
+            "n",
+            "c",
+            "d",
+            "h"
+        ],
+        "quantities": {
+            "p": "2.5",
+            "q": "3",
+            "r": "1",
+            "s": "2",
+            "n": "18"
+        },
+        "relationships": [
+            "c = n / q * p",
+            "d = n / s * r",
+            "h = c - d"
+        ],
+        "unknowns": [
+            "h"
+        ]
+    },
+    {
+        "variables": [
+            "c",
+            "r",
+            "x"
+        ],
+        "quantities": {
+            "c": "100",
+            "r": "30/100"
+        },
+        "relationships": [
+            "x = c * (1 - r)"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "t",
+            "f",
+            "b",
+            "r"
+        ],
+        "quantities": {
+            "t": "24",
+            "f": "1/6",
+            "b": "6"
+        },
+        "relationships": [
+            "r = t - 2 * f * t - b"
+        ],
+        "unknowns": [
+            "r"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "x"
+        ],
+        "quantities": {
+            "a": "10",
+            "b": "21",
+            "c": "23",
+            "d": "9",
+            "e": "28"
+        },
+        "relationships": [
+            "x = a + b + c - d - e"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "g",
+            "a",
+            "t"
+        ],
+        "quantities": {
+            "g": "125"
+        },
+        "relationships": [
+            "a = 4 * g - 2",
+            "t = g + a"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "b",
+            "r",
+            "t",
+            "x"
+        ],
+        "quantities": {
+            "b": "3",
+            "r": "25",
+            "t": "8"
+        },
+        "relationships": [
+            "x = b * r * t"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "b",
+            "y",
+            "x"
+        ],
+        "quantities": {
+            "a": "23",
+            "b": "34",
+            "y": "4"
+        },
+        "relationships": [
+            "x = (b - a) * y"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "b",
+            "c",
+            "t"
+        ],
+        "quantities": {
+            "a": "4"
+        },
+        "relationships": [
+            "b = 3 * a",
+            "c = 1/2 * b",
+            "t = a + b + c"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "m",
+            "r",
+            "y",
+            "i",
+            "s",
+            "a"
+        ],
+        "quantities": {
+            "m": "600",
+            "r": "10/100",
+            "y": "3"
+        },
+        "relationships": [
+            "i = r * m",
+            "s = m + y * i",
+            "a = 12 * s"
+        ],
+        "unknowns": [
+            "a"
+        ]
+    },
+    {
+        "variables": [
+            "h",
+            "m",
+            "t"
+        ],
+        "quantities": {
+            "t": "88000"
+        },
+        "relationships": [
+            "m = 10 * h",
+            "m + h = t"
+        ],
+        "unknowns": [
+            "h"
+        ]
+    },
+    {
+        "variables": [
+            "g",
+            "i",
+            "c",
+            "x"
+        ],
+        "quantities": {
+            "g": "3/4",
+            "i": "16",
+            "c": "2"
+        },
+        "relationships": [
+            "x = g * i * c"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "c",
+            "h",
+            "t"
+        ],
+        "quantities": {
+            "a": "20",
+            "c": "5",
+            "h": "10"
+        },
+        "relationships": [
+            "t = a * h + c * (1/2 * h)"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "c",
+            "m",
+            "j",
+            "t"
+        ],
+        "quantities": {
+            "c": "4"
+        },
+        "relationships": [
+            "m = c + 2",
+            "j = 3 * m",
+            "t = c + m + j"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "l",
+            "g",
+            "r",
+            "n"
+        ],
+        "quantities": {
+            "l": "38",
+            "r": "10/100"
+        },
+        "relationships": [
+            "g = l + 2",
+            "n = g * (1 - r)"
+        ],
+        "unknowns": [
+            "n"
+        ]
+    },
+    {
+        "variables": [
+            "d",
+            "c",
+            "r",
+            "t"
+        ],
+        "quantities": {
+            "d": "60"
+        },
+        "relationships": [
+            "c = 2 * d",
+            "r = d + c - 12",
+            "t = d + c + r"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    },
+    {
+        "variables": [
+            "t",
+            "b",
+            "g",
+            "s",
+            "n"
+        ],
+        "quantities": {
+            "t": "200",
+            "b": "2/5",
+            "s": "2/3"
+        },
+        "relationships": [
+            "g = t - b * t",
+            "n = g - s * g"
+        ],
+        "unknowns": [
+            "n"
+        ]
+    },
+    {
+        "variables": [
+            "h",
+            "j",
+            "x"
+        ],
+        "quantities": {
+            "h": "9",
+            "r": "2/3"
+        },
+        "relationships": [
+            "j = r * h",
+            "x = h - j"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "v",
+            "c",
+            "s",
+            "t",
+            "x"
+        ],
+        "quantities": {
+            "v": "16",
+            "s": "32",
+            "t": "3"
+        },
+        "relationships": [
+            "x = v * c / 2",
+            "x = s",
+            "c = s / (v / 2)",
+            "x = c * t"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "n",
+            "l",
+            "p",
+            "g",
+            "r"
+        ],
+        "quantities": {
+            "n": "18",
+            "l": "40",
+            "p": "2",
+            "g": "1"
+        },
+        "relationships": [
+            "r = n + l * p - l * g"
+        ],
+        "unknowns": [
+            "r"
+        ]
+    },
+    {
+        "variables": [
+            "o",
+            "e",
+            "m",
+            "x"
+        ],
+        "quantities": {
+            "o": "30",
+            "e": "5",
+            "m": "20"
+        },
+        "relationships": [
+            "x + m = o - e"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "f",
+            "s",
+            "t",
+            "u",
+            "x"
+        ],
+        "quantities": {
+            "f": "20",
+            "u": "60",
+            "r": "1/4"
+        },
+        "relationships": [
+            "s = f * (1 + r)",
+            "t = u + 10",
+            "x = f + s + t + u"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "s",
+            "o",
+            "h",
+            "g",
+            "m",
+            "t",
+            "a"
+        ],
+        "quantities": {
+            "s": "4",
+            "o": "20",
+            "h": "7",
+            "g": "8",
+            "m": "15",
+            "d": "4"
+        },
+        "relationships": [
+            "t = s + o + h + g - m",
+            "a = t / d"
+        ],
+        "unknowns": [
+            "a"
+        ]
+    },
+    {
+        "variables": [
+            "b",
+            "l",
+            "d",
+            "n",
+            "w",
+            "x"
+        ],
+        "quantities": {
+            "b": "1",
+            "l": "1",
+            "d": "1",
+            "n": "1",
+            "w": "7"
+        },
+        "relationships": [
+            "x = (b + l + d + n) * 5 + (b + l + n) * 2"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "t",
+            "m",
+            "c",
+            "x"
+        ],
+        "quantities": {
+            "t": "10",
+            "m": "3",
+            "c": "42"
+        },
+        "relationships": [
+            "x = c / m * t"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "t",
+            "q",
+            "r",
+            "x"
+        ],
+        "quantities": {
+            "t": "1000",
+            "q": "1/4",
+            "r": "1/3"
+        },
+        "relationships": [
+            "x = t - q * t - r * (t - q * t)"
+        ],
+        "unknowns": [
+            "x"
+        ]
+    },
+    {
+        "variables": [
+            "a",
+            "c",
+            "t"
+        ],
+        "quantities": {
+            "a": "5"
+        },
+        "relationships": [
+            "c = 3 * a",
+            "t = a + c"
+        ],
+        "unknowns": [
+            "t"
+        ]
+    }
+]

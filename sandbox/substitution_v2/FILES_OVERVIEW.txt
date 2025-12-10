@@ -1,0 +1,14 @@
+# sandbox/substitution_v2 file guide
+
+DATASET: Train: 100 (problem_list.json), Test: 100 (test_problems.json)
+
+- export_final_tokens.py — loads a batch of problems and writes each problem's final substitution tokens to a JSON file.
+- final_tokens.json — default output from `export_final_tokens.py`, mapping each bundled problem to its computed final tokens.
+  its structural variations.
+- run_al_author.py — trains the SubstitutionTutorV2 author agent on random problems plus curated ones.
+- run_al_author_eval.py — trains on random problems, then prints the agent's step-by-step outputs on curated examples without extra training.
+- run_al_author_from_list.py — trains the author agent exclusively on the curated `problem_list.json` problems.
+- run_al_author_single_demo_variations.py — trains on a single built-in example plus optional random siblings generated with the same structural remapping as the problem-list variation runner. This runner now focuses solely on training (no replay phase) while retaining the core author configuration.
+- run_al_author_problem_list_variations.py — trains on each curated problem in `problem_list.json`, generating configurable same-structure variations per problem (original followed by its variations) before replaying the full training set with training-style traces and success counts.
+- show_widgets_and_demo.py — displays widget layout, demo actions, and final answer tokens for a single problem provided inline, via file, or stdin.
+- show_widgets_and_demo_batch.py — batch variant that loads a list of problems (defaulting to `problem_list.json`) and prints each one's widgets, demo actions, and final tokens.

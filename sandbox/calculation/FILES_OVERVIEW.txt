@@ -1,0 +1,14 @@
+Calculation tutor files overview
+================================
+
+- demo_preview.py is a standalone preview that loads a sample problem, prints widget layout metadata,
+  lists tutor demonstration steps, and shows the final answer tokens.
+- demo_preview_batch.py iterates over computed_final_tokens.json in the sandbox folder and prints the
+  preview output for each manifest entry.
+- run_al_author.py trains on a single base problem plus a configurable number of structure-preserving
+  numeric variations generated at runtime (base first, then variations), exposing CLI flags for base
+  selection, variation count, seed, and agent type.
+- run_al_author_computed_final_tokens.py trains CalculationTutor directly on the exact final-token equations from computed_final_tokens.json, with no augmentation, to learn a straightforward compute policy.
+- computed_final_tokens.json stores the structured problem list (problem_index, unknown, final_tokens)
+  consumed by the batch preview and computed-final-token training/evaluation scripts.
+- run_al_author_variations.py trains CalculationTutor on each base equation plus several structure-preserving numeric variations, augmenting the data to improve generalization.
