@@ -29,12 +29,43 @@ from random import choice       # <-- You wanted this included
 # SIMPLE INTERLEAVE CONTROLLER + EXPONENT PROBLEM SET
 ############################################################
 
-class SimpleInterleaveController:
-    def __init__(self, problem_list, max_cycles=1):
+#class SimpleInterleaveController:
+    #def __init__(self, problem_list, max_cycles=1):
+        #self.problem_list = problem_list
+        #self.index = 0
+        #self.max_cycles = max_cycles
+        #self.count = 0
+
+    #def __iter__(self):
+        #return self
+
+    #def __next__(self):
+        #if self.count >= self.max_cycles * len(self.problem_list):
+            #raise StopIteration
+
+        #prob = self.problem_list[self.index]
+        #self.index = (self.index + 1) % len(self.problem_list)
+        #self.count += 1
+        #return prob
+# ----------------------------------------------------------------------
+class BKTTrackingInterleaveController:
+
+
+    def __init__(self, problem_list, bkt_probs, max_cycles=1, mastery_threshold=0.95):
         self.problem_list = problem_list
         self.index = 0
         self.max_cycles = max_cycles
         self.count = 0
+
+        self.bkt_probs = bkt_probs
+        self.mastery_threshold = mastery_threshold
+
+        # Student model: KC -> mastery probability (initialized from "known")
+        self.mastery_prob = {kc: bkt_probs[kc]["known"] for kc in bkt_probs}
+
+        # track what problem we are on so update() knows which KCs to update
+        self.current_prob = None
+        self.steps_updated = set()  # prevents double-updating the same step
 
     def __iter__(self):
         return self
@@ -46,30 +77,80 @@ class SimpleInterleaveController:
         prob = self.problem_list[self.index]
         self.index = (self.index + 1) % len(self.problem_list)
         self.count += 1
+
+        self.current_prob = prob
+        self.steps_updated = set()
         return prob
 
+    def update(self, step, reward, action_type="ATTEMPT"):
+        # only update on attempts (matches the transcript + old BKT controller behavior)
+        if action_type != "ATTEMPT":
+            return
+
+        # avoid multiple updates for the same step in the same problem
+        if step in self.steps_updated:
+            return
+        self.steps_updated.add(step)
+
+        if self.current_prob is None:
+            return
+
+        # binary correctness
+        correct = 1 if reward > 0 else 0
+
+        # Phase 1: update the KCs attached to the CURRENT PROBLEM (kc_list)
+        kcs = self.current_prob.get("kc_list", [])
+        for kc in kcs:
+            if kc not in self.bkt_probs:
+                continue
+
+            guess = self.bkt_probs[kc]["guess"]
+            slip  = self.bkt_probs[kc]["slip"]
+            learn = self.bkt_probs[kc]["learn"]
+
+            p_known = self.mastery_prob.get(kc, self.bkt_probs[kc]["known"])
+
+            # observation likelihoods (copied logic from the old BKT controller)
+            if correct == 1:
+                p_obs_not_known = guess
+                p_obs_known = 1 - slip
+            else:
+                p_obs_not_known = 1 - guess
+                p_obs_known = slip
+
+            # Bayes update with learning transition
+            p_not_learned = (1 - learn) * p_obs_not_known * (1 - p_known)
+            p_learned = learn * p_obs_not_known * (1 - p_known) + p_obs_known * p_known
+
+            self.mastery_prob[kc] = p_learned / (p_learned + p_not_learned)
 
 # ------------------------ EXPONENT PROBLEM SET ------------------------
 
+bkt_probs = {
+    "power_rule":    {"known": 0.2, "learn": 0.15, "guess": 0.2, "slip": 0.1},
+    "product_rule":  {"known": 0.2, "learn": 0.15, "guess": 0.2, "slip": 0.1},
+    "quotient_rule": {"known": 0.2, "learn": 0.15, "guess": 0.2, "slip": 0.1},
+}
+
 POWER_PROBLEMS = [
-    {"domain": "exponents_power", "initial_problem": "(5^3)^4"},
-    {"domain": "exponents_power", "initial_problem": "(2^6)^2"},
-    {"domain": "exponents_power", "initial_problem": "(9^2)^5"},
-    {"domain": "exponents_power", "initial_problem": "(7^4)^3"},
+    {"domain": "exponents_power", "initial_problem": "(5^3)^4", "kc_list": ["power_rule"]},
+    {"domain": "exponents_power", "initial_problem": "(2^6)^2", "kc_list": ["power_rule"]},
+    {"domain": "exponents_power", "initial_problem": "(9^2)^5", "kc_list": ["power_rule"]},
+    {"domain": "exponents_power", "initial_problem": "(7^4)^3", "kc_list": ["power_rule"]},
 ]
 
 PRODUCT_PROBLEMS = [
-    {"domain": "exponents_product", "initial_problem": "5^3 * 5^7"},
-    {"domain": "exponents_product", "initial_problem": "3^8 * 3^2"},
-    {"domain": "exponents_product", "initial_problem": "11^5 * 11^4"},
-    {"domain": "exponents_product", "initial_problem": "6^9 * 6^3"},
+    {"domain": "exponents_product", "initial_problem": "5^3 * 5^7", "kc_list": ["product_rule"]},
+    {"domain": "exponents_product", "initial_problem": "3^8 * 3^2", "kc_list": ["product_rule"]},
+    {"domain": "exponents_product", "initial_problem": "11^5 * 11^4", "kc_list": ["product_rule"]},
+    {"domain": "exponents_product", "initial_problem": "6^9 * 6^3", "kc_list": ["product_rule"]},
 ]
 
 QUOTIENT_PROBLEMS = [
-    {"domain": "exponents_quotient", "initial_problem": "8^12 / 8^4"},
-    {"domain": "exponents_quotient", "initial_problem": "10^9 / 10^3"},
-    {"domain": "exponents_quotient", "initial_problem": "4^7 / 4^2"},
-    {"domain": "exponents_quotient", "initial_problem": "12^6 / 12^1"},
+    {"domain": "exponents_quotient", "initial_problem": "8^12 / 8^4", "kc_list": ["quotient_rule"]},
+    {"domain": "exponents_quotient", "initial_problem": "10^9 / 10^3", "kc_list": ["quotient_rule"]},
+    {"domain": "exponents_quotient", "initial_problem": "4^7 / 4^2", "kc_list": ["quotient_rule"]},
+    {"domain": "exponents_quotient", "initial_problem": "12^6 / 12^1", "kc_list": ["quotient_rule"]},
 ]
 EXPONENT_PROBLEMS = POWER_PROBLEMS + PRODUCT_PROBLEMS + QUOTIENT_PROBLEMS
 
@@ -187,7 +268,12 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_arg
     env = ApprenticeTutor(domain=domain_name, scaffold=scaffold)
 
     # Attach your custom controller and problem set
-    controller = SimpleInterleaveController(EXPONENT_PROBLEMS, max_cycles=1)
+    controller = BKTTrackingInterleaveController(
+        EXPONENT_PROBLEMS,
+        bkt_probs=bkt_probs,
+        max_cycles=1
+)
+
 
     trainer = Trainer(
         agent,

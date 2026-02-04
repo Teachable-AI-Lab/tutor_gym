@@ -206,6 +206,13 @@ class Trainer:
             outcome_kind = "HINT"
             self.total_hints += 1
 
+# Forward student attempt outcome to the outer-loop controller
+
+        if hasattr(self, "outer_loop_controller") and self.outer_loop_controller is not None:
+            if hasattr(self.outer_loop_controller, "update"):
+                if outcome_kind in ["CORRECT", "INCORRECT"]:
+                    sel, at, inp = action.as_tuple()
+                    self.outer_loop_controller.update(sel, reward, "ATTEMPT")
         # print("A ACTION:", action)
 
         s,a,inp = action.as_tuple()
