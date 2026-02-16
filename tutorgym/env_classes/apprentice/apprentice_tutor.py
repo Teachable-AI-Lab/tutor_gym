@@ -236,6 +236,16 @@ class ApprenticeTutor(TutorEnvBase):
             self.scaffold_options.append(scaffold)
         #print("scaffold_options", self.scaffold_options)
         return self.scaffold_options
+    
+    def get_available_scaffolds(self):
+        """Returns list of available scaffolds for this domain. (Removing none initially to allow for sorting)"""
+        scaffolds = [s for s in self._resolve_scaffold_options() if s is not None]
+        
+        result = ["all"] + sorted(scaffolds)
+        if None in self._resolve_scaffold_options():
+            result.append(None)
+        
+        return result
 
     def _blank_state(self):
         current_dir = Path(__file__).parent.parent
