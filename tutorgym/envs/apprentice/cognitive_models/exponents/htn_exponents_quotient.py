@@ -80,3 +80,11 @@ Domain = {
                     ]
     ),
 }
+
+def htn_exponents_quotient_kc_mapping():
+    kcs = {
+        "subtract_values": "subtract_values",
+        "simplify_exp": "simplify_exp",
+        "done": "done"
+    }
+    return kcs
