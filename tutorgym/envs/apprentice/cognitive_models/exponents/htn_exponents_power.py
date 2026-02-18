@@ -111,3 +111,12 @@ Domain = {
                     ]
     ),
 }
+
+def htn_exponents_power_kc_mapping():
+    kcs = {
+        "multiply_values": "multiply_values",
+        "simplify_exp": "simplify_exp",
+        "done": "done"
+    }
+    return kcs
+
