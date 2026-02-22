@@ -98,12 +98,14 @@ class BKTTrackingInterleaveController:
 
         # binary correctness
         correct = 1 if reward > 0 else 0
-
+        print("RAW STEP FROM ENV:", repr(step))
         
         step_to_kcs = self.current_prob.get("step_to_kcs", None)
 
         if step_to_kcs is not None:
-            kcs = step_to_kcs.get(step, [])   # safest: unknown steps update nothing
+            kcs = step_to_kcs.get(step, [])
+            if not kcs:
+                kcs = self.current_prob.get("kc_list", [])
         else:
             kcs = self.current_prob.get("kc_list", [])
 
@@ -140,46 +142,106 @@ bkt_probs = {
     "quotient_rule": {"known": 0.2, "learn": 0.15, "guess": 0.2, "slip": 0.1},
 }
 
-POWER_PROBLEMS = [
+PPOWER_PROBLEMS = [
     {"domain": "exponents_power", "initial_problem": "(5^3)^4",
-     "kc_list": ["power_rule"]},
+     "kc_list": ["power_rule"],
+     "step_to_kcs": {
+         "apply_power_rule": ["power_rule"],
+         "simplify": ["power_rule"],
+         "done": ["power_rule"],
+     }},
 
     {"domain": "exponents_power", "initial_problem": "(2^6)^2",
-     "kc_list": ["power_rule"]},
+     "kc_list": ["power_rule"],
+     "step_to_kcs": {
+         "apply_power_rule": ["power_rule"],
+         "simplify": ["power_rule"],
+         "done": ["power_rule"],
+     }},
 
     {"domain": "exponents_power", "initial_problem": "(9^2)^5",
-     "kc_list": ["power_rule"]},
+     "kc_list": ["power_rule"],
+     "step_to_kcs": {
+         "apply_power_rule": ["power_rule"],
+         "simplify": ["power_rule"],
+         "done": ["power_rule"],
+     }},
 
     {"domain": "exponents_power", "initial_problem": "(7^4)^3",
-     "kc_list": ["power_rule"]},
+     "kc_list": ["power_rule"],
+     "step_to_kcs": {
+         "apply_power_rule": ["power_rule"],
+         "simplify": ["power_rule"],
+         "done": ["power_rule"],
+     }},
 ]
 
 PRODUCT_PROBLEMS = [
     {"domain": "exponents_product", "initial_problem": "5^3 * 5^7",
-     "kc_list": ["product_rule"]},
+     "kc_list": ["product_rule"],
+     "step_to_kcs": {
+         "apply_product_rule": ["product_rule"],
+         "simplify": ["product_rule"],
+         "done": ["product_rule"],
+     }},
 
     {"domain": "exponents_product", "initial_problem": "3^8 * 3^2",
-     "kc_list": ["product_rule"]},
+     "kc_list": ["product_rule"],
+     "step_to_kcs": {
+         "apply_product_rule": ["product_rule"],
+         "simplify": ["product_rule"],
+         "done": ["product_rule"],
+     }},
 
     {"domain": "exponents_product", "initial_problem": "11^5 * 11^4",
-     "kc_list": ["product_rule"]},
+     "kc_list": ["product_rule"],
+     "step_to_kcs": {
+         "apply_product_rule": ["product_rule"],
+         "simplify": ["product_rule"],
+         "done": ["product_rule"],
+     }},
 
     {"domain": "exponents_product", "initial_problem": "6^9 * 6^3",
-     "kc_list": ["product_rule"]},
+     "kc_list": ["product_rule"],
+     "step_to_kcs": {
+         "apply_product_rule": ["product_rule"],
+         "simplify": ["product_rule"],
+         "done": ["product_rule"],
+     }},
 ]
 
 QUOTIENT_PROBLEMS = [
     {"domain": "exponents_quotient", "initial_problem": "8^12 / 8^4",
-     "kc_list": ["quotient_rule"]},
+     "kc_list": ["quotient_rule"],
+     "step_to_kcs": {
+         "apply_quotient_rule": ["quotient_rule"],
+         "simplify": ["quotient_rule"],
+         "done": ["quotient_rule"],
+     }},
 
     {"domain": "exponents_quotient", "initial_problem": "10^9 / 10^3",
-     "kc_list": ["quotient_rule"]},
+     "kc_list": ["quotient_rule"],
+     "step_to_kcs": {
+         "apply_quotient_rule": ["quotient_rule"],
+         "simplify": ["quotient_rule"],
+         "done": ["quotient_rule"],
+     }},
 
     {"domain": "exponents_quotient", "initial_problem": "4^7 / 4^2",
-     "kc_list": ["quotient_rule"]},
+     "kc_list": ["quotient_rule"],
+     "step_to_kcs": {
+         "apply_quotient_rule": ["quotient_rule"],
+         "simplify": ["quotient_rule"],
+         "done": ["quotient_rule"],
+     }},
 
     {"domain": "exponents_quotient", "initial_problem": "12^6 / 12^1",
-     "kc_list": ["quotient_rule"]},
+     "kc_list": ["quotient_rule"],
+     "step_to_kcs": {
+         "apply_quotient_rule": ["quotient_rule"],
+         "simplify": ["quotient_rule"],
+         "done": ["quotient_rule"],
+     }},
 ]
 EXPONENT_PROBLEMS = POWER_PROBLEMS + PRODUCT_PROBLEMS + QUOTIENT_PROBLEMS
 
