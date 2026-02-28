@@ -142,7 +142,7 @@ bkt_probs = {
     "quotient_rule": {"known": 0.2, "learn": 0.15, "guess": 0.2, "slip": 0.1},
 }
 
-PPOWER_PROBLEMS = [
+POWER_PROBLEMS = [
     {"domain": "exponents_power", "initial_problem": "(5^3)^4",
      "kc_list": ["power_rule"],
      "step_to_kcs": {
