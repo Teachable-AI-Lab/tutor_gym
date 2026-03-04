@@ -87,6 +87,8 @@ if __name__ == "__main__":
                 "extra_features": ["Match"],
                 "when_args": {"encode_relative": True, "one_hot": True},
                 "should_find_neighbors": True,
+                "function_set": ["PowerRule","MultiplyExponents","ProductRule","SimplifyProduct"],
+                "feature_set": ['Equals'],
             }
             agent = CREAgent(**agent_args)
             
