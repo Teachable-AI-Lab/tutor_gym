@@ -1,3 +1,4 @@
+
 from tutorgym.env_classes.apprentice.apprentice_tutor import ApprenticeTutor
 from apprentice.agents.ModularAgent import ModularAgent
 from apprentice.agents.RHS_LHS_Agent import RHS_LHS_Agent
@@ -23,30 +24,30 @@ from tutorgym.utils import DataShopLogger
 
 import time
 
-from random import choice       # <-- You wanted this included
+from random import choice       
 
 ############################################################
 # SIMPLE INTERLEAVE CONTROLLER + EXPONENT PROBLEM SET
 ############################################################
 
-#class SimpleInterleaveController:
-    #def __init__(self, problem_list, max_cycles=1):
-        #self.problem_list = problem_list
-        #self.index = 0
-        #self.max_cycles = max_cycles
-        #self.count = 0
+class SimpleInterleaveController:
+    def __init__(self, problem_list, max_cycles=1):
+        self.problem_list = problem_list
+        self.index = 0
+        self.max_cycles = max_cycles
+        self.count = 0
 
-    #def __iter__(self):
-        #return self
+    def __iter__(self):
+        return self
 
-    #def __next__(self):
-        #if self.count >= self.max_cycles * len(self.problem_list):
-            #raise StopIteration
+    def __next__(self):
+        if self.count >= self.max_cycles * len(self.problem_list):
+            raise StopIteration
 
-        #prob = self.problem_list[self.index]
-        #self.index = (self.index + 1) % len(self.problem_list)
-        #self.count += 1
-        #return prob
+        prob = self.problem_list[self.index]
+        self.index = (self.index + 1) % len(self.problem_list)
+        self.count += 1
+        return prob
 # ----------------------------------------------------------------------
 class BKTTrackingInterleaveController:
 
@@ -71,16 +72,38 @@ class BKTTrackingInterleaveController:
         return self
 
     def __next__(self):
-        if self.count >= self.max_cycles * len(self.problem_list):
+    # stop if all KCs are mastered
+        if all(p >= 0.95 for p in self.mastery_prob.values()):
+                raise StopIteration
+
+    # stop if too many total problems have been given
+        if self.count >= self.max_cycles:
             raise StopIteration
 
-        prob = self.problem_list[self.index]
-        prob = prob.copy() if isinstance(prob, dict) else prob
-        self.index = (self.index + 1) % len(self.problem_list)
-        self.count += 1
+    # find the KC with lowest mastery
+        target_kc = min(self.mastery_prob, key=self.mastery_prob.get)
 
+    # get all problems for that KC
+        candidate_probs = [
+            prob for prob in self.problem_list
+            if target_kc in prob.get("kc_list", [])
+    ]
+
+        if not candidate_probs:
+            raise StopIteration
+
+    # choose one of those problems
+        prob = candidate_probs[self.index % len(candidate_probs)]
+        prob = prob.copy() if isinstance(prob, dict) else prob
+
+        self.index += 1
+        self.count += 1
         self.current_prob = prob
         self.steps_updated = set()
+
+        print("NEXT KC:", target_kc, "| mastery:", self.mastery_prob[target_kc])
+        print("NEXT PROBLEM:", prob["initial_problem"])
+
         return prob
 
     def update(self, step, reward, action_type="ATTEMPT"):
@@ -133,7 +156,7 @@ class BKTTrackingInterleaveController:
             p_learned = learn * p_obs_not_known * (1 - p_known) + p_obs_known * p_known
 
             self.mastery_prob[kc] = p_learned / (p_learned + p_not_learned)
-
+            print("UPDATED KC:", kc, "| mastery =", self.mastery_prob[kc])
 # ------------------------ EXPONENT PROBLEM SET ------------------------
 
 bkt_probs = {
@@ -362,7 +385,8 @@ def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_arg
     controller = BKTTrackingInterleaveController(
         EXPONENT_PROBLEMS,
         bkt_probs=bkt_probs,
-        max_cycles=1
+        max_cycles=20,
+        mastery_threshold=0.95
 )
 
 
