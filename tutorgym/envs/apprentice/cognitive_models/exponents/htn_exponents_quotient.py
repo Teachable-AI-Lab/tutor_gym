@@ -10,7 +10,7 @@ from random import randint
 from shop2.domain import Task, Operator, Method
 # from shop2.planner import SHOP2
 from shop2.fact import Fact
-from shop2.conditions import Filter
+from shop2.conditions import Filter, AND
 from shop2.common import V
 
 
@@ -63,16 +63,18 @@ Domain = {
 
     'solve': Method(head=('solve', V('equation')),
                     preconditions=[
-                        Fact(scaffold='level_1'),
-                        Fact(field=V('equation'), value=V('eq'), answer=False),
+                        Fact(scaffold='level_0'),
+                        Fact(start=True),
                     ],
                     subtasks=[
+                        # Full scaffolding (level_0) - shows all steps including subtract_values
                         [
                             Task(head=('subtract_values', V('equation'), ('subtract_values',)), primitive=True),
                             Task(head=('simplify_exp', V('equation'), ('simplify_exp',)), primitive=True),
                             Task(head=('done', ('done',)), primitive=True)
                         ],
-
+                        
+                        # No scaffolding - combines both steps (fallback when no scaffold fact exists)
                         [
                             Task(head=('simplify_exp', V('equation'), ('subtract_values', 'simplify_exp')), primitive=True),
                             Task(head=('done', ('done',)), primitive=True)

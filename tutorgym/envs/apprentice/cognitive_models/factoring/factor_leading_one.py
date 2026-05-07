@@ -214,6 +214,7 @@ Domain = {
                         Fact(scaffold='level_2'),
                         Fact(scaffold='level_1'),
                         Fact(scaffold='level_0'),
+                        Fact(start=True),
                     ],
                     subtasks=[
 
@@ -244,6 +245,12 @@ Domain = {
                         [   
                             Task(head=('first_expression', V('equation'), ('first_expression',)), primitive=True),
                             Task(head=('second_expression', V('equation'), 'first_expression', ('second_expression',)), primitive=True),
+                            Task(head=('final_answer', V('equation'), ('final_answer',)), primitive=True),
+                            Task(head=('done', ('done',)), primitive=True)
+                        ],
+
+                        # No scaffolding - just final answer
+                        [   
                             Task(head=('final_answer', V('equation'), ('final_answer',)), primitive=True),
                             Task(head=('done', ('done',)), primitive=True)
                         ],

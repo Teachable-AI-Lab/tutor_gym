@@ -348,6 +348,7 @@ Domain = {
                         Fact(scaffold='level_2'),
                         Fact(scaffold='level_1'),
                         Fact(scaffold='level_0'),
+                        Fact(start=True),
                     ],
                     subtasks=[
 

@@ -3,13 +3,14 @@ from random import randint, choice
 
 import sympy as sp
 from sympy.parsing.latex._parse_latex_antlr import parse_latex
+from sympy import latex, sstr
 import re
 
 from random import randint
 from shop2.domain import Task, Operator, Method
 # from shop2.planner import SHOP2
 from shop2.fact import Fact
-from shop2.conditions import Filter
+from shop2.conditions import Filter, AND
 from shop2.common import V
 
 
@@ -26,8 +27,9 @@ def multiply_values(init_value):
     base = forumla.args[0].args[0]
     exp1 = forumla.args[0].args[1]
     exp2 = forumla.args[1]
-    answer = re.compile(rf"{base}\*\*\(({exp1}\*{exp2})|({exp2}\*{exp1})\)")  
-    hint = rf"{base}^{{{exp1} \cdot {exp2}}}"  
+    answer = sp.Pow(base, sp.Mul(exp1, exp2, evaluate=False), evaluate=False)
+    hint = latex(answer)
+    answer = re.compile(re.sub(r'([-+()*])', r'\\\1', sp.sstr(answer, order="grlex"))) 
     value = tuple([(answer, hint)])
     return value
 
@@ -36,8 +38,10 @@ def simplify_exp(init_value):
     base = forumla.args[0].args[0]
     exp1 = forumla.args[0].args[1]
     exp2 = forumla.args[1]
-    answer = re.compile(rf"{base}\*\*{exp1*exp2}")
-    hint = rf"{base}^{{{exp1*exp2}}}"
+    answer = sp.Pow(base, sp.Mul(exp1, exp2, evaluate=True), evaluate=False)
+    hint = latex(answer)
+    answer = re.compile(re.sub(r'([-+()*])', r'\\\1', sp.sstr(answer, order="grlex"))) 
+    
     value = tuple([(answer, hint)])
     return value
 
@@ -59,18 +63,20 @@ Domain = {
 
     'solve': Method(head=('solve', V('equation')),
                     preconditions=[
-                        Fact(scaffold='level_1'),
-                        Fact(field=V('equation'), value=V('eq'), answer=False),
+                        Fact(scaffold='level_0'),
+                        Fact(start=True),
                     ],
                     subtasks=[
+                        # Full scaffolding (level_0/all) - only simplify_exp step (combines multiply and simplify internally)
+                        [
+                            Task(head=('simplify_exp', V('equation'), ('multiply_values', 'simplify_exp')), primitive=True),
+                            Task(head=('done', ('done',)), primitive=True)
+                        ],
+                        
+                        # Level 1 scaffolding - shows multiply_values and simplify_exp as separate steps
                         [
                             Task(head=('multiply_values', V('equation'), ('multiply_values',)), primitive=True),
                             Task(head=('simplify_exp', V('equation'), ('simplify_exp',)), primitive=True),
-                            Task(head=('done', ('done',)), primitive=True)
-                        ],
-
-                        [
-                            Task(head=('simplify_exp', V('equation'), ('multiply_values', 'simplify_exp')), primitive=True),
                             Task(head=('done', ('done',)), primitive=True)
                         ],
                     ]
