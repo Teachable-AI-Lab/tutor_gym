@@ -28,15 +28,16 @@ def print_response(reasoning, last_line, duration):
     print(f"Duration: {duration / 1e9:.4f} seconds")
 
 class LLMPromptable():
-    def __init__(self, 
-                 tutor_kind, 
+    def __init__(self,
+                 tutor_kind,
                  client,
                  model,
                  client_url=None,
                  context_length=4096,
                  prompt_retries=10,
                  prompt_retry_delay=5,
-                 resp_last_line_only=True, 
+                 resp_last_line_only=True,
+                 extra_body=None,
                  **kwargs):
         
         self.tutor_kind = tutor_kind
@@ -49,7 +50,7 @@ class LLMPromptable():
         elif(self.client_name == "openai"):
             from openai import OpenAI
             if client_url:
-                self.client_inst = OpenAI(base_url=client_url, api_key="EMPTY")
+                self.client_inst = OpenAI(base_url=client_url, api_key="29djlljks83ljdhgfg29ls000azcxvnm")
             else:
                 self.client_inst = OpenAI()
 
@@ -113,10 +114,14 @@ class LLMPromptable():
             model=self.model,
             messages=[{"role": "user", "content": prompt}],
             max_tokens=self.context_length,
-            temperature=0
+            temperature=0,
+            extra_body={"enable_thinking": False}
         )
         t1 = time.time_ns()/float(1e9)
-        return response.choices[0].message.content, t1-t0
+        content = response.choices[0].message.content
+        if content is None:
+            content = getattr(response.choices[0].message, 'reasoning_content', '') or ''
+        return content, t1-t0
 
     def run_prompt(self, prompt):
         """Get response from the LLM"""        

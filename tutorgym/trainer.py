@@ -216,7 +216,12 @@ class Trainer:
         # print("A ACTION:", action)
 
         s,a,inp = action.as_tuple()
-        self.logger.log_step(s, a, inp, outcome_kind, step_name=s, kcs=[s])
+        kcs_for_log = [s]
+        if hasattr(self, 'outer_loop_controller') and self.outer_loop_controller is not None:
+            cur = getattr(self.outer_loop_controller, 'current_prob', None)
+            if cur is not None:
+                kcs_for_log = cur.get('step_to_kcs', {}).get(s, [s])
+        self.logger.log_step(s, a, inp, outcome_kind, step_name=s, kcs=kcs_for_log)
 
         self.agent.train(
             **self._to_train_kwargs(state, action, reward, 

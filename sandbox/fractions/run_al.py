@@ -5,159 +5,24 @@ from apprentice.agents.RHS_LHS_Agent import RHS_LHS_Agent
 from apprentice.agents.WhereWhenHowNoFoa import WhereWhenHowNoFoa
 import apprentice
 from apprentice.working_memory.representation import Sai
-# from apprentice.working_memory.numba_operators import *
-from tutorgym.envs.apprentice.cognitive_models.logarithms import (
-    htn_logarithms_quotient as logarithms_quotient,
-    htn_logarithms_product as logarithms_product,
-    htn_logarithms_power as logarithms_power,
-)
-domain_name= "exponents_product" #domain_name= "exponents_power"
-scaffold = "all"
-# from tutorenvs.fractions_v import FractionArithSymbolic
 from tutorgym.env_classes.misc.fraction_arith.fractions import FractionArithmetic
 from tutorgym.trainer import Trainer, AuthorTrainer
 from tutorgym.utils import DataShopLogger
-# from colorama import Back, Fore
-
-# import colorama
-# colorama.init(autoreset=True)
+from tutorgym.eval.llm_stu_eval import (
+    FRAC_AS_PROBLEMS, FRAC_AD_PROBLEMS, FRAC_M_PROBLEMS, FRAC_ALL_PROBLEMS,
+    fraction_bkt_probs,
+    SimpleBlockedController, SimpleInterleaveController, BKTTrackingInterleaveController,
+)
 
 import time
+from random import choice, shuffle
 
-from random import choice       
+domain_name = "exponents_product"
+scaffold = "all"
 
 ############################################################
-# SIMPLE INTERLEAVE CONTROLLER + EXPONENT PROBLEM SET
+# LEGACY EXPONENT PROBLEM SET (kept for reference)
 ############################################################
-
-class SimpleInterleaveController:
-    def __init__(self, problem_list, max_cycles=1):
-        self.problem_list = problem_list
-        self.index = 0
-        self.max_cycles = max_cycles
-        self.count = 0
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self.count >= self.max_cycles * len(self.problem_list):
-            raise StopIteration
-
-        prob = self.problem_list[self.index]
-        self.index = (self.index + 1) % len(self.problem_list)
-        self.count += 1
-        return prob
-# ----------------------------------------------------------------------
-class BKTTrackingInterleaveController:
-
-
-    def __init__(self, problem_list, bkt_probs, max_cycles=1, mastery_threshold=0.95):
-        self.problem_list = problem_list
-        self.index = 0
-        self.max_cycles = max_cycles
-        self.count = 0
-
-        self.bkt_probs = bkt_probs
-        self.mastery_threshold = mastery_threshold
-
-        # Student model: KC -> mastery probability (initialized from "known")
-        self.mastery_prob = {kc: bkt_probs[kc]["known"] for kc in bkt_probs}
-
-        # track what problem we are on so update() knows which KCs to update
-        self.current_prob = None
-        self.steps_updated = set()  # prevents double-updating the same step
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-    # stop if all KCs are mastered
-        if all(p >= 0.95 for p in self.mastery_prob.values()):
-                raise StopIteration
-
-    # stop if too many total problems have been given
-        if self.count >= self.max_cycles:
-            raise StopIteration
-
-    # find the KC with lowest mastery
-        target_kc = min(self.mastery_prob, key=self.mastery_prob.get)
-
-    # get all problems for that KC
-        candidate_probs = [
-            prob for prob in self.problem_list
-            if target_kc in prob.get("kc_list", [])
-    ]
-
-        if not candidate_probs:
-            raise StopIteration
-
-    # choose one of those problems
-        prob = candidate_probs[self.index % len(candidate_probs)]
-        prob = prob.copy() if isinstance(prob, dict) else prob
-
-        self.index += 1
-        self.count += 1
-        self.current_prob = prob
-        self.steps_updated = set()
-
-        print("NEXT KC:", target_kc, "| mastery:", self.mastery_prob[target_kc])
-        print("NEXT PROBLEM:", prob["initial_problem"])
-
-        return prob
-
-    def update(self, step, reward, action_type="ATTEMPT"):
-        # only update on attempts (matches the transcript + old BKT controller behavior)
-        if action_type != "ATTEMPT":
-            return
-
-        # avoid multiple updates for the same step in the same problem
-        if step in self.steps_updated:
-            return
-        self.steps_updated.add(step)
-
-        if self.current_prob is None:
-            return
-
-        # binary correctness
-        correct = 1 if reward > 0 else 0
-        print("RAW STEP FROM ENV:", repr(step))
-        
-        step_to_kcs = self.current_prob.get("step_to_kcs", None)
-
-        if step_to_kcs is not None:
-            kcs = step_to_kcs.get(step, [])
-            if not kcs:
-                kcs = self.current_prob.get("kc_list", [])
-        else:
-            kcs = self.current_prob.get("kc_list", [])
-
-        print("BKT UPDATE STEP:", step, "| updating KCs:", kcs)
-        for kc in kcs:
-            if kc not in self.bkt_probs:
-                continue
-
-            guess = self.bkt_probs[kc]["guess"]
-            slip  = self.bkt_probs[kc]["slip"]
-            learn = self.bkt_probs[kc]["learn"]
-
-            p_known = self.mastery_prob.get(kc, self.bkt_probs[kc]["known"])
-
-            # observation likelihoods (copied logic from the old BKT controller)
-            if correct == 1:
-                p_obs_not_known = guess
-                p_obs_known = 1 - slip
-            else:
-                p_obs_not_known = 1 - guess
-                p_obs_known = slip
-
-            # Bayes update with learning transition
-            p_not_learned = (1 - learn) * p_obs_not_known * (1 - p_known)
-            p_learned = learn * p_obs_not_known * (1 - p_known) + p_obs_known * p_known
-
-            self.mastery_prob[kc] = p_learned / (p_learned + p_not_learned)
-            print("UPDATED KC:", kc, "| mastery =", self.mastery_prob[kc])
-# ------------------------ EXPONENT PROBLEM SET ------------------------
 
 bkt_probs = {
     "power_rule":    {"known": 0.2, "learn": 0.15, "guess": 0.2, "slip": 0.1},
@@ -168,191 +33,155 @@ bkt_probs = {
 POWER_PROBLEMS = [
     {"domain": "exponents_power", "initial_problem": "(5^3)^4",
      "kc_list": ["power_rule"],
-     "step_to_kcs": {
-         "apply_power_rule": ["power_rule"],
-         "simplify": ["power_rule"],
-         "done": ["power_rule"],
-     }},
-
+     "step_to_kcs": {"apply_power_rule": ["power_rule"], "simplify": ["power_rule"], "done": ["power_rule"]}},
     {"domain": "exponents_power", "initial_problem": "(2^6)^2",
      "kc_list": ["power_rule"],
-     "step_to_kcs": {
-         "apply_power_rule": ["power_rule"],
-         "simplify": ["power_rule"],
-         "done": ["power_rule"],
-     }},
-
+     "step_to_kcs": {"apply_power_rule": ["power_rule"], "simplify": ["power_rule"], "done": ["power_rule"]}},
     {"domain": "exponents_power", "initial_problem": "(9^2)^5",
      "kc_list": ["power_rule"],
-     "step_to_kcs": {
-         "apply_power_rule": ["power_rule"],
-         "simplify": ["power_rule"],
-         "done": ["power_rule"],
-     }},
-
+     "step_to_kcs": {"apply_power_rule": ["power_rule"], "simplify": ["power_rule"], "done": ["power_rule"]}},
     {"domain": "exponents_power", "initial_problem": "(7^4)^3",
      "kc_list": ["power_rule"],
-     "step_to_kcs": {
-         "apply_power_rule": ["power_rule"],
-         "simplify": ["power_rule"],
-         "done": ["power_rule"],
-     }},
+     "step_to_kcs": {"apply_power_rule": ["power_rule"], "simplify": ["power_rule"], "done": ["power_rule"]}},
 ]
 
 PRODUCT_PROBLEMS = [
     {"domain": "exponents_product", "initial_problem": "5^3 * 5^7",
      "kc_list": ["product_rule"],
-     "step_to_kcs": {
-         "apply_product_rule": ["product_rule"],
-         "simplify": ["product_rule"],
-         "done": ["product_rule"],
-     }},
-
+     "step_to_kcs": {"apply_product_rule": ["product_rule"], "simplify": ["product_rule"], "done": ["product_rule"]}},
     {"domain": "exponents_product", "initial_problem": "3^8 * 3^2",
      "kc_list": ["product_rule"],
-     "step_to_kcs": {
-         "apply_product_rule": ["product_rule"],
-         "simplify": ["product_rule"],
-         "done": ["product_rule"],
-     }},
-
+     "step_to_kcs": {"apply_product_rule": ["product_rule"], "simplify": ["product_rule"], "done": ["product_rule"]}},
     {"domain": "exponents_product", "initial_problem": "11^5 * 11^4",
      "kc_list": ["product_rule"],
-     "step_to_kcs": {
-         "apply_product_rule": ["product_rule"],
-         "simplify": ["product_rule"],
-         "done": ["product_rule"],
-     }},
-
+     "step_to_kcs": {"apply_product_rule": ["product_rule"], "simplify": ["product_rule"], "done": ["product_rule"]}},
     {"domain": "exponents_product", "initial_problem": "6^9 * 6^3",
      "kc_list": ["product_rule"],
-     "step_to_kcs": {
-         "apply_product_rule": ["product_rule"],
-         "simplify": ["product_rule"],
-         "done": ["product_rule"],
-     }},
+     "step_to_kcs": {"apply_product_rule": ["product_rule"], "simplify": ["product_rule"], "done": ["product_rule"]}},
 ]
 
 QUOTIENT_PROBLEMS = [
     {"domain": "exponents_quotient", "initial_problem": "8^12 / 8^4",
      "kc_list": ["quotient_rule"],
-     "step_to_kcs": {
-         "apply_quotient_rule": ["quotient_rule"],
-         "simplify": ["quotient_rule"],
-         "done": ["quotient_rule"],
-     }},
-
+     "step_to_kcs": {"apply_quotient_rule": ["quotient_rule"], "simplify": ["quotient_rule"], "done": ["quotient_rule"]}},
     {"domain": "exponents_quotient", "initial_problem": "10^9 / 10^3",
      "kc_list": ["quotient_rule"],
-     "step_to_kcs": {
-         "apply_quotient_rule": ["quotient_rule"],
-         "simplify": ["quotient_rule"],
-         "done": ["quotient_rule"],
-     }},
-
+     "step_to_kcs": {"apply_quotient_rule": ["quotient_rule"], "simplify": ["quotient_rule"], "done": ["quotient_rule"]}},
     {"domain": "exponents_quotient", "initial_problem": "4^7 / 4^2",
      "kc_list": ["quotient_rule"],
-     "step_to_kcs": {
-         "apply_quotient_rule": ["quotient_rule"],
-         "simplify": ["quotient_rule"],
-         "done": ["quotient_rule"],
-     }},
-
+     "step_to_kcs": {"apply_quotient_rule": ["quotient_rule"], "simplify": ["quotient_rule"], "done": ["quotient_rule"]}},
     {"domain": "exponents_quotient", "initial_problem": "12^6 / 12^1",
      "kc_list": ["quotient_rule"],
-     "step_to_kcs": {
-         "apply_quotient_rule": ["quotient_rule"],
-         "simplify": ["quotient_rule"],
-         "done": ["quotient_rule"],
-     }},
+     "step_to_kcs": {"apply_quotient_rule": ["quotient_rule"], "simplify": ["quotient_rule"], "done": ["quotient_rule"]}},
 ]
+
 EXPONENT_PROBLEMS = POWER_PROBLEMS + PRODUCT_PROBLEMS + QUOTIENT_PROBLEMS
+BLOCKED_PROBLEMS  = POWER_PROBLEMS + PRODUCT_PROBLEMS + QUOTIENT_PROBLEMS
+INTERLEAVED_PROBLEMS = [
+    POWER_PROBLEMS[0], PRODUCT_PROBLEMS[0], QUOTIENT_PROBLEMS[0],
+    POWER_PROBLEMS[1], PRODUCT_PROBLEMS[1], QUOTIENT_PROBLEMS[1],
+    POWER_PROBLEMS[2], PRODUCT_PROBLEMS[2], QUOTIENT_PROBLEMS[2],
+    POWER_PROBLEMS[3], PRODUCT_PROBLEMS[3], QUOTIENT_PROBLEMS[3],
+]
 
 
-# def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=3, demo_args=False):
-#     logger = DataShopLogger(logger_name, extra_kcs=['field'])
+############################################################
+# CREAgent config for fractions (no LCM per paper spec)
+############################################################
+
+FRAC_CRE_AGENT_ARGS = {
+    "function_set": ["Add", "Multiply", "Copy", "AcrossMultiply"],
+    "feature_set": ["Equals"],
+    "planner": "set_chaining",
+    "explanation_choice": "least_operations",
+    "search_depth": 2,
+    "where_learner": "mostspecific",
+    "when_learner": "decision_tree",
+    "which_learner": "when_prediction",
+    "action_chooser": "max_which_utility",
+    "suggest_uncert_neg": True,
+    "error_on_bottom_out": False,
+    "extra_features": ["Match"],
+    "when_args": {"encode_relative": True, "one_hot": True},
+    "should_find_neighbors": True,
+}
+
+def make_cre_agent():
+    from apprentice.agents.cre_agents.cre_agent import CREAgent
+    import tutorgym.helpers.ai2t_helpers
+    return CREAgent(**FRAC_CRE_AGENT_ARGS)
 
 
-#     if(typ[:3] == "add"):
-#         if(logger_name is None): logger_name = "FractionAddition"
-#         env = FractionArithSymbolic(logger=logger, problem_types=["AD","AS"], n=n_fracs)
-#     elif(typ[:4] == "mult"):
-#         if(logger_name is None): logger_name = "FractionMult"
-#         env = FractionArithSymbolic(logger=logger, problem_types=["M"], n=n_fracs)
-#     elif(typ[:5] == "arith"):
-#         # print("ARITH")
-#         if(logger_name is None): logger_name = "FractionArith"
-#         env = FractionArithSymbolic(logger=logger, problem_types=["AD","AS","M"], n=n_fracs)
-#     else:
-#         ptypes = typ.split(",")
-#         if(not all([p in ["AD", "AS", "M"] for p in ptypes])):
-#             raise ValueError(f"Unrecognized type {typ}")
+############################################################
+# AL FRACTIONS RUN FUNCTIONS
+############################################################
 
-#         if(logger_name is None): logger_name = f"Fraction_{'_'.join(ptypes)}"
-#         env = FractionArithSymbolic(logger=logger, problem_types=ptypes, n=n_fracs)
+_FRAC_KCS = list(fraction_bkt_probs.keys())
 
-#     ALWAYS_UPDATE_STATE = False
-#     SEND_NEXT_STATE = True
+def run_al_fractions_blocked(max_cycles=1):
+    """Blocked: AS block (10), then AD block (14), then M block (24). Within-block order randomized."""
+    logger = DataShopLogger("AL_Fractions_Blocked",
+                output_dir='stu_eval_logs/al_fractions_blocked',
+                extra_kcs=_FRAC_KCS)
+    env   = FractionArithmetic()
+    agent = make_cre_agent()
 
-#     p = 0
-#     reward = 1
-#     # c = 0
-#     while p < n:
-#         # c += 1
-#         if(reward == 1 or ALWAYS_UPDATE_STATE):
-#             state = env.get_state()
+    as_block = FRAC_AS_PROBLEMS.copy()
+    ad_block = FRAC_AD_PROBLEMS.copy()
+    m_block  = FRAC_M_PROBLEMS.copy()
+    shuffle(as_block); shuffle(ad_block); shuffle(m_block)
 
-#         response = agent.request(state)
+    controller = SimpleBlockedController(as_block + ad_block + m_block, max_cycles=max_cycles)
+    trainer = Trainer(agent, env, logger=logger,
+                outer_loop_controller=controller,
+                num_incorrect_force_demo=2)
+    trainer.start()
+    print("-- AL FRACTIONS BLOCKED END --")
 
-#         foci = None
-#         if response == {}:
-#             # print('hint')
-#             (selection, action, inputs), foci = env.request_demo(return_foci=True)
-#             sai = Sai(selection=selection, action=action, inputs=inputs)
 
-#         elif isinstance(response, Sai):
-#             sai = response
-#         else:
-#             sai = Sai(selection=response['selection'],
-#                       action=response['action'],
-#                       inputs=response['inputs'])
+def run_al_fractions_interleaved(max_cycles=1):
+    """Interleaved: fully random ordering of all 48 problems."""
+    logger = DataShopLogger("AL_Fractions_Interleaved",
+                output_dir='stu_eval_logs/al_fractions_interleaved',
+                extra_kcs=_FRAC_KCS)
+    env   = FractionArithmetic()
+    agent = make_cre_agent()
 
-#         # print(sai)
-        
-#         reward = env.apply_sai(sai.selection, sai.action, sai.inputs)
-        
+    all_probs = FRAC_ALL_PROBLEMS.copy()
+    shuffle(all_probs)
 
-#         # print("<<", reward, foci)
+    controller = SimpleInterleaveController(all_probs, max_cycles=max_cycles)
+    trainer = Trainer(agent, env, logger=logger,
+                outer_loop_controller=controller,
+                num_incorrect_force_demo=2)
+    trainer.start()
+    print("-- AL FRACTIONS INTERLEAVED END --")
 
-#         if(SEND_NEXT_STATE and (reward == 1 or ALWAYS_UPDATE_STATE)):
-#             next_state = env.get_state()
-#         else:
-#             next_state = None
-#         # next_state = env.get_state()
-#         # print([f'{x["id"]}:{x.get("value",None)}' for x in state.values()])
 
-#         agent.train(state, sai, int(reward),
-#                     rhs_id=response.get("rhs_id", None),
-#                     mapping=response.get("mapping", None),
-#                     next_state=next_state,
-#                     # skill_label="fractions",
-#                     foci_of_attention=foci)
+def run_al_fractions_bkt(max_cycles=48):
+    """BKT: adaptive selection until all 3 KCs mastered or max_cycles reached."""
+    logger = DataShopLogger("AL_Fractions_BKT",
+                output_dir='stu_eval_logs/al_fractions_bkt',
+                extra_kcs=_FRAC_KCS)
+    env   = FractionArithmetic()
+    agent = make_cre_agent()
 
-#         if(reward == 1):
-#             if(response == {}):
-#                 print(Back.BLUE + Fore.YELLOW + f"HINT: {sai.selection} -> {sai.inputs}")
-#             else:
-#                 print(Back.GREEN + Fore.BLACK  + f"CORRECT: {sai.selection} -> {sai.inputs}")
-#         else:
-#             print(Back.RED + Fore.BLACK + f"INCORRECT: {sai.selection} -> {sai.inputs}")
+    controller = BKTTrackingInterleaveController(
+        FRAC_ALL_PROBLEMS,
+        bkt_probs=fraction_bkt_probs,
+        max_cycles=max_cycles,
+        mastery_threshold=0.95,
+    )
+    trainer = Trainer(agent, env, logger=logger,
+                outer_loop_controller=controller,
+                num_incorrect_force_demo=2)
+    trainer.start()
+    print("-- AL FRACTIONS BKT END --")
 
-#         if sai.selection == "done" and reward == 1.0:
-#             print('Finished problem {} of {}'.format(p, n))
-#             p += 1
-            
-#         # if(c > 20):raise ValueError()
 
-#         # time.sleep(1)
+############################################################
+# LEGACY run_training (exponents, kept for reference)
+############################################################
 
 def resolve_type(typ, logger_name):
     if(typ[:3] == "add"):
@@ -362,144 +191,51 @@ def resolve_type(typ, logger_name):
         if(logger_name is None): logger_name = "FractionMult"
         ptypes = ["M"]
     elif(typ[:5] == "arith"):
-        # print("ARITH")
         if(logger_name is None): logger_name = "FractionArith"
         ptypes = ["AD","AS","M"]
     else:
         ptypes = typ.split(",")
         if(not all([p in ["AD", "AS", "M"] for p in ptypes])):
             raise ValueError(f"Unrecognized type {typ}")
-
         if(logger_name is None): logger_name = f"Fraction_{'_'.join(ptypes)}"
     return logger_name, ptypes
-        # env = FractionArithSymbolic(logger=logger, problem_types=ptypes, n=n_fracs)
 
 def run_training(agent, typ='arith', logger_name=None, n=10, n_fracs=2, demo_args=False):
     logger_name, problem_types = resolve_type(typ, logger_name)
     logger = DataShopLogger(logger_name, extra_kcs=['field'], output_dir='log_al')
-
-    # Use exponents domain
     env = ApprenticeTutor(domain=domain_name, scaffold=scaffold)
-
-    # Attach your custom controller and problem set
     controller = BKTTrackingInterleaveController(
-        EXPONENT_PROBLEMS,
-        bkt_probs=bkt_probs,
-        max_cycles=20,
-        mastery_threshold=0.95
-)
-
-
-    trainer = Trainer(
-        agent,
-        env,
-        logger=logger,
-        outer_loop_controller=controller
-    )
-
+        EXPONENT_PROBLEMS, bkt_probs=bkt_probs, max_cycles=20, mastery_threshold=0.95)
+    trainer = Trainer(agent, env, logger=logger, outer_loop_controller=controller)
     trainer.start()
+
+
+############################################################
+# MAIN
+############################################################
 
 if __name__ == "__main__":
     import sys, argparse
     import faulthandler; faulthandler.enable()
-    
-    parser = argparse.ArgumentParser(
-        description='Runs AL agents on multi-column addition')
-    parser.add_argument('--n-agents', default=50, type=int, metavar="<n_agents>",
-                        dest="n_agents", help="number of agents")
-    parser.add_argument('--n-problems', default=500, type=int, metavar="<n_problems>",
-                        dest="n_problems", help="number of problems")
-    parser.add_argument('--n-fracs', default=2, type=int, metavar="<n_fracs>",
-                        dest="n_fracs", help="number of fractions")
-    parser.add_argument('--agent-type', default='DIPL',metavar="<agent_type>",
-                        dest="agent_type", help="type of agents DIPL or RHS_LHS")
-    parser.add_argument('-t', default='arith',metavar="<env_type>",
-                        dest="env_type", help="'arith' (i.e. mult & addition), 'mult' or 'addition'")
 
+    parser = argparse.ArgumentParser(description='Run AL agent on fractions experiment')
+    parser.add_argument('--condition', type=str, default="blocked",
+                        choices=['blocked', 'interleaved', 'bkt'],
+                        help='Which condition to run')
+    parser.add_argument('--n-agents', default=1, type=int, dest="n_agents",
+                        help='Number of independent AL agents to run')
+    parser.add_argument('--max-cycles', default=None, type=int, dest="max_cycles",
+                        help='Max cycles through problem set (or max problems for bkt; defaults to 1 for blocked/interleaved, 48 for bkt)')
 
     args = parser.parse_args(sys.argv[1:])
 
-    print("n_agents", args.n_agents)
-    # function_set = ['RipFloatValue','Add','Multiply','Subtract','ConvertNumerator']
-                    # 'Divide',
-                    # 'DivideRound',
-                    #, 'Add3', 'Add4', 'Add5', 
-                    #, 'Multiply3', 'Multiply4', 'Multiply5', 
-                    # ]
-    feature_set = ['Equals']
+    print(f"Running fractions/{args.condition} with {args.n_agents} AL agent(s)")
 
-    
-    logger_name = f'frac_{args.env_type}_{args.agent_type}_{args.n_fracs}frac_{args.n_problems}probs'
-    
-    for _ in range(args.n_agents):
-        if(args.agent_type.upper() == "DIPL"):
-            from apprentice.agents.cre_agents.cre_agent import CREAgent
-            import tutorgym.helpers.ai2t_helpers # Registers SkillApplication -> Action
-
-            agent_args = {
-                # "function_set": ['AcrossMultiply','Multiply', 'Add'],
-                #"function_set": ['PowerRule', 'MultiplyExponents'],
-                "function_set": ["PowerRule","MultiplyExponents","ProductRule","SimplifyProduct"],
-                "feature_set": ['Equals'],
-                "planner":'set_chaining',
-                "explanation_choice" : "least_operations",
-                "search_depth": 2,
-
-                # "where_learner" : "antiunify",
-                "where_learner": "mostspecific",
-
-                # For STAND
-                "when_learner": "decision_tree",
-                "which_learner": "when_prediction",
-                "action_chooser" : "max_which_utility",
-                "suggest_uncert_neg" : True,
-
-                "error_on_bottom_out" : False,
-
-                # "when_learner" : 'sklearndecisiontree',
-                # "when_learner" : 'decisiontree',
-                
-                "extra_features" : ["Match"],
-                "when_args" : {"encode_relative" : True, "one_hot" : True},
-                
-                "should_find_neighbors" : True
-            }
-
-            agent = CREAgent(**agent_args)
-        elif(args.agent_type.upper() == "MODULAR"):
-            from apprentice.agents.ModularAgent import ModularAgent
-
-            agent_args = dict(
-                function_set=['RipFloatValue','Add','Multiply','Subtract','ConvertNumerator'],
-
-                feature_set=['Equals'],
-                planner='numba',
-                explanation_choice = "least_operations",
-                search_depth=3,
-                when_learner='decisiontree2',
-                # where_learner='FastMostSpecific',
-                where_learner="mostspecific",
-                # where_learner="version_space",
-                # state_variablization='whereswap',
-                state_variablization = "metaskill",
-                strip_attrs=["to_left","to_right","above","below","type","id","offsetParent", "dom_class"],
-                should_find_neighbors=True
-            )
-
-            agent = ModularAgent(**agent_args)
-        elif(args.agent_type.upper() == "RHS_LHS"):
-            from apprentice.agents.RHS_LHS_Agent import RHS_LHS_Agent
-            agent = RHS_LHS_Agent(**agent_args)
-        else:
-            raise ValueError(f"Unrecognized agent type {args.agent_type!r}.")
-
-        run_training(agent, args.env_type, logger_name=logger_name,  n=int(args.n_problems), n_fracs=args.n_fracs)
-
-
-    # for i in range(100):
-    #     agent = ModularAgent(**agent_args)
-    #     # agent = RHS_LHS_Agent(**agent_args)
-    #     # agent = WhereWhenHowNoFoa('fraction arith', 'fraction arith',
-    #     #                       search_depth=1)
-
-    #     run_training(agent, n=20, demo_args=True)
+    for i in range(args.n_agents):
+        print(f"\n--- Agent {i+1}/{args.n_agents} ---")
+        if args.condition == "blocked":
+            run_al_fractions_blocked(max_cycles=args.max_cycles if args.max_cycles is not None else 1)
+        elif args.condition == "interleaved":
+            run_al_fractions_interleaved(max_cycles=args.max_cycles if args.max_cycles is not None else 1)
+        elif args.condition == "bkt":
+            run_al_fractions_bkt(max_cycles=args.max_cycles if args.max_cycles is not None else 48)
