@@ -12,6 +12,7 @@ from tutorgym.eval.llm_stu_eval import (
     FRAC_AS_PROBLEMS, FRAC_AD_PROBLEMS, FRAC_M_PROBLEMS, FRAC_ALL_PROBLEMS,
     fraction_bkt_probs,
     SimpleBlockedController, SimpleInterleaveController, BKTTrackingInterleaveController,
+    generate_fraction_problem, _KC_TO_PTYPE,
 )
 
 import time
@@ -90,7 +91,7 @@ INTERLEAVED_PROBLEMS = [
 ############################################################
 
 FRAC_CRE_AGENT_ARGS = {
-    "function_set": ["Add", "Multiply", "Copy", "AcrossMultiply"],
+    "function_set": ["Add", "Multiply", "Copy", "AcrossMultiply", "Num"],
     "feature_set": ["Equals"],
     "planner": "set_chaining",
     "explanation_choice": "least_operations",
@@ -167,10 +168,12 @@ def run_al_fractions_bkt(max_cycles=48):
     agent = make_cre_agent()
 
     controller = BKTTrackingInterleaveController(
-        FRAC_ALL_PROBLEMS,
+        [],
         bkt_probs=fraction_bkt_probs,
         max_cycles=max_cycles,
-        mastery_threshold=0.95,
+        mastery_threshold=0.8,
+        problem_generator=generate_fraction_problem,
+        kc_to_ptype=_KC_TO_PTYPE,
     )
     trainer = Trainer(agent, env, logger=logger,
                 outer_loop_controller=controller,

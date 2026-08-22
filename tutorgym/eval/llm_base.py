@@ -129,8 +129,20 @@ class LLMPromptable():
         response, duration = send_prompt(prompt)
 
         if(self.resp_last_line_only):
-            reasoning = "\n".join(response.split("\n")[:-1])
-            response = response.split("\n")[-1]
+            lines = response.split("\n")
+            self._last_raw_response = response
+
+            last_non_empty = next(
+                (i for i in range(len(lines) - 1, -1, -1) if lines[i].strip()),
+                None
+            )
+
+            if last_non_empty is None:
+                response = ""
+                reasoning = ""
+            else:
+                response = lines[last_non_empty]
+                reasoning = "\n".join(lines[:last_non_empty])
         else:
             reasoning = ""
 

@@ -22,6 +22,24 @@ from tutorgym.env_classes.fsm_tutor import FiniteStateMachine, StateMachineTutor
 from tutorgym.env_classes.CTAT.action_model import CTAT_ActionModel
 
 
+def generate_fraction_numbers(ptype, n=2):
+    """Generate random fraction numbers for ptype "AS", "AD", or "M"."""
+    ok = False
+    if ptype in ("AD", "M"):
+        while not ok:
+            nums = [str(randint(1, 15)) for _ in range(n)]
+            dens = [str(randint(2, 15)) for _ in range(n)]
+            ok = (not any(np.array(nums) == np.array(dens))) and (len(set(dens)) > 1)
+        op = "+" if ptype == "AD" else "*"
+    elif ptype == "AS":
+        nums = [str(randint(1, 15)) for _ in range(n)]
+        dens = [str(randint(2, 15))] * n
+        op = "+"
+    else:
+        raise ValueError(f"Unknown fraction problem type: {ptype}")
+    return {"op": op, "fracs": list(zip(nums, dens))}
+
+
 class FractionArithmetic(StateMachineTutor):
     def __init__(self, n_fracs=2, problem_types=["AD", "AS", "M"], **kwargs):
         """
@@ -126,29 +144,13 @@ class FractionArithmetic(StateMachineTutor):
         #     print(key, obj)
 
     def set_random_problem(self, ptype=None):
-        ok = False
-        if(ptype is None):
+        if ptype is None:
             ptype = choice(self.problem_types)
-        
-
         print("<<", ptype, self.problem_types)
-
-        if(ptype == "AD" or ptype == "M"):
-            while(not ok):
-                nums = [str(randint(1, 15)) for _ in range(self.n)]
-                dens = [str(randint(2, 15)) for _ in range(self.n)]
-                ok = (not any(np.array(nums)==np.array(dens))) and (len(set(dens)) > 1)
-            operator = "+" if ptype == "AD" else "*" #choice(['+', '*'])
-        elif(ptype == "AS"):
-            nums = [str(randint(1, 15)) for _ in range(self.n)]
-            dens = [str(randint(2, 15))] * self.n
-            operator = "+"
-        # print("NUMERATORS", nums)
-        # print("DENOMINATORS", dens)
-        print("<<", list(zip(nums, dens)))
-        self.set_problem(operator, list(zip(nums, dens)))
-        return {"op" : operator,
-                "fracs" : list(zip(nums, dens))}
+        result = generate_fraction_numbers(ptype, self.n)
+        print("<<", result["fracs"])
+        self.set_problem(result["op"], list(result["fracs"]))
+        return result
         # print(Back.WHITE + Fore.BLACK + f"STARTING PROBLEM {operator.join([f'({n}/{v})' for n,v in zip(nums,dens)])}" )
 
     def create_fsm(self, state, **kwargs):

@@ -16,14 +16,13 @@ import traceback
 import sys
 from colorama import Back, Fore, Style
 import argparse
+import copy
 from random import choice, shuffle
 
-from tutorgym.env_classes.misc.fraction_arith.fractions import FractionArithmetic
+from tutorgym.env_classes.misc.fraction_arith.fractions import FractionArithmetic, generate_fraction_numbers
 from tutorgym.eval.llm_base import LLMPromptable, print_response
 
-############################################################
-# CONTROLLERS (from Jacob's run_al.py)
-############################################################
+# Controllers
 
 class SimpleBlockedController:
     """Serves problems in order from problem_list."""
@@ -74,7 +73,8 @@ class SimpleInterleaveController:
 class BKTTrackingInterleaveController:
     """Uses BKT to track mastery and pick unmastered problems randomly."""
 
-    def __init__(self, problem_list, bkt_probs, max_cycles=1, mastery_threshold=0.95):
+    def __init__(self, problem_list, bkt_probs, max_cycles=1, mastery_threshold=0.95,
+                 problem_generator=None, kc_to_ptype=None):
         self.problem_list = problem_list
         self.index = 0
         self.max_cycles = max_cycles
@@ -84,6 +84,9 @@ class BKTTrackingInterleaveController:
         self.mastery_threshold = mastery_threshold
 
         self.mastery_prob = {kc: bkt_probs[kc]["known"] for kc in bkt_probs}
+
+        self.problem_generator = problem_generator
+        self.kc_to_ptype = kc_to_ptype or {}
 
         self.current_prob = None
         self.kcs_updated = set()  # tracks KCs already updated this problem (not step names)
@@ -107,15 +110,22 @@ class BKTTrackingInterleaveController:
             raise StopIteration
 
         candidate_probs = [
-            prob for prob in self.problem_list
-            if any(kc in prob.get("kc_list", []) for kc in unmastered_kcs)
+            p for p in self.problem_list
+            if any(kc in p.get("kc_list", []) for kc in unmastered_kcs)
         ]
-
         if not candidate_probs:
             raise StopIteration
 
-        prob = choice(candidate_probs)
-        prob = prob.copy() if isinstance(prob, dict) else prob
+        if self.problem_generator is not None:
+            template = choice(candidate_probs)
+            template_kcs = template.get("kc_list", [])
+            ptype = self.kc_to_ptype.get(template_kcs[0]) if template_kcs else None
+            if ptype is None:
+                raise StopIteration
+            prob = self.problem_generator(ptype)
+        else:
+            prob = choice(candidate_probs)
+            prob = prob.copy() if isinstance(prob, dict) else prob
 
         self.count += 1
         self.current_prob = prob
@@ -171,9 +181,7 @@ class BKTTrackingInterleaveController:
             print(f"BKT UPDATE | step={step!r} KC={kc} correct={correct} mastery={self.mastery_prob[kc]:.4f}")
 
 
-############################################################
-# EXPONENT PROBLEM SETS
-############################################################
+# Exponent problem sets
 
 bkt_probs = {
     "power_rule":    {"known": 0.2, "learn": 0.15, "guess": 0.2, "slip": 0.1},
@@ -288,10 +296,8 @@ INTERLEAVED_PROBLEMS = [
 ]
 
 
-############################################################
-# FRACTION PROBLEM SETS  (Patel, Liu, Koedinger 2016 baseline)
-# seed=42; denominators ≤ 12; AD uses denominator-multiplication only (no LCM)
-############################################################
+# Fraction problem sets
+# seed=42; denominators <= 12; AD uses denominator-multiplication only (no LCM)
 
 _bkt_default = {"known": 0.2, "learn": 0.15, "guess": 0.2, "slip": 0.1}
 fraction_bkt_probs = {
@@ -335,10 +341,28 @@ _M_STC = {
     "done":    ["fraction_multiply_done"],
 }
 
+_KC_TO_PTYPE = {
+    **{kc: "AS" for kcs in _AS_STC.values() for kc in kcs},
+    **{kc: "AD" for kcs in _AD_STC.values() for kc in kcs},
+    **{kc: "M"  for kcs in _M_STC.values()  for kc in kcs},
+}
+
+def generate_fraction_problem(ptype):
+    """Generate a random problem dict {op, fracs, kc_list, step_to_kcs} for ptype "AS", "AD", or "M"."""
+    stc = {"AS": _AS_STC, "AD": _AD_STC, "M": _M_STC}[ptype]
+    result = generate_fraction_numbers(ptype, n=2)
+    kc_list = list(dict.fromkeys(kc for kcs in stc.values() for kc in kcs))
+    return {**result, "kc_list": kc_list, "step_to_kcs": stc}
+
+
 def _f(op, n1, d1, n2, d2, stc):
     kc_list = list(dict.fromkeys(kc for kcs in stc.values() for kc in kcs))
     return {"op": op, "fracs": [(str(n1), str(d1)), (str(n2), str(d2))],
             "kc_list": kc_list, "step_to_kcs": stc}
+
+
+def _problem_key(prob):
+    return (prob["op"], tuple(tuple(frac) for frac in prob["fracs"]))
 
 FRAC_AS_PROBLEMS = [
     _f("+",  2, 12,  1, 12, _AS_STC),
@@ -399,10 +423,89 @@ FRAC_M_PROBLEMS = [
 
 FRAC_ALL_PROBLEMS = FRAC_AS_PROBLEMS + FRAC_AD_PROBLEMS + FRAC_M_PROBLEMS
 
+# Exact blocked sequence; fixed order, no shuffling.
+FRAC_BLOCKED_AS = [
+    _f("+",  1,  7,  3,  7, _AS_STC),
+    _f("+",  2,  3,  4,  3, _AS_STC),
+    _f("+",  2,  5,  4,  5, _AS_STC),
+    _f("+",  2,  6,  3,  6, _AS_STC),
+    _f("+",  2,  9,  3,  9, _AS_STC),
+    _f("+",  3,  8,  7,  8, _AS_STC),
+    _f("+",  5,  4,  3,  4, _AS_STC),
+    _f("+",  7,  9,  4,  9, _AS_STC),
+    _f("+", 11,  2,  3,  2, _AS_STC),
+    _f("+",  3,  7,  4,  7, _AS_STC),
+]
 
-############################################################
-# LLM AGENT CONFIGS + CLASS (unchanged from original)
-############################################################
+FRAC_BLOCKED_AD = [
+    _f("+",  1,  2,  2,  3, _AD_STC),
+    _f("+",  1,  3,  3,  2, _AD_STC),
+    _f("+",  3,  7,  2,  8, _AD_STC),
+    _f("+",  4,  5,  2,  7, _AD_STC),
+    _f("+",  4,  9,  3,  4, _AD_STC),
+    _f("+",  5,  3,  2,  5, _AD_STC),
+    _f("+",  5,  3,  9,  8, _AD_STC),
+    _f("+",  5,  6,  1,  7, _AD_STC),
+    _f("+",  5,  9,  3,  7, _AD_STC),
+    _f("+",  6,  7,  1,  6, _AD_STC),
+    _f("+",  7,  8,  1,  3, _AD_STC),
+    _f("+",  5,  6,  5,  7, _AD_STC),
+    _f("+",  2,  3,  3,  5, _AD_STC),
+    _f("+",  1,  4,  4,  5, _AD_STC),
+]
+
+FRAC_BLOCKED_M = [
+    _f("*",  1,  2,  2,  3, _M_STC),
+    _f("*",  1,  3,  1,  6, _M_STC),
+    _f("*",  1,  3,  3,  2, _M_STC),
+    _f("*",  1,  3,  4,  9, _M_STC),
+    _f("*",  3,  2,  1,  4, _M_STC),
+    _f("*",  3,  4,  1,  8, _M_STC),
+    _f("*",  3,  7,  2,  8, _M_STC),
+    _f("*",  4,  5,  2,  7, _M_STC),
+    _f("*",  4,  5,  3, 10, _M_STC),
+    _f("*",  4,  9,  3,  4, _M_STC),
+    _f("*",  5,  3,  2,  5, _M_STC),
+    _f("*",  5,  3,  9,  8, _M_STC),
+    _f("*",  5,  4,  1,  2, _M_STC),
+    _f("*",  5,  6,  1,  7, _M_STC),
+    _f("*",  5,  6,  2,  3, _M_STC),
+    _f("*",  5,  9,  3,  7, _M_STC),
+    _f("*",  6,  7,  1,  6, _M_STC),
+    _f("*",  7,  8,  1,  4, _M_STC),
+    _f("*",  7, 10,  2,  5, _M_STC),
+    _f("*", 11,  9,  2,  3, _M_STC),
+    _f("*",  2,  3,  1,  2, _M_STC),
+    _f("*",  1,  6,  1,  3, _M_STC),
+    _f("*",  3,  2,  1,  3, _M_STC),
+    _f("*",  4,  9,  1,  3, _M_STC),
+]
+
+FRAC_BLOCKED_SEQUENCE = FRAC_BLOCKED_AS + FRAC_BLOCKED_AD + FRAC_BLOCKED_M
+
+# Held-out assessment problems
+FRAC_ASSESS_AS_PROBLEMS = [
+    _f("+",  3,  7,  2,  7, _AS_STC),
+    _f("+",  5,  9,  3,  9, _AS_STC),
+    _f("+",  4, 11,  6, 11, _AS_STC),
+]
+
+FRAC_ASSESS_AD_PROBLEMS = [
+    _f("+",  3,  4,  5,  7, _AD_STC),
+    _f("+",  2,  5,  3,  8, _AD_STC),
+    _f("+",  1,  6,  4,  9, _AD_STC),
+]
+
+FRAC_ASSESS_M_PROBLEMS = [
+    _f("*",  3,  7,  5,  4, _M_STC),
+    _f("*",  2,  5,  7,  3, _M_STC),
+    _f("*",  4,  9,  2,  7, _M_STC),
+]
+
+FRAC_ASSESS_ALL_PROBLEMS = (FRAC_ASSESS_AS_PROBLEMS +
+                             FRAC_ASSESS_AD_PROBLEMS +
+                             FRAC_ASSESS_M_PROBLEMS)
+
 
 agent_configs = {
     "qwen3.5": {
@@ -416,6 +519,13 @@ agent_configs = {
         "client": "openai",
         "client_url": "https://vllm.apprentice.ai/v1",
         "model": "models/Qwen3.6-35B-A3B-AWQ-4bit",
+        "context_length": 3000,
+        "max_prompt_length": 50000,
+    },
+    "qwen3.8": {
+        "client": "openai",
+        "client_url": "https://vllm.apprentice.ai/v1",
+        "model": "models/Qwen3.8-27B-AWQ-INT4",
         "context_length": 3000,
         "max_prompt_length": 50000,
     },
@@ -551,9 +661,11 @@ class LLMStudentAgent(LLMPromptable):
             if action_type == "PressButton":
                 inp = -1
         elif len(parts) < 3:
-            extended = parts + ['', '', '']
-            extended = extended[:3]
-            selection, action_type, inp = extended[0], extended[1], extended[2]
+            # Fewer than 3 fields — record raw response for traceability.
+            selection   = "MALFORMED"
+            action_type = "MALFORMED"
+            raw = getattr(self, '_last_raw_response', response)
+            inp = (raw.strip() or "(empty response)")[:120]
         else:
             selection, action_type, inp = 'incorrect_format', 'incorrect_format', 'incorrect_format'
         
@@ -564,9 +676,90 @@ class LLMStudentAgent(LLMPromptable):
         return action
 
 
-############################################################
-# RUN TRAINING FUNCTIONS
-############################################################
+# Assessment
+
+def run_assessment_phase(saved_examples, assessment_problems, model, condition_label):
+    """Evaluate held-out problems with independent agents sharing the same post-training context."""
+    safe_model = model.replace(":", "_")
+    assess_logger = DataShopLogger(
+        f"LLM_{condition_label}_Assessment",
+        output_dir=f'stu_eval_logs/{condition_label.lower()}_assessment_{safe_model}'
+    )
+    assess_logger.set_student()
+
+    results = []
+
+    for prob in assessment_problems:
+        # Independent agent per problem; no contamination between assessments.
+        agent = LLMStudentAgent("ctat", model)
+        agent.examples = copy.deepcopy(saved_examples)
+
+        env = FractionArithmetic()
+        env.set_problem(**prob)
+        prob_name = env.problem_name
+        assess_logger.set_problem(prob_name)
+
+        print(f"\n{'='*60}")
+        print(f"ASSESSMENT: {prob_name}")
+        print(f"{'='*60}")
+
+        step_records = []
+        is_start = True
+        n_correct_first = 0
+        n_total = 0
+
+        for _ in range(40):  # safety cap
+            state = env.get_state()
+            if state.get_annotation("is_done") is True:
+                break
+
+            action = agent.act(state=state.objs, is_start=is_start)
+            is_start = False
+            n_total += 1
+
+            reward = env.check(action)
+            correct = reward > 0
+            sel, at, inp = action.as_tuple()
+            kcs = prob.get("step_to_kcs", {}).get(sel, [sel])
+            outcome = "CORRECT" if correct else "INCORRECT"
+            assess_logger.log_step(sel, at, inp, outcome, step_name=sel, kcs=kcs)
+            step_records.append({"step": sel, "correct": correct})
+
+            if correct:
+                n_correct_first += 1
+                env.apply(action)
+            else:
+                # Advance via demo so the loop doesn't stall on the same step
+                demo = env.get_demo()
+                if demo is None:
+                    print("WARNING: get_demo() returned None — stopping assessment loop")
+                    break
+                env.apply(Action(demo))
+
+        accuracy = n_correct_first / n_total if n_total > 0 else 0.0
+        print(f"RESULT: {n_correct_first}/{n_total} correct first attempts ({accuracy:.1%})")
+
+        results.append({
+            "prob_name": prob_name,
+            "prob": prob,
+            "steps": step_records,
+            "n_correct_first": n_correct_first,
+            "n_total": n_total,
+            "accuracy": accuracy,
+        })
+
+    total_correct = sum(r["n_correct_first"] for r in results)
+    total_steps   = sum(r["n_total"]          for r in results)
+    overall = total_correct / total_steps if total_steps > 0 else 0.0
+    print(f"\n{'='*60}")
+    print(f"ASSESSMENT SUMMARY ({condition_label}): "
+          f"{total_correct}/{total_steps} correct first attempts ({overall:.1%})")
+    print(f"{'='*60}\n")
+
+    return results
+
+
+# Training runners
 
 def run_blocked(model, scaffold="all", max_cycles=1):
     """Run the blocked condition: power, power, power, product, product, product, quotient, quotient, quotient."""
@@ -630,9 +823,9 @@ def run_bkt(model, scaffold="all", max_cycles=20):
     print("-- BKT TRAINING END --")
 
 
-def run_fractions_blocked(model, max_cycles=1):
-    """Blocked fractions: AS block (10), then AD block (14), then M block (24).
-    Order within each block is randomized each run."""
+def run_fractions_blocked(model, max_cycles=1, with_assessment=True,
+                          assessment_problems=None):
+    """Blocked fractions: 10 AS then 14 AD then 24 M. No shuffling."""
     safe_model = model.replace(":", "_")
     logger = DataShopLogger("LLM_Fractions_Blocked",
                 output_dir=f'stu_eval_logs/fractions_blocked_{safe_model}')
@@ -640,15 +833,7 @@ def run_fractions_blocked(model, max_cycles=1):
     env = FractionArithmetic()
     agent = LLMStudentAgent("ctat", model)
 
-    as_block = FRAC_AS_PROBLEMS.copy()
-    ad_block = FRAC_AD_PROBLEMS.copy()
-    m_block  = FRAC_M_PROBLEMS.copy()
-    shuffle(as_block)
-    shuffle(ad_block)
-    shuffle(m_block)
-    blocked = as_block + ad_block + m_block
-
-    controller = SimpleBlockedController(blocked, max_cycles=max_cycles)
+    controller = SimpleBlockedController(FRAC_BLOCKED_SEQUENCE, max_cycles=max_cycles)
 
     trainer = Trainer(agent, env, logger=logger,
                 outer_loop_controller=controller,
@@ -658,9 +843,15 @@ def run_fractions_blocked(model, max_cycles=1):
     trainer.start()
     print("-- FRACTIONS BLOCKED TRAINING END --")
 
+    if with_assessment:
+        post_training_examples = copy.deepcopy(agent.examples)
+        probs = assessment_problems if assessment_problems is not None else FRAC_ASSESS_ALL_PROBLEMS
+        run_assessment_phase(post_training_examples, probs, model, "Fractions_Blocked")
 
-def run_fractions_interleaved(model, max_cycles=1):
-    """Interleaved fractions: fully random ordering of all 48 problems."""
+
+def run_fractions_interleaved(model, max_cycles=1, with_assessment=True,
+                              assessment_problems=None):
+    """Interleaved fractions: all 48 training problems in random order."""
     safe_model = model.replace(":", "_")
     logger = DataShopLogger("LLM_Fractions_Interleaved",
                 output_dir=f'stu_eval_logs/fractions_interleaved_{safe_model}')
@@ -668,7 +859,7 @@ def run_fractions_interleaved(model, max_cycles=1):
     env = FractionArithmetic()
     agent = LLMStudentAgent("ctat", model)
 
-    all_probs = FRAC_ALL_PROBLEMS.copy()
+    all_probs = FRAC_BLOCKED_SEQUENCE.copy()
     shuffle(all_probs)
 
     controller = SimpleInterleaveController(all_probs, max_cycles=max_cycles)
@@ -681,9 +872,15 @@ def run_fractions_interleaved(model, max_cycles=1):
     trainer.start()
     print("-- FRACTIONS INTERLEAVED TRAINING END --")
 
+    if with_assessment:
+        post_training_examples = copy.deepcopy(agent.examples)
+        probs = assessment_problems if assessment_problems is not None else FRAC_ASSESS_ALL_PROBLEMS
+        run_assessment_phase(post_training_examples, probs, model, "Fractions_Interleaved")
 
-def run_fractions_bkt(model, max_cycles=48):
-    """BKT fractions: adaptive selection until all 3 KCs mastered or max_cycles reached."""
+
+def run_fractions_bkt(model, max_cycles=48, with_assessment=True,
+                      assessment_problems=None):
+    """BKT fractions: adaptive selection until all KCs mastered or max_cycles reached."""
     safe_model = model.replace(":", "_")
     logger = DataShopLogger("LLM_Fractions_BKT",
                 output_dir=f'stu_eval_logs/fractions_bkt_{safe_model}')
@@ -691,11 +888,24 @@ def run_fractions_bkt(model, max_cycles=48):
     env = FractionArithmetic()
     agent = LLMStudentAgent("ctat", model)
 
+    # Reserve assessment items so BKT never trains on a held-out problem, even with --no-assessment.
+    reserved = assessment_problems if assessment_problems is not None else FRAC_ASSESS_ALL_PROBLEMS
+    reserved_keys = {_problem_key(p) for p in reserved}
+
+    def generate_training_problem(ptype):
+        for _ in range(100):
+            prob = generate_fraction_problem(ptype)
+            if _problem_key(prob) not in reserved_keys:
+                return prob
+        raise RuntimeError(f"Could not generate a non-reserved {ptype} problem after 100 attempts")
+
     controller = BKTTrackingInterleaveController(
         FRAC_ALL_PROBLEMS,
         bkt_probs=fraction_bkt_probs,
         max_cycles=max_cycles,
-        mastery_threshold=0.95
+        mastery_threshold=0.8,
+        problem_generator=generate_training_problem,
+        kc_to_ptype=_KC_TO_PTYPE,
     )
 
     trainer = Trainer(agent, env, logger=logger,
@@ -706,10 +916,11 @@ def run_fractions_bkt(model, max_cycles=48):
     trainer.start()
     print("-- FRACTIONS BKT TRAINING END --")
 
+    if with_assessment:
+        post_training_examples = copy.deepcopy(agent.examples)
+        probs = assessment_problems if assessment_problems is not None else FRAC_ASSESS_ALL_PROBLEMS
+        run_assessment_phase(post_training_examples, probs, model, "Fractions_BKT")
 
-############################################################
-# MAIN
-############################################################
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run LLM blocked vs interleaved experiment')
@@ -722,12 +933,21 @@ if __name__ == "__main__":
     parser.add_argument('--condition', type=str, default="blocked",
                         choices=['blocked', 'interleaved', 'bkt'],
                         help='Which condition to run: blocked, interleaved, or bkt')
-    parser.add_argument('--max-cycles', type=int, default=1,
+    parser.add_argument('--max-cycles', type=int, default=None,
                         help='Number of cycles through the problem set (or max problems for bkt)')
     parser.add_argument('--scaffold', type=str, default="all",
                         help='Scaffold setting for ApprenticeTutor (exponents only)')
+    parser.add_argument('--no-assessment', dest='with_assessment', action='store_false',
+                        help='Skip isolated assessment phase after training (fractions only)')
+    parser.set_defaults(with_assessment=True)
 
     args = parser.parse_args()
+
+    if args.max_cycles is None:
+        if args.condition == "bkt":
+            args.max_cycles = 48 if args.domain == "fractions" else 20
+        else:
+            args.max_cycles = 1
 
     print(f"Running {args.domain}/{args.condition} condition with {args.model}")
 
@@ -740,8 +960,11 @@ if __name__ == "__main__":
             run_bkt(args.model, scaffold=args.scaffold, max_cycles=args.max_cycles)
     elif args.domain == "fractions":
         if args.condition == "blocked":
-            run_fractions_blocked(args.model, max_cycles=args.max_cycles)
+            run_fractions_blocked(args.model, max_cycles=args.max_cycles,
+                                  with_assessment=args.with_assessment)
         elif args.condition == "interleaved":
-            run_fractions_interleaved(args.model, max_cycles=args.max_cycles)
+            run_fractions_interleaved(args.model, max_cycles=args.max_cycles,
+                                      with_assessment=args.with_assessment)
         elif args.condition == "bkt":
-            run_fractions_bkt(args.model, max_cycles=args.max_cycles)
+            run_fractions_bkt(args.model, max_cycles=args.max_cycles,
+                              with_assessment=args.with_assessment)
