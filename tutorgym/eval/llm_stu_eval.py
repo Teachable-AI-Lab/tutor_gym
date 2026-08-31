@@ -509,21 +509,21 @@ FRAC_ASSESS_ALL_PROBLEMS = (FRAC_ASSESS_AS_PROBLEMS +
 
 agent_configs = {
     "qwen3.5": {
-        "client": "openai",
+        "client": "qwen",
         "client_url": "https://vllm.apprentice.ai/v1",
         "model": "Qwen3.5-35B-A3B-GPTQ-Int4",
         "context_length": 3000,
         "max_prompt_length": 50000,
     },
     "qwen3.6": {
-        "client": "openai",
+        "client": "qwen",
         "client_url": "https://vllm.apprentice.ai/v1",
         "model": "models/Qwen3.6-35B-A3B-AWQ-4bit",
         "context_length": 3000,
         "max_prompt_length": 50000,
     },
     "qwen3.8": {
-        "client": "openai",
+        "client": "qwen",
         "client_url": "https://vllm.apprentice.ai/v1",
         "model": "models/Qwen3.8-27B-AWQ-INT4",
         "context_length": 3000,

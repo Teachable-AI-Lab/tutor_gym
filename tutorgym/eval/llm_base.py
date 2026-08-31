@@ -25,7 +25,7 @@ def print_response(reasoning, last_line, duration):
     print("RESPONSE:")
     print(reasoning.encode(sys.stdout.encoding, 'replace'))
     print_white(last_line.encode(sys.stdout.encoding, 'replace').decode("utf-8"))
-    print(f"Duration: {duration / 1e9:.4f} seconds")
+    print(f"Duration: {duration:.4f} seconds")
 
 class LLMPromptable():
     def __init__(self,
@@ -43,11 +43,11 @@ class LLMPromptable():
         self.tutor_kind = tutor_kind
         self.client_name = client.lower()
 
-        assert self.client_name in ("anthropic", "ollama", "openai")
+        assert self.client_name in ("anthropic", "ollama", "openai", "qwen")
         if(self.client_name == "anthropic"):
             from anthropic import Anthropic
             self.client_inst = Anthropic()
-        elif(self.client_name == "openai"):
+        elif self.client_name in ("openai", "qwen"):
             from openai import OpenAI
             if client_url:
                 self.client_inst = OpenAI(base_url=client_url, api_key="29djlljks83ljdhgfg29ls000azcxvnm")
@@ -122,6 +122,26 @@ class LLMPromptable():
         if content is None:
             content = getattr(response.choices[0].message, 'reasoning_content', '') or ''
         return content, t1-t0
+
+    def send_prompt_qwen(self, prompt):
+        t0 = time.time()
+        response = self.client_inst.chat.completions.create(
+            model=self.model,
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=128,
+            temperature=0,
+            extra_body={
+                "chat_template_kwargs": {
+                    "enable_thinking": False
+                },
+            },
+        )
+
+        t1 = time.time()
+        content = response.choices[0].message.content or ""
+        print("QWEN FINISH REASON:", response.choices[0].finish_reason)
+
+        return content, t1 - t0
 
     def run_prompt(self, prompt):
         """Get response from the LLM"""        
