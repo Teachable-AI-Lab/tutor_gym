@@ -1,0 +1,379 @@
+<?xml version="1.0" standalone="yes"?>
+
+<stateGraph firstCheckAllStates="true" caseInsensitive="true" unordered="false" lockWidget="true" hintPolicy="Use Both Kinds of Bias" version="2.1" suppressStudentFeedback="Show All Feedback" highlightRightSelection="true" startStateNodeName="b5_constrained" tutorType="Example-tracing Tutor">
+    <startNodeMessages>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>StartProblem</MessageType>
+                <ProblemName>b5_constrained</ProblemName>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>JCommButton</WidgetType>
+                <CommName>hint</CommName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <Text>Help</Text>
+                <Icon></Icon>
+                <jessDeftemplates>
+                    <value>(deftemplate button (slot name))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (button (name hint)))</value>
+                </jessInstances>
+                <ComponentDescription>v=true,x=124,y=5</ComponentDescription>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>JCommButton</WidgetType>
+                <CommName>done</CommName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <Text>Done</Text>
+                <Icon></Icon>
+                <jessDeftemplates>
+                    <value>(deftemplate button (slot name))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (button (name done)))</value>
+                </jessInstances>
+                <ComponentDescription>v=true,x=42,y=5</ComponentDescription>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>JCommTable</WidgetType>
+                <CommName>JCommTable3</CommName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <Rows>1</Rows>
+                <Columns>1</Columns>
+                <jessDeftemplates>
+                    <value>(deftemplate table (slot name) (multislot columns))</value>
+                    <value>(deftemplate column (slot name) (multislot cells) (slot position) (slot description))</value>
+                    <value>(deftemplate cell (slot name) (slot value) (slot description) (slot row-number) (slot column-number))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(bind ?JCommTable3_C1R1 (assert (cell (name JCommTable3_C1R1) (row-number 1) (column-number 1))))</value>
+                    <value>(bind ?JCommTable3_Column1(assert (column (name JCommTable3_Column1) (cells ?JCommTable3_C1R1 ) (position 1))))</value>
+                    <value>(assert (table (name JCommTable3) (columns ?JCommTable3_Column1 )))</value>
+                </jessInstances>
+                <ComponentDescription>v=true,x=200,y=123</ComponentDescription>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>JCommTable</WidgetType>
+                <CommName>JCommTable2</CommName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <Rows>1</Rows>
+                <Columns>3</Columns>
+                <jessDeftemplates>
+                    <value>(deftemplate table (slot name) (multislot columns))</value>
+                    <value>(deftemplate column (slot name) (multislot cells) (slot position) (slot description))</value>
+                    <value>(deftemplate cell (slot name) (slot value) (slot description) (slot row-number) (slot column-number))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(bind ?JCommTable2_C1R1 (assert (cell (name JCommTable2_C1R1) (row-number 1) (column-number 1))))</value>
+                    <value>(bind ?JCommTable2_Column1(assert (column (name JCommTable2_Column1) (cells ?JCommTable2_C1R1 ) (position 1))))</value>
+                    <value>(bind ?JCommTable2_C2R1 (assert (cell (name JCommTable2_C2R1) (row-number 1) (column-number 2))))</value>
+                    <value>(bind ?JCommTable2_Column2(assert (column (name JCommTable2_Column2) (cells ?JCommTable2_C2R1 ) (position 2))))</value>
+                    <value>(bind ?JCommTable2_C3R1 (assert (cell (name JCommTable2_C3R1) (row-number 1) (column-number 3))))</value>
+                    <value>(bind ?JCommTable2_Column3(assert (column (name JCommTable2_Column3) (cells ?JCommTable2_C3R1 ) (position 3))))</value>
+                    <value>(assert (table (name JCommTable2) (columns ?JCommTable2_Column1 ?JCommTable2_Column2 ?JCommTable2_Column3 )))</value>
+                </jessInstances>
+                <ComponentDescription>v=true,x=146,y=164</ComponentDescription>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>JCommTable</WidgetType>
+                <CommName>JCommTable</CommName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <Rows>1</Rows>
+                <Columns>3</Columns>
+                <jessDeftemplates>
+                    <value>(deftemplate table (slot name) (multislot columns))</value>
+                    <value>(deftemplate column (slot name) (multislot cells) (slot position) (slot description))</value>
+                    <value>(deftemplate cell (slot name) (slot value) (slot description) (slot row-number) (slot column-number))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(bind ?JCommTable_C1R1 (assert (cell (name JCommTable_C1R1) (row-number 1) (column-number 1))))</value>
+                    <value>(bind ?JCommTable_Column1(assert (column (name JCommTable_Column1) (cells ?JCommTable_C1R1 ) (position 1))))</value>
+                    <value>(bind ?JCommTable_C2R1 (assert (cell (name JCommTable_C2R1) (row-number 1) (column-number 2))))</value>
+                    <value>(bind ?JCommTable_Column2(assert (column (name JCommTable_Column2) (cells ?JCommTable_C2R1 ) (position 2))))</value>
+                    <value>(bind ?JCommTable_C3R1 (assert (cell (name JCommTable_C3R1) (row-number 1) (column-number 3))))</value>
+                    <value>(bind ?JCommTable_Column3(assert (column (name JCommTable_Column3) (cells ?JCommTable_C3R1 ) (position 3))))</value>
+                    <value>(assert (table (name JCommTable) (columns ?JCommTable_Column1 ?JCommTable_Column2 ?JCommTable_Column3 )))</value>
+                </jessInstances>
+                <ComponentDescription>v=true,x=146,y=81</ComponentDescription>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <Selection>
+                    <value>JCommTable_C1R1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTable</value>
+                </Action>
+                <Input>
+                    <value>-1</value>
+                </Input>
+                <transaction_id>T7a9986a4-a51b-4e01-8fde-a2f5a6da9c65</transaction_id>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <Selection>
+                    <value>JCommTable_C2R1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTable</value>
+                </Action>
+                <Input>
+                    <value>/</value>
+                </Input>
+                <transaction_id>T68d5f86a-46da-44d9-894f-9380a7d868cd</transaction_id>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <Selection>
+                    <value>JCommTable_C3R1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTable</value>
+                </Action>
+                <Input>
+                    <value>7</value>
+                </Input>
+                <transaction_id>Tab30c550-b66b-4265-a6cf-3f246a73b5c3</transaction_id>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <Selection>
+                    <value>JCommTable3_C1R1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTable</value>
+                </Action>
+                <Input>
+                    <value>==&gt;</value>
+                </Input>
+                <transaction_id>Ta9c18271-80e5-4da7-8c15-e69886a91b07</transaction_id>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <Selection>
+                    <value>JCommTable2_C1R1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTable</value>
+                </Action>
+                <Input>
+                    <value>6</value>
+                </Input>
+                <transaction_id>T1ecc0a77-2f73-4b41-90bc-8455bb3fc124</transaction_id>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <Selection>
+                    <value>JCommTable2_C2R1</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTable</value>
+                </Action>
+                <Input>
+                    <value>+</value>
+                </Input>
+                <transaction_id>Ta77dfed1-0754-470c-9900-cdc23b731887</transaction_id>
+            </properties>
+        </message>
+        <message>
+            <verb>SendNoteProperty</verb>
+            <properties>
+                <MessageType>StartStateEnd</MessageType>
+            </properties>
+        </message>
+    </startNodeMessages>
+    <node locked="false" doneState="false">
+        <text>b5_constrained</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>331</x>
+            <y>30</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state1</text>
+        <uniqueID>2</uniqueID>
+        <dimension>
+            <x>326</x>
+            <y>140</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="true">
+        <text>Done</text>
+        <uniqueID>3</uniqueID>
+        <dimension>
+            <x>330</x>
+            <y>250</y>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>1</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <Selection>
+                        <value>JCommTable2_C3R1</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTable</value>
+                    </Action>
+                    <Input>
+                        <value>-7</value>
+                    </Input>
+                    <transaction_id>Tf8a7b037-beb2-44eb-98ad-13a5152b5c3a</transaction_id>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please enter '-7' in the highlighted cell.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">JCommTable2_C3R1</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTable</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">-7</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>Submit SimSt</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>3</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <Selection>
+                        <value>done</value>
+                    </Selection>
+                    <Action>
+                        <value>ButtonPressed</value>
+                    </Action>
+                    <Input>
+                        <value>-1</value>
+                    </Input>
+                    <transaction_id>Te4967115-bf87-4204-bf74-16b52f58a6b2</transaction_id>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>You have answered all the questions. Please click on the Done button to proceed to the next problem.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">done</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">ButtonPressed</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">-1</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>done SimSt</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <productionRule opportunities="1">
+        <ruleName>done</ruleName>
+        <productionSet>SimSt</productionSet>
+    </productionRule>
+    <productionRule opportunities="1">
+        <ruleName>Submit</ruleName>
+        <productionSet>SimSt</productionSet>
+    </productionRule>
+    <EdgesGroups ordered="true"></EdgesGroups>
+</stateGraph>
+

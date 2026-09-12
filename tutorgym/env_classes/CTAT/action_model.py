@@ -41,7 +41,7 @@ class CTAT_ActionModel:
 
 
 
-        if(act_type in ("UpdateTextArea", "UpdateTextField")):
+        if(act_type in ("UpdateTextArea", "UpdateTextField", "UpdateTable")):
             sel_obj['value'] = inp
             sel_obj['locked'] = True
         elif(act_type == "SetDisplay"):
