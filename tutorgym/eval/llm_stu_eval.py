@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from urllib import response
+from tutorgym.env_classes.CTAT.CTAT_problem_set import collect_CTAT_problem_sets
 from tutorgym.trainer import AuthorTrainer, Trainer
 from tutorgym.utils import DataShopLogger
 from tutorgym.agents.oracle_agent import RandomOracleAgent, OracleAgent
@@ -51,6 +52,7 @@ class SimpleInterleaveController:
     """Serves problems in order from problem_list (caller controls ordering)."""
     def __init__(self, problem_list, max_cycles=1):
         self.problem_list = problem_list
+        shuffle(problem_list)
         self.index = 0
         self.max_cycles = max_cycles
         self.count = 0
@@ -183,7 +185,7 @@ class BKTTrackingInterleaveController:
 
 # Exponent problem sets
 
-bkt_probs = {
+exponent_bkt_probs = {
     "power_rule":    {"known": 0.2, "learn": 0.15, "guess": 0.2, "slip": 0.1},
     "product_rule":  {"known": 0.2, "learn": 0.15, "guess": 0.2, "slip": 0.1},
     "quotient_rule": {"known": 0.2, "learn": 0.15, "guess": 0.2, "slip": 0.1},
@@ -284,18 +286,6 @@ QUOTIENT_PROBLEMS = [
 
 EXPONENT_PROBLEMS = POWER_PROBLEMS + PRODUCT_PROBLEMS + QUOTIENT_PROBLEMS
 
-# Blocked: all power, then all product, then all quotient
-BLOCKED_PROBLEMS = POWER_PROBLEMS + PRODUCT_PROBLEMS + QUOTIENT_PROBLEMS
-
-# Interleaved: power, product, quotient, power, product, quotient...
-INTERLEAVED_PROBLEMS = [
-    POWER_PROBLEMS[0], PRODUCT_PROBLEMS[0], QUOTIENT_PROBLEMS[0],
-    POWER_PROBLEMS[1], PRODUCT_PROBLEMS[1], QUOTIENT_PROBLEMS[1],
-    POWER_PROBLEMS[2], PRODUCT_PROBLEMS[2], QUOTIENT_PROBLEMS[2],
-    POWER_PROBLEMS[3], PRODUCT_PROBLEMS[3], QUOTIENT_PROBLEMS[3],
-]
-
-
 # Fraction problem sets
 # seed=42; denominators <= 12; AD uses denominator-multiplication only (no LCM)
 
@@ -364,64 +354,6 @@ def _f(op, n1, d1, n2, d2, stc):
 def _problem_key(prob):
     return (prob["op"], tuple(tuple(frac) for frac in prob["fracs"]))
 
-FRAC_AS_PROBLEMS = [
-    _f("+",  2, 12,  1, 12, _AS_STC),
-    _f("+",  2,  4,  9,  4, _AS_STC),
-    _f("+",  7,  3,  1,  3, _AS_STC),
-    _f("+",  9,  5,  1,  5, _AS_STC),
-    _f("+",  4, 10,  9, 10, _AS_STC),
-    _f("+",  5, 11,  1, 11, _AS_STC),
-    _f("+",  7,  4,  6,  4, _AS_STC),
-    _f("+",  3,  6,  4,  6, _AS_STC),
-    _f("+",  2,  8,  6,  8, _AS_STC),
-    _f("+",  5,  7,  1,  7, _AS_STC),
-]
-
-FRAC_AD_PROBLEMS = [
-    _f("+",  2,  9,  7, 10, _AD_STC),
-    _f("+",  5,  3,  6, 10, _AD_STC),
-    _f("+",  2, 11,  1,  5, _AD_STC),
-    _f("+",  5, 12,  2,  5, _AD_STC),
-    _f("+",  7,  5,  5,  3, _AD_STC),
-    _f("+",  6,  9,  3, 12, _AD_STC),
-    _f("+",  3, 10,  8,  5, _AD_STC),
-    _f("+",  9,  8,  4,  6, _AD_STC),
-    _f("+",  1, 12,  4,  7, _AD_STC),
-    _f("+",  7,  2,  5,  7, _AD_STC),
-    _f("+",  6,  3,  4,  5, _AD_STC),
-    _f("+",  7, 12,  8,  9, _AD_STC),
-    _f("+",  3,  4,  4,  6, _AD_STC),
-    _f("+",  6, 11,  4,  8, _AD_STC),
-]
-
-FRAC_M_PROBLEMS = [
-    _f("*",  8,  4,  2, 10, _M_STC),
-    _f("*",  2, 12,  7,  8, _M_STC),
-    _f("*",  1,  6,  2, 10, _M_STC),
-    _f("*",  5, 12,  6, 10, _M_STC),
-    _f("*",  7,  3,  3,  6, _M_STC),
-    _f("*",  5,  9,  9,  2, _M_STC),
-    _f("*",  2,  4,  5, 10, _M_STC),
-    _f("*",  4, 12,  3, 10, _M_STC),
-    _f("*",  9,  7,  9,  4, _M_STC),
-    _f("*",  6,  2,  8, 11, _M_STC),
-    _f("*",  6,  2,  5,  3, _M_STC),
-    _f("*",  8,  4,  9,  4, _M_STC),
-    _f("*",  9,  4,  7,  6, _M_STC),
-    _f("*",  4,  5,  5, 10, _M_STC),
-    _f("*",  6,  8,  8, 12, _M_STC),
-    _f("*",  2, 10,  4,  9, _M_STC),
-    _f("*",  6,  5,  1,  3, _M_STC),
-    _f("*",  4, 11,  4, 10, _M_STC),
-    _f("*",  1,  2,  4,  3, _M_STC),
-    _f("*",  5, 10,  8,  5, _M_STC),
-    _f("*",  3,  5,  8, 10, _M_STC),
-    _f("*",  7,  5,  4,  9, _M_STC),
-    _f("*",  7,  3,  6,  3, _M_STC),
-    _f("*",  2, 12,  1, 12, _M_STC),
-]
-
-FRAC_ALL_PROBLEMS = FRAC_AS_PROBLEMS + FRAC_AD_PROBLEMS + FRAC_M_PROBLEMS
 
 # Exact blocked sequence; fixed order, no shuffling.
 FRAC_BLOCKED_AS = [
@@ -769,7 +701,7 @@ def run_blocked(model, scaffold="all", max_cycles=1):
     env = ApprenticeTutor(scaffold=scaffold)
     agent = LLMStudentAgent("apprentice", model)
 
-    controller = SimpleBlockedController(BLOCKED_PROBLEMS, max_cycles=max_cycles)
+    controller = SimpleBlockedController(EXPONENT_PROBLEMS, max_cycles=max_cycles)
 
     trainer = Trainer(agent, env, logger=logger,
                 outer_loop_controller=controller,
@@ -788,7 +720,7 @@ def run_interleaved(model, scaffold="all", max_cycles=1):
     env = ApprenticeTutor(scaffold=scaffold)
     agent = LLMStudentAgent("apprentice", model)
 
-    controller = SimpleInterleaveController(INTERLEAVED_PROBLEMS, max_cycles=max_cycles)
+    controller = SimpleInterleaveController(EXPONENT_PROBLEMS, max_cycles=max_cycles)
 
     trainer = Trainer(agent, env, logger=logger,
                 outer_loop_controller=controller,
@@ -809,7 +741,7 @@ def run_bkt(model, scaffold="all", max_cycles=20):
 
     controller = BKTTrackingInterleaveController(
         EXPONENT_PROBLEMS,
-        bkt_probs=bkt_probs,
+        bkt_probs=exponent_bkt_probs,
         max_cycles=max_cycles,
         mastery_threshold=0.95
     )
@@ -860,7 +792,6 @@ def run_fractions_interleaved(model, max_cycles=1, with_assessment=True,
     agent = LLMStudentAgent("ctat", model)
 
     all_probs = FRAC_BLOCKED_SEQUENCE.copy()
-    shuffle(all_probs)
 
     controller = SimpleInterleaveController(all_probs, max_cycles=max_cycles)
 
@@ -900,7 +831,7 @@ def run_fractions_bkt(model, max_cycles=48, with_assessment=True,
         raise RuntimeError(f"Could not generate a non-reserved {ptype} problem after 100 attempts")
 
     controller = BKTTrackingInterleaveController(
-        FRAC_ALL_PROBLEMS,
+        FRAC_BLOCKED_SEQUENCE,
         bkt_probs=fraction_bkt_probs,
         max_cycles=max_cycles,
         mastery_threshold=0.8,
@@ -922,23 +853,64 @@ def run_fractions_bkt(model, max_cycles=48, with_assessment=True,
         run_assessment_phase(post_training_examples, probs, model, "Fractions_BKT")
 
 
+def run_box_and_arrows(model, order="constrained_b_first", max_cycles=1):
+    """Run a CTAT tutor through a fixed BRD order loaded from a txt file."""
+    safe_model = model.replace(":", "_")
+    logger = DataShopLogger("LLM_BoxAndArrows",
+                output_dir=f'stu_eval_logs/boxarrows_{safe_model}')
+
+    env = CTAT_Tutor(html_proc_config={"root_dir": "/"})
+    agent = LLMStudentAgent("ctat", model)
+
+    problem_sets = collect_CTAT_problem_sets('tutorgym/envs/CTAT/BoxAndArrows')
+    all_problems = [p for ps in problem_sets for p in ps]
+
+    condition, first = ("constrained", "b") if order == "constrained_b_first" else \
+                        ("constrained", "g") if order == "constrained_g_first" else \
+                        ("unconstrained", "g") if order == "unconstrained_g_first" else \
+                        ("unconstrained", "b")
+    second = "g" if first == "b" else "b"
+    print(condition, first, second)
+
+    first_set = sorted([p for p in all_problems if p["name"].startswith(first) and p["name"].endswith(f"_{condition}")],
+            key=lambda p: int(p["name"][1:].split("_")[0]))
+    second_set = sorted([p for p in all_problems if p["name"].startswith(second) and p["name"].endswith(f"_{condition}")],
+            key=lambda p: int(p["name"][1:].split("_")[0]))
+    ordered = first_set + second_set
+
+    print(f"Loaded {len(ordered)} problems: {[p['name'] for p in ordered]}")
+
+    controller = SimpleBlockedController(ordered, max_cycles=max_cycles)
+
+    trainer = Trainer(agent, env, logger=logger,
+                outer_loop_controller=controller,
+                agent_state_repr="obj_dicts",
+                num_incorrect_force_demo=2)
+
+    trainer.start()
+    print("-- BOX AND ARROWS TRAINING END --")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run LLM blocked vs interleaved experiment')
     parser.add_argument('--model', type=str, default="deepseek-v2.5",
                         choices=list(agent_configs.keys()),
                         help='The LLM model to use')
     parser.add_argument('--domain', type=str, default="exponents",
-                        choices=['exponents', 'fractions'],
-                        help='Which domain to run: exponents or fractions')
+                        choices=['exponents', 'fractions', 'boxandarrows'],
+                        help='Which domain to run: exponents, fraction, or boxandarrows')
     parser.add_argument('--condition', type=str, default="blocked",
                         choices=['blocked', 'interleaved', 'bkt'],
                         help='Which condition to run: blocked, interleaved, or bkt')
     parser.add_argument('--max-cycles', type=int, default=None,
                         help='Number of cycles through the problem set (or max problems for bkt)')
     parser.add_argument('--scaffold', type=str, default="all",
-                        help='Scaffold setting for ApprenticeTutor (exponents only)')
+                        help='Scaffold setting for ApprenticeTutor')
     parser.add_argument('--no-assessment', dest='with_assessment', action='store_false',
                         help='Skip isolated assessment phase after training (fractions only)')
+    parser.add_argument('--order', type=str, default="constrained_b_first",
+                    choices=['constrained_b_first', 'constrained_g_first',
+                             'unconstrained_g_first', 'unconstrained_b_first'])
     parser.set_defaults(with_assessment=True)
 
     args = parser.parse_args()
@@ -968,3 +940,5 @@ if __name__ == "__main__":
         elif args.condition == "bkt":
             run_fractions_bkt(args.model, max_cycles=args.max_cycles,
                               with_assessment=args.with_assessment)
+    elif args.domain == "boxandarrows":
+        run_box_and_arrows(args.model, order=args.order, max_cycles=args.max_cycles)
