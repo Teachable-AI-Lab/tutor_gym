@@ -1,4 +1,6 @@
+import json
 from pathlib import Path
+import re
 import requests
 import yaml
 import time
@@ -125,22 +127,102 @@ class LLMPromptable():
 
     def send_prompt_qwen(self, prompt):
         t0 = time.time()
+        tools = [
+            {
+                "type": "function",
+                "function": {
+                    "name": "submit_action",
+                    "description": (
+                        "Submit exactly one action for the current problem state. "
+                        "Choose an action permitted by the state and modify only "
+                        "a field whose locked value is false."
+                    ),
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "selection": {
+                                "type": "string",
+                                "description": (
+                                    "The exact selection or field identifier "
+                                    "to act on."
+                                ),
+                            },
+                            "action": {
+                                "type": "string",
+                                "enum": [
+                                    "UpdateTable",
+                                    "ButtonPressed",
+                                    "PressButton"
+                                ],
+                                "description": "The action to perform.",
+                            },
+                            "input": {
+                                "type": "string",
+                                "description": (
+                                    "The input value for the action, represented "
+                                    "as a string. For example: '4', '12', or '-1'."
+                                ),
+                            },
+                        },
+                        "required": ["selection", "action", "input"],
+                        "additionalProperties": False,
+                    },
+                },
+            }
+        ]
+
         response = self.client_inst.chat.completions.create(
             model=self.model,
             messages=[{"role": "user", "content": prompt}],
-            max_tokens=128,
-            temperature=0,
+            tools=tools,
+            tool_choice="required",
+            parallel_tool_calls=False,
+            # max_tokens=4096,
+            temperature=1.0,
+            top_p=0.95,
+            presence_penalty=1.0,
             extra_body={
+                "top_k": 20,
+                "min_p": 0.0, 
+                "repetition_penalty": 1.0,
+                "reasoning_effort": "low",
                 "chat_template_kwargs": {
-                    "enable_thinking": False
+                    "enable_thinking": True,
                 },
             },
         )
-
         t1 = time.time()
-        content = response.choices[0].message.content or ""
-        print("QWEN FINISH REASON:", response.choices[0].finish_reason)
+        message = response.choices[0].message or ""
 
+        # pattern = r"(?m)^\s*([^;\n]+;[^;\n]+;[^;\n]+?)\s*$" # Correct answer: JCommTable2_C1R1;UpdateTable;4 PASSED BUT IT SHOULDNT
+        # pattern = r"([A-Za-z0-9_]+;[^;\n]+;[^;\n]+)"
+        # matches = re.findall(pattern, content)
+
+        print("Finish reason:", response.choices[0].finish_reason if response.choices[0].finish_reason else "no finish reason")
+        print("Message content:", repr(message.content) if message.content else "no message")
+        print("Tool calls:", repr(message.tool_calls) if message.tool_calls else "no tool calls")
+        print("Usage:", response.usage if response.usage else "no usage")
+
+        if not message.tool_calls:
+            return response.choices[0].finish_reason, t1 - t0
+
+        tool_call = message.tool_calls[0]
+
+        if tool_call.function.name != "submit_action":
+            return message.tool_calls, t1 - t0
+
+        try:
+            args = json.loads(tool_call.function.arguments)
+            selection = args["selection"]
+            action = args["action"]
+            input_value = args["input"]
+        except (json.JSONDecodeError, KeyError, TypeError):
+            return "", t1 - t0
+
+        # Preserve your existing output format.
+        content = f"{selection};{action};{input_value}"
+        
+        
         return content, t1 - t0
 
     def run_prompt(self, prompt):
